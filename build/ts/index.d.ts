@@ -82,17 +82,29 @@ export interface ColorPalette {
     propertyKey: string;
     punctuation: string;
 }
-import { palettes } from './palettes.js';
-import { colorRangePalettes } from './color_range_palettes.js';
-import { protanopiaPalettes } from './protanopia_palettes.js';
-import { deuteranopiaPalettes } from './deuteranopia_palettes.js';
-import { tritanopiaPalettes } from './tritanopia_palettes.js';
-import { monochromacyPalettes } from './monochromacy_palettes.js';
-import { deuteranomalyPalettes } from './deuteranomaly_palettes.js';
-import { protanomalyPalettes } from './protanomaly_palettes.js';
-import { tritanomalyPalettes } from './tritanomaly_palettes.js';
-import { achromatopsiaPalettes } from './achromatopsia_palettes.js';
-export { palettes, colorRangePalettes, protanopiaPalettes, deuteranopiaPalettes, tritanopiaPalettes, monochromacyPalettes, deuteranomalyPalettes, protanomalyPalettes, tritanomalyPalettes, achromatopsiaPalettes };
+import { palettes } from './palettes/palettes.js';
+import { naturePalettes } from './palettes/nature_palettes.js';
+import { protanopiaPalettes } from './palettes/protanopia_palettes.js';
+import { deuteranopiaPalettes } from './palettes/deuteranopia_palettes.js';
+import { tritanopiaPalettes } from './palettes/tritanopia_palettes.js';
+import { monochromacyPalettes } from './palettes/monochromacy_palettes.js';
+import { deuteranomalyPalettes } from './palettes/deuteranomaly_palettes.js';
+import { protanomalyPalettes } from './palettes/protanomaly_palettes.js';
+import { tritanomalyPalettes } from './palettes/tritanomaly_palettes.js';
+import { achromatopsiaPalettes } from './palettes/achromatopsia_palettes.js';
+import { redsColorRangePalettes } from './palettes/reds_color_range_palettes.js';
+import { orangesColorRangePalettes } from './palettes/oranges_color_range_palettes.js';
+import { yellowsColorRangePalettes } from './palettes/yellows_color_range_palettes.js';
+import { greensColorRangePalettes } from './palettes/greens_color_range_palettes.js';
+import { bluesColorRangePalettes } from './palettes/blues_color_range_palettes.js';
+import { purplesColorRangePalettes } from './palettes/purples_color_range_palettes.js';
+import { brownsColorRangePalettes } from './palettes/browns_color_range_palettes.js';
+import { greysColorRangePalettes } from './palettes/greys_color_range_palettes.js';
+import { charcoalsColorRangePalettes } from './palettes/charcoals_color_range_palettes.js';
+import { cyansColorRangePalettes } from './palettes/cyans_color_range_palettes.js';
+import { magentasColorRangePalettes } from './palettes/magentas_color_range_palettes.js';
+import { lightGraysColorRangePalettes } from './palettes/light_grays_color_range_palettes.js';
+export { palettes, naturePalettes, protanopiaPalettes, deuteranopiaPalettes, tritanopiaPalettes, monochromacyPalettes, deuteranomalyPalettes, protanomalyPalettes, tritanomalyPalettes, achromatopsiaPalettes, redsColorRangePalettes, orangesColorRangePalettes, yellowsColorRangePalettes, greensColorRangePalettes, bluesColorRangePalettes, purplesColorRangePalettes, brownsColorRangePalettes, greysColorRangePalettes, charcoalsColorRangePalettes, cyansColorRangePalettes, magentasColorRangePalettes, lightGraysColorRangePalettes };
 /**
  * Default container configuration
  */

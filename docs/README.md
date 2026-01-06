@@ -1,11 +1,11 @@
-# kyrie v0.15.0
+# kyrie v0.16.0
 
 Kyrie is a formatting colorizer for JavaScript, TypeScript, and JSON with customizable color palettes and container delimiters.
 
 ## Features
 
 - 🌈 **16 million colors**: Uses Chalk with 24-bit RGB color support
-- 🎨 **49 built-in color palettes**: 49 themes, each with a light and dark variant, for 98 total themes
+- 🎨 **42 built-in color palettes**: 42 themes, each with a light and dark variant, for 84 total themes
     - 🎨 **Vision accessability palettes**: Palettes for protanopia, deuteranopia, tritanopia, monochromacy, deuteranomaly, protanomaly,  tritanomaly, achromatopsia (if you have these, please tell me how to improve these in an issue)
     - Bright, subtle, pastel, and vivid variants, each with a light and dark variant
 - 🔧 **Fully customizable**: Create custom palettes and container delimiters
@@ -14,7 +14,7 @@ Kyrie is a formatting colorizer for JavaScript, TypeScript, and JSON with custom
 - 🎯 **Type-aware**: Distinguishes between arrays, objects, Maps, Sets, Dates, RegExp, Errors, and more
 - 💪 **TypeScript support**: Fully typed with strict TypeScript configuration
 - ⚡ **One dependency** - Chalk, for terminal colors
-- ✅ **Strong testing**: Has 87.5% test coverage from 175 test cases
+- ✅ **Strong testing**: Has 88.31% test coverage from 175 test cases
 
 ## Installation
 

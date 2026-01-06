@@ -25,7 +25,7 @@ const version = packageJson.version;
 
 // Count palettes from palettes.ts
 console.log(chalk.hex(OUTPUT_COLOR)('Counting palettes...'));
-const palettesPath = join(projectRoot, 'src', 'ts', 'palettes.ts');
+const palettesPath = join(projectRoot, 'src', 'ts', 'palettes', 'palettes.ts');
 const palettesContent = readFileSync(palettesPath, 'utf8');
 
 // Parse the palettes object to count themes

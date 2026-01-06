@@ -6,6 +6,7 @@ import {
   parse_value,
   type ASTNode,
   palettes,
+  naturePalettes,
   paint,
   defaultContainers,
   defaultHighlightOptions,
@@ -68,7 +69,7 @@ describe('HighlightOptions', () => {
 
   test('should be assignable type', () => {
     const options: HighlightOptions = {
-      palette: palettes.forest.light,
+      palette: naturePalettes.forest.light,
       containers: defaultContainers
     };
     expect(options).toBeDefined();
@@ -148,7 +149,7 @@ describe('highlight_value', () => {
 
   test('should accept optional options parameter', () => {
     const value = { test: true };
-    const options: HighlightOptions = { palette: palettes.forest.light };
+    const options: HighlightOptions = { palette: naturePalettes.forest.light };
     const result = highlight_value(value, options);
     expect(result).toContain('\x1b['); // Contains ANSI escape codes
     expect(result).toContain('test');
@@ -1193,7 +1194,7 @@ describe('paint', () => {
 
     test('should merge partial options with defaults', () => {
       const ast = parse_string('[1, 2]');
-      const result = paint(ast, { palette: palettes.forest.light });
+      const result = paint(ast, { palette: naturePalettes.forest.light });
       expect(result).toContain('[');
       expect(result).toContain(']');
       expect(result).toContain('1');
@@ -1204,7 +1205,7 @@ describe('paint', () => {
   describe('custom options', () => {
     test('should use custom palette', () => {
       const customOptions: HighlightOptions = {
-        palette: palettes.forest.dark,
+        palette: naturePalettes.forest.dark,
         containers: defaultContainers
       };
       const ast = parse_string('42');
