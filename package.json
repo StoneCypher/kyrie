@@ -29,7 +29,7 @@
   },
   "scripts": {
     "clean": "rimraf docs && rimraf build && rimraf dist && mkdir docs && mkdir build && mkdir dist",
-    "update_version": "node src/build_js/update_version.js",
+    "update_madlibs": "node src/build_js/update_madlibs.js",
     "typescript": "tsc --build tsconfig.json",
     "terser": "terser -o dist/index.js build/rollup/index.mjs && terser -o dist/index.cjs build/rollup/index.cjs",
     "rollup": "rollup -c",
@@ -37,7 +37,7 @@
     "docs": "typedoc src/ts/index.ts --out docs/docs",
     "test": "npm run build",
     "just_test": "vitest run --coverage",
-    "build": "npm run clean && npm run update_version && npm run just_test && npm run typescript && npm run rollup && npm run terser && npm run site && npm run docs"
+    "build": "npm run clean && npm run update_madlibs && npm run just_test && npm run typescript && npm run rollup && npm run terser && npm run site && npm run docs"
   },
   "devDependencies": {
     "@rollup/plugin-commonjs": "^29.0.0",

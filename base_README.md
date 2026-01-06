@@ -4,14 +4,15 @@ Kyrie is a formatting colorizer for JavaScript, TypeScript, and JSON with custom
 
 ## Features
 
+- 🌈 **16 million colors**: Uses Chalk with 24-bit RGB color support
 - 🎨 **Four built-in color palettes**: Pastel (default), Forest, Bold, and Dusk themes
 - 🔧 **Fully customizable**: Create custom palettes and container delimiters
-- 🌈 **16 million colors**: Uses Chalk with 24-bit RGB color support
 - 📦 **AST-based parsing**: Parse JSON strings or JavaScript values into detailed AST
 - 🔄 **Circular reference detection**: Safely handles circular object references
 - 🎯 **Type-aware**: Distinguishes between arrays, objects, Maps, Sets, Dates, RegExp, Errors, and more
 - 💪 **TypeScript support**: Fully typed with strict TypeScript configuration
-- ⚡ **Zero dependencies** (except Chalk for terminal colors)
+- ⚡ **One dependency** - Chalk, for terminal colors
+- ✅ **Strong testing**: Has {{coverage}}% test coverage from {{testcasecount}} test cases
 
 ## Installation
 

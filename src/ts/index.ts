@@ -98,7 +98,7 @@ export interface ColorPalette {
 export const defaultPalette: ColorPalette = {
   null: '#B8C5D0',
   undefined: '#D0C5E3',
-  boolean: '#A8D8EA',
+  boolean: '#94D3EB',
   number: '#FFB5A7',
   string: '#C1E1C1',
   symbol: '#E0BBE4',
@@ -148,7 +148,7 @@ export const forestPalette: ColorPalette = {
 export const boldPalette: ColorPalette = {
   null: '#8B8B8B',
   undefined: '#9B59B6',
-  boolean: '#3498DB',
+  boolean: '#2C81BA',
   number: '#FF6B35',
   string: '#2ECC71',
   symbol: '#E91E63',
