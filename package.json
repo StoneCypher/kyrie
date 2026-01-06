@@ -1,0 +1,32 @@
+{
+  "name": "kyrie",
+  "version": "0.1.0",
+  "description": "Kyrie is a formatting colorizer for Javascript, Typescript, and JSON",
+  "keywords": [
+    "json",
+    "colorizer",
+    "color",
+    "highlighter",
+    "formatter",
+    "ansi",
+    "vt"
+  ],
+  "homepage": "https://github.com/StoneCypher/kyrie#readme",
+  "bugs": {
+    "url": "https://github.com/StoneCypher/kyrie/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/StoneCypher/kyrie.git"
+  },
+  "license": "MIT",
+  "author": "John Haugeland <stonecypher@gmail.com>",
+  "type": "module",
+  "main": "dist/index.es.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "vitest"
+  }
+}
