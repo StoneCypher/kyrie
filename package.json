@@ -1,6 +1,6 @@
 {
   "name": "kyrie",
-  "version": "0.4.0",
+  "version": "0.5.0",
   "description": "Kyrie is a formatting colorizer for Javascript, Typescript, and JSON",
   "keywords": [
     "json",
@@ -28,15 +28,23 @@
   },
   "scripts": {
     "clean": "rimraf docs && rimraf build && rimraf dist && mkdir docs && mkdir build && mkdir dist",
-    "typescript": "echo TODO ts",
-    "terser": "echo TODO terser",
-    "rollup": "echo TODO rollup",
-    "site": "echo TODO site",
-    "docs": "echo TODO docs",
+    "typescript": "tsc --build tsconfig.json",
+    "terser": "terser -o dist/index.es.js build/rollup/index.es.js",
+    "rollup": "rollup -c",
+    "site": "cp ./src/html/* docs && copy ./src/html/.nojekyll docs",
+    "docs": "typedoc src/ts/index.ts -o docs/docs",
     "test": "vitest run",
     "build": "npm run clean && npm run test && npm run typescript && npm run terser && npm run site && npm run docs"
   },
   "devDependencies": {
-    "rimraf": "^6.1.2"
+    "@rollup/plugin-commonjs": "^29.0.0",
+    "@rollup/plugin-node-resolve": "^16.0.3",
+    "commander": "^14.0.2",
+    "rimraf": "^6.1.2",
+    "rollup": "^4.55.1",
+    "terser": "^5.44.1",
+    "typedoc": "^0.28.15",
+    "typescript": "^5.9.3",
+    "vitest": "^4.0.16"
   }
 }

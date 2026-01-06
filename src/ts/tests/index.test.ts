@@ -1,4 +1,4 @@
-import { highlight, type HighlightOptions } from '../index.ts';
+import { highlight, type HighlightOptions } from '../index';
 
 describe('highlight', () => {
   test('should return the input string unchanged for now', () => {

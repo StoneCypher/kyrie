@@ -19,6 +19,6 @@ export interface HighlightOptions {
  * console.log(highlighted);
  * ```
  */
-export function highlight(json: string, options?: HighlightOptions): string {
+export function highlight(json: string, _options?: HighlightOptions): string {
   return json;
 }
