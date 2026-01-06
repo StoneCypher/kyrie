@@ -808,21 +808,54 @@ const testdata = {
     })()
 };
 /**
- * Highlights JSON string with color codes
+ * Highlights a JavaScript value with colors
  *
- * @param {string} json - The JSON string to highlight
+ * @param {unknown} value - The value to highlight
  * @param {HighlightOptions} [options] - Optional configuration for highlighting
- * @returns {string} The highlighted JSON string
+ * @returns {string} The highlighted string with ANSI color codes
+ *
+ * @example
+ * ```typescript
+ * const obj = {name: "John", age: 30};
+ * const highlighted = highlight_value(obj);
+ * console.log(highlighted); // Outputs colorized representation
+ * ```
+ *
+ * @example
+ * ```typescript
+ * const arr = [1, 2, 3, "hello", true];
+ * const highlighted = highlight_value(arr, { palette: forestPalette });
+ * console.log(highlighted);
+ * ```
+ */
+function highlight_value(value, options) {
+    const ast = parse_value(value);
+    return paint(ast, options);
+}
+/**
+ * Highlights a JSON or JavaScript string with colors
+ *
+ * @param {string} str - The string to highlight (JSON or JavaScript literal)
+ * @param {HighlightOptions} [options] - Optional configuration for highlighting
+ * @returns {string} The highlighted string with ANSI color codes
  *
  * @example
  * ```typescript
  * const json = '{"name": "John", "age": 30}';
- * const highlighted = highlight(json);
+ * const highlighted = highlight_string(json);
+ * console.log(highlighted); // Outputs colorized representation
+ * ```
+ *
+ * @example
+ * ```typescript
+ * const arr = '[1, 2, 3, "hello", true]';
+ * const highlighted = highlight_string(arr, { palette: boldPalette });
  * console.log(highlighted);
  * ```
  */
-function highlight(json, _options) {
-    return json;
+function highlight_string(str, options) {
+    const ast = parse_string(str);
+    return paint(ast, options);
 }
 /**
  * Default highlight options
@@ -1311,4 +1344,4 @@ function parse_value(input) {
     return buildAST(input);
 }
 
-export { boldPalette, defaultContainers, defaultHighlightOptions, defaultPalette, duskPalette, forestPalette, highlight, paint, parse_string, parse_value, testdata };
+export { boldPalette, defaultContainers, defaultHighlightOptions, defaultPalette, duskPalette, forestPalette, highlight_string, highlight_value, paint, parse_string, parse_value, testdata };

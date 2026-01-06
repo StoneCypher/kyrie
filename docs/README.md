@@ -50,39 +50,72 @@ const ast2 = parse_value({ name: 'John', age: 30 });
 console.log(paint(ast2, { palette: forestPalette }));
 ```
 
-### Highlighting JSON (Placeholder)
+### Highlighting JavaScript Values
 
-The `highlight()` function is a placeholder for future string-based highlighting.
+The `highlight_value()` function provides a convenient way to directly colorize any JavaScript value without manually calling `parse_value()` and `paint()`. It combines both steps into a single function call.
 
 ```typescript
-import { highlight } from 'kyrie';
+import { highlight_value } from 'kyrie';
 
-const json = '{"name": "John", "age": 30}';
-const highlighted = highlight(json);
-console.log(highlighted); // Currently returns input unchanged
+const data = { name: 'John', age: 30 };
+const highlighted = highlight_value(data);
+console.log(highlighted); // Outputs colorized object
 ```
 
 ### API
 
-#### `highlight(json: string, options?: HighlightOptions): string`
+#### `highlight_value(value: unknown, options?: HighlightOptions): string`
 
-Highlights a JSON string with color codes.
+Colorizes any JavaScript value by parsing it to an AST and painting it with colors.
 
 **Parameters:**
-- `json` (string): The JSON string to highlight
-- `options` (HighlightOptions, optional): Configuration options for highlighting
+- `value` (unknown): The JavaScript value to highlight (any type)
+- `options` (HighlightOptions, optional): Configuration options with palette and container settings
 
 **Returns:**
-- string: The highlighted JSON string
+- string: The colorized string with ANSI escape codes
 
 **Example:**
 
 ```typescript
-import { highlight, type HighlightOptions } from 'kyrie';
+import { highlight_value, type HighlightOptions, forestPalette } from 'kyrie';
+
+const data = { name: 'Alice', age: 25, active: true };
+const result = highlight_value(data);
+console.log(result); // Uses default pastel palette
+
+// With custom palette
+const forestResult = highlight_value(data, { palette: forestPalette });
+console.log(forestResult); // Uses forest palette
+```
+
+#### `highlight_string(str: string, options?: HighlightOptions): string`
+
+Colorizes a JSON or JavaScript string by parsing it to an AST and painting it with colors.
+
+**Parameters:**
+- `str` (string): The JSON or JavaScript string to highlight
+- `options` (HighlightOptions, optional): Configuration options with palette and container settings
+
+**Returns:**
+- string: The colorized string with ANSI escape codes
+
+**Example:**
+
+```typescript
+import { highlight_string, type HighlightOptions, boldPalette } from 'kyrie';
 
 const json = '{"name": "Alice", "age": 25, "active": true}';
-const options: HighlightOptions = {};
-const result = highlight(json, options);
+const result = highlight_string(json);
+console.log(result); // Uses default pastel palette
+
+// With custom palette
+const boldResult = highlight_string(json, { palette: boldPalette });
+console.log(boldResult); // Uses bold palette
+
+// Works with arrays too
+const array = '[1, 2, 3, "hello", true]';
+console.log(highlight_string(array));
 ```
 
 ### HighlightOptions
