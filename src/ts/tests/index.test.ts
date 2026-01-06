@@ -70,6 +70,24 @@ describe('parse_string', () => {
     expect(ast.value).toBe(-123.45);
   });
 
+  test('should parse number with scientific notation', () => {
+    const ast = parse_string('1.5e10');
+    expect(ast.basic_type).toBe('number');
+    expect(ast.value).toBe(1.5e10);
+  });
+
+  test('should parse number with scientific notation and plus', () => {
+    const ast = parse_string('2e+5');
+    expect(ast.basic_type).toBe('number');
+    expect(ast.value).toBe(2e+5);
+  });
+
+  test('should parse number with scientific notation and minus', () => {
+    const ast = parse_string('3.14E-2');
+    expect(ast.basic_type).toBe('number');
+    expect(ast.value).toBe(3.14E-2);
+  });
+
   test('should parse string with double quotes', () => {
     const ast = parse_string('"hello world"');
     expect(ast.basic_type).toBe('string');
@@ -86,6 +104,36 @@ describe('parse_string', () => {
     const ast = parse_string('"hello\\nworld"');
     expect(ast.basic_type).toBe('string');
     expect(ast.value).toBe('hello\nworld');
+  });
+
+  test('should parse string with tab escape', () => {
+    const ast = parse_string('"hello\\tworld"');
+    expect(ast.basic_type).toBe('string');
+    expect(ast.value).toBe('hello\tworld');
+  });
+
+  test('should parse string with carriage return escape', () => {
+    const ast = parse_string('"hello\\rworld"');
+    expect(ast.basic_type).toBe('string');
+    expect(ast.value).toBe('hello\rworld');
+  });
+
+  test('should parse string with backslash escape', () => {
+    const ast = parse_string('"hello\\\\world"');
+    expect(ast.basic_type).toBe('string');
+    expect(ast.value).toBe('hello\\world');
+  });
+
+  test('should parse string with quote escapes', () => {
+    const ast = parse_string('"She said \\"hello\\""');
+    expect(ast.basic_type).toBe('string');
+    expect(ast.value).toBe('She said "hello"');
+  });
+
+  test('should parse string with single quote escape', () => {
+    const ast = parse_string("'It\\'s working'");
+    expect(ast.basic_type).toBe('string');
+    expect(ast.value).toBe("It's working");
   });
 
   test('should parse empty array', () => {
@@ -166,9 +214,62 @@ describe('parse_string', () => {
     expect(() => parse_string(123)).toThrow('Input must be a string');
   });
 
+  test('should throw error for unexpected token', () => {
+    expect(() => parse_string('invalid')).toThrow('Unexpected token: invalid');
+  });
+
+  test('should throw error for unknown keyword', () => {
+    expect(() => parse_string('unknown')).toThrow('Unexpected token: unknown');
+  });
+
   test('should handle whitespace', () => {
     const ast = parse_string('  {  "name"  :  "John"  }  ');
     expect(ast.basic_type).toBe('object');
     expect(ast.properties!['name']!.value).toBe('John');
+  });
+
+  test('should parse empty strings', () => {
+    const ast = parse_string('""');
+    expect(ast.basic_type).toBe('string');
+    expect(ast.value).toBe('');
+  });
+
+  test('should parse object with single-quoted keys', () => {
+    const ast = parse_string("{'key': 'value'}");
+    expect(ast.basic_type).toBe('object');
+    expect(ast.properties!['key']!.value).toBe('value');
+  });
+
+  test('should parse deeply nested structures', () => {
+    const ast = parse_string('{"a": {"b": {"c": {"d": "deep"}}}}');
+    expect(ast.properties!['a']!.properties!['b']!.properties!['c']!.properties!['d']!.value).toBe('deep');
+  });
+
+  test('should parse array with nested objects', () => {
+    const ast = parse_string('[{"a": 1}, {"b": 2}]');
+    expect(ast.deep_type.isArray).toBe(true);
+    expect(ast.elements![0]!.properties!['a']!.value).toBe(1);
+    expect(ast.elements![1]!.properties!['b']!.value).toBe(2);
+  });
+
+  test('should parse object with multiple data types', () => {
+    const ast = parse_string('{"str": "text", "num": 42, "bool": true, "nil": null, "arr": [1,2,3]}');
+    expect(ast.properties!['str']!.basic_type).toBe('string');
+    expect(ast.properties!['num']!.basic_type).toBe('number');
+    expect(ast.properties!['bool']!.basic_type).toBe('boolean');
+    expect(ast.properties!['nil']!.basic_type).toBe('object');
+    expect(ast.properties!['arr']!.deep_type.isArray).toBe(true);
+  });
+
+  test('should handle decimal numbers', () => {
+    const ast = parse_string('0.123');
+    expect(ast.basic_type).toBe('number');
+    expect(ast.value).toBe(0.123);
+  });
+
+  test('should parse number zero', () => {
+    const ast = parse_string('0');
+    expect(ast.basic_type).toBe('number');
+    expect(ast.value).toBe(0);
   });
 });
