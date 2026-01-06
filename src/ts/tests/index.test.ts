@@ -1,5 +1,6 @@
 import {
-  highlight,
+  highlight_value,
+  highlight_string,
   type HighlightOptions,
   parse_string,
   parse_value,
@@ -188,35 +189,105 @@ describe('ColorPalette', () => {
   });
 });
 
-describe('highlight', () => {
-  test('should return the input string unchanged for now', () => {
-    const json = '{"name": "John", "age": 30}';
-    expect(highlight(json)).toBe(json);
+describe('highlight_value', () => {
+  test('should return colorized output for object', () => {
+    const value = { name: 'John', age: 30 };
+    const result = highlight_value(value);
+    expect(result).toContain('\x1b['); // Contains ANSI escape codes
+    expect(result).toContain('name');
+    expect(result).toContain('John');
+    expect(result).toContain('age');
+    expect(result).toContain('30');
   });
 
   test('should handle empty string', () => {
-    expect(highlight('')).toBe('');
+    const result = highlight_value('');
+    expect(result).toContain('\x1b['); // Contains ANSI escape codes
+  });
+
+  test('should handle simple object', () => {
+    const value = { key: 'value' };
+    const result = highlight_value(value);
+    expect(result).toContain('\x1b['); // Contains ANSI escape codes
+    expect(result).toContain('key');
+    expect(result).toContain('value');
+  });
+
+  test('should handle array', () => {
+    const value = [1, 2, 3];
+    const result = highlight_value(value);
+    expect(result).toContain('\x1b['); // Contains ANSI escape codes
+    expect(result).toContain('1');
+    expect(result).toContain('2');
+    expect(result).toContain('3');
+  });
+
+  test('should accept optional options parameter', () => {
+    const value = { test: true };
+    const options: HighlightOptions = { palette: forestPalette };
+    const result = highlight_value(value, options);
+    expect(result).toContain('\x1b['); // Contains ANSI escape codes
+    expect(result).toContain('test');
+    expect(result).toContain('true');
+  });
+
+  test('should work without options parameter', () => {
+    const value = { test: false };
+    const result = highlight_value(value);
+    expect(result).toContain('\x1b['); // Contains ANSI escape codes
+    expect(result).toContain('test');
+    expect(result).toContain('false');
+  });
+});
+
+describe('highlight_string', () => {
+  test('should return colorized output for JSON object', () => {
+    const json = '{"name": "John", "age": 30}';
+    const result = highlight_string(json);
+    expect(result).toContain('\x1b['); // Contains ANSI escape codes
+    expect(result).toContain('name');
+    expect(result).toContain('John');
+    expect(result).toContain('age');
+    expect(result).toContain('30');
+  });
+
+  test('should handle empty string', () => {
+    const result = highlight_string('""');
+    expect(result).toContain('\x1b['); // Contains ANSI escape codes
   });
 
   test('should handle simple JSON object', () => {
     const json = '{"key": "value"}';
-    expect(highlight(json)).toBe(json);
+    const result = highlight_string(json);
+    expect(result).toContain('\x1b['); // Contains ANSI escape codes
+    expect(result).toContain('key');
+    expect(result).toContain('value');
   });
 
   test('should handle JSON array', () => {
     const json = '[1, 2, 3]';
-    expect(highlight(json)).toBe(json);
+    const result = highlight_string(json);
+    expect(result).toContain('\x1b['); // Contains ANSI escape codes
+    expect(result).toContain('1');
+    expect(result).toContain('2');
+    expect(result).toContain('3');
   });
 
   test('should accept optional options parameter', () => {
     const json = '{"test": true}';
-    const options: HighlightOptions = {};
-    expect(highlight(json, options)).toBe(json);
+    const options: HighlightOptions = { palette: boldPalette };
+    const result = highlight_string(json, options);
+    expect(result).toContain('\x1b['); // Contains ANSI escape codes
+    expect(result).toContain('test');
+    expect(result).toContain('true');
   });
 
   test('should work without options parameter', () => {
     const json = '{"test": false}';
-    expect(highlight(json)).toBe(json);
+    const result = highlight_string(json);
+    expect(result).toContain('\x1b['); // Contains ANSI escape codes
+    expect(result).toContain('test');
+    expect(result).toContain('false');
   });
 });
 
