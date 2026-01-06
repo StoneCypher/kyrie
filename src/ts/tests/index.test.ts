@@ -62,6 +62,10 @@ describe('HighlightOptions', () => {
     expect(defaultHighlightOptions.containers).toBe(defaultContainers);
   });
 
+  test('defaultHighlightOptions should have maxWidth as undefined', () => {
+    expect(defaultHighlightOptions.maxWidth).toBeUndefined();
+  });
+
   test('should be assignable type', () => {
     const options: HighlightOptions = {
       palette: palettes.forest.light,
@@ -77,6 +81,35 @@ describe('HighlightOptions', () => {
     expect(paletteOnly).toBeDefined();
     expect(containersOnly).toBeDefined();
     expect(empty).toBeDefined();
+  });
+
+  test('should accept maxWidth as number', () => {
+    const options: HighlightOptions = {
+      palette: palettes.default.light,
+      maxWidth: 80
+    };
+    expect(options.maxWidth).toBe(80);
+  });
+
+  test('should accept maxWidth as false', () => {
+    const options: HighlightOptions = {
+      palette: palettes.default.light,
+      maxWidth: false
+    };
+    expect(options.maxWidth).toBe(false);
+  });
+
+  test('should accept maxWidth as undefined', () => {
+    const options: HighlightOptions = {
+      palette: palettes.default.light,
+      maxWidth: undefined
+    };
+    expect(options.maxWidth).toBeUndefined();
+  });
+
+  test('should allow maxWidth only option', () => {
+    const maxWidthOnly: HighlightOptions = { maxWidth: 100 };
+    expect(maxWidthOnly.maxWidth).toBe(100);
   });
 });
 

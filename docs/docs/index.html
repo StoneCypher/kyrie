@@ -1,14 +1,19 @@
-<!DOCTYPE html><html class="default" lang="en" data-base="./"><head><meta charset="utf-8"/><meta http-equiv="x-ua-compatible" content="IE=edge"/><title>kyrie</title><meta name="description" content="Documentation for kyrie"/><meta name="viewport" content="width=device-width, initial-scale=1"/><link rel="stylesheet" href="assets/style.css"/><link rel="stylesheet" href="assets/highlight.css"/><script defer src="assets/main.js"></script><script async src="assets/icons.js" id="tsd-icons-script"></script><script async src="assets/search.js" id="tsd-search-script"></script><script async src="assets/navigation.js" id="tsd-nav-script"></script></head><body><script>document.documentElement.dataset.theme = localStorage.getItem("tsd-theme") || "os";document.body.style.display="none";setTimeout(() => window.app?app.showPage():document.body.style.removeProperty("display"),500)</script><header class="tsd-page-toolbar"><div class="tsd-toolbar-contents container"><a href="index.html" class="title">kyrie</a><div id="tsd-toolbar-links"></div><button id="tsd-search-trigger" class="tsd-widget" aria-label="Search"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><use href="assets/icons.svg#icon-search"></use></svg></button><dialog id="tsd-search" aria-label="Search"><input role="combobox" id="tsd-search-input" aria-controls="tsd-search-results" aria-autocomplete="list" aria-expanded="true" autocapitalize="off" autocomplete="off" placeholder="Search the docs" maxLength="100"/><ul role="listbox" id="tsd-search-results"></ul><div id="tsd-search-status" aria-live="polite" aria-atomic="true"><div>Preparing search index...</div></div></dialog><a href="#" class="tsd-widget menu" id="tsd-toolbar-menu-trigger" data-toggle="menu" aria-label="Menu"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><use href="assets/icons.svg#icon-menu"></use></svg></a></div></header><div class="container container-main"><div class="col-content"><div class="tsd-page-title"><h1>kyrie</h1></div><div class="tsd-panel tsd-typography"><h1 id="kyrie-v0140" class="tsd-anchor-link">kyrie v0.14.0<a href="#kyrie-v0140" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h1><p>Kyrie is a formatting colorizer for JavaScript, TypeScript, and JSON with customizable color palettes and container delimiters.</p>
+<!DOCTYPE html><html class="default" lang="en" data-base="./"><head><meta charset="utf-8"/><meta http-equiv="x-ua-compatible" content="IE=edge"/><title>kyrie</title><meta name="description" content="Documentation for kyrie"/><meta name="viewport" content="width=device-width, initial-scale=1"/><link rel="stylesheet" href="assets/style.css"/><link rel="stylesheet" href="assets/highlight.css"/><script defer src="assets/main.js"></script><script async src="assets/icons.js" id="tsd-icons-script"></script><script async src="assets/search.js" id="tsd-search-script"></script><script async src="assets/navigation.js" id="tsd-nav-script"></script></head><body><script>document.documentElement.dataset.theme = localStorage.getItem("tsd-theme") || "os";document.body.style.display="none";setTimeout(() => window.app?app.showPage():document.body.style.removeProperty("display"),500)</script><header class="tsd-page-toolbar"><div class="tsd-toolbar-contents container"><a href="index.html" class="title">kyrie</a><div id="tsd-toolbar-links"></div><button id="tsd-search-trigger" class="tsd-widget" aria-label="Search"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><use href="assets/icons.svg#icon-search"></use></svg></button><dialog id="tsd-search" aria-label="Search"><input role="combobox" id="tsd-search-input" aria-controls="tsd-search-results" aria-autocomplete="list" aria-expanded="true" autocapitalize="off" autocomplete="off" placeholder="Search the docs" maxLength="100"/><ul role="listbox" id="tsd-search-results"></ul><div id="tsd-search-status" aria-live="polite" aria-atomic="true"><div>Preparing search index...</div></div></dialog><a href="#" class="tsd-widget menu" id="tsd-toolbar-menu-trigger" data-toggle="menu" aria-label="Menu"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><use href="assets/icons.svg#icon-menu"></use></svg></a></div></header><div class="container container-main"><div class="col-content"><div class="tsd-page-title"><h1>kyrie</h1></div><div class="tsd-panel tsd-typography"><h1 id="kyrie-v0150" class="tsd-anchor-link">kyrie v0.15.0<a href="#kyrie-v0150" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h1><p>Kyrie is a formatting colorizer for JavaScript, TypeScript, and JSON with customizable color palettes and container delimiters.</p>
 <h2 id="features" class="tsd-anchor-link">Features<a href="#features" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h2><ul>
 <li>🌈 <strong>16 million colors</strong>: Uses Chalk with 24-bit RGB color support</li>
-<li>🎨 <strong>Four built-in color palettes</strong>: Pastel (default), Forest, Bold, and Dusk themes</li>
+<li>🎨 <strong>49 built-in color palettes</strong>: 49 themes, each with a light and dark variant, for 98 total themes
+<ul>
+<li>🎨 <strong>Vision accessability palettes</strong>: Palettes for protanopia, deuteranopia, tritanopia, monochromacy, deuteranomaly, protanomaly,  tritanomaly, achromatopsia (if you have these, please tell me how to improve these in an issue)</li>
+<li>Bright, subtle, pastel, and vivid variants, each with a light and dark variant</li>
+</ul>
+</li>
 <li>🔧 <strong>Fully customizable</strong>: Create custom palettes and container delimiters</li>
 <li>📦 <strong>AST-based parsing</strong>: Parse JSON strings or JavaScript values into detailed AST</li>
 <li>🔄 <strong>Circular reference detection</strong>: Safely handles circular object references</li>
 <li>🎯 <strong>Type-aware</strong>: Distinguishes between arrays, objects, Maps, Sets, Dates, RegExp, Errors, and more</li>
 <li>💪 <strong>TypeScript support</strong>: Fully typed with strict TypeScript configuration</li>
 <li>⚡ <strong>One dependency</strong> - Chalk, for terminal colors</li>
-<li>✅ <strong>Strong testing</strong>: Has 96.86% test coverage from 19 test cases</li>
+<li>✅ <strong>Strong testing</strong>: Has 87.5% test coverage from 175 test cases</li>
 </ul>
 <h2 id="installation" class="tsd-anchor-link">Installation<a href="#installation" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h2><pre><code class="bash"><span class="hl-0">npm</span><span class="hl-1"> </span><span class="hl-2">install</span><span class="hl-1"> </span><span class="hl-2">kyrie</span>
 </code><button type="button">Copy</button></pre>
@@ -16,6 +21,18 @@
 <h2 id="quick-start" class="tsd-anchor-link">Quick Start<a href="#quick-start" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h2><pre><code class="typescript"><span class="hl-3">import</span><span class="hl-1"> { </span><span class="hl-4">parse_string</span><span class="hl-1">, </span><span class="hl-4">paint</span><span class="hl-1"> } </span><span class="hl-3">from</span><span class="hl-1"> </span><span class="hl-2">&#39;kyrie&#39;</span><span class="hl-1">;</span><br/><br/><span class="hl-5">// Parse JSON string to AST</span><br/><span class="hl-6">const</span><span class="hl-1"> </span><span class="hl-7">ast</span><span class="hl-1"> = </span><span class="hl-0">parse_string</span><span class="hl-1">(</span><span class="hl-2">&#39;{&quot;name&quot;: &quot;Alice&quot;, &quot;age&quot;: 25}&#39;</span><span class="hl-1">);</span><br/><br/><span class="hl-5">// Paint with colors (uses default pastel palette)</span><br/><span class="hl-6">const</span><span class="hl-1"> </span><span class="hl-7">colored</span><span class="hl-1"> = </span><span class="hl-0">paint</span><span class="hl-1">(</span><span class="hl-4">ast</span><span class="hl-1">);</span><br/><span class="hl-4">console</span><span class="hl-1">.</span><span class="hl-0">log</span><span class="hl-1">(</span><span class="hl-4">colored</span><span class="hl-1">); </span><span class="hl-5">// Outputs colorized JSON to terminal</span>
 </code><button type="button">Copy</button></pre>
 
+<h2 id="cli-usage" class="tsd-anchor-link">CLI Usage<a href="#cli-usage" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h2><p>Kyrie includes a command-line interface for highlighting JSON and JavaScript files.</p>
+<pre><code class="bash"><span class="hl-5"># Highlight a file</span><br/><span class="hl-0">kyrie</span><span class="hl-1"> </span><span class="hl-2">myfile.json</span><br/><br/><span class="hl-5"># Read from stdin</span><br/><span class="hl-0">echo</span><span class="hl-1"> </span><span class="hl-2">&#39;{&quot;name&quot;: &quot;John&quot;, &quot;age&quot;: 30}&#39;</span><span class="hl-1"> | </span><span class="hl-0">kyrie</span><br/><br/><span class="hl-5"># Use a specific palette</span><br/><span class="hl-0">kyrie</span><span class="hl-1"> </span><span class="hl-6">--palette</span><span class="hl-1"> </span><span class="hl-2">forest</span><span class="hl-1"> </span><span class="hl-2">myfile.json</span><br/><br/><span class="hl-5"># Use dark theme variant</span><br/><span class="hl-0">kyrie</span><span class="hl-1"> </span><span class="hl-6">--theme</span><span class="hl-1"> </span><span class="hl-2">dark</span><span class="hl-1"> </span><span class="hl-6">--palette</span><span class="hl-1"> </span><span class="hl-2">bold</span><span class="hl-1"> </span><span class="hl-2">myfile.json</span><br/><br/><span class="hl-5"># Set maximum output width</span><br/><span class="hl-0">kyrie</span><span class="hl-1"> </span><span class="hl-6">--max-width</span><span class="hl-1"> </span><span class="hl-8">80</span><span class="hl-1"> </span><span class="hl-2">myfile.json</span><br/><br/><span class="hl-5"># Disable width limiting</span><br/><span class="hl-0">kyrie</span><span class="hl-1"> </span><span class="hl-6">--max-width</span><span class="hl-1"> </span><span class="hl-6">false</span><span class="hl-1"> </span><span class="hl-2">myfile.json</span>
+</code><button type="button">Copy</button></pre>
+
+<p><strong>CLI Options:</strong></p>
+<ul>
+<li><code>-p, --palette &lt;name&gt;</code> - Color palette to use (default: &quot;default&quot;)</li>
+<li><code>-t, --theme &lt;variant&gt;</code> - Theme variant: &quot;light&quot; or &quot;dark&quot; (default: &quot;light&quot;)</li>
+<li><code>-w, --max-width &lt;width&gt;</code> - Maximum width for output (number or &quot;false&quot; to disable)</li>
+<li><code>-V, --version</code> - Output version number</li>
+<li><code>-h, --help</code> - Display help information</li>
+</ul>
 <h2 id="usage" class="tsd-anchor-link">Usage<a href="#usage" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h2><h3 id="colorizing-json-and-javascript" class="tsd-anchor-link">Colorizing JSON and JavaScript<a href="#colorizing-json-and-javascript" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h3><p>The <code>paint()</code> function is the main way to colorize parsed values. It works with both <code>parse_string()</code> (for JSON/JavaScript strings) and <code>parse_value()</code> (for JavaScript values).</p>
 <pre><code class="typescript"><span class="hl-3">import</span><span class="hl-1"> { </span><span class="hl-4">parse_string</span><span class="hl-1">, </span><span class="hl-4">parse_value</span><span class="hl-1">, </span><span class="hl-4">paint</span><span class="hl-1">, </span><span class="hl-4">forestPalette</span><span class="hl-1"> } </span><span class="hl-3">from</span><span class="hl-1"> </span><span class="hl-2">&#39;kyrie&#39;</span><span class="hl-1">;</span><br/><br/><span class="hl-5">// From JSON string</span><br/><span class="hl-6">const</span><span class="hl-1"> </span><span class="hl-7">ast1</span><span class="hl-1"> = </span><span class="hl-0">parse_string</span><span class="hl-1">(</span><span class="hl-2">&#39;{&quot;name&quot;: &quot;John&quot;, &quot;age&quot;: 30}&#39;</span><span class="hl-1">);</span><br/><span class="hl-4">console</span><span class="hl-1">.</span><span class="hl-0">log</span><span class="hl-1">(</span><span class="hl-0">paint</span><span class="hl-1">(</span><span class="hl-4">ast1</span><span class="hl-1">));</span><br/><br/><span class="hl-5">// From JavaScript value</span><br/><span class="hl-6">const</span><span class="hl-1"> </span><span class="hl-7">ast2</span><span class="hl-1"> = </span><span class="hl-0">parse_value</span><span class="hl-1">({ </span><span class="hl-4">name:</span><span class="hl-1"> </span><span class="hl-2">&#39;John&#39;</span><span class="hl-1">, </span><span class="hl-4">age:</span><span class="hl-1"> </span><span class="hl-8">30</span><span class="hl-1"> });</span><br/><span class="hl-4">console</span><span class="hl-1">.</span><span class="hl-0">log</span><span class="hl-1">(</span><span class="hl-0">paint</span><span class="hl-1">(</span><span class="hl-4">ast2</span><span class="hl-1">, { </span><span class="hl-4">palette:</span><span class="hl-1"> </span><span class="hl-4">forestPalette</span><span class="hl-1"> }));</span>
 </code><button type="button">Copy</button></pre>
@@ -53,9 +70,21 @@
 </code><button type="button">Copy</button></pre>
 
 <h3 id="highlightoptions" class="tsd-anchor-link">HighlightOptions<a href="#highlightoptions" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h3><p>Configuration interface for highlighting and painting functions.</p>
-<pre><code class="typescript"><span class="hl-6">interface</span><span class="hl-1"> </span><span class="hl-9">HighlightOptions</span><span class="hl-1"> {</span><br/><span class="hl-1">  </span><span class="hl-4">palette</span><span class="hl-1">?: </span><span class="hl-9">ColorPalette</span><span class="hl-1">;      </span><span class="hl-5">// Color scheme to use</span><br/><span class="hl-1">  </span><span class="hl-4">containers</span><span class="hl-1">?: </span><span class="hl-9">ContainerConfig</span><span class="hl-1">; </span><span class="hl-5">// Container delimiter configuration</span><br/><span class="hl-1">}</span>
+<pre><code class="typescript"><span class="hl-6">interface</span><span class="hl-1"> </span><span class="hl-9">HighlightOptions</span><span class="hl-1"> {</span><br/><span class="hl-1">  </span><span class="hl-4">palette</span><span class="hl-1">?: </span><span class="hl-9">ColorPalette</span><span class="hl-1">;           </span><span class="hl-5">// Color scheme to use</span><br/><span class="hl-1">  </span><span class="hl-4">containers</span><span class="hl-1">?: </span><span class="hl-9">ContainerConfig</span><span class="hl-1">;     </span><span class="hl-5">// Container delimiter configuration</span><br/><span class="hl-1">  </span><span class="hl-4">maxWidth</span><span class="hl-1">?: </span><span class="hl-9">number</span><span class="hl-1"> | </span><span class="hl-9">false</span><span class="hl-1"> | </span><span class="hl-9">undefined</span><span class="hl-1">; </span><span class="hl-5">// Maximum output width (characters)</span><br/><span class="hl-1">}</span>
 </code><button type="button">Copy</button></pre>
 
+<p><strong>Properties:</strong></p>
+<ul>
+<li><code>palette</code> - Color scheme to use for syntax highlighting</li>
+<li><code>containers</code> - Container delimiter configuration for formatting</li>
+<li><code>maxWidth</code> - Maximum width for output in characters
+<ul>
+<li><code>number</code> - Specific maximum width (e.g., <code>80</code> for 80 characters)</li>
+<li><code>false</code> - Explicitly disable width limiting</li>
+<li><code>undefined</code> - Use default behavior (no width limit)</li>
+</ul>
+</li>
+</ul>
 <p><strong>Available exports:</strong></p>
 <ul>
 <li><code>defaultHighlightOptions</code> - Pre-configured with defaultPalette and defaultContainers</li>
@@ -226,7 +255,7 @@
 <pre><code class="typescript"><span class="hl-3">import</span><span class="hl-1"> { </span><span class="hl-4">testdata</span><span class="hl-1">, </span><span class="hl-4">parse_value</span><span class="hl-1">, </span><span class="hl-4">paint</span><span class="hl-1"> } </span><span class="hl-3">from</span><span class="hl-1"> </span><span class="hl-2">&#39;kyrie&#39;</span><span class="hl-1">;</span><br/><br/><span class="hl-5">// Parse and paint any testdata item</span><br/><span class="hl-6">const</span><span class="hl-1"> </span><span class="hl-7">ast</span><span class="hl-1"> = </span><span class="hl-0">parse_value</span><span class="hl-1">(</span><span class="hl-4">testdata</span><span class="hl-1">.</span><span class="hl-4">array_all_primitives</span><span class="hl-1">);</span><br/><span class="hl-4">console</span><span class="hl-1">.</span><span class="hl-0">log</span><span class="hl-1">(</span><span class="hl-0">paint</span><span class="hl-1">(</span><span class="hl-4">ast</span><span class="hl-1">));</span><br/><br/><span class="hl-5">// Test with nested containers</span><br/><span class="hl-6">const</span><span class="hl-1"> </span><span class="hl-7">nestedAst</span><span class="hl-1"> = </span><span class="hl-0">parse_value</span><span class="hl-1">(</span><span class="hl-4">testdata</span><span class="hl-1">.</span><span class="hl-4">object_all_containers</span><span class="hl-1">);</span><br/><span class="hl-4">console</span><span class="hl-1">.</span><span class="hl-0">log</span><span class="hl-1">(</span><span class="hl-0">paint</span><span class="hl-1">(</span><span class="hl-4">nestedAst</span><span class="hl-1">, { </span><span class="hl-4">palette:</span><span class="hl-1"> </span><span class="hl-4">forestPalette</span><span class="hl-1"> }));</span><br/><br/><span class="hl-5">// Verify circular reference detection</span><br/><span class="hl-6">const</span><span class="hl-1"> </span><span class="hl-7">circularAst</span><span class="hl-1"> = </span><span class="hl-0">parse_value</span><span class="hl-1">(</span><span class="hl-4">testdata</span><span class="hl-1">.</span><span class="hl-4">circular</span><span class="hl-1">);</span><br/><span class="hl-4">console</span><span class="hl-1">.</span><span class="hl-0">log</span><span class="hl-1">(</span><span class="hl-4">circularAst</span><span class="hl-1">.</span><span class="hl-4">properties</span><span class="hl-1">.</span><span class="hl-4">self</span><span class="hl-1">.</span><span class="hl-4">deep_type</span><span class="hl-1">.</span><span class="hl-4">isCircularReference</span><span class="hl-1">); </span><span class="hl-5">// true</span>
 </code><button type="button">Copy</button></pre>
 
-<h2 id="available-palettes" class="tsd-anchor-link">Available Palettes<a href="#available-palettes" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h2><p>Kyrie includes 9 themed palettes, each with light and dark variants:</p>
+<h2 id="available-palettes" class="tsd-anchor-link">Available Palettes<a href="#available-palettes" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h2><p>Kyrie includes 120 themed palettes, each with light and dark variants:</p>
 <h3 id="palette-themes" class="tsd-anchor-link">Palette Themes<a href="#palette-themes" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h3><ul>
 <li>
 <p><strong>default</strong> - Balanced, standard colors suitable for general use</p>
@@ -291,6 +320,790 @@
 <li><code>palettes.boring.dark</code> - Light grays for dark backgrounds</li>
 </ul>
 </li>
+<li>
+<p><strong>mobster</strong> - Film noir and gangster-inspired dark tones</p>
+<ul>
+<li><code>palettes.mobster.light</code> - Dark noir colors for light backgrounds</li>
+<li><code>palettes.mobster.dark</code> - Light silver/gray tones for dark backgrounds</li>
+</ul>
+</li>
+<li>
+<p><strong>money</strong> - Currency-inspired greens and golds</p>
+<ul>
+<li><code>palettes.money.light</code> - Dark money greens for light backgrounds</li>
+<li><code>palettes.money.dark</code> - Light gold and green tones for dark backgrounds</li>
+</ul>
+</li>
+<li>
+<p><strong>skeleton</strong> - Bone whites and grays with ghostly tones</p>
+<ul>
+<li><code>palettes.skeleton.light</code> - Dark bone colors for light backgrounds</li>
+<li><code>palettes.skeleton.dark</code> - Light bone whites for dark backgrounds</li>
+</ul>
+</li>
+<li>
+<p><strong>sinister</strong> - Dark and ominous color scheme</p>
+<ul>
+<li><code>palettes.sinister.light</code> - Very dark sinister tones for light backgrounds</li>
+<li><code>palettes.sinister.dark</code> - Muted threatening colors for dark backgrounds</li>
+</ul>
+</li>
+<li>
+<p><strong>halloween</strong> - Orange, purple, black, and green seasonal colors</p>
+<ul>
+<li><code>palettes.halloween.light</code> - Dark Halloween colors for light backgrounds</li>
+<li><code>palettes.halloween.dark</code> - Bright Halloween colors for dark backgrounds</li>
+</ul>
+</li>
+<li>
+<p><strong>vampire</strong> - Blood reds, blacks, and pale gothic colors</p>
+<ul>
+<li><code>palettes.vampire.light</code> - Very dark vampiric tones for light backgrounds</li>
+<li><code>palettes.vampire.dark</code> - Pale and blood-red colors for dark backgrounds</li>
+</ul>
+</li>
+<li>
+<p><strong>grayscale</strong> - Pure grayscale with no color saturation</p>
+<ul>
+<li><code>palettes.grayscale.light</code> - Dark grays for light backgrounds</li>
+<li><code>palettes.grayscale.dark</code> - Light grays for dark backgrounds</li>
+</ul>
+</li>
+<li>
+<p><strong>blues</strong> - Various shades of blue throughout</p>
+<ul>
+<li><code>palettes.blues.light</code> - Dark blues for light backgrounds</li>
+<li><code>palettes.blues.dark</code> - Light sky and ocean blues for dark backgrounds</li>
+</ul>
+</li>
+<li>
+<p><strong>circus</strong> - Bright festive reds, yellows, and primary colors</p>
+<ul>
+<li><code>palettes.circus.light</code> - Saturated circus colors for light backgrounds</li>
+<li><code>palettes.circus.dark</code> - Bright carnival colors for dark backgrounds</li>
+</ul>
+</li>
+<li>
+<p><strong>monkey</strong> - Browns, tans, and jungle-inspired earth tones</p>
+<ul>
+<li><code>palettes.monkey.light</code> - Dark brown and tan for light backgrounds</li>
+<li><code>palettes.monkey.dark</code> - Light brown and cream tones for dark backgrounds</li>
+</ul>
+</li>
+<li>
+<p><strong>sky</strong> - Sky blues with sun yellows and cloud whites</p>
+<ul>
+<li><code>palettes.sky.light</code> - Dark sky blues for light backgrounds</li>
+<li><code>palettes.sky.dark</code> - Bright sky and sun colors for dark backgrounds</li>
+</ul>
+</li>
+<li>
+<p><strong>protanopia</strong> - Red color blindness (no red perception, uses blues and yellows)</p>
+<ul>
+<li><code>palettes.protanopia.light</code> - Dark blues and yellows for light backgrounds</li>
+<li><code>palettes.protanopia.dark</code> - Light blues and yellows for dark backgrounds</li>
+</ul>
+</li>
+<li>
+<p><strong>deuteranopia</strong> - Green color blindness (no green perception, uses blues and yellows)</p>
+<ul>
+<li><code>palettes.deuteranopia.light</code> - Dark blues and yellows for light backgrounds</li>
+<li><code>palettes.deuteranopia.dark</code> - Light blues and yellows for dark backgrounds</li>
+</ul>
+</li>
+<li>
+<p><strong>tritanopia</strong> - Blue color blindness (no blue perception, uses reds, greens, and yellows)</p>
+<ul>
+<li><code>palettes.tritanopia.light</code> - Dark warm colors for light backgrounds</li>
+<li><code>palettes.tritanopia.dark</code> - Light warm colors for dark backgrounds</li>
+</ul>
+</li>
+<li>
+<p><strong>monochromacy</strong> - Complete color blindness (grayscale only, distinct brightness levels)</p>
+<ul>
+<li><code>palettes.monochromacy.light</code> - Dark grays with varied brightness for light backgrounds</li>
+<li><code>palettes.monochromacy.dark</code> - Light grays with varied brightness for dark backgrounds</li>
+</ul>
+</li>
+<li>
+<p><strong>deuteranomaly</strong> - Weak green perception (reduced greens, emphasizes blues and yellows)</p>
+<ul>
+<li><code>palettes.deuteranomaly.light</code> - Dark blues and yellows for light backgrounds</li>
+<li><code>palettes.deuteranomaly.dark</code> - Light blues and yellows for dark backgrounds</li>
+</ul>
+</li>
+<li>
+<p><strong>protanomaly</strong> - Weak red perception (reduced reds, emphasizes blues and yellows)</p>
+<ul>
+<li><code>palettes.protanomaly.light</code> - Dark blues and yellows for light backgrounds</li>
+<li><code>palettes.protanomaly.dark</code> - Light blues and yellows for dark backgrounds</li>
+</ul>
+</li>
+<li>
+<p><strong>tritanomaly</strong> - Weak blue perception (reduced blues, emphasizes reds and greens)</p>
+<ul>
+<li><code>palettes.tritanomaly.light</code> - Dark warm colors for light backgrounds</li>
+<li><code>palettes.tritanomaly.dark</code> - Light warm colors for dark backgrounds</li>
+</ul>
+</li>
+<li>
+<p><strong>achromatopsia</strong> - Rod monochromacy (complete absence of cone function, grayscale only)</p>
+<ul>
+<li><code>palettes.achromatopsia.light</code> - Dark grays with varied brightness for light backgrounds</li>
+<li><code>palettes.achromatopsia.dark</code> - Light grays with varied brightness for dark backgrounds</li>
+</ul>
+</li>
+<li>
+<p><strong>rainbow</strong> - Vibrant spectrum of colors across the rainbow</p>
+<ul>
+<li><code>palettes.rainbow.light</code> - Dark rainbow colors for light backgrounds</li>
+<li><code>palettes.rainbow.dark</code> - Bright rainbow colors for dark backgrounds</li>
+</ul>
+</li>
+<li>
+<p><strong>mutedRainbow</strong> - Softer, desaturated rainbow spectrum</p>
+<ul>
+<li><code>palettes.mutedRainbow.light</code> - Dark muted rainbow for light backgrounds</li>
+<li><code>palettes.mutedRainbow.dark</code> - Light muted rainbow for dark backgrounds</li>
+</ul>
+</li>
+<li>
+<p><strong>sunflower</strong> - Warm yellows and browns inspired by sunflowers</p>
+<ul>
+<li><code>palettes.sunflower.light</code> - Dark gold and brown for light backgrounds</li>
+<li><code>palettes.sunflower.dark</code> - Bright yellow and warm tones for dark backgrounds</li>
+</ul>
+</li>
+<li>
+<p><strong>strawberry</strong> - Reds, pinks, and berry-inspired colors</p>
+<ul>
+<li><code>palettes.strawberry.light</code> - Dark berry reds for light backgrounds</li>
+<li><code>palettes.strawberry.dark</code> - Light pink and red tones for dark backgrounds</li>
+</ul>
+</li>
+<li>
+<p><strong>brownAndGreen</strong> - Earth tones combining browns and greens</p>
+<ul>
+<li><code>palettes.brownAndGreen.light</code> - Dark brown and green for light backgrounds</li>
+<li><code>palettes.brownAndGreen.dark</code> - Light tan and sage for dark backgrounds</li>
+</ul>
+</li>
+<li>
+<p><strong>solarFlare</strong> - Intense oranges, yellows, and hot colors</p>
+<ul>
+<li><code>palettes.solarFlare.light</code> - Dark solar colors for light backgrounds</li>
+<li><code>palettes.solarFlare.dark</code> - Bright solar yellows and oranges for dark backgrounds</li>
+</ul>
+</li>
+<li>
+<p><strong>purpleToOrange</strong> - Gradient from purple through red to orange</p>
+<ul>
+<li><code>palettes.purpleToOrange.light</code> - Dark gradient colors for light backgrounds</li>
+<li><code>palettes.purpleToOrange.dark</code> - Bright gradient colors for dark backgrounds</li>
+</ul>
+</li>
+<li>
+<p><strong>commodore64</strong> - Retro computer palette inspired by the Commodore 64</p>
+<ul>
+<li><code>palettes.commodore64.light</code> - Dark C64 colors for light backgrounds</li>
+<li><code>palettes.commodore64.dark</code> - Bright C64 colors for dark backgrounds</li>
+</ul>
+</li>
+<li>
+<p><strong>military</strong> - Olive greens, khakis, and camouflage-inspired earth tones</p>
+<ul>
+<li><code>palettes.military.light</code> - Dark military colors for light backgrounds</li>
+<li><code>palettes.military.dark</code> - Light olive and khaki for dark backgrounds</li>
+</ul>
+</li>
+<li>
+<p><strong>police</strong> - Blues and blacks with emergency light accents</p>
+<ul>
+<li><code>palettes.police.light</code> - Dark police blues for light backgrounds</li>
+<li><code>palettes.police.dark</code> - Light blue and white tones for dark backgrounds</li>
+</ul>
+</li>
+<li>
+<p><strong>hacker</strong> - Matrix-inspired greens and terminal colors</p>
+<ul>
+<li><code>palettes.hacker.light</code> - Dark terminal greens for light backgrounds</li>
+<li><code>palettes.hacker.dark</code> - Bright matrix greens for dark backgrounds</li>
+</ul>
+</li>
+<li>
+<p><strong>wizard</strong> - Mystical purples, blues, and magical tones</p>
+<ul>
+<li><code>palettes.wizard.light</code> - Dark mystical colors for light backgrounds</li>
+<li><code>palettes.wizard.dark</code> - Bright magical purples and blues for dark backgrounds</li>
+</ul>
+</li>
+<li>
+<p><strong>butterfly</strong> - Delicate, varied colors inspired by butterfly wings</p>
+<ul>
+<li><code>palettes.butterfly.light</code> - Dark wing colors for light backgrounds</li>
+<li><code>palettes.butterfly.dark</code> - Bright vibrant wing colors for dark backgrounds</li>
+</ul>
+</li>
+<li>
+<p><strong>gunmetal</strong> - Dark grays and metallic tones</p>
+<ul>
+<li><code>palettes.gunmetal.light</code> - Very dark metallic grays for light backgrounds</li>
+<li><code>palettes.gunmetal.dark</code> - Light metallic tones for dark backgrounds</li>
+</ul>
+</li>
+<li>
+<p><strong>cocaCola</strong> - Classic red and white brand colors</p>
+<ul>
+<li><code>palettes.cocaCola.light</code> - Dark Coca-Cola reds for light backgrounds</li>
+<li><code>palettes.cocaCola.dark</code> - Bright reds and whites for dark backgrounds</li>
+</ul>
+</li>
+<li>
+<p><strong>ogre</strong> - Swamp greens and muddy browns</p>
+<ul>
+<li><code>palettes.ogre.light</code> - Dark swamp colors for light backgrounds</li>
+<li><code>palettes.ogre.dark</code> - Light moss and mud tones for dark backgrounds</li>
+</ul>
+</li>
+<li>
+<p><strong>burglar</strong> - Black, gray stripes, and stealth colors</p>
+<ul>
+<li><code>palettes.burglar.light</code> - Very dark grays and blacks for light backgrounds</li>
+<li><code>palettes.burglar.dark</code> - Light grays for dark backgrounds</li>
+</ul>
+</li>
+<li>
+<p><strong>crystal</strong> - Clear, icy blues and whites with gem-like tones</p>
+<ul>
+<li><code>palettes.crystal.light</code> - Dark crystal blues for light backgrounds</li>
+<li><code>palettes.crystal.dark</code> - Bright icy and white tones for dark backgrounds</li>
+</ul>
+</li>
+<li>
+<p><strong>laser</strong> - Neon reds, pinks, and bright sci-fi colors</p>
+<ul>
+<li><code>palettes.laser.light</code> - Dark laser colors for light backgrounds</li>
+<li><code>palettes.laser.dark</code> - Bright neon laser colors for dark backgrounds</li>
+</ul>
+</li>
+<li>
+<p><strong>kungFu</strong> - Martial arts-inspired oranges, golds, and reds</p>
+<ul>
+<li><code>palettes.kungFu.light</code> - Dark martial arts colors for light backgrounds</li>
+<li><code>palettes.kungFu.dark</code> - Bright gold and red tones for dark backgrounds</li>
+</ul>
+</li>
+<li>
+<p><strong>starTrek</strong> - Starfleet command gold, science blue, and engineering red</p>
+<ul>
+<li><code>palettes.starTrek.light</code> - Dark Trek colors for light backgrounds</li>
+<li><code>palettes.starTrek.dark</code> - Bright Starfleet colors for dark backgrounds</li>
+</ul>
+</li>
+<li>
+<p><strong>antique</strong> - Aged browns, sepias, and vintage tones</p>
+<ul>
+<li><code>palettes.antique.light</code> - Dark sepia and brown for light backgrounds</li>
+<li><code>palettes.antique.dark</code> - Light aged cream and tan for dark backgrounds</li>
+</ul>
+</li>
+<li>
+<p><strong>book</strong> - Paper whites, ink blacks, and library colors</p>
+<ul>
+<li><code>palettes.book.light</code> - Dark ink colors for light backgrounds</li>
+<li><code>palettes.book.dark</code> - Light cream and aged paper for dark backgrounds</li>
+</ul>
+</li>
+<li>
+<p><strong>eighties</strong> - Neon pinks, purples, and retro 1980s colors</p>
+<ul>
+<li><code>palettes.eighties.light</code> - Dark 80s colors for light backgrounds</li>
+<li><code>palettes.eighties.dark</code> - Bright neon 80s colors for dark backgrounds</li>
+</ul>
+</li>
+<li>
+<p><strong>neon</strong> - Ultra-bright neon colors for signs and displays</p>
+<ul>
+<li><code>palettes.neon.light</code> - Dark neon base colors for light backgrounds</li>
+<li><code>palettes.neon.dark</code> - Bright glowing neon for dark backgrounds</li>
+</ul>
+</li>
+<li>
+<p><strong>flowers</strong> - Colorful floral-inspired palette with varied hues</p>
+<ul>
+<li><code>palettes.flowers.light</code> - Dark floral colors for light backgrounds</li>
+<li><code>palettes.flowers.dark</code> - Bright petal colors for dark backgrounds</li>
+</ul>
+</li>
+<li>
+<p><strong>logger</strong> - Wood browns, bark grays, and forest work colors</p>
+<ul>
+<li><code>palettes.logger.light</code> - Dark wood and bark for light backgrounds</li>
+<li><code>palettes.logger.dark</code> - Light lumber and sawdust tones for dark backgrounds</li>
+</ul>
+</li>
+<li>
+<p><strong>system</strong> - Terminal grays, tech blues, and computer interface colors</p>
+<ul>
+<li><code>palettes.system.light</code> - Dark system colors for light backgrounds</li>
+<li><code>palettes.system.dark</code> - Light terminal colors for dark backgrounds</li>
+</ul>
+</li>
+<li>
+<p><strong>alien</strong> - Otherworldly greens, purples, and sci-fi extraterrestrial colors</p>
+<ul>
+<li><code>palettes.alien.light</code> - Dark alien colors for light backgrounds</li>
+<li><code>palettes.alien.dark</code> - Bright UFO and alien greens for dark backgrounds</li>
+</ul>
+</li>
+<li>
+<p><strong>protanopiaBright</strong> - Red color blindness with bright, saturated blues and yellows (no reds)</p>
+<ul>
+<li><code>palettes.protanopiaBright.light</code> - Dark bright blues and yellows for light backgrounds</li>
+<li><code>palettes.protanopiaBright.dark</code> - Bright vibrant blues and yellows for dark backgrounds</li>
+</ul>
+</li>
+<li>
+<p><strong>protanopiaSubtle</strong> - Red color blindness with muted, low-saturation blues and yellows (no reds)</p>
+<ul>
+<li><code>palettes.protanopiaSubtle.light</code> - Dark muted blues and yellows for light backgrounds</li>
+<li><code>palettes.protanopiaSubtle.dark</code> - Light muted blues and yellows for dark backgrounds</li>
+</ul>
+</li>
+<li>
+<p><strong>protanopiaPastel</strong> - Red color blindness with soft, pastel blues and yellows (no reds)</p>
+<ul>
+<li><code>palettes.protanopiaPastel.light</code> - Dark pastel blues and yellows for light backgrounds</li>
+<li><code>palettes.protanopiaPastel.dark</code> - Light pastel blues and yellows for dark backgrounds</li>
+</ul>
+</li>
+<li>
+<p><strong>protanopiaBoring</strong> - Red color blindness with grayscale-ish, very muted tones (no reds)</p>
+<ul>
+<li><code>palettes.protanopiaBoring.light</code> - Dark grayscale blues and yellows for light backgrounds</li>
+<li><code>palettes.protanopiaBoring.dark</code> - Light grayscale blues and yellows for dark backgrounds</li>
+</ul>
+</li>
+<li>
+<p><strong>protanopiaFunky</strong> - Red color blindness with playful, unusual blues and yellows (no reds)</p>
+<ul>
+<li><code>palettes.protanopiaFunky.light</code> - Dark funky blues and yellows for light backgrounds</li>
+<li><code>palettes.protanopiaFunky.dark</code> - Bright playful blues and yellows for dark backgrounds</li>
+</ul>
+</li>
+<li>
+<p><strong>protanopiaVivid</strong> - Red color blindness with intense, highly saturated blues and yellows (no reds)</p>
+<ul>
+<li><code>palettes.protanopiaVivid.light</code> - Very dark vivid blues and yellows for light backgrounds</li>
+<li><code>palettes.protanopiaVivid.dark</code> - Very bright vivid blues and yellows for dark backgrounds</li>
+</ul>
+</li>
+<li>
+<p><strong>deuteranopiaBright</strong> - Green color blindness with bright, saturated blues and yellows (no greens)</p>
+<ul>
+<li><code>palettes.deuteranopiaBright.light</code> - Dark bright blues and yellows for light backgrounds</li>
+<li><code>palettes.deuteranopiaBright.dark</code> - Bright vibrant blues and yellows for dark backgrounds</li>
+</ul>
+</li>
+<li>
+<p><strong>deuteranopiaSubtle</strong> - Green color blindness with muted, low-saturation blues and yellows (no greens)</p>
+<ul>
+<li><code>palettes.deuteranopiaSubtle.light</code> - Dark muted blues and yellows for light backgrounds</li>
+<li><code>palettes.deuteranopiaSubtle.dark</code> - Light muted blues and yellows for dark backgrounds</li>
+</ul>
+</li>
+<li>
+<p><strong>deuteranopiaPastel</strong> - Green color blindness with soft, pastel blues and yellows (no greens)</p>
+<ul>
+<li><code>palettes.deuteranopiaPastel.light</code> - Dark pastel blues and yellows for light backgrounds</li>
+<li><code>palettes.deuteranopiaPastel.dark</code> - Light pastel blues and yellows for dark backgrounds</li>
+</ul>
+</li>
+<li>
+<p><strong>deuteranopiaBoring</strong> - Green color blindness with grayscale-ish, very muted tones (no greens)</p>
+<ul>
+<li><code>palettes.deuteranopiaBoring.light</code> - Dark grayscale blues and yellows for light backgrounds</li>
+<li><code>palettes.deuteranopiaBoring.dark</code> - Light grayscale blues and yellows for dark backgrounds</li>
+</ul>
+</li>
+<li>
+<p><strong>deuteranopiaFunky</strong> - Green color blindness with playful, unusual blues and yellows (no greens)</p>
+<ul>
+<li><code>palettes.deuteranopiaFunky.light</code> - Dark funky blues and yellows for light backgrounds</li>
+<li><code>palettes.deuteranopiaFunky.dark</code> - Bright playful blues and yellows for dark backgrounds</li>
+</ul>
+</li>
+<li>
+<p><strong>deuteranopiaVivid</strong> - Green color blindness with intense, highly saturated blues and yellows (no greens)</p>
+<ul>
+<li><code>palettes.deuteranopiaVivid.light</code> - Very dark vivid blues and yellows for light backgrounds</li>
+<li><code>palettes.deuteranopiaVivid.dark</code> - Very bright vivid blues and yellows for dark backgrounds</li>
+</ul>
+</li>
+<li>
+<p><strong>tritanopiaBright</strong> - Blue color blindness with bright, saturated reds, greens, and yellows (no blues)</p>
+<ul>
+<li><code>palettes.tritanopiaBright.light</code> - Dark bright warm colors for light backgrounds</li>
+<li><code>palettes.tritanopiaBright.dark</code> - Bright vibrant warm colors for dark backgrounds</li>
+</ul>
+</li>
+<li>
+<p><strong>tritanopiaSubtle</strong> - Blue color blindness with muted, low-saturation reds, greens, and yellows (no blues)</p>
+<ul>
+<li><code>palettes.tritanopiaSubtle.light</code> - Dark muted warm colors for light backgrounds</li>
+<li><code>palettes.tritanopiaSubtle.dark</code> - Light muted warm colors for dark backgrounds</li>
+</ul>
+</li>
+<li>
+<p><strong>tritanopiaPastel</strong> - Blue color blindness with soft, pastel reds, greens, and yellows (no blues)</p>
+<ul>
+<li><code>palettes.tritanopiaPastel.light</code> - Dark pastel warm colors for light backgrounds</li>
+<li><code>palettes.tritanopiaPastel.dark</code> - Light pastel warm colors for dark backgrounds</li>
+</ul>
+</li>
+<li>
+<p><strong>tritanopiaBoring</strong> - Blue color blindness with grayscale-ish, very muted warm tones (no blues)</p>
+<ul>
+<li><code>palettes.tritanopiaBoring.light</code> - Dark grayscale warm colors for light backgrounds</li>
+<li><code>palettes.tritanopiaBoring.dark</code> - Light grayscale warm colors for dark backgrounds</li>
+</ul>
+</li>
+<li>
+<p><strong>tritanopiaFunky</strong> - Blue color blindness with playful, unusual reds, greens, and yellows (no blues)</p>
+<ul>
+<li><code>palettes.tritanopiaFunky.light</code> - Dark funky warm colors for light backgrounds</li>
+<li><code>palettes.tritanopiaFunky.dark</code> - Bright playful warm colors for dark backgrounds</li>
+</ul>
+</li>
+<li>
+<p><strong>tritanopiaVivid</strong> - Blue color blindness with intense, highly saturated reds, greens, and yellows (no blues)</p>
+<ul>
+<li><code>palettes.tritanopiaVivid.light</code> - Very dark vivid warm colors for light backgrounds</li>
+<li><code>palettes.tritanopiaVivid.dark</code> - Very bright vivid warm colors for dark backgrounds</li>
+</ul>
+</li>
+<li>
+<p><strong>monochromacyBright</strong> - Complete color blindness with bright, high-contrast grayscale (no colors, only grays)</p>
+<ul>
+<li><code>palettes.monochromacyBright.light</code> - Very dark grays with strong brightness contrast for light backgrounds</li>
+<li><code>palettes.monochromacyBright.dark</code> - Very light grays with strong brightness contrast for dark backgrounds</li>
+</ul>
+</li>
+<li>
+<p><strong>monochromacySubtle</strong> - Complete color blindness with subtle, moderate grayscale contrast (no colors, only grays)</p>
+<ul>
+<li><code>palettes.monochromacySubtle.light</code> - Dark grays with moderate brightness levels for light backgrounds</li>
+<li><code>palettes.monochromacySubtle.dark</code> - Light grays with moderate brightness levels for dark backgrounds</li>
+</ul>
+</li>
+<li>
+<p><strong>monochromacyPastel</strong> - Complete color blindness with soft, light grayscale tones (no colors, only grays)</p>
+<ul>
+<li><code>palettes.monochromacyPastel.light</code> - Medium-dark grays with subtle contrast for light backgrounds</li>
+<li><code>palettes.monochromacyPastel.dark</code> - Very light grays with subtle contrast for dark backgrounds</li>
+</ul>
+</li>
+<li>
+<p><strong>monochromacyBoring</strong> - Complete color blindness with minimal, low-contrast grayscale (no colors, only grays)</p>
+<ul>
+<li><code>palettes.monochromacyBoring.light</code> - Dark grays with minimal brightness variation for light backgrounds</li>
+<li><code>palettes.monochromacyBoring.dark</code> - Light grays with minimal brightness variation for dark backgrounds</li>
+</ul>
+</li>
+<li>
+<p><strong>monochromacyFunky</strong> - Complete color blindness with varied, distinct grayscale levels (no colors, only grays)</p>
+<ul>
+<li><code>palettes.monochromacyFunky.light</code> - Very dark to black grays with high variation for light backgrounds</li>
+<li><code>palettes.monochromacyFunky.dark</code> - Very light to white grays with high variation for dark backgrounds</li>
+</ul>
+</li>
+<li>
+<p><strong>monochromacyVivid</strong> - Complete color blindness with extreme, maximum-contrast grayscale (no colors, only grays)</p>
+<ul>
+<li><code>palettes.monochromacyVivid.light</code> - Pure blacks and very dark grays for light backgrounds</li>
+<li><code>palettes.monochromacyVivid.dark</code> - Pure whites and very light grays for dark backgrounds</li>
+</ul>
+</li>
+<li>
+<p><strong>deuteranomalyBright</strong> - Weak green perception with bright, saturated blues and yellows (reduced greens)</p>
+<ul>
+<li><code>palettes.deuteranomalyBright.light</code> - Dark bright blues and yellows for light backgrounds</li>
+<li><code>palettes.deuteranomalyBright.dark</code> - Bright vibrant blues and yellows for dark backgrounds</li>
+</ul>
+</li>
+<li>
+<p><strong>deuteranomalySubtle</strong> - Weak green perception with muted, low-saturation blues and yellows (reduced greens)</p>
+<ul>
+<li><code>palettes.deuteranomalySubtle.light</code> - Dark muted blues and yellows for light backgrounds</li>
+<li><code>palettes.deuteranomalySubtle.dark</code> - Light muted blues and yellows for dark backgrounds</li>
+</ul>
+</li>
+<li>
+<p><strong>deuteranomalyPastel</strong> - Weak green perception with soft, pastel blues and yellows (reduced greens)</p>
+<ul>
+<li><code>palettes.deuteranomalyPastel.light</code> - Dark pastel blues and yellows for light backgrounds</li>
+<li><code>palettes.deuteranomalyPastel.dark</code> - Light pastel blues and yellows for dark backgrounds</li>
+</ul>
+</li>
+<li>
+<p><strong>deuteranomalyBoring</strong> - Weak green perception with grayscale-ish, very muted tones (reduced greens)</p>
+<ul>
+<li><code>palettes.deuteranomalyBoring.light</code> - Dark grayscale blues and yellows for light backgrounds</li>
+<li><code>palettes.deuteranomalyBoring.dark</code> - Light grayscale blues and yellows for dark backgrounds</li>
+</ul>
+</li>
+<li>
+<p><strong>deuteranomalyFunky</strong> - Weak green perception with playful, unusual blues and yellows (reduced greens)</p>
+<ul>
+<li><code>palettes.deuteranomalyFunky.light</code> - Dark funky blues and yellows for light backgrounds</li>
+<li><code>palettes.deuteranomalyFunky.dark</code> - Bright playful blues and yellows for dark backgrounds</li>
+</ul>
+</li>
+<li>
+<p><strong>deuteranomalyVivid</strong> - Weak green perception with intense, highly saturated blues and yellows (reduced greens)</p>
+<ul>
+<li><code>palettes.deuteranomalyVivid.light</code> - Very dark vivid blues and yellows for light backgrounds</li>
+<li><code>palettes.deuteranomalyVivid.dark</code> - Very bright vivid blues and yellows for dark backgrounds</li>
+</ul>
+</li>
+<li>
+<p><strong>protanomalyBright</strong> - Weak red perception with bright, saturated blues and yellows (reduced reds)</p>
+<ul>
+<li><code>palettes.protanomalyBright.light</code> - Dark bright blues and yellows for light backgrounds</li>
+<li><code>palettes.protanomalyBright.dark</code> - Bright vibrant blues and yellows for dark backgrounds</li>
+</ul>
+</li>
+<li>
+<p><strong>protanomalySubtle</strong> - Weak red perception with muted, low-saturation blues and yellows (reduced reds)</p>
+<ul>
+<li><code>palettes.protanomalySubtle.light</code> - Dark muted blues and yellows for light backgrounds</li>
+<li><code>palettes.protanomalySubtle.dark</code> - Light muted blues and yellows for dark backgrounds</li>
+</ul>
+</li>
+<li>
+<p><strong>protanomalyPastel</strong> - Weak red perception with soft, pastel blues and yellows (reduced reds)</p>
+<ul>
+<li><code>palettes.protanomalyPastel.light</code> - Dark pastel blues and yellows for light backgrounds</li>
+<li><code>palettes.protanomalyPastel.dark</code> - Light pastel blues and yellows for dark backgrounds</li>
+</ul>
+</li>
+<li>
+<p><strong>protanomalyBoring</strong> - Weak red perception with grayscale-ish, very muted tones (reduced reds)</p>
+<ul>
+<li><code>palettes.protanomalyBoring.light</code> - Dark grayscale blues and yellows for light backgrounds</li>
+<li><code>palettes.protanomalyBoring.dark</code> - Light grayscale blues and yellows for dark backgrounds</li>
+</ul>
+</li>
+<li>
+<p><strong>protanomalyFunky</strong> - Weak red perception with playful, unusual blues and yellows (reduced reds)</p>
+<ul>
+<li><code>palettes.protanomalyFunky.light</code> - Dark funky blues and yellows for light backgrounds</li>
+<li><code>palettes.protanomalyFunky.dark</code> - Bright playful blues and yellows for dark backgrounds</li>
+</ul>
+</li>
+<li>
+<p><strong>protanomalyVivid</strong> - Weak red perception with intense, highly saturated blues and yellows (reduced reds)</p>
+<ul>
+<li><code>palettes.protanomalyVivid.light</code> - Very dark vivid blues and yellows for light backgrounds</li>
+<li><code>palettes.protanomalyVivid.dark</code> - Very bright vivid blues and yellows for dark backgrounds</li>
+</ul>
+</li>
+<li>
+<p><strong>tritanomalyBright</strong> - Weak blue perception with bright, saturated reds, greens, and yellows (reduced blues)</p>
+<ul>
+<li><code>palettes.tritanomalyBright.light</code> - Dark bright warm colors for light backgrounds</li>
+<li><code>palettes.tritanomalyBright.dark</code> - Bright vibrant warm colors for dark backgrounds</li>
+</ul>
+</li>
+<li>
+<p><strong>tritanomalySubtle</strong> - Weak blue perception with muted, low-saturation reds, greens, and yellows (reduced blues)</p>
+<ul>
+<li><code>palettes.tritanomalySubtle.light</code> - Dark muted warm colors for light backgrounds</li>
+<li><code>palettes.tritanomalySubtle.dark</code> - Light muted warm colors for dark backgrounds</li>
+</ul>
+</li>
+<li>
+<p><strong>tritanomalyPastel</strong> - Weak blue perception with soft, pastel reds, greens, and yellows (reduced blues)</p>
+<ul>
+<li><code>palettes.tritanomalyPastel.light</code> - Dark pastel warm colors for light backgrounds</li>
+<li><code>palettes.tritanomalyPastel.dark</code> - Light pastel warm colors for dark backgrounds</li>
+</ul>
+</li>
+<li>
+<p><strong>tritanomalyBoring</strong> - Weak blue perception with grayscale-ish, very muted warm tones (reduced blues)</p>
+<ul>
+<li><code>palettes.tritanomalyBoring.light</code> - Dark grayscale warm colors for light backgrounds</li>
+<li><code>palettes.tritanomalyBoring.dark</code> - Light grayscale warm colors for dark backgrounds</li>
+</ul>
+</li>
+<li>
+<p><strong>tritanomalyFunky</strong> - Weak blue perception with playful, unusual reds, greens, and yellows (reduced blues)</p>
+<ul>
+<li><code>palettes.tritanomalyFunky.light</code> - Dark funky warm colors for light backgrounds</li>
+<li><code>palettes.tritanomalyFunky.dark</code> - Bright playful warm colors for dark backgrounds</li>
+</ul>
+</li>
+<li>
+<p><strong>tritanomalyVivid</strong> - Weak blue perception with intense, highly saturated reds, greens, and yellows (reduced blues)</p>
+<ul>
+<li><code>palettes.tritanomalyVivid.light</code> - Very dark vivid warm colors for light backgrounds</li>
+<li><code>palettes.tritanomalyVivid.dark</code> - Very bright vivid warm colors for dark backgrounds</li>
+</ul>
+</li>
+<li>
+<p><strong>redsAndOranges</strong> - Color combination with predominantly red tones accented by orange</p>
+<ul>
+<li><code>palettes.redsAndOranges.light</code> - Dark reds with orange accents for light backgrounds</li>
+<li><code>palettes.redsAndOranges.dark</code> - Bright reds with orange accents for dark backgrounds</li>
+</ul>
+</li>
+<li>
+<p><strong>redsAndYellows</strong> - Color combination with predominantly red tones accented by yellow</p>
+<ul>
+<li><code>palettes.redsAndYellows.light</code> - Dark reds with yellow accents for light backgrounds</li>
+<li><code>palettes.redsAndYellows.dark</code> - Bright reds with yellow accents for dark backgrounds</li>
+</ul>
+</li>
+<li>
+<p><strong>redsAndGreens</strong> - Color combination with predominantly red tones accented by green</p>
+<ul>
+<li><code>palettes.redsAndGreens.light</code> - Dark reds with green accents for light backgrounds</li>
+<li><code>palettes.redsAndGreens.dark</code> - Bright reds with green accents for dark backgrounds</li>
+</ul>
+</li>
+<li>
+<p><strong>redsAndBlues</strong> - Color combination with predominantly red tones accented by blue</p>
+<ul>
+<li><code>palettes.redsAndBlues.light</code> - Dark reds with blue accents for light backgrounds</li>
+<li><code>palettes.redsAndBlues.dark</code> - Bright reds with blue accents for dark backgrounds</li>
+</ul>
+</li>
+<li>
+<p><strong>redsAndPurples</strong> - Color combination with predominantly red tones accented by purple</p>
+<ul>
+<li><code>palettes.redsAndPurples.light</code> - Dark reds with purple accents for light backgrounds</li>
+<li><code>palettes.redsAndPurples.dark</code> - Bright reds with purple accents for dark backgrounds</li>
+</ul>
+</li>
+<li>
+<p><strong>redsAndBrowns</strong> - Color combination with predominantly red tones accented by brown</p>
+<ul>
+<li><code>palettes.redsAndBrowns.light</code> - Dark reds with brown accents for light backgrounds</li>
+<li><code>palettes.redsAndBrowns.dark</code> - Bright reds with brown accents for dark backgrounds</li>
+</ul>
+</li>
+<li>
+<p><strong>redsAndGrays</strong> - Color combination with predominantly red tones accented by gray</p>
+<ul>
+<li><code>palettes.redsAndGrays.light</code> - Dark reds with gray accents for light backgrounds</li>
+<li><code>palettes.redsAndGrays.dark</code> - Bright reds with gray accents for dark backgrounds</li>
+</ul>
+</li>
+<li>
+<p><strong>redsAndMagentas</strong> - Color combination with predominantly red tones accented by magenta</p>
+<ul>
+<li><code>palettes.redsAndMagentas.light</code> - Dark reds with magenta accents for light backgrounds</li>
+<li><code>palettes.redsAndMagentas.dark</code> - Bright reds with magenta accents for dark backgrounds</li>
+</ul>
+</li>
+<li>
+<p><strong>redsAndCyans</strong> - Color combination with predominantly red tones accented by cyan</p>
+<ul>
+<li><code>palettes.redsAndCyans.light</code> - Dark reds with cyan accents for light backgrounds</li>
+<li><code>palettes.redsAndCyans.dark</code> - Bright reds with cyan accents for dark backgrounds</li>
+</ul>
+</li>
+<li>
+<p><strong>redsAndCharcoals</strong> - Color combination with predominantly red tones accented by charcoal</p>
+<ul>
+<li><code>palettes.redsAndCharcoals.light</code> - Dark reds with charcoal accents for light backgrounds</li>
+<li><code>palettes.redsAndCharcoals.dark</code> - Bright reds with charcoal accents for dark backgrounds</li>
+</ul>
+</li>
+<li>
+<p><strong>orangesAndReds</strong> - Color combination with predominantly orange tones accented by red</p>
+<ul>
+<li><code>palettes.orangesAndReds.light</code> - Dark oranges with red accents for light backgrounds</li>
+<li><code>palettes.orangesAndReds.dark</code> - Bright oranges with red accents for dark backgrounds</li>
+</ul>
+</li>
+<li>
+<p><strong>orangesAndYellows</strong> - Color combination with predominantly orange tones accented by yellow</p>
+<ul>
+<li><code>palettes.orangesAndYellows.light</code> - Dark oranges with yellow accents for light backgrounds</li>
+<li><code>palettes.orangesAndYellows.dark</code> - Bright oranges with yellow accents for dark backgrounds</li>
+</ul>
+</li>
+<li>
+<p><strong>orangesAndGreens</strong> - Color combination with predominantly orange tones accented by green</p>
+<ul>
+<li><code>palettes.orangesAndGreens.light</code> - Dark oranges with green accents for light backgrounds</li>
+<li><code>palettes.orangesAndGreens.dark</code> - Bright oranges with green accents for dark backgrounds</li>
+</ul>
+</li>
+<li>
+<p><strong>orangesAndBlues</strong> - Color combination with predominantly orange tones accented by blue</p>
+<ul>
+<li><code>palettes.orangesAndBlues.light</code> - Dark oranges with blue accents for light backgrounds</li>
+<li><code>palettes.orangesAndBlues.dark</code> - Bright oranges with blue accents for dark backgrounds</li>
+</ul>
+</li>
+<li>
+<p><strong>orangesAndPurples</strong> - Color combination with predominantly orange tones accented by purple</p>
+<ul>
+<li><code>palettes.orangesAndPurples.light</code> - Dark oranges with purple accents for light backgrounds</li>
+<li><code>palettes.orangesAndPurples.dark</code> - Bright oranges with purple accents for dark backgrounds</li>
+</ul>
+</li>
+<li>
+<p><strong>orangesAndBrowns</strong> - Color combination with predominantly orange tones accented by brown</p>
+<ul>
+<li><code>palettes.orangesAndBrowns.light</code> - Dark oranges with brown accents for light backgrounds</li>
+<li><code>palettes.orangesAndBrowns.dark</code> - Bright oranges with brown accents for dark backgrounds</li>
+</ul>
+</li>
+<li>
+<p><strong>orangesAndGrays</strong> - Color combination with predominantly orange tones accented by gray</p>
+<ul>
+<li><code>palettes.orangesAndGrays.light</code> - Dark oranges with gray accents for light backgrounds</li>
+<li><code>palettes.orangesAndGrays.dark</code> - Bright oranges with gray accents for dark backgrounds</li>
+</ul>
+</li>
+<li>
+<p><strong>orangesAndMagentas</strong> - Color combination with predominantly orange tones accented by magenta</p>
+<ul>
+<li><code>palettes.orangesAndMagentas.light</code> - Dark oranges with magenta accents for light backgrounds</li>
+<li><code>palettes.orangesAndMagentas.dark</code> - Bright oranges with magenta accents for dark backgrounds</li>
+</ul>
+</li>
+<li>
+<p><strong>orangesAndCyans</strong> - Color combination with predominantly orange tones accented by cyan</p>
+<ul>
+<li><code>palettes.orangesAndCyans.light</code> - Dark oranges with cyan accents for light backgrounds</li>
+<li><code>palettes.orangesAndCyans.dark</code> - Bright oranges with cyan accents for dark backgrounds</li>
+</ul>
+</li>
+<li>
+<p><strong>orangesAndCharcoals</strong> - Color combination with predominantly orange tones accented by charcoal</p>
+<ul>
+<li><code>palettes.orangesAndCharcoals.light</code> - Dark oranges with charcoal accents for light backgrounds</li>
+<li><code>palettes.orangesAndCharcoals.dark</code> - Bright oranges with charcoal accents for dark backgrounds</li>
+</ul>
+</li>
+<li>
+<p><strong>yellowsAndReds</strong> - Color combination with predominantly yellow tones accented by red</p>
+<ul>
+<li><code>palettes.yellowsAndReds.light</code> - Dark yellows with red accents for light backgrounds</li>
+<li><code>palettes.yellowsAndReds.dark</code> - Bright yellows with red accents for dark backgrounds</li>
+</ul>
+</li>
+<li>
+<p><strong>yellowsAndOranges</strong> - Color combination with predominantly yellow tones accented by orange</p>
+<ul>
+<li><code>palettes.yellowsAndOranges.light</code> - Dark yellows with orange accents for light backgrounds</li>
+<li><code>palettes.yellowsAndOranges.dark</code> - Bright yellows with orange accents for dark backgrounds</li>
+</ul>
+</li>
 </ul>
 <h3 id="usage-example" class="tsd-anchor-link">Usage Example<a href="#usage-example" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h3><pre><code class="typescript"><span class="hl-3">import</span><span class="hl-1"> { </span><span class="hl-4">highlight_value</span><span class="hl-1">, </span><span class="hl-4">palettes</span><span class="hl-1"> } </span><span class="hl-3">from</span><span class="hl-1"> </span><span class="hl-2">&#39;kyrie&#39;</span><span class="hl-1">;</span><br/><br/><span class="hl-6">const</span><span class="hl-1"> </span><span class="hl-7">data</span><span class="hl-1"> = { </span><span class="hl-4">name:</span><span class="hl-1"> </span><span class="hl-2">&#39;Alice&#39;</span><span class="hl-1">, </span><span class="hl-4">items:</span><span class="hl-1"> [</span><span class="hl-8">1</span><span class="hl-1">, </span><span class="hl-8">2</span><span class="hl-1">, </span><span class="hl-8">3</span><span class="hl-1">] };</span><br/><br/><span class="hl-5">// Use light variant (dark colors for light backgrounds)</span><br/><span class="hl-4">console</span><span class="hl-1">.</span><span class="hl-0">log</span><span class="hl-1">(</span><span class="hl-0">highlight_value</span><span class="hl-1">(</span><span class="hl-4">data</span><span class="hl-1">, { </span><span class="hl-4">palette:</span><span class="hl-1"> </span><span class="hl-4">palettes</span><span class="hl-1">.</span><span class="hl-4">forest</span><span class="hl-1">.</span><span class="hl-4">light</span><span class="hl-1"> }));</span><br/><br/><span class="hl-5">// Use dark variant (light colors for dark backgrounds)</span><br/><span class="hl-4">console</span><span class="hl-1">.</span><span class="hl-0">log</span><span class="hl-1">(</span><span class="hl-0">highlight_value</span><span class="hl-1">(</span><span class="hl-4">data</span><span class="hl-1">, { </span><span class="hl-4">palette:</span><span class="hl-1"> </span><span class="hl-4">palettes</span><span class="hl-1">.</span><span class="hl-4">bold</span><span class="hl-1">.</span><span class="hl-4">dark</span><span class="hl-1"> }));</span>
 </code><button type="button">Copy</button></pre>
@@ -299,4 +1112,4 @@
 </code><button type="button">Copy</button></pre>
 
 <h2 id="license" class="tsd-anchor-link">License<a href="#license" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h2><p>MIT</p>
-</div></div><div class="col-sidebar"><div class="page-menu"><div class="tsd-navigation settings"><details class="tsd-accordion"><summary class="tsd-accordion-summary"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><use href="assets/icons.svg#icon-chevronDown"></use></svg><h3>Settings</h3></summary><div class="tsd-accordion-details"><div class="tsd-filter-visibility"><span class="settings-label">Member Visibility</span><ul id="tsd-filter-options"><li class="tsd-filter-item"><label class="tsd-filter-input"><input type="checkbox" id="tsd-filter-protected" name="protected"/><svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true"><rect class="tsd-checkbox-background" width="30" height="30" x="1" y="1" rx="6" fill="none"></rect><path class="tsd-checkbox-checkmark" d="M8.35422 16.8214L13.2143 21.75L24.6458 10.25" stroke="none" stroke-width="3.5" stroke-linejoin="round" fill="none"></path></svg><span>Protected</span></label></li><li class="tsd-filter-item"><label class="tsd-filter-input"><input type="checkbox" id="tsd-filter-inherited" name="inherited" checked/><svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true"><rect class="tsd-checkbox-background" width="30" height="30" x="1" y="1" rx="6" fill="none"></rect><path class="tsd-checkbox-checkmark" d="M8.35422 16.8214L13.2143 21.75L24.6458 10.25" stroke="none" stroke-width="3.5" stroke-linejoin="round" fill="none"></path></svg><span>Inherited</span></label></li><li class="tsd-filter-item"><label class="tsd-filter-input"><input type="checkbox" id="tsd-filter-external" name="external"/><svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true"><rect class="tsd-checkbox-background" width="30" height="30" x="1" y="1" rx="6" fill="none"></rect><path class="tsd-checkbox-checkmark" d="M8.35422 16.8214L13.2143 21.75L24.6458 10.25" stroke="none" stroke-width="3.5" stroke-linejoin="round" fill="none"></path></svg><span>External</span></label></li></ul></div><div class="tsd-theme-toggle"><label class="settings-label" for="tsd-theme">Theme</label><select id="tsd-theme"><option value="os">OS</option><option value="light">Light</option><option value="dark">Dark</option></select></div></div></details></div><details open class="tsd-accordion tsd-page-navigation"><summary class="tsd-accordion-summary"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><use href="assets/icons.svg#icon-chevronDown"></use></svg><h3>On This Page</h3></summary><div class="tsd-accordion-details"><a href="#kyrie-v0140"><span>kyrie v0.14.0</span></a><ul><li><a href="#features"><span>Features</span></a></li><li><a href="#installation"><span>Installation</span></a></li><li><a href="#quick-start"><span>Quick <wbr/>Start</span></a></li><li><a href="#usage"><span>Usage</span></a></li><li><ul><li><a href="#colorizing-json-and-javascript"><span>Colorizing <wbr/>JSON and <wbr/>Java<wbr/>Script</span></a></li><li><a href="#highlighting-javascript-values"><span>Highlighting <wbr/>Java<wbr/>Script <wbr/>Values</span></a></li><li><a href="#api"><span>API</span></a></li><li><ul><li><a href="#"><span></span></a></li><li><a href="#-1"><span></span></a></li></ul></li><li><a href="#highlightoptions"><span>Highlight<wbr/>Options</span></a></li><li><a href="#painting-ast-nodes"><span>Painting <wbr/>AST <wbr/>Nodes</span></a></li><li><ul><li><a href="#-2"><span></span></a></li></ul></li><li><a href="#container-configuration"><span>Container <wbr/>Configuration</span></a></li><li><ul><li><a href="#interface"><span> <wbr/>Interface</span></a></li><li><a href="#configuration"><span> <wbr/>Configuration</span></a></li></ul></li><li><a href="#color-palettes"><span>Color <wbr/>Palettes</span></a></li><li><ul><li><a href="#interface-1"><span> <wbr/>Interface</span></a></li><li><a href="#built-in-palettes"><span>Built-<wbr/>in <wbr/>Palettes</span></a></li></ul></li><li><a href="#parsing-jsonjavascript-to-ast"><span>Parsing <wbr/>JSON/<wbr/>Java<wbr/>Script to <wbr/>AST</span></a></li><li><ul><li><a href="#-3"><span></span></a></li><li><a href="#-4"><span></span></a></li></ul></li><li><a href="#ast-structure"><span>AST <wbr/>Structure</span></a></li><li><ul><li><a href="#astnode"><span>AST<wbr/>Node</span></a></li><li><a href="#deeptype"><span>Deep<wbr/>Type</span></a></li></ul></li></ul></li><li><a href="#test-data"><span>Test <wbr/>Data</span></a></li><li><ul><li><a href="#export"><span> <wbr/>Export</span></a></li></ul></li><li><a href="#available-palettes"><span>Available <wbr/>Palettes</span></a></li><li><ul><li><a href="#palette-themes"><span>Palette <wbr/>Themes</span></a></li><li><a href="#usage-example"><span>Usage <wbr/>Example</span></a></li></ul></li><li><a href="#development"><span>Development</span></a></li><li><ul><li><a href="#running-tests"><span>Running <wbr/>Tests</span></a></li></ul></li><li><a href="#license"><span>License</span></a></li></ul></div></details></div><div class="site-menu"><nav class="tsd-navigation"><a href="modules.html">kyrie</a><ul class="tsd-small-nested-navigation" id="tsd-nav-container"><li>Loading...</li></ul></nav></div></div></div><footer><p class="tsd-generator">Generated using <a href="https://typedoc.org/" target="_blank">TypeDoc</a></p></footer><div class="overlay"></div></body></html>
+</div></div><div class="col-sidebar"><div class="page-menu"><div class="tsd-navigation settings"><details class="tsd-accordion"><summary class="tsd-accordion-summary"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><use href="assets/icons.svg#icon-chevronDown"></use></svg><h3>Settings</h3></summary><div class="tsd-accordion-details"><div class="tsd-filter-visibility"><span class="settings-label">Member Visibility</span><ul id="tsd-filter-options"><li class="tsd-filter-item"><label class="tsd-filter-input"><input type="checkbox" id="tsd-filter-protected" name="protected"/><svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true"><rect class="tsd-checkbox-background" width="30" height="30" x="1" y="1" rx="6" fill="none"></rect><path class="tsd-checkbox-checkmark" d="M8.35422 16.8214L13.2143 21.75L24.6458 10.25" stroke="none" stroke-width="3.5" stroke-linejoin="round" fill="none"></path></svg><span>Protected</span></label></li><li class="tsd-filter-item"><label class="tsd-filter-input"><input type="checkbox" id="tsd-filter-inherited" name="inherited" checked/><svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true"><rect class="tsd-checkbox-background" width="30" height="30" x="1" y="1" rx="6" fill="none"></rect><path class="tsd-checkbox-checkmark" d="M8.35422 16.8214L13.2143 21.75L24.6458 10.25" stroke="none" stroke-width="3.5" stroke-linejoin="round" fill="none"></path></svg><span>Inherited</span></label></li><li class="tsd-filter-item"><label class="tsd-filter-input"><input type="checkbox" id="tsd-filter-external" name="external"/><svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true"><rect class="tsd-checkbox-background" width="30" height="30" x="1" y="1" rx="6" fill="none"></rect><path class="tsd-checkbox-checkmark" d="M8.35422 16.8214L13.2143 21.75L24.6458 10.25" stroke="none" stroke-width="3.5" stroke-linejoin="round" fill="none"></path></svg><span>External</span></label></li></ul></div><div class="tsd-theme-toggle"><label class="settings-label" for="tsd-theme">Theme</label><select id="tsd-theme"><option value="os">OS</option><option value="light">Light</option><option value="dark">Dark</option></select></div></div></details></div><details open class="tsd-accordion tsd-page-navigation"><summary class="tsd-accordion-summary"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><use href="assets/icons.svg#icon-chevronDown"></use></svg><h3>On This Page</h3></summary><div class="tsd-accordion-details"><a href="#kyrie-v0150"><span>kyrie v0.15.0</span></a><ul><li><a href="#features"><span>Features</span></a></li><li><a href="#installation"><span>Installation</span></a></li><li><a href="#quick-start"><span>Quick <wbr/>Start</span></a></li><li><a href="#cli-usage"><span>CLI <wbr/>Usage</span></a></li><li><a href="#usage"><span>Usage</span></a></li><li><ul><li><a href="#colorizing-json-and-javascript"><span>Colorizing <wbr/>JSON and <wbr/>Java<wbr/>Script</span></a></li><li><a href="#highlighting-javascript-values"><span>Highlighting <wbr/>Java<wbr/>Script <wbr/>Values</span></a></li><li><a href="#api"><span>API</span></a></li><li><ul><li><a href="#"><span></span></a></li><li><a href="#-1"><span></span></a></li></ul></li><li><a href="#highlightoptions"><span>Highlight<wbr/>Options</span></a></li><li><a href="#painting-ast-nodes"><span>Painting <wbr/>AST <wbr/>Nodes</span></a></li><li><ul><li><a href="#-2"><span></span></a></li></ul></li><li><a href="#container-configuration"><span>Container <wbr/>Configuration</span></a></li><li><ul><li><a href="#interface"><span> <wbr/>Interface</span></a></li><li><a href="#configuration"><span> <wbr/>Configuration</span></a></li></ul></li><li><a href="#color-palettes"><span>Color <wbr/>Palettes</span></a></li><li><ul><li><a href="#interface-1"><span> <wbr/>Interface</span></a></li><li><a href="#built-in-palettes"><span>Built-<wbr/>in <wbr/>Palettes</span></a></li></ul></li><li><a href="#parsing-jsonjavascript-to-ast"><span>Parsing <wbr/>JSON/<wbr/>Java<wbr/>Script to <wbr/>AST</span></a></li><li><ul><li><a href="#-3"><span></span></a></li><li><a href="#-4"><span></span></a></li></ul></li><li><a href="#ast-structure"><span>AST <wbr/>Structure</span></a></li><li><ul><li><a href="#astnode"><span>AST<wbr/>Node</span></a></li><li><a href="#deeptype"><span>Deep<wbr/>Type</span></a></li></ul></li></ul></li><li><a href="#test-data"><span>Test <wbr/>Data</span></a></li><li><ul><li><a href="#export"><span> <wbr/>Export</span></a></li></ul></li><li><a href="#available-palettes"><span>Available <wbr/>Palettes</span></a></li><li><ul><li><a href="#palette-themes"><span>Palette <wbr/>Themes</span></a></li><li><a href="#usage-example"><span>Usage <wbr/>Example</span></a></li></ul></li><li><a href="#development"><span>Development</span></a></li><li><ul><li><a href="#running-tests"><span>Running <wbr/>Tests</span></a></li></ul></li><li><a href="#license"><span>License</span></a></li></ul></div></details></div><div class="site-menu"><nav class="tsd-navigation"><a href="modules.html">kyrie</a><ul class="tsd-small-nested-navigation" id="tsd-nav-container"><li>Loading...</li></ul></nav></div></div></div><footer><p class="tsd-generator">Generated using <a href="https://typedoc.org/" target="_blank">TypeDoc</a></p></footer><div class="overlay"></div></body></html>

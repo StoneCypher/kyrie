@@ -23,6 +23,19 @@ const packageJson = JSON.parse(packageJsonContent);
 // Get version
 const version = packageJson.version;
 
+// Count palettes from palettes.ts
+console.log(chalk.hex(OUTPUT_COLOR)('Counting palettes...'));
+const palettesPath = join(projectRoot, 'src', 'ts', 'palettes.ts');
+const palettesContent = readFileSync(palettesPath, 'utf8');
+
+// Parse the palettes object to count themes
+// Look for the pattern: themeName: { with exactly 2 spaces indentation (palette theme level)
+const paletteMatches = palettesContent.match(/^  (\w+):\s*\{/gm);
+const paletteCount = paletteMatches ? paletteMatches.length : 0;
+const paletteVariants = paletteCount * 2;
+
+console.log(chalk.hex(OUTPUT_COLOR)(`Found ${paletteCount} palettes (${paletteVariants} variants with light/dark)`));
+
 // Run tests and get coverage
 console.log(chalk.hex(OUTPUT_COLOR)('Running tests to get coverage...'));
 let coverage = 'N/A';
@@ -76,8 +89,10 @@ const readmeContent = readFileSync(readmePath, 'utf8');
 let updatedContent = readmeContent.replace(/\{\{version\}\}/g, version);
 updatedContent = updatedContent.replace(/\{\{coverage\}\}/g, coverage);
 updatedContent = updatedContent.replace(/\{\{testcasecount\}\}/g, testcasecount);
+updatedContent = updatedContent.replace(/\{\{palettes\}\}/g, paletteCount);
+updatedContent = updatedContent.replace(/\{\{palettevariants\}\}/g, paletteVariants);
 
 // Write back to README.md
 writeFileSync(readmePath, updatedContent, 'utf8');
 
-console.log(chalk.hex(OUTPUT_COLOR)(`Updated README.md: Replaced {{version}} with ${version}, {{coverage}} with ${coverage}%, {{testcasecount}} with ${testcasecount}`));
+console.log(chalk.hex(OUTPUT_COLOR)(`Updated README.md: Replaced {{version}} with ${version}, {{coverage}} with ${coverage}%, {{testcasecount}} with ${testcasecount}, {{palettes}} with ${paletteCount}, {{palettevariants}} with ${paletteVariants}`));

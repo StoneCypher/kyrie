@@ -59,9 +59,38 @@ const cjs_config = {
   ]
 
 };
-  
 
 
 
 
-export default [ es_config, cjs_config ];
+
+const cli_config = {
+
+  input: 'build/ts/cli.js',
+
+  output: {
+    file   : 'build/rollup/cli.cjs',
+    format : 'commonjs',
+    banner : '#!/usr/bin/env node',
+    name   : 'kyrie-cli'
+  },
+
+  plugins : [
+
+    nodeResolve({
+      mainFields     : ['module', 'main'],
+      browser        : false,
+      extensions     : [ '.ts', '.js' ],
+      preferBuiltins : true
+    }),
+
+    commonjs()
+
+  ]
+
+};
+
+
+
+
+export default [ es_config, cjs_config, cli_config ];

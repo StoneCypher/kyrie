@@ -55,6 +55,7 @@ export interface ContainerConfig {
 export interface HighlightOptions {
     palette?: ColorPalette;
     containers?: ContainerConfig;
+    maxWidth?: number | false | undefined;
 }
 /**
  * Color palette for syntax highlighting
@@ -82,7 +83,16 @@ export interface ColorPalette {
     punctuation: string;
 }
 import { palettes } from './palettes.js';
-export { palettes };
+import { colorRangePalettes } from './color_range_palettes.js';
+import { protanopiaPalettes } from './protanopia_palettes.js';
+import { deuteranopiaPalettes } from './deuteranopia_palettes.js';
+import { tritanopiaPalettes } from './tritanopia_palettes.js';
+import { monochromacyPalettes } from './monochromacy_palettes.js';
+import { deuteranomalyPalettes } from './deuteranomaly_palettes.js';
+import { protanomalyPalettes } from './protanomaly_palettes.js';
+import { tritanomalyPalettes } from './tritanomaly_palettes.js';
+import { achromatopsiaPalettes } from './achromatopsia_palettes.js';
+export { palettes, colorRangePalettes, protanopiaPalettes, deuteranopiaPalettes, tritanopiaPalettes, monochromacyPalettes, deuteranomalyPalettes, protanomalyPalettes, tritanomalyPalettes, achromatopsiaPalettes };
 /**
  * Default container configuration
  */

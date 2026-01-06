@@ -2,7 +2,16 @@ import { Chalk } from 'chalk';
 // Create a chalk instance with forced color support (level 3 = 16m colors)
 const chalkInstance = new Chalk({ level: 3 });
 import { palettes } from './palettes.js';
-export { palettes };
+import { colorRangePalettes } from './color_range_palettes.js';
+import { protanopiaPalettes } from './protanopia_palettes.js';
+import { deuteranopiaPalettes } from './deuteranopia_palettes.js';
+import { tritanopiaPalettes } from './tritanopia_palettes.js';
+import { monochromacyPalettes } from './monochromacy_palettes.js';
+import { deuteranomalyPalettes } from './deuteranomaly_palettes.js';
+import { protanomalyPalettes } from './protanomaly_palettes.js';
+import { tritanomalyPalettes } from './tritanomaly_palettes.js';
+import { achromatopsiaPalettes } from './achromatopsia_palettes.js';
+export { palettes, colorRangePalettes, protanopiaPalettes, deuteranopiaPalettes, tritanopiaPalettes, monochromacyPalettes, deuteranomalyPalettes, protanomalyPalettes, tritanomalyPalettes, achromatopsiaPalettes };
 /**
  * Default container configuration
  */
@@ -285,7 +294,8 @@ export function highlight_string(str, options) {
  */
 export const defaultHighlightOptions = {
     palette: palettes.default.light,
-    containers: defaultContainers
+    containers: defaultContainers,
+    maxWidth: undefined
 };
 /**
  * Paints an AST node with colors and formatting

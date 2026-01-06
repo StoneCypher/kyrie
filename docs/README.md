@@ -1,18 +1,20 @@
-# kyrie v0.14.0
+# kyrie v0.15.0
 
 Kyrie is a formatting colorizer for JavaScript, TypeScript, and JSON with customizable color palettes and container delimiters.
 
 ## Features
 
 - 🌈 **16 million colors**: Uses Chalk with 24-bit RGB color support
-- 🎨 **Four built-in color palettes**: Pastel (default), Forest, Bold, and Dusk themes
+- 🎨 **49 built-in color palettes**: 49 themes, each with a light and dark variant, for 98 total themes
+    - 🎨 **Vision accessability palettes**: Palettes for protanopia, deuteranopia, tritanopia, monochromacy, deuteranomaly, protanomaly,  tritanomaly, achromatopsia (if you have these, please tell me how to improve these in an issue)
+    - Bright, subtle, pastel, and vivid variants, each with a light and dark variant
 - 🔧 **Fully customizable**: Create custom palettes and container delimiters
 - 📦 **AST-based parsing**: Parse JSON strings or JavaScript values into detailed AST
 - 🔄 **Circular reference detection**: Safely handles circular object references
 - 🎯 **Type-aware**: Distinguishes between arrays, objects, Maps, Sets, Dates, RegExp, Errors, and more
 - 💪 **TypeScript support**: Fully typed with strict TypeScript configuration
 - ⚡ **One dependency** - Chalk, for terminal colors
-- ✅ **Strong testing**: Has 96.86% test coverage from 19 test cases
+- ✅ **Strong testing**: Has 87.5% test coverage from 175 test cases
 
 ## Installation
 
@@ -32,6 +34,37 @@ const ast = parse_string('{"name": "Alice", "age": 25}');
 const colored = paint(ast);
 console.log(colored); // Outputs colorized JSON to terminal
 ```
+
+## CLI Usage
+
+Kyrie includes a command-line interface for highlighting JSON and JavaScript files.
+
+```bash
+# Highlight a file
+kyrie myfile.json
+
+# Read from stdin
+echo '{"name": "John", "age": 30}' | kyrie
+
+# Use a specific palette
+kyrie --palette forest myfile.json
+
+# Use dark theme variant
+kyrie --theme dark --palette bold myfile.json
+
+# Set maximum output width
+kyrie --max-width 80 myfile.json
+
+# Disable width limiting
+kyrie --max-width false myfile.json
+```
+
+**CLI Options:**
+- `-p, --palette <name>` - Color palette to use (default: "default")
+- `-t, --theme <variant>` - Theme variant: "light" or "dark" (default: "light")
+- `-w, --max-width <width>` - Maximum width for output (number or "false" to disable)
+- `-V, --version` - Output version number
+- `-h, --help` - Display help information
 
 ## Usage
 
@@ -125,10 +158,19 @@ Configuration interface for highlighting and painting functions.
 
 ```typescript
 interface HighlightOptions {
-  palette?: ColorPalette;      // Color scheme to use
-  containers?: ContainerConfig; // Container delimiter configuration
+  palette?: ColorPalette;           // Color scheme to use
+  containers?: ContainerConfig;     // Container delimiter configuration
+  maxWidth?: number | false | undefined; // Maximum output width (characters)
 }
 ```
+
+**Properties:**
+- `palette` - Color scheme to use for syntax highlighting
+- `containers` - Container delimiter configuration for formatting
+- `maxWidth` - Maximum width for output in characters
+  - `number` - Specific maximum width (e.g., `80` for 80 characters)
+  - `false` - Explicitly disable width limiting
+  - `undefined` - Use default behavior (no width limit)
 
 **Available exports:**
 - `defaultHighlightOptions` - Pre-configured with defaultPalette and defaultContainers
@@ -570,7 +612,7 @@ console.log(circularAst.properties.self.deep_type.isCircularReference); // true
 
 ## Available Palettes
 
-Kyrie includes 9 themed palettes, each with light and dark variants:
+Kyrie includes 120 themed palettes, each with light and dark variants:
 
 ### Palette Themes
 
@@ -609,6 +651,454 @@ Kyrie includes 9 themed palettes, each with light and dark variants:
 - **boring** - Muted, low-saturation grays and subdued colors
   - `palettes.boring.light` - Dark grays for light backgrounds
   - `palettes.boring.dark` - Light grays for dark backgrounds
+
+- **mobster** - Film noir and gangster-inspired dark tones
+  - `palettes.mobster.light` - Dark noir colors for light backgrounds
+  - `palettes.mobster.dark` - Light silver/gray tones for dark backgrounds
+
+- **money** - Currency-inspired greens and golds
+  - `palettes.money.light` - Dark money greens for light backgrounds
+  - `palettes.money.dark` - Light gold and green tones for dark backgrounds
+
+- **skeleton** - Bone whites and grays with ghostly tones
+  - `palettes.skeleton.light` - Dark bone colors for light backgrounds
+  - `palettes.skeleton.dark` - Light bone whites for dark backgrounds
+
+- **sinister** - Dark and ominous color scheme
+  - `palettes.sinister.light` - Very dark sinister tones for light backgrounds
+  - `palettes.sinister.dark` - Muted threatening colors for dark backgrounds
+
+- **halloween** - Orange, purple, black, and green seasonal colors
+  - `palettes.halloween.light` - Dark Halloween colors for light backgrounds
+  - `palettes.halloween.dark` - Bright Halloween colors for dark backgrounds
+
+- **vampire** - Blood reds, blacks, and pale gothic colors
+  - `palettes.vampire.light` - Very dark vampiric tones for light backgrounds
+  - `palettes.vampire.dark` - Pale and blood-red colors for dark backgrounds
+
+- **grayscale** - Pure grayscale with no color saturation
+  - `palettes.grayscale.light` - Dark grays for light backgrounds
+  - `palettes.grayscale.dark` - Light grays for dark backgrounds
+
+- **blues** - Various shades of blue throughout
+  - `palettes.blues.light` - Dark blues for light backgrounds
+  - `palettes.blues.dark` - Light sky and ocean blues for dark backgrounds
+
+- **circus** - Bright festive reds, yellows, and primary colors
+  - `palettes.circus.light` - Saturated circus colors for light backgrounds
+  - `palettes.circus.dark` - Bright carnival colors for dark backgrounds
+
+- **monkey** - Browns, tans, and jungle-inspired earth tones
+  - `palettes.monkey.light` - Dark brown and tan for light backgrounds
+  - `palettes.monkey.dark` - Light brown and cream tones for dark backgrounds
+
+- **sky** - Sky blues with sun yellows and cloud whites
+  - `palettes.sky.light` - Dark sky blues for light backgrounds
+  - `palettes.sky.dark` - Bright sky and sun colors for dark backgrounds
+
+- **protanopia** - Red color blindness (no red perception, uses blues and yellows)
+  - `palettes.protanopia.light` - Dark blues and yellows for light backgrounds
+  - `palettes.protanopia.dark` - Light blues and yellows for dark backgrounds
+
+- **deuteranopia** - Green color blindness (no green perception, uses blues and yellows)
+  - `palettes.deuteranopia.light` - Dark blues and yellows for light backgrounds
+  - `palettes.deuteranopia.dark` - Light blues and yellows for dark backgrounds
+
+- **tritanopia** - Blue color blindness (no blue perception, uses reds, greens, and yellows)
+  - `palettes.tritanopia.light` - Dark warm colors for light backgrounds
+  - `palettes.tritanopia.dark` - Light warm colors for dark backgrounds
+
+- **monochromacy** - Complete color blindness (grayscale only, distinct brightness levels)
+  - `palettes.monochromacy.light` - Dark grays with varied brightness for light backgrounds
+  - `palettes.monochromacy.dark` - Light grays with varied brightness for dark backgrounds
+
+- **deuteranomaly** - Weak green perception (reduced greens, emphasizes blues and yellows)
+  - `palettes.deuteranomaly.light` - Dark blues and yellows for light backgrounds
+  - `palettes.deuteranomaly.dark` - Light blues and yellows for dark backgrounds
+
+- **protanomaly** - Weak red perception (reduced reds, emphasizes blues and yellows)
+  - `palettes.protanomaly.light` - Dark blues and yellows for light backgrounds
+  - `palettes.protanomaly.dark` - Light blues and yellows for dark backgrounds
+
+- **tritanomaly** - Weak blue perception (reduced blues, emphasizes reds and greens)
+  - `palettes.tritanomaly.light` - Dark warm colors for light backgrounds
+  - `palettes.tritanomaly.dark` - Light warm colors for dark backgrounds
+
+- **achromatopsia** - Rod monochromacy (complete absence of cone function, grayscale only)
+  - `palettes.achromatopsia.light` - Dark grays with varied brightness for light backgrounds
+  - `palettes.achromatopsia.dark` - Light grays with varied brightness for dark backgrounds
+
+- **rainbow** - Vibrant spectrum of colors across the rainbow
+  - `palettes.rainbow.light` - Dark rainbow colors for light backgrounds
+  - `palettes.rainbow.dark` - Bright rainbow colors for dark backgrounds
+
+- **mutedRainbow** - Softer, desaturated rainbow spectrum
+  - `palettes.mutedRainbow.light` - Dark muted rainbow for light backgrounds
+  - `palettes.mutedRainbow.dark` - Light muted rainbow for dark backgrounds
+
+- **sunflower** - Warm yellows and browns inspired by sunflowers
+  - `palettes.sunflower.light` - Dark gold and brown for light backgrounds
+  - `palettes.sunflower.dark` - Bright yellow and warm tones for dark backgrounds
+
+- **strawberry** - Reds, pinks, and berry-inspired colors
+  - `palettes.strawberry.light` - Dark berry reds for light backgrounds
+  - `palettes.strawberry.dark` - Light pink and red tones for dark backgrounds
+
+- **brownAndGreen** - Earth tones combining browns and greens
+  - `palettes.brownAndGreen.light` - Dark brown and green for light backgrounds
+  - `palettes.brownAndGreen.dark` - Light tan and sage for dark backgrounds
+
+- **solarFlare** - Intense oranges, yellows, and hot colors
+  - `palettes.solarFlare.light` - Dark solar colors for light backgrounds
+  - `palettes.solarFlare.dark` - Bright solar yellows and oranges for dark backgrounds
+
+- **purpleToOrange** - Gradient from purple through red to orange
+  - `palettes.purpleToOrange.light` - Dark gradient colors for light backgrounds
+  - `palettes.purpleToOrange.dark` - Bright gradient colors for dark backgrounds
+
+- **commodore64** - Retro computer palette inspired by the Commodore 64
+  - `palettes.commodore64.light` - Dark C64 colors for light backgrounds
+  - `palettes.commodore64.dark` - Bright C64 colors for dark backgrounds
+
+- **military** - Olive greens, khakis, and camouflage-inspired earth tones
+  - `palettes.military.light` - Dark military colors for light backgrounds
+  - `palettes.military.dark` - Light olive and khaki for dark backgrounds
+
+- **police** - Blues and blacks with emergency light accents
+  - `palettes.police.light` - Dark police blues for light backgrounds
+  - `palettes.police.dark` - Light blue and white tones for dark backgrounds
+
+- **hacker** - Matrix-inspired greens and terminal colors
+  - `palettes.hacker.light` - Dark terminal greens for light backgrounds
+  - `palettes.hacker.dark` - Bright matrix greens for dark backgrounds
+
+- **wizard** - Mystical purples, blues, and magical tones
+  - `palettes.wizard.light` - Dark mystical colors for light backgrounds
+  - `palettes.wizard.dark` - Bright magical purples and blues for dark backgrounds
+
+- **butterfly** - Delicate, varied colors inspired by butterfly wings
+  - `palettes.butterfly.light` - Dark wing colors for light backgrounds
+  - `palettes.butterfly.dark` - Bright vibrant wing colors for dark backgrounds
+
+- **gunmetal** - Dark grays and metallic tones
+  - `palettes.gunmetal.light` - Very dark metallic grays for light backgrounds
+  - `palettes.gunmetal.dark` - Light metallic tones for dark backgrounds
+
+- **cocaCola** - Classic red and white brand colors
+  - `palettes.cocaCola.light` - Dark Coca-Cola reds for light backgrounds
+  - `palettes.cocaCola.dark` - Bright reds and whites for dark backgrounds
+
+- **ogre** - Swamp greens and muddy browns
+  - `palettes.ogre.light` - Dark swamp colors for light backgrounds
+  - `palettes.ogre.dark` - Light moss and mud tones for dark backgrounds
+
+- **burglar** - Black, gray stripes, and stealth colors
+  - `palettes.burglar.light` - Very dark grays and blacks for light backgrounds
+  - `palettes.burglar.dark` - Light grays for dark backgrounds
+
+- **crystal** - Clear, icy blues and whites with gem-like tones
+  - `palettes.crystal.light` - Dark crystal blues for light backgrounds
+  - `palettes.crystal.dark` - Bright icy and white tones for dark backgrounds
+
+- **laser** - Neon reds, pinks, and bright sci-fi colors
+  - `palettes.laser.light` - Dark laser colors for light backgrounds
+  - `palettes.laser.dark` - Bright neon laser colors for dark backgrounds
+
+- **kungFu** - Martial arts-inspired oranges, golds, and reds
+  - `palettes.kungFu.light` - Dark martial arts colors for light backgrounds
+  - `palettes.kungFu.dark` - Bright gold and red tones for dark backgrounds
+
+- **starTrek** - Starfleet command gold, science blue, and engineering red
+  - `palettes.starTrek.light` - Dark Trek colors for light backgrounds
+  - `palettes.starTrek.dark` - Bright Starfleet colors for dark backgrounds
+
+- **antique** - Aged browns, sepias, and vintage tones
+  - `palettes.antique.light` - Dark sepia and brown for light backgrounds
+  - `palettes.antique.dark` - Light aged cream and tan for dark backgrounds
+
+- **book** - Paper whites, ink blacks, and library colors
+  - `palettes.book.light` - Dark ink colors for light backgrounds
+  - `palettes.book.dark` - Light cream and aged paper for dark backgrounds
+
+- **eighties** - Neon pinks, purples, and retro 1980s colors
+  - `palettes.eighties.light` - Dark 80s colors for light backgrounds
+  - `palettes.eighties.dark` - Bright neon 80s colors for dark backgrounds
+
+- **neon** - Ultra-bright neon colors for signs and displays
+  - `palettes.neon.light` - Dark neon base colors for light backgrounds
+  - `palettes.neon.dark` - Bright glowing neon for dark backgrounds
+
+- **flowers** - Colorful floral-inspired palette with varied hues
+  - `palettes.flowers.light` - Dark floral colors for light backgrounds
+  - `palettes.flowers.dark` - Bright petal colors for dark backgrounds
+
+- **logger** - Wood browns, bark grays, and forest work colors
+  - `palettes.logger.light` - Dark wood and bark for light backgrounds
+  - `palettes.logger.dark` - Light lumber and sawdust tones for dark backgrounds
+
+- **system** - Terminal grays, tech blues, and computer interface colors
+  - `palettes.system.light` - Dark system colors for light backgrounds
+  - `palettes.system.dark` - Light terminal colors for dark backgrounds
+
+- **alien** - Otherworldly greens, purples, and sci-fi extraterrestrial colors
+  - `palettes.alien.light` - Dark alien colors for light backgrounds
+  - `palettes.alien.dark` - Bright UFO and alien greens for dark backgrounds
+
+- **protanopiaBright** - Red color blindness with bright, saturated blues and yellows (no reds)
+  - `palettes.protanopiaBright.light` - Dark bright blues and yellows for light backgrounds
+  - `palettes.protanopiaBright.dark` - Bright vibrant blues and yellows for dark backgrounds
+
+- **protanopiaSubtle** - Red color blindness with muted, low-saturation blues and yellows (no reds)
+  - `palettes.protanopiaSubtle.light` - Dark muted blues and yellows for light backgrounds
+  - `palettes.protanopiaSubtle.dark` - Light muted blues and yellows for dark backgrounds
+
+- **protanopiaPastel** - Red color blindness with soft, pastel blues and yellows (no reds)
+  - `palettes.protanopiaPastel.light` - Dark pastel blues and yellows for light backgrounds
+  - `palettes.protanopiaPastel.dark` - Light pastel blues and yellows for dark backgrounds
+
+- **protanopiaBoring** - Red color blindness with grayscale-ish, very muted tones (no reds)
+  - `palettes.protanopiaBoring.light` - Dark grayscale blues and yellows for light backgrounds
+  - `palettes.protanopiaBoring.dark` - Light grayscale blues and yellows for dark backgrounds
+
+- **protanopiaFunky** - Red color blindness with playful, unusual blues and yellows (no reds)
+  - `palettes.protanopiaFunky.light` - Dark funky blues and yellows for light backgrounds
+  - `palettes.protanopiaFunky.dark` - Bright playful blues and yellows for dark backgrounds
+
+- **protanopiaVivid** - Red color blindness with intense, highly saturated blues and yellows (no reds)
+  - `palettes.protanopiaVivid.light` - Very dark vivid blues and yellows for light backgrounds
+  - `palettes.protanopiaVivid.dark` - Very bright vivid blues and yellows for dark backgrounds
+
+- **deuteranopiaBright** - Green color blindness with bright, saturated blues and yellows (no greens)
+  - `palettes.deuteranopiaBright.light` - Dark bright blues and yellows for light backgrounds
+  - `palettes.deuteranopiaBright.dark` - Bright vibrant blues and yellows for dark backgrounds
+
+- **deuteranopiaSubtle** - Green color blindness with muted, low-saturation blues and yellows (no greens)
+  - `palettes.deuteranopiaSubtle.light` - Dark muted blues and yellows for light backgrounds
+  - `palettes.deuteranopiaSubtle.dark` - Light muted blues and yellows for dark backgrounds
+
+- **deuteranopiaPastel** - Green color blindness with soft, pastel blues and yellows (no greens)
+  - `palettes.deuteranopiaPastel.light` - Dark pastel blues and yellows for light backgrounds
+  - `palettes.deuteranopiaPastel.dark` - Light pastel blues and yellows for dark backgrounds
+
+- **deuteranopiaBoring** - Green color blindness with grayscale-ish, very muted tones (no greens)
+  - `palettes.deuteranopiaBoring.light` - Dark grayscale blues and yellows for light backgrounds
+  - `palettes.deuteranopiaBoring.dark` - Light grayscale blues and yellows for dark backgrounds
+
+- **deuteranopiaFunky** - Green color blindness with playful, unusual blues and yellows (no greens)
+  - `palettes.deuteranopiaFunky.light` - Dark funky blues and yellows for light backgrounds
+  - `palettes.deuteranopiaFunky.dark` - Bright playful blues and yellows for dark backgrounds
+
+- **deuteranopiaVivid** - Green color blindness with intense, highly saturated blues and yellows (no greens)
+  - `palettes.deuteranopiaVivid.light` - Very dark vivid blues and yellows for light backgrounds
+  - `palettes.deuteranopiaVivid.dark` - Very bright vivid blues and yellows for dark backgrounds
+
+- **tritanopiaBright** - Blue color blindness with bright, saturated reds, greens, and yellows (no blues)
+  - `palettes.tritanopiaBright.light` - Dark bright warm colors for light backgrounds
+  - `palettes.tritanopiaBright.dark` - Bright vibrant warm colors for dark backgrounds
+
+- **tritanopiaSubtle** - Blue color blindness with muted, low-saturation reds, greens, and yellows (no blues)
+  - `palettes.tritanopiaSubtle.light` - Dark muted warm colors for light backgrounds
+  - `palettes.tritanopiaSubtle.dark` - Light muted warm colors for dark backgrounds
+
+- **tritanopiaPastel** - Blue color blindness with soft, pastel reds, greens, and yellows (no blues)
+  - `palettes.tritanopiaPastel.light` - Dark pastel warm colors for light backgrounds
+  - `palettes.tritanopiaPastel.dark` - Light pastel warm colors for dark backgrounds
+
+- **tritanopiaBoring** - Blue color blindness with grayscale-ish, very muted warm tones (no blues)
+  - `palettes.tritanopiaBoring.light` - Dark grayscale warm colors for light backgrounds
+  - `palettes.tritanopiaBoring.dark` - Light grayscale warm colors for dark backgrounds
+
+- **tritanopiaFunky** - Blue color blindness with playful, unusual reds, greens, and yellows (no blues)
+  - `palettes.tritanopiaFunky.light` - Dark funky warm colors for light backgrounds
+  - `palettes.tritanopiaFunky.dark` - Bright playful warm colors for dark backgrounds
+
+- **tritanopiaVivid** - Blue color blindness with intense, highly saturated reds, greens, and yellows (no blues)
+  - `palettes.tritanopiaVivid.light` - Very dark vivid warm colors for light backgrounds
+  - `palettes.tritanopiaVivid.dark` - Very bright vivid warm colors for dark backgrounds
+
+- **monochromacyBright** - Complete color blindness with bright, high-contrast grayscale (no colors, only grays)
+  - `palettes.monochromacyBright.light` - Very dark grays with strong brightness contrast for light backgrounds
+  - `palettes.monochromacyBright.dark` - Very light grays with strong brightness contrast for dark backgrounds
+
+- **monochromacySubtle** - Complete color blindness with subtle, moderate grayscale contrast (no colors, only grays)
+  - `palettes.monochromacySubtle.light` - Dark grays with moderate brightness levels for light backgrounds
+  - `palettes.monochromacySubtle.dark` - Light grays with moderate brightness levels for dark backgrounds
+
+- **monochromacyPastel** - Complete color blindness with soft, light grayscale tones (no colors, only grays)
+  - `palettes.monochromacyPastel.light` - Medium-dark grays with subtle contrast for light backgrounds
+  - `palettes.monochromacyPastel.dark` - Very light grays with subtle contrast for dark backgrounds
+
+- **monochromacyBoring** - Complete color blindness with minimal, low-contrast grayscale (no colors, only grays)
+  - `palettes.monochromacyBoring.light` - Dark grays with minimal brightness variation for light backgrounds
+  - `palettes.monochromacyBoring.dark` - Light grays with minimal brightness variation for dark backgrounds
+
+- **monochromacyFunky** - Complete color blindness with varied, distinct grayscale levels (no colors, only grays)
+  - `palettes.monochromacyFunky.light` - Very dark to black grays with high variation for light backgrounds
+  - `palettes.monochromacyFunky.dark` - Very light to white grays with high variation for dark backgrounds
+
+- **monochromacyVivid** - Complete color blindness with extreme, maximum-contrast grayscale (no colors, only grays)
+  - `palettes.monochromacyVivid.light` - Pure blacks and very dark grays for light backgrounds
+  - `palettes.monochromacyVivid.dark` - Pure whites and very light grays for dark backgrounds
+
+- **deuteranomalyBright** - Weak green perception with bright, saturated blues and yellows (reduced greens)
+  - `palettes.deuteranomalyBright.light` - Dark bright blues and yellows for light backgrounds
+  - `palettes.deuteranomalyBright.dark` - Bright vibrant blues and yellows for dark backgrounds
+
+- **deuteranomalySubtle** - Weak green perception with muted, low-saturation blues and yellows (reduced greens)
+  - `palettes.deuteranomalySubtle.light` - Dark muted blues and yellows for light backgrounds
+  - `palettes.deuteranomalySubtle.dark` - Light muted blues and yellows for dark backgrounds
+
+- **deuteranomalyPastel** - Weak green perception with soft, pastel blues and yellows (reduced greens)
+  - `palettes.deuteranomalyPastel.light` - Dark pastel blues and yellows for light backgrounds
+  - `palettes.deuteranomalyPastel.dark` - Light pastel blues and yellows for dark backgrounds
+
+- **deuteranomalyBoring** - Weak green perception with grayscale-ish, very muted tones (reduced greens)
+  - `palettes.deuteranomalyBoring.light` - Dark grayscale blues and yellows for light backgrounds
+  - `palettes.deuteranomalyBoring.dark` - Light grayscale blues and yellows for dark backgrounds
+
+- **deuteranomalyFunky** - Weak green perception with playful, unusual blues and yellows (reduced greens)
+  - `palettes.deuteranomalyFunky.light` - Dark funky blues and yellows for light backgrounds
+  - `palettes.deuteranomalyFunky.dark` - Bright playful blues and yellows for dark backgrounds
+
+- **deuteranomalyVivid** - Weak green perception with intense, highly saturated blues and yellows (reduced greens)
+  - `palettes.deuteranomalyVivid.light` - Very dark vivid blues and yellows for light backgrounds
+  - `palettes.deuteranomalyVivid.dark` - Very bright vivid blues and yellows for dark backgrounds
+
+- **protanomalyBright** - Weak red perception with bright, saturated blues and yellows (reduced reds)
+  - `palettes.protanomalyBright.light` - Dark bright blues and yellows for light backgrounds
+  - `palettes.protanomalyBright.dark` - Bright vibrant blues and yellows for dark backgrounds
+
+- **protanomalySubtle** - Weak red perception with muted, low-saturation blues and yellows (reduced reds)
+  - `palettes.protanomalySubtle.light` - Dark muted blues and yellows for light backgrounds
+  - `palettes.protanomalySubtle.dark` - Light muted blues and yellows for dark backgrounds
+
+- **protanomalyPastel** - Weak red perception with soft, pastel blues and yellows (reduced reds)
+  - `palettes.protanomalyPastel.light` - Dark pastel blues and yellows for light backgrounds
+  - `palettes.protanomalyPastel.dark` - Light pastel blues and yellows for dark backgrounds
+
+- **protanomalyBoring** - Weak red perception with grayscale-ish, very muted tones (reduced reds)
+  - `palettes.protanomalyBoring.light` - Dark grayscale blues and yellows for light backgrounds
+  - `palettes.protanomalyBoring.dark` - Light grayscale blues and yellows for dark backgrounds
+
+- **protanomalyFunky** - Weak red perception with playful, unusual blues and yellows (reduced reds)
+  - `palettes.protanomalyFunky.light` - Dark funky blues and yellows for light backgrounds
+  - `palettes.protanomalyFunky.dark` - Bright playful blues and yellows for dark backgrounds
+
+- **protanomalyVivid** - Weak red perception with intense, highly saturated blues and yellows (reduced reds)
+  - `palettes.protanomalyVivid.light` - Very dark vivid blues and yellows for light backgrounds
+  - `palettes.protanomalyVivid.dark` - Very bright vivid blues and yellows for dark backgrounds
+
+- **tritanomalyBright** - Weak blue perception with bright, saturated reds, greens, and yellows (reduced blues)
+  - `palettes.tritanomalyBright.light` - Dark bright warm colors for light backgrounds
+  - `palettes.tritanomalyBright.dark` - Bright vibrant warm colors for dark backgrounds
+
+- **tritanomalySubtle** - Weak blue perception with muted, low-saturation reds, greens, and yellows (reduced blues)
+  - `palettes.tritanomalySubtle.light` - Dark muted warm colors for light backgrounds
+  - `palettes.tritanomalySubtle.dark` - Light muted warm colors for dark backgrounds
+
+- **tritanomalyPastel** - Weak blue perception with soft, pastel reds, greens, and yellows (reduced blues)
+  - `palettes.tritanomalyPastel.light` - Dark pastel warm colors for light backgrounds
+  - `palettes.tritanomalyPastel.dark` - Light pastel warm colors for dark backgrounds
+
+- **tritanomalyBoring** - Weak blue perception with grayscale-ish, very muted warm tones (reduced blues)
+  - `palettes.tritanomalyBoring.light` - Dark grayscale warm colors for light backgrounds
+  - `palettes.tritanomalyBoring.dark` - Light grayscale warm colors for dark backgrounds
+
+- **tritanomalyFunky** - Weak blue perception with playful, unusual reds, greens, and yellows (reduced blues)
+  - `palettes.tritanomalyFunky.light` - Dark funky warm colors for light backgrounds
+  - `palettes.tritanomalyFunky.dark` - Bright playful warm colors for dark backgrounds
+
+- **tritanomalyVivid** - Weak blue perception with intense, highly saturated reds, greens, and yellows (reduced blues)
+  - `palettes.tritanomalyVivid.light` - Very dark vivid warm colors for light backgrounds
+  - `palettes.tritanomalyVivid.dark` - Very bright vivid warm colors for dark backgrounds
+
+- **redsAndOranges** - Color combination with predominantly red tones accented by orange
+  - `palettes.redsAndOranges.light` - Dark reds with orange accents for light backgrounds
+  - `palettes.redsAndOranges.dark` - Bright reds with orange accents for dark backgrounds
+
+- **redsAndYellows** - Color combination with predominantly red tones accented by yellow
+  - `palettes.redsAndYellows.light` - Dark reds with yellow accents for light backgrounds
+  - `palettes.redsAndYellows.dark` - Bright reds with yellow accents for dark backgrounds
+
+- **redsAndGreens** - Color combination with predominantly red tones accented by green
+  - `palettes.redsAndGreens.light` - Dark reds with green accents for light backgrounds
+  - `palettes.redsAndGreens.dark` - Bright reds with green accents for dark backgrounds
+
+- **redsAndBlues** - Color combination with predominantly red tones accented by blue
+  - `palettes.redsAndBlues.light` - Dark reds with blue accents for light backgrounds
+  - `palettes.redsAndBlues.dark` - Bright reds with blue accents for dark backgrounds
+
+- **redsAndPurples** - Color combination with predominantly red tones accented by purple
+  - `palettes.redsAndPurples.light` - Dark reds with purple accents for light backgrounds
+  - `palettes.redsAndPurples.dark` - Bright reds with purple accents for dark backgrounds
+
+- **redsAndBrowns** - Color combination with predominantly red tones accented by brown
+  - `palettes.redsAndBrowns.light` - Dark reds with brown accents for light backgrounds
+  - `palettes.redsAndBrowns.dark` - Bright reds with brown accents for dark backgrounds
+
+- **redsAndGrays** - Color combination with predominantly red tones accented by gray
+  - `palettes.redsAndGrays.light` - Dark reds with gray accents for light backgrounds
+  - `palettes.redsAndGrays.dark` - Bright reds with gray accents for dark backgrounds
+
+- **redsAndMagentas** - Color combination with predominantly red tones accented by magenta
+  - `palettes.redsAndMagentas.light` - Dark reds with magenta accents for light backgrounds
+  - `palettes.redsAndMagentas.dark` - Bright reds with magenta accents for dark backgrounds
+
+- **redsAndCyans** - Color combination with predominantly red tones accented by cyan
+  - `palettes.redsAndCyans.light` - Dark reds with cyan accents for light backgrounds
+  - `palettes.redsAndCyans.dark` - Bright reds with cyan accents for dark backgrounds
+
+- **redsAndCharcoals** - Color combination with predominantly red tones accented by charcoal
+  - `palettes.redsAndCharcoals.light` - Dark reds with charcoal accents for light backgrounds
+  - `palettes.redsAndCharcoals.dark` - Bright reds with charcoal accents for dark backgrounds
+
+- **orangesAndReds** - Color combination with predominantly orange tones accented by red
+  - `palettes.orangesAndReds.light` - Dark oranges with red accents for light backgrounds
+  - `palettes.orangesAndReds.dark` - Bright oranges with red accents for dark backgrounds
+
+- **orangesAndYellows** - Color combination with predominantly orange tones accented by yellow
+  - `palettes.orangesAndYellows.light` - Dark oranges with yellow accents for light backgrounds
+  - `palettes.orangesAndYellows.dark` - Bright oranges with yellow accents for dark backgrounds
+
+- **orangesAndGreens** - Color combination with predominantly orange tones accented by green
+  - `palettes.orangesAndGreens.light` - Dark oranges with green accents for light backgrounds
+  - `palettes.orangesAndGreens.dark` - Bright oranges with green accents for dark backgrounds
+
+- **orangesAndBlues** - Color combination with predominantly orange tones accented by blue
+  - `palettes.orangesAndBlues.light` - Dark oranges with blue accents for light backgrounds
+  - `palettes.orangesAndBlues.dark` - Bright oranges with blue accents for dark backgrounds
+
+- **orangesAndPurples** - Color combination with predominantly orange tones accented by purple
+  - `palettes.orangesAndPurples.light` - Dark oranges with purple accents for light backgrounds
+  - `palettes.orangesAndPurples.dark` - Bright oranges with purple accents for dark backgrounds
+
+- **orangesAndBrowns** - Color combination with predominantly orange tones accented by brown
+  - `palettes.orangesAndBrowns.light` - Dark oranges with brown accents for light backgrounds
+  - `palettes.orangesAndBrowns.dark` - Bright oranges with brown accents for dark backgrounds
+
+- **orangesAndGrays** - Color combination with predominantly orange tones accented by gray
+  - `palettes.orangesAndGrays.light` - Dark oranges with gray accents for light backgrounds
+  - `palettes.orangesAndGrays.dark` - Bright oranges with gray accents for dark backgrounds
+
+- **orangesAndMagentas** - Color combination with predominantly orange tones accented by magenta
+  - `palettes.orangesAndMagentas.light` - Dark oranges with magenta accents for light backgrounds
+  - `palettes.orangesAndMagentas.dark` - Bright oranges with magenta accents for dark backgrounds
+
+- **orangesAndCyans** - Color combination with predominantly orange tones accented by cyan
+  - `palettes.orangesAndCyans.light` - Dark oranges with cyan accents for light backgrounds
+  - `palettes.orangesAndCyans.dark` - Bright oranges with cyan accents for dark backgrounds
+
+- **orangesAndCharcoals** - Color combination with predominantly orange tones accented by charcoal
+  - `palettes.orangesAndCharcoals.light` - Dark oranges with charcoal accents for light backgrounds
+  - `palettes.orangesAndCharcoals.dark` - Bright oranges with charcoal accents for dark backgrounds
+
+- **yellowsAndReds** - Color combination with predominantly yellow tones accented by red
+  - `palettes.yellowsAndReds.light` - Dark yellows with red accents for light backgrounds
+  - `palettes.yellowsAndReds.dark` - Bright yellows with red accents for dark backgrounds
+
+- **yellowsAndOranges** - Color combination with predominantly yellow tones accented by orange
+  - `palettes.yellowsAndOranges.light` - Dark yellows with orange accents for light backgrounds
+  - `palettes.yellowsAndOranges.dark` - Bright yellows with orange accents for dark backgrounds
 
 ### Usage Example
 
