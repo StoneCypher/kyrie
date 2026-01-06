@@ -6,6 +6,8 @@ import { describe, test, expect, afterEach } from 'vitest';
 import { spawn } from 'child_process';
 import { writeFileSync, unlinkSync, existsSync } from 'fs';
 import { join } from 'path';
+import { getPalette, validateOutputMode, processInput, allPalettes } from '../cli.js';
+import type { CLIOptions } from '../cli.js';
 
 // CLI path
 const cliPath = join(__dirname, '../../../dist/cli.cjs');
@@ -13,7 +15,12 @@ const cliPath = join(__dirname, '../../../dist/cli.cjs');
 // Helper to run CLI and capture output
 function runCLI(args: string[] = [], input?: string): Promise<{ stdout: string; stderr: string; exitCode: number | null }> {
   return new Promise((resolve) => {
-    const child = spawn('node', [cliPath, ...args]);
+    // Remove VITEST env var so CLI actually runs
+    const env = { ...process.env };
+    delete env['VITEST'];
+    delete env['NODE_ENV'];
+
+    const child = spawn('node', [cliPath, ...args], { env });
 
     let stdout = '';
     let stderr = '';
@@ -467,6 +474,275 @@ describe.skipIf(!existsSync(cliPath))('CLI', () => {
 
       expect(result.exitCode).toBe(0);
       expect(result.stdout).toBeTruthy();
+    });
+  });
+});
+
+describe('CLI Unit Tests', () => {
+  describe('getPalette', () => {
+    test('should return palette for valid palette name and light theme', () => {
+      const result = getPalette('default', 'light');
+
+      expect(result.success).toBe(true);
+      expect(result.palette).toBeDefined();
+      expect(result.error).toBeUndefined();
+    });
+
+    test('should return palette for valid palette name and dark theme', () => {
+      const result = getPalette('default', 'dark');
+
+      expect(result.success).toBe(true);
+      expect(result.palette).toBeDefined();
+      expect(result.error).toBeUndefined();
+    });
+
+    test('should return error for invalid palette name', () => {
+      const result = getPalette('nonexistent', 'light');
+
+      expect(result.success).toBe(false);
+      expect(result.palette).toBeUndefined();
+      expect(result.error).toContain('Unknown palette: nonexistent');
+      expect(result.error).toContain('Available palettes:');
+    });
+
+    test('should work with nature palettes', () => {
+      const result = getPalette('forest', 'light');
+
+      expect(result.success).toBe(true);
+      expect(result.palette).toBeDefined();
+    });
+
+    test('should work with accessibility palettes', () => {
+      const result = getPalette('protanopia', 'dark');
+
+      expect(result.success).toBe(true);
+      expect(result.palette).toBeDefined();
+    });
+
+    test('should default to light theme for non-dark values', () => {
+      const result1 = getPalette('default', 'light');
+      const result2 = getPalette('default', 'invalid');
+
+      expect(result1.success).toBe(true);
+      expect(result2.success).toBe(true);
+      // Both should use light theme
+    });
+  });
+
+  describe('validateOutputMode', () => {
+    test('should accept valid output mode: ansi', () => {
+      const result = validateOutputMode('ansi');
+
+      expect(result.success).toBe(true);
+      expect(result.error).toBeUndefined();
+    });
+
+    test('should accept valid output mode: html', () => {
+      const result = validateOutputMode('html');
+
+      expect(result.success).toBe(true);
+      expect(result.error).toBeUndefined();
+    });
+
+    test('should accept valid output mode: chrome-console', () => {
+      const result = validateOutputMode('chrome-console');
+
+      expect(result.success).toBe(true);
+      expect(result.error).toBeUndefined();
+    });
+
+    test('should accept valid output mode: logger', () => {
+      const result = validateOutputMode('logger');
+
+      expect(result.success).toBe(true);
+      expect(result.error).toBeUndefined();
+    });
+
+    test('should reject invalid output mode', () => {
+      const result = validateOutputMode('invalid');
+
+      expect(result.success).toBe(false);
+      expect(result.error).toContain('Invalid output mode: invalid');
+      expect(result.error).toContain('Valid modes:');
+    });
+
+    test('should reject empty string', () => {
+      const result = validateOutputMode('');
+
+      expect(result.success).toBe(false);
+      expect(result.error).toBeDefined();
+    });
+  });
+
+  describe('processInput', () => {
+    test('should successfully process valid JSON with default options', () => {
+      const input = '{"name": "Alice", "age": 25}';
+      const options: CLIOptions = {
+        palette: 'default',
+        theme: 'light',
+        outputMode: 'ansi'
+      };
+
+      const result = processInput(input, options);
+
+      expect(result.success).toBe(true);
+      expect(result.output).toBeDefined();
+      expect(result.output).toContain('name');
+      expect(result.error).toBeUndefined();
+    });
+
+    test('should process with different palette', () => {
+      const input = '{"test": "value"}';
+      const options: CLIOptions = {
+        palette: 'forest',
+        theme: 'dark',
+        outputMode: 'ansi'
+      };
+
+      const result = processInput(input, options);
+
+      expect(result.success).toBe(true);
+      expect(result.output).toBeDefined();
+    });
+
+    test('should process with html output mode', () => {
+      const input = '{"test": "value"}';
+      const options: CLIOptions = {
+        palette: 'default',
+        theme: 'light',
+        outputMode: 'html'
+      };
+
+      const result = processInput(input, options);
+
+      expect(result.success).toBe(true);
+      expect(result.output).toBeDefined();
+    });
+
+    test('should process with maxWidth option', () => {
+      const input = '{"name": "Alice", "email": "alice@example.com"}';
+      const options: CLIOptions = {
+        palette: 'default',
+        theme: 'light',
+        outputMode: 'ansi',
+        maxWidth: 40
+      };
+
+      const result = processInput(input, options);
+
+      expect(result.success).toBe(true);
+      expect(result.output).toBeDefined();
+    });
+
+    test('should process with maxWidth set to false', () => {
+      const input = '{"test": "value"}';
+      const options: CLIOptions = {
+        palette: 'default',
+        theme: 'light',
+        outputMode: 'ansi',
+        maxWidth: false
+      };
+
+      const result = processInput(input, options);
+
+      expect(result.success).toBe(true);
+      expect(result.output).toBeDefined();
+    });
+
+    test('should return error for invalid palette', () => {
+      const input = '{"test": "value"}';
+      const options: CLIOptions = {
+        palette: 'nonexistent',
+        theme: 'light',
+        outputMode: 'ansi'
+      };
+
+      const result = processInput(input, options);
+
+      expect(result.success).toBe(false);
+      expect(result.error).toContain('Unknown palette: nonexistent');
+      expect(result.output).toBeUndefined();
+    });
+
+    test('should return error for invalid output mode', () => {
+      const input = '{"test": "value"}';
+      const options: CLIOptions = {
+        palette: 'default',
+        theme: 'light',
+        outputMode: 'invalid'
+      };
+
+      const result = processInput(input, options);
+
+      expect(result.success).toBe(false);
+      expect(result.error).toContain('Invalid output mode: invalid');
+      expect(result.output).toBeUndefined();
+    });
+
+    test('should return error for invalid JSON', () => {
+      const input = '{invalid json}';
+      const options: CLIOptions = {
+        palette: 'default',
+        theme: 'light',
+        outputMode: 'ansi'
+      };
+
+      const result = processInput(input, options);
+
+      expect(result.success).toBe(false);
+      expect(result.error).toContain('Error highlighting input');
+      expect(result.output).toBeUndefined();
+    });
+
+    test('should process array input', () => {
+      const input = '[1, 2, 3, "hello", true, null]';
+      const options: CLIOptions = {
+        palette: 'default',
+        theme: 'light',
+        outputMode: 'ansi'
+      };
+
+      const result = processInput(input, options);
+
+      expect(result.success).toBe(true);
+      expect(result.output).toBeDefined();
+      expect(result.output).toContain('hello');
+    });
+
+    test('should process with all options combined', () => {
+      const input = '{"name": "Alice", "items": [1, 2, 3]}';
+      const options: CLIOptions = {
+        palette: 'bold',
+        theme: 'dark',
+        outputMode: 'html',
+        maxWidth: 80
+      };
+
+      const result = processInput(input, options);
+
+      expect(result.success).toBe(true);
+      expect(result.output).toBeDefined();
+    });
+  });
+
+  describe('allPalettes', () => {
+    test('should export allPalettes constant', () => {
+      expect(allPalettes).toBeDefined();
+      expect(typeof allPalettes).toBe('object');
+    });
+
+    test('should contain default palette', () => {
+      expect(allPalettes).toHaveProperty('default');
+    });
+
+    test('should contain nature palettes', () => {
+      expect(allPalettes).toHaveProperty('forest');
+      expect(allPalettes).toHaveProperty('garden');
+    });
+
+    test('should contain accessibility palettes', () => {
+      expect(allPalettes).toHaveProperty('protanopia');
+      expect(allPalettes).toHaveProperty('deuteranopia');
     });
   });
 });

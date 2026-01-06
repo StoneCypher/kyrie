@@ -9,7 +9,14 @@
       "Bash(npx tsc:*)",
       "Bash(node:*)",
       "Bash(npm run typescript:*)",
-      "Bash(npm run build:*)"
+      "Bash(npm run build:*)",
+      "Bash(npm run update_madlibs:*)",
+      "Bash(grep:*)",
+      "Bash(git restore:*)",
+      "Bash(echo:*)",
+      "Bash(npm run rollup:*)",
+      "Bash(timeout 30 npm run:*)",
+      "Bash(ls:*)"
     ]
   }
 }

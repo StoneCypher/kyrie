@@ -29,12 +29,10 @@ import {
   magentasColorRangePalettes,
   lightGraysColorRangePalettes
 } from './index.js';
-import type { HighlightOptions, OutputMode } from './index.js';
-
-const program = new Command();
+import type { HighlightOptions, OutputMode, ColorPalette } from './index.js';
 
 // Combine all palette collections for lookup
-const allPalettes = {
+export const allPalettes = {
   ...palettes,
   ...naturePalettes,
   ...protanopiaPalettes,
@@ -59,10 +57,100 @@ const allPalettes = {
   ...lightGraysColorRangePalettes
 };
 
+export interface CLIOptions {
+  palette: string;
+  theme: string;
+  maxWidth?: number | false | undefined;
+  outputMode: string;
+}
+
+export interface CLIResult {
+  success: boolean;
+  output?: string;
+  error?: string;
+}
+
+/**
+ * Get palette from options
+ */
+export function getPalette(paletteName: string, theme: string): { success: boolean; palette?: ColorPalette; error?: string } {
+  const paletteObj = (allPalettes as any)[paletteName];
+
+  if (!paletteObj) {
+    return {
+      success: false,
+      error: `Unknown palette: ${paletteName}\nAvailable palettes: ${Object.keys(allPalettes).join(', ')}`
+    };
+  }
+
+  const themeVariant = theme === 'dark' ? 'dark' : 'light';
+  const selectedPalette = paletteObj[themeVariant];
+
+  if (!selectedPalette) {
+    return {
+      success: false,
+      error: `Palette "${paletteName}" does not have a ${themeVariant} variant`
+    };
+  }
+
+  return { success: true, palette: selectedPalette };
+}
+
+/**
+ * Validate output mode
+ */
+export function validateOutputMode(mode: string): { success: boolean; error?: string } {
+  const validOutputModes: OutputMode[] = ['ansi', 'html', 'chrome-console', 'logger'];
+  if (!validOutputModes.includes(mode as OutputMode)) {
+    return {
+      success: false,
+      error: `Invalid output mode: ${mode}\nValid modes: ${validOutputModes.join(', ')}`
+    };
+  }
+  return { success: true };
+}
+
+/**
+ * Process input and highlight
+ */
+export function processInput(input: string, options: CLIOptions): CLIResult {
+  // Get palette
+  const paletteResult = getPalette(options.palette, options.theme);
+  if (!paletteResult.success) {
+    return { success: false, error: paletteResult.error || 'Unknown palette error' };
+  }
+
+  // Validate output mode
+  const outputModeResult = validateOutputMode(options.outputMode);
+  if (!outputModeResult.success) {
+    return { success: false, error: outputModeResult.error || 'Unknown output mode error' };
+  }
+
+  // Build highlight options
+  const highlightOptions: HighlightOptions = {
+    palette: paletteResult.palette!,
+    maxWidth: options.maxWidth,
+    outputMode: options.outputMode as OutputMode
+  };
+
+  // Highlight and return
+  try {
+    const highlighted = highlight_string(input, highlightOptions);
+    return { success: true, output: highlighted };
+  } catch (error) {
+    return {
+      success: false,
+      error: `Error highlighting input: ${error instanceof Error ? error.message : String(error)}`
+    };
+  }
+}
+
+const program = new Command();
+
 program
   .name('kyrie')
   .description('Syntax highlighter for JavaScript, TypeScript, and JSON')
-  .version('0.20.0')
+  .version('0.21.0')
   .argument('[file]', 'File to highlight (reads from stdin if not provided)')
   .option('-p, --palette <name>', 'Color palette to use (e.g., default, pastel, forest)', 'default')
   .option('-t, --theme <variant>', 'Theme variant: light or dark', 'light')
@@ -84,47 +172,15 @@ program
       input = readFileSync(0, 'utf-8');
     }
 
-    // Get the palette
-    const paletteObj = (allPalettes as any)[options.palette];
+    // Process input with refactored function
+    const result = processInput(input, options);
 
-    if (!paletteObj) {
-      console.error(`Unknown palette: ${options.palette}`);
-      console.error(`Available palettes: ${Object.keys(allPalettes).join(', ')}`);
+    if (!result.success) {
+      console.error(result.error);
       process.exit(1);
     }
 
-    // Get the theme variant
-    const themeVariant = options.theme === 'dark' ? 'dark' : 'light';
-    const selectedPalette = paletteObj[themeVariant];
-
-    if (!selectedPalette) {
-      console.error(`Palette "${options.palette}" does not have a ${themeVariant} variant`);
-      process.exit(1);
-    }
-
-    // Validate output mode
-    const validOutputModes: OutputMode[] = ['ansi', 'html', 'chrome-console', 'logger'];
-    if (!validOutputModes.includes(options.outputMode as OutputMode)) {
-      console.error(`Invalid output mode: ${options.outputMode}`);
-      console.error(`Valid modes: ${validOutputModes.join(', ')}`);
-      process.exit(1);
-    }
-
-    // Build highlight options
-    const highlightOptions: HighlightOptions = {
-      palette: selectedPalette,
-      maxWidth: options.maxWidth,
-      outputMode: options.outputMode as OutputMode
-    };
-
-    // Highlight and output
-    try {
-      const highlighted = highlight_string(input, highlightOptions);
-      console.log(highlighted);
-    } catch (error) {
-      console.error(`Error highlighting input: ${error instanceof Error ? error.message : String(error)}`);
-      process.exit(1);
-    }
+    console.log(result.output);
   });
 
 /**
@@ -142,4 +198,7 @@ function parseMaxWidth(value: string): number | false | undefined {
   return parsed;
 }
 
-program.parse();
+// Only run CLI when not in test environment
+if (process.env['NODE_ENV'] !== 'test' && process.env['VITEST'] !== 'true') {
+  program.parse();
+}
