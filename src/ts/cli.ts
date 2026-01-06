@@ -29,7 +29,7 @@ import {
   magentasColorRangePalettes,
   lightGraysColorRangePalettes
 } from './index.js';
-import type { HighlightOptions } from './index.js';
+import type { HighlightOptions, OutputMode } from './index.js';
 
 const program = new Command();
 
@@ -62,12 +62,13 @@ const allPalettes = {
 program
   .name('kyrie')
   .description('Syntax highlighter for JavaScript, TypeScript, and JSON')
-  .version('0.19.0')
+  .version('0.20.0')
   .argument('[file]', 'File to highlight (reads from stdin if not provided)')
   .option('-p, --palette <name>', 'Color palette to use (e.g., default, pastel, forest)', 'default')
   .option('-t, --theme <variant>', 'Theme variant: light or dark', 'light')
   .option('-w, --max-width <width>', 'Maximum width for output (number, or "false" to disable)', parseMaxWidth)
-  .action((file: string | undefined, options: { palette: string; theme: string; maxWidth?: number | false | undefined }) => {
+  .option('-o, --output-mode <mode>', 'Output mode: ansi, html, chrome-console, or logger', 'ansi')
+  .action((file: string | undefined, options: { palette: string; theme: string; maxWidth?: number | false | undefined; outputMode: string }) => {
     let input = '';
 
     // Read input from file or stdin
@@ -101,10 +102,19 @@ program
       process.exit(1);
     }
 
+    // Validate output mode
+    const validOutputModes: OutputMode[] = ['ansi', 'html', 'chrome-console', 'logger'];
+    if (!validOutputModes.includes(options.outputMode as OutputMode)) {
+      console.error(`Invalid output mode: ${options.outputMode}`);
+      console.error(`Valid modes: ${validOutputModes.join(', ')}`);
+      process.exit(1);
+    }
+
     // Build highlight options
     const highlightOptions: HighlightOptions = {
       palette: selectedPalette,
-      maxWidth: options.maxWidth
+      maxWidth: options.maxWidth,
+      outputMode: options.outputMode as OutputMode
     };
 
     // Highlight and output

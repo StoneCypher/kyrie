@@ -166,6 +166,68 @@ describe.skipIf(!existsSync(cliPath))('CLI', () => {
             expect(result.stderr).toContain('Invalid max-width value');
         });
     });
+    describe('Output mode option', () => {
+        test('should accept ansi output mode (default)', async () => {
+            const input = '{"test": "value"}';
+            const result = await runCLI([], input);
+            expect(result.exitCode).toBe(0);
+            expect(result.stdout).toBeTruthy();
+        });
+        test('should accept ansi output mode explicitly', async () => {
+            const input = '{"test": "value"}';
+            const result = await runCLI(['--output-mode', 'ansi'], input);
+            expect(result.exitCode).toBe(0);
+            expect(result.stdout).toBeTruthy();
+            expect(result.stderr).toBe('');
+        });
+        test('should accept html output mode', async () => {
+            const input = '{"test": "value"}';
+            const result = await runCLI(['--output-mode', 'html'], input);
+            expect(result.exitCode).toBe(0);
+            expect(result.stdout).toBeTruthy();
+            expect(result.stderr).toBe('');
+        });
+        test('should accept chrome-console output mode', async () => {
+            const input = '{"test": "value"}';
+            const result = await runCLI(['--output-mode', 'chrome-console'], input);
+            expect(result.exitCode).toBe(0);
+            expect(result.stdout).toBeTruthy();
+            expect(result.stderr).toBe('');
+        });
+        test('should accept logger output mode', async () => {
+            const input = '{"test": "value"}';
+            const result = await runCLI(['--output-mode', 'logger'], input);
+            expect(result.exitCode).toBe(0);
+            expect(result.stdout).toBeTruthy();
+            expect(result.stderr).toBe('');
+        });
+        test('should accept output mode with short flag (-o)', async () => {
+            const input = '{"test": "value"}';
+            const result = await runCLI(['-o', 'html'], input);
+            expect(result.exitCode).toBe(0);
+            expect(result.stdout).toBeTruthy();
+            expect(result.stderr).toBe('');
+        });
+        test('should error on invalid output mode', async () => {
+            const input = '{"test": "value"}';
+            const result = await runCLI(['--output-mode', 'invalid'], input);
+            expect(result.exitCode).toBe(1);
+            expect(result.stderr).toContain('Invalid output mode: invalid');
+            expect(result.stderr).toContain('Valid modes:');
+        });
+        test('should combine output mode with other options', async () => {
+            const input = '{"name": "Alice", "age": 25}';
+            const result = await runCLI([
+                '--palette', 'forest',
+                '--theme', 'dark',
+                '--output-mode', 'html',
+                '--max-width', '80'
+            ], input);
+            expect(result.exitCode).toBe(0);
+            expect(result.stdout).toBeTruthy();
+            expect(result.stderr).toBe('');
+        });
+    });
     describe('Error handling', () => {
         test('should error on non-existent file', async () => {
             const result = await runCLI(['nonexistent-file.json']);
