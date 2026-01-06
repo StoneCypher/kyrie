@@ -11,6 +11,7 @@ import {
   defaultContainers,
   defaultHighlightOptions,
   type ContainerConfig,
+  type OutputMode,
   testdata
 } from '../index.js';
 
@@ -1459,6 +1460,46 @@ describe('testdata', () => {
       const result = paint(ast);
       expect(result).toBeDefined();
       expect(result.length).toBeGreaterThan(0);
+    });
+  });
+
+  describe('OutputMode type', () => {
+    test('should accept valid output modes', () => {
+      const modes: OutputMode[] = ['ansi', 'html', 'chrome-console', 'logger'];
+      modes.forEach(mode => {
+        expect(mode).toBeDefined();
+      });
+    });
+
+    test('should be usable in HighlightOptions', () => {
+      const options1: HighlightOptions = { outputMode: 'ansi' };
+      const options2: HighlightOptions = { outputMode: 'html' };
+      const options3: HighlightOptions = { outputMode: 'chrome-console' };
+      const options4: HighlightOptions = { outputMode: 'logger' };
+
+      expect(options1.outputMode).toBe('ansi');
+      expect(options2.outputMode).toBe('html');
+      expect(options3.outputMode).toBe('chrome-console');
+      expect(options4.outputMode).toBe('logger');
+    });
+
+    test('should be optional in HighlightOptions', () => {
+      const options: HighlightOptions = { palette: palettes.default.light };
+      expect(options.outputMode).toBeUndefined();
+    });
+
+    test('should work with all highlight options combined', () => {
+      const options: HighlightOptions = {
+        palette: palettes.default.dark,
+        containers: defaultContainers,
+        maxWidth: 80,
+        outputMode: 'html'
+      };
+
+      expect(options.outputMode).toBe('html');
+      expect(options.palette).toBeDefined();
+      expect(options.containers).toBeDefined();
+      expect(options.maxWidth).toBe(80);
     });
   });
 });

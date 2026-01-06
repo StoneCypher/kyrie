@@ -62,7 +62,7 @@ const allPalettes = {
 program
   .name('kyrie')
   .description('Syntax highlighter for JavaScript, TypeScript, and JSON')
-  .version('0.18.0')
+  .version('0.19.0')
   .argument('[file]', 'File to highlight (reads from stdin if not provided)')
   .option('-p, --palette <name>', 'Color palette to use (e.g., default, pastel, forest)', 'default')
   .option('-t, --theme <variant>', 'Theme variant: light or dark', 'light')
