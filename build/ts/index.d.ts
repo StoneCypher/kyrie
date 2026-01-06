@@ -102,6 +102,78 @@ export declare const duskPalette: ColorPalette;
  */
 export declare const defaultContainers: ContainerConfig;
 /**
+ * Comprehensive test data containing all AST node types
+ * Each container includes members of every non-container type
+ * Top-level containers include all other container types
+ */
+export declare const testdata: {
+    null: null;
+    undefined: undefined;
+    boolean_true: boolean;
+    boolean_false: boolean;
+    number_integer: number;
+    number_negative: number;
+    number_float: number;
+    number_scientific: number;
+    number_zero: number;
+    string: string;
+    string_empty: string;
+    string_escaped: string;
+    symbol_with_description: symbol;
+    symbol_without_description: symbol;
+    function: () => number;
+    array_all_primitives: unknown[];
+    array_with_holes: number[];
+    object_all_primitives: {
+        null: null;
+        undefined: undefined;
+        boolean_true: boolean;
+        boolean_false: boolean;
+        number: number;
+        negative: number;
+        float: number;
+        string: string;
+        symbol: symbol;
+    };
+    map_all_primitives: Map<string, unknown>;
+    set_all_primitives: Set<unknown>;
+    date: Date;
+    regexp_with_flags: RegExp;
+    regexp_simple: RegExp;
+    error: Error;
+    weakmap: WeakMap<WeakKey, any>;
+    weakset: WeakSet<WeakKey>;
+    array_all_containers: unknown[];
+    object_all_containers: {
+        array: number[];
+        object: {
+            x: number;
+            y: number;
+            z: number;
+        };
+        map: Map<string, string>;
+        set: Set<string>;
+        date: Date;
+        regexp: RegExp;
+        error: Error;
+    };
+    map_all_containers: Map<string, unknown>;
+    set_all_containers: Set<unknown>;
+    deeply_nested: {
+        level1: {
+            level2: {
+                level3: {
+                    array: (number | (number | number[])[])[];
+                    map: Map<string, {
+                        nested: string;
+                    }>;
+                };
+            };
+        };
+    };
+    circular: any;
+};
+/**
  * Highlights JSON string with color codes
  *
  * @param {string} json - The JSON string to highlight

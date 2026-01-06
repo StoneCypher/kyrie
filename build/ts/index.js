@@ -152,6 +152,179 @@ export const defaultContainers = {
     }
 };
 /**
+ * Comprehensive test data containing all AST node types
+ * Each container includes members of every non-container type
+ * Top-level containers include all other container types
+ */
+export const testdata = {
+    // Primitive types
+    null: null,
+    undefined: undefined,
+    boolean_true: true,
+    boolean_false: false,
+    number_integer: 42,
+    number_negative: -17,
+    number_float: 3.14159,
+    number_scientific: 1.23e10,
+    number_zero: 0,
+    string: "hello world",
+    string_empty: "",
+    string_escaped: "line1\nline2\ttab",
+    symbol_with_description: Symbol('test'),
+    symbol_without_description: Symbol(),
+    function: function testFunc() { return 42; },
+    // Simple array with all non-container types
+    array_all_primitives: [
+        null,
+        undefined,
+        true,
+        false,
+        42,
+        -17,
+        3.14,
+        "string",
+        Symbol('array-symbol')
+    ],
+    // Array with holes (sparse array)
+    array_with_holes: (() => {
+        const arr = [1, 2, 3, 4, 5];
+        delete arr[1];
+        delete arr[3];
+        return arr; // [1, empty, 3, empty, 5]
+    })(),
+    // Object with all non-container types
+    object_all_primitives: {
+        null: null,
+        undefined: undefined,
+        boolean_true: true,
+        boolean_false: false,
+        number: 123,
+        negative: -456,
+        float: 7.89,
+        string: "object value",
+        symbol: Symbol('object-symbol')
+    },
+    // Map with all non-container types
+    map_all_primitives: new Map([
+        ['null', null],
+        ['undefined', undefined],
+        ['boolean', true],
+        ['number', 999],
+        ['string', 'map value'],
+        ['symbol', Symbol('map-symbol')]
+    ]),
+    // Set with all non-container types
+    set_all_primitives: new Set([
+        null,
+        undefined,
+        true,
+        false,
+        42,
+        "set string"
+    ]),
+    // Date
+    date: new Date('2024-01-01T00:00:00.000Z'),
+    // RegExp
+    regexp_with_flags: /pattern/gi,
+    regexp_simple: /test/,
+    // Error
+    error: new Error('test error message'),
+    // WeakMap (can only have object keys)
+    weakmap: (() => {
+        const wm = new WeakMap();
+        const key1 = {};
+        const key2 = {};
+        wm.set(key1, 'value1');
+        wm.set(key2, 'value2');
+        return wm;
+    })(),
+    // WeakSet (can only have object values)
+    weakset: (() => {
+        const ws = new WeakSet();
+        const obj1 = {};
+        const obj2 = {};
+        ws.add(obj1);
+        ws.add(obj2);
+        return ws;
+    })(),
+    // Array containing all container types (nested containers)
+    array_all_containers: [
+        // Array
+        [1, 2, 3],
+        // Object
+        { a: 1, b: 2, c: 3 },
+        // Map
+        new Map([['key1', 'value1'], ['key2', 'value2']]),
+        // Set
+        new Set([10, 20, 30]),
+        // Date
+        new Date('2024-06-15'),
+        // RegExp
+        /nested/i,
+        // Error
+        new Error('nested in array')
+    ],
+    // Object containing all container types
+    object_all_containers: {
+        array: [100, 200, 300],
+        object: { x: 1, y: 2, z: 3 },
+        map: new Map([['m1', 'v1'], ['m2', 'v2']]),
+        set: new Set(['a', 'b', 'c']),
+        date: new Date('2024-12-25'),
+        regexp: /object-nested/g,
+        error: new Error('nested in object')
+    },
+    // Map containing all container types
+    map_all_containers: new Map([
+        ['array', [7, 8, 9]],
+        ['object', { p: 1, q: 2 }],
+        ['map', new Map([['inner-key', 'inner-value']])],
+        ['set', new Set([true, false])],
+        ['date', new Date('2024-03-14')],
+        ['regexp', /map-nested/],
+        ['error', new Error('nested in map')]
+    ]),
+    // Set containing all container types
+    set_all_containers: new Set([
+        // Array
+        [11, 12, 13],
+        // Object
+        { name: 'set-obj', value: 42 },
+        // Map
+        new Map([['set-map-key', 'set-map-value']]),
+        // Set (nested set)
+        new Set([1, 2]),
+        // Date
+        new Date('2024-07-04'),
+        // RegExp
+        /set-nested/,
+        // Error
+        new Error('nested in set')
+    ]),
+    // Deeply nested structure
+    deeply_nested: {
+        level1: {
+            level2: {
+                level3: {
+                    array: [1, 2, [3, 4, [5, 6]]],
+                    map: new Map([
+                        ['key', { nested: 'value' }]
+                    ])
+                }
+            }
+        }
+    },
+    // Circular reference example (will be detected by parse_value)
+    circular: (() => {
+        const obj = {
+            name: 'circular',
+            value: 123
+        };
+        obj.self = obj;
+        return obj;
+    })()
+};
+/**
  * Highlights JSON string with color codes
  *
  * @param {string} json - The JSON string to highlight

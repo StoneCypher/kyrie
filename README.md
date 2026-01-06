@@ -476,6 +476,64 @@ interface DeepType {
 }
 ```
 
+## Test Data
+
+Kyrie exports a comprehensive `testdata` object containing examples of every AST node type. This is useful for testing, demonstrations, and understanding the library's capabilities.
+
+### `testdata` Export
+
+The `testdata` object includes:
+
+**Primitives:**
+- `null`, `undefined`
+- Booleans: `boolean_true`, `boolean_false`
+- Numbers: `number_integer`, `number_negative`, `number_float`, `number_scientific`, `number_zero`
+- Strings: `string`, `string_empty`, `string_escaped`
+- Symbols: `symbol_with_description`, `symbol_without_description`
+- Function: `function`
+
+**Simple Containers with All Primitives:**
+- `array_all_primitives` - Array containing all non-container types
+- `array_with_holes` - Sparse array with missing indices
+- `object_all_primitives` - Object with all non-container types as properties
+- `map_all_primitives` - Map with all non-container types
+- `set_all_primitives` - Set with primitive values
+
+**Special Types:**
+- `date` - Date instance
+- `regexp_with_flags`, `regexp_simple` - RegExp instances
+- `error` - Error instance
+- `weakmap` - WeakMap instance
+- `weakset` - WeakSet instance
+
+**Nested Containers:**
+- `array_all_containers` - Array containing all container types
+- `object_all_containers` - Object containing all container types
+- `map_all_containers` - Map containing all container types
+- `set_all_containers` - Set containing all container types
+
+**Special Cases:**
+- `deeply_nested` - Multi-level nested structure
+- `circular` - Object with circular self-reference
+
+**Example Usage:**
+
+```typescript
+import { testdata, parse_value, paint } from 'kyrie';
+
+// Parse and paint any testdata item
+const ast = parse_value(testdata.array_all_primitives);
+console.log(paint(ast));
+
+// Test with nested containers
+const nestedAst = parse_value(testdata.object_all_containers);
+console.log(paint(nestedAst, { palette: forestPalette }));
+
+// Verify circular reference detection
+const circularAst = parse_value(testdata.circular);
+console.log(circularAst.properties.self.deep_type.isCircularReference); // true
+```
+
 ## Development
 
 ### Running Tests

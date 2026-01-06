@@ -1,4 +1,4 @@
-import { highlight, parse_string, parse_value, defaultPalette, forestPalette, boldPalette, duskPalette, paint, defaultContainers, defaultHighlightOptions } from '../index.js';
+import { highlight, parse_string, parse_value, defaultPalette, forestPalette, boldPalette, duskPalette, paint, defaultContainers, defaultHighlightOptions, testdata } from '../index.js';
 describe('ASTNode', () => {
     test('should have correct structure for primitive', () => {
         const ast = parse_string('42');
@@ -1049,6 +1049,183 @@ describe('paint', () => {
             expect(result).toContain('true');
             expect(result).toContain('nil');
             expect(result).toContain('null');
+        });
+    });
+});
+describe('testdata', () => {
+    test('should be defined and exported', () => {
+        expect(testdata).toBeDefined();
+        expect(typeof testdata).toBe('object');
+    });
+    describe('primitives', () => {
+        test('should contain null', () => {
+            expect(testdata.null).toBe(null);
+        });
+        test('should contain undefined', () => {
+            expect(testdata.undefined).toBe(undefined);
+        });
+        test('should contain booleans', () => {
+            expect(testdata.boolean_true).toBe(true);
+            expect(testdata.boolean_false).toBe(false);
+        });
+        test('should contain various numbers', () => {
+            expect(testdata.number_integer).toBe(42);
+            expect(testdata.number_negative).toBe(-17);
+            expect(testdata.number_float).toBe(3.14159);
+            expect(testdata.number_scientific).toBe(1.23e10);
+            expect(testdata.number_zero).toBe(0);
+        });
+        test('should contain strings', () => {
+            expect(testdata.string).toBe('hello world');
+            expect(testdata.string_empty).toBe('');
+            expect(testdata.string_escaped).toBe('line1\nline2\ttab');
+        });
+        test('should contain symbols', () => {
+            expect(typeof testdata.symbol_with_description).toBe('symbol');
+            expect(testdata.symbol_with_description.description).toBe('test');
+            expect(typeof testdata.symbol_without_description).toBe('symbol');
+        });
+        test('should contain function', () => {
+            expect(typeof testdata.function).toBe('function');
+        });
+    });
+    describe('simple containers with primitives', () => {
+        test('array_all_primitives should contain all primitive types', () => {
+            expect(Array.isArray(testdata.array_all_primitives)).toBe(true);
+            expect(testdata.array_all_primitives).toContain(null);
+            expect(testdata.array_all_primitives).toContain(undefined);
+            expect(testdata.array_all_primitives).toContain(true);
+            expect(testdata.array_all_primitives).toContain(false);
+            expect(testdata.array_all_primitives).toContain(42);
+        });
+        test('array_with_holes should be a sparse array', () => {
+            expect(Array.isArray(testdata.array_with_holes)).toBe(true);
+            expect(testdata.array_with_holes.length).toBe(5);
+            expect(testdata.array_with_holes[0]).toBe(1);
+            expect(testdata.array_with_holes[2]).toBe(3);
+            expect(testdata.array_with_holes[4]).toBe(5);
+            // Holes at indices 1 and 3
+            expect(1 in testdata.array_with_holes).toBe(false);
+            expect(3 in testdata.array_with_holes).toBe(false);
+        });
+        test('object_all_primitives should contain all primitive types', () => {
+            expect(testdata.object_all_primitives.null).toBe(null);
+            expect(testdata.object_all_primitives.undefined).toBe(undefined);
+            expect(testdata.object_all_primitives.boolean_true).toBe(true);
+            expect(testdata.object_all_primitives.boolean_false).toBe(false);
+            expect(testdata.object_all_primitives.number).toBe(123);
+        });
+        test('map_all_primitives should contain all primitive types', () => {
+            expect(testdata.map_all_primitives instanceof Map).toBe(true);
+            expect(testdata.map_all_primitives.get('null')).toBe(null);
+            expect(testdata.map_all_primitives.get('undefined')).toBe(undefined);
+            expect(testdata.map_all_primitives.get('boolean')).toBe(true);
+            expect(testdata.map_all_primitives.get('number')).toBe(999);
+        });
+        test('set_all_primitives should contain primitive types', () => {
+            expect(testdata.set_all_primitives instanceof Set).toBe(true);
+            expect(testdata.set_all_primitives.has(null)).toBe(true);
+            expect(testdata.set_all_primitives.has(undefined)).toBe(true);
+            expect(testdata.set_all_primitives.has(true)).toBe(true);
+            expect(testdata.set_all_primitives.has(42)).toBe(true);
+        });
+    });
+    describe('special types', () => {
+        test('should contain Date', () => {
+            expect(testdata.date instanceof Date).toBe(true);
+        });
+        test('should contain RegExp instances', () => {
+            expect(testdata.regexp_with_flags instanceof RegExp).toBe(true);
+            expect(testdata.regexp_simple instanceof RegExp).toBe(true);
+        });
+        test('should contain Error', () => {
+            expect(testdata.error instanceof Error).toBe(true);
+            expect(testdata.error.message).toBe('test error message');
+        });
+        test('should contain WeakMap', () => {
+            expect(testdata.weakmap instanceof WeakMap).toBe(true);
+        });
+        test('should contain WeakSet', () => {
+            expect(testdata.weakset instanceof WeakSet).toBe(true);
+        });
+    });
+    describe('nested containers', () => {
+        test('array_all_containers should contain all container types', () => {
+            expect(Array.isArray(testdata.array_all_containers)).toBe(true);
+            expect(testdata.array_all_containers.length).toBe(7);
+            expect(Array.isArray(testdata.array_all_containers[0])).toBe(true);
+            expect(typeof testdata.array_all_containers[1]).toBe('object');
+            expect(testdata.array_all_containers[2] instanceof Map).toBe(true);
+            expect(testdata.array_all_containers[3] instanceof Set).toBe(true);
+            expect(testdata.array_all_containers[4] instanceof Date).toBe(true);
+            expect(testdata.array_all_containers[5] instanceof RegExp).toBe(true);
+            expect(testdata.array_all_containers[6] instanceof Error).toBe(true);
+        });
+        test('object_all_containers should contain all container types', () => {
+            expect(Array.isArray(testdata.object_all_containers.array)).toBe(true);
+            expect(typeof testdata.object_all_containers.object).toBe('object');
+            expect(testdata.object_all_containers.map instanceof Map).toBe(true);
+            expect(testdata.object_all_containers.set instanceof Set).toBe(true);
+            expect(testdata.object_all_containers.date instanceof Date).toBe(true);
+            expect(testdata.object_all_containers.regexp instanceof RegExp).toBe(true);
+            expect(testdata.object_all_containers.error instanceof Error).toBe(true);
+        });
+        test('map_all_containers should contain all container types', () => {
+            expect(testdata.map_all_containers instanceof Map).toBe(true);
+            expect(Array.isArray(testdata.map_all_containers.get('array'))).toBe(true);
+            expect(typeof testdata.map_all_containers.get('object')).toBe('object');
+            expect(testdata.map_all_containers.get('map') instanceof Map).toBe(true);
+            expect(testdata.map_all_containers.get('set') instanceof Set).toBe(true);
+            expect(testdata.map_all_containers.get('date') instanceof Date).toBe(true);
+            expect(testdata.map_all_containers.get('regexp') instanceof RegExp).toBe(true);
+            expect(testdata.map_all_containers.get('error') instanceof Error).toBe(true);
+        });
+        test('set_all_containers should contain all container types', () => {
+            expect(testdata.set_all_containers instanceof Set).toBe(true);
+            expect(testdata.set_all_containers.size).toBe(7);
+            // Verify each type exists (Sets don't have indexed access)
+            const setArray = Array.from(testdata.set_all_containers);
+            expect(setArray.some(item => Array.isArray(item))).toBe(true);
+            expect(setArray.some(item => item instanceof Map)).toBe(true);
+            expect(setArray.some(item => item instanceof Set)).toBe(true);
+            expect(setArray.some(item => item instanceof Date)).toBe(true);
+            expect(setArray.some(item => item instanceof RegExp)).toBe(true);
+            expect(setArray.some(item => item instanceof Error)).toBe(true);
+        });
+    });
+    describe('circular reference', () => {
+        test('circular should contain self-reference', () => {
+            expect(testdata.circular).toBeDefined();
+            expect(testdata.circular.name).toBe('circular');
+            expect(testdata.circular.value).toBe(123);
+            expect(testdata.circular.self).toBe(testdata.circular);
+        });
+    });
+    describe('deeply nested', () => {
+        test('should have deeply nested structure', () => {
+            expect(testdata.deeply_nested.level1).toBeDefined();
+            expect(testdata.deeply_nested.level1.level2).toBeDefined();
+            expect(testdata.deeply_nested.level1.level2.level3).toBeDefined();
+            expect(Array.isArray(testdata.deeply_nested.level1.level2.level3.array)).toBe(true);
+            expect(testdata.deeply_nested.level1.level2.level3.map instanceof Map).toBe(true);
+        });
+    });
+    describe('parsing testdata', () => {
+        test('should be able to parse testdata with parse_value', () => {
+            const ast = parse_value(testdata);
+            expect(ast).toBeDefined();
+            expect(ast.basic_type).toBe('object');
+            expect(ast.properties).toBeDefined();
+        });
+        test('should detect circular reference in testdata.circular', () => {
+            const ast = parse_value(testdata.circular);
+            expect(ast.properties['self'].deep_type.isCircularReference).toBe(true);
+        });
+        test('should be able to paint testdata', () => {
+            const ast = parse_value(testdata.array_all_primitives);
+            const result = paint(ast);
+            expect(result).toBeDefined();
+            expect(result.length).toBeGreaterThan(0);
         });
     });
 });

@@ -1,6 +1,17 @@
 # kyrie
 
-Kyrie is a formatting colorizer for Javascript, Typescript, and JSON.
+Kyrie is a formatting colorizer for JavaScript, TypeScript, and JSON with customizable color palettes and container delimiters.
+
+## Features
+
+- 🎨 **Four built-in color palettes**: Pastel (default), Forest, Bold, and Dusk themes
+- 🔧 **Fully customizable**: Create custom palettes and container delimiters
+- 🌈 **16 million colors**: Uses Chalk with 24-bit RGB color support
+- 📦 **AST-based parsing**: Parse JSON strings or JavaScript values into detailed AST
+- 🔄 **Circular reference detection**: Safely handles circular object references
+- 🎯 **Type-aware**: Distinguishes between arrays, objects, Maps, Sets, Dates, RegExp, Errors, and more
+- 💪 **TypeScript support**: Fully typed with strict TypeScript configuration
+- ⚡ **Zero dependencies** (except Chalk for terminal colors)
 
 ## Installation
 
@@ -8,18 +19,47 @@ Kyrie is a formatting colorizer for Javascript, Typescript, and JSON.
 npm install kyrie
 ```
 
+## Quick Start
+
+```typescript
+import { parse_string, paint } from 'kyrie';
+
+// Parse JSON string to AST
+const ast = parse_string('{"name": "Alice", "age": 25}');
+
+// Paint with colors (uses default pastel palette)
+const colored = paint(ast);
+console.log(colored); // Outputs colorized JSON to terminal
+```
+
 ## Usage
 
-### Highlighting JSON
+### Colorizing JSON and JavaScript
 
-The main function is `highlight()`, which takes a JSON string and returns a highlighted version.
+The `paint()` function is the main way to colorize parsed values. It works with both `parse_string()` (for JSON/JavaScript strings) and `parse_value()` (for JavaScript values).
+
+```typescript
+import { parse_string, parse_value, paint, forestPalette } from 'kyrie';
+
+// From JSON string
+const ast1 = parse_string('{"name": "John", "age": 30}');
+console.log(paint(ast1));
+
+// From JavaScript value
+const ast2 = parse_value({ name: 'John', age: 30 });
+console.log(paint(ast2, { palette: forestPalette }));
+```
+
+### Highlighting JSON (Placeholder)
+
+The `highlight()` function is a placeholder for future string-based highlighting.
 
 ```typescript
 import { highlight } from 'kyrie';
 
 const json = '{"name": "John", "age": 30}';
 const highlighted = highlight(json);
-console.log(highlighted);
+console.log(highlighted); // Currently returns input unchanged
 ```
 
 ### API
@@ -47,17 +87,23 @@ const result = highlight(json, options);
 
 ### HighlightOptions
 
-An interface for configuring the highlight function. Options will be added as features are implemented.
+Configuration interface for highlighting and painting functions.
 
 ```typescript
 interface HighlightOptions {
-  // Options will be defined as features are added
+  palette?: ColorPalette;      // Color scheme to use
+  containers?: ContainerConfig; // Container delimiter configuration
 }
 ```
 
+**Available exports:**
+- `defaultHighlightOptions` - Pre-configured with defaultPalette and defaultContainers
+- `defaultPalette`, `forestPalette`, `boldPalette`, `duskPalette` - Built-in color schemes
+- `defaultContainers` - Default container delimiters
+
 ### Painting AST Nodes
 
-The `paint()` function renders AST nodes with colors and formatting using Chalk for terminal output.
+The `paint()` function renders AST nodes with colors and formatting using Chalk. It converts parsed AST nodes into colorized strings with ANSI escape codes for terminal display. Colors are always generated regardless of environment (forced color support at 16 million color level).
 
 #### `paint(node: ASTNode, options?: HighlightOptions): string`
 
@@ -68,42 +114,65 @@ Converts an AST node into a colorized string representation.
 - `options` (HighlightOptions, optional): Configuration with palette and container settings. Defaults are used for any missing values.
 
 **Returns:**
-- string: The colorized string representation with ANSI escape codes
+- string: The colorized string representation with ANSI escape codes (24-bit RGB colors)
 
-**Example: Using defaults**
+**Example: Basic usage (using defaults)**
 
 ```typescript
 import { parse_string, paint } from 'kyrie';
 
 const ast = parse_string('{"name": "Alice", "age": 25}');
-const colored = paint(ast); // Uses default palette and containers
-console.log(colored); // Outputs colorized JSON to terminal
+const colored = paint(ast);
+console.log(colored);
+// Outputs: {"name": "Alice", "age": 25} with colors
 ```
 
-**Example: With full options**
+**Example: Using different palettes**
 
 ```typescript
-import { parse_string, paint, defaultPalette, defaultContainers } from 'kyrie';
+import { parse_string, paint, forestPalette, boldPalette, duskPalette } from 'kyrie';
 
-const ast = parse_string('{"name": "Alice", "age": 25}');
-const options = {
-  palette: defaultPalette,
-  containers: defaultContainers
+const ast = parse_string('[1, 2, 3, "hello", true, null]');
+
+// Forest theme
+console.log(paint(ast, { palette: forestPalette }));
+
+// Bold vibrant colors
+console.log(paint(ast, { palette: boldPalette }));
+
+// Dark theme (near-black colors)
+console.log(paint(ast, { palette: duskPalette }));
+```
+
+**Example: Custom containers with default palette**
+
+```typescript
+import { parse_string, paint, type ContainerConfig } from 'kyrie';
+
+const customContainers: ContainerConfig = {
+  array: { start: '<<', delimiter: '|', end: '>>' },
+  object: { start: 'obj{', separator: ' => ', delimiter: '; ', end: '}' }
 };
-const colored = paint(ast, options);
-console.log(colored); // Outputs colorized JSON to terminal
+
+const ast = parse_string('{"items": [1, 2, 3]}');
+const colored = paint(ast, { containers: customContainers });
+console.log(colored);
+// Outputs: obj{items => <<1| 2| 3>>} with colors
 ```
 
-**Example: Partial options (merged with defaults)**
+**Example: Painting JavaScript values directly**
 
 ```typescript
-import { parse_string, paint, forestPalette } from 'kyrie';
+import { parse_value, paint } from 'kyrie';
 
-const ast = parse_string('[1, 2, 3]');
-// Only specify palette, containers will use defaults
-const colored = paint(ast, { palette: forestPalette });
+// Parse and paint any JavaScript value
+const obj = { users: ['Alice', 'Bob'], count: 2 };
+const ast = parse_value(obj);
+const colored = paint(ast);
 console.log(colored);
 ```
+
+**Note:** The paint function uses Chalk with forced color support (level 3 - 16 million colors). This ensures ANSI color codes are always generated in the output, regardless of the environment. When displayed in a color-supporting terminal, you'll see the fully colorized output.
 
 ### Container Configuration
 
@@ -405,6 +474,64 @@ interface DeepType {
   referenceId?: number;         // Unique ID for this object
   isCircularReference?: boolean; // True if this is a circular reference
 }
+```
+
+## Test Data
+
+Kyrie exports a comprehensive `testdata` object containing examples of every AST node type. This is useful for testing, demonstrations, and understanding the library's capabilities.
+
+### `testdata` Export
+
+The `testdata` object includes:
+
+**Primitives:**
+- `null`, `undefined`
+- Booleans: `boolean_true`, `boolean_false`
+- Numbers: `number_integer`, `number_negative`, `number_float`, `number_scientific`, `number_zero`
+- Strings: `string`, `string_empty`, `string_escaped`
+- Symbols: `symbol_with_description`, `symbol_without_description`
+- Function: `function`
+
+**Simple Containers with All Primitives:**
+- `array_all_primitives` - Array containing all non-container types
+- `array_with_holes` - Sparse array with missing indices
+- `object_all_primitives` - Object with all non-container types as properties
+- `map_all_primitives` - Map with all non-container types
+- `set_all_primitives` - Set with primitive values
+
+**Special Types:**
+- `date` - Date instance
+- `regexp_with_flags`, `regexp_simple` - RegExp instances
+- `error` - Error instance
+- `weakmap` - WeakMap instance
+- `weakset` - WeakSet instance
+
+**Nested Containers:**
+- `array_all_containers` - Array containing all container types
+- `object_all_containers` - Object containing all container types
+- `map_all_containers` - Map containing all container types
+- `set_all_containers` - Set containing all container types
+
+**Special Cases:**
+- `deeply_nested` - Multi-level nested structure
+- `circular` - Object with circular self-reference
+
+**Example Usage:**
+
+```typescript
+import { testdata, parse_value, paint } from 'kyrie';
+
+// Parse and paint any testdata item
+const ast = parse_value(testdata.array_all_primitives);
+console.log(paint(ast));
+
+// Test with nested containers
+const nestedAst = parse_value(testdata.object_all_containers);
+console.log(paint(nestedAst, { palette: forestPalette }));
+
+// Verify circular reference detection
+const circularAst = parse_value(testdata.circular);
+console.log(circularAst.properties.self.deep_type.isCircularReference); // true
 ```
 
 ## Development
