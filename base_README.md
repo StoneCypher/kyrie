@@ -2,6 +2,8 @@
 
 Kyrie is a formatting colorizer for JavaScript, TypeScript, and JSON with customizable color palettes and container delimiters.
 
+**[📚 Tutorial](https://stonecypher.github.io/kyrie/tutorial.md)** | **[📖 API Documentation](https://stonecypher.github.io/kyrie/docs/)**
+
 ## Features
 
 - 🌈 **16 million colors**: Uses Chalk with 24-bit RGB color support
