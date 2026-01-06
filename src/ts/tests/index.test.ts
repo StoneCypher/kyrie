@@ -473,3 +473,311 @@ describe('parse_value', () => {
     expect(valueAst.properties!['active']!.value).toBe(stringAst.properties!['active']!.value);
   });
 });
+
+describe('parse_string and parse_value equivalence', () => {
+  test('equivalence: null', () => {
+    const fromString = parse_string('null');
+    const fromValue = parse_value(null);
+
+    expect(fromValue.basic_type).toBe(fromString.basic_type);
+    expect(fromValue.deep_type.constructorName).toBe(fromString.deep_type.constructorName);
+    expect(fromValue.value).toBe(fromString.value);
+  });
+
+  test('equivalence: undefined', () => {
+    const fromString = parse_string('undefined');
+    const fromValue = parse_value(undefined);
+
+    expect(fromValue.basic_type).toBe(fromString.basic_type);
+    expect(fromValue.value).toBe(fromString.value);
+  });
+
+  test('equivalence: boolean true', () => {
+    const fromString = parse_string('true');
+    const fromValue = parse_value(true);
+
+    expect(fromValue.basic_type).toBe(fromString.basic_type);
+    expect(fromValue.value).toBe(fromString.value);
+  });
+
+  test('equivalence: boolean false', () => {
+    const fromString = parse_string('false');
+    const fromValue = parse_value(false);
+
+    expect(fromValue.basic_type).toBe(fromString.basic_type);
+    expect(fromValue.value).toBe(fromString.value);
+  });
+
+  test('equivalence: positive integer', () => {
+    const fromString = parse_string('42');
+    const fromValue = parse_value(42);
+
+    expect(fromValue.basic_type).toBe(fromString.basic_type);
+    expect(fromValue.value).toBe(fromString.value);
+  });
+
+  test('equivalence: negative number', () => {
+    const fromString = parse_string('-123.45');
+    const fromValue = parse_value(-123.45);
+
+    expect(fromValue.basic_type).toBe(fromString.basic_type);
+    expect(fromValue.value).toBe(fromString.value);
+  });
+
+  test('equivalence: zero', () => {
+    const fromString = parse_string('0');
+    const fromValue = parse_value(0);
+
+    expect(fromValue.basic_type).toBe(fromString.basic_type);
+    expect(fromValue.value).toBe(fromString.value);
+  });
+
+  test('equivalence: decimal number', () => {
+    const fromString = parse_string('3.14159');
+    const fromValue = parse_value(3.14159);
+
+    expect(fromValue.basic_type).toBe(fromString.basic_type);
+    expect(fromValue.value).toBe(fromString.value);
+  });
+
+  test('equivalence: string', () => {
+    const fromString = parse_string('"hello world"');
+    const fromValue = parse_value('hello world');
+
+    expect(fromValue.basic_type).toBe(fromString.basic_type);
+    expect(fromValue.value).toBe(fromString.value);
+  });
+
+  test('equivalence: empty string', () => {
+    const fromString = parse_string('""');
+    const fromValue = parse_value('');
+
+    expect(fromValue.basic_type).toBe(fromString.basic_type);
+    expect(fromValue.value).toBe(fromString.value);
+  });
+
+  test('equivalence: string with newline', () => {
+    const fromString = parse_string('"hello\\nworld"');
+    const fromValue = parse_value('hello\nworld');
+
+    expect(fromValue.basic_type).toBe(fromString.basic_type);
+    expect(fromValue.value).toBe(fromString.value);
+  });
+
+  test('equivalence: empty array', () => {
+    const fromString = parse_string('[]');
+    const fromValue = parse_value([]);
+
+    expect(fromValue.basic_type).toBe(fromString.basic_type);
+    expect(fromValue.deep_type.isArray).toBe(fromString.deep_type.isArray);
+    expect(fromValue.deep_type.constructorName).toBe(fromString.deep_type.constructorName);
+    expect(fromValue.elements).toHaveLength(0);
+    expect(fromString.elements).toHaveLength(0);
+  });
+
+  test('equivalence: array of numbers', () => {
+    const fromString = parse_string('[1, 2, 3]');
+    const fromValue = parse_value([1, 2, 3]);
+
+    expect(fromValue.basic_type).toBe(fromString.basic_type);
+    expect(fromValue.deep_type.isArray).toBe(fromString.deep_type.isArray);
+    expect(fromValue.elements).toHaveLength(3);
+    expect(fromValue.elements![0]!.value).toBe(fromString.elements![0]!.value);
+    expect(fromValue.elements![1]!.value).toBe(fromString.elements![1]!.value);
+    expect(fromValue.elements![2]!.value).toBe(fromString.elements![2]!.value);
+  });
+
+  test('equivalence: array of mixed types', () => {
+    const fromString = parse_string('[1, "hello", true, null]');
+    const fromValue = parse_value([1, 'hello', true, null]);
+
+    expect(fromValue.basic_type).toBe(fromString.basic_type);
+    expect(fromValue.deep_type.isArray).toBe(fromString.deep_type.isArray);
+    expect(fromValue.elements).toHaveLength(4);
+    expect(fromValue.elements![0]!.basic_type).toBe(fromString.elements![0]!.basic_type);
+    expect(fromValue.elements![0]!.value).toBe(fromString.elements![0]!.value);
+    expect(fromValue.elements![1]!.basic_type).toBe(fromString.elements![1]!.basic_type);
+    expect(fromValue.elements![1]!.value).toBe(fromString.elements![1]!.value);
+    expect(fromValue.elements![2]!.basic_type).toBe(fromString.elements![2]!.basic_type);
+    expect(fromValue.elements![2]!.value).toBe(fromString.elements![2]!.value);
+    expect(fromValue.elements![3]!.basic_type).toBe(fromString.elements![3]!.basic_type);
+  });
+
+  test('equivalence: empty object', () => {
+    const fromString = parse_string('{}');
+    const fromValue = parse_value({});
+
+    expect(fromValue.basic_type).toBe(fromString.basic_type);
+    expect(fromValue.deep_type.isArray).toBe(fromString.deep_type.isArray);
+    expect(Object.keys(fromValue.properties!)).toHaveLength(0);
+    expect(Object.keys(fromString.properties!)).toHaveLength(0);
+  });
+
+  test('equivalence: simple object', () => {
+    const fromString = parse_string('{"name": "Alice", "age": 25}');
+    const fromValue = parse_value({name: 'Alice', age: 25});
+
+    expect(fromValue.basic_type).toBe(fromString.basic_type);
+    expect(fromValue.properties!['name']!.basic_type).toBe(fromString.properties!['name']!.basic_type);
+    expect(fromValue.properties!['name']!.value).toBe(fromString.properties!['name']!.value);
+    expect(fromValue.properties!['age']!.basic_type).toBe(fromString.properties!['age']!.basic_type);
+    expect(fromValue.properties!['age']!.value).toBe(fromString.properties!['age']!.value);
+  });
+
+  test('equivalence: object with multiple types', () => {
+    const fromString = parse_string('{"str": "text", "num": 42, "bool": true, "nil": null}');
+    const fromValue = parse_value({str: 'text', num: 42, bool: true, nil: null});
+
+    expect(fromValue.basic_type).toBe(fromString.basic_type);
+    expect(fromValue.properties!['str']!.value).toBe(fromString.properties!['str']!.value);
+    expect(fromValue.properties!['num']!.value).toBe(fromString.properties!['num']!.value);
+    expect(fromValue.properties!['bool']!.value).toBe(fromString.properties!['bool']!.value);
+    expect(fromValue.properties!['nil']!.basic_type).toBe(fromString.properties!['nil']!.basic_type);
+  });
+
+  test('equivalence: nested object', () => {
+    const fromString = parse_string('{"person": {"name": "Bob", "age": 30}}');
+    const fromValue = parse_value({person: {name: 'Bob', age: 30}});
+
+    expect(fromValue.basic_type).toBe(fromString.basic_type);
+    expect(fromValue.properties!['person']!.basic_type).toBe(fromString.properties!['person']!.basic_type);
+    expect(fromValue.properties!['person']!.properties!['name']!.value).toBe(
+      fromString.properties!['person']!.properties!['name']!.value
+    );
+    expect(fromValue.properties!['person']!.properties!['age']!.value).toBe(
+      fromString.properties!['person']!.properties!['age']!.value
+    );
+  });
+
+  test('equivalence: nested arrays', () => {
+    const fromString = parse_string('[[1, 2], [3, 4]]');
+    const fromValue = parse_value([[1, 2], [3, 4]]);
+
+    expect(fromValue.basic_type).toBe(fromString.basic_type);
+    expect(fromValue.deep_type.isArray).toBe(fromString.deep_type.isArray);
+    expect(fromValue.elements![0]!.deep_type.isArray).toBe(fromString.elements![0]!.deep_type.isArray);
+    expect(fromValue.elements![0]!.elements![0]!.value).toBe(fromString.elements![0]!.elements![0]!.value);
+    expect(fromValue.elements![0]!.elements![1]!.value).toBe(fromString.elements![0]!.elements![1]!.value);
+    expect(fromValue.elements![1]!.elements![0]!.value).toBe(fromString.elements![1]!.elements![0]!.value);
+    expect(fromValue.elements![1]!.elements![1]!.value).toBe(fromString.elements![1]!.elements![1]!.value);
+  });
+
+  test('equivalence: array of objects', () => {
+    const fromString = parse_string('[{"a": 1}, {"b": 2}]');
+    const fromValue = parse_value([{a: 1}, {b: 2}]);
+
+    expect(fromValue.basic_type).toBe(fromString.basic_type);
+    expect(fromValue.deep_type.isArray).toBe(fromString.deep_type.isArray);
+    expect(fromValue.elements![0]!.properties!['a']!.value).toBe(fromString.elements![0]!.properties!['a']!.value);
+    expect(fromValue.elements![1]!.properties!['b']!.value).toBe(fromString.elements![1]!.properties!['b']!.value);
+  });
+
+  test('equivalence: object with array property', () => {
+    const fromString = parse_string('{"items": [1, 2, 3]}');
+    const fromValue = parse_value({items: [1, 2, 3]});
+
+    expect(fromValue.basic_type).toBe(fromString.basic_type);
+    expect(fromValue.properties!['items']!.deep_type.isArray).toBe(fromString.properties!['items']!.deep_type.isArray);
+    expect(fromValue.properties!['items']!.elements![0]!.value).toBe(fromString.properties!['items']!.elements![0]!.value);
+    expect(fromValue.properties!['items']!.elements![1]!.value).toBe(fromString.properties!['items']!.elements![1]!.value);
+    expect(fromValue.properties!['items']!.elements![2]!.value).toBe(fromString.properties!['items']!.elements![2]!.value);
+  });
+
+  test('equivalence: deeply nested structure', () => {
+    const fromString = parse_string('{"a": {"b": {"c": {"d": "deep"}}}}');
+    const fromValue = parse_value({a: {b: {c: {d: 'deep'}}}});
+
+    expect(fromValue.basic_type).toBe(fromString.basic_type);
+    expect(
+      fromValue.properties!['a']!.properties!['b']!.properties!['c']!.properties!['d']!.value
+    ).toBe(
+      fromString.properties!['a']!.properties!['b']!.properties!['c']!.properties!['d']!.value
+    );
+  });
+
+  test('equivalence: complex nested structure', () => {
+    const fromString = parse_string('{"users": [{"name": "Alice", "scores": [95, 87, 92]}, {"name": "Bob", "scores": [88, 91, 85]}]}');
+    const fromValue = parse_value({
+      users: [
+        {name: 'Alice', scores: [95, 87, 92]},
+        {name: 'Bob', scores: [88, 91, 85]}
+      ]
+    });
+
+    expect(fromValue.basic_type).toBe(fromString.basic_type);
+    expect(fromValue.properties!['users']!.deep_type.isArray).toBe(fromString.properties!['users']!.deep_type.isArray);
+
+    // First user
+    const valueUser0 = fromValue.properties!['users']!.elements![0]!;
+    const stringUser0 = fromString.properties!['users']!.elements![0]!;
+    expect(valueUser0.properties!['name']!.value).toBe(stringUser0.properties!['name']!.value);
+    expect(valueUser0.properties!['scores']!.elements![0]!.value).toBe(stringUser0.properties!['scores']!.elements![0]!.value);
+    expect(valueUser0.properties!['scores']!.elements![1]!.value).toBe(stringUser0.properties!['scores']!.elements![1]!.value);
+    expect(valueUser0.properties!['scores']!.elements![2]!.value).toBe(stringUser0.properties!['scores']!.elements![2]!.value);
+
+    // Second user
+    const valueUser1 = fromValue.properties!['users']!.elements![1]!;
+    const stringUser1 = fromString.properties!['users']!.elements![1]!;
+    expect(valueUser1.properties!['name']!.value).toBe(stringUser1.properties!['name']!.value);
+    expect(valueUser1.properties!['scores']!.elements![0]!.value).toBe(stringUser1.properties!['scores']!.elements![0]!.value);
+    expect(valueUser1.properties!['scores']!.elements![1]!.value).toBe(stringUser1.properties!['scores']!.elements![1]!.value);
+    expect(valueUser1.properties!['scores']!.elements![2]!.value).toBe(stringUser1.properties!['scores']!.elements![2]!.value);
+  });
+
+  test('equivalence: reference IDs are assigned consistently', () => {
+    const fromString = parse_string('{"a": {}, "b": {}, "c": []}');
+    const fromValue = parse_value({a: {}, b: {}, c: []});
+
+    // Both should assign reference IDs to objects
+    expect(fromValue.deep_type.referenceId).toBeDefined();
+    expect(fromString.deep_type.referenceId).toBeDefined();
+    expect(fromValue.properties!['a']!.deep_type.referenceId).toBeDefined();
+    expect(fromString.properties!['a']!.deep_type.referenceId).toBeDefined();
+    expect(fromValue.properties!['b']!.deep_type.referenceId).toBeDefined();
+    expect(fromString.properties!['b']!.deep_type.referenceId).toBeDefined();
+    expect(fromValue.properties!['c']!.deep_type.referenceId).toBeDefined();
+    expect(fromString.properties!['c']!.deep_type.referenceId).toBeDefined();
+  });
+
+  test('equivalence: array constructor name', () => {
+    const fromString = parse_string('[1, 2, 3]');
+    const fromValue = parse_value([1, 2, 3]);
+
+    expect(fromValue.deep_type.constructorName).toBe(fromString.deep_type.constructorName);
+    expect(fromValue.deep_type.constructorName).toBe('Array');
+  });
+
+  test('equivalence: object constructor name', () => {
+    const fromString = parse_string('{"key": "value"}');
+    const fromValue = parse_value({key: 'value'});
+
+    expect(fromValue.deep_type.constructorName).toBe(fromString.deep_type.constructorName);
+    expect(fromValue.deep_type.constructorName).toBe('Object');
+  });
+
+  test('equivalence: mixed object with all JSON types', () => {
+    const fromString = parse_string('{"string": "text", "number": 123, "float": 45.67, "true": true, "false": false, "null": null, "array": [1, 2], "object": {"nested": "value"}}');
+    const fromValue = parse_value({
+      string: 'text',
+      number: 123,
+      float: 45.67,
+      true: true,
+      false: false,
+      null: null,
+      array: [1, 2],
+      object: {nested: 'value'}
+    });
+
+    expect(fromValue.basic_type).toBe(fromString.basic_type);
+    expect(fromValue.properties!['string']!.value).toBe(fromString.properties!['string']!.value);
+    expect(fromValue.properties!['number']!.value).toBe(fromString.properties!['number']!.value);
+    expect(fromValue.properties!['float']!.value).toBe(fromString.properties!['float']!.value);
+    expect(fromValue.properties!['true']!.value).toBe(fromString.properties!['true']!.value);
+    expect(fromValue.properties!['false']!.value).toBe(fromString.properties!['false']!.value);
+    expect(fromValue.properties!['null']!.basic_type).toBe(fromString.properties!['null']!.basic_type);
+    expect(fromValue.properties!['array']!.deep_type.isArray).toBe(fromString.properties!['array']!.deep_type.isArray);
+    expect(fromValue.properties!['object']!.properties!['nested']!.value).toBe(
+      fromString.properties!['object']!.properties!['nested']!.value
+    );
+  });
+});
