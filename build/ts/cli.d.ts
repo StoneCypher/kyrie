@@ -1,4 +1,3 @@
-#!/usr/bin/env node
 /**
  * CLI for Kyrie - JavaScript/TypeScript/JSON syntax highlighter
  */

@@ -1,4 +1,4 @@
-# kyrie v0.17.0
+# kyrie v0.18.0
 
 Kyrie is a formatting colorizer for JavaScript, TypeScript, and JSON with customizable color palettes and container delimiters.
 
@@ -16,7 +16,7 @@ Kyrie is a formatting colorizer for JavaScript, TypeScript, and JSON with custom
 - 🎯 **Type-aware**: Distinguishes between arrays, objects, Maps, Sets, Dates, RegExp, Errors, and more
 - 💪 **TypeScript support**: Fully typed with strict TypeScript configuration
 - ⚡ **One dependency** - Chalk, for terminal colors
-- ✅ **Strong testing**: Has 88.31% test coverage from 175 test cases
+- ✅ **Strong testing**: Has 88.06% test coverage from 175 test cases
 
 ## Installation
 

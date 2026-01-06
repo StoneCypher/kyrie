@@ -1,15 +1,39 @@
-#!/usr/bin/env node
 /**
  * CLI for Kyrie - JavaScript/TypeScript/JSON syntax highlighter
  */
 import { Command } from 'commander';
 import { readFileSync } from 'fs';
-import { highlight_string, palettes } from './index.js';
+import { highlight_string, palettes, naturePalettes, protanopiaPalettes, deuteranopiaPalettes, tritanopiaPalettes, monochromacyPalettes, deuteranomalyPalettes, protanomalyPalettes, tritanomalyPalettes, achromatopsiaPalettes, redsColorRangePalettes, orangesColorRangePalettes, yellowsColorRangePalettes, greensColorRangePalettes, bluesColorRangePalettes, purplesColorRangePalettes, brownsColorRangePalettes, greysColorRangePalettes, charcoalsColorRangePalettes, cyansColorRangePalettes, magentasColorRangePalettes, lightGraysColorRangePalettes } from './index.js';
 const program = new Command();
+// Combine all palette collections for lookup
+const allPalettes = {
+    ...palettes,
+    ...naturePalettes,
+    ...protanopiaPalettes,
+    ...deuteranopiaPalettes,
+    ...tritanopiaPalettes,
+    ...monochromacyPalettes,
+    ...deuteranomalyPalettes,
+    ...protanomalyPalettes,
+    ...tritanomalyPalettes,
+    ...achromatopsiaPalettes,
+    ...redsColorRangePalettes,
+    ...orangesColorRangePalettes,
+    ...yellowsColorRangePalettes,
+    ...greensColorRangePalettes,
+    ...bluesColorRangePalettes,
+    ...purplesColorRangePalettes,
+    ...brownsColorRangePalettes,
+    ...greysColorRangePalettes,
+    ...charcoalsColorRangePalettes,
+    ...cyansColorRangePalettes,
+    ...magentasColorRangePalettes,
+    ...lightGraysColorRangePalettes
+};
 program
     .name('kyrie')
     .description('Syntax highlighter for JavaScript, TypeScript, and JSON')
-    .version('0.15.0')
+    .version('0.18.0')
     .argument('[file]', 'File to highlight (reads from stdin if not provided)')
     .option('-p, --palette <name>', 'Color palette to use (e.g., default, pastel, forest)', 'default')
     .option('-t, --theme <variant>', 'Theme variant: light or dark', 'light')
@@ -31,10 +55,10 @@ program
         input = readFileSync(0, 'utf-8');
     }
     // Get the palette
-    const paletteObj = palettes[options.palette];
+    const paletteObj = allPalettes[options.palette];
     if (!paletteObj) {
         console.error(`Unknown palette: ${options.palette}`);
-        console.error(`Available palettes: ${Object.keys(palettes).join(', ')}`);
+        console.error(`Available palettes: ${Object.keys(allPalettes).join(', ')}`);
         process.exit(1);
     }
     // Get the theme variant
