@@ -1,6 +1,6 @@
 {
   "name": "kyrie",
-  "version": "0.12.0",
+  "version": "0.13.0",
   "description": "Kyrie is a formatting colorizer for Javascript, Typescript, and JSON",
   "keywords": [
     "json",
@@ -29,6 +29,7 @@
   },
   "scripts": {
     "clean": "rimraf docs && rimraf build && rimraf dist && mkdir docs && mkdir build && mkdir dist",
+    "update_version": "node src/build_js/update_version.js",
     "typescript": "tsc --build tsconfig.json",
     "terser": "terser -o dist/index.js build/rollup/index.mjs && terser -o dist/index.cjs build/rollup/index.cjs",
     "rollup": "rollup -c",
@@ -36,7 +37,7 @@
     "docs": "typedoc src/ts/index.ts --out docs/docs",
     "test": "npm run build",
     "just_test": "vitest run --coverage",
-    "build": "npm run clean && npm run just_test && npm run typescript && npm run rollup && npm run terser && npm run site && npm run docs"
+    "build": "npm run clean && npm run update_version && npm run just_test && npm run typescript && npm run rollup && npm run terser && npm run site && npm run docs"
   },
   "devDependencies": {
     "@rollup/plugin-commonjs": "^29.0.0",
