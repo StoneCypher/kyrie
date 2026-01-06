@@ -313,7 +313,10 @@ export function parse_string(input: unknown): ASTNode {
 
     // Handle symbols
     if (basicType === 'symbol') {
-      deepType.description = (val as symbol).description;
+      const symbolDesc = (val as symbol).description;
+      if (symbolDesc !== undefined) {
+        deepType.description = symbolDesc;
+      }
       return {
         basic_type: basicType,
         deep_type: deepType,
