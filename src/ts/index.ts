@@ -265,26 +265,9 @@ class Tokenizer {
 }
 
 /**
- * Parses a JavaScript or JSON value string into an Abstract Syntax Tree
- *
- * @param {unknown} input - The string to parse (should be a string)
- * @returns {ASTNode} The AST representation of the parsed value
- *
- * @example
- * ```typescript
- * const ast = parse_string('{"name": "John", "age": 30}');
- * console.log(ast.basic_type); // "object"
- * console.log(ast.deep_type.isArray); // false
- * ```
+ * Creates an AST builder with cycle detection
  */
-export function parse_string(input: unknown): ASTNode {
-  if (typeof input !== 'string') {
-    throw new Error('Input must be a string');
-  }
-
-  const tokenizer = new Tokenizer(input);
-  const value = tokenizer.parseValue();
-
+function createASTBuilder(): (val: unknown) => ASTNode {
   // Track objects to detect cycles
   const objectMap = new WeakMap<object, number>();
   let referenceCounter = 0;
@@ -393,5 +376,49 @@ export function parse_string(input: unknown): ASTNode {
     };
   }
 
+  return buildAST;
+}
+
+/**
+ * Parses a JavaScript or JSON value string into an Abstract Syntax Tree
+ *
+ * @param {unknown} input - The string to parse (should be a string)
+ * @returns {ASTNode} The AST representation of the parsed value
+ *
+ * @example
+ * ```typescript
+ * const ast = parse_string('{"name": "John", "age": 30}');
+ * console.log(ast.basic_type); // "object"
+ * console.log(ast.deep_type.isArray); // false
+ * ```
+ */
+export function parse_string(input: unknown): ASTNode {
+  if (typeof input !== 'string') {
+    throw new Error('Input must be a string');
+  }
+
+  const tokenizer = new Tokenizer(input);
+  const value = tokenizer.parseValue();
+  const buildAST = createASTBuilder();
+
   return buildAST(value);
+}
+
+/**
+ * Parses a JavaScript or JSON value into an Abstract Syntax Tree
+ *
+ * @param {unknown} input - The value to parse
+ * @returns {ASTNode} The AST representation of the parsed value
+ *
+ * @example
+ * ```typescript
+ * const obj = {name: "John", age: 30};
+ * const ast = parse_value(obj);
+ * console.log(ast.basic_type); // "object"
+ * console.log(ast.properties.name.value); // "John"
+ * ```
+ */
+export function parse_value(input: unknown): ASTNode {
+  const buildAST = createASTBuilder();
+  return buildAST(input);
 }
