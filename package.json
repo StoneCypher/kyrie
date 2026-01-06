@@ -1,6 +1,6 @@
 {
   "name": "kyrie",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Kyrie is a formatting colorizer for Javascript, Typescript, and JSON",
   "keywords": [
     "json",
@@ -27,6 +27,6 @@
     "doc": "docs"
   },
   "scripts": {
-    "test": "vitest"
+    "test": "vitest run"
   }
 }
