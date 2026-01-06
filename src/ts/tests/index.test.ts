@@ -1,4 +1,191 @@
-import { highlight, type HighlightOptions, parse_string, parse_value, type ASTNode } from '../index';
+import {
+  highlight,
+  type HighlightOptions,
+  parse_string,
+  parse_value,
+  type ASTNode,
+  type ColorPalette,
+  defaultPalette,
+  forestPalette,
+  boldPalette,
+  duskPalette,
+  paint,
+  defaultContainers,
+  defaultHighlightOptions,
+  type ContainerConfig
+} from '../index.js';
+
+describe('ASTNode', () => {
+  test('should have correct structure for primitive', () => {
+    const ast = parse_string('42');
+    const node: ASTNode = ast;
+    expect(node.basic_type).toBe('number');
+    expect(node.deep_type).toBeDefined();
+    expect(node.value).toBe(42);
+  });
+
+  test('should have correct structure for object', () => {
+    const ast = parse_string('{"key": "value"}');
+    const node: ASTNode = ast;
+    expect(node.basic_type).toBe('object');
+    expect(node.deep_type).toBeDefined();
+    expect(node.properties).toBeDefined();
+    expect(node.properties!['key']).toBeDefined();
+  });
+
+  test('should have correct structure for array', () => {
+    const ast = parse_string('[1, 2, 3]');
+    const node: ASTNode = ast;
+    expect(node.basic_type).toBe('object');
+    expect(node.deep_type.isArray).toBe(true);
+    expect(node.elements).toBeDefined();
+    expect(node.elements!.length).toBe(3);
+  });
+
+  test('should be assignable from parse_string', () => {
+    const node: ASTNode = parse_string('null');
+    expect(node).toBeDefined();
+  });
+
+  test('should be assignable from parse_value', () => {
+    const node: ASTNode = parse_value({test: 'value'});
+    expect(node).toBeDefined();
+  });
+});
+
+describe('HighlightOptions', () => {
+  test('defaultHighlightOptions should have palette', () => {
+    expect(defaultHighlightOptions.palette).toBeDefined();
+    expect(defaultHighlightOptions.palette).toBe(defaultPalette);
+  });
+
+  test('defaultHighlightOptions should have containers', () => {
+    expect(defaultHighlightOptions.containers).toBeDefined();
+    expect(defaultHighlightOptions.containers).toBe(defaultContainers);
+  });
+
+  test('should be assignable type', () => {
+    const options: HighlightOptions = {
+      palette: forestPalette,
+      containers: defaultContainers
+    };
+    expect(options).toBeDefined();
+  });
+
+  test('should allow partial options', () => {
+    const paletteOnly: HighlightOptions = { palette: boldPalette };
+    const containersOnly: HighlightOptions = { containers: defaultContainers };
+    const empty: HighlightOptions = {};
+    expect(paletteOnly).toBeDefined();
+    expect(containersOnly).toBeDefined();
+    expect(empty).toBeDefined();
+  });
+});
+
+describe('ColorPalette', () => {
+  const hexColorRegex = /^#[0-9A-Fa-f]{6}$/;
+  const requiredKeys: (keyof ColorPalette)[] = [
+    'null', 'undefined', 'boolean', 'number', 'string', 'symbol', 'function',
+    'object', 'array', 'map', 'set', 'weakmap', 'weakset', 'date', 'regexp',
+    'error', 'circularReference', 'propertyKey', 'punctuation'
+  ];
+
+  describe('defaultPalette', () => {
+    test('should have all required keys', () => {
+      requiredKeys.forEach(key => {
+        expect(defaultPalette).toHaveProperty(key);
+      });
+    });
+
+    test('should have valid hex colors for all values', () => {
+      Object.values(defaultPalette).forEach(color => {
+        expect(color).toMatch(hexColorRegex);
+      });
+    });
+
+    test('should be of type ColorPalette', () => {
+      const palette: ColorPalette = defaultPalette;
+      expect(palette).toBeDefined();
+    });
+  });
+
+  describe('forestPalette', () => {
+    test('should have all required keys', () => {
+      requiredKeys.forEach(key => {
+        expect(forestPalette).toHaveProperty(key);
+      });
+    });
+
+    test('should have valid hex colors for all values', () => {
+      Object.values(forestPalette).forEach(color => {
+        expect(color).toMatch(hexColorRegex);
+      });
+    });
+
+    test('should be of type ColorPalette', () => {
+      const palette: ColorPalette = forestPalette;
+      expect(palette).toBeDefined();
+    });
+  });
+
+  describe('boldPalette', () => {
+    test('should have all required keys', () => {
+      requiredKeys.forEach(key => {
+        expect(boldPalette).toHaveProperty(key);
+      });
+    });
+
+    test('should have valid hex colors for all values', () => {
+      Object.values(boldPalette).forEach(color => {
+        expect(color).toMatch(hexColorRegex);
+      });
+    });
+
+    test('should be of type ColorPalette', () => {
+      const palette: ColorPalette = boldPalette;
+      expect(palette).toBeDefined();
+    });
+  });
+
+  describe('duskPalette', () => {
+    test('should have all required keys', () => {
+      requiredKeys.forEach(key => {
+        expect(duskPalette).toHaveProperty(key);
+      });
+    });
+
+    test('should have valid hex colors for all values', () => {
+      Object.values(duskPalette).forEach(color => {
+        expect(color).toMatch(hexColorRegex);
+      });
+    });
+
+    test('should be of type ColorPalette', () => {
+      const palette: ColorPalette = duskPalette;
+      expect(palette).toBeDefined();
+    });
+  });
+
+  describe('palette structure', () => {
+    test('all palettes should have the same keys', () => {
+      const defaultKeys = Object.keys(defaultPalette).sort();
+      const forestKeys = Object.keys(forestPalette).sort();
+      const boldKeys = Object.keys(boldPalette).sort();
+      const duskKeys = Object.keys(duskPalette).sort();
+
+      expect(forestKeys).toEqual(defaultKeys);
+      expect(boldKeys).toEqual(defaultKeys);
+      expect(duskKeys).toEqual(defaultKeys);
+    });
+
+    test('palettes should have different color values', () => {
+      // Verify that each palette is unique
+      expect(defaultPalette.string).not.toBe(forestPalette.string);
+      expect(defaultPalette.number).not.toBe(boldPalette.number);
+      expect(forestPalette.object).not.toBe(duskPalette.object);
+    });
+  });
+});
 
 describe('highlight', () => {
   test('should return the input string unchanged for now', () => {
@@ -393,7 +580,7 @@ describe('parse_value', () => {
 
   test('should detect circular references', () => {
     const obj: Record<string, unknown> = {a: 1};
-    obj.self = obj;
+    obj['self'] = obj;
     const ast = parse_value(obj);
     expect(ast.deep_type.referenceId).toBe(0);
     expect(ast.properties!['a']!.value).toBe(1);
@@ -779,5 +966,298 @@ describe('parse_string and parse_value equivalence', () => {
     expect(fromValue.properties!['object']!.properties!['nested']!.value).toBe(
       fromString.properties!['object']!.properties!['nested']!.value
     );
+  });
+});
+
+describe('paint', () => {
+  const options: HighlightOptions = {
+    palette: defaultPalette,
+    containers: defaultContainers
+  };
+
+  describe('primitives', () => {
+    test('should paint null', () => {
+      const ast = parse_string('null');
+      const result = paint(ast, options);
+      expect(result).toContain('null');
+    });
+
+    test('should paint undefined', () => {
+      const ast = parse_string('undefined');
+      const result = paint(ast, options);
+      expect(result).toContain('undefined');
+    });
+
+    test('should paint boolean true', () => {
+      const ast = parse_string('true');
+      const result = paint(ast, options);
+      expect(result).toContain('true');
+    });
+
+    test('should paint boolean false', () => {
+      const ast = parse_string('false');
+      const result = paint(ast, options);
+      expect(result).toContain('false');
+    });
+
+    test('should paint number', () => {
+      const ast = parse_string('42');
+      const result = paint(ast, options);
+      expect(result).toContain('42');
+    });
+
+    test('should paint string', () => {
+      const ast = parse_string('"hello"');
+      const result = paint(ast, options);
+      expect(result).toContain('hello');
+      expect(result).toContain('"');
+    });
+
+    test('should paint symbol', () => {
+      const sym = Symbol('test');
+      const ast = parse_value(sym);
+      const result = paint(ast, options);
+      expect(result).toContain('Symbol');
+      expect(result).toContain('test');
+    });
+  });
+
+  describe('arrays', () => {
+    test('should paint empty array', () => {
+      const ast = parse_string('[]');
+      const result = paint(ast, options);
+      expect(result).toContain('[');
+      expect(result).toContain(']');
+    });
+
+    test('should paint array with numbers', () => {
+      const ast = parse_string('[1, 2, 3]');
+      const result = paint(ast, options);
+      expect(result).toContain('[');
+      expect(result).toContain(']');
+      expect(result).toContain('1');
+      expect(result).toContain('2');
+      expect(result).toContain('3');
+      expect(result).toContain(',');
+    });
+
+    test('should paint array with mixed types', () => {
+      const ast = parse_string('[1, "text", true]');
+      const result = paint(ast, options);
+      expect(result).toContain('1');
+      expect(result).toContain('text');
+      expect(result).toContain('true');
+    });
+  });
+
+  describe('objects', () => {
+    test('should paint empty object', () => {
+      const ast = parse_string('{}');
+      const result = paint(ast, options);
+      expect(result).toContain('{');
+      expect(result).toContain('}');
+    });
+
+    test('should paint simple object', () => {
+      const ast = parse_string('{"name": "John"}');
+      const result = paint(ast, options);
+      expect(result).toContain('{');
+      expect(result).toContain('}');
+      expect(result).toContain('name');
+      expect(result).toContain('John');
+      expect(result).toContain(':');
+    });
+
+    test('should paint object with multiple properties', () => {
+      const ast = parse_string('{"name": "Alice", "age": 25}');
+      const result = paint(ast, options);
+      expect(result).toContain('name');
+      expect(result).toContain('Alice');
+      expect(result).toContain('age');
+      expect(result).toContain('25');
+      expect(result).toContain(',');
+    });
+
+    test('should paint nested object', () => {
+      const ast = parse_string('{"user": {"name": "Bob"}}');
+      const result = paint(ast, options);
+      expect(result).toContain('user');
+      expect(result).toContain('name');
+      expect(result).toContain('Bob');
+    });
+  });
+
+  describe('special containers', () => {
+    test('should paint Map', () => {
+      const map = new Map([['key', 'value']]);
+      const ast = parse_value(map);
+      const result = paint(ast, options);
+      expect(result).toContain('{<');
+      expect(result).toContain('>}');
+      // Note: Map entries are not enumerable, so the AST will be empty
+    });
+
+    test('should paint Set', () => {
+      const set = new Set([1, 2, 3]);
+      const ast = parse_value(set);
+      const result = paint(ast, options);
+      expect(result).toContain('{(');
+      expect(result).toContain(')}');
+    });
+
+    test('should paint WeakMap', () => {
+      const weakmap = new WeakMap();
+      const ast = parse_value(weakmap);
+      const result = paint(ast, options);
+      expect(result).toContain('(<');
+      expect(result).toContain('>)');
+    });
+
+    test('should paint WeakSet', () => {
+      const weakset = new WeakSet();
+      const ast = parse_value(weakset);
+      const result = paint(ast, options);
+      expect(result).toContain('((');
+      expect(result).toContain('))');
+    });
+
+    test('should paint Date', () => {
+      const date = new Date('2024-01-01');
+      const ast = parse_value(date);
+      const result = paint(ast, options);
+      expect(result).toContain('Date(');
+      expect(result).toContain(')');
+    });
+
+    test('should paint RegExp', () => {
+      const regexp = /test/;
+      const ast = parse_value(regexp);
+      const result = paint(ast, options);
+      expect(result).toContain('/');
+    });
+
+    test('should paint Error', () => {
+      const error = new Error('test error');
+      const ast = parse_value(error);
+      const result = paint(ast, options);
+      expect(result).toContain('Error(');
+      expect(result).toContain(')');
+    });
+
+    test('should paint function', () => {
+      const fn = () => {};
+      const ast = parse_value(fn);
+      const result = paint(ast, options);
+      expect(result).toContain('function(');
+      expect(result).toContain(')');
+    });
+  });
+
+  describe('circular references', () => {
+    test('should paint circular reference', () => {
+      const circular: any = {a: 1};
+      circular.self = circular;
+      const ast = parse_value(circular);
+      const result = paint(ast, options);
+      expect(result).toContain('[Circular');
+    });
+  });
+
+  describe('default options', () => {
+    test('should work without options parameter', () => {
+      const ast = parse_string('42');
+      const result = paint(ast);
+      expect(result).toContain('42');
+    });
+
+    test('should use defaults when options is undefined', () => {
+      const ast = parse_string('{"key": "value"}');
+      const result = paint(ast, undefined);
+      expect(result).toContain('key');
+      expect(result).toContain('value');
+      expect(result).toContain('{');
+      expect(result).toContain('}');
+    });
+
+    test('should use defaults for missing palette', () => {
+      const ast = parse_string('[1, 2]');
+      const result = paint(ast, { containers: defaultContainers });
+      expect(result).toContain('[');
+      expect(result).toContain('1');
+      expect(result).toContain('2');
+    });
+
+    test('should use defaults for missing containers', () => {
+      const ast = parse_string('[1, 2]');
+      const result = paint(ast, { palette: defaultPalette });
+      expect(result).toContain('[');
+      expect(result).toContain(']');
+      expect(result).toContain(',');
+    });
+
+    test('should merge partial options with defaults', () => {
+      const ast = parse_string('[1, 2]');
+      const result = paint(ast, { palette: forestPalette });
+      expect(result).toContain('[');
+      expect(result).toContain(']');
+      expect(result).toContain('1');
+      expect(result).toContain('2');
+    });
+  });
+
+  describe('custom options', () => {
+    test('should use custom palette', () => {
+      const customOptions: HighlightOptions = {
+        palette: forestPalette,
+        containers: defaultContainers
+      };
+      const ast = parse_string('42');
+      const result = paint(ast, customOptions);
+      expect(result).toContain('42');
+    });
+
+    test('should use custom containers', () => {
+      const customContainers: ContainerConfig = {
+        array: {
+          start: '<<',
+          delimiter: '|',
+          end: '>>'
+        }
+      };
+      const customOptions: HighlightOptions = {
+        palette: defaultPalette,
+        containers: customContainers
+      };
+      const ast = parse_string('[1, 2]');
+      const result = paint(ast, customOptions);
+      expect(result).toContain('<<');
+      expect(result).toContain('>>');
+      expect(result).toContain('|');
+    });
+  });
+
+  describe('complex structures', () => {
+    test('should paint nested array in object', () => {
+      const ast = parse_string('{"items": [1, 2, 3]}');
+      const result = paint(ast, options);
+      expect(result).toContain('items');
+      expect(result).toContain('[');
+      expect(result).toContain('1');
+      expect(result).toContain('2');
+      expect(result).toContain('3');
+    });
+
+    test('should paint object with all types', () => {
+      const ast = parse_string('{"str": "text", "num": 42, "bool": true, "nil": null}');
+      const result = paint(ast, options);
+      expect(result).toContain('str');
+      expect(result).toContain('text');
+      expect(result).toContain('num');
+      expect(result).toContain('42');
+      expect(result).toContain('bool');
+      expect(result).toContain('true');
+      expect(result).toContain('nil');
+      expect(result).toContain('null');
+    });
   });
 });

@@ -4,7 +4,11 @@
       "Bash(npm test)",
       "Bash(git add:*)",
       "Bash(git commit:*)",
-      "Bash(npm install:*)"
+      "Bash(npm install:*)",
+      "Bash(npm run just_test:*)",
+      "Bash(npx tsc:*)",
+      "Bash(node:*)",
+      "Bash(npm run typescript:*)"
     ]
   }
 }

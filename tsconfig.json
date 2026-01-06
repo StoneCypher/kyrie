@@ -7,8 +7,9 @@
 
     // Environment Settings
     // See also https://aka.ms/tsconfig/module
-    "module": "es2020",
-    "target": "es2020",
+    "module": "nodenext",
+    "moduleResolution": "nodenext",
+    "target": "esnext",
     "types": ["vitest/globals"],
     // For nodejs:
     // "lib": ["esnext"],
@@ -42,5 +43,5 @@
     "skipLibCheck": true,
   },
   "include": ["./src/ts/**/*.ts"],
-  "exclude": ["./**/*.test.ts"]
+  "exclude": []
 }
