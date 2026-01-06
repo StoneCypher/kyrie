@@ -328,12 +328,14 @@ export function parse_string(input: unknown): ASTNode {
     if (basicType === 'object' && val !== null) {
       // Check for circular reference
       if (objectMap.has(val as object)) {
+        const existingRefId = objectMap.get(val as object);
+        const circularDeepType: DeepType = { isCircularReference: true };
+        if (existingRefId !== undefined) {
+          circularDeepType.referenceId = existingRefId;
+        }
         return {
           basic_type: basicType,
-          deep_type: {
-            isCircularReference: true,
-            referenceId: objectMap.get(val as object)
-          }
+          deep_type: circularDeepType
         };
       }
 
