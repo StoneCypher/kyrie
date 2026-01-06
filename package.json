@@ -36,11 +36,13 @@
     "docs": "typedoc src/ts/index.ts --out docs/docs",
     "test": "npm run build",
     "just_test": "vitest run",
+    "coverage": "vitest run --coverage",
     "build": "npm run clean && npm run just_test && npm run typescript && npm run rollup && npm run terser && npm run site && npm run docs"
   },
   "devDependencies": {
     "@rollup/plugin-commonjs": "^29.0.0",
     "@rollup/plugin-node-resolve": "^16.0.3",
+    "@vitest/coverage-v8": "^4.0.16",
     "commander": "^14.0.2",
     "rimraf": "^6.1.2",
     "rollup": "^4.55.1",
