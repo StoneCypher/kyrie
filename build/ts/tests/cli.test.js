@@ -5,7 +5,7 @@ import { describe, test, expect, afterEach } from 'vitest';
 import { spawn } from 'child_process';
 import { writeFileSync, unlinkSync, existsSync } from 'fs';
 import { join } from 'path';
-import { getPalette, validateOutputMode, processInput, allPalettes } from '../cli.js';
+import { getPalette, validateOutputMode, processInput, allPalettes, parseMaxWidth } from '../cli.js';
 // CLI path
 const cliPath = join(__dirname, '../../../dist/cli.cjs');
 // Helper to run CLI and capture output
@@ -419,6 +419,18 @@ describe('CLI Unit Tests', () => {
             expect(result2.success).toBe(true);
             // Both should use light theme
         });
+        test('should handle palette without requested theme variant', () => {
+            // Create a mock palette with only one variant by manipulating the palette object
+            const originalDefault = allPalettes.default;
+            // Temporarily replace with incomplete palette
+            const incompletePalette = { light: originalDefault.light };
+            allPalettes.testIncomplete = incompletePalette;
+            const result = getPalette('testIncomplete', 'dark');
+            expect(result.success).toBe(false);
+            expect(result.error).toContain('does not have a dark variant');
+            // Clean up
+            delete allPalettes.testIncomplete;
+        });
     });
     describe('validateOutputMode', () => {
         test('should accept valid output mode: ansi', () => {
@@ -589,6 +601,37 @@ describe('CLI Unit Tests', () => {
         test('should contain accessibility palettes', () => {
             expect(allPalettes).toHaveProperty('protanopia');
             expect(allPalettes).toHaveProperty('deuteranopia');
+        });
+    });
+    describe('parseMaxWidth', () => {
+        test('should parse numeric string to number', () => {
+            expect(parseMaxWidth('80')).toBe(80);
+            expect(parseMaxWidth('100')).toBe(100);
+            expect(parseMaxWidth('0')).toBe(0);
+        });
+        test('should parse "false" string to false boolean', () => {
+            expect(parseMaxWidth('false')).toBe(false);
+        });
+        test('should throw error for invalid non-numeric strings', () => {
+            expect(() => parseMaxWidth('invalid')).toThrow('Invalid max-width value: invalid');
+            expect(() => parseMaxWidth('abc')).toThrow('Expected a number or "false"');
+        });
+        test('should throw error for empty string', () => {
+            expect(() => parseMaxWidth('')).toThrow('Invalid max-width value');
+        });
+        test('should parse negative numbers', () => {
+            expect(parseMaxWidth('-10')).toBe(-10);
+        });
+        test('should parse decimal numbers as integers', () => {
+            expect(parseMaxWidth('80.5')).toBe(80);
+            expect(parseMaxWidth('99.9')).toBe(99);
+        });
+        test('should handle strings with leading/trailing spaces', () => {
+            expect(parseMaxWidth(' 80 ')).toBe(80); // parseInt handles leading/trailing spaces
+            expect(parseMaxWidth('  100  ')).toBe(100);
+        });
+        test('should handle very large numbers', () => {
+            expect(parseMaxWidth('999999')).toBe(999999);
         });
     });
 });

@@ -8878,4 +8878,9 @@ export declare function validateOutputMode(mode: string): {
  * Process input and highlight
  */
 export declare function processInput(input: string, options: CLIOptions): CLIResult;
+/**
+ * Parse maxWidth option
+ * Accepts: numbers, "false", or undefined
+ */
+export declare function parseMaxWidth(value: string): number | false | undefined;
 //# sourceMappingURL=cli.d.ts.map

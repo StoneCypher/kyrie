@@ -16088,5 +16088,6 @@ if (process.env['NODE_ENV'] !== 'test' && process.env['VITEST'] !== 'true') {
 
 exports.allPalettes = allPalettes;
 exports.getPalette = getPalette;
+exports.parseMaxWidth = parseMaxWidth;
 exports.processInput = processInput;
 exports.validateOutputMode = validateOutputMode;

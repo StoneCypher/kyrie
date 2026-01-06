@@ -187,7 +187,7 @@ program
  * Parse maxWidth option
  * Accepts: numbers, "false", or undefined
  */
-function parseMaxWidth(value: string): number | false | undefined {
+export function parseMaxWidth(value: string): number | false | undefined {
   if (value === 'false') {
     return false;
   }

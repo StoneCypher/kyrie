@@ -133,7 +133,7 @@ program
  * Parse maxWidth option
  * Accepts: numbers, "false", or undefined
  */
-function parseMaxWidth(value) {
+export function parseMaxWidth(value) {
     if (value === 'false') {
         return false;
     }
