@@ -1,4 +1,4 @@
-# kyrie {{version}}
+# kyrie v{{version}}
 
 Kyrie is a formatting colorizer for JavaScript, TypeScript, and JSON with customizable color palettes and container delimiters.
 
@@ -566,6 +566,62 @@ console.log(paint(nestedAst, { palette: forestPalette }));
 // Verify circular reference detection
 const circularAst = parse_value(testdata.circular);
 console.log(circularAst.properties.self.deep_type.isCircularReference); // true
+```
+
+## Available Palettes
+
+Kyrie includes 9 themed palettes, each with light and dark variants:
+
+### Palette Themes
+
+- **default** - Balanced, standard colors suitable for general use
+  - `palettes.default.light` - Dark colors for light backgrounds
+  - `palettes.default.dark` - Light colors for dark backgrounds
+
+- **pastel** - Soft, muted colors with gentle tones
+  - `palettes.pastel.light` - Dark pastels for light backgrounds
+  - `palettes.pastel.dark` - Light pastels for dark backgrounds
+
+- **garden** - Greens and earth tones inspired by nature
+  - `palettes.garden.light` - Dark garden colors for light backgrounds
+  - `palettes.garden.dark` - Light garden colors for dark backgrounds
+
+- **forest** - Deeper greens and browns with rich, natural hues
+  - `palettes.forest.light` - Dark forest colors for light backgrounds
+  - `palettes.forest.dark` - Light forest colors for dark backgrounds
+
+- **bold** - Vibrant, saturated colors with high contrast
+  - `palettes.bold.light` - Dark bold colors for light backgrounds
+  - `palettes.bold.dark` - Light bold colors for dark backgrounds
+
+- **dusk** - Purples and twilight colors for a moody atmosphere
+  - `palettes.dusk.light` - Dark dusk colors for light backgrounds
+  - `palettes.dusk.dark` - Light dusk colors for dark backgrounds
+
+- **lightPastel** - Very light, delicate colors with soft contrast
+  - `palettes.lightPastel.light` - Muted light pastels for light backgrounds
+  - `palettes.lightPastel.dark` - Bright light pastels for dark backgrounds
+
+- **funky** - Unusual, bright, varied colors for a playful look
+  - `palettes.funky.light` - Dark funky colors for light backgrounds
+  - `palettes.funky.dark` - Light funky colors for dark backgrounds
+
+- **boring** - Muted, low-saturation grays and subdued colors
+  - `palettes.boring.light` - Dark grays for light backgrounds
+  - `palettes.boring.dark` - Light grays for dark backgrounds
+
+### Usage Example
+
+```typescript
+import { highlight_value, palettes } from 'kyrie';
+
+const data = { name: 'Alice', items: [1, 2, 3] };
+
+// Use light variant (dark colors for light backgrounds)
+console.log(highlight_value(data, { palette: palettes.forest.light }));
+
+// Use dark variant (light colors for dark backgrounds)
+console.log(highlight_value(data, { palette: palettes.bold.dark }));
 ```
 
 ## Development

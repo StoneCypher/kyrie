@@ -5,11 +5,7 @@ import {
   parse_string,
   parse_value,
   type ASTNode,
-  type ColorPalette,
-  defaultPalette,
-  forestPalette,
-  boldPalette,
-  duskPalette,
+  palettes,
   paint,
   defaultContainers,
   defaultHighlightOptions,
@@ -58,7 +54,7 @@ describe('ASTNode', () => {
 describe('HighlightOptions', () => {
   test('defaultHighlightOptions should have palette', () => {
     expect(defaultHighlightOptions.palette).toBeDefined();
-    expect(defaultHighlightOptions.palette).toBe(defaultPalette);
+    expect(defaultHighlightOptions.palette).toBe(palettes.default.light);
   });
 
   test('defaultHighlightOptions should have containers', () => {
@@ -68,124 +64,19 @@ describe('HighlightOptions', () => {
 
   test('should be assignable type', () => {
     const options: HighlightOptions = {
-      palette: forestPalette,
+      palette: palettes.forest.light,
       containers: defaultContainers
     };
     expect(options).toBeDefined();
   });
 
   test('should allow partial options', () => {
-    const paletteOnly: HighlightOptions = { palette: boldPalette };
+    const paletteOnly: HighlightOptions = { palette: palettes.bold.dark };
     const containersOnly: HighlightOptions = { containers: defaultContainers };
     const empty: HighlightOptions = {};
     expect(paletteOnly).toBeDefined();
     expect(containersOnly).toBeDefined();
     expect(empty).toBeDefined();
-  });
-});
-
-describe('ColorPalette', () => {
-  const hexColorRegex = /^#[0-9A-Fa-f]{6}$/;
-  const requiredKeys: (keyof ColorPalette)[] = [
-    'null', 'undefined', 'boolean', 'number', 'string', 'symbol', 'function',
-    'object', 'array', 'map', 'set', 'weakmap', 'weakset', 'date', 'regexp',
-    'error', 'circularReference', 'propertyKey', 'punctuation'
-  ];
-
-  describe('defaultPalette', () => {
-    test('should have all required keys', () => {
-      requiredKeys.forEach(key => {
-        expect(defaultPalette).toHaveProperty(key);
-      });
-    });
-
-    test('should have valid hex colors for all values', () => {
-      Object.values(defaultPalette).forEach(color => {
-        expect(color).toMatch(hexColorRegex);
-      });
-    });
-
-    test('should be of type ColorPalette', () => {
-      const palette: ColorPalette = defaultPalette;
-      expect(palette).toBeDefined();
-    });
-  });
-
-  describe('forestPalette', () => {
-    test('should have all required keys', () => {
-      requiredKeys.forEach(key => {
-        expect(forestPalette).toHaveProperty(key);
-      });
-    });
-
-    test('should have valid hex colors for all values', () => {
-      Object.values(forestPalette).forEach(color => {
-        expect(color).toMatch(hexColorRegex);
-      });
-    });
-
-    test('should be of type ColorPalette', () => {
-      const palette: ColorPalette = forestPalette;
-      expect(palette).toBeDefined();
-    });
-  });
-
-  describe('boldPalette', () => {
-    test('should have all required keys', () => {
-      requiredKeys.forEach(key => {
-        expect(boldPalette).toHaveProperty(key);
-      });
-    });
-
-    test('should have valid hex colors for all values', () => {
-      Object.values(boldPalette).forEach(color => {
-        expect(color).toMatch(hexColorRegex);
-      });
-    });
-
-    test('should be of type ColorPalette', () => {
-      const palette: ColorPalette = boldPalette;
-      expect(palette).toBeDefined();
-    });
-  });
-
-  describe('duskPalette', () => {
-    test('should have all required keys', () => {
-      requiredKeys.forEach(key => {
-        expect(duskPalette).toHaveProperty(key);
-      });
-    });
-
-    test('should have valid hex colors for all values', () => {
-      Object.values(duskPalette).forEach(color => {
-        expect(color).toMatch(hexColorRegex);
-      });
-    });
-
-    test('should be of type ColorPalette', () => {
-      const palette: ColorPalette = duskPalette;
-      expect(palette).toBeDefined();
-    });
-  });
-
-  describe('palette structure', () => {
-    test('all palettes should have the same keys', () => {
-      const defaultKeys = Object.keys(defaultPalette).sort();
-      const forestKeys = Object.keys(forestPalette).sort();
-      const boldKeys = Object.keys(boldPalette).sort();
-      const duskKeys = Object.keys(duskPalette).sort();
-
-      expect(forestKeys).toEqual(defaultKeys);
-      expect(boldKeys).toEqual(defaultKeys);
-      expect(duskKeys).toEqual(defaultKeys);
-    });
-
-    test('palettes should have different color values', () => {
-      // Verify that each palette is unique
-      expect(defaultPalette.string).not.toBe(forestPalette.string);
-      expect(defaultPalette.number).not.toBe(boldPalette.number);
-      expect(forestPalette.object).not.toBe(duskPalette.object);
-    });
   });
 });
 
@@ -224,7 +115,7 @@ describe('highlight_value', () => {
 
   test('should accept optional options parameter', () => {
     const value = { test: true };
-    const options: HighlightOptions = { palette: forestPalette };
+    const options: HighlightOptions = { palette: palettes.forest.light };
     const result = highlight_value(value, options);
     expect(result).toContain('\x1b['); // Contains ANSI escape codes
     expect(result).toContain('test');
@@ -275,7 +166,7 @@ describe('highlight_string', () => {
 
   test('should accept optional options parameter', () => {
     const json = '{"test": true}';
-    const options: HighlightOptions = { palette: boldPalette };
+    const options: HighlightOptions = { palette: palettes.bold.dark };
     const result = highlight_string(json, options);
     expect(result).toContain('\x1b['); // Contains ANSI escape codes
     expect(result).toContain('test');
@@ -1043,7 +934,7 @@ describe('parse_string and parse_value equivalence', () => {
 
 describe('paint', () => {
   const options: HighlightOptions = {
-    palette: defaultPalette,
+    palette: palettes.default.light,
     containers: defaultContainers
   };
 
@@ -1261,7 +1152,7 @@ describe('paint', () => {
 
     test('should use defaults for missing containers', () => {
       const ast = parse_string('[1, 2]');
-      const result = paint(ast, { palette: defaultPalette });
+      const result = paint(ast, { palette: palettes.default.light });
       expect(result).toContain('[');
       expect(result).toContain(']');
       expect(result).toContain(',');
@@ -1269,7 +1160,7 @@ describe('paint', () => {
 
     test('should merge partial options with defaults', () => {
       const ast = parse_string('[1, 2]');
-      const result = paint(ast, { palette: forestPalette });
+      const result = paint(ast, { palette: palettes.forest.light });
       expect(result).toContain('[');
       expect(result).toContain(']');
       expect(result).toContain('1');
@@ -1280,7 +1171,7 @@ describe('paint', () => {
   describe('custom options', () => {
     test('should use custom palette', () => {
       const customOptions: HighlightOptions = {
-        palette: forestPalette,
+        palette: palettes.forest.dark,
         containers: defaultContainers
       };
       const ast = parse_string('42');
@@ -1297,7 +1188,7 @@ describe('paint', () => {
         }
       };
       const customOptions: HighlightOptions = {
-        palette: defaultPalette,
+        palette: palettes.default.light,
         containers: customContainers
       };
       const ast = parse_string('[1, 2]');

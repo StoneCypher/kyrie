@@ -81,22 +81,8 @@ export interface ColorPalette {
     propertyKey: string;
     punctuation: string;
 }
-/**
- * Default color palette with modern pastel colors
- */
-export declare const defaultPalette: ColorPalette;
-/**
- * Forest color palette with earth tones and natural greens
- */
-export declare const forestPalette: ColorPalette;
-/**
- * Bold color palette with vibrant, saturated colors
- */
-export declare const boldPalette: ColorPalette;
-/**
- * Dusk color palette with dark colors near black
- */
-export declare const duskPalette: ColorPalette;
+import { palettes } from './palettes.js';
+export { palettes };
 /**
  * Default container configuration
  */

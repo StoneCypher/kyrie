@@ -482,104 +482,411 @@ Object.defineProperties(createChalk.prototype, styles);
 createChalk();
 createChalk({level: stderrColor ? stderrColor.level : 0});
 
+/**
+ * Collection of built-in color palettes
+ * Each palette has light and dark variants for different backgrounds
+ */
+const palettes = {
+    default: {
+        light: {
+            null: '#808080',
+            undefined: '#999999',
+            boolean: '#0066CC',
+            number: '#CC6600',
+            string: '#008844',
+            symbol: '#8844CC',
+            function: '#CC4400',
+            object: '#CC0044',
+            array: '#0088CC',
+            map: '#00AA88',
+            set: '#008866',
+            weakmap: '#BB5500',
+            weakset: '#AA2200',
+            date: '#CCAA00',
+            regexp: '#7700AA',
+            error: '#CC0044',
+            circularReference: '#777777',
+            propertyKey: '#444444',
+            punctuation: '#666666'
+        },
+        dark: {
+            null: '#A0A0A0',
+            undefined: '#B8B8B8',
+            boolean: '#66AAFF',
+            number: '#FFAA66',
+            string: '#66DD99',
+            symbol: '#CC99FF',
+            function: '#FF9966',
+            object: '#FF6699',
+            array: '#66CCFF',
+            map: '#66DDCC',
+            set: '#66CCAA',
+            weakmap: '#FFAA77',
+            weakset: '#FF7766',
+            date: '#FFDD66',
+            regexp: '#BB77FF',
+            error: '#FF6699',
+            circularReference: '#AAAAAA',
+            propertyKey: '#CCCCCC',
+            punctuation: '#999999'
+        }
+    },
+    pastel: {
+        light: {
+            null: '#7A7A8A',
+            undefined: '#8A8A9A',
+            boolean: '#5A7A9A',
+            number: '#AA7A5A',
+            string: '#5A9A7A',
+            symbol: '#9A5A9A',
+            function: '#AA6A5A',
+            object: '#AA5A6A',
+            array: '#5A8AAA',
+            map: '#5AAAAA',
+            set: '#5A9A8A',
+            weakmap: '#AA8A5A',
+            weakset: '#AA5A5A',
+            date: '#AAAA5A',
+            regexp: '#8A5A9A',
+            error: '#AA5A6A',
+            circularReference: '#7A7A8A',
+            propertyKey: '#5A5A6A',
+            punctuation: '#6A6A7A'
+        },
+        dark: {
+            null: '#C8C8D8',
+            undefined: '#D8D8E8',
+            boolean: '#B8D8F8',
+            number: '#F8C8A8',
+            string: '#B8E8C8',
+            symbol: '#E8B8E8',
+            function: '#F8C8B8',
+            object: '#F8B8C8',
+            array: '#B8D8F8',
+            map: '#B8F8F8',
+            set: '#B8E8D8',
+            weakmap: '#F8D8B8',
+            weakset: '#F8B8B8',
+            date: '#F8F8B8',
+            regexp: '#D8B8E8',
+            error: '#F8B8C8',
+            circularReference: '#C8C8D8',
+            propertyKey: '#D8D8E8',
+            punctuation: '#C8C8D8'
+        }
+    },
+    garden: {
+        light: {
+            null: '#556655',
+            undefined: '#667766',
+            boolean: '#336688',
+            number: '#AA6633',
+            string: '#338855',
+            symbol: '#883388',
+            function: '#AA5533',
+            object: '#AA3344',
+            array: '#447799',
+            map: '#339988',
+            set: '#338866',
+            weakmap: '#AA7733',
+            weakset: '#AA3333',
+            date: '#AA9933',
+            regexp: '#773388',
+            error: '#AA3344',
+            circularReference: '#556655',
+            propertyKey: '#334433',
+            punctuation: '#445544'
+        },
+        dark: {
+            null: '#AACCAA',
+            undefined: '#BBDDBB',
+            boolean: '#88CCEE',
+            number: '#FFBB88',
+            string: '#88DDAA',
+            symbol: '#DD88DD',
+            function: '#FFAA88',
+            object: '#FF8899',
+            array: '#99DDFF',
+            map: '#88EEDD',
+            set: '#88DDBB',
+            weakmap: '#FFCC88',
+            weakset: '#FF8888',
+            date: '#FFEE88',
+            regexp: '#CC88DD',
+            error: '#FF8899',
+            circularReference: '#AACCAA',
+            propertyKey: '#CCEECC',
+            punctuation: '#BBDDBB'
+        }
+    },
+    forest: {
+        light: {
+            null: '#445544',
+            undefined: '#556655',
+            boolean: '#225577',
+            number: '#885522',
+            string: '#227744',
+            symbol: '#662277',
+            function: '#884422',
+            object: '#882233',
+            array: '#336688',
+            map: '#228877',
+            set: '#227755',
+            weakmap: '#886622',
+            weakset: '#882222',
+            date: '#888822',
+            regexp: '#662277',
+            error: '#882233',
+            circularReference: '#445544',
+            propertyKey: '#223322',
+            punctuation: '#334433'
+        },
+        dark: {
+            null: '#99BB99',
+            undefined: '#AACCAA',
+            boolean: '#77BBEE',
+            number: '#DDAA77',
+            string: '#77CC99',
+            symbol: '#BB77CC',
+            function: '#DD9977',
+            object: '#DD7788',
+            array: '#88CCFF',
+            map: '#77DDCC',
+            set: '#77CCAA',
+            weakmap: '#DDBB77',
+            weakset: '#DD7777',
+            date: '#DDDD77',
+            regexp: '#BB77CC',
+            error: '#DD7788',
+            circularReference: '#99BB99',
+            propertyKey: '#BBDDBB',
+            punctuation: '#AACCAA'
+        }
+    },
+    bold: {
+        light: {
+            null: '#666666',
+            undefined: '#888888',
+            boolean: '#0055DD',
+            number: '#DD5500',
+            string: '#00AA00',
+            symbol: '#9900DD',
+            function: '#DD3300',
+            object: '#DD0044',
+            array: '#0088DD',
+            map: '#00CCAA',
+            set: '#00AA77',
+            weakmap: '#CC5500',
+            weakset: '#BB0000',
+            date: '#DDAA00',
+            regexp: '#7700BB',
+            error: '#DD0044',
+            circularReference: '#666666',
+            propertyKey: '#333333',
+            punctuation: '#555555'
+        },
+        dark: {
+            null: '#BBBBBB',
+            undefined: '#DDDDDD',
+            boolean: '#66AAFF',
+            number: '#FFAA44',
+            string: '#44FF44',
+            symbol: '#EE44FF',
+            function: '#FF8844',
+            object: '#FF4488',
+            array: '#44DDFF',
+            map: '#44FFDD',
+            set: '#44FFBB',
+            weakmap: '#FFAA44',
+            weakset: '#FF4444',
+            date: '#FFFF44',
+            regexp: '#CC44FF',
+            error: '#FF4488',
+            circularReference: '#BBBBBB',
+            propertyKey: '#EEEEEE',
+            punctuation: '#DDDDDD'
+        }
+    },
+    dusk: {
+        light: {
+            null: '#554466',
+            undefined: '#665577',
+            boolean: '#445588',
+            number: '#885544',
+            string: '#447755',
+            symbol: '#774477',
+            function: '#885544',
+            object: '#884455',
+            array: '#446699',
+            map: '#448888',
+            set: '#447766',
+            weakmap: '#886644',
+            weakset: '#884444',
+            date: '#888844',
+            regexp: '#664477',
+            error: '#884455',
+            circularReference: '#554466',
+            propertyKey: '#443355',
+            punctuation: '#554466'
+        },
+        dark: {
+            null: '#BBAACC',
+            undefined: '#CCBBDD',
+            boolean: '#AABBEE',
+            number: '#EEBBAA',
+            string: '#AADDBB',
+            symbol: '#DDAAEE',
+            function: '#EEBBAA',
+            object: '#EEAABB',
+            array: '#AACCFF',
+            map: '#AAEEEE',
+            set: '#AADDCC',
+            weakmap: '#EECCAA',
+            weakset: '#EEAAAA',
+            date: '#EEEEAA',
+            regexp: '#CCAADD',
+            error: '#EEAABB',
+            circularReference: '#BBAACC',
+            propertyKey: '#DDCCEE',
+            punctuation: '#CCBBDD'
+        }
+    },
+    lightPastel: {
+        light: {
+            null: '#9A9AAA',
+            undefined: '#AAAABC',
+            boolean: '#8AACBC',
+            number: '#BC9A8A',
+            string: '#8ABC9A',
+            symbol: '#BC8ABC',
+            function: '#BC9A8A',
+            object: '#BC8A9A',
+            array: '#8AACCA',
+            map: '#8ABCBC',
+            set: '#8ABCAA',
+            weakmap: '#BCAA8A',
+            weakset: '#BC8A8A',
+            date: '#BCBC8A',
+            regexp: '#AA8ABC',
+            error: '#BC8A9A',
+            circularReference: '#9A9AAA',
+            propertyKey: '#8A8A9A',
+            punctuation: '#9A9AAA'
+        },
+        dark: {
+            null: '#E8E8F8',
+            undefined: '#F8F8FF',
+            boolean: '#E8F8FF',
+            number: '#FFF8E8',
+            string: '#E8FFE8',
+            symbol: '#FFE8FF',
+            function: '#FFF8E8',
+            object: '#FFE8F8',
+            array: '#E8F8FF',
+            map: '#E8FFFF',
+            set: '#E8FFF8',
+            weakmap: '#FFF8E8',
+            weakset: '#FFE8E8',
+            date: '#FFFFE8',
+            regexp: '#F8E8FF',
+            error: '#FFE8F8',
+            circularReference: '#E8E8F8',
+            propertyKey: '#F8F8FF',
+            punctuation: '#E8E8F8'
+        }
+    },
+    funky: {
+        light: {
+            null: '#666677',
+            undefined: '#777788',
+            boolean: '#CC0088',
+            number: '#0088CC',
+            string: '#88CC00',
+            symbol: '#CC00CC',
+            function: '#CC4400',
+            object: '#00CC88',
+            array: '#4400CC',
+            map: '#CC8800',
+            set: '#00CCCC',
+            weakmap: '#8800CC',
+            weakset: '#CC0066',
+            date: '#66CC00',
+            regexp: '#0066CC',
+            error: '#CC0088',
+            circularReference: '#666677',
+            propertyKey: '#444455',
+            punctuation: '#555566'
+        },
+        dark: {
+            null: '#BBBBCC',
+            undefined: '#CCCCDD',
+            boolean: '#FF66DD',
+            number: '#66DDFF',
+            string: '#DDFF66',
+            symbol: '#FF66FF',
+            function: '#FF9966',
+            object: '#66FFDD',
+            array: '#9966FF',
+            map: '#FFDD66',
+            set: '#66FFFF',
+            weakmap: '#DD66FF',
+            weakset: '#FF66BB',
+            date: '#BBFF66',
+            regexp: '#66BBFF',
+            error: '#FF66DD',
+            circularReference: '#BBBBCC',
+            propertyKey: '#DDDDEE',
+            punctuation: '#CCCCDD'
+        }
+    },
+    boring: {
+        light: {
+            null: '#666666',
+            undefined: '#777777',
+            boolean: '#555577',
+            number: '#775555',
+            string: '#557755',
+            symbol: '#775577',
+            function: '#776655',
+            object: '#775566',
+            array: '#556677',
+            map: '#557777',
+            set: '#557766',
+            weakmap: '#777755',
+            weakset: '#775555',
+            date: '#777766',
+            regexp: '#665577',
+            error: '#775566',
+            circularReference: '#666666',
+            propertyKey: '#555555',
+            punctuation: '#666666'
+        },
+        dark: {
+            null: '#AAAAAA',
+            undefined: '#BBBBBB',
+            boolean: '#AAAACC',
+            number: '#CCAAAA',
+            string: '#AACCAA',
+            symbol: '#CCAACC',
+            function: '#CCBBAA',
+            object: '#CCAABB',
+            array: '#AABBCC',
+            map: '#AACCCC',
+            set: '#AACCBB',
+            weakmap: '#CCCCAA',
+            weakset: '#CCAAAA',
+            date: '#CCCCBB',
+            regexp: '#BBAACC',
+            error: '#CCAABB',
+            circularReference: '#AAAAAA',
+            propertyKey: '#BBBBBB',
+            punctuation: '#AAAAAA'
+        }
+    }
+};
+
 // Create a chalk instance with forced color support (level 3 = 16m colors)
 const chalkInstance = new Chalk({ level: 3 });
-/**
- * Default color palette with modern pastel colors
- */
-const defaultPalette = {
-    null: '#B8C5D0',
-    undefined: '#D0C5E3',
-    boolean: '#94D3EB',
-    number: '#FFB5A7',
-    string: '#C1E1C1',
-    symbol: '#E0BBE4',
-    function: '#FFF4A3',
-    object: '#FFD7BE',
-    array: '#BEE1E6',
-    map: '#FFD1DC',
-    set: '#D4F1F4',
-    weakmap: '#F4C2C2',
-    weakset: '#C5FAD5',
-    date: '#FFCBA4',
-    regexp: '#E8D5E8',
-    error: '#FFABAB',
-    circularReference: '#FFE5B4',
-    propertyKey: '#C9E4E7',
-    punctuation: '#A0A0A0'
-};
-/**
- * Forest color palette with earth tones and natural greens
- */
-const forestPalette = {
-    null: '#4A5859',
-    undefined: '#5C4742',
-    boolean: '#2C5F6F',
-    number: '#C76D3F',
-    string: '#5F7A61',
-    symbol: '#6B4E71',
-    function: '#6B6F3A',
-    object: '#7B5E47',
-    array: '#3D5941',
-    map: '#3B6064',
-    set: '#7A8A6E',
-    weakmap: '#8B5E5E',
-    weakset: '#4F7C6B',
-    date: '#A67C52',
-    regexp: '#7D5A6A',
-    error: '#A13D3D',
-    circularReference: '#9E6240',
-    propertyKey: '#547C82',
-    punctuation: '#6B6F6B'
-};
-/**
- * Bold color palette with vibrant, saturated colors
- */
-const boldPalette = {
-    null: '#8B8B8B',
-    undefined: '#9B59B6',
-    boolean: '#2C81BA',
-    number: '#FF6B35',
-    string: '#2ECC71',
-    symbol: '#E91E63',
-    function: '#F39C12',
-    object: '#FF5733',
-    array: '#00BCD4',
-    map: '#FF1493',
-    set: '#00FFFF',
-    weakmap: '#DC143C',
-    weakset: '#00FA9A',
-    date: '#FF8C00',
-    regexp: '#8B00FF',
-    error: '#FF0000',
-    circularReference: '#FFD700',
-    propertyKey: '#1E90FF',
-    punctuation: '#404040'
-};
-/**
- * Dusk color palette with dark colors near black
- */
-const duskPalette = {
-    null: '#2C2C2C',
-    undefined: '#2B1B2B',
-    boolean: '#1A2332',
-    number: '#3D2520',
-    string: '#1F2B1F',
-    symbol: '#2F2536',
-    function: '#33301A',
-    object: '#342820',
-    array: '#1E2C2E',
-    map: '#3A2228',
-    set: '#1F3032',
-    weakmap: '#332424',
-    weakset: '#20302A',
-    date: '#342A1C',
-    regexp: '#2D2530',
-    error: '#3D1F1F',
-    circularReference: '#3D3420',
-    propertyKey: '#232D30',
-    punctuation: '#1A1A1A'
-};
 /**
  * Default container configuration
  */
@@ -861,7 +1168,7 @@ function highlight_string(str, options) {
  * Default highlight options
  */
 const defaultHighlightOptions = {
-    palette: defaultPalette,
+    palette: palettes.default.light,
     containers: defaultContainers
 };
 /**
@@ -1344,4 +1651,4 @@ function parse_value(input) {
     return buildAST(input);
 }
 
-export { boldPalette, defaultContainers, defaultHighlightOptions, defaultPalette, duskPalette, forestPalette, highlight_string, highlight_value, paint, parse_string, parse_value, testdata };
+export { defaultContainers, defaultHighlightOptions, highlight_string, highlight_value, paint, palettes, parse_string, parse_value, testdata };

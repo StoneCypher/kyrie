@@ -1,102 +1,8 @@
 import { Chalk } from 'chalk';
 // Create a chalk instance with forced color support (level 3 = 16m colors)
 const chalkInstance = new Chalk({ level: 3 });
-/**
- * Default color palette with modern pastel colors
- */
-export const defaultPalette = {
-    null: '#B8C5D0',
-    undefined: '#D0C5E3',
-    boolean: '#94D3EB',
-    number: '#FFB5A7',
-    string: '#C1E1C1',
-    symbol: '#E0BBE4',
-    function: '#FFF4A3',
-    object: '#FFD7BE',
-    array: '#BEE1E6',
-    map: '#FFD1DC',
-    set: '#D4F1F4',
-    weakmap: '#F4C2C2',
-    weakset: '#C5FAD5',
-    date: '#FFCBA4',
-    regexp: '#E8D5E8',
-    error: '#FFABAB',
-    circularReference: '#FFE5B4',
-    propertyKey: '#C9E4E7',
-    punctuation: '#A0A0A0'
-};
-/**
- * Forest color palette with earth tones and natural greens
- */
-export const forestPalette = {
-    null: '#4A5859',
-    undefined: '#5C4742',
-    boolean: '#2C5F6F',
-    number: '#C76D3F',
-    string: '#5F7A61',
-    symbol: '#6B4E71',
-    function: '#6B6F3A',
-    object: '#7B5E47',
-    array: '#3D5941',
-    map: '#3B6064',
-    set: '#7A8A6E',
-    weakmap: '#8B5E5E',
-    weakset: '#4F7C6B',
-    date: '#A67C52',
-    regexp: '#7D5A6A',
-    error: '#A13D3D',
-    circularReference: '#9E6240',
-    propertyKey: '#547C82',
-    punctuation: '#6B6F6B'
-};
-/**
- * Bold color palette with vibrant, saturated colors
- */
-export const boldPalette = {
-    null: '#8B8B8B',
-    undefined: '#9B59B6',
-    boolean: '#2C81BA',
-    number: '#FF6B35',
-    string: '#2ECC71',
-    symbol: '#E91E63',
-    function: '#F39C12',
-    object: '#FF5733',
-    array: '#00BCD4',
-    map: '#FF1493',
-    set: '#00FFFF',
-    weakmap: '#DC143C',
-    weakset: '#00FA9A',
-    date: '#FF8C00',
-    regexp: '#8B00FF',
-    error: '#FF0000',
-    circularReference: '#FFD700',
-    propertyKey: '#1E90FF',
-    punctuation: '#404040'
-};
-/**
- * Dusk color palette with dark colors near black
- */
-export const duskPalette = {
-    null: '#2C2C2C',
-    undefined: '#2B1B2B',
-    boolean: '#1A2332',
-    number: '#3D2520',
-    string: '#1F2B1F',
-    symbol: '#2F2536',
-    function: '#33301A',
-    object: '#342820',
-    array: '#1E2C2E',
-    map: '#3A2228',
-    set: '#1F3032',
-    weakmap: '#332424',
-    weakset: '#20302A',
-    date: '#342A1C',
-    regexp: '#2D2530',
-    error: '#3D1F1F',
-    circularReference: '#3D3420',
-    propertyKey: '#232D30',
-    punctuation: '#1A1A1A'
-};
+import { palettes } from './palettes.js';
+export { palettes };
 /**
  * Default container configuration
  */
@@ -378,7 +284,7 @@ export function highlight_string(str, options) {
  * Default highlight options
  */
 export const defaultHighlightOptions = {
-    palette: defaultPalette,
+    palette: palettes.default.light,
     containers: defaultContainers
 };
 /**
