@@ -149,6 +149,22 @@
             <option value="charcoal">charcoal</option>
             <option value="black">black</option>
         </select>
+
+        <label for="lineUnfolding">Lines:</label>
+        <select id="lineUnfolding">
+            <option value="oneliner">oneliner</option>
+            <option value="expanded">expanded</option>
+        </select>
+
+        <label for="indentType">Indent:</label>
+        <select id="indentType">
+            <option value="number">spaces</option>
+            <option value="tab">tab</option>
+            <option value="custom">custom</option>
+        </select>
+
+        <label for="indentValue" id="indentValueLabel">Count:</label>
+        <input type="text" id="indentValue" value="2" style="width: 3em; height: 1.3em; font-size: 0.85em;">
     </div>
 
     <div id="main">
@@ -205,6 +221,10 @@
         const themeSelect = document.getElementById('theme');
         const bgSelect = document.getElementById('bg');
         const preview = document.getElementById('preview');
+        const lineUnfoldingSelect = document.getElementById('lineUnfolding');
+        const indentTypeSelect = document.getElementById('indentType');
+        const indentValueInput = document.getElementById('indentValue');
+        const indentValueLabel = document.getElementById('indentValueLabel');
 
         // Combine all palettes into a lookup object
         const allPalettes = {
@@ -235,9 +255,33 @@
                 const themeValue = themeSelect.value;
                 const selectedPalette = themeValue === 'dark' ? paletteObj.dark : paletteObj.light;
 
+                // Get indentation settings
+                const lineUnfolding = lineUnfoldingSelect.value;
+                let indent;
+
+                if (indentTypeSelect.value === 'number') {
+                    indent = parseInt(indentValueInput.value, 10);
+                    if (isNaN(indent) || indent < 0) {
+                        indent = 2;
+                        indentValueInput.value = '2';
+                    }
+                } else if (indentTypeSelect.value === 'tab') {
+                    indent = '\t';
+                } else {
+                    // custom string
+                    indent = indentValueInput.value || '  ';
+                }
+
+                // Build options
+                const options = {
+                    palette: selectedPalette,
+                    lineUnfolding: lineUnfolding,
+                    indent: indent
+                };
+
                 // Parse and paint the input
                 const ast = parse_string(editor.value);
-                const highlighted = paint_html(ast, { palette: selectedPalette });
+                const highlighted = paint_html(ast, options);
 
                 // Update the target
                 target.innerHTML = highlighted;
@@ -266,10 +310,34 @@
             }
         }
 
+        function updateIndentControls() {
+            const indentType = indentTypeSelect.value;
+
+            if (indentType === 'number') {
+                indentValueLabel.textContent = 'Count:';
+                indentValueInput.value = '2';
+                indentValueInput.disabled = false;
+            } else if (indentType === 'tab') {
+                indentValueLabel.textContent = 'Tab:';
+                indentValueInput.value = '\\t';
+                indentValueInput.disabled = true;
+            } else {
+                // custom
+                indentValueLabel.textContent = 'String:';
+                indentValueInput.value = '  ';
+                indentValueInput.disabled = false;
+            }
+
+            updatePreview();
+        }
+
         editor.addEventListener('input', updatePreview);
         paletteSelect.addEventListener('change', updatePreview);
         themeSelect.addEventListener('change', updatePreview);
         bgSelect.addEventListener('change', updateBackground);
+        lineUnfoldingSelect.addEventListener('change', updatePreview);
+        indentTypeSelect.addEventListener('change', updateIndentControls);
+        indentValueInput.addEventListener('input', updatePreview);
 
         // Initial update
         updatePreview();
