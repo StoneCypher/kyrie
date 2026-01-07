@@ -82,6 +82,7 @@ export interface ColorPalette {
   circularReference: string;
   propertyKey: string;
   punctuation: string;
+  indentGuide: string;
 }
 
 /**

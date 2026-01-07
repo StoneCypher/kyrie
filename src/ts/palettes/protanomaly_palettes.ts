@@ -24,7 +24,8 @@ export const protanomalyPalettes = {
       error: '#4A4A3A',
       circularReference: '#2A4A5A',
       propertyKey: '#1A3A4A',
-      punctuation: '#3A5A6A'
+      punctuation: '#3A5A6A',
+      indentGuide: '#9DADB5'
     },
     dark: {
       text: '#FFFFFF',
@@ -46,7 +47,8 @@ export const protanomalyPalettes = {
       error: '#CCCCAA',
       circularReference: '#99CCEE',
       propertyKey: '#CCFFFF',
-      punctuation: '#AADDFF'
+      punctuation: '#AADDFF',
+      indentGuide: '#556F80'
     }
   },
   protanomalyBright: {
@@ -70,7 +72,8 @@ export const protanomalyPalettes = {
       error: '#5577AA',
       circularReference: '#555555',
       propertyKey: '#333333',
-      punctuation: '#4A4A4A'
+      punctuation: '#4A4A4A',
+      indentGuide: '#A5A5A5'
     },
     dark: {
       text: '#FFFFFF',
@@ -92,7 +95,8 @@ export const protanomalyPalettes = {
       error: '#AACCFF',
       circularReference: '#CCCCCC',
       propertyKey: '#DDDDDD',
-      punctuation: '#BBBBBB'
+      punctuation: '#BBBBBB',
+      indentGuide: '#5E5E5E'
     }
   },
   protanomalySubtle: {
@@ -116,7 +120,8 @@ export const protanomalyPalettes = {
       error: '#4A5A7A',
       circularReference: '#6A6A6A',
       propertyKey: '#4A4A4A',
-      punctuation: '#5A5A5A'
+      punctuation: '#5A5A5A',
+      indentGuide: '#ADADAD'
     },
     dark: {
       text: '#FFFFFF',
@@ -138,7 +143,8 @@ export const protanomalyPalettes = {
       error: '#AABBCC',
       circularReference: '#BBBBBB',
       propertyKey: '#CCCCCC',
-      punctuation: '#AAAAAA'
+      punctuation: '#AAAAAA',
+      indentGuide: '#555555'
     }
   },
   protanomalyPastel: {
@@ -162,7 +168,8 @@ export const protanomalyPalettes = {
       error: '#5A6A8A',
       circularReference: '#7A7A7A',
       propertyKey: '#5A5A5A',
-      punctuation: '#6A6A6A'
+      punctuation: '#6A6A6A',
+      indentGuide: '#B5B5B5'
     },
     dark: {
       text: '#FFFFFF',
@@ -184,7 +191,8 @@ export const protanomalyPalettes = {
       error: '#DDEEFF',
       circularReference: '#E5E5E5',
       propertyKey: '#F5F5F5',
-      punctuation: '#D5D5D5'
+      punctuation: '#D5D5D5',
+      indentGuide: '#6B6B6B'
     }
   },
   protanomalyBoring: {
@@ -208,7 +216,8 @@ export const protanomalyPalettes = {
       error: '#3A4A5A',
       circularReference: '#5A5A5A',
       propertyKey: '#2A2A2A',
-      punctuation: '#4A4A4A'
+      punctuation: '#4A4A4A',
+      indentGuide: '#A5A5A5'
     },
     dark: {
       text: '#FFFFFF',
@@ -230,7 +239,8 @@ export const protanomalyPalettes = {
       error: '#AABBCC',
       circularReference: '#BBBBBB',
       propertyKey: '#CCCCCC',
-      punctuation: '#AAAAAA'
+      punctuation: '#AAAAAA',
+      indentGuide: '#555555'
     }
   },
   protanomalyFunky: {
@@ -254,7 +264,8 @@ export const protanomalyPalettes = {
       error: '#4477BB',
       circularReference: '#555555',
       propertyKey: '#222222',
-      punctuation: '#4A4A4A'
+      punctuation: '#4A4A4A',
+      indentGuide: '#A5A5A5'
     },
     dark: {
       text: '#FFFFFF',
@@ -276,7 +287,8 @@ export const protanomalyPalettes = {
       error: '#BBDDFF',
       circularReference: '#DDDDDD',
       propertyKey: '#EEEEEE',
-      punctuation: '#CCCCCC'
+      punctuation: '#CCCCCC',
+      indentGuide: '#666666'
     }
   },
   protanomalyVivid: {
@@ -300,7 +312,8 @@ export const protanomalyPalettes = {
       error: '#3366AA',
       circularReference: '#444444',
       propertyKey: '#1A1A1A',
-      punctuation: '#3A3A3A'
+      punctuation: '#3A3A3A',
+      indentGuide: '#9D9D9D'
     },
     dark: {
       text: '#FFFFFF',
@@ -322,7 +335,8 @@ export const protanomalyPalettes = {
       error: '#CCDEFF',
       circularReference: '#DDDDDD',
       propertyKey: '#EEEEEE',
-      punctuation: '#CCCCCC'
+      punctuation: '#CCCCCC',
+      indentGuide: '#666666'
     }
   }
 } as const;

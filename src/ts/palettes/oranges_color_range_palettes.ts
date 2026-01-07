@@ -31,7 +31,8 @@ export const orangesColorRangePalettes = {
       error: '#CC2200',
       circularReference: '#8A4A2A',
       propertyKey: '#6A3A1A',
-      punctuation: '#7A4A2A'
+      punctuation: '#7A4A2A',
+      indentGuide: '#BDA595'
     },
     dark: {
       text: '#FFFFFF',
@@ -53,7 +54,8 @@ export const orangesColorRangePalettes = {
       error: '#FF5533',
       circularReference: '#FFBB88',
       propertyKey: '#FFF5DD',
-      punctuation: '#FFDDAA'
+      punctuation: '#FFDDAA',
+      indentGuide: '#806F55'
     }
   },
   orangesAndYellows: {
@@ -77,7 +79,8 @@ export const orangesColorRangePalettes = {
       error: '#BB6600',
       circularReference: '#8A6A2A',
       propertyKey: '#6A4A1A',
-      punctuation: '#7A5A2A'
+      punctuation: '#7A5A2A',
+      indentGuide: '#BDAD95'
     },
     dark: {
       text: '#FFFFFF',
@@ -99,7 +102,8 @@ export const orangesColorRangePalettes = {
       error: '#FFAA33',
       circularReference: '#FFCC88',
       propertyKey: '#FFF5DD',
-      punctuation: '#FFEEBB'
+      punctuation: '#FFEEBB',
+      indentGuide: '#80775E'
     }
   },
   orangesAndGreens: {
@@ -123,7 +127,8 @@ export const orangesColorRangePalettes = {
       error: '#CC5500',
       circularReference: '#6A5A3A',
       propertyKey: '#4A3A2A',
-      punctuation: '#5A4A3A'
+      punctuation: '#5A4A3A',
+      indentGuide: '#ADA59D'
     },
     dark: {
       text: '#FFFFFF',
@@ -145,7 +150,8 @@ export const orangesColorRangePalettes = {
       error: '#FFAA33',
       circularReference: '#DDCC99',
       propertyKey: '#FFF5DD',
-      punctuation: '#EEDDAA'
+      punctuation: '#EEDDAA',
+      indentGuide: '#776F55'
     }
   },
   orangesAndBlues: {
@@ -169,7 +175,8 @@ export const orangesColorRangePalettes = {
       error: '#CC5500',
       circularReference: '#5A4A5A',
       propertyKey: '#3A2A3A',
-      punctuation: '#4A3A4A'
+      punctuation: '#4A3A4A',
+      indentGuide: '#A59DA5'
     },
     dark: {
       text: '#FFFFFF',
@@ -191,7 +198,8 @@ export const orangesColorRangePalettes = {
       error: '#FFAA33',
       circularReference: '#DDCCCC',
       propertyKey: '#FFF5EE',
-      punctuation: '#EEDDDD'
+      punctuation: '#EEDDDD',
+      indentGuide: '#776F6F'
     }
   },
   orangesAndPurples: {
@@ -215,7 +223,8 @@ export const orangesColorRangePalettes = {
       error: '#CC5500',
       circularReference: '#6A4A6A',
       propertyKey: '#4A2A4A',
-      punctuation: '#5A3A5A'
+      punctuation: '#5A3A5A',
+      indentGuide: '#AD9DAD'
     },
     dark: {
       text: '#FFFFFF',
@@ -237,7 +246,8 @@ export const orangesColorRangePalettes = {
       error: '#FFAA33',
       circularReference: '#EECCDD',
       propertyKey: '#FFEEEE',
-      punctuation: '#FFDDEE'
+      punctuation: '#FFDDEE',
+      indentGuide: '#806F77'
     }
   },
   orangesAndBrowns: {
@@ -261,7 +271,8 @@ export const orangesColorRangePalettes = {
       error: '#CC5500',
       circularReference: '#6A4A2A',
       propertyKey: '#4A2A1A',
-      punctuation: '#5A3A2A'
+      punctuation: '#5A3A2A',
+      indentGuide: '#AD9D95'
     },
     dark: {
       text: '#FFFFFF',
@@ -283,7 +294,8 @@ export const orangesColorRangePalettes = {
       error: '#FFAA33',
       circularReference: '#DDBB99',
       propertyKey: '#FFF5DD',
-      punctuation: '#EECCAA'
+      punctuation: '#EECCAA',
+      indentGuide: '#776655'
     }
   },
   orangesAndGreys: {
@@ -307,7 +319,8 @@ export const orangesColorRangePalettes = {
       error: '#CC5500',
       circularReference: '#6A5A4A',
       propertyKey: '#3A3A3A',
-      punctuation: '#5A5A5A'
+      punctuation: '#5A5A5A',
+      indentGuide: '#ADADAD'
     },
     dark: {
       text: '#FFFFFF',
@@ -329,7 +342,8 @@ export const orangesColorRangePalettes = {
       error: '#FFAA33',
       circularReference: '#DDCCBB',
       propertyKey: '#FFFFFF',
-      punctuation: '#EEDDCC'
+      punctuation: '#EEDDCC',
+      indentGuide: '#776F66'
     }
   },
   orangesAndCharcoals: {
@@ -353,7 +367,8 @@ export const orangesColorRangePalettes = {
       error: '#CC5500',
       circularReference: '#4A3A2A',
       propertyKey: '#2A1A1A',
-      punctuation: '#3A2A2A'
+      punctuation: '#3A2A2A',
+      indentGuide: '#9D9595'
     },
     dark: {
       text: '#FFFFFF',
@@ -375,7 +390,8 @@ export const orangesColorRangePalettes = {
       error: '#FFAA33',
       circularReference: '#CCBB99',
       propertyKey: '#F5F5F5',
-      punctuation: '#DDCCAA'
+      punctuation: '#DDCCAA',
+      indentGuide: '#6F6655'
     }
   },
   orangesAndCyans: {
@@ -399,7 +415,8 @@ export const orangesColorRangePalettes = {
       error: '#CC5500',
       circularReference: '#5A5A5A',
       propertyKey: '#3A3A3A',
-      punctuation: '#4A4A4A'
+      punctuation: '#4A4A4A',
+      indentGuide: '#A5A5A5'
     },
     dark: {
       text: '#FFFFFF',
@@ -421,7 +438,8 @@ export const orangesColorRangePalettes = {
       error: '#FFAA33',
       circularReference: '#DDDDDD',
       propertyKey: '#FFFFFF',
-      punctuation: '#EEEEEE'
+      punctuation: '#EEEEEE',
+      indentGuide: '#777777'
     }
   },
   orangesAndMagentas: {
@@ -445,7 +463,8 @@ export const orangesColorRangePalettes = {
       error: '#CC5500',
       circularReference: '#6A4A5A',
       propertyKey: '#4A2A3A',
-      punctuation: '#5A3A4A'
+      punctuation: '#5A3A4A',
+      indentGuide: '#AD9DA5'
     },
     dark: {
       text: '#FFFFFF',
@@ -467,7 +486,8 @@ export const orangesColorRangePalettes = {
       error: '#FFAA33',
       circularReference: '#EECCDD',
       propertyKey: '#FFEEEE',
-      punctuation: '#FFDDEE'
+      punctuation: '#FFDDEE',
+      indentGuide: '#806F77'
     }
   },
   orangesAndLightGrays: {
@@ -491,7 +511,8 @@ export const orangesColorRangePalettes = {
       error: '#CC5500',
       circularReference: '#7A6A5A',
       propertyKey: '#5A4A3A',
-      punctuation: '#6A5A4A'
+      punctuation: '#6A5A4A',
+      indentGuide: '#B5ADA5'
     },
     dark: {
       text: '#FFFFFF',
@@ -513,7 +534,8 @@ export const orangesColorRangePalettes = {
       error: '#FFAA33',
       circularReference: '#EEDDCC',
       propertyKey: '#FFFFFF',
-      punctuation: '#FFEEEE'
+      punctuation: '#FFEEEE',
+      indentGuide: '#807777'
     }
   }
 } as const;

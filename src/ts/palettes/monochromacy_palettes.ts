@@ -24,7 +24,8 @@ export const monochromacyPalettes = {
       error: '#585858',
       circularReference: '#3A3A3A',
       propertyKey: '#2A2A2A',
-      punctuation: '#4A4A4A'
+      punctuation: '#4A4A4A',
+      indentGuide: '#A5A5A5'
     },
     dark: {
       text: '#FFFFFF',
@@ -46,7 +47,8 @@ export const monochromacyPalettes = {
       error: '#E8E8E8',
       circularReference: '#C5C5C5',
       propertyKey: '#F0F0F0',
-      punctuation: '#D5D5D5'
+      punctuation: '#D5D5D5',
+      indentGuide: '#6B6B6B'
     }
   },
   monochromacyBright: {
@@ -70,7 +72,8 @@ export const monochromacyPalettes = {
       error: '#2A2A2A',
       circularReference: '#5A5A5A',
       propertyKey: '#333333',
-      punctuation: '#4A4A4A'
+      punctuation: '#4A4A4A',
+      indentGuide: '#A5A5A5'
     },
     dark: {
       text: '#FFFFFF',
@@ -92,7 +95,8 @@ export const monochromacyPalettes = {
       error: '#DDDDDD',
       circularReference: '#AAAAAA',
       propertyKey: '#DDDDDD',
-      punctuation: '#BBBBBB'
+      punctuation: '#BBBBBB',
+      indentGuide: '#5E5E5E'
     }
   },
   monochromacySubtle: {
@@ -116,7 +120,8 @@ export const monochromacyPalettes = {
       error: '#4A4A4A',
       circularReference: '#6A6A6A',
       propertyKey: '#4A4A4A',
-      punctuation: '#5A5A5A'
+      punctuation: '#5A5A5A',
+      indentGuide: '#ADADAD'
     },
     dark: {
       text: '#FFFFFF',
@@ -138,7 +143,8 @@ export const monochromacyPalettes = {
       error: '#BBBBBB',
       circularReference: '#999999',
       propertyKey: '#BBBBBB',
-      punctuation: '#AAAAAA'
+      punctuation: '#AAAAAA',
+      indentGuide: '#555555'
     }
   },
   monochromacyPastel: {
@@ -162,7 +168,8 @@ export const monochromacyPalettes = {
       error: '#5A5A5A',
       circularReference: '#7A7A7A',
       propertyKey: '#5A5A5A',
-      punctuation: '#6A6A6A'
+      punctuation: '#6A6A6A',
+      indentGuide: '#B5B5B5'
     },
     dark: {
       text: '#FFFFFF',
@@ -184,7 +191,8 @@ export const monochromacyPalettes = {
       error: '#E5E5E5',
       circularReference: '#C5C5C5',
       propertyKey: '#E5E5E5',
-      punctuation: '#D5D5D5'
+      punctuation: '#D5D5D5',
+      indentGuide: '#6B6B6B'
     }
   },
   monochromacyBoring: {
@@ -208,7 +216,8 @@ export const monochromacyPalettes = {
       error: '#3A3A3A',
       circularReference: '#5A5A5A',
       propertyKey: '#2A2A2A',
-      punctuation: '#4A4A4A'
+      punctuation: '#4A4A4A',
+      indentGuide: '#A5A5A5'
     },
     dark: {
       text: '#FFFFFF',
@@ -230,7 +239,8 @@ export const monochromacyPalettes = {
       error: '#B5B5B5',
       circularReference: '#999999',
       propertyKey: '#BBBBBB',
-      punctuation: '#AAAAAA'
+      punctuation: '#AAAAAA',
+      indentGuide: '#555555'
     }
   },
   monochromacyFunky: {
@@ -254,7 +264,8 @@ export const monochromacyPalettes = {
       error: '#1A1A1A',
       circularReference: '#555555',
       propertyKey: '#222222',
-      punctuation: '#4A4A4A'
+      punctuation: '#4A4A4A',
+      indentGuide: '#A5A5A5'
     },
     dark: {
       text: '#FFFFFF',
@@ -276,7 +287,8 @@ export const monochromacyPalettes = {
       error: '#EEEEEE',
       circularReference: '#AAAAAA',
       propertyKey: '#EEEEEE',
-      punctuation: '#CCCCCC'
+      punctuation: '#CCCCCC',
+      indentGuide: '#666666'
     }
   },
   monochromacyVivid: {
@@ -300,7 +312,8 @@ export const monochromacyPalettes = {
       error: '#0A0A0A',
       circularReference: '#444444',
       propertyKey: '#1A1A1A',
-      punctuation: '#3A3A3A'
+      punctuation: '#3A3A3A',
+      indentGuide: '#9D9D9D'
     },
     dark: {
       text: '#FFFFFF',
@@ -322,7 +335,8 @@ export const monochromacyPalettes = {
       error: '#F5F5F5',
       circularReference: '#BBBBBB',
       propertyKey: '#EEEEEE',
-      punctuation: '#CCCCCC'
+      punctuation: '#CCCCCC',
+      indentGuide: '#666666'
     }
   }
 } as const;

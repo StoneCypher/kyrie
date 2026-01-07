@@ -44,7 +44,8 @@ export const cyansColorRangePalettes = {
       error: '#AA5A5A',
       circularReference: '#1A4A5A',
       propertyKey: '#0A3A4A',
-      punctuation: '#2A5A6A'
+      punctuation: '#2A5A6A',
+      indentGuide: '#95ADB5'
     },
     dark: {
       text: '#FFFFFF',
@@ -66,7 +67,8 @@ export const cyansColorRangePalettes = {
       error: '#FFCCCC',
       circularReference: '#88DDFF',
       propertyKey: '#CCFFFF',
-      punctuation: '#99EEFF'
+      punctuation: '#99EEFF',
+      indentGuide: '#4D7780'
     }
   },
   cyansAndOranges: {
@@ -90,7 +92,8 @@ export const cyansColorRangePalettes = {
       error: '#DD8A4A',
       circularReference: '#1A4A5A',
       propertyKey: '#0A3A4A',
-      punctuation: '#2A5A6A'
+      punctuation: '#2A5A6A',
+      indentGuide: '#95ADB5'
     },
     dark: {
       text: '#FFFFFF',
@@ -112,7 +115,8 @@ export const cyansColorRangePalettes = {
       error: '#FFEE99',
       circularReference: '#88DDFF',
       propertyKey: '#CCFFFF',
-      punctuation: '#99EEFF'
+      punctuation: '#99EEFF',
+      indentGuide: '#4D7780'
     }
   },
   cyansAndYellows: {
@@ -136,7 +140,8 @@ export const cyansColorRangePalettes = {
       error: '#DDCC4A',
       circularReference: '#1A4A5A',
       propertyKey: '#0A3A4A',
-      punctuation: '#2A5A6A'
+      punctuation: '#2A5A6A',
+      indentGuide: '#95ADB5'
     },
     dark: {
       text: '#FFFFFF',
@@ -158,7 +163,8 @@ export const cyansColorRangePalettes = {
       error: '#FFFF99',
       circularReference: '#88DDFF',
       propertyKey: '#CCFFFF',
-      punctuation: '#99EEFF'
+      punctuation: '#99EEFF',
+      indentGuide: '#4D7780'
     }
   },
   cyansAndGreens: {
@@ -182,7 +188,8 @@ export const cyansColorRangePalettes = {
       error: '#5AAA5A',
       circularReference: '#1A4A5A',
       propertyKey: '#0A3A4A',
-      punctuation: '#2A5A6A'
+      punctuation: '#2A5A6A',
+      indentGuide: '#95ADB5'
     },
     dark: {
       text: '#FFFFFF',
@@ -204,7 +211,8 @@ export const cyansColorRangePalettes = {
       error: '#CCFFCC',
       circularReference: '#88DDFF',
       propertyKey: '#CCFFFF',
-      punctuation: '#99EEFF'
+      punctuation: '#99EEFF',
+      indentGuide: '#4D7780'
     }
   },
   cyansAndBlues: {
@@ -228,7 +236,8 @@ export const cyansColorRangePalettes = {
       error: '#4A5ABA',
       circularReference: '#1A4A5A',
       propertyKey: '#0A3A4A',
-      punctuation: '#2A5A6A'
+      punctuation: '#2A5A6A',
+      indentGuide: '#95ADB5'
     },
     dark: {
       text: '#FFFFFF',
@@ -250,7 +259,8 @@ export const cyansColorRangePalettes = {
       error: '#BBCCFF',
       circularReference: '#88DDFF',
       propertyKey: '#CCFFFF',
-      punctuation: '#99EEFF'
+      punctuation: '#99EEFF',
+      indentGuide: '#4D7780'
     }
   },
   cyansAndPurples: {
@@ -274,7 +284,8 @@ export const cyansColorRangePalettes = {
       error: '#9A5ABA',
       circularReference: '#1A4A5A',
       propertyKey: '#0A3A4A',
-      punctuation: '#2A5A6A'
+      punctuation: '#2A5A6A',
+      indentGuide: '#95ADB5'
     },
     dark: {
       text: '#FFFFFF',
@@ -296,7 +307,8 @@ export const cyansColorRangePalettes = {
       error: '#FFCCFF',
       circularReference: '#88DDFF',
       propertyKey: '#CCFFFF',
-      punctuation: '#99EEFF'
+      punctuation: '#99EEFF',
+      indentGuide: '#4D7780'
     }
   },
   cyansAndBrowns: {
@@ -320,7 +332,8 @@ export const cyansColorRangePalettes = {
       error: '#9A7A5A',
       circularReference: '#1A4A5A',
       propertyKey: '#0A3A4A',
-      punctuation: '#2A5A6A'
+      punctuation: '#2A5A6A',
+      indentGuide: '#95ADB5'
     },
     dark: {
       text: '#FFFFFF',
@@ -342,7 +355,8 @@ export const cyansColorRangePalettes = {
       error: '#FFEECC',
       circularReference: '#88DDFF',
       propertyKey: '#CCFFFF',
-      punctuation: '#99EEFF'
+      punctuation: '#99EEFF',
+      indentGuide: '#4D7780'
     }
   },
   cyansAndGreys: {
@@ -366,7 +380,8 @@ export const cyansColorRangePalettes = {
       error: '#7A7A7A',
       circularReference: '#1A4A5A',
       propertyKey: '#0A3A4A',
-      punctuation: '#2A5A6A'
+      punctuation: '#2A5A6A',
+      indentGuide: '#95ADB5'
     },
     dark: {
       text: '#FFFFFF',
@@ -388,7 +403,8 @@ export const cyansColorRangePalettes = {
       error: '#EEEEEE',
       circularReference: '#88DDFF',
       propertyKey: '#CCFFFF',
-      punctuation: '#99EEFF'
+      punctuation: '#99EEFF',
+      indentGuide: '#4D7780'
     }
   },
   cyansAndCharcoals: {
@@ -412,7 +428,8 @@ export const cyansColorRangePalettes = {
       error: '#5A5A5A',
       circularReference: '#1A4A5A',
       propertyKey: '#0A3A4A',
-      punctuation: '#2A5A6A'
+      punctuation: '#2A5A6A',
+      indentGuide: '#95ADB5'
     },
     dark: {
       text: '#FFFFFF',
@@ -434,7 +451,8 @@ export const cyansColorRangePalettes = {
       error: '#DDDDDD',
       circularReference: '#88DDFF',
       propertyKey: '#CCFFFF',
-      punctuation: '#99EEFF'
+      punctuation: '#99EEFF',
+      indentGuide: '#4D7780'
     }
   },
   cyansAndMagentas: {
@@ -458,7 +476,8 @@ export const cyansColorRangePalettes = {
       error: '#BA5A9A',
       circularReference: '#1A4A5A',
       propertyKey: '#0A3A4A',
-      punctuation: '#2A5A6A'
+      punctuation: '#2A5A6A',
+      indentGuide: '#95ADB5'
     },
     dark: {
       text: '#FFFFFF',
@@ -480,7 +499,8 @@ export const cyansColorRangePalettes = {
       error: '#FFCCFF',
       circularReference: '#88DDFF',
       propertyKey: '#CCFFFF',
-      punctuation: '#99EEFF'
+      punctuation: '#99EEFF',
+      indentGuide: '#4D7780'
     }
   },
   cyansAndLightGrays: {
@@ -504,7 +524,8 @@ export const cyansColorRangePalettes = {
       error: '#BABABA',
       circularReference: '#1A4A5A',
       propertyKey: '#0A3A4A',
-      punctuation: '#2A5A6A'
+      punctuation: '#2A5A6A',
+      indentGuide: '#95ADB5'
     },
     dark: {
       text: '#FFFFFF',
@@ -526,7 +547,8 @@ export const cyansColorRangePalettes = {
       error: '#FFFFFF',
       circularReference: '#88DDFF',
       propertyKey: '#CCFFFF',
-      punctuation: '#99EEFF'
+      punctuation: '#99EEFF',
+      indentGuide: '#4D7780'
     }
   }
 } as const;

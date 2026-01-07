@@ -34,7 +34,8 @@ export const charcoalsColorRangePalettes = {
       error: '#AA4444',
       circularReference: '#3A3A3A',
       propertyKey: '#2A2A2A',
-      punctuation: '#4A4A4A'
+      punctuation: '#4A4A4A',
+      indentGuide: '#A5A5A5'
     },
     dark: {
       text: '#FFFFFF',
@@ -56,7 +57,8 @@ export const charcoalsColorRangePalettes = {
       error: '#FF8888',
       circularReference: '#C5C5C5',
       propertyKey: '#EEEEEE',
-      punctuation: '#D5D5D5'
+      punctuation: '#D5D5D5',
+      indentGuide: '#6B6B6B'
     }
   } as const satisfies { light: ColorPalette; dark: ColorPalette },
 
@@ -81,7 +83,8 @@ export const charcoalsColorRangePalettes = {
       error: '#BB6633',
       circularReference: '#3A3A3A',
       propertyKey: '#2A2A2A',
-      punctuation: '#4A4A4A'
+      punctuation: '#4A4A4A',
+      indentGuide: '#A5A5A5'
     },
     dark: {
       text: '#FFFFFF',
@@ -103,7 +106,8 @@ export const charcoalsColorRangePalettes = {
       error: '#FFAA77',
       circularReference: '#C5C5C5',
       propertyKey: '#EEEEEE',
-      punctuation: '#D5D5D5'
+      punctuation: '#D5D5D5',
+      indentGuide: '#6B6B6B'
     }
   } as const satisfies { light: ColorPalette; dark: ColorPalette },
 
@@ -128,7 +132,8 @@ export const charcoalsColorRangePalettes = {
       error: '#AA9944',
       circularReference: '#3A3A3A',
       propertyKey: '#2A2A2A',
-      punctuation: '#4A4A4A'
+      punctuation: '#4A4A4A',
+      indentGuide: '#A5A5A5'
     },
     dark: {
       text: '#FFFFFF',
@@ -150,7 +155,8 @@ export const charcoalsColorRangePalettes = {
       error: '#FFDD77',
       circularReference: '#C5C5C5',
       propertyKey: '#EEEEEE',
-      punctuation: '#D5D5D5'
+      punctuation: '#D5D5D5',
+      indentGuide: '#6B6B6B'
     }
   } as const satisfies { light: ColorPalette; dark: ColorPalette },
 
@@ -175,7 +181,8 @@ export const charcoalsColorRangePalettes = {
       error: '#669944',
       circularReference: '#3A3A3A',
       propertyKey: '#2A2A2A',
-      punctuation: '#4A4A4A'
+      punctuation: '#4A4A4A',
+      indentGuide: '#A5A5A5'
     },
     dark: {
       text: '#FFFFFF',
@@ -197,7 +204,8 @@ export const charcoalsColorRangePalettes = {
       error: '#BBFF99',
       circularReference: '#C5C5C5',
       propertyKey: '#EEEEEE',
-      punctuation: '#D5D5D5'
+      punctuation: '#D5D5D5',
+      indentGuide: '#6B6B6B'
     }
   } as const satisfies { light: ColorPalette; dark: ColorPalette },
 
@@ -222,7 +230,8 @@ export const charcoalsColorRangePalettes = {
       error: '#4477AA',
       circularReference: '#3A3A3A',
       propertyKey: '#2A2A2A',
-      punctuation: '#4A4A4A'
+      punctuation: '#4A4A4A',
+      indentGuide: '#A5A5A5'
     },
     dark: {
       text: '#FFFFFF',
@@ -244,7 +253,8 @@ export const charcoalsColorRangePalettes = {
       error: '#88AAFF',
       circularReference: '#C5C5C5',
       propertyKey: '#EEEEEE',
-      punctuation: '#D5D5D5'
+      punctuation: '#D5D5D5',
+      indentGuide: '#6B6B6B'
     }
   } as const satisfies { light: ColorPalette; dark: ColorPalette },
 
@@ -269,7 +279,8 @@ export const charcoalsColorRangePalettes = {
       error: '#9955AA',
       circularReference: '#3A3A3A',
       propertyKey: '#2A2A2A',
-      punctuation: '#4A4A4A'
+      punctuation: '#4A4A4A',
+      indentGuide: '#A5A5A5'
     },
     dark: {
       text: '#FFFFFF',
@@ -291,7 +302,8 @@ export const charcoalsColorRangePalettes = {
       error: '#CC88FF',
       circularReference: '#C5C5C5',
       propertyKey: '#EEEEEE',
-      punctuation: '#D5D5D5'
+      punctuation: '#D5D5D5',
+      indentGuide: '#6B6B6B'
     }
   } as const satisfies { light: ColorPalette; dark: ColorPalette },
 
@@ -316,7 +328,8 @@ export const charcoalsColorRangePalettes = {
       error: '#AA7744',
       circularReference: '#3A3A3A',
       propertyKey: '#2A2A2A',
-      punctuation: '#4A4A4A'
+      punctuation: '#4A4A4A',
+      indentGuide: '#A5A5A5'
     },
     dark: {
       text: '#FFFFFF',
@@ -338,7 +351,8 @@ export const charcoalsColorRangePalettes = {
       error: '#FFCCAA',
       circularReference: '#C5C5C5',
       propertyKey: '#EEEEEE',
-      punctuation: '#D5D5D5'
+      punctuation: '#D5D5D5',
+      indentGuide: '#6B6B6B'
     }
   } as const satisfies { light: ColorPalette; dark: ColorPalette },
 
@@ -363,7 +377,8 @@ export const charcoalsColorRangePalettes = {
       error: '#676767',
       circularReference: '#2A2A2A',
       propertyKey: '#1A1A1A',
-      punctuation: '#3A3A3A'
+      punctuation: '#3A3A3A',
+      indentGuide: '#9D9D9D'
     },
     dark: {
       text: '#FFFFFF',
@@ -385,7 +400,8 @@ export const charcoalsColorRangePalettes = {
       error: '#EFEFEF',
       circularReference: '#B5B5B5',
       propertyKey: '#DDDDDD',
-      punctuation: '#C5C5C5'
+      punctuation: '#C5C5C5',
+      indentGuide: '#636363'
     }
   } as const satisfies { light: ColorPalette; dark: ColorPalette },
 
@@ -410,7 +426,8 @@ export const charcoalsColorRangePalettes = {
       error: '#5599AA',
       circularReference: '#3A3A3A',
       propertyKey: '#2A2A2A',
-      punctuation: '#4A4A4A'
+      punctuation: '#4A4A4A',
+      indentGuide: '#A5A5A5'
     },
     dark: {
       text: '#FFFFFF',
@@ -432,7 +449,8 @@ export const charcoalsColorRangePalettes = {
       error: '#88EEFF',
       circularReference: '#C5C5C5',
       propertyKey: '#EEEEEE',
-      punctuation: '#D5D5D5'
+      punctuation: '#D5D5D5',
+      indentGuide: '#6B6B6B'
     }
   } as const satisfies { light: ColorPalette; dark: ColorPalette },
 
@@ -457,7 +475,8 @@ export const charcoalsColorRangePalettes = {
       error: '#BB5599',
       circularReference: '#3A3A3A',
       propertyKey: '#2A2A2A',
-      punctuation: '#4A4A4A'
+      punctuation: '#4A4A4A',
+      indentGuide: '#A5A5A5'
     },
     dark: {
       text: '#FFFFFF',
@@ -479,7 +498,8 @@ export const charcoalsColorRangePalettes = {
       error: '#FF88CC',
       circularReference: '#C5C5C5',
       propertyKey: '#EEEEEE',
-      punctuation: '#D5D5D5'
+      punctuation: '#D5D5D5',
+      indentGuide: '#6B6B6B'
     }
   } as const satisfies { light: ColorPalette; dark: ColorPalette },
 
@@ -504,7 +524,8 @@ export const charcoalsColorRangePalettes = {
       error: '#7A7A7A',
       circularReference: '#3A3A3A',
       propertyKey: '#2A2A2A',
-      punctuation: '#4A4A4A'
+      punctuation: '#4A4A4A',
+      indentGuide: '#A5A5A5'
     },
     dark: {
       text: '#FFFFFF',
@@ -526,7 +547,8 @@ export const charcoalsColorRangePalettes = {
       error: '#F0F0F0',
       circularReference: '#C5C5C5',
       propertyKey: '#EEEEEE',
-      punctuation: '#D5D5D5'
+      punctuation: '#D5D5D5',
+      indentGuide: '#6B6B6B'
     }
   } as const satisfies { light: ColorPalette; dark: ColorPalette }
 } as const;

@@ -46,7 +46,8 @@ export const purplesColorRangePalettes = {
       error: '#AA2A3A',
       circularReference: '#5A3A5A',
       propertyKey: '#4A2A4A',
-      punctuation: '#6A4A6A'
+      punctuation: '#6A4A6A',
+      indentGuide: '#B5A5B5'
     } as ColorPalette,
     dark: {
       text: '#FFFFFF',
@@ -68,7 +69,8 @@ export const purplesColorRangePalettes = {
       error: '#FF88AA',
       circularReference: '#D5C5D5',
       propertyKey: '#F5E5FF',
-      punctuation: '#E5D5E5'
+      punctuation: '#E5D5E5',
+      indentGuide: '#736B73'
     } as ColorPalette
   },
   purplesAndOranges: {
@@ -92,7 +94,8 @@ export const purplesColorRangePalettes = {
       error: '#AA4A1A',
       circularReference: '#5A3A5A',
       propertyKey: '#4A2A4A',
-      punctuation: '#6A4A6A'
+      punctuation: '#6A4A6A',
+      indentGuide: '#B5A5B5'
     } as ColorPalette,
     dark: {
       text: '#FFFFFF',
@@ -114,7 +117,8 @@ export const purplesColorRangePalettes = {
       error: '#FFAA55',
       circularReference: '#D5C5D5',
       propertyKey: '#F5E5FF',
-      punctuation: '#E5D5E5'
+      punctuation: '#E5D5E5',
+      indentGuide: '#736B73'
     } as ColorPalette
   },
   purplesAndYellows: {
@@ -138,7 +142,8 @@ export const purplesColorRangePalettes = {
       error: '#9A6A1A',
       circularReference: '#5A3A5A',
       propertyKey: '#4A2A4A',
-      punctuation: '#6A4A6A'
+      punctuation: '#6A4A6A',
+      indentGuide: '#B5A5B5'
     } as ColorPalette,
     dark: {
       text: '#FFFFFF',
@@ -160,7 +165,8 @@ export const purplesColorRangePalettes = {
       error: '#FFCC77',
       circularReference: '#D5C5D5',
       propertyKey: '#F5E5FF',
-      punctuation: '#E5D5E5'
+      punctuation: '#E5D5E5',
+      indentGuide: '#736B73'
     } as ColorPalette
   },
   purplesAndGreens: {
@@ -184,7 +190,8 @@ export const purplesColorRangePalettes = {
       error: '#1A5A2A',
       circularReference: '#5A3A5A',
       propertyKey: '#4A2A4A',
-      punctuation: '#6A4A6A'
+      punctuation: '#6A4A6A',
+      indentGuide: '#B5A5B5'
     } as ColorPalette,
     dark: {
       text: '#FFFFFF',
@@ -206,7 +213,8 @@ export const purplesColorRangePalettes = {
       error: '#77DD88',
       circularReference: '#D5C5D5',
       propertyKey: '#F5E5FF',
-      punctuation: '#E5D5E5'
+      punctuation: '#E5D5E5',
+      indentGuide: '#736B73'
     } as ColorPalette
   },
   purplesAndBlues: {
@@ -230,7 +238,8 @@ export const purplesColorRangePalettes = {
       error: '#1A3A6A',
       circularReference: '#5A3A5A',
       propertyKey: '#4A2A4A',
-      punctuation: '#6A4A6A'
+      punctuation: '#6A4A6A',
+      indentGuide: '#B5A5B5'
     } as ColorPalette,
     dark: {
       text: '#FFFFFF',
@@ -252,7 +261,8 @@ export const purplesColorRangePalettes = {
       error: '#77AADD',
       circularReference: '#D5C5D5',
       propertyKey: '#F5E5FF',
-      punctuation: '#E5D5E5'
+      punctuation: '#E5D5E5',
+      indentGuide: '#736B73'
     } as ColorPalette
   },
   purplesAndBrowns: {
@@ -276,7 +286,8 @@ export const purplesColorRangePalettes = {
       error: '#5A2A0A',
       circularReference: '#5A3A5A',
       propertyKey: '#4A2A4A',
-      punctuation: '#6A4A6A'
+      punctuation: '#6A4A6A',
+      indentGuide: '#B5A5B5'
     } as ColorPalette,
     dark: {
       text: '#FFFFFF',
@@ -298,7 +309,8 @@ export const purplesColorRangePalettes = {
       error: '#BB9966',
       circularReference: '#D5C5D5',
       propertyKey: '#F5E5FF',
-      punctuation: '#E5D5E5'
+      punctuation: '#E5D5E5',
+      indentGuide: '#736B73'
     } as ColorPalette
   },
   purplesAndGreys: {
@@ -322,7 +334,8 @@ export const purplesColorRangePalettes = {
       error: '#3A3A3A',
       circularReference: '#5A3A5A',
       propertyKey: '#4A2A4A',
-      punctuation: '#6A4A6A'
+      punctuation: '#6A4A6A',
+      indentGuide: '#B5A5B5'
     } as ColorPalette,
     dark: {
       text: '#FFFFFF',
@@ -344,7 +357,8 @@ export const purplesColorRangePalettes = {
       error: '#AAAAAA',
       circularReference: '#D5C5D5',
       propertyKey: '#F5E5FF',
-      punctuation: '#E5D5E5'
+      punctuation: '#E5D5E5',
+      indentGuide: '#736B73'
     } as ColorPalette
   },
   purplesAndCharcoals: {
@@ -368,7 +382,8 @@ export const purplesColorRangePalettes = {
       error: '#1A1A1A',
       circularReference: '#5A3A5A',
       propertyKey: '#4A2A4A',
-      punctuation: '#6A4A6A'
+      punctuation: '#6A4A6A',
+      indentGuide: '#B5A5B5'
     } as ColorPalette,
     dark: {
       text: '#FFFFFF',
@@ -390,7 +405,8 @@ export const purplesColorRangePalettes = {
       error: '#888888',
       circularReference: '#D5C5D5',
       propertyKey: '#F5E5FF',
-      punctuation: '#E5D5E5'
+      punctuation: '#E5D5E5',
+      indentGuide: '#736B73'
     } as ColorPalette
   },
   purplesAndCyans: {
@@ -414,7 +430,8 @@ export const purplesColorRangePalettes = {
       error: '#1A5A5A',
       circularReference: '#5A3A5A',
       propertyKey: '#4A2A4A',
-      punctuation: '#6A4A6A'
+      punctuation: '#6A4A6A',
+      indentGuide: '#B5A5B5'
     } as ColorPalette,
     dark: {
       text: '#FFFFFF',
@@ -436,7 +453,8 @@ export const purplesColorRangePalettes = {
       error: '#77CCCC',
       circularReference: '#D5C5D5',
       propertyKey: '#F5E5FF',
-      punctuation: '#E5D5E5'
+      punctuation: '#E5D5E5',
+      indentGuide: '#736B73'
     } as ColorPalette
   },
   purplesAndMagentas: {
@@ -460,7 +478,8 @@ export const purplesColorRangePalettes = {
       error: '#9A1A6A',
       circularReference: '#5A3A5A',
       propertyKey: '#4A2A4A',
-      punctuation: '#6A4A6A'
+      punctuation: '#6A4A6A',
+      indentGuide: '#B5A5B5'
     } as ColorPalette,
     dark: {
       text: '#FFFFFF',
@@ -482,7 +501,8 @@ export const purplesColorRangePalettes = {
       error: '#FF77DD',
       circularReference: '#D5C5D5',
       propertyKey: '#F5E5FF',
-      punctuation: '#E5D5E5'
+      punctuation: '#E5D5E5',
+      indentGuide: '#736B73'
     } as ColorPalette
   },
   purplesAndLightGrays: {
@@ -506,7 +526,8 @@ export const purplesColorRangePalettes = {
       error: '#5A5A5A',
       circularReference: '#5A3A5A',
       propertyKey: '#4A2A4A',
-      punctuation: '#6A4A6A'
+      punctuation: '#6A4A6A',
+      indentGuide: '#B5A5B5'
     } as ColorPalette,
     dark: {
       text: '#FFFFFF',
@@ -528,7 +549,8 @@ export const purplesColorRangePalettes = {
       error: '#CCCCCC',
       circularReference: '#D5C5D5',
       propertyKey: '#F5E5FF',
-      punctuation: '#E5D5E5'
+      punctuation: '#E5D5E5',
+      indentGuide: '#736B73'
     } as ColorPalette
   }
 } as const;

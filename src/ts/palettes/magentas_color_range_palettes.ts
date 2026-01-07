@@ -31,7 +31,8 @@ export const magentasColorRangePalettes = {
       error: '#DD2266',
       circularReference: '#6A3A5A',
       propertyKey: '#553355',
-      punctuation: '#664466'
+      punctuation: '#664466',
+      indentGuide: '#B3A2B3'
     },
     dark: {
       text: '#FFFFFF',
@@ -53,7 +54,8 @@ export const magentasColorRangePalettes = {
       error: '#FF77AA',
       circularReference: '#EECCEE',
       propertyKey: '#FFEEEE',
-      punctuation: '#FFDDFF'
+      punctuation: '#FFDDFF',
+      indentGuide: '#806F80'
     }
   },
   magentasAndOranges: {
@@ -77,7 +79,8 @@ export const magentasColorRangePalettes = {
       error: '#DD2255',
       circularReference: '#6A3A4A',
       propertyKey: '#554444',
-      punctuation: '#665555'
+      punctuation: '#665555',
+      indentGuide: '#B3AAAA'
     },
     dark: {
       text: '#FFFFFF',
@@ -99,7 +102,8 @@ export const magentasColorRangePalettes = {
       error: '#FF77AA',
       circularReference: '#EECCEE',
       propertyKey: '#FFEEEE',
-      punctuation: '#FFDDEE'
+      punctuation: '#FFDDEE',
+      indentGuide: '#806F77'
     }
   },
   magentasAndYellows: {
@@ -123,7 +127,8 @@ export const magentasColorRangePalettes = {
       error: '#DD2277',
       circularReference: '#6A3A5A',
       propertyKey: '#554455',
-      punctuation: '#665566'
+      punctuation: '#665566',
+      indentGuide: '#B3AAB3'
     },
     dark: {
       text: '#FFFFFF',
@@ -145,7 +150,8 @@ export const magentasColorRangePalettes = {
       error: '#FF77BB',
       circularReference: '#EECCEE',
       propertyKey: '#FFEEEE',
-      punctuation: '#FFDDEE'
+      punctuation: '#FFDDEE',
+      indentGuide: '#806F77'
     }
   },
   magentasAndGreens: {
@@ -169,7 +175,8 @@ export const magentasColorRangePalettes = {
       error: '#DD2277',
       circularReference: '#6A3A5A',
       propertyKey: '#554466',
-      punctuation: '#665577'
+      punctuation: '#665577',
+      indentGuide: '#B3AABB'
     },
     dark: {
       text: '#FFFFFF',
@@ -191,7 +198,8 @@ export const magentasColorRangePalettes = {
       error: '#FF77BB',
       circularReference: '#EECCEE',
       propertyKey: '#FFEEEE',
-      punctuation: '#FFDDFF'
+      punctuation: '#FFDDFF',
+      indentGuide: '#806F80'
     }
   },
   magentasAndBlues: {
@@ -215,7 +223,8 @@ export const magentasColorRangePalettes = {
       error: '#DD2288',
       circularReference: '#5A3A5A',
       propertyKey: '#554477',
-      punctuation: '#665588'
+      punctuation: '#665588',
+      indentGuide: '#B3AAC4'
     },
     dark: {
       text: '#FFFFFF',
@@ -237,7 +246,8 @@ export const magentasColorRangePalettes = {
       error: '#FF77CC',
       circularReference: '#EECCFF',
       propertyKey: '#FFEEEE',
-      punctuation: '#FFDDFF'
+      punctuation: '#FFDDFF',
+      indentGuide: '#806F80'
     }
   },
   magentasAndPurples: {
@@ -261,7 +271,8 @@ export const magentasColorRangePalettes = {
       error: '#DD2299',
       circularReference: '#5A3A6A',
       propertyKey: '#554488',
-      punctuation: '#665599'
+      punctuation: '#665599',
+      indentGuide: '#B3AACC'
     },
     dark: {
       text: '#FFFFFF',
@@ -283,7 +294,8 @@ export const magentasColorRangePalettes = {
       error: '#FF88DD',
       circularReference: '#EEDDFF',
       propertyKey: '#FFEEEE',
-      punctuation: '#FFDDFF'
+      punctuation: '#FFDDFF',
+      indentGuide: '#806F80'
     }
   },
   magentasAndBrowns: {
@@ -307,7 +319,8 @@ export const magentasColorRangePalettes = {
       error: '#DD2277',
       circularReference: '#5A3A5A',
       propertyKey: '#554466',
-      punctuation: '#665577'
+      punctuation: '#665577',
+      indentGuide: '#B3AABB'
     },
     dark: {
       text: '#FFFFFF',
@@ -329,7 +342,8 @@ export const magentasColorRangePalettes = {
       error: '#FF77BB',
       circularReference: '#EECCEE',
       propertyKey: '#FFEEEE',
-      punctuation: '#FFDDFF'
+      punctuation: '#FFDDFF',
+      indentGuide: '#806F80'
     }
   },
   magentasAndGreys: {
@@ -353,7 +367,8 @@ export const magentasColorRangePalettes = {
       error: '#DD2277',
       circularReference: '#5A3A5A',
       propertyKey: '#444455',
-      punctuation: '#555566'
+      punctuation: '#555566',
+      indentGuide: '#AAAAB3'
     },
     dark: {
       text: '#FFFFFF',
@@ -375,7 +390,8 @@ export const magentasColorRangePalettes = {
       error: '#FF77BB',
       circularReference: '#EECCEE',
       propertyKey: '#FFEEEE',
-      punctuation: '#FFDDFF'
+      punctuation: '#FFDDFF',
+      indentGuide: '#806F80'
     }
   },
   magentasAndCharcoals: {
@@ -399,7 +415,8 @@ export const magentasColorRangePalettes = {
       error: '#DD1177',
       circularReference: '#4A2A5A',
       propertyKey: '#333344',
-      punctuation: '#444455'
+      punctuation: '#444455',
+      indentGuide: '#A2A2AA'
     },
     dark: {
       text: '#FFFFFF',
@@ -421,7 +438,8 @@ export const magentasColorRangePalettes = {
       error: '#FF66BB',
       circularReference: '#CCBBEE',
       propertyKey: '#FFDDEE',
-      punctuation: '#EECCFF'
+      punctuation: '#EECCFF',
+      indentGuide: '#776680'
     }
   },
   magentasAndCyans: {
@@ -445,7 +463,8 @@ export const magentasColorRangePalettes = {
       error: '#DD2288',
       circularReference: '#5A3A5A',
       propertyKey: '#553377',
-      punctuation: '#664488'
+      punctuation: '#664488',
+      indentGuide: '#B3A2C4'
     },
     dark: {
       text: '#FFFFFF',
@@ -467,7 +486,8 @@ export const magentasColorRangePalettes = {
       error: '#FF77CC',
       circularReference: '#EECCFF',
       propertyKey: '#FFEEEE',
-      punctuation: '#FFDDFF'
+      punctuation: '#FFDDFF',
+      indentGuide: '#806F80'
     }
   },
   magentasAndLightGrays: {
@@ -491,7 +511,8 @@ export const magentasColorRangePalettes = {
       error: '#DD3388',
       circularReference: '#6A4A6A',
       propertyKey: '#555566',
-      punctuation: '#666677'
+      punctuation: '#666677',
+      indentGuide: '#B3B3BB'
     },
     dark: {
       text: '#FFFFFF',
@@ -513,7 +534,8 @@ export const magentasColorRangePalettes = {
       error: '#FF88CC',
       circularReference: '#EEDDFF',
       propertyKey: '#FFFFFF',
-      punctuation: '#FFEEEE'
+      punctuation: '#FFEEEE',
+      indentGuide: '#807777'
     }
   }
 } as const;

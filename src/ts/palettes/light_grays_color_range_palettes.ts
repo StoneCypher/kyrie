@@ -44,7 +44,8 @@ export const lightGraysColorRangePalettes = {
       error: '#DD4444',
       circularReference: '#9A9A9A',
       propertyKey: '#6A6A6A',
-      punctuation: '#858585'
+      punctuation: '#858585',
+      indentGuide: '#C2C2C2'
     },
     dark: {
       text: '#FFFFFF',
@@ -66,7 +67,8 @@ export const lightGraysColorRangePalettes = {
       error: '#FFBBBB',
       circularReference: '#EAEAEA',
       propertyKey: '#FFFFFF',
-      punctuation: '#E5E5E5'
+      punctuation: '#E5E5E5',
+      indentGuide: '#737373'
     }
   },
   lightGraysAndOranges: {
@@ -90,7 +92,8 @@ export const lightGraysColorRangePalettes = {
       error: '#DD7744',
       circularReference: '#9A9A9A',
       propertyKey: '#6A6A6A',
-      punctuation: '#858585'
+      punctuation: '#858585',
+      indentGuide: '#C2C2C2'
     },
     dark: {
       text: '#FFFFFF',
@@ -112,7 +115,8 @@ export const lightGraysColorRangePalettes = {
       error: '#FFBB88',
       circularReference: '#EAEAEA',
       propertyKey: '#FFFFFF',
-      punctuation: '#E5E5E5'
+      punctuation: '#E5E5E5',
+      indentGuide: '#737373'
     }
   },
   lightGraysAndYellows: {
@@ -136,7 +140,8 @@ export const lightGraysColorRangePalettes = {
       error: '#BBAA44',
       circularReference: '#9A9A9A',
       propertyKey: '#6A6A6A',
-      punctuation: '#858585'
+      punctuation: '#858585',
+      indentGuide: '#C2C2C2'
     },
     dark: {
       text: '#FFFFFF',
@@ -158,7 +163,8 @@ export const lightGraysColorRangePalettes = {
       error: '#FFFF88',
       circularReference: '#EAEAEA',
       propertyKey: '#FFFFFF',
-      punctuation: '#E5E5E5'
+      punctuation: '#E5E5E5',
+      indentGuide: '#737373'
     }
   },
   lightGraysAndGreens: {
@@ -182,7 +188,8 @@ export const lightGraysColorRangePalettes = {
       error: '#449944',
       circularReference: '#9A9A9A',
       propertyKey: '#6A6A6A',
-      punctuation: '#858585'
+      punctuation: '#858585',
+      indentGuide: '#C2C2C2'
     },
     dark: {
       text: '#FFFFFF',
@@ -204,7 +211,8 @@ export const lightGraysColorRangePalettes = {
       error: '#99FF99',
       circularReference: '#EAEAEA',
       propertyKey: '#FFFFFF',
-      punctuation: '#E5E5E5'
+      punctuation: '#E5E5E5',
+      indentGuide: '#737373'
     }
   },
   lightGraysAndBlues: {
@@ -228,7 +236,8 @@ export const lightGraysColorRangePalettes = {
       error: '#4477BB',
       circularReference: '#9A9A9A',
       propertyKey: '#6A6A6A',
-      punctuation: '#858585'
+      punctuation: '#858585',
+      indentGuide: '#C2C2C2'
     },
     dark: {
       text: '#FFFFFF',
@@ -250,7 +259,8 @@ export const lightGraysColorRangePalettes = {
       error: '#99BBFF',
       circularReference: '#EAEAEA',
       propertyKey: '#FFFFFF',
-      punctuation: '#E5E5E5'
+      punctuation: '#E5E5E5',
+      indentGuide: '#737373'
     }
   },
   lightGraysAndPurples: {
@@ -274,7 +284,8 @@ export const lightGraysColorRangePalettes = {
       error: '#8844BB',
       circularReference: '#9A9A9A',
       propertyKey: '#6A6A6A',
-      punctuation: '#858585'
+      punctuation: '#858585',
+      indentGuide: '#C2C2C2'
     },
     dark: {
       text: '#FFFFFF',
@@ -296,7 +307,8 @@ export const lightGraysColorRangePalettes = {
       error: '#DD99FF',
       circularReference: '#EAEAEA',
       propertyKey: '#FFFFFF',
-      punctuation: '#E5E5E5'
+      punctuation: '#E5E5E5',
+      indentGuide: '#737373'
     }
   },
   lightGraysAndBrowns: {
@@ -320,7 +332,8 @@ export const lightGraysColorRangePalettes = {
       error: '#996644',
       circularReference: '#9A9A9A',
       propertyKey: '#6A6A6A',
-      punctuation: '#858585'
+      punctuation: '#858585',
+      indentGuide: '#C2C2C2'
     },
     dark: {
       text: '#FFFFFF',
@@ -342,7 +355,8 @@ export const lightGraysColorRangePalettes = {
       error: '#EEBB99',
       circularReference: '#EAEAEA',
       propertyKey: '#FFFFFF',
-      punctuation: '#E5E5E5'
+      punctuation: '#E5E5E5',
+      indentGuide: '#737373'
     }
   },
   lightGraysAndGreys: {
@@ -366,7 +380,8 @@ export const lightGraysColorRangePalettes = {
       error: '#6A6A6A',
       circularReference: '#9A9A9A',
       propertyKey: '#6A6A6A',
-      punctuation: '#858585'
+      punctuation: '#858585',
+      indentGuide: '#C2C2C2'
     },
     dark: {
       text: '#FFFFFF',
@@ -388,7 +403,8 @@ export const lightGraysColorRangePalettes = {
       error: '#BABABA',
       circularReference: '#EAEAEA',
       propertyKey: '#FFFFFF',
-      punctuation: '#E5E5E5'
+      punctuation: '#E5E5E5',
+      indentGuide: '#737373'
     }
   },
   lightGraysAndCharcoals: {
@@ -412,7 +428,8 @@ export const lightGraysColorRangePalettes = {
       error: '#3A3A3A',
       circularReference: '#9A9A9A',
       propertyKey: '#6A6A6A',
-      punctuation: '#858585'
+      punctuation: '#858585',
+      indentGuide: '#C2C2C2'
     },
     dark: {
       text: '#FFFFFF',
@@ -434,7 +451,8 @@ export const lightGraysColorRangePalettes = {
       error: '#999999',
       circularReference: '#EAEAEA',
       propertyKey: '#FFFFFF',
-      punctuation: '#E5E5E5'
+      punctuation: '#E5E5E5',
+      indentGuide: '#737373'
     }
   },
   lightGraysAndCyans: {
@@ -458,7 +476,8 @@ export const lightGraysColorRangePalettes = {
       error: '#4499BB',
       circularReference: '#9A9A9A',
       propertyKey: '#6A6A6A',
-      punctuation: '#858585'
+      punctuation: '#858585',
+      indentGuide: '#C2C2C2'
     },
     dark: {
       text: '#FFFFFF',
@@ -480,7 +499,8 @@ export const lightGraysColorRangePalettes = {
       error: '#99FFFF',
       circularReference: '#EAEAEA',
       propertyKey: '#FFFFFF',
-      punctuation: '#E5E5E5'
+      punctuation: '#E5E5E5',
+      indentGuide: '#737373'
     }
   },
   lightGraysAndMagentas: {
@@ -504,7 +524,8 @@ export const lightGraysColorRangePalettes = {
       error: '#BB4499',
       circularReference: '#9A9A9A',
       propertyKey: '#6A6A6A',
-      punctuation: '#858585'
+      punctuation: '#858585',
+      indentGuide: '#C2C2C2'
     },
     dark: {
       text: '#FFFFFF',
@@ -526,7 +547,8 @@ export const lightGraysColorRangePalettes = {
       error: '#FF99FF',
       circularReference: '#EAEAEA',
       propertyKey: '#FFFFFF',
-      punctuation: '#E5E5E5'
+      punctuation: '#E5E5E5',
+      indentGuide: '#737373'
     }
   }
 } as const;

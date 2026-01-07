@@ -31,7 +31,8 @@ export const redsColorRangePalettes = {
       error: '#DD2222',
       circularReference: '#7A3A3A',
       propertyKey: '#663333',
-      punctuation: '#774444'
+      punctuation: '#774444',
+      indentGuide: '#BBA2A2'
     },
     dark: {
       text: '#FFFFFF',
@@ -53,7 +54,8 @@ export const redsColorRangePalettes = {
       error: '#FF6666',
       circularReference: '#EEAAAA',
       propertyKey: '#FFDDDD',
-      punctuation: '#FFCCCC'
+      punctuation: '#FFCCCC',
+      indentGuide: '#806666'
     }
   },
   redsAndYellows: {
@@ -77,7 +79,8 @@ export const redsColorRangePalettes = {
       error: '#DD1111',
       circularReference: '#7A4A3A',
       propertyKey: '#663322',
-      punctuation: '#774433'
+      punctuation: '#774433',
+      indentGuide: '#BBA299'
     },
     dark: {
       text: '#FFFFFF',
@@ -99,7 +102,8 @@ export const redsColorRangePalettes = {
       error: '#FF5555',
       circularReference: '#EEBBAA',
       propertyKey: '#FFEEEE',
-      punctuation: '#FFDDDD'
+      punctuation: '#FFDDDD',
+      indentGuide: '#806F6F'
     }
   },
   redsAndGreens: {
@@ -123,7 +127,8 @@ export const redsColorRangePalettes = {
       error: '#DD2222',
       circularReference: '#6A4A3A',
       propertyKey: '#664433',
-      punctuation: '#775544'
+      punctuation: '#775544',
+      indentGuide: '#BBAAA2'
     },
     dark: {
       text: '#FFFFFF',
@@ -145,7 +150,8 @@ export const redsColorRangePalettes = {
       error: '#FF7777',
       circularReference: '#DDBBAA',
       propertyKey: '#FFEEEE',
-      punctuation: '#FFDDDD'
+      punctuation: '#FFDDDD',
+      indentGuide: '#806F6F'
     }
   },
   redsAndBlues: {
@@ -169,7 +175,8 @@ export const redsColorRangePalettes = {
       error: '#DD2244',
       circularReference: '#5A3A4A',
       propertyKey: '#553344',
-      punctuation: '#664455'
+      punctuation: '#664455',
+      indentGuide: '#B3A2AA'
     },
     dark: {
       text: '#FFFFFF',
@@ -191,7 +198,8 @@ export const redsColorRangePalettes = {
       error: '#FF7799',
       circularReference: '#DDBBCC',
       propertyKey: '#FFEEEE',
-      punctuation: '#FFDDEE'
+      punctuation: '#FFDDEE',
+      indentGuide: '#806F77'
     }
   },
   redsAndPurples: {
@@ -215,7 +223,8 @@ export const redsColorRangePalettes = {
       error: '#DD2255',
       circularReference: '#6A3A5A',
       propertyKey: '#553355',
-      punctuation: '#664466'
+      punctuation: '#664466',
+      indentGuide: '#B3A2B3'
     },
     dark: {
       text: '#FFFFFF',
@@ -237,7 +246,8 @@ export const redsColorRangePalettes = {
       error: '#FF77AA',
       circularReference: '#EECCEE',
       propertyKey: '#FFEEEE',
-      punctuation: '#FFDDEE'
+      punctuation: '#FFDDEE',
+      indentGuide: '#806F77'
     }
   },
   redsAndBrowns: {
@@ -261,7 +271,8 @@ export const redsColorRangePalettes = {
       error: '#DD2211',
       circularReference: '#5A3A2A',
       propertyKey: '#553322',
-      punctuation: '#664433'
+      punctuation: '#664433',
+      indentGuide: '#B3A299'
     },
     dark: {
       text: '#FFFFFF',
@@ -283,7 +294,8 @@ export const redsColorRangePalettes = {
       error: '#FF7766',
       circularReference: '#DDBBAA',
       propertyKey: '#FFEEEE',
-      punctuation: '#FFDDCC'
+      punctuation: '#FFDDCC',
+      indentGuide: '#806F66'
     }
   },
   redsAndGreys: {
@@ -307,7 +319,8 @@ export const redsColorRangePalettes = {
       error: '#DD2222',
       circularReference: '#5A3A3A',
       propertyKey: '#444444',
-      punctuation: '#555555'
+      punctuation: '#555555',
+      indentGuide: '#AAAAAA'
     },
     dark: {
       text: '#FFFFFF',
@@ -329,7 +342,8 @@ export const redsColorRangePalettes = {
       error: '#FF7777',
       circularReference: '#DDCCCC',
       propertyKey: '#FFEEEE',
-      punctuation: '#FFDDDD'
+      punctuation: '#FFDDDD',
+      indentGuide: '#806F6F'
     }
   },
   redsAndCharcoals: {
@@ -353,7 +367,8 @@ export const redsColorRangePalettes = {
       error: '#DD1111',
       circularReference: '#4A2A2A',
       propertyKey: '#333333',
-      punctuation: '#444444'
+      punctuation: '#444444',
+      indentGuide: '#A2A2A2'
     },
     dark: {
       text: '#FFFFFF',
@@ -375,7 +390,8 @@ export const redsColorRangePalettes = {
       error: '#FF6666',
       circularReference: '#CCBBBB',
       propertyKey: '#FFDDDD',
-      punctuation: '#EECCCC'
+      punctuation: '#EECCCC',
+      indentGuide: '#776666'
     }
   },
   redsAndCyans: {
@@ -399,7 +415,8 @@ export const redsColorRangePalettes = {
       error: '#DD2233',
       circularReference: '#5A3A4A',
       propertyKey: '#553344',
-      punctuation: '#664455'
+      punctuation: '#664455',
+      indentGuide: '#B3A2AA'
     },
     dark: {
       text: '#FFFFFF',
@@ -421,7 +438,8 @@ export const redsColorRangePalettes = {
       error: '#FF7799',
       circularReference: '#DDCCDD',
       propertyKey: '#FFEEEE',
-      punctuation: '#FFDDEE'
+      punctuation: '#FFDDEE',
+      indentGuide: '#806F77'
     }
   },
   redsAndMagentas: {
@@ -445,7 +463,8 @@ export const redsColorRangePalettes = {
       error: '#DD2266',
       circularReference: '#6A3A5A',
       propertyKey: '#553355',
-      punctuation: '#664466'
+      punctuation: '#664466',
+      indentGuide: '#B3A2B3'
     },
     dark: {
       text: '#FFFFFF',
@@ -467,7 +486,8 @@ export const redsColorRangePalettes = {
       error: '#FF77AA',
       circularReference: '#EECCEE',
       propertyKey: '#FFEEEE',
-      punctuation: '#FFDDFF'
+      punctuation: '#FFDDFF',
+      indentGuide: '#806F80'
     }
   },
   redsAndLightGrays: {
@@ -491,7 +511,8 @@ export const redsColorRangePalettes = {
       error: '#DD3333',
       circularReference: '#6A4A4A',
       propertyKey: '#555555',
-      punctuation: '#666666'
+      punctuation: '#666666',
+      indentGuide: '#B3B3B3'
     },
     dark: {
       text: '#FFFFFF',
@@ -513,7 +534,8 @@ export const redsColorRangePalettes = {
       error: '#FF8888',
       circularReference: '#EEDDDD',
       propertyKey: '#FFFFFF',
-      punctuation: '#FFEEEE'
+      punctuation: '#FFEEEE',
+      indentGuide: '#807777'
     }
   }
 } as const;

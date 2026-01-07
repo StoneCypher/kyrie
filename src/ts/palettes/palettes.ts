@@ -24,7 +24,8 @@ export const palettes = {
       error: '#CC0044',
       circularReference: '#777777',
       propertyKey: '#444444',
-      punctuation: '#666666'
+      punctuation: '#666666',
+      indentGuide: '#B3B3B3'
     },
     dark: {
       text: '#FFFFFF',
@@ -46,7 +47,8 @@ export const palettes = {
       error: '#FF6699',
       circularReference: '#AAAAAA',
       propertyKey: '#CCCCCC',
-      punctuation: '#999999'
+      punctuation: '#999999',
+      indentGuide: '#4D4D4D'
     }
   },
   pastel: {
@@ -70,7 +72,8 @@ export const palettes = {
       error: '#AA5A6A',
       circularReference: '#7A7A8A',
       propertyKey: '#5A5A6A',
-      punctuation: '#6A6A7A'
+      punctuation: '#6A6A7A',
+      indentGuide: '#B5B5BD'
     },
     dark: {
       text: '#FFFFFF',
@@ -92,7 +95,8 @@ export const palettes = {
       error: '#F8B8C8',
       circularReference: '#C8C8D8',
       propertyKey: '#D8D8E8',
-      punctuation: '#C8C8D8'
+      punctuation: '#C8C8D8',
+      indentGuide: '#64646C'
     }
   },
   bold: {
@@ -116,7 +120,8 @@ export const palettes = {
       error: '#DD0044',
       circularReference: '#666666',
       propertyKey: '#333333',
-      punctuation: '#555555'
+      punctuation: '#555555',
+      indentGuide: '#AAAAAA'
     },
     dark: {
       text: '#FFFFFF',
@@ -138,7 +143,8 @@ export const palettes = {
       error: '#FF4488',
       circularReference: '#BBBBBB',
       propertyKey: '#EEEEEE',
-      punctuation: '#DDDDDD'
+      punctuation: '#DDDDDD',
+      indentGuide: '#6F6F6F'
     }
   },
   dusk: {
@@ -162,7 +168,8 @@ export const palettes = {
       error: '#884455',
       circularReference: '#554466',
       propertyKey: '#443355',
-      punctuation: '#554466'
+      punctuation: '#554466',
+      indentGuide: '#AAA2B3'
     },
     dark: {
       text: '#FFFFFF',
@@ -184,7 +191,8 @@ export const palettes = {
       error: '#EEAABB',
       circularReference: '#BBAACC',
       propertyKey: '#DDCCEE',
-      punctuation: '#CCBBDD'
+      punctuation: '#CCBBDD',
+      indentGuide: '#665E6F'
     }
   },
   lightPastel: {
@@ -208,7 +216,8 @@ export const palettes = {
       error: '#BC8A9A',
       circularReference: '#9A9AAA',
       propertyKey: '#8A8A9A',
-      punctuation: '#9A9AAA'
+      punctuation: '#9A9AAA',
+      indentGuide: '#CDCDD5'
     },
     dark: {
       text: '#FFFFFF',
@@ -230,7 +239,8 @@ export const palettes = {
       error: '#FFE8F8',
       circularReference: '#E8E8F8',
       propertyKey: '#F8F8FF',
-      punctuation: '#E8E8F8'
+      punctuation: '#E8E8F8',
+      indentGuide: '#74747C'
     }
   },
   funky: {
@@ -254,7 +264,8 @@ export const palettes = {
       error: '#CC0088',
       circularReference: '#666677',
       propertyKey: '#444455',
-      punctuation: '#555566'
+      punctuation: '#555566',
+      indentGuide: '#AAAAB3'
     },
     dark: {
       text: '#FFFFFF',
@@ -276,7 +287,8 @@ export const palettes = {
       error: '#FF66DD',
       circularReference: '#BBBBCC',
       propertyKey: '#DDDDEE',
-      punctuation: '#CCCCDD'
+      punctuation: '#CCCCDD',
+      indentGuide: '#66666F'
     }
   },
   boring: {
@@ -300,7 +312,8 @@ export const palettes = {
       error: '#775566',
       circularReference: '#666666',
       propertyKey: '#555555',
-      punctuation: '#666666'
+      punctuation: '#666666',
+      indentGuide: '#B3B3B3'
     },
     dark: {
       text: '#FFFFFF',
@@ -322,7 +335,8 @@ export const palettes = {
       error: '#CCAABB',
       circularReference: '#AAAAAA',
       propertyKey: '#BBBBBB',
-      punctuation: '#AAAAAA'
+      punctuation: '#AAAAAA',
+      indentGuide: '#555555'
     }
   },
   mobster: {
@@ -346,7 +360,8 @@ export const palettes = {
       error: '#5A2A2A',
       circularReference: '#2A2A2A',
       propertyKey: '#1A1A1A',
-      punctuation: '#3A3A3A'
+      punctuation: '#3A3A3A',
+      indentGuide: '#9D9D9D'
     },
     dark: {
       text: '#FFFFFF',
@@ -368,7 +383,8 @@ export const palettes = {
       error: '#E5C5C5',
       circularReference: '#D5D5D5',
       propertyKey: '#F5F5F5',
-      punctuation: '#E5E5E5'
+      punctuation: '#E5E5E5',
+      indentGuide: '#737373'
     }
   },
   money: {
@@ -392,7 +408,8 @@ export const palettes = {
       error: '#6A3A1A',
       circularReference: '#2A4A2A',
       propertyKey: '#1A3A1A',
-      punctuation: '#3A5A3A'
+      punctuation: '#3A5A3A',
+      indentGuide: '#9DAD9D'
     },
     dark: {
       text: '#FFFFFF',
@@ -414,7 +431,8 @@ export const palettes = {
       error: '#F5B585',
       circularReference: '#A5D5A5',
       propertyKey: '#C5F5C5',
-      punctuation: '#B5E5B5'
+      punctuation: '#B5E5B5',
+      indentGuide: '#5B735B'
     }
   },
   skeleton: {
@@ -438,7 +456,8 @@ export const palettes = {
       error: '#6A4A4A',
       circularReference: '#4A4A4A',
       propertyKey: '#3A3A3A',
-      punctuation: '#5A5A5A'
+      punctuation: '#5A5A5A',
+      indentGuide: '#ADADAD'
     },
     dark: {
       text: '#FFFFFF',
@@ -460,7 +479,8 @@ export const palettes = {
       error: '#FFE5E5',
       circularReference: '#E5E5E5',
       propertyKey: '#FFFFFF',
-      punctuation: '#F5F5F5'
+      punctuation: '#F5F5F5',
+      indentGuide: '#7B7B7B'
     }
   },
   sinister: {
@@ -484,7 +504,8 @@ export const palettes = {
       error: '#5A1A1A',
       circularReference: '#2A1A1A',
       propertyKey: '#1A1A1A',
-      punctuation: '#2A2A2A'
+      punctuation: '#2A2A2A',
+      indentGuide: '#959595'
     },
     dark: {
       text: '#FFFFFF',
@@ -506,7 +527,8 @@ export const palettes = {
       error: '#F5A5A5',
       circularReference: '#C5A5A5',
       propertyKey: '#E5E5E5',
-      punctuation: '#D5D5D5'
+      punctuation: '#D5D5D5',
+      indentGuide: '#6B6B6B'
     }
   },
   halloween: {
@@ -530,7 +552,8 @@ export const palettes = {
       error: '#AA2200',
       circularReference: '#3A3A3A',
       propertyKey: '#2A2A2A',
-      punctuation: '#4A4A4A'
+      punctuation: '#4A4A4A',
+      indentGuide: '#A5A5A5'
     },
     dark: {
       text: '#FFFFFF',
@@ -552,7 +575,8 @@ export const palettes = {
       error: '#FF6633',
       circularReference: '#D5D5D5',
       propertyKey: '#FFFFFF',
-      punctuation: '#E5E5E5'
+      punctuation: '#E5E5E5',
+      indentGuide: '#737373'
     }
   },
   vampire: {
@@ -576,7 +600,8 @@ export const palettes = {
       error: '#7A1A1A',
       circularReference: '#1A1A1A',
       propertyKey: '#0A0A0A',
-      punctuation: '#2A2A2A'
+      punctuation: '#2A2A2A',
+      indentGuide: '#959595'
     },
     dark: {
       text: '#FFFFFF',
@@ -598,7 +623,8 @@ export const palettes = {
       error: '#FF7777',
       circularReference: '#C5C5C5',
       propertyKey: '#E5E5E5',
-      punctuation: '#D5D5D5'
+      punctuation: '#D5D5D5',
+      indentGuide: '#6B6B6B'
     }
   },
   grayscale: {
@@ -622,7 +648,8 @@ export const palettes = {
       error: '#5D5D5D',
       circularReference: '#444444',
       propertyKey: '#333333',
-      punctuation: '#555555'
+      punctuation: '#555555',
+      indentGuide: '#AAAAAA'
     },
     dark: {
       text: '#FFFFFF',
@@ -644,7 +671,8 @@ export const palettes = {
       error: '#D8D8D8',
       circularReference: '#BBBBBB',
       propertyKey: '#EEEEEE',
-      punctuation: '#CCCCCC'
+      punctuation: '#CCCCCC',
+      indentGuide: '#666666'
     }
   },
   blues: {
@@ -668,7 +696,8 @@ export const palettes = {
       error: '#2A3A5A',
       circularReference: '#1A3A5A',
       propertyKey: '#0A2A4A',
-      punctuation: '#2A4A6A'
+      punctuation: '#2A4A6A',
+      indentGuide: '#95A5B5'
     },
     dark: {
       text: '#FFFFFF',
@@ -690,7 +719,8 @@ export const palettes = {
       error: '#99BBDD',
       circularReference: '#88CCFF',
       propertyKey: '#CCFFFF',
-      punctuation: '#99DDFF'
+      punctuation: '#99DDFF',
+      indentGuide: '#4D6F80'
     }
   },
   circus: {
@@ -714,7 +744,8 @@ export const palettes = {
       error: '#DD0000',
       circularReference: '#4A4A4A',
       propertyKey: '#3A3A3A',
-      punctuation: '#5A5A5A'
+      punctuation: '#5A5A5A',
+      indentGuide: '#ADADAD'
     },
     dark: {
       text: '#FFFFFF',
@@ -736,7 +767,8 @@ export const palettes = {
       error: '#FF4444',
       circularReference: '#D5D5D5',
       propertyKey: '#FFFFFF',
-      punctuation: '#E5E5E5'
+      punctuation: '#E5E5E5',
+      indentGuide: '#737373'
     }
   },
   monkey: {
@@ -760,7 +792,8 @@ export const palettes = {
       error: '#6A4A2A',
       circularReference: '#4A3A2A',
       propertyKey: '#3A2A1A',
-      punctuation: '#5A4A3A'
+      punctuation: '#5A4A3A',
+      indentGuide: '#ADA59D'
     },
     dark: {
       text: '#FFFFFF',
@@ -782,7 +815,8 @@ export const palettes = {
       error: '#E5C5A5',
       circularReference: '#C5B5A5',
       propertyKey: '#E5D5C5',
-      punctuation: '#D5C5B5'
+      punctuation: '#D5C5B5',
+      indentGuide: '#6B635B'
     }
   },
   rainbow: {
@@ -806,7 +840,8 @@ export const palettes = {
       error: '#AA0000',
       circularReference: '#4A4A4A',
       propertyKey: '#3A3A3A',
-      punctuation: '#5A5A5A'
+      punctuation: '#5A5A5A',
+      indentGuide: '#ADADAD'
     },
     dark: {
       text: '#FFFFFF',
@@ -828,7 +863,8 @@ export const palettes = {
       error: '#FF4444',
       circularReference: '#D5D5D5',
       propertyKey: '#FFFFFF',
-      punctuation: '#E5E5E5'
+      punctuation: '#E5E5E5',
+      indentGuide: '#737373'
     }
   },
   mutedRainbow: {
@@ -852,7 +888,8 @@ export const palettes = {
       error: '#7A4A4A',
       circularReference: '#5A5A5A',
       propertyKey: '#4A4A4A',
-      punctuation: '#6A6A6A'
+      punctuation: '#6A6A6A',
+      indentGuide: '#B5B5B5'
     },
     dark: {
       text: '#FFFFFF',
@@ -874,7 +911,8 @@ export const palettes = {
       error: '#D5A5A5',
       circularReference: '#C5C5C5',
       propertyKey: '#E5E5E5',
-      punctuation: '#D5D5D5'
+      punctuation: '#D5D5D5',
+      indentGuide: '#6B6B6B'
     }
   },
   brownAndGreen: {
@@ -898,7 +936,8 @@ export const palettes = {
       error: '#6A4A2A',
       circularReference: '#4A3A2A',
       propertyKey: '#3A2A1A',
-      punctuation: '#5A4A3A'
+      punctuation: '#5A4A3A',
+      indentGuide: '#ADA59D'
     },
     dark: {
       text: '#FFFFFF',
@@ -920,7 +959,8 @@ export const palettes = {
       error: '#F5D5B5',
       circularReference: '#D5C5B5',
       propertyKey: '#F5E5D5',
-      punctuation: '#E5D5C5'
+      punctuation: '#E5D5C5',
+      indentGuide: '#736B63'
     }
   },
   solarFlare: {
@@ -944,7 +984,8 @@ export const palettes = {
       error: '#DD5A1A',
       circularReference: '#5A3A1A',
       propertyKey: '#4A2A0A',
-      punctuation: '#6A4A2A'
+      punctuation: '#6A4A2A',
+      indentGuide: '#B5A595'
     },
     dark: {
       text: '#FFFFFF',
@@ -966,7 +1007,8 @@ export const palettes = {
       error: '#FFBB44',
       circularReference: '#FFCC99',
       propertyKey: '#FFF5DD',
-      punctuation: '#FFD5AA'
+      punctuation: '#FFD5AA',
+      indentGuide: '#806B55'
     }
   },
   purpleToOrange: {
@@ -990,7 +1032,8 @@ export const palettes = {
       error: '#9A5A3A',
       circularReference: '#4A3A5A',
       propertyKey: '#3A2A4A',
-      punctuation: '#5A4A6A'
+      punctuation: '#5A4A6A',
+      indentGuide: '#ADA5B5'
     },
     dark: {
       text: '#FFFFFF',
@@ -1012,7 +1055,8 @@ export const palettes = {
       error: '#FFCCAA',
       circularReference: '#D5C5E5',
       propertyKey: '#F5E5FF',
-      punctuation: '#E5D5F5'
+      punctuation: '#E5D5F5',
+      indentGuide: '#736B7B'
     }
   },
   commodore64: {
@@ -1036,7 +1080,8 @@ export const palettes = {
       error: '#3A3A6A',
       circularReference: '#2A3A5A',
       propertyKey: '#1A2A4A',
-      punctuation: '#3A4A6A'
+      punctuation: '#3A4A6A',
+      indentGuide: '#9DA5B5'
     },
     dark: {
       text: '#FFFFFF',
@@ -1058,7 +1103,8 @@ export const palettes = {
       error: '#AABBEE',
       circularReference: '#AACCFF',
       propertyKey: '#EEFFFF',
-      punctuation: '#BBDDFF'
+      punctuation: '#BBDDFF',
+      indentGuide: '#5E6F80'
     }
   },
   military: {
@@ -1082,7 +1128,8 @@ export const palettes = {
       error: '#5A4A2A',
       circularReference: '#3A4A2A',
       propertyKey: '#2A3A1A',
-      punctuation: '#4A5A3A'
+      punctuation: '#4A5A3A',
+      indentGuide: '#A5AD9D'
     },
     dark: {
       text: '#FFFFFF',
@@ -1104,7 +1151,8 @@ export const palettes = {
       error: '#D5C5A5',
       circularReference: '#C5D5B5',
       propertyKey: '#E5F5D5',
-      punctuation: '#D5E5C5'
+      punctuation: '#D5E5C5',
+      indentGuide: '#6B7363'
     }
   },
   police: {
@@ -1128,7 +1176,8 @@ export const palettes = {
       error: '#2A2A4A',
       circularReference: '#1A2A3A',
       propertyKey: '#0A1A2A',
-      punctuation: '#2A3A4A'
+      punctuation: '#2A3A4A',
+      indentGuide: '#959DA5'
     },
     dark: {
       text: '#FFFFFF',
@@ -1150,7 +1199,8 @@ export const palettes = {
       error: '#99AAEE',
       circularReference: '#99CCEE',
       propertyKey: '#DDEEFF',
-      punctuation: '#AADDFF'
+      punctuation: '#AADDFF',
+      indentGuide: '#556F80'
     }
   },
   hacker: {
@@ -1174,7 +1224,8 @@ export const palettes = {
       error: '#2A2A1A',
       circularReference: '#1A2A1A',
       propertyKey: '#0A1A0A',
-      punctuation: '#2A3A2A'
+      punctuation: '#2A3A2A',
+      indentGuide: '#959D95'
     },
     dark: {
       text: '#FFFFFF',
@@ -1196,7 +1247,8 @@ export const palettes = {
       error: '#88FF77',
       circularReference: '#88EE88',
       propertyKey: '#DDFFDD',
-      punctuation: '#99FF99'
+      punctuation: '#99FF99',
+      indentGuide: '#4D804D'
     }
   },
   wizard: {
@@ -1220,7 +1272,8 @@ export const palettes = {
       error: '#3A2A5A',
       circularReference: '#2A2A4A',
       propertyKey: '#1A1A3A',
-      punctuation: '#3A3A5A'
+      punctuation: '#3A3A5A',
+      indentGuide: '#9D9DAD'
     },
     dark: {
       text: '#FFFFFF',
@@ -1242,7 +1295,8 @@ export const palettes = {
       error: '#AA99DD',
       circularReference: '#AAAADD',
       propertyKey: '#EEEEFF',
-      punctuation: '#BBBBEE'
+      punctuation: '#BBBBEE',
+      indentGuide: '#5E5E77'
     }
   },
   gunmetal: {
@@ -1266,7 +1320,8 @@ export const palettes = {
       error: '#3A2A2A',
       circularReference: '#2A2A2A',
       propertyKey: '#1A1A1A',
-      punctuation: '#3A3A3A'
+      punctuation: '#3A3A3A',
+      indentGuide: '#9D9D9D'
     },
     dark: {
       text: '#FFFFFF',
@@ -1288,7 +1343,8 @@ export const palettes = {
       error: '#D5C5C5',
       circularReference: '#C5C5C5',
       propertyKey: '#E5E5E5',
-      punctuation: '#D5D5D5'
+      punctuation: '#D5D5D5',
+      indentGuide: '#6B6B6B'
     }
   },
   cocaCola: {
@@ -1312,7 +1368,8 @@ export const palettes = {
       error: '#CC1A1A',
       circularReference: '#4A2A2A',
       propertyKey: '#2A1A1A',
-      punctuation: '#5A3A3A'
+      punctuation: '#5A3A3A',
+      indentGuide: '#AD9D9D'
     },
     dark: {
       text: '#FFFFFF',
@@ -1334,7 +1391,8 @@ export const palettes = {
       error: '#FF7777',
       circularReference: '#E5C5C5',
       propertyKey: '#FFEEEE',
-      punctuation: '#F5D5D5'
+      punctuation: '#F5D5D5',
+      indentGuide: '#7B6B6B'
     }
   },
   ogre: {
@@ -1358,7 +1416,8 @@ export const palettes = {
       error: '#4A3A1A',
       circularReference: '#3A4A2A',
       propertyKey: '#2A3A1A',
-      punctuation: '#4A5A3A'
+      punctuation: '#4A5A3A',
+      indentGuide: '#A5AD9D'
     },
     dark: {
       text: '#FFFFFF',
@@ -1380,7 +1439,8 @@ export const palettes = {
       error: '#C5B588',
       circularReference: '#C5D5B5',
       propertyKey: '#E5F5D5',
-      punctuation: '#D5E5C5'
+      punctuation: '#D5E5C5',
+      indentGuide: '#6B7363'
     }
   },
   burglar: {
@@ -1404,7 +1464,8 @@ export const palettes = {
       error: '#2A2A2A',
       circularReference: '#1A1A1A',
       propertyKey: '#0A0A0A',
-      punctuation: '#2A2A2A'
+      punctuation: '#2A2A2A',
+      indentGuide: '#959595'
     },
     dark: {
       text: '#FFFFFF',
@@ -1426,7 +1487,8 @@ export const palettes = {
       error: '#F5F5F5',
       circularReference: '#E5E5E5',
       propertyKey: '#FFFFFF',
-      punctuation: '#F5F5F5'
+      punctuation: '#F5F5F5',
+      indentGuide: '#7B7B7B'
     }
   },
   crystal: {
@@ -1450,7 +1512,8 @@ export const palettes = {
       error: '#5A3A6A',
       circularReference: '#3A4A5A',
       propertyKey: '#2A3A4A',
-      punctuation: '#4A5A6A'
+      punctuation: '#4A5A6A',
+      indentGuide: '#A5ADB5'
     },
     dark: {
       text: '#FFFFFF',
@@ -1472,7 +1535,8 @@ export const palettes = {
       error: '#EEAAFF',
       circularReference: '#CCDDEE',
       propertyKey: '#EEFFFF',
-      punctuation: '#DDEEFF'
+      punctuation: '#DDEEFF',
+      indentGuide: '#6F7780'
     }
   },
   laser: {
@@ -1496,7 +1560,8 @@ export const palettes = {
       error: '#CC00AA',
       circularReference: '#4A4A4A',
       propertyKey: '#2A2A2A',
-      punctuation: '#5A5A5A'
+      punctuation: '#5A5A5A',
+      indentGuide: '#ADADAD'
     },
     dark: {
       text: '#FFFFFF',
@@ -1518,7 +1583,8 @@ export const palettes = {
       error: '#FF66FF',
       circularReference: '#EEEEEE',
       propertyKey: '#FFFFFF',
-      punctuation: '#F5F5F5'
+      punctuation: '#F5F5F5',
+      indentGuide: '#7B7B7B'
     }
   },
   kungFu: {
@@ -1542,7 +1608,8 @@ export const palettes = {
       error: '#8A2A1A',
       circularReference: '#4A3A2A',
       propertyKey: '#2A2A1A',
-      punctuation: '#5A4A3A'
+      punctuation: '#5A4A3A',
+      indentGuide: '#ADA59D'
     },
     dark: {
       text: '#FFFFFF',
@@ -1564,7 +1631,8 @@ export const palettes = {
       error: '#FF9977',
       circularReference: '#E5D5C5',
       propertyKey: '#FFF5E5',
-      punctuation: '#F5E5D5'
+      punctuation: '#F5E5D5',
+      indentGuide: '#7B736B'
     }
   },
   starTrek: {
@@ -1588,7 +1656,8 @@ export const palettes = {
       error: '#AA3A3A',
       circularReference: '#3A3A4A',
       propertyKey: '#2A2A3A',
-      punctuation: '#4A4A5A'
+      punctuation: '#4A4A5A',
+      indentGuide: '#A5A5AD'
     },
     dark: {
       text: '#FFFFFF',
@@ -1610,7 +1679,8 @@ export const palettes = {
       error: '#FFBBBB',
       circularReference: '#CCCCDD',
       propertyKey: '#EEEEFF',
-      punctuation: '#DDDDEE'
+      punctuation: '#DDDDEE',
+      indentGuide: '#6F6F77'
     }
   },
   antique: {
@@ -1634,7 +1704,8 @@ export const palettes = {
       error: '#7A5A3A',
       circularReference: '#4A3A2A',
       propertyKey: '#3A2A1A',
-      punctuation: '#5A4A3A'
+      punctuation: '#5A4A3A',
+      indentGuide: '#ADA59D'
     },
     dark: {
       text: '#FFFFFF',
@@ -1656,7 +1727,8 @@ export const palettes = {
       error: '#EFD5C5',
       circularReference: '#D5C5B5',
       propertyKey: '#F5E5D5',
-      punctuation: '#E5D5C5'
+      punctuation: '#E5D5C5',
+      indentGuide: '#736B63'
     }
   },
   book: {
@@ -1680,7 +1752,8 @@ export const palettes = {
       error: '#6A5A3A',
       circularReference: '#4A4A3A',
       propertyKey: '#3A3A2A',
-      punctuation: '#5A5A4A'
+      punctuation: '#5A5A4A',
+      indentGuide: '#ADADA5'
     },
     dark: {
       text: '#FFFFFF',
@@ -1702,7 +1775,8 @@ export const palettes = {
       error: '#F5E5D5',
       circularReference: '#E5E5D5',
       propertyKey: '#FFFEE5',
-      punctuation: '#F5F5E5'
+      punctuation: '#F5F5E5',
+      indentGuide: '#7B7B73'
     }
   },
   eighties: {
@@ -1726,7 +1800,8 @@ export const palettes = {
       error: '#CC00CC',
       circularReference: '#4A4A4A',
       propertyKey: '#3A3A3A',
-      punctuation: '#5A5A5A'
+      punctuation: '#5A5A5A',
+      indentGuide: '#ADADAD'
     },
     dark: {
       text: '#FFFFFF',
@@ -1748,7 +1823,8 @@ export const palettes = {
       error: '#FF66FF',
       circularReference: '#E5E5E5',
       propertyKey: '#FFFFFF',
-      punctuation: '#F5F5F5'
+      punctuation: '#F5F5F5',
+      indentGuide: '#7B7B7B'
     }
   },
   neon: {
@@ -1772,7 +1848,8 @@ export const palettes = {
       error: '#FF00FF',
       circularReference: '#4A4A4A',
       propertyKey: '#2A2A2A',
-      punctuation: '#5A5A5A'
+      punctuation: '#5A5A5A',
+      indentGuide: '#ADADAD'
     },
     dark: {
       text: '#FFFFFF',
@@ -1794,7 +1871,8 @@ export const palettes = {
       error: '#FF66FF',
       circularReference: '#F5F5F5',
       propertyKey: '#FFFFFF',
-      punctuation: '#FFFFFF'
+      punctuation: '#FFFFFF',
+      indentGuide: '#808080'
     }
   },
   logger: {
@@ -1818,7 +1896,8 @@ export const palettes = {
       error: '#7A3A2A',
       circularReference: '#3A3A2A',
       propertyKey: '#2A2A1A',
-      punctuation: '#4A4A3A'
+      punctuation: '#4A4A3A',
+      indentGuide: '#A5A59D'
     },
     dark: {
       text: '#FFFFFF',
@@ -1840,7 +1919,8 @@ export const palettes = {
       error: '#EEAA99',
       circularReference: '#C5C5B5',
       propertyKey: '#E5E5D5',
-      punctuation: '#D5D5C5'
+      punctuation: '#D5D5C5',
+      indentGuide: '#6B6B63'
     }
   },
   system: {
@@ -1864,7 +1944,8 @@ export const palettes = {
       error: '#3A3A5A',
       circularReference: '#2A3A4A',
       propertyKey: '#1A2A3A',
-      punctuation: '#3A4A5A'
+      punctuation: '#3A4A5A',
+      indentGuide: '#9DA5AD'
     },
     dark: {
       text: '#FFFFFF',
@@ -1886,7 +1967,8 @@ export const palettes = {
       error: '#AABBDD',
       circularReference: '#AACCDD',
       propertyKey: '#DDEEFF',
-      punctuation: '#BBDDEE'
+      punctuation: '#BBDDEE',
+      indentGuide: '#5E6F77'
     }
   },
   alien: {
@@ -1910,7 +1992,8 @@ export const palettes = {
       error: '#3A4A2A',
       circularReference: '#2A3A2A',
       propertyKey: '#1A2A1A',
-      punctuation: '#3A4A3A'
+      punctuation: '#3A4A3A',
+      indentGuide: '#9DA59D'
     },
     dark: {
       text: '#FFFFFF',
@@ -1932,7 +2015,8 @@ export const palettes = {
       error: '#B5E5A5',
       circularReference: '#A5D5A5',
       propertyKey: '#DDFFD5',
-      punctuation: '#B5E5B5'
+      punctuation: '#B5E5B5',
+      indentGuide: '#5B735B'
     }
   }
 } as const;

@@ -24,7 +24,8 @@ export const tritanopiaPalettes = {
       error: '#6A3A2A',
       circularReference: '#4A3A2A',
       propertyKey: '#3A2A1A',
-      punctuation: '#5A4A3A'
+      punctuation: '#5A4A3A',
+      indentGuide: '#ADA59D'
     },
     dark: {
       text: '#FFFFFF',
@@ -46,7 +47,8 @@ export const tritanopiaPalettes = {
       error: '#F5C5B5',
       circularReference: '#D5C5B5',
       propertyKey: '#E5D5C5',
-      punctuation: '#E5D5C5'
+      punctuation: '#E5D5C5',
+      indentGuide: '#736B63'
     }
   },
   tritanopiaBright: {
@@ -70,7 +72,8 @@ export const tritanopiaPalettes = {
       error: '#AA5577',
       circularReference: '#555555',
       propertyKey: '#333333',
-      punctuation: '#4A4A4A'
+      punctuation: '#4A4A4A',
+      indentGuide: '#A5A5A5'
     },
     dark: {
       text: '#FFFFFF',
@@ -92,7 +95,8 @@ export const tritanopiaPalettes = {
       error: '#FFAACC',
       circularReference: '#CCCCCC',
       propertyKey: '#DDDDDD',
-      punctuation: '#BBBBBB'
+      punctuation: '#BBBBBB',
+      indentGuide: '#5E5E5E'
     }
   },
   tritanopiaSubtle: {
@@ -116,7 +120,8 @@ export const tritanopiaPalettes = {
       error: '#7A5A6A',
       circularReference: '#6A6A6A',
       propertyKey: '#4A4A4A',
-      punctuation: '#5A5A5A'
+      punctuation: '#5A5A5A',
+      indentGuide: '#ADADAD'
     },
     dark: {
       text: '#FFFFFF',
@@ -138,7 +143,8 @@ export const tritanopiaPalettes = {
       error: '#CCAABB',
       circularReference: '#BBBBBB',
       propertyKey: '#CCCCCC',
-      punctuation: '#AAAAAA'
+      punctuation: '#AAAAAA',
+      indentGuide: '#555555'
     }
   },
   tritanopiaPastel: {
@@ -162,7 +168,8 @@ export const tritanopiaPalettes = {
       error: '#8A6A7A',
       circularReference: '#7A7A7A',
       propertyKey: '#5A5A5A',
-      punctuation: '#6A6A6A'
+      punctuation: '#6A6A6A',
+      indentGuide: '#B5B5B5'
     },
     dark: {
       text: '#FFFFFF',
@@ -184,7 +191,8 @@ export const tritanopiaPalettes = {
       error: '#FFDDEE',
       circularReference: '#E5E5E5',
       propertyKey: '#F5F5F5',
-      punctuation: '#D5D5D5'
+      punctuation: '#D5D5D5',
+      indentGuide: '#6B6B6B'
     }
   },
   tritanopiaBoring: {
@@ -208,7 +216,8 @@ export const tritanopiaPalettes = {
       error: '#4A3A4A',
       circularReference: '#5A5A5A',
       propertyKey: '#2A2A2A',
-      punctuation: '#4A4A4A'
+      punctuation: '#4A4A4A',
+      indentGuide: '#A5A5A5'
     },
     dark: {
       text: '#FFFFFF',
@@ -230,7 +239,8 @@ export const tritanopiaPalettes = {
       error: '#AAA5AA',
       circularReference: '#BBBBBB',
       propertyKey: '#CCCCCC',
-      punctuation: '#AAAAAA'
+      punctuation: '#AAAAAA',
+      indentGuide: '#555555'
     }
   },
   tritanopiaFunky: {
@@ -254,7 +264,8 @@ export const tritanopiaPalettes = {
       error: '#AA4466',
       circularReference: '#555555',
       propertyKey: '#222222',
-      punctuation: '#4A4A4A'
+      punctuation: '#4A4A4A',
+      indentGuide: '#A5A5A5'
     },
     dark: {
       text: '#FFFFFF',
@@ -276,7 +287,8 @@ export const tritanopiaPalettes = {
       error: '#FFBBDD',
       circularReference: '#DDDDDD',
       propertyKey: '#EEEEEE',
-      punctuation: '#CCCCCC'
+      punctuation: '#CCCCCC',
+      indentGuide: '#666666'
     }
   },
   tritanopiaVivid: {
@@ -300,7 +312,8 @@ export const tritanopiaPalettes = {
       error: '#AA3355',
       circularReference: '#444444',
       propertyKey: '#1A1A1A',
-      punctuation: '#3A3A3A'
+      punctuation: '#3A3A3A',
+      indentGuide: '#9D9D9D'
     },
     dark: {
       text: '#FFFFFF',
@@ -322,7 +335,8 @@ export const tritanopiaPalettes = {
       error: '#FFCCEE',
       circularReference: '#DDDDDD',
       propertyKey: '#EEEEEE',
-      punctuation: '#CCCCCC'
+      punctuation: '#CCCCCC',
+      indentGuide: '#666666'
     }
   }
 } as const;

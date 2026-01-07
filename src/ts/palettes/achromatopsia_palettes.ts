@@ -24,7 +24,8 @@ export const achromatopsiaPalettes = {
       error: '#595959',
       circularReference: '#3B3B3B',
       propertyKey: '#2B2B2B',
-      punctuation: '#4B4B4B'
+      punctuation: '#4B4B4B',
+      indentGuide: '#A5A5A5'
     },
     dark: {
       text: '#FFFFFF',
@@ -46,7 +47,8 @@ export const achromatopsiaPalettes = {
       error: '#E9E9E9',
       circularReference: '#C6C6C6',
       propertyKey: '#F1F1F1',
-      punctuation: '#D6D6D6'
+      punctuation: '#D6D6D6',
+      indentGuide: '#6B6B6B'
     }
   }
 } as const;

@@ -25,7 +25,8 @@ export const naturePalettes = {
       error: '#882233',
       circularReference: '#445544',
       propertyKey: '#223322',
-      punctuation: '#334433'
+      punctuation: '#334433',
+      indentGuide: '#99A299'
     },
     dark: {
       text: '#FFFFFF',
@@ -47,7 +48,8 @@ export const naturePalettes = {
       error: '#DD7788',
       circularReference: '#99BB99',
       propertyKey: '#BBDDBB',
-      punctuation: '#AACCAA'
+      punctuation: '#AACCAA',
+      indentGuide: '#556655'
     }
   },
   garden: {
@@ -71,7 +73,8 @@ export const naturePalettes = {
       error: '#AA3344',
       circularReference: '#556655',
       propertyKey: '#334433',
-      punctuation: '#445544'
+      punctuation: '#445544',
+      indentGuide: '#A2AAA2'
     },
     dark: {
       text: '#FFFFFF',
@@ -93,7 +96,8 @@ export const naturePalettes = {
       error: '#FF8899',
       circularReference: '#AACCAA',
       propertyKey: '#CCEECC',
-      punctuation: '#BBDDBB'
+      punctuation: '#BBDDBB',
+      indentGuide: '#5E6F5E'
     }
   },
   flowers: {
@@ -117,7 +121,8 @@ export const naturePalettes = {
       error: '#AA3A5A',
       circularReference: '#4A4A4A',
       propertyKey: '#3A3A3A',
-      punctuation: '#5A5A5A'
+      punctuation: '#5A5A5A',
+      indentGuide: '#ADADAD'
     },
     dark: {
       text: '#FFFFFF',
@@ -139,7 +144,8 @@ export const naturePalettes = {
       error: '#FFAACC',
       circularReference: '#E5E5E5',
       propertyKey: '#FFFFFF',
-      punctuation: '#F5F5F5'
+      punctuation: '#F5F5F5',
+      indentGuide: '#7B7B7B'
     }
   },
   sky: {
@@ -163,7 +169,8 @@ export const naturePalettes = {
       error: '#5A5A3A',
       circularReference: '#3A5A7A',
       propertyKey: '#2A4A6A',
-      punctuation: '#4A6A8A'
+      punctuation: '#4A6A8A',
+      indentGuide: '#A5B5C5'
     },
     dark: {
       text: '#FFFFFF',
@@ -185,7 +192,8 @@ export const naturePalettes = {
       error: '#DDDDAA',
       circularReference: '#AADDFF',
       propertyKey: '#EEFFFF',
-      punctuation: '#BBEEFF'
+      punctuation: '#BBEEFF',
+      indentGuide: '#5E7780'
     }
   },
   sunflower: {
@@ -209,7 +217,8 @@ export const naturePalettes = {
       error: '#7A5A1A',
       circularReference: '#5A4A2A',
       propertyKey: '#4A3A1A',
-      punctuation: '#6A5A3A'
+      punctuation: '#6A5A3A',
+      indentGuide: '#B5AD9D'
     },
     dark: {
       text: '#FFFFFF',
@@ -231,7 +240,8 @@ export const naturePalettes = {
       error: '#EFD588',
       circularReference: '#E5D5B5',
       propertyKey: '#FFF5D5',
-      punctuation: '#F5E5C5'
+      punctuation: '#F5E5C5',
+      indentGuide: '#7B7363'
     }
   },
   strawberry: {
@@ -255,7 +265,8 @@ export const naturePalettes = {
       error: '#CC2A2A',
       circularReference: '#5A3A3A',
       propertyKey: '#4A2A2A',
-      punctuation: '#6A4A4A'
+      punctuation: '#6A4A4A',
+      indentGuide: '#B5A5A5'
     },
     dark: {
       text: '#FFFFFF',
@@ -277,7 +288,8 @@ export const naturePalettes = {
       error: '#FF6666',
       circularReference: '#E5C5C5',
       propertyKey: '#FFEEEE',
-      punctuation: '#F5D5D5'
+      punctuation: '#F5D5D5',
+      indentGuide: '#7B6B6B'
     }
   },
   butterfly: {
@@ -301,7 +313,8 @@ export const naturePalettes = {
       error: '#CA3A4A',
       circularReference: '#4A4A5A',
       propertyKey: '#3A3A4A',
-      punctuation: '#5A5A6A'
+      punctuation: '#5A5A6A',
+      indentGuide: '#ADADB5'
     },
     dark: {
       text: '#FFFFFF',
@@ -323,7 +336,8 @@ export const naturePalettes = {
       error: '#FF99AA',
       circularReference: '#D5D5E5',
       propertyKey: '#F5F5FF',
-      punctuation: '#E5E5F5'
+      punctuation: '#E5E5F5',
+      indentGuide: '#73737B'
     }
   }
 } as const;

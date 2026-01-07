@@ -28,7 +28,8 @@ export const bluesColorRangePalettes = {
       error: '#7A3A3A',
       circularReference: '#1A3A5A',
       propertyKey: '#0A2A4A',
-      punctuation: '#2A4A6A'
+      punctuation: '#2A4A6A',
+      indentGuide: '#95A5B5'
     },
     dark: {
       text: '#FFFFFF',
@@ -50,7 +51,8 @@ export const bluesColorRangePalettes = {
       error: '#FF7788',
       circularReference: '#88CCFF',
       propertyKey: '#CCFFFF',
-      punctuation: '#99DDFF'
+      punctuation: '#99DDFF',
+      indentGuide: '#4D6F80'
     }
   },
   bluesAndOranges: {
@@ -74,7 +76,8 @@ export const bluesColorRangePalettes = {
       error: '#AA6A3A',
       circularReference: '#1A3A5A',
       propertyKey: '#0A2A4A',
-      punctuation: '#2A4A6A'
+      punctuation: '#2A4A6A',
+      indentGuide: '#95A5B5'
     },
     dark: {
       text: '#FFFFFF',
@@ -96,7 +99,8 @@ export const bluesColorRangePalettes = {
       error: '#FFAA66',
       circularReference: '#88CCFF',
       propertyKey: '#CCFFFF',
-      punctuation: '#99DDFF'
+      punctuation: '#99DDFF',
+      indentGuide: '#4D6F80'
     }
   },
   bluesAndYellows: {
@@ -120,7 +124,8 @@ export const bluesColorRangePalettes = {
       error: '#8A7A2A',
       circularReference: '#1A3A5A',
       propertyKey: '#0A2A4A',
-      punctuation: '#2A4A6A'
+      punctuation: '#2A4A6A',
+      indentGuide: '#95A5B5'
     },
     dark: {
       text: '#FFFFFF',
@@ -142,7 +147,8 @@ export const bluesColorRangePalettes = {
       error: '#FFDD77',
       circularReference: '#88CCFF',
       propertyKey: '#CCFFFF',
-      punctuation: '#99DDFF'
+      punctuation: '#99DDFF',
+      indentGuide: '#4D6F80'
     }
   },
   bluesAndGreens: {
@@ -166,7 +172,8 @@ export const bluesColorRangePalettes = {
       error: '#2A5A3A',
       circularReference: '#1A3A5A',
       propertyKey: '#0A2A4A',
-      punctuation: '#2A4A6A'
+      punctuation: '#2A4A6A',
+      indentGuide: '#95A5B5'
     },
     dark: {
       text: '#FFFFFF',
@@ -188,7 +195,8 @@ export const bluesColorRangePalettes = {
       error: '#77FF99',
       circularReference: '#88CCFF',
       propertyKey: '#CCFFFF',
-      punctuation: '#99DDFF'
+      punctuation: '#99DDFF',
+      indentGuide: '#4D6F80'
     }
   },
   bluesAndPurples: {
@@ -212,7 +220,8 @@ export const bluesColorRangePalettes = {
       error: '#5A2A6A',
       circularReference: '#1A3A5A',
       propertyKey: '#0A2A4A',
-      punctuation: '#2A4A6A'
+      punctuation: '#2A4A6A',
+      indentGuide: '#95A5B5'
     },
     dark: {
       text: '#FFFFFF',
@@ -234,7 +243,8 @@ export const bluesColorRangePalettes = {
       error: '#CC77EE',
       circularReference: '#88CCFF',
       propertyKey: '#CCFFFF',
-      punctuation: '#99DDFF'
+      punctuation: '#99DDFF',
+      indentGuide: '#4D6F80'
     }
   },
   bluesAndBrowns: {
@@ -258,7 +268,8 @@ export const bluesColorRangePalettes = {
       error: '#5A3A2A',
       circularReference: '#1A3A5A',
       propertyKey: '#0A2A4A',
-      punctuation: '#2A4A6A'
+      punctuation: '#2A4A6A',
+      indentGuide: '#95A5B5'
     },
     dark: {
       text: '#FFFFFF',
@@ -280,7 +291,8 @@ export const bluesColorRangePalettes = {
       error: '#CCAA77',
       circularReference: '#88CCFF',
       propertyKey: '#CCFFFF',
-      punctuation: '#99DDFF'
+      punctuation: '#99DDFF',
+      indentGuide: '#4D6F80'
     }
   },
   bluesAndGreys: {
@@ -304,7 +316,8 @@ export const bluesColorRangePalettes = {
       error: '#3A3A3A',
       circularReference: '#1A3A5A',
       propertyKey: '#0A2A4A',
-      punctuation: '#2A4A6A'
+      punctuation: '#2A4A6A',
+      indentGuide: '#95A5B5'
     },
     dark: {
       text: '#FFFFFF',
@@ -326,7 +339,8 @@ export const bluesColorRangePalettes = {
       error: '#BBBBBB',
       circularReference: '#88CCFF',
       propertyKey: '#CCFFFF',
-      punctuation: '#99DDFF'
+      punctuation: '#99DDFF',
+      indentGuide: '#4D6F80'
     }
   },
   bluesAndCharcoals: {
@@ -350,7 +364,8 @@ export const bluesColorRangePalettes = {
       error: '#1A1A1A',
       circularReference: '#1A3A5A',
       propertyKey: '#0A2A4A',
-      punctuation: '#2A4A6A'
+      punctuation: '#2A4A6A',
+      indentGuide: '#95A5B5'
     },
     dark: {
       text: '#FFFFFF',
@@ -372,7 +387,8 @@ export const bluesColorRangePalettes = {
       error: '#999999',
       circularReference: '#88CCFF',
       propertyKey: '#CCFFFF',
-      punctuation: '#99DDFF'
+      punctuation: '#99DDFF',
+      indentGuide: '#4D6F80'
     }
   },
   bluesAndCyans: {
@@ -396,7 +412,8 @@ export const bluesColorRangePalettes = {
       error: '#0A5A5A',
       circularReference: '#1A3A5A',
       propertyKey: '#0A2A4A',
-      punctuation: '#2A4A6A'
+      punctuation: '#2A4A6A',
+      indentGuide: '#95A5B5'
     },
     dark: {
       text: '#FFFFFF',
@@ -418,7 +435,8 @@ export const bluesColorRangePalettes = {
       error: '#77FFFF',
       circularReference: '#88CCFF',
       propertyKey: '#CCFFFF',
-      punctuation: '#99DDFF'
+      punctuation: '#99DDFF',
+      indentGuide: '#4D6F80'
     }
   },
   bluesAndMagentas: {
@@ -442,7 +460,8 @@ export const bluesColorRangePalettes = {
       error: '#7A2A5A',
       circularReference: '#1A3A5A',
       propertyKey: '#0A2A4A',
-      punctuation: '#2A4A6A'
+      punctuation: '#2A4A6A',
+      indentGuide: '#95A5B5'
     },
     dark: {
       text: '#FFFFFF',
@@ -464,7 +483,8 @@ export const bluesColorRangePalettes = {
       error: '#EE77CC',
       circularReference: '#88CCFF',
       propertyKey: '#CCFFFF',
-      punctuation: '#99DDFF'
+      punctuation: '#99DDFF',
+      indentGuide: '#4D6F80'
     }
   },
   bluesAndLightGrays: {
@@ -488,7 +508,8 @@ export const bluesColorRangePalettes = {
       error: '#5A5A5A',
       circularReference: '#1A3A5A',
       propertyKey: '#0A2A4A',
-      punctuation: '#2A4A6A'
+      punctuation: '#2A4A6A',
+      indentGuide: '#95A5B5'
     },
     dark: {
       text: '#FFFFFF',
@@ -510,7 +531,8 @@ export const bluesColorRangePalettes = {
       error: '#DDDDDD',
       circularReference: '#88CCFF',
       propertyKey: '#CCFFFF',
-      punctuation: '#99DDFF'
+      punctuation: '#99DDFF',
+      indentGuide: '#4D6F80'
     }
   }
 } as const;

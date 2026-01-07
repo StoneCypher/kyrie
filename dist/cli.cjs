@@ -4827,7 +4827,8 @@ const palettes = {
             error: '#CC0044',
             circularReference: '#777777',
             propertyKey: '#444444',
-            punctuation: '#666666'
+            punctuation: '#666666',
+            indentGuide: '#B3B3B3'
         },
         dark: {
             text: '#FFFFFF',
@@ -4849,7 +4850,8 @@ const palettes = {
             error: '#FF6699',
             circularReference: '#AAAAAA',
             propertyKey: '#CCCCCC',
-            punctuation: '#999999'
+            punctuation: '#999999',
+            indentGuide: '#4D4D4D'
         }
     },
     pastel: {
@@ -4873,7 +4875,8 @@ const palettes = {
             error: '#AA5A6A',
             circularReference: '#7A7A8A',
             propertyKey: '#5A5A6A',
-            punctuation: '#6A6A7A'
+            punctuation: '#6A6A7A',
+            indentGuide: '#B5B5BD'
         },
         dark: {
             text: '#FFFFFF',
@@ -4895,7 +4898,8 @@ const palettes = {
             error: '#F8B8C8',
             circularReference: '#C8C8D8',
             propertyKey: '#D8D8E8',
-            punctuation: '#C8C8D8'
+            punctuation: '#C8C8D8',
+            indentGuide: '#64646C'
         }
     },
     bold: {
@@ -4919,7 +4923,8 @@ const palettes = {
             error: '#DD0044',
             circularReference: '#666666',
             propertyKey: '#333333',
-            punctuation: '#555555'
+            punctuation: '#555555',
+            indentGuide: '#AAAAAA'
         },
         dark: {
             text: '#FFFFFF',
@@ -4941,7 +4946,8 @@ const palettes = {
             error: '#FF4488',
             circularReference: '#BBBBBB',
             propertyKey: '#EEEEEE',
-            punctuation: '#DDDDDD'
+            punctuation: '#DDDDDD',
+            indentGuide: '#6F6F6F'
         }
     },
     dusk: {
@@ -4965,7 +4971,8 @@ const palettes = {
             error: '#884455',
             circularReference: '#554466',
             propertyKey: '#443355',
-            punctuation: '#554466'
+            punctuation: '#554466',
+            indentGuide: '#AAA2B3'
         },
         dark: {
             text: '#FFFFFF',
@@ -4987,7 +4994,8 @@ const palettes = {
             error: '#EEAABB',
             circularReference: '#BBAACC',
             propertyKey: '#DDCCEE',
-            punctuation: '#CCBBDD'
+            punctuation: '#CCBBDD',
+            indentGuide: '#665E6F'
         }
     },
     lightPastel: {
@@ -5011,7 +5019,8 @@ const palettes = {
             error: '#BC8A9A',
             circularReference: '#9A9AAA',
             propertyKey: '#8A8A9A',
-            punctuation: '#9A9AAA'
+            punctuation: '#9A9AAA',
+            indentGuide: '#CDCDD5'
         },
         dark: {
             text: '#FFFFFF',
@@ -5033,7 +5042,8 @@ const palettes = {
             error: '#FFE8F8',
             circularReference: '#E8E8F8',
             propertyKey: '#F8F8FF',
-            punctuation: '#E8E8F8'
+            punctuation: '#E8E8F8',
+            indentGuide: '#74747C'
         }
     },
     funky: {
@@ -5057,7 +5067,8 @@ const palettes = {
             error: '#CC0088',
             circularReference: '#666677',
             propertyKey: '#444455',
-            punctuation: '#555566'
+            punctuation: '#555566',
+            indentGuide: '#AAAAB3'
         },
         dark: {
             text: '#FFFFFF',
@@ -5079,7 +5090,8 @@ const palettes = {
             error: '#FF66DD',
             circularReference: '#BBBBCC',
             propertyKey: '#DDDDEE',
-            punctuation: '#CCCCDD'
+            punctuation: '#CCCCDD',
+            indentGuide: '#66666F'
         }
     },
     boring: {
@@ -5103,7 +5115,8 @@ const palettes = {
             error: '#775566',
             circularReference: '#666666',
             propertyKey: '#555555',
-            punctuation: '#666666'
+            punctuation: '#666666',
+            indentGuide: '#B3B3B3'
         },
         dark: {
             text: '#FFFFFF',
@@ -5125,7 +5138,8 @@ const palettes = {
             error: '#CCAABB',
             circularReference: '#AAAAAA',
             propertyKey: '#BBBBBB',
-            punctuation: '#AAAAAA'
+            punctuation: '#AAAAAA',
+            indentGuide: '#555555'
         }
     },
     mobster: {
@@ -5149,7 +5163,8 @@ const palettes = {
             error: '#5A2A2A',
             circularReference: '#2A2A2A',
             propertyKey: '#1A1A1A',
-            punctuation: '#3A3A3A'
+            punctuation: '#3A3A3A',
+            indentGuide: '#9D9D9D'
         },
         dark: {
             text: '#FFFFFF',
@@ -5171,7 +5186,8 @@ const palettes = {
             error: '#E5C5C5',
             circularReference: '#D5D5D5',
             propertyKey: '#F5F5F5',
-            punctuation: '#E5E5E5'
+            punctuation: '#E5E5E5',
+            indentGuide: '#737373'
         }
     },
     money: {
@@ -5195,7 +5211,8 @@ const palettes = {
             error: '#6A3A1A',
             circularReference: '#2A4A2A',
             propertyKey: '#1A3A1A',
-            punctuation: '#3A5A3A'
+            punctuation: '#3A5A3A',
+            indentGuide: '#9DAD9D'
         },
         dark: {
             text: '#FFFFFF',
@@ -5217,7 +5234,8 @@ const palettes = {
             error: '#F5B585',
             circularReference: '#A5D5A5',
             propertyKey: '#C5F5C5',
-            punctuation: '#B5E5B5'
+            punctuation: '#B5E5B5',
+            indentGuide: '#5B735B'
         }
     },
     skeleton: {
@@ -5241,7 +5259,8 @@ const palettes = {
             error: '#6A4A4A',
             circularReference: '#4A4A4A',
             propertyKey: '#3A3A3A',
-            punctuation: '#5A5A5A'
+            punctuation: '#5A5A5A',
+            indentGuide: '#ADADAD'
         },
         dark: {
             text: '#FFFFFF',
@@ -5263,7 +5282,8 @@ const palettes = {
             error: '#FFE5E5',
             circularReference: '#E5E5E5',
             propertyKey: '#FFFFFF',
-            punctuation: '#F5F5F5'
+            punctuation: '#F5F5F5',
+            indentGuide: '#7B7B7B'
         }
     },
     sinister: {
@@ -5287,7 +5307,8 @@ const palettes = {
             error: '#5A1A1A',
             circularReference: '#2A1A1A',
             propertyKey: '#1A1A1A',
-            punctuation: '#2A2A2A'
+            punctuation: '#2A2A2A',
+            indentGuide: '#959595'
         },
         dark: {
             text: '#FFFFFF',
@@ -5309,7 +5330,8 @@ const palettes = {
             error: '#F5A5A5',
             circularReference: '#C5A5A5',
             propertyKey: '#E5E5E5',
-            punctuation: '#D5D5D5'
+            punctuation: '#D5D5D5',
+            indentGuide: '#6B6B6B'
         }
     },
     halloween: {
@@ -5333,7 +5355,8 @@ const palettes = {
             error: '#AA2200',
             circularReference: '#3A3A3A',
             propertyKey: '#2A2A2A',
-            punctuation: '#4A4A4A'
+            punctuation: '#4A4A4A',
+            indentGuide: '#A5A5A5'
         },
         dark: {
             text: '#FFFFFF',
@@ -5355,7 +5378,8 @@ const palettes = {
             error: '#FF6633',
             circularReference: '#D5D5D5',
             propertyKey: '#FFFFFF',
-            punctuation: '#E5E5E5'
+            punctuation: '#E5E5E5',
+            indentGuide: '#737373'
         }
     },
     vampire: {
@@ -5379,7 +5403,8 @@ const palettes = {
             error: '#7A1A1A',
             circularReference: '#1A1A1A',
             propertyKey: '#0A0A0A',
-            punctuation: '#2A2A2A'
+            punctuation: '#2A2A2A',
+            indentGuide: '#959595'
         },
         dark: {
             text: '#FFFFFF',
@@ -5401,7 +5426,8 @@ const palettes = {
             error: '#FF7777',
             circularReference: '#C5C5C5',
             propertyKey: '#E5E5E5',
-            punctuation: '#D5D5D5'
+            punctuation: '#D5D5D5',
+            indentGuide: '#6B6B6B'
         }
     },
     grayscale: {
@@ -5425,7 +5451,8 @@ const palettes = {
             error: '#5D5D5D',
             circularReference: '#444444',
             propertyKey: '#333333',
-            punctuation: '#555555'
+            punctuation: '#555555',
+            indentGuide: '#AAAAAA'
         },
         dark: {
             text: '#FFFFFF',
@@ -5447,7 +5474,8 @@ const palettes = {
             error: '#D8D8D8',
             circularReference: '#BBBBBB',
             propertyKey: '#EEEEEE',
-            punctuation: '#CCCCCC'
+            punctuation: '#CCCCCC',
+            indentGuide: '#666666'
         }
     },
     blues: {
@@ -5471,7 +5499,8 @@ const palettes = {
             error: '#2A3A5A',
             circularReference: '#1A3A5A',
             propertyKey: '#0A2A4A',
-            punctuation: '#2A4A6A'
+            punctuation: '#2A4A6A',
+            indentGuide: '#95A5B5'
         },
         dark: {
             text: '#FFFFFF',
@@ -5493,7 +5522,8 @@ const palettes = {
             error: '#99BBDD',
             circularReference: '#88CCFF',
             propertyKey: '#CCFFFF',
-            punctuation: '#99DDFF'
+            punctuation: '#99DDFF',
+            indentGuide: '#4D6F80'
         }
     },
     circus: {
@@ -5517,7 +5547,8 @@ const palettes = {
             error: '#DD0000',
             circularReference: '#4A4A4A',
             propertyKey: '#3A3A3A',
-            punctuation: '#5A5A5A'
+            punctuation: '#5A5A5A',
+            indentGuide: '#ADADAD'
         },
         dark: {
             text: '#FFFFFF',
@@ -5539,7 +5570,8 @@ const palettes = {
             error: '#FF4444',
             circularReference: '#D5D5D5',
             propertyKey: '#FFFFFF',
-            punctuation: '#E5E5E5'
+            punctuation: '#E5E5E5',
+            indentGuide: '#737373'
         }
     },
     monkey: {
@@ -5563,7 +5595,8 @@ const palettes = {
             error: '#6A4A2A',
             circularReference: '#4A3A2A',
             propertyKey: '#3A2A1A',
-            punctuation: '#5A4A3A'
+            punctuation: '#5A4A3A',
+            indentGuide: '#ADA59D'
         },
         dark: {
             text: '#FFFFFF',
@@ -5585,7 +5618,8 @@ const palettes = {
             error: '#E5C5A5',
             circularReference: '#C5B5A5',
             propertyKey: '#E5D5C5',
-            punctuation: '#D5C5B5'
+            punctuation: '#D5C5B5',
+            indentGuide: '#6B635B'
         }
     },
     rainbow: {
@@ -5609,7 +5643,8 @@ const palettes = {
             error: '#AA0000',
             circularReference: '#4A4A4A',
             propertyKey: '#3A3A3A',
-            punctuation: '#5A5A5A'
+            punctuation: '#5A5A5A',
+            indentGuide: '#ADADAD'
         },
         dark: {
             text: '#FFFFFF',
@@ -5631,7 +5666,8 @@ const palettes = {
             error: '#FF4444',
             circularReference: '#D5D5D5',
             propertyKey: '#FFFFFF',
-            punctuation: '#E5E5E5'
+            punctuation: '#E5E5E5',
+            indentGuide: '#737373'
         }
     },
     mutedRainbow: {
@@ -5655,7 +5691,8 @@ const palettes = {
             error: '#7A4A4A',
             circularReference: '#5A5A5A',
             propertyKey: '#4A4A4A',
-            punctuation: '#6A6A6A'
+            punctuation: '#6A6A6A',
+            indentGuide: '#B5B5B5'
         },
         dark: {
             text: '#FFFFFF',
@@ -5677,7 +5714,8 @@ const palettes = {
             error: '#D5A5A5',
             circularReference: '#C5C5C5',
             propertyKey: '#E5E5E5',
-            punctuation: '#D5D5D5'
+            punctuation: '#D5D5D5',
+            indentGuide: '#6B6B6B'
         }
     },
     brownAndGreen: {
@@ -5701,7 +5739,8 @@ const palettes = {
             error: '#6A4A2A',
             circularReference: '#4A3A2A',
             propertyKey: '#3A2A1A',
-            punctuation: '#5A4A3A'
+            punctuation: '#5A4A3A',
+            indentGuide: '#ADA59D'
         },
         dark: {
             text: '#FFFFFF',
@@ -5723,7 +5762,8 @@ const palettes = {
             error: '#F5D5B5',
             circularReference: '#D5C5B5',
             propertyKey: '#F5E5D5',
-            punctuation: '#E5D5C5'
+            punctuation: '#E5D5C5',
+            indentGuide: '#736B63'
         }
     },
     solarFlare: {
@@ -5747,7 +5787,8 @@ const palettes = {
             error: '#DD5A1A',
             circularReference: '#5A3A1A',
             propertyKey: '#4A2A0A',
-            punctuation: '#6A4A2A'
+            punctuation: '#6A4A2A',
+            indentGuide: '#B5A595'
         },
         dark: {
             text: '#FFFFFF',
@@ -5769,7 +5810,8 @@ const palettes = {
             error: '#FFBB44',
             circularReference: '#FFCC99',
             propertyKey: '#FFF5DD',
-            punctuation: '#FFD5AA'
+            punctuation: '#FFD5AA',
+            indentGuide: '#806B55'
         }
     },
     purpleToOrange: {
@@ -5793,7 +5835,8 @@ const palettes = {
             error: '#9A5A3A',
             circularReference: '#4A3A5A',
             propertyKey: '#3A2A4A',
-            punctuation: '#5A4A6A'
+            punctuation: '#5A4A6A',
+            indentGuide: '#ADA5B5'
         },
         dark: {
             text: '#FFFFFF',
@@ -5815,7 +5858,8 @@ const palettes = {
             error: '#FFCCAA',
             circularReference: '#D5C5E5',
             propertyKey: '#F5E5FF',
-            punctuation: '#E5D5F5'
+            punctuation: '#E5D5F5',
+            indentGuide: '#736B7B'
         }
     },
     commodore64: {
@@ -5839,7 +5883,8 @@ const palettes = {
             error: '#3A3A6A',
             circularReference: '#2A3A5A',
             propertyKey: '#1A2A4A',
-            punctuation: '#3A4A6A'
+            punctuation: '#3A4A6A',
+            indentGuide: '#9DA5B5'
         },
         dark: {
             text: '#FFFFFF',
@@ -5861,7 +5906,8 @@ const palettes = {
             error: '#AABBEE',
             circularReference: '#AACCFF',
             propertyKey: '#EEFFFF',
-            punctuation: '#BBDDFF'
+            punctuation: '#BBDDFF',
+            indentGuide: '#5E6F80'
         }
     },
     military: {
@@ -5885,7 +5931,8 @@ const palettes = {
             error: '#5A4A2A',
             circularReference: '#3A4A2A',
             propertyKey: '#2A3A1A',
-            punctuation: '#4A5A3A'
+            punctuation: '#4A5A3A',
+            indentGuide: '#A5AD9D'
         },
         dark: {
             text: '#FFFFFF',
@@ -5907,7 +5954,8 @@ const palettes = {
             error: '#D5C5A5',
             circularReference: '#C5D5B5',
             propertyKey: '#E5F5D5',
-            punctuation: '#D5E5C5'
+            punctuation: '#D5E5C5',
+            indentGuide: '#6B7363'
         }
     },
     police: {
@@ -5931,7 +5979,8 @@ const palettes = {
             error: '#2A2A4A',
             circularReference: '#1A2A3A',
             propertyKey: '#0A1A2A',
-            punctuation: '#2A3A4A'
+            punctuation: '#2A3A4A',
+            indentGuide: '#959DA5'
         },
         dark: {
             text: '#FFFFFF',
@@ -5953,7 +6002,8 @@ const palettes = {
             error: '#99AAEE',
             circularReference: '#99CCEE',
             propertyKey: '#DDEEFF',
-            punctuation: '#AADDFF'
+            punctuation: '#AADDFF',
+            indentGuide: '#556F80'
         }
     },
     hacker: {
@@ -5977,7 +6027,8 @@ const palettes = {
             error: '#2A2A1A',
             circularReference: '#1A2A1A',
             propertyKey: '#0A1A0A',
-            punctuation: '#2A3A2A'
+            punctuation: '#2A3A2A',
+            indentGuide: '#959D95'
         },
         dark: {
             text: '#FFFFFF',
@@ -5999,7 +6050,8 @@ const palettes = {
             error: '#88FF77',
             circularReference: '#88EE88',
             propertyKey: '#DDFFDD',
-            punctuation: '#99FF99'
+            punctuation: '#99FF99',
+            indentGuide: '#4D804D'
         }
     },
     wizard: {
@@ -6023,7 +6075,8 @@ const palettes = {
             error: '#3A2A5A',
             circularReference: '#2A2A4A',
             propertyKey: '#1A1A3A',
-            punctuation: '#3A3A5A'
+            punctuation: '#3A3A5A',
+            indentGuide: '#9D9DAD'
         },
         dark: {
             text: '#FFFFFF',
@@ -6045,7 +6098,8 @@ const palettes = {
             error: '#AA99DD',
             circularReference: '#AAAADD',
             propertyKey: '#EEEEFF',
-            punctuation: '#BBBBEE'
+            punctuation: '#BBBBEE',
+            indentGuide: '#5E5E77'
         }
     },
     gunmetal: {
@@ -6069,7 +6123,8 @@ const palettes = {
             error: '#3A2A2A',
             circularReference: '#2A2A2A',
             propertyKey: '#1A1A1A',
-            punctuation: '#3A3A3A'
+            punctuation: '#3A3A3A',
+            indentGuide: '#9D9D9D'
         },
         dark: {
             text: '#FFFFFF',
@@ -6091,7 +6146,8 @@ const palettes = {
             error: '#D5C5C5',
             circularReference: '#C5C5C5',
             propertyKey: '#E5E5E5',
-            punctuation: '#D5D5D5'
+            punctuation: '#D5D5D5',
+            indentGuide: '#6B6B6B'
         }
     },
     cocaCola: {
@@ -6115,7 +6171,8 @@ const palettes = {
             error: '#CC1A1A',
             circularReference: '#4A2A2A',
             propertyKey: '#2A1A1A',
-            punctuation: '#5A3A3A'
+            punctuation: '#5A3A3A',
+            indentGuide: '#AD9D9D'
         },
         dark: {
             text: '#FFFFFF',
@@ -6137,7 +6194,8 @@ const palettes = {
             error: '#FF7777',
             circularReference: '#E5C5C5',
             propertyKey: '#FFEEEE',
-            punctuation: '#F5D5D5'
+            punctuation: '#F5D5D5',
+            indentGuide: '#7B6B6B'
         }
     },
     ogre: {
@@ -6161,7 +6219,8 @@ const palettes = {
             error: '#4A3A1A',
             circularReference: '#3A4A2A',
             propertyKey: '#2A3A1A',
-            punctuation: '#4A5A3A'
+            punctuation: '#4A5A3A',
+            indentGuide: '#A5AD9D'
         },
         dark: {
             text: '#FFFFFF',
@@ -6183,7 +6242,8 @@ const palettes = {
             error: '#C5B588',
             circularReference: '#C5D5B5',
             propertyKey: '#E5F5D5',
-            punctuation: '#D5E5C5'
+            punctuation: '#D5E5C5',
+            indentGuide: '#6B7363'
         }
     },
     burglar: {
@@ -6207,7 +6267,8 @@ const palettes = {
             error: '#2A2A2A',
             circularReference: '#1A1A1A',
             propertyKey: '#0A0A0A',
-            punctuation: '#2A2A2A'
+            punctuation: '#2A2A2A',
+            indentGuide: '#959595'
         },
         dark: {
             text: '#FFFFFF',
@@ -6229,7 +6290,8 @@ const palettes = {
             error: '#F5F5F5',
             circularReference: '#E5E5E5',
             propertyKey: '#FFFFFF',
-            punctuation: '#F5F5F5'
+            punctuation: '#F5F5F5',
+            indentGuide: '#7B7B7B'
         }
     },
     crystal: {
@@ -6253,7 +6315,8 @@ const palettes = {
             error: '#5A3A6A',
             circularReference: '#3A4A5A',
             propertyKey: '#2A3A4A',
-            punctuation: '#4A5A6A'
+            punctuation: '#4A5A6A',
+            indentGuide: '#A5ADB5'
         },
         dark: {
             text: '#FFFFFF',
@@ -6275,7 +6338,8 @@ const palettes = {
             error: '#EEAAFF',
             circularReference: '#CCDDEE',
             propertyKey: '#EEFFFF',
-            punctuation: '#DDEEFF'
+            punctuation: '#DDEEFF',
+            indentGuide: '#6F7780'
         }
     },
     laser: {
@@ -6299,7 +6363,8 @@ const palettes = {
             error: '#CC00AA',
             circularReference: '#4A4A4A',
             propertyKey: '#2A2A2A',
-            punctuation: '#5A5A5A'
+            punctuation: '#5A5A5A',
+            indentGuide: '#ADADAD'
         },
         dark: {
             text: '#FFFFFF',
@@ -6321,7 +6386,8 @@ const palettes = {
             error: '#FF66FF',
             circularReference: '#EEEEEE',
             propertyKey: '#FFFFFF',
-            punctuation: '#F5F5F5'
+            punctuation: '#F5F5F5',
+            indentGuide: '#7B7B7B'
         }
     },
     kungFu: {
@@ -6345,7 +6411,8 @@ const palettes = {
             error: '#8A2A1A',
             circularReference: '#4A3A2A',
             propertyKey: '#2A2A1A',
-            punctuation: '#5A4A3A'
+            punctuation: '#5A4A3A',
+            indentGuide: '#ADA59D'
         },
         dark: {
             text: '#FFFFFF',
@@ -6367,7 +6434,8 @@ const palettes = {
             error: '#FF9977',
             circularReference: '#E5D5C5',
             propertyKey: '#FFF5E5',
-            punctuation: '#F5E5D5'
+            punctuation: '#F5E5D5',
+            indentGuide: '#7B736B'
         }
     },
     starTrek: {
@@ -6391,7 +6459,8 @@ const palettes = {
             error: '#AA3A3A',
             circularReference: '#3A3A4A',
             propertyKey: '#2A2A3A',
-            punctuation: '#4A4A5A'
+            punctuation: '#4A4A5A',
+            indentGuide: '#A5A5AD'
         },
         dark: {
             text: '#FFFFFF',
@@ -6413,7 +6482,8 @@ const palettes = {
             error: '#FFBBBB',
             circularReference: '#CCCCDD',
             propertyKey: '#EEEEFF',
-            punctuation: '#DDDDEE'
+            punctuation: '#DDDDEE',
+            indentGuide: '#6F6F77'
         }
     },
     antique: {
@@ -6437,7 +6507,8 @@ const palettes = {
             error: '#7A5A3A',
             circularReference: '#4A3A2A',
             propertyKey: '#3A2A1A',
-            punctuation: '#5A4A3A'
+            punctuation: '#5A4A3A',
+            indentGuide: '#ADA59D'
         },
         dark: {
             text: '#FFFFFF',
@@ -6459,7 +6530,8 @@ const palettes = {
             error: '#EFD5C5',
             circularReference: '#D5C5B5',
             propertyKey: '#F5E5D5',
-            punctuation: '#E5D5C5'
+            punctuation: '#E5D5C5',
+            indentGuide: '#736B63'
         }
     },
     book: {
@@ -6483,7 +6555,8 @@ const palettes = {
             error: '#6A5A3A',
             circularReference: '#4A4A3A',
             propertyKey: '#3A3A2A',
-            punctuation: '#5A5A4A'
+            punctuation: '#5A5A4A',
+            indentGuide: '#ADADA5'
         },
         dark: {
             text: '#FFFFFF',
@@ -6505,7 +6578,8 @@ const palettes = {
             error: '#F5E5D5',
             circularReference: '#E5E5D5',
             propertyKey: '#FFFEE5',
-            punctuation: '#F5F5E5'
+            punctuation: '#F5F5E5',
+            indentGuide: '#7B7B73'
         }
     },
     eighties: {
@@ -6529,7 +6603,8 @@ const palettes = {
             error: '#CC00CC',
             circularReference: '#4A4A4A',
             propertyKey: '#3A3A3A',
-            punctuation: '#5A5A5A'
+            punctuation: '#5A5A5A',
+            indentGuide: '#ADADAD'
         },
         dark: {
             text: '#FFFFFF',
@@ -6551,7 +6626,8 @@ const palettes = {
             error: '#FF66FF',
             circularReference: '#E5E5E5',
             propertyKey: '#FFFFFF',
-            punctuation: '#F5F5F5'
+            punctuation: '#F5F5F5',
+            indentGuide: '#7B7B7B'
         }
     },
     neon: {
@@ -6575,7 +6651,8 @@ const palettes = {
             error: '#FF00FF',
             circularReference: '#4A4A4A',
             propertyKey: '#2A2A2A',
-            punctuation: '#5A5A5A'
+            punctuation: '#5A5A5A',
+            indentGuide: '#ADADAD'
         },
         dark: {
             text: '#FFFFFF',
@@ -6597,7 +6674,8 @@ const palettes = {
             error: '#FF66FF',
             circularReference: '#F5F5F5',
             propertyKey: '#FFFFFF',
-            punctuation: '#FFFFFF'
+            punctuation: '#FFFFFF',
+            indentGuide: '#808080'
         }
     },
     logger: {
@@ -6621,7 +6699,8 @@ const palettes = {
             error: '#7A3A2A',
             circularReference: '#3A3A2A',
             propertyKey: '#2A2A1A',
-            punctuation: '#4A4A3A'
+            punctuation: '#4A4A3A',
+            indentGuide: '#A5A59D'
         },
         dark: {
             text: '#FFFFFF',
@@ -6643,7 +6722,8 @@ const palettes = {
             error: '#EEAA99',
             circularReference: '#C5C5B5',
             propertyKey: '#E5E5D5',
-            punctuation: '#D5D5C5'
+            punctuation: '#D5D5C5',
+            indentGuide: '#6B6B63'
         }
     },
     system: {
@@ -6667,7 +6747,8 @@ const palettes = {
             error: '#3A3A5A',
             circularReference: '#2A3A4A',
             propertyKey: '#1A2A3A',
-            punctuation: '#3A4A5A'
+            punctuation: '#3A4A5A',
+            indentGuide: '#9DA5AD'
         },
         dark: {
             text: '#FFFFFF',
@@ -6689,7 +6770,8 @@ const palettes = {
             error: '#AABBDD',
             circularReference: '#AACCDD',
             propertyKey: '#DDEEFF',
-            punctuation: '#BBDDEE'
+            punctuation: '#BBDDEE',
+            indentGuide: '#5E6F77'
         }
     },
     alien: {
@@ -6713,7 +6795,8 @@ const palettes = {
             error: '#3A4A2A',
             circularReference: '#2A3A2A',
             propertyKey: '#1A2A1A',
-            punctuation: '#3A4A3A'
+            punctuation: '#3A4A3A',
+            indentGuide: '#9DA59D'
         },
         dark: {
             text: '#FFFFFF',
@@ -6735,7 +6818,8 @@ const palettes = {
             error: '#B5E5A5',
             circularReference: '#A5D5A5',
             propertyKey: '#DDFFD5',
-            punctuation: '#B5E5B5'
+            punctuation: '#B5E5B5',
+            indentGuide: '#5B735B'
         }
     }
 };
@@ -6767,7 +6851,8 @@ const naturePalettes = {
             error: '#882233',
             circularReference: '#445544',
             propertyKey: '#223322',
-            punctuation: '#334433'
+            punctuation: '#334433',
+            indentGuide: '#99A299'
         },
         dark: {
             text: '#FFFFFF',
@@ -6789,7 +6874,8 @@ const naturePalettes = {
             error: '#DD7788',
             circularReference: '#99BB99',
             propertyKey: '#BBDDBB',
-            punctuation: '#AACCAA'
+            punctuation: '#AACCAA',
+            indentGuide: '#556655'
         }
     },
     garden: {
@@ -6813,7 +6899,8 @@ const naturePalettes = {
             error: '#AA3344',
             circularReference: '#556655',
             propertyKey: '#334433',
-            punctuation: '#445544'
+            punctuation: '#445544',
+            indentGuide: '#A2AAA2'
         },
         dark: {
             text: '#FFFFFF',
@@ -6835,7 +6922,8 @@ const naturePalettes = {
             error: '#FF8899',
             circularReference: '#AACCAA',
             propertyKey: '#CCEECC',
-            punctuation: '#BBDDBB'
+            punctuation: '#BBDDBB',
+            indentGuide: '#5E6F5E'
         }
     },
     flowers: {
@@ -6859,7 +6947,8 @@ const naturePalettes = {
             error: '#AA3A5A',
             circularReference: '#4A4A4A',
             propertyKey: '#3A3A3A',
-            punctuation: '#5A5A5A'
+            punctuation: '#5A5A5A',
+            indentGuide: '#ADADAD'
         },
         dark: {
             text: '#FFFFFF',
@@ -6881,7 +6970,8 @@ const naturePalettes = {
             error: '#FFAACC',
             circularReference: '#E5E5E5',
             propertyKey: '#FFFFFF',
-            punctuation: '#F5F5F5'
+            punctuation: '#F5F5F5',
+            indentGuide: '#7B7B7B'
         }
     },
     sky: {
@@ -6905,7 +6995,8 @@ const naturePalettes = {
             error: '#5A5A3A',
             circularReference: '#3A5A7A',
             propertyKey: '#2A4A6A',
-            punctuation: '#4A6A8A'
+            punctuation: '#4A6A8A',
+            indentGuide: '#A5B5C5'
         },
         dark: {
             text: '#FFFFFF',
@@ -6927,7 +7018,8 @@ const naturePalettes = {
             error: '#DDDDAA',
             circularReference: '#AADDFF',
             propertyKey: '#EEFFFF',
-            punctuation: '#BBEEFF'
+            punctuation: '#BBEEFF',
+            indentGuide: '#5E7780'
         }
     },
     sunflower: {
@@ -6951,7 +7043,8 @@ const naturePalettes = {
             error: '#7A5A1A',
             circularReference: '#5A4A2A',
             propertyKey: '#4A3A1A',
-            punctuation: '#6A5A3A'
+            punctuation: '#6A5A3A',
+            indentGuide: '#B5AD9D'
         },
         dark: {
             text: '#FFFFFF',
@@ -6973,7 +7066,8 @@ const naturePalettes = {
             error: '#EFD588',
             circularReference: '#E5D5B5',
             propertyKey: '#FFF5D5',
-            punctuation: '#F5E5C5'
+            punctuation: '#F5E5C5',
+            indentGuide: '#7B7363'
         }
     },
     strawberry: {
@@ -6997,7 +7091,8 @@ const naturePalettes = {
             error: '#CC2A2A',
             circularReference: '#5A3A3A',
             propertyKey: '#4A2A2A',
-            punctuation: '#6A4A4A'
+            punctuation: '#6A4A4A',
+            indentGuide: '#B5A5A5'
         },
         dark: {
             text: '#FFFFFF',
@@ -7019,7 +7114,8 @@ const naturePalettes = {
             error: '#FF6666',
             circularReference: '#E5C5C5',
             propertyKey: '#FFEEEE',
-            punctuation: '#F5D5D5'
+            punctuation: '#F5D5D5',
+            indentGuide: '#7B6B6B'
         }
     },
     butterfly: {
@@ -7043,7 +7139,8 @@ const naturePalettes = {
             error: '#CA3A4A',
             circularReference: '#4A4A5A',
             propertyKey: '#3A3A4A',
-            punctuation: '#5A5A6A'
+            punctuation: '#5A5A6A',
+            indentGuide: '#ADADB5'
         },
         dark: {
             text: '#FFFFFF',
@@ -7065,7 +7162,8 @@ const naturePalettes = {
             error: '#FF99AA',
             circularReference: '#D5D5E5',
             propertyKey: '#F5F5FF',
-            punctuation: '#E5E5F5'
+            punctuation: '#E5E5F5',
+            indentGuide: '#73737B'
         }
     }
 };
@@ -7096,7 +7194,8 @@ const protanopiaPalettes = {
             error: '#4A4A2A',
             circularReference: '#2A4A6A',
             propertyKey: '#1A3A5A',
-            punctuation: '#3A5A7A'
+            punctuation: '#3A5A7A',
+            indentGuide: '#9DADBD'
         },
         dark: {
             text: '#FFFFFF',
@@ -7118,7 +7217,8 @@ const protanopiaPalettes = {
             error: '#CCCC99',
             circularReference: '#99CCFF',
             propertyKey: '#CCFFFF',
-            punctuation: '#AADDFF'
+            punctuation: '#AADDFF',
+            indentGuide: '#556F80'
         }
     },
     protanopiaBright: {
@@ -7142,7 +7242,8 @@ const protanopiaPalettes = {
             error: '#5577AA',
             circularReference: '#555555',
             propertyKey: '#333333',
-            punctuation: '#4A4A4A'
+            punctuation: '#4A4A4A',
+            indentGuide: '#A5A5A5'
         },
         dark: {
             text: '#FFFFFF',
@@ -7164,7 +7265,8 @@ const protanopiaPalettes = {
             error: '#AACCFF',
             circularReference: '#CCCCCC',
             propertyKey: '#DDDDDD',
-            punctuation: '#BBBBBB'
+            punctuation: '#BBBBBB',
+            indentGuide: '#5E5E5E'
         }
     },
     protanopiaSubtle: {
@@ -7188,7 +7290,8 @@ const protanopiaPalettes = {
             error: '#4A5A7A',
             circularReference: '#6A6A6A',
             propertyKey: '#4A4A4A',
-            punctuation: '#5A5A5A'
+            punctuation: '#5A5A5A',
+            indentGuide: '#ADADAD'
         },
         dark: {
             text: '#FFFFFF',
@@ -7210,7 +7313,8 @@ const protanopiaPalettes = {
             error: '#AABBCC',
             circularReference: '#BBBBBB',
             propertyKey: '#CCCCCC',
-            punctuation: '#AAAAAA'
+            punctuation: '#AAAAAA',
+            indentGuide: '#555555'
         }
     },
     protanopiaPastel: {
@@ -7234,7 +7338,8 @@ const protanopiaPalettes = {
             error: '#5A6A8A',
             circularReference: '#7A7A7A',
             propertyKey: '#5A5A5A',
-            punctuation: '#6A6A6A'
+            punctuation: '#6A6A6A',
+            indentGuide: '#B5B5B5'
         },
         dark: {
             text: '#FFFFFF',
@@ -7256,7 +7361,8 @@ const protanopiaPalettes = {
             error: '#DDEEFF',
             circularReference: '#E5E5E5',
             propertyKey: '#F5F5F5',
-            punctuation: '#D5D5D5'
+            punctuation: '#D5D5D5',
+            indentGuide: '#6B6B6B'
         }
     },
     protanopiaBoring: {
@@ -7280,7 +7386,8 @@ const protanopiaPalettes = {
             error: '#3A4A5A',
             circularReference: '#5A5A5A',
             propertyKey: '#2A2A2A',
-            punctuation: '#4A4A4A'
+            punctuation: '#4A4A4A',
+            indentGuide: '#A5A5A5'
         },
         dark: {
             text: '#FFFFFF',
@@ -7302,7 +7409,8 @@ const protanopiaPalettes = {
             error: '#AABBCC',
             circularReference: '#BBBBBB',
             propertyKey: '#CCCCCC',
-            punctuation: '#AAAAAA'
+            punctuation: '#AAAAAA',
+            indentGuide: '#555555'
         }
     },
     protanopiaFunky: {
@@ -7326,7 +7434,8 @@ const protanopiaPalettes = {
             error: '#4477BB',
             circularReference: '#555555',
             propertyKey: '#222222',
-            punctuation: '#4A4A4A'
+            punctuation: '#4A4A4A',
+            indentGuide: '#A5A5A5'
         },
         dark: {
             text: '#FFFFFF',
@@ -7348,7 +7457,8 @@ const protanopiaPalettes = {
             error: '#BBDDFF',
             circularReference: '#DDDDDD',
             propertyKey: '#EEEEEE',
-            punctuation: '#CCCCCC'
+            punctuation: '#CCCCCC',
+            indentGuide: '#666666'
         }
     },
     protanopiaVivid: {
@@ -7372,7 +7482,8 @@ const protanopiaPalettes = {
             error: '#3366AA',
             circularReference: '#444444',
             propertyKey: '#1A1A1A',
-            punctuation: '#3A3A3A'
+            punctuation: '#3A3A3A',
+            indentGuide: '#9D9D9D'
         },
         dark: {
             text: '#FFFFFF',
@@ -7394,7 +7505,8 @@ const protanopiaPalettes = {
             error: '#CCDEFF',
             circularReference: '#DDDDDD',
             propertyKey: '#EEEEEE',
-            punctuation: '#CCCCCC'
+            punctuation: '#CCCCCC',
+            indentGuide: '#666666'
         }
     }
 };
@@ -7425,7 +7537,8 @@ const deuteranopiaPalettes = {
             error: '#5A4A2A',
             circularReference: '#3A4A6A',
             propertyKey: '#2A3A5A',
-            punctuation: '#4A5A7A'
+            punctuation: '#4A5A7A',
+            indentGuide: '#A5ADBD'
         },
         dark: {
             text: '#FFFFFF',
@@ -7447,7 +7560,8 @@ const deuteranopiaPalettes = {
             error: '#DDCC99',
             circularReference: '#AACCFF',
             propertyKey: '#DDFFFF',
-            punctuation: '#BBDDFF'
+            punctuation: '#BBDDFF',
+            indentGuide: '#5E6F80'
         }
     },
     deuteranopiaBright: {
@@ -7471,7 +7585,8 @@ const deuteranopiaPalettes = {
             error: '#5577BB',
             circularReference: '#555555',
             propertyKey: '#333333',
-            punctuation: '#4A4A4A'
+            punctuation: '#4A4A4A',
+            indentGuide: '#A5A5A5'
         },
         dark: {
             text: '#FFFFFF',
@@ -7493,7 +7608,8 @@ const deuteranopiaPalettes = {
             error: '#AACCFF',
             circularReference: '#CCCCCC',
             propertyKey: '#DDDDDD',
-            punctuation: '#BBBBBB'
+            punctuation: '#BBBBBB',
+            indentGuide: '#5E5E5E'
         }
     },
     deuteranopiaSubtle: {
@@ -7517,7 +7633,8 @@ const deuteranopiaPalettes = {
             error: '#4A5A8A',
             circularReference: '#6A6A6A',
             propertyKey: '#4A4A4A',
-            punctuation: '#5A5A5A'
+            punctuation: '#5A5A5A',
+            indentGuide: '#ADADAD'
         },
         dark: {
             text: '#FFFFFF',
@@ -7539,7 +7656,8 @@ const deuteranopiaPalettes = {
             error: '#AABBDD',
             circularReference: '#BBBBBB',
             propertyKey: '#CCCCCC',
-            punctuation: '#AAAAAA'
+            punctuation: '#AAAAAA',
+            indentGuide: '#555555'
         }
     },
     deuteranopiaPastel: {
@@ -7563,7 +7681,8 @@ const deuteranopiaPalettes = {
             error: '#5A6A9A',
             circularReference: '#7A7A7A',
             propertyKey: '#5A5A5A',
-            punctuation: '#6A6A6A'
+            punctuation: '#6A6A6A',
+            indentGuide: '#B5B5B5'
         },
         dark: {
             text: '#FFFFFF',
@@ -7585,7 +7704,8 @@ const deuteranopiaPalettes = {
             error: '#DDEEFF',
             circularReference: '#E5E5E5',
             propertyKey: '#F5F5F5',
-            punctuation: '#D5D5D5'
+            punctuation: '#D5D5D5',
+            indentGuide: '#6B6B6B'
         }
     },
     deuteranopiaBoring: {
@@ -7609,7 +7729,8 @@ const deuteranopiaPalettes = {
             error: '#3A4A6A',
             circularReference: '#5A5A5A',
             propertyKey: '#2A2A2A',
-            punctuation: '#4A4A4A'
+            punctuation: '#4A4A4A',
+            indentGuide: '#A5A5A5'
         },
         dark: {
             text: '#FFFFFF',
@@ -7631,7 +7752,8 @@ const deuteranopiaPalettes = {
             error: '#AABBDD',
             circularReference: '#BBBBBB',
             propertyKey: '#CCCCCC',
-            punctuation: '#AAAAAA'
+            punctuation: '#AAAAAA',
+            indentGuide: '#555555'
         }
     },
     deuteranopiaFunky: {
@@ -7655,7 +7777,8 @@ const deuteranopiaPalettes = {
             error: '#4477CC',
             circularReference: '#555555',
             propertyKey: '#222222',
-            punctuation: '#4A4A4A'
+            punctuation: '#4A4A4A',
+            indentGuide: '#A5A5A5'
         },
         dark: {
             text: '#FFFFFF',
@@ -7677,7 +7800,8 @@ const deuteranopiaPalettes = {
             error: '#BBDDFF',
             circularReference: '#DDDDDD',
             propertyKey: '#EEEEEE',
-            punctuation: '#CCCCCC'
+            punctuation: '#CCCCCC',
+            indentGuide: '#666666'
         }
     },
     deuteranopiaVivid: {
@@ -7701,7 +7825,8 @@ const deuteranopiaPalettes = {
             error: '#3366BB',
             circularReference: '#444444',
             propertyKey: '#1A1A1A',
-            punctuation: '#3A3A3A'
+            punctuation: '#3A3A3A',
+            indentGuide: '#9D9D9D'
         },
         dark: {
             text: '#FFFFFF',
@@ -7723,7 +7848,8 @@ const deuteranopiaPalettes = {
             error: '#CCDEFF',
             circularReference: '#DDDDDD',
             propertyKey: '#EEEEEE',
-            punctuation: '#CCCCCC'
+            punctuation: '#CCCCCC',
+            indentGuide: '#666666'
         }
     }
 };
@@ -7754,7 +7880,8 @@ const tritanopiaPalettes = {
             error: '#6A3A2A',
             circularReference: '#4A3A2A',
             propertyKey: '#3A2A1A',
-            punctuation: '#5A4A3A'
+            punctuation: '#5A4A3A',
+            indentGuide: '#ADA59D'
         },
         dark: {
             text: '#FFFFFF',
@@ -7776,7 +7903,8 @@ const tritanopiaPalettes = {
             error: '#F5C5B5',
             circularReference: '#D5C5B5',
             propertyKey: '#E5D5C5',
-            punctuation: '#E5D5C5'
+            punctuation: '#E5D5C5',
+            indentGuide: '#736B63'
         }
     },
     tritanopiaBright: {
@@ -7800,7 +7928,8 @@ const tritanopiaPalettes = {
             error: '#AA5577',
             circularReference: '#555555',
             propertyKey: '#333333',
-            punctuation: '#4A4A4A'
+            punctuation: '#4A4A4A',
+            indentGuide: '#A5A5A5'
         },
         dark: {
             text: '#FFFFFF',
@@ -7822,7 +7951,8 @@ const tritanopiaPalettes = {
             error: '#FFAACC',
             circularReference: '#CCCCCC',
             propertyKey: '#DDDDDD',
-            punctuation: '#BBBBBB'
+            punctuation: '#BBBBBB',
+            indentGuide: '#5E5E5E'
         }
     },
     tritanopiaSubtle: {
@@ -7846,7 +7976,8 @@ const tritanopiaPalettes = {
             error: '#7A5A6A',
             circularReference: '#6A6A6A',
             propertyKey: '#4A4A4A',
-            punctuation: '#5A5A5A'
+            punctuation: '#5A5A5A',
+            indentGuide: '#ADADAD'
         },
         dark: {
             text: '#FFFFFF',
@@ -7868,7 +7999,8 @@ const tritanopiaPalettes = {
             error: '#CCAABB',
             circularReference: '#BBBBBB',
             propertyKey: '#CCCCCC',
-            punctuation: '#AAAAAA'
+            punctuation: '#AAAAAA',
+            indentGuide: '#555555'
         }
     },
     tritanopiaPastel: {
@@ -7892,7 +8024,8 @@ const tritanopiaPalettes = {
             error: '#8A6A7A',
             circularReference: '#7A7A7A',
             propertyKey: '#5A5A5A',
-            punctuation: '#6A6A6A'
+            punctuation: '#6A6A6A',
+            indentGuide: '#B5B5B5'
         },
         dark: {
             text: '#FFFFFF',
@@ -7914,7 +8047,8 @@ const tritanopiaPalettes = {
             error: '#FFDDEE',
             circularReference: '#E5E5E5',
             propertyKey: '#F5F5F5',
-            punctuation: '#D5D5D5'
+            punctuation: '#D5D5D5',
+            indentGuide: '#6B6B6B'
         }
     },
     tritanopiaBoring: {
@@ -7938,7 +8072,8 @@ const tritanopiaPalettes = {
             error: '#4A3A4A',
             circularReference: '#5A5A5A',
             propertyKey: '#2A2A2A',
-            punctuation: '#4A4A4A'
+            punctuation: '#4A4A4A',
+            indentGuide: '#A5A5A5'
         },
         dark: {
             text: '#FFFFFF',
@@ -7960,7 +8095,8 @@ const tritanopiaPalettes = {
             error: '#AAA5AA',
             circularReference: '#BBBBBB',
             propertyKey: '#CCCCCC',
-            punctuation: '#AAAAAA'
+            punctuation: '#AAAAAA',
+            indentGuide: '#555555'
         }
     },
     tritanopiaFunky: {
@@ -7984,7 +8120,8 @@ const tritanopiaPalettes = {
             error: '#AA4466',
             circularReference: '#555555',
             propertyKey: '#222222',
-            punctuation: '#4A4A4A'
+            punctuation: '#4A4A4A',
+            indentGuide: '#A5A5A5'
         },
         dark: {
             text: '#FFFFFF',
@@ -8006,7 +8143,8 @@ const tritanopiaPalettes = {
             error: '#FFBBDD',
             circularReference: '#DDDDDD',
             propertyKey: '#EEEEEE',
-            punctuation: '#CCCCCC'
+            punctuation: '#CCCCCC',
+            indentGuide: '#666666'
         }
     },
     tritanopiaVivid: {
@@ -8030,7 +8168,8 @@ const tritanopiaPalettes = {
             error: '#AA3355',
             circularReference: '#444444',
             propertyKey: '#1A1A1A',
-            punctuation: '#3A3A3A'
+            punctuation: '#3A3A3A',
+            indentGuide: '#9D9D9D'
         },
         dark: {
             text: '#FFFFFF',
@@ -8052,7 +8191,8 @@ const tritanopiaPalettes = {
             error: '#FFCCEE',
             circularReference: '#DDDDDD',
             propertyKey: '#EEEEEE',
-            punctuation: '#CCCCCC'
+            punctuation: '#CCCCCC',
+            indentGuide: '#666666'
         }
     }
 };
@@ -8083,7 +8223,8 @@ const monochromacyPalettes = {
             error: '#585858',
             circularReference: '#3A3A3A',
             propertyKey: '#2A2A2A',
-            punctuation: '#4A4A4A'
+            punctuation: '#4A4A4A',
+            indentGuide: '#A5A5A5'
         },
         dark: {
             text: '#FFFFFF',
@@ -8105,7 +8246,8 @@ const monochromacyPalettes = {
             error: '#E8E8E8',
             circularReference: '#C5C5C5',
             propertyKey: '#F0F0F0',
-            punctuation: '#D5D5D5'
+            punctuation: '#D5D5D5',
+            indentGuide: '#6B6B6B'
         }
     },
     monochromacyBright: {
@@ -8129,7 +8271,8 @@ const monochromacyPalettes = {
             error: '#2A2A2A',
             circularReference: '#5A5A5A',
             propertyKey: '#333333',
-            punctuation: '#4A4A4A'
+            punctuation: '#4A4A4A',
+            indentGuide: '#A5A5A5'
         },
         dark: {
             text: '#FFFFFF',
@@ -8151,7 +8294,8 @@ const monochromacyPalettes = {
             error: '#DDDDDD',
             circularReference: '#AAAAAA',
             propertyKey: '#DDDDDD',
-            punctuation: '#BBBBBB'
+            punctuation: '#BBBBBB',
+            indentGuide: '#5E5E5E'
         }
     },
     monochromacySubtle: {
@@ -8175,7 +8319,8 @@ const monochromacyPalettes = {
             error: '#4A4A4A',
             circularReference: '#6A6A6A',
             propertyKey: '#4A4A4A',
-            punctuation: '#5A5A5A'
+            punctuation: '#5A5A5A',
+            indentGuide: '#ADADAD'
         },
         dark: {
             text: '#FFFFFF',
@@ -8197,7 +8342,8 @@ const monochromacyPalettes = {
             error: '#BBBBBB',
             circularReference: '#999999',
             propertyKey: '#BBBBBB',
-            punctuation: '#AAAAAA'
+            punctuation: '#AAAAAA',
+            indentGuide: '#555555'
         }
     },
     monochromacyPastel: {
@@ -8221,7 +8367,8 @@ const monochromacyPalettes = {
             error: '#5A5A5A',
             circularReference: '#7A7A7A',
             propertyKey: '#5A5A5A',
-            punctuation: '#6A6A6A'
+            punctuation: '#6A6A6A',
+            indentGuide: '#B5B5B5'
         },
         dark: {
             text: '#FFFFFF',
@@ -8243,7 +8390,8 @@ const monochromacyPalettes = {
             error: '#E5E5E5',
             circularReference: '#C5C5C5',
             propertyKey: '#E5E5E5',
-            punctuation: '#D5D5D5'
+            punctuation: '#D5D5D5',
+            indentGuide: '#6B6B6B'
         }
     },
     monochromacyBoring: {
@@ -8267,7 +8415,8 @@ const monochromacyPalettes = {
             error: '#3A3A3A',
             circularReference: '#5A5A5A',
             propertyKey: '#2A2A2A',
-            punctuation: '#4A4A4A'
+            punctuation: '#4A4A4A',
+            indentGuide: '#A5A5A5'
         },
         dark: {
             text: '#FFFFFF',
@@ -8289,7 +8438,8 @@ const monochromacyPalettes = {
             error: '#B5B5B5',
             circularReference: '#999999',
             propertyKey: '#BBBBBB',
-            punctuation: '#AAAAAA'
+            punctuation: '#AAAAAA',
+            indentGuide: '#555555'
         }
     },
     monochromacyFunky: {
@@ -8313,7 +8463,8 @@ const monochromacyPalettes = {
             error: '#1A1A1A',
             circularReference: '#555555',
             propertyKey: '#222222',
-            punctuation: '#4A4A4A'
+            punctuation: '#4A4A4A',
+            indentGuide: '#A5A5A5'
         },
         dark: {
             text: '#FFFFFF',
@@ -8335,7 +8486,8 @@ const monochromacyPalettes = {
             error: '#EEEEEE',
             circularReference: '#AAAAAA',
             propertyKey: '#EEEEEE',
-            punctuation: '#CCCCCC'
+            punctuation: '#CCCCCC',
+            indentGuide: '#666666'
         }
     },
     monochromacyVivid: {
@@ -8359,7 +8511,8 @@ const monochromacyPalettes = {
             error: '#0A0A0A',
             circularReference: '#444444',
             propertyKey: '#1A1A1A',
-            punctuation: '#3A3A3A'
+            punctuation: '#3A3A3A',
+            indentGuide: '#9D9D9D'
         },
         dark: {
             text: '#FFFFFF',
@@ -8381,7 +8534,8 @@ const monochromacyPalettes = {
             error: '#F5F5F5',
             circularReference: '#BBBBBB',
             propertyKey: '#EEEEEE',
-            punctuation: '#CCCCCC'
+            punctuation: '#CCCCCC',
+            indentGuide: '#666666'
         }
     }
 };
@@ -8412,7 +8566,8 @@ const deuteranomalyPalettes = {
             error: '#5A4A3A',
             circularReference: '#3A4A5A',
             propertyKey: '#2A3A4A',
-            punctuation: '#4A5A6A'
+            punctuation: '#4A5A6A',
+            indentGuide: '#A5ADB5'
         },
         dark: {
             text: '#FFFFFF',
@@ -8434,7 +8589,8 @@ const deuteranomalyPalettes = {
             error: '#DDCCAA',
             circularReference: '#AACCEE',
             propertyKey: '#DDFFFF',
-            punctuation: '#BBDDFF'
+            punctuation: '#BBDDFF',
+            indentGuide: '#5E6F80'
         }
     },
     deuteranomalyBright: {
@@ -8458,7 +8614,8 @@ const deuteranomalyPalettes = {
             error: '#5577BB',
             circularReference: '#555555',
             propertyKey: '#333333',
-            punctuation: '#4A4A4A'
+            punctuation: '#4A4A4A',
+            indentGuide: '#A5A5A5'
         },
         dark: {
             text: '#FFFFFF',
@@ -8480,7 +8637,8 @@ const deuteranomalyPalettes = {
             error: '#AACCFF',
             circularReference: '#CCCCCC',
             propertyKey: '#DDDDDD',
-            punctuation: '#BBBBBB'
+            punctuation: '#BBBBBB',
+            indentGuide: '#5E5E5E'
         }
     },
     deuteranomalySubtle: {
@@ -8504,7 +8662,8 @@ const deuteranomalyPalettes = {
             error: '#4A5A8A',
             circularReference: '#6A6A6A',
             propertyKey: '#4A4A4A',
-            punctuation: '#5A5A5A'
+            punctuation: '#5A5A5A',
+            indentGuide: '#ADADAD'
         },
         dark: {
             text: '#FFFFFF',
@@ -8526,7 +8685,8 @@ const deuteranomalyPalettes = {
             error: '#AABBDD',
             circularReference: '#BBBBBB',
             propertyKey: '#CCCCCC',
-            punctuation: '#AAAAAA'
+            punctuation: '#AAAAAA',
+            indentGuide: '#555555'
         }
     },
     deuteranomalyPastel: {
@@ -8550,7 +8710,8 @@ const deuteranomalyPalettes = {
             error: '#5A6A9A',
             circularReference: '#7A7A7A',
             propertyKey: '#5A5A5A',
-            punctuation: '#6A6A6A'
+            punctuation: '#6A6A6A',
+            indentGuide: '#B5B5B5'
         },
         dark: {
             text: '#FFFFFF',
@@ -8572,7 +8733,8 @@ const deuteranomalyPalettes = {
             error: '#DDEEFF',
             circularReference: '#E5E5E5',
             propertyKey: '#F5F5F5',
-            punctuation: '#D5D5D5'
+            punctuation: '#D5D5D5',
+            indentGuide: '#6B6B6B'
         }
     },
     deuteranomalyBoring: {
@@ -8596,7 +8758,8 @@ const deuteranomalyPalettes = {
             error: '#3A4A6A',
             circularReference: '#5A5A5A',
             propertyKey: '#2A2A2A',
-            punctuation: '#4A4A4A'
+            punctuation: '#4A4A4A',
+            indentGuide: '#A5A5A5'
         },
         dark: {
             text: '#FFFFFF',
@@ -8618,7 +8781,8 @@ const deuteranomalyPalettes = {
             error: '#AABBDD',
             circularReference: '#BBBBBB',
             propertyKey: '#CCCCCC',
-            punctuation: '#AAAAAA'
+            punctuation: '#AAAAAA',
+            indentGuide: '#555555'
         }
     },
     deuteranomalyFunky: {
@@ -8642,7 +8806,8 @@ const deuteranomalyPalettes = {
             error: '#4477CC',
             circularReference: '#555555',
             propertyKey: '#222222',
-            punctuation: '#4A4A4A'
+            punctuation: '#4A4A4A',
+            indentGuide: '#A5A5A5'
         },
         dark: {
             text: '#FFFFFF',
@@ -8664,7 +8829,8 @@ const deuteranomalyPalettes = {
             error: '#BBDDFF',
             circularReference: '#DDDDDD',
             propertyKey: '#EEEEEE',
-            punctuation: '#CCCCCC'
+            punctuation: '#CCCCCC',
+            indentGuide: '#666666'
         }
     },
     deuteranomalyVivid: {
@@ -8688,7 +8854,8 @@ const deuteranomalyPalettes = {
             error: '#3366BB',
             circularReference: '#444444',
             propertyKey: '#1A1A1A',
-            punctuation: '#3A3A3A'
+            punctuation: '#3A3A3A',
+            indentGuide: '#9D9D9D'
         },
         dark: {
             text: '#FFFFFF',
@@ -8710,7 +8877,8 @@ const deuteranomalyPalettes = {
             error: '#CCDEFF',
             circularReference: '#DDDDDD',
             propertyKey: '#EEEEEE',
-            punctuation: '#CCCCCC'
+            punctuation: '#CCCCCC',
+            indentGuide: '#666666'
         }
     }
 };
@@ -8741,7 +8909,8 @@ const protanomalyPalettes = {
             error: '#4A4A3A',
             circularReference: '#2A4A5A',
             propertyKey: '#1A3A4A',
-            punctuation: '#3A5A6A'
+            punctuation: '#3A5A6A',
+            indentGuide: '#9DADB5'
         },
         dark: {
             text: '#FFFFFF',
@@ -8763,7 +8932,8 @@ const protanomalyPalettes = {
             error: '#CCCCAA',
             circularReference: '#99CCEE',
             propertyKey: '#CCFFFF',
-            punctuation: '#AADDFF'
+            punctuation: '#AADDFF',
+            indentGuide: '#556F80'
         }
     },
     protanomalyBright: {
@@ -8787,7 +8957,8 @@ const protanomalyPalettes = {
             error: '#5577AA',
             circularReference: '#555555',
             propertyKey: '#333333',
-            punctuation: '#4A4A4A'
+            punctuation: '#4A4A4A',
+            indentGuide: '#A5A5A5'
         },
         dark: {
             text: '#FFFFFF',
@@ -8809,7 +8980,8 @@ const protanomalyPalettes = {
             error: '#AACCFF',
             circularReference: '#CCCCCC',
             propertyKey: '#DDDDDD',
-            punctuation: '#BBBBBB'
+            punctuation: '#BBBBBB',
+            indentGuide: '#5E5E5E'
         }
     },
     protanomalySubtle: {
@@ -8833,7 +9005,8 @@ const protanomalyPalettes = {
             error: '#4A5A7A',
             circularReference: '#6A6A6A',
             propertyKey: '#4A4A4A',
-            punctuation: '#5A5A5A'
+            punctuation: '#5A5A5A',
+            indentGuide: '#ADADAD'
         },
         dark: {
             text: '#FFFFFF',
@@ -8855,7 +9028,8 @@ const protanomalyPalettes = {
             error: '#AABBCC',
             circularReference: '#BBBBBB',
             propertyKey: '#CCCCCC',
-            punctuation: '#AAAAAA'
+            punctuation: '#AAAAAA',
+            indentGuide: '#555555'
         }
     },
     protanomalyPastel: {
@@ -8879,7 +9053,8 @@ const protanomalyPalettes = {
             error: '#5A6A8A',
             circularReference: '#7A7A7A',
             propertyKey: '#5A5A5A',
-            punctuation: '#6A6A6A'
+            punctuation: '#6A6A6A',
+            indentGuide: '#B5B5B5'
         },
         dark: {
             text: '#FFFFFF',
@@ -8901,7 +9076,8 @@ const protanomalyPalettes = {
             error: '#DDEEFF',
             circularReference: '#E5E5E5',
             propertyKey: '#F5F5F5',
-            punctuation: '#D5D5D5'
+            punctuation: '#D5D5D5',
+            indentGuide: '#6B6B6B'
         }
     },
     protanomalyBoring: {
@@ -8925,7 +9101,8 @@ const protanomalyPalettes = {
             error: '#3A4A5A',
             circularReference: '#5A5A5A',
             propertyKey: '#2A2A2A',
-            punctuation: '#4A4A4A'
+            punctuation: '#4A4A4A',
+            indentGuide: '#A5A5A5'
         },
         dark: {
             text: '#FFFFFF',
@@ -8947,7 +9124,8 @@ const protanomalyPalettes = {
             error: '#AABBCC',
             circularReference: '#BBBBBB',
             propertyKey: '#CCCCCC',
-            punctuation: '#AAAAAA'
+            punctuation: '#AAAAAA',
+            indentGuide: '#555555'
         }
     },
     protanomalyFunky: {
@@ -8971,7 +9149,8 @@ const protanomalyPalettes = {
             error: '#4477BB',
             circularReference: '#555555',
             propertyKey: '#222222',
-            punctuation: '#4A4A4A'
+            punctuation: '#4A4A4A',
+            indentGuide: '#A5A5A5'
         },
         dark: {
             text: '#FFFFFF',
@@ -8993,7 +9172,8 @@ const protanomalyPalettes = {
             error: '#BBDDFF',
             circularReference: '#DDDDDD',
             propertyKey: '#EEEEEE',
-            punctuation: '#CCCCCC'
+            punctuation: '#CCCCCC',
+            indentGuide: '#666666'
         }
     },
     protanomalyVivid: {
@@ -9017,7 +9197,8 @@ const protanomalyPalettes = {
             error: '#3366AA',
             circularReference: '#444444',
             propertyKey: '#1A1A1A',
-            punctuation: '#3A3A3A'
+            punctuation: '#3A3A3A',
+            indentGuide: '#9D9D9D'
         },
         dark: {
             text: '#FFFFFF',
@@ -9039,7 +9220,8 @@ const protanomalyPalettes = {
             error: '#CCDEFF',
             circularReference: '#DDDDDD',
             propertyKey: '#EEEEEE',
-            punctuation: '#CCCCCC'
+            punctuation: '#CCCCCC',
+            indentGuide: '#666666'
         }
     }
 };
@@ -9070,7 +9252,8 @@ const tritanomalyPalettes = {
             error: '#6A3A3A',
             circularReference: '#4A3A3A',
             propertyKey: '#3A2A2A',
-            punctuation: '#5A4A4A'
+            punctuation: '#5A4A4A',
+            indentGuide: '#ADA5A5'
         },
         dark: {
             text: '#FFFFFF',
@@ -9092,7 +9275,8 @@ const tritanomalyPalettes = {
             error: '#F5C5C5',
             circularReference: '#D5C5C5',
             propertyKey: '#E5D5D5',
-            punctuation: '#E5D5D5'
+            punctuation: '#E5D5D5',
+            indentGuide: '#736B6B'
         }
     },
     tritanomalyBright: {
@@ -9116,7 +9300,8 @@ const tritanomalyPalettes = {
             error: '#AA5577',
             circularReference: '#555555',
             propertyKey: '#333333',
-            punctuation: '#4A4A4A'
+            punctuation: '#4A4A4A',
+            indentGuide: '#A5A5A5'
         },
         dark: {
             text: '#FFFFFF',
@@ -9138,7 +9323,8 @@ const tritanomalyPalettes = {
             error: '#FFAACC',
             circularReference: '#CCCCCC',
             propertyKey: '#DDDDDD',
-            punctuation: '#BBBBBB'
+            punctuation: '#BBBBBB',
+            indentGuide: '#5E5E5E'
         }
     },
     tritanomalySubtle: {
@@ -9162,7 +9348,8 @@ const tritanomalyPalettes = {
             error: '#7A5A6A',
             circularReference: '#6A6A6A',
             propertyKey: '#4A4A4A',
-            punctuation: '#5A5A5A'
+            punctuation: '#5A5A5A',
+            indentGuide: '#ADADAD'
         },
         dark: {
             text: '#FFFFFF',
@@ -9184,7 +9371,8 @@ const tritanomalyPalettes = {
             error: '#CCAABB',
             circularReference: '#BBBBBB',
             propertyKey: '#CCCCCC',
-            punctuation: '#AAAAAA'
+            punctuation: '#AAAAAA',
+            indentGuide: '#555555'
         }
     },
     tritanomalyPastel: {
@@ -9208,7 +9396,8 @@ const tritanomalyPalettes = {
             error: '#8A6A7A',
             circularReference: '#7A7A7A',
             propertyKey: '#5A5A5A',
-            punctuation: '#6A6A6A'
+            punctuation: '#6A6A6A',
+            indentGuide: '#B5B5B5'
         },
         dark: {
             text: '#FFFFFF',
@@ -9230,7 +9419,8 @@ const tritanomalyPalettes = {
             error: '#FFDDEE',
             circularReference: '#E5E5E5',
             propertyKey: '#F5F5F5',
-            punctuation: '#D5D5D5'
+            punctuation: '#D5D5D5',
+            indentGuide: '#6B6B6B'
         }
     },
     tritanomalyBoring: {
@@ -9254,7 +9444,8 @@ const tritanomalyPalettes = {
             error: '#4A3A4A',
             circularReference: '#5A5A5A',
             propertyKey: '#2A2A2A',
-            punctuation: '#4A4A4A'
+            punctuation: '#4A4A4A',
+            indentGuide: '#A5A5A5'
         },
         dark: {
             text: '#FFFFFF',
@@ -9276,7 +9467,8 @@ const tritanomalyPalettes = {
             error: '#AAA5AA',
             circularReference: '#BBBBBB',
             propertyKey: '#CCCCCC',
-            punctuation: '#AAAAAA'
+            punctuation: '#AAAAAA',
+            indentGuide: '#555555'
         }
     },
     tritanomalyFunky: {
@@ -9300,7 +9492,8 @@ const tritanomalyPalettes = {
             error: '#AA4466',
             circularReference: '#555555',
             propertyKey: '#222222',
-            punctuation: '#4A4A4A'
+            punctuation: '#4A4A4A',
+            indentGuide: '#A5A5A5'
         },
         dark: {
             text: '#FFFFFF',
@@ -9322,7 +9515,8 @@ const tritanomalyPalettes = {
             error: '#FFBBDD',
             circularReference: '#DDDDDD',
             propertyKey: '#EEEEEE',
-            punctuation: '#CCCCCC'
+            punctuation: '#CCCCCC',
+            indentGuide: '#666666'
         }
     },
     tritanomalyVivid: {
@@ -9346,7 +9540,8 @@ const tritanomalyPalettes = {
             error: '#AA3355',
             circularReference: '#444444',
             propertyKey: '#1A1A1A',
-            punctuation: '#3A3A3A'
+            punctuation: '#3A3A3A',
+            indentGuide: '#9D9D9D'
         },
         dark: {
             text: '#FFFFFF',
@@ -9368,7 +9563,8 @@ const tritanomalyPalettes = {
             error: '#FFCCEE',
             circularReference: '#DDDDDD',
             propertyKey: '#EEEEEE',
-            punctuation: '#CCCCCC'
+            punctuation: '#CCCCCC',
+            indentGuide: '#666666'
         }
     }
 };
@@ -9399,7 +9595,8 @@ const achromatopsiaPalettes = {
             error: '#595959',
             circularReference: '#3B3B3B',
             propertyKey: '#2B2B2B',
-            punctuation: '#4B4B4B'
+            punctuation: '#4B4B4B',
+            indentGuide: '#A5A5A5'
         },
         dark: {
             text: '#FFFFFF',
@@ -9421,7 +9618,8 @@ const achromatopsiaPalettes = {
             error: '#E9E9E9',
             circularReference: '#C6C6C6',
             propertyKey: '#F1F1F1',
-            punctuation: '#D6D6D6'
+            punctuation: '#D6D6D6',
+            indentGuide: '#6B6B6B'
         }
     }
 };
@@ -9458,7 +9656,8 @@ const redsColorRangePalettes = {
             error: '#DD2222',
             circularReference: '#7A3A3A',
             propertyKey: '#663333',
-            punctuation: '#774444'
+            punctuation: '#774444',
+            indentGuide: '#BBA2A2'
         },
         dark: {
             text: '#FFFFFF',
@@ -9480,7 +9679,8 @@ const redsColorRangePalettes = {
             error: '#FF6666',
             circularReference: '#EEAAAA',
             propertyKey: '#FFDDDD',
-            punctuation: '#FFCCCC'
+            punctuation: '#FFCCCC',
+            indentGuide: '#806666'
         }
     },
     redsAndYellows: {
@@ -9504,7 +9704,8 @@ const redsColorRangePalettes = {
             error: '#DD1111',
             circularReference: '#7A4A3A',
             propertyKey: '#663322',
-            punctuation: '#774433'
+            punctuation: '#774433',
+            indentGuide: '#BBA299'
         },
         dark: {
             text: '#FFFFFF',
@@ -9526,7 +9727,8 @@ const redsColorRangePalettes = {
             error: '#FF5555',
             circularReference: '#EEBBAA',
             propertyKey: '#FFEEEE',
-            punctuation: '#FFDDDD'
+            punctuation: '#FFDDDD',
+            indentGuide: '#806F6F'
         }
     },
     redsAndGreens: {
@@ -9550,7 +9752,8 @@ const redsColorRangePalettes = {
             error: '#DD2222',
             circularReference: '#6A4A3A',
             propertyKey: '#664433',
-            punctuation: '#775544'
+            punctuation: '#775544',
+            indentGuide: '#BBAAA2'
         },
         dark: {
             text: '#FFFFFF',
@@ -9572,7 +9775,8 @@ const redsColorRangePalettes = {
             error: '#FF7777',
             circularReference: '#DDBBAA',
             propertyKey: '#FFEEEE',
-            punctuation: '#FFDDDD'
+            punctuation: '#FFDDDD',
+            indentGuide: '#806F6F'
         }
     },
     redsAndBlues: {
@@ -9596,7 +9800,8 @@ const redsColorRangePalettes = {
             error: '#DD2244',
             circularReference: '#5A3A4A',
             propertyKey: '#553344',
-            punctuation: '#664455'
+            punctuation: '#664455',
+            indentGuide: '#B3A2AA'
         },
         dark: {
             text: '#FFFFFF',
@@ -9618,7 +9823,8 @@ const redsColorRangePalettes = {
             error: '#FF7799',
             circularReference: '#DDBBCC',
             propertyKey: '#FFEEEE',
-            punctuation: '#FFDDEE'
+            punctuation: '#FFDDEE',
+            indentGuide: '#806F77'
         }
     },
     redsAndPurples: {
@@ -9642,7 +9848,8 @@ const redsColorRangePalettes = {
             error: '#DD2255',
             circularReference: '#6A3A5A',
             propertyKey: '#553355',
-            punctuation: '#664466'
+            punctuation: '#664466',
+            indentGuide: '#B3A2B3'
         },
         dark: {
             text: '#FFFFFF',
@@ -9664,7 +9871,8 @@ const redsColorRangePalettes = {
             error: '#FF77AA',
             circularReference: '#EECCEE',
             propertyKey: '#FFEEEE',
-            punctuation: '#FFDDEE'
+            punctuation: '#FFDDEE',
+            indentGuide: '#806F77'
         }
     },
     redsAndBrowns: {
@@ -9688,7 +9896,8 @@ const redsColorRangePalettes = {
             error: '#DD2211',
             circularReference: '#5A3A2A',
             propertyKey: '#553322',
-            punctuation: '#664433'
+            punctuation: '#664433',
+            indentGuide: '#B3A299'
         },
         dark: {
             text: '#FFFFFF',
@@ -9710,7 +9919,8 @@ const redsColorRangePalettes = {
             error: '#FF7766',
             circularReference: '#DDBBAA',
             propertyKey: '#FFEEEE',
-            punctuation: '#FFDDCC'
+            punctuation: '#FFDDCC',
+            indentGuide: '#806F66'
         }
     },
     redsAndGreys: {
@@ -9734,7 +9944,8 @@ const redsColorRangePalettes = {
             error: '#DD2222',
             circularReference: '#5A3A3A',
             propertyKey: '#444444',
-            punctuation: '#555555'
+            punctuation: '#555555',
+            indentGuide: '#AAAAAA'
         },
         dark: {
             text: '#FFFFFF',
@@ -9756,7 +9967,8 @@ const redsColorRangePalettes = {
             error: '#FF7777',
             circularReference: '#DDCCCC',
             propertyKey: '#FFEEEE',
-            punctuation: '#FFDDDD'
+            punctuation: '#FFDDDD',
+            indentGuide: '#806F6F'
         }
     },
     redsAndCharcoals: {
@@ -9780,7 +9992,8 @@ const redsColorRangePalettes = {
             error: '#DD1111',
             circularReference: '#4A2A2A',
             propertyKey: '#333333',
-            punctuation: '#444444'
+            punctuation: '#444444',
+            indentGuide: '#A2A2A2'
         },
         dark: {
             text: '#FFFFFF',
@@ -9802,7 +10015,8 @@ const redsColorRangePalettes = {
             error: '#FF6666',
             circularReference: '#CCBBBB',
             propertyKey: '#FFDDDD',
-            punctuation: '#EECCCC'
+            punctuation: '#EECCCC',
+            indentGuide: '#776666'
         }
     },
     redsAndCyans: {
@@ -9826,7 +10040,8 @@ const redsColorRangePalettes = {
             error: '#DD2233',
             circularReference: '#5A3A4A',
             propertyKey: '#553344',
-            punctuation: '#664455'
+            punctuation: '#664455',
+            indentGuide: '#B3A2AA'
         },
         dark: {
             text: '#FFFFFF',
@@ -9848,7 +10063,8 @@ const redsColorRangePalettes = {
             error: '#FF7799',
             circularReference: '#DDCCDD',
             propertyKey: '#FFEEEE',
-            punctuation: '#FFDDEE'
+            punctuation: '#FFDDEE',
+            indentGuide: '#806F77'
         }
     },
     redsAndMagentas: {
@@ -9872,7 +10088,8 @@ const redsColorRangePalettes = {
             error: '#DD2266',
             circularReference: '#6A3A5A',
             propertyKey: '#553355',
-            punctuation: '#664466'
+            punctuation: '#664466',
+            indentGuide: '#B3A2B3'
         },
         dark: {
             text: '#FFFFFF',
@@ -9894,7 +10111,8 @@ const redsColorRangePalettes = {
             error: '#FF77AA',
             circularReference: '#EECCEE',
             propertyKey: '#FFEEEE',
-            punctuation: '#FFDDFF'
+            punctuation: '#FFDDFF',
+            indentGuide: '#806F80'
         }
     },
     redsAndLightGrays: {
@@ -9918,7 +10136,8 @@ const redsColorRangePalettes = {
             error: '#DD3333',
             circularReference: '#6A4A4A',
             propertyKey: '#555555',
-            punctuation: '#666666'
+            punctuation: '#666666',
+            indentGuide: '#B3B3B3'
         },
         dark: {
             text: '#FFFFFF',
@@ -9940,7 +10159,8 @@ const redsColorRangePalettes = {
             error: '#FF8888',
             circularReference: '#EEDDDD',
             propertyKey: '#FFFFFF',
-            punctuation: '#FFEEEE'
+            punctuation: '#FFEEEE',
+            indentGuide: '#807777'
         }
     }
 };
@@ -9977,7 +10197,8 @@ const orangesColorRangePalettes = {
             error: '#CC2200',
             circularReference: '#8A4A2A',
             propertyKey: '#6A3A1A',
-            punctuation: '#7A4A2A'
+            punctuation: '#7A4A2A',
+            indentGuide: '#BDA595'
         },
         dark: {
             text: '#FFFFFF',
@@ -9999,7 +10220,8 @@ const orangesColorRangePalettes = {
             error: '#FF5533',
             circularReference: '#FFBB88',
             propertyKey: '#FFF5DD',
-            punctuation: '#FFDDAA'
+            punctuation: '#FFDDAA',
+            indentGuide: '#806F55'
         }
     },
     orangesAndYellows: {
@@ -10023,7 +10245,8 @@ const orangesColorRangePalettes = {
             error: '#BB6600',
             circularReference: '#8A6A2A',
             propertyKey: '#6A4A1A',
-            punctuation: '#7A5A2A'
+            punctuation: '#7A5A2A',
+            indentGuide: '#BDAD95'
         },
         dark: {
             text: '#FFFFFF',
@@ -10045,7 +10268,8 @@ const orangesColorRangePalettes = {
             error: '#FFAA33',
             circularReference: '#FFCC88',
             propertyKey: '#FFF5DD',
-            punctuation: '#FFEEBB'
+            punctuation: '#FFEEBB',
+            indentGuide: '#80775E'
         }
     },
     orangesAndGreens: {
@@ -10069,7 +10293,8 @@ const orangesColorRangePalettes = {
             error: '#CC5500',
             circularReference: '#6A5A3A',
             propertyKey: '#4A3A2A',
-            punctuation: '#5A4A3A'
+            punctuation: '#5A4A3A',
+            indentGuide: '#ADA59D'
         },
         dark: {
             text: '#FFFFFF',
@@ -10091,7 +10316,8 @@ const orangesColorRangePalettes = {
             error: '#FFAA33',
             circularReference: '#DDCC99',
             propertyKey: '#FFF5DD',
-            punctuation: '#EEDDAA'
+            punctuation: '#EEDDAA',
+            indentGuide: '#776F55'
         }
     },
     orangesAndBlues: {
@@ -10115,7 +10341,8 @@ const orangesColorRangePalettes = {
             error: '#CC5500',
             circularReference: '#5A4A5A',
             propertyKey: '#3A2A3A',
-            punctuation: '#4A3A4A'
+            punctuation: '#4A3A4A',
+            indentGuide: '#A59DA5'
         },
         dark: {
             text: '#FFFFFF',
@@ -10137,7 +10364,8 @@ const orangesColorRangePalettes = {
             error: '#FFAA33',
             circularReference: '#DDCCCC',
             propertyKey: '#FFF5EE',
-            punctuation: '#EEDDDD'
+            punctuation: '#EEDDDD',
+            indentGuide: '#776F6F'
         }
     },
     orangesAndPurples: {
@@ -10161,7 +10389,8 @@ const orangesColorRangePalettes = {
             error: '#CC5500',
             circularReference: '#6A4A6A',
             propertyKey: '#4A2A4A',
-            punctuation: '#5A3A5A'
+            punctuation: '#5A3A5A',
+            indentGuide: '#AD9DAD'
         },
         dark: {
             text: '#FFFFFF',
@@ -10183,7 +10412,8 @@ const orangesColorRangePalettes = {
             error: '#FFAA33',
             circularReference: '#EECCDD',
             propertyKey: '#FFEEEE',
-            punctuation: '#FFDDEE'
+            punctuation: '#FFDDEE',
+            indentGuide: '#806F77'
         }
     },
     orangesAndBrowns: {
@@ -10207,7 +10437,8 @@ const orangesColorRangePalettes = {
             error: '#CC5500',
             circularReference: '#6A4A2A',
             propertyKey: '#4A2A1A',
-            punctuation: '#5A3A2A'
+            punctuation: '#5A3A2A',
+            indentGuide: '#AD9D95'
         },
         dark: {
             text: '#FFFFFF',
@@ -10229,7 +10460,8 @@ const orangesColorRangePalettes = {
             error: '#FFAA33',
             circularReference: '#DDBB99',
             propertyKey: '#FFF5DD',
-            punctuation: '#EECCAA'
+            punctuation: '#EECCAA',
+            indentGuide: '#776655'
         }
     },
     orangesAndGreys: {
@@ -10253,7 +10485,8 @@ const orangesColorRangePalettes = {
             error: '#CC5500',
             circularReference: '#6A5A4A',
             propertyKey: '#3A3A3A',
-            punctuation: '#5A5A5A'
+            punctuation: '#5A5A5A',
+            indentGuide: '#ADADAD'
         },
         dark: {
             text: '#FFFFFF',
@@ -10275,7 +10508,8 @@ const orangesColorRangePalettes = {
             error: '#FFAA33',
             circularReference: '#DDCCBB',
             propertyKey: '#FFFFFF',
-            punctuation: '#EEDDCC'
+            punctuation: '#EEDDCC',
+            indentGuide: '#776F66'
         }
     },
     orangesAndCharcoals: {
@@ -10299,7 +10533,8 @@ const orangesColorRangePalettes = {
             error: '#CC5500',
             circularReference: '#4A3A2A',
             propertyKey: '#2A1A1A',
-            punctuation: '#3A2A2A'
+            punctuation: '#3A2A2A',
+            indentGuide: '#9D9595'
         },
         dark: {
             text: '#FFFFFF',
@@ -10321,7 +10556,8 @@ const orangesColorRangePalettes = {
             error: '#FFAA33',
             circularReference: '#CCBB99',
             propertyKey: '#F5F5F5',
-            punctuation: '#DDCCAA'
+            punctuation: '#DDCCAA',
+            indentGuide: '#6F6655'
         }
     },
     orangesAndCyans: {
@@ -10345,7 +10581,8 @@ const orangesColorRangePalettes = {
             error: '#CC5500',
             circularReference: '#5A5A5A',
             propertyKey: '#3A3A3A',
-            punctuation: '#4A4A4A'
+            punctuation: '#4A4A4A',
+            indentGuide: '#A5A5A5'
         },
         dark: {
             text: '#FFFFFF',
@@ -10367,7 +10604,8 @@ const orangesColorRangePalettes = {
             error: '#FFAA33',
             circularReference: '#DDDDDD',
             propertyKey: '#FFFFFF',
-            punctuation: '#EEEEEE'
+            punctuation: '#EEEEEE',
+            indentGuide: '#777777'
         }
     },
     orangesAndMagentas: {
@@ -10391,7 +10629,8 @@ const orangesColorRangePalettes = {
             error: '#CC5500',
             circularReference: '#6A4A5A',
             propertyKey: '#4A2A3A',
-            punctuation: '#5A3A4A'
+            punctuation: '#5A3A4A',
+            indentGuide: '#AD9DA5'
         },
         dark: {
             text: '#FFFFFF',
@@ -10413,7 +10652,8 @@ const orangesColorRangePalettes = {
             error: '#FFAA33',
             circularReference: '#EECCDD',
             propertyKey: '#FFEEEE',
-            punctuation: '#FFDDEE'
+            punctuation: '#FFDDEE',
+            indentGuide: '#806F77'
         }
     },
     orangesAndLightGrays: {
@@ -10437,7 +10677,8 @@ const orangesColorRangePalettes = {
             error: '#CC5500',
             circularReference: '#7A6A5A',
             propertyKey: '#5A4A3A',
-            punctuation: '#6A5A4A'
+            punctuation: '#6A5A4A',
+            indentGuide: '#B5ADA5'
         },
         dark: {
             text: '#FFFFFF',
@@ -10459,7 +10700,8 @@ const orangesColorRangePalettes = {
             error: '#FFAA33',
             circularReference: '#EEDDCC',
             propertyKey: '#FFFFFF',
-            punctuation: '#FFEEEE'
+            punctuation: '#FFEEEE',
+            indentGuide: '#807777'
         }
     }
 };
@@ -10503,7 +10745,8 @@ const yellowsColorRangePalettes = {
             error: '#AA2A1A',
             circularReference: '#6A5A1A',
             propertyKey: '#5A4A1A',
-            punctuation: '#7A6A2A'
+            punctuation: '#7A6A2A',
+            indentGuide: '#BDB595'
         },
         dark: {
             text: '#FFFFFF',
@@ -10525,7 +10768,8 @@ const yellowsColorRangePalettes = {
             error: '#FF8844',
             circularReference: '#EEDD88',
             propertyKey: '#FFFFDD',
-            punctuation: '#FFEE99'
+            punctuation: '#FFEE99',
+            indentGuide: '#80774D'
         }
     },
     /**
@@ -10553,7 +10797,8 @@ const yellowsColorRangePalettes = {
             error: '#BB5A1A',
             circularReference: '#7A6A2A',
             propertyKey: '#6A5A2A',
-            punctuation: '#8A7A3A'
+            punctuation: '#8A7A3A',
+            indentGuide: '#C5BD9D'
         },
         dark: {
             text: '#FFFFFF',
@@ -10575,7 +10820,8 @@ const yellowsColorRangePalettes = {
             error: '#FFBB66',
             circularReference: '#EEDD99',
             propertyKey: '#FFFFEE',
-            punctuation: '#FFEE99'
+            punctuation: '#FFEE99',
+            indentGuide: '#80774D'
         }
     },
     /**
@@ -10603,7 +10849,8 @@ const yellowsColorRangePalettes = {
             error: '#9A7A1A',
             circularReference: '#7A7A1A',
             propertyKey: '#6A6A1A',
-            punctuation: '#8A8A2A'
+            punctuation: '#8A8A2A',
+            indentGuide: '#C5C595'
         },
         dark: {
             text: '#FFFFFF',
@@ -10625,7 +10872,8 @@ const yellowsColorRangePalettes = {
             error: '#EEDD66',
             circularReference: '#EEDD88',
             propertyKey: '#FFFFEE',
-            punctuation: '#FFFF99'
+            punctuation: '#FFFF99',
+            indentGuide: '#80804D'
         }
     },
     /**
@@ -10653,7 +10901,8 @@ const yellowsColorRangePalettes = {
             error: '#2A4A6A',
             circularReference: '#7A7A1A',
             propertyKey: '#6A6A1A',
-            punctuation: '#8A8A2A'
+            punctuation: '#8A8A2A',
+            indentGuide: '#C5C595'
         },
         dark: {
             text: '#FFFFFF',
@@ -10675,7 +10924,8 @@ const yellowsColorRangePalettes = {
             error: '#77AAEE',
             circularReference: '#EEDD88',
             propertyKey: '#FFFFEE',
-            punctuation: '#FFFF99'
+            punctuation: '#FFFF99',
+            indentGuide: '#80804D'
         }
     },
     /**
@@ -10703,7 +10953,8 @@ const yellowsColorRangePalettes = {
             error: '#4A1A5A',
             circularReference: '#7A7A1A',
             propertyKey: '#6A6A1A',
-            punctuation: '#8A8A2A'
+            punctuation: '#8A8A2A',
+            indentGuide: '#C5C595'
         },
         dark: {
             text: '#FFFFFF',
@@ -10725,7 +10976,8 @@ const yellowsColorRangePalettes = {
             error: '#BB77EE',
             circularReference: '#EEDD88',
             propertyKey: '#FFFFEE',
-            punctuation: '#FFFF99'
+            punctuation: '#FFFF99',
+            indentGuide: '#80804D'
         }
     },
     /**
@@ -10753,7 +11005,8 @@ const yellowsColorRangePalettes = {
             error: '#4A2A1A',
             circularReference: '#7A6A1A',
             propertyKey: '#5A4A1A',
-            punctuation: '#8A7A2A'
+            punctuation: '#8A7A2A',
+            indentGuide: '#C5BD95'
         },
         dark: {
             text: '#FFFFFF',
@@ -10775,7 +11028,8 @@ const yellowsColorRangePalettes = {
             error: '#BB8855',
             circularReference: '#EEDD88',
             propertyKey: '#FFFFEE',
-            punctuation: '#FFEE99'
+            punctuation: '#FFEE99',
+            indentGuide: '#80774D'
         }
     },
     /**
@@ -10803,7 +11057,8 @@ const yellowsColorRangePalettes = {
             error: '#3A3A3A',
             circularReference: '#7A7A1A',
             propertyKey: '#5A5A1A',
-            punctuation: '#8A8A2A'
+            punctuation: '#8A8A2A',
+            indentGuide: '#C5C595'
         },
         dark: {
             text: '#FFFFFF',
@@ -10825,7 +11080,8 @@ const yellowsColorRangePalettes = {
             error: '#AAAAAA',
             circularReference: '#EEDD88',
             propertyKey: '#FFFFEE',
-            punctuation: '#FFFF99'
+            punctuation: '#FFFF99',
+            indentGuide: '#80804D'
         }
     },
     /**
@@ -10853,7 +11109,8 @@ const yellowsColorRangePalettes = {
             error: '#0A0A0A',
             circularReference: '#7A7A1A',
             propertyKey: '#4A4A1A',
-            punctuation: '#8A8A2A'
+            punctuation: '#8A8A2A',
+            indentGuide: '#C5C595'
         },
         dark: {
             text: '#FFFFFF',
@@ -10875,7 +11132,8 @@ const yellowsColorRangePalettes = {
             error: '#FFFFFF',
             circularReference: '#EEDD88',
             propertyKey: '#FFFFEE',
-            punctuation: '#FFFF99'
+            punctuation: '#FFFF99',
+            indentGuide: '#80804D'
         }
     },
     /**
@@ -10903,7 +11161,8 @@ const yellowsColorRangePalettes = {
             error: '#1A4A5A',
             circularReference: '#7A7A1A',
             propertyKey: '#6A6A1A',
-            punctuation: '#8A8A2A'
+            punctuation: '#8A8A2A',
+            indentGuide: '#C5C595'
         },
         dark: {
             text: '#FFFFFF',
@@ -10925,7 +11184,8 @@ const yellowsColorRangePalettes = {
             error: '#66CCDD',
             circularReference: '#EEDD88',
             propertyKey: '#FFFFEE',
-            punctuation: '#FFFF99'
+            punctuation: '#FFFF99',
+            indentGuide: '#80804D'
         }
     },
     /**
@@ -10953,7 +11213,8 @@ const yellowsColorRangePalettes = {
             error: '#6A1A4A',
             circularReference: '#7A7A1A',
             propertyKey: '#6A6A1A',
-            punctuation: '#8A8A2A'
+            punctuation: '#8A8A2A',
+            indentGuide: '#C5C595'
         },
         dark: {
             text: '#FFFFFF',
@@ -10975,7 +11236,8 @@ const yellowsColorRangePalettes = {
             error: '#DD66CC',
             circularReference: '#EEDD88',
             propertyKey: '#FFFFEE',
-            punctuation: '#FFFF99'
+            punctuation: '#FFFF99',
+            indentGuide: '#80804D'
         }
     },
     /**
@@ -11003,7 +11265,8 @@ const yellowsColorRangePalettes = {
             error: '#5A5A5A',
             circularReference: '#7A7A1A',
             propertyKey: '#6A6A1A',
-            punctuation: '#8A8A2A'
+            punctuation: '#8A8A2A',
+            indentGuide: '#C5C595'
         },
         dark: {
             text: '#FFFFFF',
@@ -11025,7 +11288,8 @@ const yellowsColorRangePalettes = {
             error: '#CCCCCC',
             circularReference: '#EEDD88',
             propertyKey: '#FFFFEE',
-            punctuation: '#FFFF99'
+            punctuation: '#FFFF99',
+            indentGuide: '#80804D'
         }
     }
 };
@@ -11064,7 +11328,8 @@ const greensAndReds = {
         error: '#AA2A2A',
         circularReference: '#2A5A3A',
         propertyKey: '#1A4A2A',
-        punctuation: '#3A6A4A'
+        punctuation: '#3A6A4A',
+        indentGuide: '#9DB5A5'
     },
     dark: {
         text: '#FFFFFF',
@@ -11086,7 +11351,8 @@ const greensAndReds = {
         error: '#FF6666',
         circularReference: '#A5E5C5',
         propertyKey: '#CCFFEE',
-        punctuation: '#B5F5D5'
+        punctuation: '#B5F5D5',
+        indentGuide: '#5B7B6B'
     }
 };
 /**
@@ -11114,7 +11380,8 @@ const greensAndOranges = {
         error: '#BB5A2A',
         circularReference: '#2A5A3A',
         propertyKey: '#1A4A2A',
-        punctuation: '#3A6A4A'
+        punctuation: '#3A6A4A',
+        indentGuide: '#9DB5A5'
     },
     dark: {
         text: '#FFFFFF',
@@ -11136,7 +11403,8 @@ const greensAndOranges = {
         error: '#FFBB66',
         circularReference: '#A5E5C5',
         propertyKey: '#CCFFEE',
-        punctuation: '#B5F5D5'
+        punctuation: '#B5F5D5',
+        indentGuide: '#5B7B6B'
     }
 };
 /**
@@ -11164,7 +11432,8 @@ const greensAndYellows = {
         error: '#9A8A2A',
         circularReference: '#2A5A3A',
         propertyKey: '#1A4A2A',
-        punctuation: '#3A6A4A'
+        punctuation: '#3A6A4A',
+        indentGuide: '#9DB5A5'
     },
     dark: {
         text: '#FFFFFF',
@@ -11186,7 +11455,8 @@ const greensAndYellows = {
         error: '#FFEE88',
         circularReference: '#A5E5C5',
         propertyKey: '#CCFFEE',
-        punctuation: '#B5F5D5'
+        punctuation: '#B5F5D5',
+        indentGuide: '#5B7B6B'
     }
 };
 /**
@@ -11214,7 +11484,8 @@ const greensAndBlues = {
         error: '#3A4A7A',
         circularReference: '#2A5A3A',
         propertyKey: '#1A4A2A',
-        punctuation: '#3A6A4A'
+        punctuation: '#3A6A4A',
+        indentGuide: '#9DB5A5'
     },
     dark: {
         text: '#FFFFFF',
@@ -11236,7 +11507,8 @@ const greensAndBlues = {
         error: '#AACCFF',
         circularReference: '#A5E5C5',
         propertyKey: '#CCFFEE',
-        punctuation: '#B5F5D5'
+        punctuation: '#B5F5D5',
+        indentGuide: '#5B7B6B'
     }
 };
 /**
@@ -11264,7 +11536,8 @@ const greensAndPurples = {
         error: '#6A2A8A',
         circularReference: '#2A5A3A',
         propertyKey: '#1A4A2A',
-        punctuation: '#3A6A4A'
+        punctuation: '#3A6A4A',
+        indentGuide: '#9DB5A5'
     },
     dark: {
         text: '#FFFFFF',
@@ -11286,7 +11559,8 @@ const greensAndPurples = {
         error: '#EE88FF',
         circularReference: '#A5E5C5',
         propertyKey: '#CCFFEE',
-        punctuation: '#B5F5D5'
+        punctuation: '#B5F5D5',
+        indentGuide: '#5B7B6B'
     }
 };
 /**
@@ -11314,7 +11588,8 @@ const greensAndBrowns = {
         error: '#7A4A2A',
         circularReference: '#2A5A3A',
         propertyKey: '#1A4A2A',
-        punctuation: '#3A6A4A'
+        punctuation: '#3A6A4A',
+        indentGuide: '#9DB5A5'
     },
     dark: {
         text: '#FFFFFF',
@@ -11336,7 +11611,8 @@ const greensAndBrowns = {
         error: '#EEBB88',
         circularReference: '#A5E5C5',
         propertyKey: '#CCFFEE',
-        punctuation: '#B5F5D5'
+        punctuation: '#B5F5D5',
+        indentGuide: '#5B7B6B'
     }
 };
 /**
@@ -11364,7 +11640,8 @@ const greensAndGreys = {
         error: '#666666',
         circularReference: '#2A5A3A',
         propertyKey: '#1A4A2A',
-        punctuation: '#3A6A4A'
+        punctuation: '#3A6A4A',
+        indentGuide: '#9DB5A5'
     },
     dark: {
         text: '#FFFFFF',
@@ -11386,7 +11663,8 @@ const greensAndGreys = {
         error: '#DDDDDD',
         circularReference: '#A5E5C5',
         propertyKey: '#CCFFEE',
-        punctuation: '#B5F5D5'
+        punctuation: '#B5F5D5',
+        indentGuide: '#5B7B6B'
     }
 };
 /**
@@ -11414,7 +11692,8 @@ const greensAndCharcoals = {
         error: '#333333',
         circularReference: '#2A5A3A',
         propertyKey: '#1A4A2A',
-        punctuation: '#3A6A4A'
+        punctuation: '#3A6A4A',
+        indentGuide: '#9DB5A5'
     },
     dark: {
         text: '#FFFFFF',
@@ -11436,7 +11715,8 @@ const greensAndCharcoals = {
         error: '#EEEEEE',
         circularReference: '#A5E5C5',
         propertyKey: '#CCFFEE',
-        punctuation: '#B5F5D5'
+        punctuation: '#B5F5D5',
+        indentGuide: '#5B7B6B'
     }
 };
 /**
@@ -11464,7 +11744,8 @@ const greensAndCyans = {
         error: '#2A5A8A',
         circularReference: '#2A5A3A',
         propertyKey: '#1A4A2A',
-        punctuation: '#3A6A4A'
+        punctuation: '#3A6A4A',
+        indentGuide: '#9DB5A5'
     },
     dark: {
         text: '#FFFFFF',
@@ -11486,7 +11767,8 @@ const greensAndCyans = {
         error: '#99DDFF',
         circularReference: '#A5E5C5',
         propertyKey: '#CCFFEE',
-        punctuation: '#B5F5D5'
+        punctuation: '#B5F5D5',
+        indentGuide: '#5B7B6B'
     }
 };
 /**
@@ -11514,7 +11796,8 @@ const greensAndMagentas = {
         error: '#9A2A7A',
         circularReference: '#2A5A3A',
         propertyKey: '#1A4A2A',
-        punctuation: '#3A6A4A'
+        punctuation: '#3A6A4A',
+        indentGuide: '#9DB5A5'
     },
     dark: {
         text: '#FFFFFF',
@@ -11536,7 +11819,8 @@ const greensAndMagentas = {
         error: '#FF88EE',
         circularReference: '#A5E5C5',
         propertyKey: '#CCFFEE',
-        punctuation: '#B5F5D5'
+        punctuation: '#B5F5D5',
+        indentGuide: '#5B7B6B'
     }
 };
 /**
@@ -11564,7 +11848,8 @@ const greensAndLightGrays = {
         error: '#888888',
         circularReference: '#2A5A3A',
         propertyKey: '#1A4A2A',
-        punctuation: '#3A6A4A'
+        punctuation: '#3A6A4A',
+        indentGuide: '#9DB5A5'
     },
     dark: {
         text: '#FFFFFF',
@@ -11586,7 +11871,8 @@ const greensAndLightGrays = {
         error: '#F5F5F5',
         circularReference: '#A5E5C5',
         propertyKey: '#CCFFEE',
-        punctuation: '#B5F5D5'
+        punctuation: '#B5F5D5',
+        indentGuide: '#5B7B6B'
     }
 };
 /**
@@ -11635,7 +11921,8 @@ const bluesColorRangePalettes = {
             error: '#7A3A3A',
             circularReference: '#1A3A5A',
             propertyKey: '#0A2A4A',
-            punctuation: '#2A4A6A'
+            punctuation: '#2A4A6A',
+            indentGuide: '#95A5B5'
         },
         dark: {
             text: '#FFFFFF',
@@ -11657,7 +11944,8 @@ const bluesColorRangePalettes = {
             error: '#FF7788',
             circularReference: '#88CCFF',
             propertyKey: '#CCFFFF',
-            punctuation: '#99DDFF'
+            punctuation: '#99DDFF',
+            indentGuide: '#4D6F80'
         }
     },
     bluesAndOranges: {
@@ -11681,7 +11969,8 @@ const bluesColorRangePalettes = {
             error: '#AA6A3A',
             circularReference: '#1A3A5A',
             propertyKey: '#0A2A4A',
-            punctuation: '#2A4A6A'
+            punctuation: '#2A4A6A',
+            indentGuide: '#95A5B5'
         },
         dark: {
             text: '#FFFFFF',
@@ -11703,7 +11992,8 @@ const bluesColorRangePalettes = {
             error: '#FFAA66',
             circularReference: '#88CCFF',
             propertyKey: '#CCFFFF',
-            punctuation: '#99DDFF'
+            punctuation: '#99DDFF',
+            indentGuide: '#4D6F80'
         }
     },
     bluesAndYellows: {
@@ -11727,7 +12017,8 @@ const bluesColorRangePalettes = {
             error: '#8A7A2A',
             circularReference: '#1A3A5A',
             propertyKey: '#0A2A4A',
-            punctuation: '#2A4A6A'
+            punctuation: '#2A4A6A',
+            indentGuide: '#95A5B5'
         },
         dark: {
             text: '#FFFFFF',
@@ -11749,7 +12040,8 @@ const bluesColorRangePalettes = {
             error: '#FFDD77',
             circularReference: '#88CCFF',
             propertyKey: '#CCFFFF',
-            punctuation: '#99DDFF'
+            punctuation: '#99DDFF',
+            indentGuide: '#4D6F80'
         }
     },
     bluesAndGreens: {
@@ -11773,7 +12065,8 @@ const bluesColorRangePalettes = {
             error: '#2A5A3A',
             circularReference: '#1A3A5A',
             propertyKey: '#0A2A4A',
-            punctuation: '#2A4A6A'
+            punctuation: '#2A4A6A',
+            indentGuide: '#95A5B5'
         },
         dark: {
             text: '#FFFFFF',
@@ -11795,7 +12088,8 @@ const bluesColorRangePalettes = {
             error: '#77FF99',
             circularReference: '#88CCFF',
             propertyKey: '#CCFFFF',
-            punctuation: '#99DDFF'
+            punctuation: '#99DDFF',
+            indentGuide: '#4D6F80'
         }
     },
     bluesAndPurples: {
@@ -11819,7 +12113,8 @@ const bluesColorRangePalettes = {
             error: '#5A2A6A',
             circularReference: '#1A3A5A',
             propertyKey: '#0A2A4A',
-            punctuation: '#2A4A6A'
+            punctuation: '#2A4A6A',
+            indentGuide: '#95A5B5'
         },
         dark: {
             text: '#FFFFFF',
@@ -11841,7 +12136,8 @@ const bluesColorRangePalettes = {
             error: '#CC77EE',
             circularReference: '#88CCFF',
             propertyKey: '#CCFFFF',
-            punctuation: '#99DDFF'
+            punctuation: '#99DDFF',
+            indentGuide: '#4D6F80'
         }
     },
     bluesAndBrowns: {
@@ -11865,7 +12161,8 @@ const bluesColorRangePalettes = {
             error: '#5A3A2A',
             circularReference: '#1A3A5A',
             propertyKey: '#0A2A4A',
-            punctuation: '#2A4A6A'
+            punctuation: '#2A4A6A',
+            indentGuide: '#95A5B5'
         },
         dark: {
             text: '#FFFFFF',
@@ -11887,7 +12184,8 @@ const bluesColorRangePalettes = {
             error: '#CCAA77',
             circularReference: '#88CCFF',
             propertyKey: '#CCFFFF',
-            punctuation: '#99DDFF'
+            punctuation: '#99DDFF',
+            indentGuide: '#4D6F80'
         }
     },
     bluesAndGreys: {
@@ -11911,7 +12209,8 @@ const bluesColorRangePalettes = {
             error: '#3A3A3A',
             circularReference: '#1A3A5A',
             propertyKey: '#0A2A4A',
-            punctuation: '#2A4A6A'
+            punctuation: '#2A4A6A',
+            indentGuide: '#95A5B5'
         },
         dark: {
             text: '#FFFFFF',
@@ -11933,7 +12232,8 @@ const bluesColorRangePalettes = {
             error: '#BBBBBB',
             circularReference: '#88CCFF',
             propertyKey: '#CCFFFF',
-            punctuation: '#99DDFF'
+            punctuation: '#99DDFF',
+            indentGuide: '#4D6F80'
         }
     },
     bluesAndCharcoals: {
@@ -11957,7 +12257,8 @@ const bluesColorRangePalettes = {
             error: '#1A1A1A',
             circularReference: '#1A3A5A',
             propertyKey: '#0A2A4A',
-            punctuation: '#2A4A6A'
+            punctuation: '#2A4A6A',
+            indentGuide: '#95A5B5'
         },
         dark: {
             text: '#FFFFFF',
@@ -11979,7 +12280,8 @@ const bluesColorRangePalettes = {
             error: '#999999',
             circularReference: '#88CCFF',
             propertyKey: '#CCFFFF',
-            punctuation: '#99DDFF'
+            punctuation: '#99DDFF',
+            indentGuide: '#4D6F80'
         }
     },
     bluesAndCyans: {
@@ -12003,7 +12305,8 @@ const bluesColorRangePalettes = {
             error: '#0A5A5A',
             circularReference: '#1A3A5A',
             propertyKey: '#0A2A4A',
-            punctuation: '#2A4A6A'
+            punctuation: '#2A4A6A',
+            indentGuide: '#95A5B5'
         },
         dark: {
             text: '#FFFFFF',
@@ -12025,7 +12328,8 @@ const bluesColorRangePalettes = {
             error: '#77FFFF',
             circularReference: '#88CCFF',
             propertyKey: '#CCFFFF',
-            punctuation: '#99DDFF'
+            punctuation: '#99DDFF',
+            indentGuide: '#4D6F80'
         }
     },
     bluesAndMagentas: {
@@ -12049,7 +12353,8 @@ const bluesColorRangePalettes = {
             error: '#7A2A5A',
             circularReference: '#1A3A5A',
             propertyKey: '#0A2A4A',
-            punctuation: '#2A4A6A'
+            punctuation: '#2A4A6A',
+            indentGuide: '#95A5B5'
         },
         dark: {
             text: '#FFFFFF',
@@ -12071,7 +12376,8 @@ const bluesColorRangePalettes = {
             error: '#EE77CC',
             circularReference: '#88CCFF',
             propertyKey: '#CCFFFF',
-            punctuation: '#99DDFF'
+            punctuation: '#99DDFF',
+            indentGuide: '#4D6F80'
         }
     },
     bluesAndLightGrays: {
@@ -12095,7 +12401,8 @@ const bluesColorRangePalettes = {
             error: '#5A5A5A',
             circularReference: '#1A3A5A',
             propertyKey: '#0A2A4A',
-            punctuation: '#2A4A6A'
+            punctuation: '#2A4A6A',
+            indentGuide: '#95A5B5'
         },
         dark: {
             text: '#FFFFFF',
@@ -12117,7 +12424,8 @@ const bluesColorRangePalettes = {
             error: '#DDDDDD',
             circularReference: '#88CCFF',
             propertyKey: '#CCFFFF',
-            punctuation: '#99DDFF'
+            punctuation: '#99DDFF',
+            indentGuide: '#4D6F80'
         }
     }
 };
@@ -12167,7 +12475,8 @@ const purplesColorRangePalettes = {
             error: '#AA2A3A',
             circularReference: '#5A3A5A',
             propertyKey: '#4A2A4A',
-            punctuation: '#6A4A6A'
+            punctuation: '#6A4A6A',
+            indentGuide: '#B5A5B5'
         },
         dark: {
             text: '#FFFFFF',
@@ -12189,7 +12498,8 @@ const purplesColorRangePalettes = {
             error: '#FF88AA',
             circularReference: '#D5C5D5',
             propertyKey: '#F5E5FF',
-            punctuation: '#E5D5E5'
+            punctuation: '#E5D5E5',
+            indentGuide: '#736B73'
         }
     },
     purplesAndOranges: {
@@ -12213,7 +12523,8 @@ const purplesColorRangePalettes = {
             error: '#AA4A1A',
             circularReference: '#5A3A5A',
             propertyKey: '#4A2A4A',
-            punctuation: '#6A4A6A'
+            punctuation: '#6A4A6A',
+            indentGuide: '#B5A5B5'
         },
         dark: {
             text: '#FFFFFF',
@@ -12235,7 +12546,8 @@ const purplesColorRangePalettes = {
             error: '#FFAA55',
             circularReference: '#D5C5D5',
             propertyKey: '#F5E5FF',
-            punctuation: '#E5D5E5'
+            punctuation: '#E5D5E5',
+            indentGuide: '#736B73'
         }
     },
     purplesAndYellows: {
@@ -12259,7 +12571,8 @@ const purplesColorRangePalettes = {
             error: '#9A6A1A',
             circularReference: '#5A3A5A',
             propertyKey: '#4A2A4A',
-            punctuation: '#6A4A6A'
+            punctuation: '#6A4A6A',
+            indentGuide: '#B5A5B5'
         },
         dark: {
             text: '#FFFFFF',
@@ -12281,7 +12594,8 @@ const purplesColorRangePalettes = {
             error: '#FFCC77',
             circularReference: '#D5C5D5',
             propertyKey: '#F5E5FF',
-            punctuation: '#E5D5E5'
+            punctuation: '#E5D5E5',
+            indentGuide: '#736B73'
         }
     },
     purplesAndGreens: {
@@ -12305,7 +12619,8 @@ const purplesColorRangePalettes = {
             error: '#1A5A2A',
             circularReference: '#5A3A5A',
             propertyKey: '#4A2A4A',
-            punctuation: '#6A4A6A'
+            punctuation: '#6A4A6A',
+            indentGuide: '#B5A5B5'
         },
         dark: {
             text: '#FFFFFF',
@@ -12327,7 +12642,8 @@ const purplesColorRangePalettes = {
             error: '#77DD88',
             circularReference: '#D5C5D5',
             propertyKey: '#F5E5FF',
-            punctuation: '#E5D5E5'
+            punctuation: '#E5D5E5',
+            indentGuide: '#736B73'
         }
     },
     purplesAndBlues: {
@@ -12351,7 +12667,8 @@ const purplesColorRangePalettes = {
             error: '#1A3A6A',
             circularReference: '#5A3A5A',
             propertyKey: '#4A2A4A',
-            punctuation: '#6A4A6A'
+            punctuation: '#6A4A6A',
+            indentGuide: '#B5A5B5'
         },
         dark: {
             text: '#FFFFFF',
@@ -12373,7 +12690,8 @@ const purplesColorRangePalettes = {
             error: '#77AADD',
             circularReference: '#D5C5D5',
             propertyKey: '#F5E5FF',
-            punctuation: '#E5D5E5'
+            punctuation: '#E5D5E5',
+            indentGuide: '#736B73'
         }
     },
     purplesAndBrowns: {
@@ -12397,7 +12715,8 @@ const purplesColorRangePalettes = {
             error: '#5A2A0A',
             circularReference: '#5A3A5A',
             propertyKey: '#4A2A4A',
-            punctuation: '#6A4A6A'
+            punctuation: '#6A4A6A',
+            indentGuide: '#B5A5B5'
         },
         dark: {
             text: '#FFFFFF',
@@ -12419,7 +12738,8 @@ const purplesColorRangePalettes = {
             error: '#BB9966',
             circularReference: '#D5C5D5',
             propertyKey: '#F5E5FF',
-            punctuation: '#E5D5E5'
+            punctuation: '#E5D5E5',
+            indentGuide: '#736B73'
         }
     },
     purplesAndGreys: {
@@ -12443,7 +12763,8 @@ const purplesColorRangePalettes = {
             error: '#3A3A3A',
             circularReference: '#5A3A5A',
             propertyKey: '#4A2A4A',
-            punctuation: '#6A4A6A'
+            punctuation: '#6A4A6A',
+            indentGuide: '#B5A5B5'
         },
         dark: {
             text: '#FFFFFF',
@@ -12465,7 +12786,8 @@ const purplesColorRangePalettes = {
             error: '#AAAAAA',
             circularReference: '#D5C5D5',
             propertyKey: '#F5E5FF',
-            punctuation: '#E5D5E5'
+            punctuation: '#E5D5E5',
+            indentGuide: '#736B73'
         }
     },
     purplesAndCharcoals: {
@@ -12489,7 +12811,8 @@ const purplesColorRangePalettes = {
             error: '#1A1A1A',
             circularReference: '#5A3A5A',
             propertyKey: '#4A2A4A',
-            punctuation: '#6A4A6A'
+            punctuation: '#6A4A6A',
+            indentGuide: '#B5A5B5'
         },
         dark: {
             text: '#FFFFFF',
@@ -12511,7 +12834,8 @@ const purplesColorRangePalettes = {
             error: '#888888',
             circularReference: '#D5C5D5',
             propertyKey: '#F5E5FF',
-            punctuation: '#E5D5E5'
+            punctuation: '#E5D5E5',
+            indentGuide: '#736B73'
         }
     },
     purplesAndCyans: {
@@ -12535,7 +12859,8 @@ const purplesColorRangePalettes = {
             error: '#1A5A5A',
             circularReference: '#5A3A5A',
             propertyKey: '#4A2A4A',
-            punctuation: '#6A4A6A'
+            punctuation: '#6A4A6A',
+            indentGuide: '#B5A5B5'
         },
         dark: {
             text: '#FFFFFF',
@@ -12557,7 +12882,8 @@ const purplesColorRangePalettes = {
             error: '#77CCCC',
             circularReference: '#D5C5D5',
             propertyKey: '#F5E5FF',
-            punctuation: '#E5D5E5'
+            punctuation: '#E5D5E5',
+            indentGuide: '#736B73'
         }
     },
     purplesAndMagentas: {
@@ -12581,7 +12907,8 @@ const purplesColorRangePalettes = {
             error: '#9A1A6A',
             circularReference: '#5A3A5A',
             propertyKey: '#4A2A4A',
-            punctuation: '#6A4A6A'
+            punctuation: '#6A4A6A',
+            indentGuide: '#B5A5B5'
         },
         dark: {
             text: '#FFFFFF',
@@ -12603,7 +12930,8 @@ const purplesColorRangePalettes = {
             error: '#FF77DD',
             circularReference: '#D5C5D5',
             propertyKey: '#F5E5FF',
-            punctuation: '#E5D5E5'
+            punctuation: '#E5D5E5',
+            indentGuide: '#736B73'
         }
     },
     purplesAndLightGrays: {
@@ -12627,7 +12955,8 @@ const purplesColorRangePalettes = {
             error: '#5A5A5A',
             circularReference: '#5A3A5A',
             propertyKey: '#4A2A4A',
-            punctuation: '#6A4A6A'
+            punctuation: '#6A4A6A',
+            indentGuide: '#B5A5B5'
         },
         dark: {
             text: '#FFFFFF',
@@ -12649,7 +12978,8 @@ const purplesColorRangePalettes = {
             error: '#CCCCCC',
             circularReference: '#D5C5D5',
             propertyKey: '#F5E5FF',
-            punctuation: '#E5D5E5'
+            punctuation: '#E5D5E5',
+            indentGuide: '#736B73'
         }
     }
 };
@@ -12699,7 +13029,8 @@ const brownsColorRangePalettes = {
             error: '#8A3A2A',
             circularReference: '#4A3A2A',
             propertyKey: '#3A2A1A',
-            punctuation: '#5A4A3A'
+            punctuation: '#5A4A3A',
+            indentGuide: '#ADA59D'
         },
         dark: {
             text: '#FFFFFF',
@@ -12721,7 +13052,8 @@ const brownsColorRangePalettes = {
             error: '#FFBBAA',
             circularReference: '#D5C5B5',
             propertyKey: '#F5E5D5',
-            punctuation: '#E5D5C5'
+            punctuation: '#E5D5C5',
+            indentGuide: '#736B63'
         }
     },
     brownsAndOranges: {
@@ -12745,7 +13077,8 @@ const brownsColorRangePalettes = {
             error: '#9A5A2A',
             circularReference: '#4A3A2A',
             propertyKey: '#3A2A1A',
-            punctuation: '#5A4A3A'
+            punctuation: '#5A4A3A',
+            indentGuide: '#ADA59D'
         },
         dark: {
             text: '#FFFFFF',
@@ -12767,7 +13100,8 @@ const brownsColorRangePalettes = {
             error: '#FFD5AA',
             circularReference: '#D5C5B5',
             propertyKey: '#F5E5D5',
-            punctuation: '#E5D5C5'
+            punctuation: '#E5D5C5',
+            indentGuide: '#736B63'
         }
     },
     brownsAndYellows: {
@@ -12791,7 +13125,8 @@ const brownsColorRangePalettes = {
             error: '#9A7A2A',
             circularReference: '#4A4A2A',
             propertyKey: '#3A3A1A',
-            punctuation: '#5A5A3A'
+            punctuation: '#5A5A3A',
+            indentGuide: '#ADAD9D'
         },
         dark: {
             text: '#FFFFFF',
@@ -12813,7 +13148,8 @@ const brownsColorRangePalettes = {
             error: '#FFEEAA',
             circularReference: '#D5D5B5',
             propertyKey: '#F5F5D5',
-            punctuation: '#E5E5C5'
+            punctuation: '#E5E5C5',
+            indentGuide: '#737363'
         }
     },
     brownsAndGreens: {
@@ -12837,7 +13173,8 @@ const brownsColorRangePalettes = {
             error: '#5A6A2A',
             circularReference: '#3A4A2A',
             propertyKey: '#2A3A1A',
-            punctuation: '#4A5A3A'
+            punctuation: '#4A5A3A',
+            indentGuide: '#A5AD9D'
         },
         dark: {
             text: '#FFFFFF',
@@ -12859,7 +13196,8 @@ const brownsColorRangePalettes = {
             error: '#D5F5B5',
             circularReference: '#C5D5B5',
             propertyKey: '#E5F5D5',
-            punctuation: '#D5E5C5'
+            punctuation: '#D5E5C5',
+            indentGuide: '#6B7363'
         }
     },
     brownsAndBlues: {
@@ -12883,7 +13221,8 @@ const brownsColorRangePalettes = {
             error: '#4A5A6A',
             circularReference: '#3A3A4A',
             propertyKey: '#2A2A3A',
-            punctuation: '#4A4A5A'
+            punctuation: '#4A4A5A',
+            indentGuide: '#A5A5AD'
         },
         dark: {
             text: '#FFFFFF',
@@ -12905,7 +13244,8 @@ const brownsColorRangePalettes = {
             error: '#C5DDEE',
             circularReference: '#C5C5D5',
             propertyKey: '#E5E5F5',
-            punctuation: '#D5D5E5'
+            punctuation: '#D5D5E5',
+            indentGuide: '#6B6B73'
         }
     },
     brownsAndPurples: {
@@ -12929,7 +13269,8 @@ const brownsColorRangePalettes = {
             error: '#7A4A6A',
             circularReference: '#4A3A4A',
             propertyKey: '#3A2A3A',
-            punctuation: '#5A4A5A'
+            punctuation: '#5A4A5A',
+            indentGuide: '#ADA5AD'
         },
         dark: {
             text: '#FFFFFF',
@@ -12951,7 +13292,8 @@ const brownsColorRangePalettes = {
             error: '#FFCCEE',
             circularReference: '#D5C5D5',
             propertyKey: '#F5E5F5',
-            punctuation: '#E5D5E5'
+            punctuation: '#E5D5E5',
+            indentGuide: '#736B73'
         }
     },
     brownsAndGreys: {
@@ -12975,7 +13317,8 @@ const brownsColorRangePalettes = {
             error: '#5A5A5A',
             circularReference: '#4A4A4A',
             propertyKey: '#3A3A3A',
-            punctuation: '#5A5A5A'
+            punctuation: '#5A5A5A',
+            indentGuide: '#ADADAD'
         },
         dark: {
             text: '#FFFFFF',
@@ -12997,7 +13340,8 @@ const brownsColorRangePalettes = {
             error: '#E5E5E5',
             circularReference: '#D5D5D5',
             propertyKey: '#F5F5F5',
-            punctuation: '#E5E5E5'
+            punctuation: '#E5E5E5',
+            indentGuide: '#737373'
         }
     },
     brownsAndCharcoals: {
@@ -13021,7 +13365,8 @@ const brownsColorRangePalettes = {
             error: '#4A4A4A',
             circularReference: '#3A3A3A',
             propertyKey: '#2A2A2A',
-            punctuation: '#4A4A4A'
+            punctuation: '#4A4A4A',
+            indentGuide: '#A5A5A5'
         },
         dark: {
             text: '#FFFFFF',
@@ -13043,7 +13388,8 @@ const brownsColorRangePalettes = {
             error: '#D5D5D5',
             circularReference: '#C5C5C5',
             propertyKey: '#E5E5E5',
-            punctuation: '#D5D5D5'
+            punctuation: '#D5D5D5',
+            indentGuide: '#6B6B6B'
         }
     },
     brownsAndCyans: {
@@ -13067,7 +13413,8 @@ const brownsColorRangePalettes = {
             error: '#4A6A6A',
             circularReference: '#3A4A4A',
             propertyKey: '#2A3A3A',
-            punctuation: '#4A5A5A'
+            punctuation: '#4A5A5A',
+            indentGuide: '#A5ADAD'
         },
         dark: {
             text: '#FFFFFF',
@@ -13089,7 +13436,8 @@ const brownsColorRangePalettes = {
             error: '#C5F5EE',
             circularReference: '#C5D5D5',
             propertyKey: '#E5F5F5',
-            punctuation: '#D5E5E5'
+            punctuation: '#D5E5E5',
+            indentGuide: '#6B7373'
         }
     },
     brownsAndMagentas: {
@@ -13113,7 +13461,8 @@ const brownsColorRangePalettes = {
             error: '#8A4A6A',
             circularReference: '#4A3A4A',
             propertyKey: '#3A2A3A',
-            punctuation: '#5A4A5A'
+            punctuation: '#5A4A5A',
+            indentGuide: '#ADA5AD'
         },
         dark: {
             text: '#FFFFFF',
@@ -13135,7 +13484,8 @@ const brownsColorRangePalettes = {
             error: '#FFCCDD',
             circularReference: '#D5C5D5',
             propertyKey: '#F5E5F5',
-            punctuation: '#E5D5E5'
+            punctuation: '#E5D5E5',
+            indentGuide: '#736B73'
         }
     },
     brownsAndLightGrays: {
@@ -13159,7 +13509,8 @@ const brownsColorRangePalettes = {
             error: '#6A6A6A',
             circularReference: '#5A5A5A',
             propertyKey: '#4A4A4A',
-            punctuation: '#6A6A6A'
+            punctuation: '#6A6A6A',
+            indentGuide: '#B5B5B5'
         },
         dark: {
             text: '#FFFFFF',
@@ -13181,7 +13532,8 @@ const brownsColorRangePalettes = {
             error: '#F5F5F5',
             circularReference: '#E5E5E5',
             propertyKey: '#FFFFFF',
-            punctuation: '#F5F5F5'
+            punctuation: '#F5F5F5',
+            indentGuide: '#7B7B7B'
         }
     }
 };
@@ -13231,7 +13583,8 @@ const greysColorRangePalettes = {
             error: '#DD4444',
             circularReference: '#6A6A6A',
             propertyKey: '#3A3A3A',
-            punctuation: '#555555'
+            punctuation: '#555555',
+            indentGuide: '#AAAAAA'
         },
         dark: {
             text: '#FFFFFF',
@@ -13253,7 +13606,8 @@ const greysColorRangePalettes = {
             error: '#FFBBBB',
             circularReference: '#BABABA',
             propertyKey: '#D5D5D5',
-            punctuation: '#B5B5B5'
+            punctuation: '#B5B5B5',
+            indentGuide: '#5B5B5B'
         }
     },
     greysAndOranges: {
@@ -13277,7 +13631,8 @@ const greysColorRangePalettes = {
             error: '#DD7744',
             circularReference: '#6A6A6A',
             propertyKey: '#3A3A3A',
-            punctuation: '#555555'
+            punctuation: '#555555',
+            indentGuide: '#AAAAAA'
         },
         dark: {
             text: '#FFFFFF',
@@ -13299,7 +13654,8 @@ const greysColorRangePalettes = {
             error: '#FFBB88',
             circularReference: '#BABABA',
             propertyKey: '#D5D5D5',
-            punctuation: '#B5B5B5'
+            punctuation: '#B5B5B5',
+            indentGuide: '#5B5B5B'
         }
     },
     greysAndYellows: {
@@ -13323,7 +13679,8 @@ const greysColorRangePalettes = {
             error: '#BBAA44',
             circularReference: '#6A6A6A',
             propertyKey: '#3A3A3A',
-            punctuation: '#555555'
+            punctuation: '#555555',
+            indentGuide: '#AAAAAA'
         },
         dark: {
             text: '#FFFFFF',
@@ -13345,7 +13702,8 @@ const greysColorRangePalettes = {
             error: '#FFFF88',
             circularReference: '#BABABA',
             propertyKey: '#D5D5D5',
-            punctuation: '#B5B5B5'
+            punctuation: '#B5B5B5',
+            indentGuide: '#5B5B5B'
         }
     },
     greysAndGreens: {
@@ -13369,7 +13727,8 @@ const greysColorRangePalettes = {
             error: '#449944',
             circularReference: '#6A6A6A',
             propertyKey: '#3A3A3A',
-            punctuation: '#555555'
+            punctuation: '#555555',
+            indentGuide: '#AAAAAA'
         },
         dark: {
             text: '#FFFFFF',
@@ -13391,7 +13750,8 @@ const greysColorRangePalettes = {
             error: '#99FF99',
             circularReference: '#BABABA',
             propertyKey: '#D5D5D5',
-            punctuation: '#B5B5B5'
+            punctuation: '#B5B5B5',
+            indentGuide: '#5B5B5B'
         }
     },
     greysAndBlues: {
@@ -13415,7 +13775,8 @@ const greysColorRangePalettes = {
             error: '#4477BB',
             circularReference: '#6A6A6A',
             propertyKey: '#3A3A3A',
-            punctuation: '#555555'
+            punctuation: '#555555',
+            indentGuide: '#AAAAAA'
         },
         dark: {
             text: '#FFFFFF',
@@ -13437,7 +13798,8 @@ const greysColorRangePalettes = {
             error: '#99BBFF',
             circularReference: '#BABABA',
             propertyKey: '#D5D5D5',
-            punctuation: '#B5B5B5'
+            punctuation: '#B5B5B5',
+            indentGuide: '#5B5B5B'
         }
     },
     greysAndPurples: {
@@ -13461,7 +13823,8 @@ const greysColorRangePalettes = {
             error: '#8844BB',
             circularReference: '#6A6A6A',
             propertyKey: '#3A3A3A',
-            punctuation: '#555555'
+            punctuation: '#555555',
+            indentGuide: '#AAAAAA'
         },
         dark: {
             text: '#FFFFFF',
@@ -13483,7 +13846,8 @@ const greysColorRangePalettes = {
             error: '#DD99FF',
             circularReference: '#BABABA',
             propertyKey: '#D5D5D5',
-            punctuation: '#B5B5B5'
+            punctuation: '#B5B5B5',
+            indentGuide: '#5B5B5B'
         }
     },
     greysAndBrowns: {
@@ -13507,7 +13871,8 @@ const greysColorRangePalettes = {
             error: '#996644',
             circularReference: '#6A6A6A',
             propertyKey: '#3A3A3A',
-            punctuation: '#555555'
+            punctuation: '#555555',
+            indentGuide: '#AAAAAA'
         },
         dark: {
             text: '#FFFFFF',
@@ -13529,7 +13894,8 @@ const greysColorRangePalettes = {
             error: '#EEBB99',
             circularReference: '#BABABA',
             propertyKey: '#D5D5D5',
-            punctuation: '#B5B5B5'
+            punctuation: '#B5B5B5',
+            indentGuide: '#5B5B5B'
         }
     },
     greysAndCharcoals: {
@@ -13553,7 +13919,8 @@ const greysColorRangePalettes = {
             error: '#3A3A3A',
             circularReference: '#6A6A6A',
             propertyKey: '#3A3A3A',
-            punctuation: '#555555'
+            punctuation: '#555555',
+            indentGuide: '#AAAAAA'
         },
         dark: {
             text: '#FFFFFF',
@@ -13575,7 +13942,8 @@ const greysColorRangePalettes = {
             error: '#999999',
             circularReference: '#BABABA',
             propertyKey: '#D5D5D5',
-            punctuation: '#B5B5B5'
+            punctuation: '#B5B5B5',
+            indentGuide: '#5B5B5B'
         }
     },
     greysAndCyans: {
@@ -13599,7 +13967,8 @@ const greysColorRangePalettes = {
             error: '#4499BB',
             circularReference: '#6A6A6A',
             propertyKey: '#3A3A3A',
-            punctuation: '#555555'
+            punctuation: '#555555',
+            indentGuide: '#AAAAAA'
         },
         dark: {
             text: '#FFFFFF',
@@ -13621,7 +13990,8 @@ const greysColorRangePalettes = {
             error: '#99FFFF',
             circularReference: '#BABABA',
             propertyKey: '#D5D5D5',
-            punctuation: '#B5B5B5'
+            punctuation: '#B5B5B5',
+            indentGuide: '#5B5B5B'
         }
     },
     greysAndMagentas: {
@@ -13645,7 +14015,8 @@ const greysColorRangePalettes = {
             error: '#BB4499',
             circularReference: '#6A6A6A',
             propertyKey: '#3A3A3A',
-            punctuation: '#555555'
+            punctuation: '#555555',
+            indentGuide: '#AAAAAA'
         },
         dark: {
             text: '#FFFFFF',
@@ -13667,7 +14038,8 @@ const greysColorRangePalettes = {
             error: '#FF99FF',
             circularReference: '#BABABA',
             propertyKey: '#D5D5D5',
-            punctuation: '#B5B5B5'
+            punctuation: '#B5B5B5',
+            indentGuide: '#5B5B5B'
         }
     },
     greysAndLightGrays: {
@@ -13691,7 +14063,8 @@ const greysColorRangePalettes = {
             error: '#9A9A9A',
             circularReference: '#6A6A6A',
             propertyKey: '#3A3A3A',
-            punctuation: '#555555'
+            punctuation: '#555555',
+            indentGuide: '#AAAAAA'
         },
         dark: {
             text: '#FFFFFF',
@@ -13713,7 +14086,8 @@ const greysColorRangePalettes = {
             error: '#F5F5F5',
             circularReference: '#BABABA',
             propertyKey: '#D5D5D5',
-            punctuation: '#B5B5B5'
+            punctuation: '#B5B5B5',
+            indentGuide: '#5B5B5B'
         }
     }
 };
@@ -13751,7 +14125,8 @@ const charcoalsColorRangePalettes = {
             error: '#AA4444',
             circularReference: '#3A3A3A',
             propertyKey: '#2A2A2A',
-            punctuation: '#4A4A4A'
+            punctuation: '#4A4A4A',
+            indentGuide: '#A5A5A5'
         },
         dark: {
             text: '#FFFFFF',
@@ -13773,7 +14148,8 @@ const charcoalsColorRangePalettes = {
             error: '#FF8888',
             circularReference: '#C5C5C5',
             propertyKey: '#EEEEEE',
-            punctuation: '#D5D5D5'
+            punctuation: '#D5D5D5',
+            indentGuide: '#6B6B6B'
         }
     },
     charcoalsAndOranges: {
@@ -13797,7 +14173,8 @@ const charcoalsColorRangePalettes = {
             error: '#BB6633',
             circularReference: '#3A3A3A',
             propertyKey: '#2A2A2A',
-            punctuation: '#4A4A4A'
+            punctuation: '#4A4A4A',
+            indentGuide: '#A5A5A5'
         },
         dark: {
             text: '#FFFFFF',
@@ -13819,7 +14196,8 @@ const charcoalsColorRangePalettes = {
             error: '#FFAA77',
             circularReference: '#C5C5C5',
             propertyKey: '#EEEEEE',
-            punctuation: '#D5D5D5'
+            punctuation: '#D5D5D5',
+            indentGuide: '#6B6B6B'
         }
     },
     charcoalsAndYellows: {
@@ -13843,7 +14221,8 @@ const charcoalsColorRangePalettes = {
             error: '#AA9944',
             circularReference: '#3A3A3A',
             propertyKey: '#2A2A2A',
-            punctuation: '#4A4A4A'
+            punctuation: '#4A4A4A',
+            indentGuide: '#A5A5A5'
         },
         dark: {
             text: '#FFFFFF',
@@ -13865,7 +14244,8 @@ const charcoalsColorRangePalettes = {
             error: '#FFDD77',
             circularReference: '#C5C5C5',
             propertyKey: '#EEEEEE',
-            punctuation: '#D5D5D5'
+            punctuation: '#D5D5D5',
+            indentGuide: '#6B6B6B'
         }
     },
     charcoalsAndGreens: {
@@ -13889,7 +14269,8 @@ const charcoalsColorRangePalettes = {
             error: '#669944',
             circularReference: '#3A3A3A',
             propertyKey: '#2A2A2A',
-            punctuation: '#4A4A4A'
+            punctuation: '#4A4A4A',
+            indentGuide: '#A5A5A5'
         },
         dark: {
             text: '#FFFFFF',
@@ -13911,7 +14292,8 @@ const charcoalsColorRangePalettes = {
             error: '#BBFF99',
             circularReference: '#C5C5C5',
             propertyKey: '#EEEEEE',
-            punctuation: '#D5D5D5'
+            punctuation: '#D5D5D5',
+            indentGuide: '#6B6B6B'
         }
     },
     charcoalsAndBlues: {
@@ -13935,7 +14317,8 @@ const charcoalsColorRangePalettes = {
             error: '#4477AA',
             circularReference: '#3A3A3A',
             propertyKey: '#2A2A2A',
-            punctuation: '#4A4A4A'
+            punctuation: '#4A4A4A',
+            indentGuide: '#A5A5A5'
         },
         dark: {
             text: '#FFFFFF',
@@ -13957,7 +14340,8 @@ const charcoalsColorRangePalettes = {
             error: '#88AAFF',
             circularReference: '#C5C5C5',
             propertyKey: '#EEEEEE',
-            punctuation: '#D5D5D5'
+            punctuation: '#D5D5D5',
+            indentGuide: '#6B6B6B'
         }
     },
     charcoalsAndPurples: {
@@ -13981,7 +14365,8 @@ const charcoalsColorRangePalettes = {
             error: '#9955AA',
             circularReference: '#3A3A3A',
             propertyKey: '#2A2A2A',
-            punctuation: '#4A4A4A'
+            punctuation: '#4A4A4A',
+            indentGuide: '#A5A5A5'
         },
         dark: {
             text: '#FFFFFF',
@@ -14003,7 +14388,8 @@ const charcoalsColorRangePalettes = {
             error: '#CC88FF',
             circularReference: '#C5C5C5',
             propertyKey: '#EEEEEE',
-            punctuation: '#D5D5D5'
+            punctuation: '#D5D5D5',
+            indentGuide: '#6B6B6B'
         }
     },
     charcoalsAndBrowns: {
@@ -14027,7 +14413,8 @@ const charcoalsColorRangePalettes = {
             error: '#AA7744',
             circularReference: '#3A3A3A',
             propertyKey: '#2A2A2A',
-            punctuation: '#4A4A4A'
+            punctuation: '#4A4A4A',
+            indentGuide: '#A5A5A5'
         },
         dark: {
             text: '#FFFFFF',
@@ -14049,7 +14436,8 @@ const charcoalsColorRangePalettes = {
             error: '#FFCCAA',
             circularReference: '#C5C5C5',
             propertyKey: '#EEEEEE',
-            punctuation: '#D5D5D5'
+            punctuation: '#D5D5D5',
+            indentGuide: '#6B6B6B'
         }
     },
     charcoalsAndGreys: {
@@ -14073,7 +14461,8 @@ const charcoalsColorRangePalettes = {
             error: '#676767',
             circularReference: '#2A2A2A',
             propertyKey: '#1A1A1A',
-            punctuation: '#3A3A3A'
+            punctuation: '#3A3A3A',
+            indentGuide: '#9D9D9D'
         },
         dark: {
             text: '#FFFFFF',
@@ -14095,7 +14484,8 @@ const charcoalsColorRangePalettes = {
             error: '#EFEFEF',
             circularReference: '#B5B5B5',
             propertyKey: '#DDDDDD',
-            punctuation: '#C5C5C5'
+            punctuation: '#C5C5C5',
+            indentGuide: '#636363'
         }
     },
     charcoalsAndCyans: {
@@ -14119,7 +14509,8 @@ const charcoalsColorRangePalettes = {
             error: '#5599AA',
             circularReference: '#3A3A3A',
             propertyKey: '#2A2A2A',
-            punctuation: '#4A4A4A'
+            punctuation: '#4A4A4A',
+            indentGuide: '#A5A5A5'
         },
         dark: {
             text: '#FFFFFF',
@@ -14141,7 +14532,8 @@ const charcoalsColorRangePalettes = {
             error: '#88EEFF',
             circularReference: '#C5C5C5',
             propertyKey: '#EEEEEE',
-            punctuation: '#D5D5D5'
+            punctuation: '#D5D5D5',
+            indentGuide: '#6B6B6B'
         }
     },
     charcoalsAndMagentas: {
@@ -14165,7 +14557,8 @@ const charcoalsColorRangePalettes = {
             error: '#BB5599',
             circularReference: '#3A3A3A',
             propertyKey: '#2A2A2A',
-            punctuation: '#4A4A4A'
+            punctuation: '#4A4A4A',
+            indentGuide: '#A5A5A5'
         },
         dark: {
             text: '#FFFFFF',
@@ -14187,7 +14580,8 @@ const charcoalsColorRangePalettes = {
             error: '#FF88CC',
             circularReference: '#C5C5C5',
             propertyKey: '#EEEEEE',
-            punctuation: '#D5D5D5'
+            punctuation: '#D5D5D5',
+            indentGuide: '#6B6B6B'
         }
     },
     charcoalsAndLightGrays: {
@@ -14211,7 +14605,8 @@ const charcoalsColorRangePalettes = {
             error: '#7A7A7A',
             circularReference: '#3A3A3A',
             propertyKey: '#2A2A2A',
-            punctuation: '#4A4A4A'
+            punctuation: '#4A4A4A',
+            indentGuide: '#A5A5A5'
         },
         dark: {
             text: '#FFFFFF',
@@ -14233,7 +14628,8 @@ const charcoalsColorRangePalettes = {
             error: '#F0F0F0',
             circularReference: '#C5C5C5',
             propertyKey: '#EEEEEE',
-            punctuation: '#D5D5D5'
+            punctuation: '#D5D5D5',
+            indentGuide: '#6B6B6B'
         }
     }
 };
@@ -14283,7 +14679,8 @@ const cyansColorRangePalettes = {
             error: '#AA5A5A',
             circularReference: '#1A4A5A',
             propertyKey: '#0A3A4A',
-            punctuation: '#2A5A6A'
+            punctuation: '#2A5A6A',
+            indentGuide: '#95ADB5'
         },
         dark: {
             text: '#FFFFFF',
@@ -14305,7 +14702,8 @@ const cyansColorRangePalettes = {
             error: '#FFCCCC',
             circularReference: '#88DDFF',
             propertyKey: '#CCFFFF',
-            punctuation: '#99EEFF'
+            punctuation: '#99EEFF',
+            indentGuide: '#4D7780'
         }
     },
     cyansAndOranges: {
@@ -14329,7 +14727,8 @@ const cyansColorRangePalettes = {
             error: '#DD8A4A',
             circularReference: '#1A4A5A',
             propertyKey: '#0A3A4A',
-            punctuation: '#2A5A6A'
+            punctuation: '#2A5A6A',
+            indentGuide: '#95ADB5'
         },
         dark: {
             text: '#FFFFFF',
@@ -14351,7 +14750,8 @@ const cyansColorRangePalettes = {
             error: '#FFEE99',
             circularReference: '#88DDFF',
             propertyKey: '#CCFFFF',
-            punctuation: '#99EEFF'
+            punctuation: '#99EEFF',
+            indentGuide: '#4D7780'
         }
     },
     cyansAndYellows: {
@@ -14375,7 +14775,8 @@ const cyansColorRangePalettes = {
             error: '#DDCC4A',
             circularReference: '#1A4A5A',
             propertyKey: '#0A3A4A',
-            punctuation: '#2A5A6A'
+            punctuation: '#2A5A6A',
+            indentGuide: '#95ADB5'
         },
         dark: {
             text: '#FFFFFF',
@@ -14397,7 +14798,8 @@ const cyansColorRangePalettes = {
             error: '#FFFF99',
             circularReference: '#88DDFF',
             propertyKey: '#CCFFFF',
-            punctuation: '#99EEFF'
+            punctuation: '#99EEFF',
+            indentGuide: '#4D7780'
         }
     },
     cyansAndGreens: {
@@ -14421,7 +14823,8 @@ const cyansColorRangePalettes = {
             error: '#5AAA5A',
             circularReference: '#1A4A5A',
             propertyKey: '#0A3A4A',
-            punctuation: '#2A5A6A'
+            punctuation: '#2A5A6A',
+            indentGuide: '#95ADB5'
         },
         dark: {
             text: '#FFFFFF',
@@ -14443,7 +14846,8 @@ const cyansColorRangePalettes = {
             error: '#CCFFCC',
             circularReference: '#88DDFF',
             propertyKey: '#CCFFFF',
-            punctuation: '#99EEFF'
+            punctuation: '#99EEFF',
+            indentGuide: '#4D7780'
         }
     },
     cyansAndBlues: {
@@ -14467,7 +14871,8 @@ const cyansColorRangePalettes = {
             error: '#4A5ABA',
             circularReference: '#1A4A5A',
             propertyKey: '#0A3A4A',
-            punctuation: '#2A5A6A'
+            punctuation: '#2A5A6A',
+            indentGuide: '#95ADB5'
         },
         dark: {
             text: '#FFFFFF',
@@ -14489,7 +14894,8 @@ const cyansColorRangePalettes = {
             error: '#BBCCFF',
             circularReference: '#88DDFF',
             propertyKey: '#CCFFFF',
-            punctuation: '#99EEFF'
+            punctuation: '#99EEFF',
+            indentGuide: '#4D7780'
         }
     },
     cyansAndPurples: {
@@ -14513,7 +14919,8 @@ const cyansColorRangePalettes = {
             error: '#9A5ABA',
             circularReference: '#1A4A5A',
             propertyKey: '#0A3A4A',
-            punctuation: '#2A5A6A'
+            punctuation: '#2A5A6A',
+            indentGuide: '#95ADB5'
         },
         dark: {
             text: '#FFFFFF',
@@ -14535,7 +14942,8 @@ const cyansColorRangePalettes = {
             error: '#FFCCFF',
             circularReference: '#88DDFF',
             propertyKey: '#CCFFFF',
-            punctuation: '#99EEFF'
+            punctuation: '#99EEFF',
+            indentGuide: '#4D7780'
         }
     },
     cyansAndBrowns: {
@@ -14559,7 +14967,8 @@ const cyansColorRangePalettes = {
             error: '#9A7A5A',
             circularReference: '#1A4A5A',
             propertyKey: '#0A3A4A',
-            punctuation: '#2A5A6A'
+            punctuation: '#2A5A6A',
+            indentGuide: '#95ADB5'
         },
         dark: {
             text: '#FFFFFF',
@@ -14581,7 +14990,8 @@ const cyansColorRangePalettes = {
             error: '#FFEECC',
             circularReference: '#88DDFF',
             propertyKey: '#CCFFFF',
-            punctuation: '#99EEFF'
+            punctuation: '#99EEFF',
+            indentGuide: '#4D7780'
         }
     },
     cyansAndGreys: {
@@ -14605,7 +15015,8 @@ const cyansColorRangePalettes = {
             error: '#7A7A7A',
             circularReference: '#1A4A5A',
             propertyKey: '#0A3A4A',
-            punctuation: '#2A5A6A'
+            punctuation: '#2A5A6A',
+            indentGuide: '#95ADB5'
         },
         dark: {
             text: '#FFFFFF',
@@ -14627,7 +15038,8 @@ const cyansColorRangePalettes = {
             error: '#EEEEEE',
             circularReference: '#88DDFF',
             propertyKey: '#CCFFFF',
-            punctuation: '#99EEFF'
+            punctuation: '#99EEFF',
+            indentGuide: '#4D7780'
         }
     },
     cyansAndCharcoals: {
@@ -14651,7 +15063,8 @@ const cyansColorRangePalettes = {
             error: '#5A5A5A',
             circularReference: '#1A4A5A',
             propertyKey: '#0A3A4A',
-            punctuation: '#2A5A6A'
+            punctuation: '#2A5A6A',
+            indentGuide: '#95ADB5'
         },
         dark: {
             text: '#FFFFFF',
@@ -14673,7 +15086,8 @@ const cyansColorRangePalettes = {
             error: '#DDDDDD',
             circularReference: '#88DDFF',
             propertyKey: '#CCFFFF',
-            punctuation: '#99EEFF'
+            punctuation: '#99EEFF',
+            indentGuide: '#4D7780'
         }
     },
     cyansAndMagentas: {
@@ -14697,7 +15111,8 @@ const cyansColorRangePalettes = {
             error: '#BA5A9A',
             circularReference: '#1A4A5A',
             propertyKey: '#0A3A4A',
-            punctuation: '#2A5A6A'
+            punctuation: '#2A5A6A',
+            indentGuide: '#95ADB5'
         },
         dark: {
             text: '#FFFFFF',
@@ -14719,7 +15134,8 @@ const cyansColorRangePalettes = {
             error: '#FFCCFF',
             circularReference: '#88DDFF',
             propertyKey: '#CCFFFF',
-            punctuation: '#99EEFF'
+            punctuation: '#99EEFF',
+            indentGuide: '#4D7780'
         }
     },
     cyansAndLightGrays: {
@@ -14743,7 +15159,8 @@ const cyansColorRangePalettes = {
             error: '#BABABA',
             circularReference: '#1A4A5A',
             propertyKey: '#0A3A4A',
-            punctuation: '#2A5A6A'
+            punctuation: '#2A5A6A',
+            indentGuide: '#95ADB5'
         },
         dark: {
             text: '#FFFFFF',
@@ -14765,7 +15182,8 @@ const cyansColorRangePalettes = {
             error: '#FFFFFF',
             circularReference: '#88DDFF',
             propertyKey: '#CCFFFF',
-            punctuation: '#99EEFF'
+            punctuation: '#99EEFF',
+            indentGuide: '#4D7780'
         }
     }
 };
@@ -14802,7 +15220,8 @@ const magentasColorRangePalettes = {
             error: '#DD2266',
             circularReference: '#6A3A5A',
             propertyKey: '#553355',
-            punctuation: '#664466'
+            punctuation: '#664466',
+            indentGuide: '#B3A2B3'
         },
         dark: {
             text: '#FFFFFF',
@@ -14824,7 +15243,8 @@ const magentasColorRangePalettes = {
             error: '#FF77AA',
             circularReference: '#EECCEE',
             propertyKey: '#FFEEEE',
-            punctuation: '#FFDDFF'
+            punctuation: '#FFDDFF',
+            indentGuide: '#806F80'
         }
     },
     magentasAndOranges: {
@@ -14848,7 +15268,8 @@ const magentasColorRangePalettes = {
             error: '#DD2255',
             circularReference: '#6A3A4A',
             propertyKey: '#554444',
-            punctuation: '#665555'
+            punctuation: '#665555',
+            indentGuide: '#B3AAAA'
         },
         dark: {
             text: '#FFFFFF',
@@ -14870,7 +15291,8 @@ const magentasColorRangePalettes = {
             error: '#FF77AA',
             circularReference: '#EECCEE',
             propertyKey: '#FFEEEE',
-            punctuation: '#FFDDEE'
+            punctuation: '#FFDDEE',
+            indentGuide: '#806F77'
         }
     },
     magentasAndYellows: {
@@ -14894,7 +15316,8 @@ const magentasColorRangePalettes = {
             error: '#DD2277',
             circularReference: '#6A3A5A',
             propertyKey: '#554455',
-            punctuation: '#665566'
+            punctuation: '#665566',
+            indentGuide: '#B3AAB3'
         },
         dark: {
             text: '#FFFFFF',
@@ -14916,7 +15339,8 @@ const magentasColorRangePalettes = {
             error: '#FF77BB',
             circularReference: '#EECCEE',
             propertyKey: '#FFEEEE',
-            punctuation: '#FFDDEE'
+            punctuation: '#FFDDEE',
+            indentGuide: '#806F77'
         }
     },
     magentasAndGreens: {
@@ -14940,7 +15364,8 @@ const magentasColorRangePalettes = {
             error: '#DD2277',
             circularReference: '#6A3A5A',
             propertyKey: '#554466',
-            punctuation: '#665577'
+            punctuation: '#665577',
+            indentGuide: '#B3AABB'
         },
         dark: {
             text: '#FFFFFF',
@@ -14962,7 +15387,8 @@ const magentasColorRangePalettes = {
             error: '#FF77BB',
             circularReference: '#EECCEE',
             propertyKey: '#FFEEEE',
-            punctuation: '#FFDDFF'
+            punctuation: '#FFDDFF',
+            indentGuide: '#806F80'
         }
     },
     magentasAndBlues: {
@@ -14986,7 +15412,8 @@ const magentasColorRangePalettes = {
             error: '#DD2288',
             circularReference: '#5A3A5A',
             propertyKey: '#554477',
-            punctuation: '#665588'
+            punctuation: '#665588',
+            indentGuide: '#B3AAC4'
         },
         dark: {
             text: '#FFFFFF',
@@ -15008,7 +15435,8 @@ const magentasColorRangePalettes = {
             error: '#FF77CC',
             circularReference: '#EECCFF',
             propertyKey: '#FFEEEE',
-            punctuation: '#FFDDFF'
+            punctuation: '#FFDDFF',
+            indentGuide: '#806F80'
         }
     },
     magentasAndPurples: {
@@ -15032,7 +15460,8 @@ const magentasColorRangePalettes = {
             error: '#DD2299',
             circularReference: '#5A3A6A',
             propertyKey: '#554488',
-            punctuation: '#665599'
+            punctuation: '#665599',
+            indentGuide: '#B3AACC'
         },
         dark: {
             text: '#FFFFFF',
@@ -15054,7 +15483,8 @@ const magentasColorRangePalettes = {
             error: '#FF88DD',
             circularReference: '#EEDDFF',
             propertyKey: '#FFEEEE',
-            punctuation: '#FFDDFF'
+            punctuation: '#FFDDFF',
+            indentGuide: '#806F80'
         }
     },
     magentasAndBrowns: {
@@ -15078,7 +15508,8 @@ const magentasColorRangePalettes = {
             error: '#DD2277',
             circularReference: '#5A3A5A',
             propertyKey: '#554466',
-            punctuation: '#665577'
+            punctuation: '#665577',
+            indentGuide: '#B3AABB'
         },
         dark: {
             text: '#FFFFFF',
@@ -15100,7 +15531,8 @@ const magentasColorRangePalettes = {
             error: '#FF77BB',
             circularReference: '#EECCEE',
             propertyKey: '#FFEEEE',
-            punctuation: '#FFDDFF'
+            punctuation: '#FFDDFF',
+            indentGuide: '#806F80'
         }
     },
     magentasAndGreys: {
@@ -15124,7 +15556,8 @@ const magentasColorRangePalettes = {
             error: '#DD2277',
             circularReference: '#5A3A5A',
             propertyKey: '#444455',
-            punctuation: '#555566'
+            punctuation: '#555566',
+            indentGuide: '#AAAAB3'
         },
         dark: {
             text: '#FFFFFF',
@@ -15146,7 +15579,8 @@ const magentasColorRangePalettes = {
             error: '#FF77BB',
             circularReference: '#EECCEE',
             propertyKey: '#FFEEEE',
-            punctuation: '#FFDDFF'
+            punctuation: '#FFDDFF',
+            indentGuide: '#806F80'
         }
     },
     magentasAndCharcoals: {
@@ -15170,7 +15604,8 @@ const magentasColorRangePalettes = {
             error: '#DD1177',
             circularReference: '#4A2A5A',
             propertyKey: '#333344',
-            punctuation: '#444455'
+            punctuation: '#444455',
+            indentGuide: '#A2A2AA'
         },
         dark: {
             text: '#FFFFFF',
@@ -15192,7 +15627,8 @@ const magentasColorRangePalettes = {
             error: '#FF66BB',
             circularReference: '#CCBBEE',
             propertyKey: '#FFDDEE',
-            punctuation: '#EECCFF'
+            punctuation: '#EECCFF',
+            indentGuide: '#776680'
         }
     },
     magentasAndCyans: {
@@ -15216,7 +15652,8 @@ const magentasColorRangePalettes = {
             error: '#DD2288',
             circularReference: '#5A3A5A',
             propertyKey: '#553377',
-            punctuation: '#664488'
+            punctuation: '#664488',
+            indentGuide: '#B3A2C4'
         },
         dark: {
             text: '#FFFFFF',
@@ -15238,7 +15675,8 @@ const magentasColorRangePalettes = {
             error: '#FF77CC',
             circularReference: '#EECCFF',
             propertyKey: '#FFEEEE',
-            punctuation: '#FFDDFF'
+            punctuation: '#FFDDFF',
+            indentGuide: '#806F80'
         }
     },
     magentasAndLightGrays: {
@@ -15262,7 +15700,8 @@ const magentasColorRangePalettes = {
             error: '#DD3388',
             circularReference: '#6A4A6A',
             propertyKey: '#555566',
-            punctuation: '#666677'
+            punctuation: '#666677',
+            indentGuide: '#B3B3BB'
         },
         dark: {
             text: '#FFFFFF',
@@ -15284,7 +15723,8 @@ const magentasColorRangePalettes = {
             error: '#FF88CC',
             circularReference: '#EEDDFF',
             propertyKey: '#FFFFFF',
-            punctuation: '#FFEEEE'
+            punctuation: '#FFEEEE',
+            indentGuide: '#807777'
         }
     }
 };
@@ -15334,7 +15774,8 @@ const lightGraysColorRangePalettes = {
             error: '#DD4444',
             circularReference: '#9A9A9A',
             propertyKey: '#6A6A6A',
-            punctuation: '#858585'
+            punctuation: '#858585',
+            indentGuide: '#C2C2C2'
         },
         dark: {
             text: '#FFFFFF',
@@ -15356,7 +15797,8 @@ const lightGraysColorRangePalettes = {
             error: '#FFBBBB',
             circularReference: '#EAEAEA',
             propertyKey: '#FFFFFF',
-            punctuation: '#E5E5E5'
+            punctuation: '#E5E5E5',
+            indentGuide: '#737373'
         }
     },
     lightGraysAndOranges: {
@@ -15380,7 +15822,8 @@ const lightGraysColorRangePalettes = {
             error: '#DD7744',
             circularReference: '#9A9A9A',
             propertyKey: '#6A6A6A',
-            punctuation: '#858585'
+            punctuation: '#858585',
+            indentGuide: '#C2C2C2'
         },
         dark: {
             text: '#FFFFFF',
@@ -15402,7 +15845,8 @@ const lightGraysColorRangePalettes = {
             error: '#FFBB88',
             circularReference: '#EAEAEA',
             propertyKey: '#FFFFFF',
-            punctuation: '#E5E5E5'
+            punctuation: '#E5E5E5',
+            indentGuide: '#737373'
         }
     },
     lightGraysAndYellows: {
@@ -15426,7 +15870,8 @@ const lightGraysColorRangePalettes = {
             error: '#BBAA44',
             circularReference: '#9A9A9A',
             propertyKey: '#6A6A6A',
-            punctuation: '#858585'
+            punctuation: '#858585',
+            indentGuide: '#C2C2C2'
         },
         dark: {
             text: '#FFFFFF',
@@ -15448,7 +15893,8 @@ const lightGraysColorRangePalettes = {
             error: '#FFFF88',
             circularReference: '#EAEAEA',
             propertyKey: '#FFFFFF',
-            punctuation: '#E5E5E5'
+            punctuation: '#E5E5E5',
+            indentGuide: '#737373'
         }
     },
     lightGraysAndGreens: {
@@ -15472,7 +15918,8 @@ const lightGraysColorRangePalettes = {
             error: '#449944',
             circularReference: '#9A9A9A',
             propertyKey: '#6A6A6A',
-            punctuation: '#858585'
+            punctuation: '#858585',
+            indentGuide: '#C2C2C2'
         },
         dark: {
             text: '#FFFFFF',
@@ -15494,7 +15941,8 @@ const lightGraysColorRangePalettes = {
             error: '#99FF99',
             circularReference: '#EAEAEA',
             propertyKey: '#FFFFFF',
-            punctuation: '#E5E5E5'
+            punctuation: '#E5E5E5',
+            indentGuide: '#737373'
         }
     },
     lightGraysAndBlues: {
@@ -15518,7 +15966,8 @@ const lightGraysColorRangePalettes = {
             error: '#4477BB',
             circularReference: '#9A9A9A',
             propertyKey: '#6A6A6A',
-            punctuation: '#858585'
+            punctuation: '#858585',
+            indentGuide: '#C2C2C2'
         },
         dark: {
             text: '#FFFFFF',
@@ -15540,7 +15989,8 @@ const lightGraysColorRangePalettes = {
             error: '#99BBFF',
             circularReference: '#EAEAEA',
             propertyKey: '#FFFFFF',
-            punctuation: '#E5E5E5'
+            punctuation: '#E5E5E5',
+            indentGuide: '#737373'
         }
     },
     lightGraysAndPurples: {
@@ -15564,7 +16014,8 @@ const lightGraysColorRangePalettes = {
             error: '#8844BB',
             circularReference: '#9A9A9A',
             propertyKey: '#6A6A6A',
-            punctuation: '#858585'
+            punctuation: '#858585',
+            indentGuide: '#C2C2C2'
         },
         dark: {
             text: '#FFFFFF',
@@ -15586,7 +16037,8 @@ const lightGraysColorRangePalettes = {
             error: '#DD99FF',
             circularReference: '#EAEAEA',
             propertyKey: '#FFFFFF',
-            punctuation: '#E5E5E5'
+            punctuation: '#E5E5E5',
+            indentGuide: '#737373'
         }
     },
     lightGraysAndBrowns: {
@@ -15610,7 +16062,8 @@ const lightGraysColorRangePalettes = {
             error: '#996644',
             circularReference: '#9A9A9A',
             propertyKey: '#6A6A6A',
-            punctuation: '#858585'
+            punctuation: '#858585',
+            indentGuide: '#C2C2C2'
         },
         dark: {
             text: '#FFFFFF',
@@ -15632,7 +16085,8 @@ const lightGraysColorRangePalettes = {
             error: '#EEBB99',
             circularReference: '#EAEAEA',
             propertyKey: '#FFFFFF',
-            punctuation: '#E5E5E5'
+            punctuation: '#E5E5E5',
+            indentGuide: '#737373'
         }
     },
     lightGraysAndGreys: {
@@ -15656,7 +16110,8 @@ const lightGraysColorRangePalettes = {
             error: '#6A6A6A',
             circularReference: '#9A9A9A',
             propertyKey: '#6A6A6A',
-            punctuation: '#858585'
+            punctuation: '#858585',
+            indentGuide: '#C2C2C2'
         },
         dark: {
             text: '#FFFFFF',
@@ -15678,7 +16133,8 @@ const lightGraysColorRangePalettes = {
             error: '#BABABA',
             circularReference: '#EAEAEA',
             propertyKey: '#FFFFFF',
-            punctuation: '#E5E5E5'
+            punctuation: '#E5E5E5',
+            indentGuide: '#737373'
         }
     },
     lightGraysAndCharcoals: {
@@ -15702,7 +16158,8 @@ const lightGraysColorRangePalettes = {
             error: '#3A3A3A',
             circularReference: '#9A9A9A',
             propertyKey: '#6A6A6A',
-            punctuation: '#858585'
+            punctuation: '#858585',
+            indentGuide: '#C2C2C2'
         },
         dark: {
             text: '#FFFFFF',
@@ -15724,7 +16181,8 @@ const lightGraysColorRangePalettes = {
             error: '#999999',
             circularReference: '#EAEAEA',
             propertyKey: '#FFFFFF',
-            punctuation: '#E5E5E5'
+            punctuation: '#E5E5E5',
+            indentGuide: '#737373'
         }
     },
     lightGraysAndCyans: {
@@ -15748,7 +16206,8 @@ const lightGraysColorRangePalettes = {
             error: '#4499BB',
             circularReference: '#9A9A9A',
             propertyKey: '#6A6A6A',
-            punctuation: '#858585'
+            punctuation: '#858585',
+            indentGuide: '#C2C2C2'
         },
         dark: {
             text: '#FFFFFF',
@@ -15770,7 +16229,8 @@ const lightGraysColorRangePalettes = {
             error: '#99FFFF',
             circularReference: '#EAEAEA',
             propertyKey: '#FFFFFF',
-            punctuation: '#E5E5E5'
+            punctuation: '#E5E5E5',
+            indentGuide: '#737373'
         }
     },
     lightGraysAndMagentas: {
@@ -15794,7 +16254,8 @@ const lightGraysColorRangePalettes = {
             error: '#BB4499',
             circularReference: '#9A9A9A',
             propertyKey: '#6A6A6A',
-            punctuation: '#858585'
+            punctuation: '#858585',
+            indentGuide: '#C2C2C2'
         },
         dark: {
             text: '#FFFFFF',
@@ -15816,7 +16277,8 @@ const lightGraysColorRangePalettes = {
             error: '#FF99FF',
             circularReference: '#EAEAEA',
             propertyKey: '#FFFFFF',
-            punctuation: '#E5E5E5'
+            punctuation: '#E5E5E5',
+            indentGuide: '#737373'
         }
     }
 };
@@ -16611,7 +17073,7 @@ const program = new Command();
 program
     .name('kyrie')
     .description('Syntax highlighter for JavaScript, TypeScript, and JSON')
-    .version('0.30.0')
+    .version('0.31.0')
     .argument('[file]', 'File to highlight (reads from stdin if not provided)')
     .option('-p, --palette <name>', 'Color palette to use (e.g., default, pastel, forest)', 'default')
     .option('-t, --theme <variant>', 'Theme variant: light or dark', 'light')

@@ -44,7 +44,8 @@ export const brownsColorRangePalettes = {
       error: '#8A3A2A',
       circularReference: '#4A3A2A',
       propertyKey: '#3A2A1A',
-      punctuation: '#5A4A3A'
+      punctuation: '#5A4A3A',
+      indentGuide: '#ADA59D'
     },
     dark: {
       text: '#FFFFFF',
@@ -66,7 +67,8 @@ export const brownsColorRangePalettes = {
       error: '#FFBBAA',
       circularReference: '#D5C5B5',
       propertyKey: '#F5E5D5',
-      punctuation: '#E5D5C5'
+      punctuation: '#E5D5C5',
+      indentGuide: '#736B63'
     }
   },
   brownsAndOranges: {
@@ -90,7 +92,8 @@ export const brownsColorRangePalettes = {
       error: '#9A5A2A',
       circularReference: '#4A3A2A',
       propertyKey: '#3A2A1A',
-      punctuation: '#5A4A3A'
+      punctuation: '#5A4A3A',
+      indentGuide: '#ADA59D'
     },
     dark: {
       text: '#FFFFFF',
@@ -112,7 +115,8 @@ export const brownsColorRangePalettes = {
       error: '#FFD5AA',
       circularReference: '#D5C5B5',
       propertyKey: '#F5E5D5',
-      punctuation: '#E5D5C5'
+      punctuation: '#E5D5C5',
+      indentGuide: '#736B63'
     }
   },
   brownsAndYellows: {
@@ -136,7 +140,8 @@ export const brownsColorRangePalettes = {
       error: '#9A7A2A',
       circularReference: '#4A4A2A',
       propertyKey: '#3A3A1A',
-      punctuation: '#5A5A3A'
+      punctuation: '#5A5A3A',
+      indentGuide: '#ADAD9D'
     },
     dark: {
       text: '#FFFFFF',
@@ -158,7 +163,8 @@ export const brownsColorRangePalettes = {
       error: '#FFEEAA',
       circularReference: '#D5D5B5',
       propertyKey: '#F5F5D5',
-      punctuation: '#E5E5C5'
+      punctuation: '#E5E5C5',
+      indentGuide: '#737363'
     }
   },
   brownsAndGreens: {
@@ -182,7 +188,8 @@ export const brownsColorRangePalettes = {
       error: '#5A6A2A',
       circularReference: '#3A4A2A',
       propertyKey: '#2A3A1A',
-      punctuation: '#4A5A3A'
+      punctuation: '#4A5A3A',
+      indentGuide: '#A5AD9D'
     },
     dark: {
       text: '#FFFFFF',
@@ -204,7 +211,8 @@ export const brownsColorRangePalettes = {
       error: '#D5F5B5',
       circularReference: '#C5D5B5',
       propertyKey: '#E5F5D5',
-      punctuation: '#D5E5C5'
+      punctuation: '#D5E5C5',
+      indentGuide: '#6B7363'
     }
   },
   brownsAndBlues: {
@@ -228,7 +236,8 @@ export const brownsColorRangePalettes = {
       error: '#4A5A6A',
       circularReference: '#3A3A4A',
       propertyKey: '#2A2A3A',
-      punctuation: '#4A4A5A'
+      punctuation: '#4A4A5A',
+      indentGuide: '#A5A5AD'
     },
     dark: {
       text: '#FFFFFF',
@@ -250,7 +259,8 @@ export const brownsColorRangePalettes = {
       error: '#C5DDEE',
       circularReference: '#C5C5D5',
       propertyKey: '#E5E5F5',
-      punctuation: '#D5D5E5'
+      punctuation: '#D5D5E5',
+      indentGuide: '#6B6B73'
     }
   },
   brownsAndPurples: {
@@ -274,7 +284,8 @@ export const brownsColorRangePalettes = {
       error: '#7A4A6A',
       circularReference: '#4A3A4A',
       propertyKey: '#3A2A3A',
-      punctuation: '#5A4A5A'
+      punctuation: '#5A4A5A',
+      indentGuide: '#ADA5AD'
     },
     dark: {
       text: '#FFFFFF',
@@ -296,7 +307,8 @@ export const brownsColorRangePalettes = {
       error: '#FFCCEE',
       circularReference: '#D5C5D5',
       propertyKey: '#F5E5F5',
-      punctuation: '#E5D5E5'
+      punctuation: '#E5D5E5',
+      indentGuide: '#736B73'
     }
   },
   brownsAndGreys: {
@@ -320,7 +332,8 @@ export const brownsColorRangePalettes = {
       error: '#5A5A5A',
       circularReference: '#4A4A4A',
       propertyKey: '#3A3A3A',
-      punctuation: '#5A5A5A'
+      punctuation: '#5A5A5A',
+      indentGuide: '#ADADAD'
     },
     dark: {
       text: '#FFFFFF',
@@ -342,7 +355,8 @@ export const brownsColorRangePalettes = {
       error: '#E5E5E5',
       circularReference: '#D5D5D5',
       propertyKey: '#F5F5F5',
-      punctuation: '#E5E5E5'
+      punctuation: '#E5E5E5',
+      indentGuide: '#737373'
     }
   },
   brownsAndCharcoals: {
@@ -366,7 +380,8 @@ export const brownsColorRangePalettes = {
       error: '#4A4A4A',
       circularReference: '#3A3A3A',
       propertyKey: '#2A2A2A',
-      punctuation: '#4A4A4A'
+      punctuation: '#4A4A4A',
+      indentGuide: '#A5A5A5'
     },
     dark: {
       text: '#FFFFFF',
@@ -388,7 +403,8 @@ export const brownsColorRangePalettes = {
       error: '#D5D5D5',
       circularReference: '#C5C5C5',
       propertyKey: '#E5E5E5',
-      punctuation: '#D5D5D5'
+      punctuation: '#D5D5D5',
+      indentGuide: '#6B6B6B'
     }
   },
   brownsAndCyans: {
@@ -412,7 +428,8 @@ export const brownsColorRangePalettes = {
       error: '#4A6A6A',
       circularReference: '#3A4A4A',
       propertyKey: '#2A3A3A',
-      punctuation: '#4A5A5A'
+      punctuation: '#4A5A5A',
+      indentGuide: '#A5ADAD'
     },
     dark: {
       text: '#FFFFFF',
@@ -434,7 +451,8 @@ export const brownsColorRangePalettes = {
       error: '#C5F5EE',
       circularReference: '#C5D5D5',
       propertyKey: '#E5F5F5',
-      punctuation: '#D5E5E5'
+      punctuation: '#D5E5E5',
+      indentGuide: '#6B7373'
     }
   },
   brownsAndMagentas: {
@@ -458,7 +476,8 @@ export const brownsColorRangePalettes = {
       error: '#8A4A6A',
       circularReference: '#4A3A4A',
       propertyKey: '#3A2A3A',
-      punctuation: '#5A4A5A'
+      punctuation: '#5A4A5A',
+      indentGuide: '#ADA5AD'
     },
     dark: {
       text: '#FFFFFF',
@@ -480,7 +499,8 @@ export const brownsColorRangePalettes = {
       error: '#FFCCDD',
       circularReference: '#D5C5D5',
       propertyKey: '#F5E5F5',
-      punctuation: '#E5D5E5'
+      punctuation: '#E5D5E5',
+      indentGuide: '#736B73'
     }
   },
   brownsAndLightGrays: {
@@ -504,7 +524,8 @@ export const brownsColorRangePalettes = {
       error: '#6A6A6A',
       circularReference: '#5A5A5A',
       propertyKey: '#4A4A4A',
-      punctuation: '#6A6A6A'
+      punctuation: '#6A6A6A',
+      indentGuide: '#B5B5B5'
     },
     dark: {
       text: '#FFFFFF',
@@ -526,7 +547,8 @@ export const brownsColorRangePalettes = {
       error: '#F5F5F5',
       circularReference: '#E5E5E5',
       propertyKey: '#FFFFFF',
-      punctuation: '#F5F5F5'
+      punctuation: '#F5F5F5',
+      indentGuide: '#7B7B7B'
     }
   }
 } as const;

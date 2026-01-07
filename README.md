@@ -1,6 +1,6 @@
-# kyrie v0.30.0
+# kyrie v0.31.0
 
-> Version 0.30.0 was built on 1/7/2026, 6:19:22 AM `1767795562872` from hash `06de7f9`.
+> Version 0.31.0 was built on 1/7/2026, 6:28:12 AM `1767796092793` from hash `7a8ff9f`.
 
 If you're just getting started, you very probably want [`ansi_from_value`](https://stonecypher.github.io/kyrie/docs/functions/ansi_from_value.html).
 

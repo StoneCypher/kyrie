@@ -40,7 +40,8 @@ export const yellowsColorRangePalettes = {
       error: '#AA2A1A',
       circularReference: '#6A5A1A',
       propertyKey: '#5A4A1A',
-      punctuation: '#7A6A2A'
+      punctuation: '#7A6A2A',
+      indentGuide: '#BDB595'
     } as ColorPalette,
     dark: {
       text: '#FFFFFF',
@@ -62,7 +63,8 @@ export const yellowsColorRangePalettes = {
       error: '#FF8844',
       circularReference: '#EEDD88',
       propertyKey: '#FFFFDD',
-      punctuation: '#FFEE99'
+      punctuation: '#FFEE99',
+      indentGuide: '#80774D'
     } as ColorPalette
   },
 
@@ -91,7 +93,8 @@ export const yellowsColorRangePalettes = {
       error: '#BB5A1A',
       circularReference: '#7A6A2A',
       propertyKey: '#6A5A2A',
-      punctuation: '#8A7A3A'
+      punctuation: '#8A7A3A',
+      indentGuide: '#C5BD9D'
     } as ColorPalette,
     dark: {
       text: '#FFFFFF',
@@ -113,7 +116,8 @@ export const yellowsColorRangePalettes = {
       error: '#FFBB66',
       circularReference: '#EEDD99',
       propertyKey: '#FFFFEE',
-      punctuation: '#FFEE99'
+      punctuation: '#FFEE99',
+      indentGuide: '#80774D'
     } as ColorPalette
   },
 
@@ -142,7 +146,8 @@ export const yellowsColorRangePalettes = {
       error: '#9A7A1A',
       circularReference: '#7A7A1A',
       propertyKey: '#6A6A1A',
-      punctuation: '#8A8A2A'
+      punctuation: '#8A8A2A',
+      indentGuide: '#C5C595'
     } as ColorPalette,
     dark: {
       text: '#FFFFFF',
@@ -164,7 +169,8 @@ export const yellowsColorRangePalettes = {
       error: '#EEDD66',
       circularReference: '#EEDD88',
       propertyKey: '#FFFFEE',
-      punctuation: '#FFFF99'
+      punctuation: '#FFFF99',
+      indentGuide: '#80804D'
     } as ColorPalette
   },
 
@@ -193,7 +199,8 @@ export const yellowsColorRangePalettes = {
       error: '#2A4A6A',
       circularReference: '#7A7A1A',
       propertyKey: '#6A6A1A',
-      punctuation: '#8A8A2A'
+      punctuation: '#8A8A2A',
+      indentGuide: '#C5C595'
     } as ColorPalette,
     dark: {
       text: '#FFFFFF',
@@ -215,7 +222,8 @@ export const yellowsColorRangePalettes = {
       error: '#77AAEE',
       circularReference: '#EEDD88',
       propertyKey: '#FFFFEE',
-      punctuation: '#FFFF99'
+      punctuation: '#FFFF99',
+      indentGuide: '#80804D'
     } as ColorPalette
   },
 
@@ -244,7 +252,8 @@ export const yellowsColorRangePalettes = {
       error: '#4A1A5A',
       circularReference: '#7A7A1A',
       propertyKey: '#6A6A1A',
-      punctuation: '#8A8A2A'
+      punctuation: '#8A8A2A',
+      indentGuide: '#C5C595'
     } as ColorPalette,
     dark: {
       text: '#FFFFFF',
@@ -266,7 +275,8 @@ export const yellowsColorRangePalettes = {
       error: '#BB77EE',
       circularReference: '#EEDD88',
       propertyKey: '#FFFFEE',
-      punctuation: '#FFFF99'
+      punctuation: '#FFFF99',
+      indentGuide: '#80804D'
     } as ColorPalette
   },
 
@@ -295,7 +305,8 @@ export const yellowsColorRangePalettes = {
       error: '#4A2A1A',
       circularReference: '#7A6A1A',
       propertyKey: '#5A4A1A',
-      punctuation: '#8A7A2A'
+      punctuation: '#8A7A2A',
+      indentGuide: '#C5BD95'
     } as ColorPalette,
     dark: {
       text: '#FFFFFF',
@@ -317,7 +328,8 @@ export const yellowsColorRangePalettes = {
       error: '#BB8855',
       circularReference: '#EEDD88',
       propertyKey: '#FFFFEE',
-      punctuation: '#FFEE99'
+      punctuation: '#FFEE99',
+      indentGuide: '#80774D'
     } as ColorPalette
   },
 
@@ -346,7 +358,8 @@ export const yellowsColorRangePalettes = {
       error: '#3A3A3A',
       circularReference: '#7A7A1A',
       propertyKey: '#5A5A1A',
-      punctuation: '#8A8A2A'
+      punctuation: '#8A8A2A',
+      indentGuide: '#C5C595'
     } as ColorPalette,
     dark: {
       text: '#FFFFFF',
@@ -368,7 +381,8 @@ export const yellowsColorRangePalettes = {
       error: '#AAAAAA',
       circularReference: '#EEDD88',
       propertyKey: '#FFFFEE',
-      punctuation: '#FFFF99'
+      punctuation: '#FFFF99',
+      indentGuide: '#80804D'
     } as ColorPalette
   },
 
@@ -397,7 +411,8 @@ export const yellowsColorRangePalettes = {
       error: '#0A0A0A',
       circularReference: '#7A7A1A',
       propertyKey: '#4A4A1A',
-      punctuation: '#8A8A2A'
+      punctuation: '#8A8A2A',
+      indentGuide: '#C5C595'
     } as ColorPalette,
     dark: {
       text: '#FFFFFF',
@@ -419,7 +434,8 @@ export const yellowsColorRangePalettes = {
       error: '#FFFFFF',
       circularReference: '#EEDD88',
       propertyKey: '#FFFFEE',
-      punctuation: '#FFFF99'
+      punctuation: '#FFFF99',
+      indentGuide: '#80804D'
     } as ColorPalette
   },
 
@@ -448,7 +464,8 @@ export const yellowsColorRangePalettes = {
       error: '#1A4A5A',
       circularReference: '#7A7A1A',
       propertyKey: '#6A6A1A',
-      punctuation: '#8A8A2A'
+      punctuation: '#8A8A2A',
+      indentGuide: '#C5C595'
     } as ColorPalette,
     dark: {
       text: '#FFFFFF',
@@ -470,7 +487,8 @@ export const yellowsColorRangePalettes = {
       error: '#66CCDD',
       circularReference: '#EEDD88',
       propertyKey: '#FFFFEE',
-      punctuation: '#FFFF99'
+      punctuation: '#FFFF99',
+      indentGuide: '#80804D'
     } as ColorPalette
   },
 
@@ -499,7 +517,8 @@ export const yellowsColorRangePalettes = {
       error: '#6A1A4A',
       circularReference: '#7A7A1A',
       propertyKey: '#6A6A1A',
-      punctuation: '#8A8A2A'
+      punctuation: '#8A8A2A',
+      indentGuide: '#C5C595'
     } as ColorPalette,
     dark: {
       text: '#FFFFFF',
@@ -521,7 +540,8 @@ export const yellowsColorRangePalettes = {
       error: '#DD66CC',
       circularReference: '#EEDD88',
       propertyKey: '#FFFFEE',
-      punctuation: '#FFFF99'
+      punctuation: '#FFFF99',
+      indentGuide: '#80804D'
     } as ColorPalette
   },
 
@@ -550,7 +570,8 @@ export const yellowsColorRangePalettes = {
       error: '#5A5A5A',
       circularReference: '#7A7A1A',
       propertyKey: '#6A6A1A',
-      punctuation: '#8A8A2A'
+      punctuation: '#8A8A2A',
+      indentGuide: '#C5C595'
     } as ColorPalette,
     dark: {
       text: '#FFFFFF',
@@ -572,7 +593,8 @@ export const yellowsColorRangePalettes = {
       error: '#CCCCCC',
       circularReference: '#EEDD88',
       propertyKey: '#FFFFEE',
-      punctuation: '#FFFF99'
+      punctuation: '#FFFF99',
+      indentGuide: '#80804D'
     } as ColorPalette
   }
 } as const;
