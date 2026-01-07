@@ -1,0 +1,69 @@
+next:
+
+  - indentation, one-line mode (already in it,) dense mode
+  - add a type for spacing inside/outside containers, around delimiters and etc
+  - start adding funky types, like bigint, bytearray, etc
+  - special colors for globals like math
+  - special colors for global first level members if it's not a hassle
+    - like number.PositiveInfinity
+  - special colors for special numbers like NaN
+  - special colors for template strings
+  - special colors for workers
+  - voluntarily add characters at the edge of indentation, like npm tree
+    - will need to be able to easy-mode the box corners if so
+  - voluntary add prefix strings, like '. ', to show indent like a ToC
+  - wrap if over a length
+  - wrap if doesn't fit current screen width
+  - elide after N entries
+  - elide after N depth
+  - make a version that works in the developer console
+  - make a cli that eats files or takes quoted strings 
+  - argument to sort by key
+  - html output
+  - js console friendly output
+  - npm publish
+  - add npm link to base_README
+  - add configurator link to base_README
+  - add magic code donator via gh link shenanigans
+  - add decoder for theme-in-envvar
+  - optional preset headers, so it writes `Map {<` instead of just `{<`
+    - the type name needs its own color
+    - objects and symbols should extend this with the name and 
+      description respectively
+  - alter the github action to make a release
+  - alter the github action to make an npm publish
+  - drop a js file during build with 
+    - package version, 
+    - build date/time, 
+    - github hash
+  - background color
+  - fix the palettes.  
+    - they need to be heirarchalized
+    - many aren't included at all since being pulled into subfiles
+    - there needs to be an "all list" that subsumes all the other lists
+    - the viewer html app needs to be switched to the all list
+    - the html app may need a pseudo-heirarchalized list 
+      - this needs to be a dynamic tree, or the color and vision palettes will overwhelm
+  - add the todo scanner
+  - add the changelog generator
+
+  - build script to draw screenshots of the themes and add them to the readme
+
+  - dependencies?
+    - consider removing chalk in favor of a homebrew color solution
+    - consider removing commander in favor of a homebrew cli solution
+    - both of those gone, we could call ourselves zero dep
+
+  - put skip headings in the video so people can skip over the boring parts
+  - sanitize the video of personal information.  
+    - do not pull a DoD and leave rectangles you can look under
+
+
+
+
+
+----
+
+done:
+
+  - make a version that works in the browser
