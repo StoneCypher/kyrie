@@ -25,6 +25,7 @@
 export const brownsColorRangePalettes = {
   brownsAndReds: {
     light: {
+      text: '#000000',
       null: '#4A3A2A',
       undefined: '#5A4A3A',
       boolean: '#6A2A2A',
@@ -46,6 +47,7 @@ export const brownsColorRangePalettes = {
       punctuation: '#5A4A3A'
     },
     dark: {
+      text: '#FFFFFF',
       null: '#D5C5B5',
       undefined: '#E5D5C5',
       boolean: '#F5A5A5',
@@ -69,6 +71,7 @@ export const brownsColorRangePalettes = {
   },
   brownsAndOranges: {
     light: {
+      text: '#000000',
       null: '#4A3A2A',
       undefined: '#5A4A3A',
       boolean: '#7A4A2A',
@@ -90,6 +93,7 @@ export const brownsColorRangePalettes = {
       punctuation: '#5A4A3A'
     },
     dark: {
+      text: '#FFFFFF',
       null: '#D5C5B5',
       undefined: '#E5D5C5',
       boolean: '#FFCC99',
@@ -113,6 +117,7 @@ export const brownsColorRangePalettes = {
   },
   brownsAndYellows: {
     light: {
+      text: '#000000',
       null: '#4A4A2A',
       undefined: '#5A5A3A',
       boolean: '#7A6A2A',
@@ -134,6 +139,7 @@ export const brownsColorRangePalettes = {
       punctuation: '#5A5A3A'
     },
     dark: {
+      text: '#FFFFFF',
       null: '#D5D5B5',
       undefined: '#E5E5C5',
       boolean: '#FFEEAA',
@@ -157,6 +163,7 @@ export const brownsColorRangePalettes = {
   },
   brownsAndGreens: {
     light: {
+      text: '#000000',
       null: '#3A4A2A',
       undefined: '#4A5A3A',
       boolean: '#3A5A2A',
@@ -178,6 +185,7 @@ export const brownsColorRangePalettes = {
       punctuation: '#4A5A3A'
     },
     dark: {
+      text: '#FFFFFF',
       null: '#C5D5B5',
       undefined: '#D5E5C5',
       boolean: '#B5E5A5',
@@ -201,6 +209,7 @@ export const brownsColorRangePalettes = {
   },
   brownsAndBlues: {
     light: {
+      text: '#000000',
       null: '#3A3A4A',
       undefined: '#4A4A5A',
       boolean: '#2A4A5A',
@@ -222,6 +231,7 @@ export const brownsColorRangePalettes = {
       punctuation: '#4A4A5A'
     },
     dark: {
+      text: '#FFFFFF',
       null: '#C5C5D5',
       undefined: '#D5D5E5',
       boolean: '#A5CCDD',
@@ -245,6 +255,7 @@ export const brownsColorRangePalettes = {
   },
   brownsAndPurples: {
     light: {
+      text: '#000000',
       null: '#4A3A4A',
       undefined: '#5A4A5A',
       boolean: '#5A2A5A',
@@ -266,6 +277,7 @@ export const brownsColorRangePalettes = {
       punctuation: '#5A4A5A'
     },
     dark: {
+      text: '#FFFFFF',
       null: '#D5C5D5',
       undefined: '#E5D5E5',
       boolean: '#EEAAEE',
@@ -289,6 +301,7 @@ export const brownsColorRangePalettes = {
   },
   brownsAndGreys: {
     light: {
+      text: '#000000',
       null: '#4A4A4A',
       undefined: '#5A5A5A',
       boolean: '#3A4A4A',
@@ -310,6 +323,7 @@ export const brownsColorRangePalettes = {
       punctuation: '#5A5A5A'
     },
     dark: {
+      text: '#FFFFFF',
       null: '#D5D5D5',
       undefined: '#E5E5E5',
       boolean: '#C5D5D5',
@@ -333,6 +347,7 @@ export const brownsColorRangePalettes = {
   },
   brownsAndCharcoals: {
     light: {
+      text: '#000000',
       null: '#3A3A3A',
       undefined: '#4A4A4A',
       boolean: '#2A3A3A',
@@ -354,6 +369,7 @@ export const brownsColorRangePalettes = {
       punctuation: '#4A4A4A'
     },
     dark: {
+      text: '#FFFFFF',
       null: '#C5C5C5',
       undefined: '#D5D5D5',
       boolean: '#B5C5C5',
@@ -377,6 +393,7 @@ export const brownsColorRangePalettes = {
   },
   brownsAndCyans: {
     light: {
+      text: '#000000',
       null: '#3A4A4A',
       undefined: '#4A5A5A',
       boolean: '#2A5A5A',
@@ -398,6 +415,7 @@ export const brownsColorRangePalettes = {
       punctuation: '#4A5A5A'
     },
     dark: {
+      text: '#FFFFFF',
       null: '#C5D5D5',
       undefined: '#D5E5E5',
       boolean: '#A5EEDD',
@@ -421,6 +439,7 @@ export const brownsColorRangePalettes = {
   },
   brownsAndMagentas: {
     light: {
+      text: '#000000',
       null: '#4A3A4A',
       undefined: '#5A4A5A',
       boolean: '#6A2A5A',
@@ -442,6 +461,7 @@ export const brownsColorRangePalettes = {
       punctuation: '#5A4A5A'
     },
     dark: {
+      text: '#FFFFFF',
       null: '#D5C5D5',
       undefined: '#E5D5E5',
       boolean: '#FFAADD',
@@ -465,6 +485,7 @@ export const brownsColorRangePalettes = {
   },
   brownsAndLightGrays: {
     light: {
+      text: '#000000',
       null: '#5A5A5A',
       undefined: '#6A6A6A',
       boolean: '#4A5A5A',
@@ -486,6 +507,7 @@ export const brownsColorRangePalettes = {
       punctuation: '#6A6A6A'
     },
     dark: {
+      text: '#FFFFFF',
       null: '#E5E5E5',
       undefined: '#F5F5F5',
       boolean: '#D5E5E5',

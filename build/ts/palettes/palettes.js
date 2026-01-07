@@ -5,6 +5,7 @@
 export const palettes = {
     default: {
         light: {
+            text: '#000000',
             null: '#808080',
             undefined: '#999999',
             boolean: '#0066CC',
@@ -26,6 +27,7 @@ export const palettes = {
             punctuation: '#666666'
         },
         dark: {
+            text: '#FFFFFF',
             null: '#A0A0A0',
             undefined: '#B8B8B8',
             boolean: '#66AAFF',
@@ -49,6 +51,7 @@ export const palettes = {
     },
     pastel: {
         light: {
+            text: '#000000',
             null: '#7A7A8A',
             undefined: '#8A8A9A',
             boolean: '#5A7A9A',
@@ -70,6 +73,7 @@ export const palettes = {
             punctuation: '#6A6A7A'
         },
         dark: {
+            text: '#FFFFFF',
             null: '#C8C8D8',
             undefined: '#D8D8E8',
             boolean: '#B8D8F8',
@@ -93,6 +97,7 @@ export const palettes = {
     },
     bold: {
         light: {
+            text: '#000000',
             null: '#666666',
             undefined: '#888888',
             boolean: '#0055DD',
@@ -114,6 +119,7 @@ export const palettes = {
             punctuation: '#555555'
         },
         dark: {
+            text: '#FFFFFF',
             null: '#BBBBBB',
             undefined: '#DDDDDD',
             boolean: '#66AAFF',
@@ -137,6 +143,7 @@ export const palettes = {
     },
     dusk: {
         light: {
+            text: '#000000',
             null: '#554466',
             undefined: '#665577',
             boolean: '#445588',
@@ -158,6 +165,7 @@ export const palettes = {
             punctuation: '#554466'
         },
         dark: {
+            text: '#FFFFFF',
             null: '#BBAACC',
             undefined: '#CCBBDD',
             boolean: '#AABBEE',
@@ -181,6 +189,7 @@ export const palettes = {
     },
     lightPastel: {
         light: {
+            text: '#000000',
             null: '#9A9AAA',
             undefined: '#AAAABC',
             boolean: '#8AACBC',
@@ -202,6 +211,7 @@ export const palettes = {
             punctuation: '#9A9AAA'
         },
         dark: {
+            text: '#FFFFFF',
             null: '#E8E8F8',
             undefined: '#F8F8FF',
             boolean: '#E8F8FF',
@@ -225,6 +235,7 @@ export const palettes = {
     },
     funky: {
         light: {
+            text: '#000000',
             null: '#666677',
             undefined: '#777788',
             boolean: '#CC0088',
@@ -246,6 +257,7 @@ export const palettes = {
             punctuation: '#555566'
         },
         dark: {
+            text: '#FFFFFF',
             null: '#BBBBCC',
             undefined: '#CCCCDD',
             boolean: '#FF66DD',
@@ -269,6 +281,7 @@ export const palettes = {
     },
     boring: {
         light: {
+            text: '#000000',
             null: '#666666',
             undefined: '#777777',
             boolean: '#555577',
@@ -290,6 +303,7 @@ export const palettes = {
             punctuation: '#666666'
         },
         dark: {
+            text: '#FFFFFF',
             null: '#AAAAAA',
             undefined: '#BBBBBB',
             boolean: '#AAAACC',
@@ -313,6 +327,7 @@ export const palettes = {
     },
     mobster: {
         light: {
+            text: '#000000',
             null: '#2A2A2A',
             undefined: '#3A3A3A',
             boolean: '#1A3A5A',
@@ -334,6 +349,7 @@ export const palettes = {
             punctuation: '#3A3A3A'
         },
         dark: {
+            text: '#FFFFFF',
             null: '#D5D5D5',
             undefined: '#E5E5E5',
             boolean: '#A5C5E5',
@@ -357,6 +373,7 @@ export const palettes = {
     },
     money: {
         light: {
+            text: '#000000',
             null: '#2A4A2A',
             undefined: '#3A5A3A',
             boolean: '#1A5A2A',
@@ -378,6 +395,7 @@ export const palettes = {
             punctuation: '#3A5A3A'
         },
         dark: {
+            text: '#FFFFFF',
             null: '#A5D5A5',
             undefined: '#B5E5B5',
             boolean: '#85E5A5',
@@ -401,6 +419,7 @@ export const palettes = {
     },
     skeleton: {
         light: {
+            text: '#000000',
             null: '#4A4A4A',
             undefined: '#5A5A5A',
             boolean: '#3A4A5A',
@@ -422,6 +441,7 @@ export const palettes = {
             punctuation: '#5A5A5A'
         },
         dark: {
+            text: '#FFFFFF',
             null: '#E5E5E5',
             undefined: '#F5F5F5',
             boolean: '#D5E5F5',
@@ -445,6 +465,7 @@ export const palettes = {
     },
     sinister: {
         light: {
+            text: '#000000',
             null: '#2A1A1A',
             undefined: '#3A2A2A',
             boolean: '#1A1A3A',
@@ -466,6 +487,7 @@ export const palettes = {
             punctuation: '#2A2A2A'
         },
         dark: {
+            text: '#FFFFFF',
             null: '#C5A5A5',
             undefined: '#D5B5B5',
             boolean: '#A5A5D5',
@@ -489,6 +511,7 @@ export const palettes = {
     },
     halloween: {
         light: {
+            text: '#000000',
             null: '#3A3A3A',
             undefined: '#4A4A4A',
             boolean: '#4A2A6A',
@@ -510,6 +533,7 @@ export const palettes = {
             punctuation: '#4A4A4A'
         },
         dark: {
+            text: '#FFFFFF',
             null: '#D5D5D5',
             undefined: '#E5E5E5',
             boolean: '#D5A5FF',
@@ -533,6 +557,7 @@ export const palettes = {
     },
     vampire: {
         light: {
+            text: '#000000',
             null: '#1A1A1A',
             undefined: '#2A2A2A',
             boolean: '#3A1A2A',
@@ -554,6 +579,7 @@ export const palettes = {
             punctuation: '#2A2A2A'
         },
         dark: {
+            text: '#FFFFFF',
             null: '#C5C5C5',
             undefined: '#D5D5D5',
             boolean: '#E5B5C5',
@@ -577,6 +603,7 @@ export const palettes = {
     },
     grayscale: {
         light: {
+            text: '#000000',
             null: '#444444',
             undefined: '#555555',
             boolean: '#333333',
@@ -598,6 +625,7 @@ export const palettes = {
             punctuation: '#555555'
         },
         dark: {
+            text: '#FFFFFF',
             null: '#BBBBBB',
             undefined: '#CCCCCC',
             boolean: '#AAAAAA',
@@ -621,6 +649,7 @@ export const palettes = {
     },
     blues: {
         light: {
+            text: '#000000',
             null: '#1A3A5A',
             undefined: '#2A4A6A',
             boolean: '#0A4A7A',
@@ -642,6 +671,7 @@ export const palettes = {
             punctuation: '#2A4A6A'
         },
         dark: {
+            text: '#FFFFFF',
             null: '#88CCFF',
             undefined: '#99DDFF',
             boolean: '#66DDFF',
@@ -665,6 +695,7 @@ export const palettes = {
     },
     circus: {
         light: {
+            text: '#000000',
             null: '#4A4A4A',
             undefined: '#5A5A5A',
             boolean: '#CC0000',
@@ -686,6 +717,7 @@ export const palettes = {
             punctuation: '#5A5A5A'
         },
         dark: {
+            text: '#FFFFFF',
             null: '#D5D5D5',
             undefined: '#E5E5E5',
             boolean: '#FF6666',
@@ -709,6 +741,7 @@ export const palettes = {
     },
     monkey: {
         light: {
+            text: '#000000',
             null: '#4A3A2A',
             undefined: '#5A4A3A',
             boolean: '#3A4A2A',
@@ -730,6 +763,7 @@ export const palettes = {
             punctuation: '#5A4A3A'
         },
         dark: {
+            text: '#FFFFFF',
             null: '#C5B5A5',
             undefined: '#D5C5B5',
             boolean: '#B5D5A5',
@@ -753,6 +787,7 @@ export const palettes = {
     },
     rainbow: {
         light: {
+            text: '#000000',
             null: '#4A4A4A',
             undefined: '#5A5A5A',
             boolean: '#8800CC',
@@ -774,6 +809,7 @@ export const palettes = {
             punctuation: '#5A5A5A'
         },
         dark: {
+            text: '#FFFFFF',
             null: '#D5D5D5',
             undefined: '#E5E5E5',
             boolean: '#DD66FF',
@@ -797,6 +833,7 @@ export const palettes = {
     },
     mutedRainbow: {
         light: {
+            text: '#000000',
             null: '#5A5A5A',
             undefined: '#6A6A6A',
             boolean: '#6A4A7A',
@@ -818,6 +855,7 @@ export const palettes = {
             punctuation: '#6A6A6A'
         },
         dark: {
+            text: '#FFFFFF',
             null: '#C5C5C5',
             undefined: '#D5D5D5',
             boolean: '#C5A5D5',
@@ -841,6 +879,7 @@ export const palettes = {
     },
     brownAndGreen: {
         light: {
+            text: '#000000',
             null: '#4A3A2A',
             undefined: '#5A4A3A',
             boolean: '#2A5A3A',
@@ -862,6 +901,7 @@ export const palettes = {
             punctuation: '#5A4A3A'
         },
         dark: {
+            text: '#FFFFFF',
             null: '#D5C5B5',
             undefined: '#E5D5C5',
             boolean: '#A5E5C5',
@@ -885,6 +925,7 @@ export const palettes = {
     },
     solarFlare: {
         light: {
+            text: '#000000',
             null: '#5A3A1A',
             undefined: '#6A4A2A',
             boolean: '#AA4A1A',
@@ -906,6 +947,7 @@ export const palettes = {
             punctuation: '#6A4A2A'
         },
         dark: {
+            text: '#FFFFFF',
             null: '#FFCC99',
             undefined: '#FFD5AA',
             boolean: '#FFAA66',
@@ -929,6 +971,7 @@ export const palettes = {
     },
     purpleToOrange: {
         light: {
+            text: '#000000',
             null: '#4A3A5A',
             undefined: '#5A4A6A',
             boolean: '#6A3A7A',
@@ -950,6 +993,7 @@ export const palettes = {
             punctuation: '#5A4A6A'
         },
         dark: {
+            text: '#FFFFFF',
             null: '#D5C5E5',
             undefined: '#E5D5F5',
             boolean: '#E5B5EE',
@@ -973,6 +1017,7 @@ export const palettes = {
     },
     commodore64: {
         light: {
+            text: '#000000',
             null: '#2A3A5A',
             undefined: '#3A4A6A',
             boolean: '#1A2A7A',
@@ -994,6 +1039,7 @@ export const palettes = {
             punctuation: '#3A4A6A'
         },
         dark: {
+            text: '#FFFFFF',
             null: '#AACCFF',
             undefined: '#BBDDFF',
             boolean: '#88AAFF',
@@ -1017,6 +1063,7 @@ export const palettes = {
     },
     military: {
         light: {
+            text: '#000000',
             null: '#3A4A2A',
             undefined: '#4A5A3A',
             boolean: '#2A5A2A',
@@ -1038,6 +1085,7 @@ export const palettes = {
             punctuation: '#4A5A3A'
         },
         dark: {
+            text: '#FFFFFF',
             null: '#C5D5B5',
             undefined: '#D5E5C5',
             boolean: '#A5E5A5',
@@ -1061,6 +1109,7 @@ export const palettes = {
     },
     police: {
         light: {
+            text: '#000000',
             null: '#1A2A3A',
             undefined: '#2A3A4A',
             boolean: '#0A2A5A',
@@ -1082,6 +1131,7 @@ export const palettes = {
             punctuation: '#2A3A4A'
         },
         dark: {
+            text: '#FFFFFF',
             null: '#99CCEE',
             undefined: '#AADDFF',
             boolean: '#77BBFF',
@@ -1105,6 +1155,7 @@ export const palettes = {
     },
     hacker: {
         light: {
+            text: '#000000',
             null: '#1A2A1A',
             undefined: '#2A3A2A',
             boolean: '#0A3A1A',
@@ -1126,6 +1177,7 @@ export const palettes = {
             punctuation: '#2A3A2A'
         },
         dark: {
+            text: '#FFFFFF',
             null: '#88EE88',
             undefined: '#99FF99',
             boolean: '#66FF88',
@@ -1149,6 +1201,7 @@ export const palettes = {
     },
     wizard: {
         light: {
+            text: '#000000',
             null: '#2A2A4A',
             undefined: '#3A3A5A',
             boolean: '#4A2A6A',
@@ -1170,6 +1223,7 @@ export const palettes = {
             punctuation: '#3A3A5A'
         },
         dark: {
+            text: '#FFFFFF',
             null: '#AAAADD',
             undefined: '#BBBBEE',
             boolean: '#CC99FF',
@@ -1193,6 +1247,7 @@ export const palettes = {
     },
     gunmetal: {
         light: {
+            text: '#000000',
             null: '#2A2A2A',
             undefined: '#3A3A3A',
             boolean: '#2A2A3A',
@@ -1214,6 +1269,7 @@ export const palettes = {
             punctuation: '#3A3A3A'
         },
         dark: {
+            text: '#FFFFFF',
             null: '#C5C5C5',
             undefined: '#D5D5D5',
             boolean: '#C5C5D5',
@@ -1237,6 +1293,7 @@ export const palettes = {
     },
     cocaCola: {
         light: {
+            text: '#000000',
             null: '#4A2A2A',
             undefined: '#5A3A3A',
             boolean: '#AA1A1A',
@@ -1258,6 +1315,7 @@ export const palettes = {
             punctuation: '#5A3A3A'
         },
         dark: {
+            text: '#FFFFFF',
             null: '#E5C5C5',
             undefined: '#F5D5D5',
             boolean: '#FF8888',
@@ -1281,6 +1339,7 @@ export const palettes = {
     },
     ogre: {
         light: {
+            text: '#000000',
             null: '#3A4A2A',
             undefined: '#4A5A3A',
             boolean: '#2A5A1A',
@@ -1302,6 +1361,7 @@ export const palettes = {
             punctuation: '#4A5A3A'
         },
         dark: {
+            text: '#FFFFFF',
             null: '#C5D5B5',
             undefined: '#D5E5C5',
             boolean: '#A5E588',
@@ -1325,6 +1385,7 @@ export const palettes = {
     },
     burglar: {
         light: {
+            text: '#000000',
             null: '#1A1A1A',
             undefined: '#2A2A2A',
             boolean: '#0A0A0A',
@@ -1346,6 +1407,7 @@ export const palettes = {
             punctuation: '#2A2A2A'
         },
         dark: {
+            text: '#FFFFFF',
             null: '#E5E5E5',
             undefined: '#F5F5F5',
             boolean: '#D5D5D5',
@@ -1369,6 +1431,7 @@ export const palettes = {
     },
     crystal: {
         light: {
+            text: '#000000',
             null: '#3A4A5A',
             undefined: '#4A5A6A',
             boolean: '#2A5A7A',
@@ -1390,6 +1453,7 @@ export const palettes = {
             punctuation: '#4A5A6A'
         },
         dark: {
+            text: '#FFFFFF',
             null: '#CCDDEE',
             undefined: '#DDEEFF',
             boolean: '#AADDFF',
@@ -1413,6 +1477,7 @@ export const palettes = {
     },
     laser: {
         light: {
+            text: '#000000',
             null: '#4A4A4A',
             undefined: '#5A5A5A',
             boolean: '#AA00AA',
@@ -1434,6 +1499,7 @@ export const palettes = {
             punctuation: '#5A5A5A'
         },
         dark: {
+            text: '#FFFFFF',
             null: '#EEEEE',
             undefined: '#F5F5F5',
             boolean: '#FF66FF',
@@ -1457,6 +1523,7 @@ export const palettes = {
     },
     kungFu: {
         light: {
+            text: '#000000',
             null: '#4A3A2A',
             undefined: '#5A4A3A',
             boolean: '#8A2A1A',
@@ -1478,6 +1545,7 @@ export const palettes = {
             punctuation: '#5A4A3A'
         },
         dark: {
+            text: '#FFFFFF',
             null: '#E5D5C5',
             undefined: '#F5E5D5',
             boolean: '#FF9988',
@@ -1501,6 +1569,7 @@ export const palettes = {
     },
     starTrek: {
         light: {
+            text: '#000000',
             null: '#3A3A4A',
             undefined: '#4A4A5A',
             boolean: '#1A2A7A',
@@ -1522,6 +1591,7 @@ export const palettes = {
             punctuation: '#4A4A5A'
         },
         dark: {
+            text: '#FFFFFF',
             null: '#CCCCDD',
             undefined: '#DDDDEE',
             boolean: '#88AAFF',
@@ -1545,6 +1615,7 @@ export const palettes = {
     },
     antique: {
         light: {
+            text: '#000000',
             null: '#4A3A2A',
             undefined: '#5A4A3A',
             boolean: '#6A4A2A',
@@ -1566,6 +1637,7 @@ export const palettes = {
             punctuation: '#5A4A3A'
         },
         dark: {
+            text: '#FFFFFF',
             null: '#D5C5B5',
             undefined: '#E5D5C5',
             boolean: '#F5D5B5',
@@ -1589,6 +1661,7 @@ export const palettes = {
     },
     book: {
         light: {
+            text: '#000000',
             null: '#4A4A3A',
             undefined: '#5A5A4A',
             boolean: '#3A4A2A',
@@ -1610,6 +1683,7 @@ export const palettes = {
             punctuation: '#5A5A4A'
         },
         dark: {
+            text: '#FFFFFF',
             null: '#E5E5D5',
             undefined: '#F5F5E5',
             boolean: '#D5E5C5',
@@ -1633,6 +1707,7 @@ export const palettes = {
     },
     eighties: {
         light: {
+            text: '#000000',
             null: '#4A4A4A',
             undefined: '#5A5A5A',
             boolean: '#AA00AA',
@@ -1654,6 +1729,7 @@ export const palettes = {
             punctuation: '#5A5A5A'
         },
         dark: {
+            text: '#FFFFFF',
             null: '#E5E5E5',
             undefined: '#F5F5F5',
             boolean: '#FF66FF',
@@ -1677,6 +1753,7 @@ export const palettes = {
     },
     neon: {
         light: {
+            text: '#000000',
             null: '#4A4A4A',
             undefined: '#5A5A5A',
             boolean: '#CC00FF',
@@ -1698,6 +1775,7 @@ export const palettes = {
             punctuation: '#5A5A5A'
         },
         dark: {
+            text: '#FFFFFF',
             null: '#F5F5F5',
             undefined: '#FFFFFF',
             boolean: '#FF66FF',
@@ -1721,6 +1799,7 @@ export const palettes = {
     },
     logger: {
         light: {
+            text: '#000000',
             null: '#3A3A2A',
             undefined: '#4A4A3A',
             boolean: '#7A2A2A',
@@ -1742,6 +1821,7 @@ export const palettes = {
             punctuation: '#4A4A3A'
         },
         dark: {
+            text: '#FFFFFF',
             null: '#C5C5B5',
             undefined: '#D5D5C5',
             boolean: '#EE9999',
@@ -1765,6 +1845,7 @@ export const palettes = {
     },
     system: {
         light: {
+            text: '#000000',
             null: '#2A3A4A',
             undefined: '#3A4A5A',
             boolean: '#1A3A5A',
@@ -1786,6 +1867,7 @@ export const palettes = {
             punctuation: '#3A4A5A'
         },
         dark: {
+            text: '#FFFFFF',
             null: '#AACCDD',
             undefined: '#BBDDEE',
             boolean: '#88BBDD',
@@ -1809,6 +1891,7 @@ export const palettes = {
     },
     alien: {
         light: {
+            text: '#000000',
             null: '#2A3A2A',
             undefined: '#3A4A3A',
             boolean: '#1A5A3A',
@@ -1830,6 +1913,7 @@ export const palettes = {
             punctuation: '#3A4A3A'
         },
         dark: {
+            text: '#FFFFFF',
             null: '#A5D5A5',
             undefined: '#B5E5B5',
             boolean: '#88E5C5',

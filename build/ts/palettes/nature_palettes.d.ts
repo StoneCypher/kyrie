@@ -6,6 +6,7 @@
 export declare const naturePalettes: {
     readonly forest: {
         readonly light: {
+            readonly text: "#000000";
             readonly null: "#445544";
             readonly undefined: "#556655";
             readonly boolean: "#225577";
@@ -27,6 +28,7 @@ export declare const naturePalettes: {
             readonly punctuation: "#334433";
         };
         readonly dark: {
+            readonly text: "#FFFFFF";
             readonly null: "#99BB99";
             readonly undefined: "#AACCAA";
             readonly boolean: "#77BBEE";
@@ -50,6 +52,7 @@ export declare const naturePalettes: {
     };
     readonly garden: {
         readonly light: {
+            readonly text: "#000000";
             readonly null: "#556655";
             readonly undefined: "#667766";
             readonly boolean: "#336688";
@@ -71,6 +74,7 @@ export declare const naturePalettes: {
             readonly punctuation: "#445544";
         };
         readonly dark: {
+            readonly text: "#FFFFFF";
             readonly null: "#AACCAA";
             readonly undefined: "#BBDDBB";
             readonly boolean: "#88CCEE";
@@ -94,6 +98,7 @@ export declare const naturePalettes: {
     };
     readonly flowers: {
         readonly light: {
+            readonly text: "#000000";
             readonly null: "#4A4A4A";
             readonly undefined: "#5A5A5A";
             readonly boolean: "#AA2A7A";
@@ -115,6 +120,7 @@ export declare const naturePalettes: {
             readonly punctuation: "#5A5A5A";
         };
         readonly dark: {
+            readonly text: "#FFFFFF";
             readonly null: "#E5E5E5";
             readonly undefined: "#F5F5F5";
             readonly boolean: "#FF99DD";
@@ -138,6 +144,7 @@ export declare const naturePalettes: {
     };
     readonly sky: {
         readonly light: {
+            readonly text: "#000000";
             readonly null: "#3A5A7A";
             readonly undefined: "#4A6A8A";
             readonly boolean: "#2A6A9A";
@@ -159,6 +166,7 @@ export declare const naturePalettes: {
             readonly punctuation: "#4A6A8A";
         };
         readonly dark: {
+            readonly text: "#FFFFFF";
             readonly null: "#AADDFF";
             readonly undefined: "#BBEEFF";
             readonly boolean: "#99EEFF";
@@ -182,6 +190,7 @@ export declare const naturePalettes: {
     };
     readonly sunflower: {
         readonly light: {
+            readonly text: "#000000";
             readonly null: "#5A4A2A";
             readonly undefined: "#6A5A3A";
             readonly boolean: "#4A5A2A";
@@ -203,6 +212,7 @@ export declare const naturePalettes: {
             readonly punctuation: "#6A5A3A";
         };
         readonly dark: {
+            readonly text: "#FFFFFF";
             readonly null: "#E5D5B5";
             readonly undefined: "#F5E5C5";
             readonly boolean: "#D5E5A5";
@@ -226,6 +236,7 @@ export declare const naturePalettes: {
     };
     readonly strawberry: {
         readonly light: {
+            readonly text: "#000000";
             readonly null: "#5A3A3A";
             readonly undefined: "#6A4A4A";
             readonly boolean: "#AA2A4A";
@@ -247,6 +258,7 @@ export declare const naturePalettes: {
             readonly punctuation: "#6A4A4A";
         };
         readonly dark: {
+            readonly text: "#FFFFFF";
             readonly null: "#E5C5C5";
             readonly undefined: "#F5D5D5";
             readonly boolean: "#FF88AA";
@@ -270,6 +282,7 @@ export declare const naturePalettes: {
     };
     readonly butterfly: {
         readonly light: {
+            readonly text: "#000000";
             readonly null: "#4A4A5A";
             readonly undefined: "#5A5A6A";
             readonly boolean: "#AA2A8A";
@@ -291,6 +304,7 @@ export declare const naturePalettes: {
             readonly punctuation: "#5A5A6A";
         };
         readonly dark: {
+            readonly text: "#FFFFFF";
             readonly null: "#D5D5E5";
             readonly undefined: "#E5E5F5";
             readonly boolean: "#FF88EE";

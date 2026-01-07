@@ -11,6 +11,7 @@
 export declare const magentasColorRangePalettes: {
     readonly magentasAndReds: {
         readonly light: {
+            readonly text: "#000000";
             readonly null: "#7A3A5A";
             readonly undefined: "#8A4A6A";
             readonly boolean: "#AA2A5A";
@@ -32,6 +33,7 @@ export declare const magentasColorRangePalettes: {
             readonly punctuation: "#664466";
         };
         readonly dark: {
+            readonly text: "#FFFFFF";
             readonly null: "#FFCCEE";
             readonly undefined: "#FFDDFF";
             readonly boolean: "#FF99DD";
@@ -55,6 +57,7 @@ export declare const magentasColorRangePalettes: {
     };
     readonly magentasAndOranges: {
         readonly light: {
+            readonly text: "#000000";
             readonly null: "#7A3A4A";
             readonly undefined: "#8A4A5A";
             readonly boolean: "#AA2A5A";
@@ -76,6 +79,7 @@ export declare const magentasColorRangePalettes: {
             readonly punctuation: "#665555";
         };
         readonly dark: {
+            readonly text: "#FFFFFF";
             readonly null: "#FFCCEE";
             readonly undefined: "#FFDDFF";
             readonly boolean: "#FF99DD";
@@ -99,6 +103,7 @@ export declare const magentasColorRangePalettes: {
     };
     readonly magentasAndYellows: {
         readonly light: {
+            readonly text: "#000000";
             readonly null: "#7A3A5A";
             readonly undefined: "#8A4A6A";
             readonly boolean: "#AA2A5A";
@@ -120,6 +125,7 @@ export declare const magentasColorRangePalettes: {
             readonly punctuation: "#665566";
         };
         readonly dark: {
+            readonly text: "#FFFFFF";
             readonly null: "#FFCCEE";
             readonly undefined: "#FFDDFF";
             readonly boolean: "#FF99DD";
@@ -143,6 +149,7 @@ export declare const magentasColorRangePalettes: {
     };
     readonly magentasAndGreens: {
         readonly light: {
+            readonly text: "#000000";
             readonly null: "#7A3A5A";
             readonly undefined: "#8A4A6A";
             readonly boolean: "#AA2A5A";
@@ -164,6 +171,7 @@ export declare const magentasColorRangePalettes: {
             readonly punctuation: "#665577";
         };
         readonly dark: {
+            readonly text: "#FFFFFF";
             readonly null: "#FFCCEE";
             readonly undefined: "#FFDDFF";
             readonly boolean: "#FF99DD";
@@ -187,6 +195,7 @@ export declare const magentasColorRangePalettes: {
     };
     readonly magentasAndBlues: {
         readonly light: {
+            readonly text: "#000000";
             readonly null: "#6A3A5A";
             readonly undefined: "#7A4A6A";
             readonly boolean: "#AA2A6A";
@@ -208,6 +217,7 @@ export declare const magentasColorRangePalettes: {
             readonly punctuation: "#665588";
         };
         readonly dark: {
+            readonly text: "#FFFFFF";
             readonly null: "#FFCCFF";
             readonly undefined: "#FFDDFF";
             readonly boolean: "#FF99EE";
@@ -231,6 +241,7 @@ export declare const magentasColorRangePalettes: {
     };
     readonly magentasAndPurples: {
         readonly light: {
+            readonly text: "#000000";
             readonly null: "#6A3A6A";
             readonly undefined: "#7A4A7A";
             readonly boolean: "#AA2A7A";
@@ -252,6 +263,7 @@ export declare const magentasColorRangePalettes: {
             readonly punctuation: "#665599";
         };
         readonly dark: {
+            readonly text: "#FFFFFF";
             readonly null: "#FFDDFF";
             readonly undefined: "#FFEEFF";
             readonly boolean: "#FFAAFF";
@@ -275,6 +287,7 @@ export declare const magentasColorRangePalettes: {
     };
     readonly magentasAndBrowns: {
         readonly light: {
+            readonly text: "#000000";
             readonly null: "#6A3A5A";
             readonly undefined: "#7A4A6A";
             readonly boolean: "#AA2A5A";
@@ -296,6 +309,7 @@ export declare const magentasColorRangePalettes: {
             readonly punctuation: "#665577";
         };
         readonly dark: {
+            readonly text: "#FFFFFF";
             readonly null: "#FFCCEE";
             readonly undefined: "#FFDDFF";
             readonly boolean: "#FF99DD";
@@ -319,6 +333,7 @@ export declare const magentasColorRangePalettes: {
     };
     readonly magentasAndGreys: {
         readonly light: {
+            readonly text: "#000000";
             readonly null: "#6A3A5A";
             readonly undefined: "#7A4A6A";
             readonly boolean: "#AA2A5A";
@@ -340,6 +355,7 @@ export declare const magentasColorRangePalettes: {
             readonly punctuation: "#555566";
         };
         readonly dark: {
+            readonly text: "#FFFFFF";
             readonly null: "#FFCCEE";
             readonly undefined: "#FFDDFF";
             readonly boolean: "#FF99DD";
@@ -363,6 +379,7 @@ export declare const magentasColorRangePalettes: {
     };
     readonly magentasAndCharcoals: {
         readonly light: {
+            readonly text: "#000000";
             readonly null: "#5A2A5A";
             readonly undefined: "#6A3A6A";
             readonly boolean: "#AA1A5A";
@@ -384,6 +401,7 @@ export declare const magentasColorRangePalettes: {
             readonly punctuation: "#444455";
         };
         readonly dark: {
+            readonly text: "#FFFFFF";
             readonly null: "#DDBBEE";
             readonly undefined: "#EECCFF";
             readonly boolean: "#FF88DD";
@@ -407,6 +425,7 @@ export declare const magentasColorRangePalettes: {
     };
     readonly magentasAndCyans: {
         readonly light: {
+            readonly text: "#000000";
             readonly null: "#6A3A5A";
             readonly undefined: "#7A4A6A";
             readonly boolean: "#AA2A6A";
@@ -428,6 +447,7 @@ export declare const magentasColorRangePalettes: {
             readonly punctuation: "#664488";
         };
         readonly dark: {
+            readonly text: "#FFFFFF";
             readonly null: "#FFCCFF";
             readonly undefined: "#FFDDFF";
             readonly boolean: "#FF99EE";
@@ -451,6 +471,7 @@ export declare const magentasColorRangePalettes: {
     };
     readonly magentasAndLightGrays: {
         readonly light: {
+            readonly text: "#000000";
             readonly null: "#7A4A6A";
             readonly undefined: "#8A5A7A";
             readonly boolean: "#AA3A6A";
@@ -472,6 +493,7 @@ export declare const magentasColorRangePalettes: {
             readonly punctuation: "#666677";
         };
         readonly dark: {
+            readonly text: "#FFFFFF";
             readonly null: "#FFDDFF";
             readonly undefined: "#FFEEFF";
             readonly boolean: "#FFAAEE";

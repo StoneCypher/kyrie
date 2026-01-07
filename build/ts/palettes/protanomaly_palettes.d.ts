@@ -5,6 +5,7 @@
 export declare const protanomalyPalettes: {
     readonly protanomaly: {
         readonly light: {
+            readonly text: "#000000";
             readonly null: "#2A4A5A";
             readonly undefined: "#3A5A6A";
             readonly boolean: "#1A5A7A";
@@ -26,6 +27,7 @@ export declare const protanomalyPalettes: {
             readonly punctuation: "#3A5A6A";
         };
         readonly dark: {
+            readonly text: "#FFFFFF";
             readonly null: "#99CCEE";
             readonly undefined: "#AADDFF";
             readonly boolean: "#88EEFF";
@@ -49,6 +51,7 @@ export declare const protanomalyPalettes: {
     };
     readonly protanomalyBright: {
         readonly light: {
+            readonly text: "#000000";
             readonly null: "#4A4A4A";
             readonly undefined: "#3A3A5A";
             readonly boolean: "#0055AA";
@@ -70,6 +73,7 @@ export declare const protanomalyPalettes: {
             readonly punctuation: "#4A4A4A";
         };
         readonly dark: {
+            readonly text: "#FFFFFF";
             readonly null: "#BBBBBB";
             readonly undefined: "#CCCCFF";
             readonly boolean: "#66AAFF";
@@ -93,6 +97,7 @@ export declare const protanomalyPalettes: {
     };
     readonly protanomalySubtle: {
         readonly light: {
+            readonly text: "#000000";
             readonly null: "#5A5A5A";
             readonly undefined: "#4A4A6A";
             readonly boolean: "#3A5A7A";
@@ -114,6 +119,7 @@ export declare const protanomalyPalettes: {
             readonly punctuation: "#5A5A5A";
         };
         readonly dark: {
+            readonly text: "#FFFFFF";
             readonly null: "#AAAAAA";
             readonly undefined: "#BBBBC5";
             readonly boolean: "#99BBCC";
@@ -137,6 +143,7 @@ export declare const protanomalyPalettes: {
     };
     readonly protanomalyPastel: {
         readonly light: {
+            readonly text: "#000000";
             readonly null: "#6A6A6A";
             readonly undefined: "#5A5A7A";
             readonly boolean: "#4A6A8A";
@@ -158,6 +165,7 @@ export declare const protanomalyPalettes: {
             readonly punctuation: "#6A6A6A";
         };
         readonly dark: {
+            readonly text: "#FFFFFF";
             readonly null: "#D5D5D5";
             readonly undefined: "#E5E5FF";
             readonly boolean: "#CCEEFF";
@@ -181,6 +189,7 @@ export declare const protanomalyPalettes: {
     };
     readonly protanomalyBoring: {
         readonly light: {
+            readonly text: "#000000";
             readonly null: "#4A4A4A";
             readonly undefined: "#3A3A3A";
             readonly boolean: "#2A3A4A";
@@ -202,6 +211,7 @@ export declare const protanomalyPalettes: {
             readonly punctuation: "#4A4A4A";
         };
         readonly dark: {
+            readonly text: "#FFFFFF";
             readonly null: "#AAAAAA";
             readonly undefined: "#B5B5B5";
             readonly boolean: "#99AAAA";
@@ -225,6 +235,7 @@ export declare const protanomalyPalettes: {
     };
     readonly protanomalyFunky: {
         readonly light: {
+            readonly text: "#000000";
             readonly null: "#4A4A4A";
             readonly undefined: "#2A2A6A";
             readonly boolean: "#0044AA";
@@ -246,6 +257,7 @@ export declare const protanomalyPalettes: {
             readonly punctuation: "#4A4A4A";
         };
         readonly dark: {
+            readonly text: "#FFFFFF";
             readonly null: "#CCCCCC";
             readonly undefined: "#DDDDFF";
             readonly boolean: "#77BBFF";
@@ -269,6 +281,7 @@ export declare const protanomalyPalettes: {
     };
     readonly protanomalyVivid: {
         readonly light: {
+            readonly text: "#000000";
             readonly null: "#3A3A3A";
             readonly undefined: "#1A1A5A";
             readonly boolean: "#0033AA";
@@ -290,6 +303,7 @@ export declare const protanomalyPalettes: {
             readonly punctuation: "#3A3A3A";
         };
         readonly dark: {
+            readonly text: "#FFFFFF";
             readonly null: "#CCCCCC";
             readonly undefined: "#EEEEFF";
             readonly boolean: "#88CCFF";

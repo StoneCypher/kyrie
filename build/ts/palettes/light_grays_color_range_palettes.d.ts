@@ -24,6 +24,7 @@
 export declare const lightGraysColorRangePalettes: {
     readonly lightGraysAndReds: {
         readonly light: {
+            readonly text: "#000000";
             readonly null: "#8A8A8A";
             readonly undefined: "#9A9A9A";
             readonly boolean: "#7A7A7A";
@@ -45,6 +46,7 @@ export declare const lightGraysColorRangePalettes: {
             readonly punctuation: "#858585";
         };
         readonly dark: {
+            readonly text: "#FFFFFF";
             readonly null: "#DADADA";
             readonly undefined: "#EAEAEA";
             readonly boolean: "#F5F5F5";
@@ -68,6 +70,7 @@ export declare const lightGraysColorRangePalettes: {
     };
     readonly lightGraysAndOranges: {
         readonly light: {
+            readonly text: "#000000";
             readonly null: "#8A8A8A";
             readonly undefined: "#9A9A9A";
             readonly boolean: "#7A7A7A";
@@ -89,6 +92,7 @@ export declare const lightGraysColorRangePalettes: {
             readonly punctuation: "#858585";
         };
         readonly dark: {
+            readonly text: "#FFFFFF";
             readonly null: "#DADADA";
             readonly undefined: "#EAEAEA";
             readonly boolean: "#F5F5F5";
@@ -112,6 +116,7 @@ export declare const lightGraysColorRangePalettes: {
     };
     readonly lightGraysAndYellows: {
         readonly light: {
+            readonly text: "#000000";
             readonly null: "#8A8A8A";
             readonly undefined: "#9A9A9A";
             readonly boolean: "#7A7A7A";
@@ -133,6 +138,7 @@ export declare const lightGraysColorRangePalettes: {
             readonly punctuation: "#858585";
         };
         readonly dark: {
+            readonly text: "#FFFFFF";
             readonly null: "#DADADA";
             readonly undefined: "#EAEAEA";
             readonly boolean: "#F5F5F5";
@@ -156,6 +162,7 @@ export declare const lightGraysColorRangePalettes: {
     };
     readonly lightGraysAndGreens: {
         readonly light: {
+            readonly text: "#000000";
             readonly null: "#8A8A8A";
             readonly undefined: "#9A9A9A";
             readonly boolean: "#7A7A7A";
@@ -177,6 +184,7 @@ export declare const lightGraysColorRangePalettes: {
             readonly punctuation: "#858585";
         };
         readonly dark: {
+            readonly text: "#FFFFFF";
             readonly null: "#DADADA";
             readonly undefined: "#EAEAEA";
             readonly boolean: "#F5F5F5";
@@ -200,6 +208,7 @@ export declare const lightGraysColorRangePalettes: {
     };
     readonly lightGraysAndBlues: {
         readonly light: {
+            readonly text: "#000000";
             readonly null: "#8A8A8A";
             readonly undefined: "#9A9A9A";
             readonly boolean: "#7A7A7A";
@@ -221,6 +230,7 @@ export declare const lightGraysColorRangePalettes: {
             readonly punctuation: "#858585";
         };
         readonly dark: {
+            readonly text: "#FFFFFF";
             readonly null: "#DADADA";
             readonly undefined: "#EAEAEA";
             readonly boolean: "#F5F5F5";
@@ -244,6 +254,7 @@ export declare const lightGraysColorRangePalettes: {
     };
     readonly lightGraysAndPurples: {
         readonly light: {
+            readonly text: "#000000";
             readonly null: "#8A8A8A";
             readonly undefined: "#9A9A9A";
             readonly boolean: "#7A7A7A";
@@ -265,6 +276,7 @@ export declare const lightGraysColorRangePalettes: {
             readonly punctuation: "#858585";
         };
         readonly dark: {
+            readonly text: "#FFFFFF";
             readonly null: "#DADADA";
             readonly undefined: "#EAEAEA";
             readonly boolean: "#F5F5F5";
@@ -288,6 +300,7 @@ export declare const lightGraysColorRangePalettes: {
     };
     readonly lightGraysAndBrowns: {
         readonly light: {
+            readonly text: "#000000";
             readonly null: "#8A8A8A";
             readonly undefined: "#9A9A9A";
             readonly boolean: "#7A7A7A";
@@ -309,6 +322,7 @@ export declare const lightGraysColorRangePalettes: {
             readonly punctuation: "#858585";
         };
         readonly dark: {
+            readonly text: "#FFFFFF";
             readonly null: "#DADADA";
             readonly undefined: "#EAEAEA";
             readonly boolean: "#F5F5F5";
@@ -332,6 +346,7 @@ export declare const lightGraysColorRangePalettes: {
     };
     readonly lightGraysAndGreys: {
         readonly light: {
+            readonly text: "#000000";
             readonly null: "#8A8A8A";
             readonly undefined: "#9A9A9A";
             readonly boolean: "#7A7A7A";
@@ -353,6 +368,7 @@ export declare const lightGraysColorRangePalettes: {
             readonly punctuation: "#858585";
         };
         readonly dark: {
+            readonly text: "#FFFFFF";
             readonly null: "#DADADA";
             readonly undefined: "#EAEAEA";
             readonly boolean: "#F5F5F5";
@@ -376,6 +392,7 @@ export declare const lightGraysColorRangePalettes: {
     };
     readonly lightGraysAndCharcoals: {
         readonly light: {
+            readonly text: "#000000";
             readonly null: "#8A8A8A";
             readonly undefined: "#9A9A9A";
             readonly boolean: "#7A7A7A";
@@ -397,6 +414,7 @@ export declare const lightGraysColorRangePalettes: {
             readonly punctuation: "#858585";
         };
         readonly dark: {
+            readonly text: "#FFFFFF";
             readonly null: "#DADADA";
             readonly undefined: "#EAEAEA";
             readonly boolean: "#F5F5F5";
@@ -420,6 +438,7 @@ export declare const lightGraysColorRangePalettes: {
     };
     readonly lightGraysAndCyans: {
         readonly light: {
+            readonly text: "#000000";
             readonly null: "#8A8A8A";
             readonly undefined: "#9A9A9A";
             readonly boolean: "#7A7A7A";
@@ -441,6 +460,7 @@ export declare const lightGraysColorRangePalettes: {
             readonly punctuation: "#858585";
         };
         readonly dark: {
+            readonly text: "#FFFFFF";
             readonly null: "#DADADA";
             readonly undefined: "#EAEAEA";
             readonly boolean: "#F5F5F5";
@@ -464,6 +484,7 @@ export declare const lightGraysColorRangePalettes: {
     };
     readonly lightGraysAndMagentas: {
         readonly light: {
+            readonly text: "#000000";
             readonly null: "#8A8A8A";
             readonly undefined: "#9A9A9A";
             readonly boolean: "#7A7A7A";
@@ -485,6 +506,7 @@ export declare const lightGraysColorRangePalettes: {
             readonly punctuation: "#858585";
         };
         readonly dark: {
+            readonly text: "#FFFFFF";
             readonly null: "#DADADA";
             readonly undefined: "#EAEAEA";
             readonly boolean: "#F5F5F5";

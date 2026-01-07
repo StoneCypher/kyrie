@@ -5,6 +5,7 @@
 export const deuteranopiaPalettes = {
     deuteranopia: {
         light: {
+            text: '#000000',
             null: '#3A4A6A',
             undefined: '#4A5A7A',
             boolean: '#2A5A8A',
@@ -26,6 +27,7 @@ export const deuteranopiaPalettes = {
             punctuation: '#4A5A7A'
         },
         dark: {
+            text: '#FFFFFF',
             null: '#AACCFF',
             undefined: '#BBDDFF',
             boolean: '#99EEFF',
@@ -49,6 +51,7 @@ export const deuteranopiaPalettes = {
     },
     deuteranopiaBright: {
         light: {
+            text: '#000000',
             null: '#4A4A4A',
             undefined: '#3A3A5A',
             boolean: '#0055AA',
@@ -70,6 +73,7 @@ export const deuteranopiaPalettes = {
             punctuation: '#4A4A4A'
         },
         dark: {
+            text: '#FFFFFF',
             null: '#BBBBBB',
             undefined: '#CCCCFF',
             boolean: '#66AAFF',
@@ -93,6 +97,7 @@ export const deuteranopiaPalettes = {
     },
     deuteranopiaSubtle: {
         light: {
+            text: '#000000',
             null: '#5A5A5A',
             undefined: '#4A4A6A',
             boolean: '#3A5A7A',
@@ -114,6 +119,7 @@ export const deuteranopiaPalettes = {
             punctuation: '#5A5A5A'
         },
         dark: {
+            text: '#FFFFFF',
             null: '#AAAAAA',
             undefined: '#BBBBC5',
             boolean: '#99BBCC',
@@ -137,6 +143,7 @@ export const deuteranopiaPalettes = {
     },
     deuteranopiaPastel: {
         light: {
+            text: '#000000',
             null: '#6A6A6A',
             undefined: '#5A5A7A',
             boolean: '#4A6A8A',
@@ -158,6 +165,7 @@ export const deuteranopiaPalettes = {
             punctuation: '#6A6A6A'
         },
         dark: {
+            text: '#FFFFFF',
             null: '#D5D5D5',
             undefined: '#E5E5FF',
             boolean: '#CCEEFF',
@@ -181,6 +189,7 @@ export const deuteranopiaPalettes = {
     },
     deuteranopiaBoring: {
         light: {
+            text: '#000000',
             null: '#4A4A4A',
             undefined: '#3A3A3A',
             boolean: '#2A3A4A',
@@ -202,6 +211,7 @@ export const deuteranopiaPalettes = {
             punctuation: '#4A4A4A'
         },
         dark: {
+            text: '#FFFFFF',
             null: '#AAAAAA',
             undefined: '#B5B5B5',
             boolean: '#99AAAA',
@@ -225,6 +235,7 @@ export const deuteranopiaPalettes = {
     },
     deuteranopiaFunky: {
         light: {
+            text: '#000000',
             null: '#4A4A4A',
             undefined: '#2A2A6A',
             boolean: '#0044AA',
@@ -246,6 +257,7 @@ export const deuteranopiaPalettes = {
             punctuation: '#4A4A4A'
         },
         dark: {
+            text: '#FFFFFF',
             null: '#CCCCCC',
             undefined: '#DDDDFF',
             boolean: '#77BBFF',
@@ -269,6 +281,7 @@ export const deuteranopiaPalettes = {
     },
     deuteranopiaVivid: {
         light: {
+            text: '#000000',
             null: '#3A3A3A',
             undefined: '#1A1A5A',
             boolean: '#0033AA',
@@ -290,6 +303,7 @@ export const deuteranopiaPalettes = {
             punctuation: '#3A3A3A'
         },
         dark: {
+            text: '#FFFFFF',
             null: '#CCCCCC',
             undefined: '#EEEEFF',
             boolean: '#88CCFF',

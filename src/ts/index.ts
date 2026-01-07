@@ -402,6 +402,23 @@ export const ansi_policy: PaintPolicy = {
 };
 
 /**
+ * HTML paint policy for web browser output
+ * Wraps content in span tags with inline CSS color styling and uses <br/> for newlines
+ *
+ * @example
+ * ```typescript
+ * const html = html_policy.wrap('#FF5733', 'Hello World');
+ * console.log(html); // Outputs '<span style="color: #FF5733">Hello World</span>'
+ * ```
+ */
+export const html_policy: PaintPolicy = {
+  wrap: (color: string, content: string): string => {
+    return `<span style="color: ${color}">${content}</span>`;
+  },
+  newline: '<br/>'
+};
+
+/**
  * Helper function to safely get a color from a palette with validation
  * Throws a clear error if the color is missing
  */
@@ -617,6 +634,33 @@ export function paint(node: ASTNode, policy: PaintPolicy, options?: HighlightOpt
  */
 export const paint_ansi: PaintFunction = (node: ASTNode, options?: HighlightOptions): string => {
   return paint(node, ansi_policy, options);
+};
+
+/**
+ * Paints an AST node with colors and formatting using HTML span tags
+ * Convenience wrapper around paint() that uses the html_policy
+ *
+ * @param {ASTNode} node - The AST node to paint
+ * @param {HighlightOptions} [options] - Optional configuration. Defaults will be used for any missing values.
+ * @returns {string} The painted string representation of the node with HTML span tags and inline CSS
+ *
+ * @example
+ * ```typescript
+ * const ast = parse_string('{"name": "John"}');
+ * const painted = paint_html(ast); // Uses HTML policy with defaults
+ * document.body.innerHTML = painted;
+ * ```
+ *
+ * @example
+ * ```typescript
+ * const ast = parse_string('{"name": "John"}');
+ * const options = { palette: forestPalette };
+ * const painted = paint_html(ast, options);
+ * document.body.innerHTML = '<pre>' + painted + '</pre>';
+ * ```
+ */
+export const paint_html: PaintFunction = (node: ASTNode, options?: HighlightOptions): string => {
+  return paint(node, html_policy, options);
 };
 
 /**

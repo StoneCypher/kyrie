@@ -11,6 +11,7 @@
 export declare const orangesColorRangePalettes: {
     readonly orangesAndReds: {
         readonly light: {
+            readonly text: "#000000";
             readonly null: "#8A4A2A";
             readonly undefined: "#9A5A3A";
             readonly boolean: "#CC5500";
@@ -32,6 +33,7 @@ export declare const orangesColorRangePalettes: {
             readonly punctuation: "#7A4A2A";
         };
         readonly dark: {
+            readonly text: "#FFFFFF";
             readonly null: "#FFBB88";
             readonly undefined: "#FFCC99";
             readonly boolean: "#FFAA55";
@@ -55,6 +57,7 @@ export declare const orangesColorRangePalettes: {
     };
     readonly orangesAndYellows: {
         readonly light: {
+            readonly text: "#000000";
             readonly null: "#8A6A2A";
             readonly undefined: "#9A7A3A";
             readonly boolean: "#CC8800";
@@ -76,6 +79,7 @@ export declare const orangesColorRangePalettes: {
             readonly punctuation: "#7A5A2A";
         };
         readonly dark: {
+            readonly text: "#FFFFFF";
             readonly null: "#FFCC88";
             readonly undefined: "#FFDD99";
             readonly boolean: "#FFBB66";
@@ -99,6 +103,7 @@ export declare const orangesColorRangePalettes: {
     };
     readonly orangesAndGreens: {
         readonly light: {
+            readonly text: "#000000";
             readonly null: "#6A5A3A";
             readonly undefined: "#7A6A4A";
             readonly boolean: "#CC6600";
@@ -120,6 +125,7 @@ export declare const orangesColorRangePalettes: {
             readonly punctuation: "#5A4A3A";
         };
         readonly dark: {
+            readonly text: "#FFFFFF";
             readonly null: "#DDCC99";
             readonly undefined: "#EEDDAA";
             readonly boolean: "#FFAA44";
@@ -143,6 +149,7 @@ export declare const orangesColorRangePalettes: {
     };
     readonly orangesAndBlues: {
         readonly light: {
+            readonly text: "#000000";
             readonly null: "#5A4A5A";
             readonly undefined: "#6A5A6A";
             readonly boolean: "#CC6600";
@@ -164,6 +171,7 @@ export declare const orangesColorRangePalettes: {
             readonly punctuation: "#4A3A4A";
         };
         readonly dark: {
+            readonly text: "#FFFFFF";
             readonly null: "#DDCCCC";
             readonly undefined: "#EEDDDD";
             readonly boolean: "#FFAA44";
@@ -187,6 +195,7 @@ export declare const orangesColorRangePalettes: {
     };
     readonly orangesAndPurples: {
         readonly light: {
+            readonly text: "#000000";
             readonly null: "#6A4A6A";
             readonly undefined: "#7A5A7A";
             readonly boolean: "#CC6600";
@@ -208,6 +217,7 @@ export declare const orangesColorRangePalettes: {
             readonly punctuation: "#5A3A5A";
         };
         readonly dark: {
+            readonly text: "#FFFFFF";
             readonly null: "#EECCDD";
             readonly undefined: "#FFDDEE";
             readonly boolean: "#FFAA44";
@@ -231,6 +241,7 @@ export declare const orangesColorRangePalettes: {
     };
     readonly orangesAndBrowns: {
         readonly light: {
+            readonly text: "#000000";
             readonly null: "#6A4A2A";
             readonly undefined: "#7A5A3A";
             readonly boolean: "#CC6600";
@@ -252,6 +263,7 @@ export declare const orangesColorRangePalettes: {
             readonly punctuation: "#5A3A2A";
         };
         readonly dark: {
+            readonly text: "#FFFFFF";
             readonly null: "#DDBB99";
             readonly undefined: "#EECCAA";
             readonly boolean: "#FFAA44";
@@ -275,6 +287,7 @@ export declare const orangesColorRangePalettes: {
     };
     readonly orangesAndGreys: {
         readonly light: {
+            readonly text: "#000000";
             readonly null: "#6A5A4A";
             readonly undefined: "#7A6A5A";
             readonly boolean: "#CC6600";
@@ -296,6 +309,7 @@ export declare const orangesColorRangePalettes: {
             readonly punctuation: "#5A5A5A";
         };
         readonly dark: {
+            readonly text: "#FFFFFF";
             readonly null: "#DDCCBB";
             readonly undefined: "#EEDDCC";
             readonly boolean: "#FFAA44";
@@ -319,6 +333,7 @@ export declare const orangesColorRangePalettes: {
     };
     readonly orangesAndCharcoals: {
         readonly light: {
+            readonly text: "#000000";
             readonly null: "#4A3A2A";
             readonly undefined: "#5A4A3A";
             readonly boolean: "#CC6600";
@@ -340,6 +355,7 @@ export declare const orangesColorRangePalettes: {
             readonly punctuation: "#3A2A2A";
         };
         readonly dark: {
+            readonly text: "#FFFFFF";
             readonly null: "#CCBB99";
             readonly undefined: "#DDCCAA";
             readonly boolean: "#FFAA44";
@@ -363,6 +379,7 @@ export declare const orangesColorRangePalettes: {
     };
     readonly orangesAndCyans: {
         readonly light: {
+            readonly text: "#000000";
             readonly null: "#5A5A5A";
             readonly undefined: "#6A6A6A";
             readonly boolean: "#CC6600";
@@ -384,6 +401,7 @@ export declare const orangesColorRangePalettes: {
             readonly punctuation: "#4A4A4A";
         };
         readonly dark: {
+            readonly text: "#FFFFFF";
             readonly null: "#DDDDDD";
             readonly undefined: "#EEEEEE";
             readonly boolean: "#FFAA44";
@@ -407,6 +425,7 @@ export declare const orangesColorRangePalettes: {
     };
     readonly orangesAndMagentas: {
         readonly light: {
+            readonly text: "#000000";
             readonly null: "#6A4A5A";
             readonly undefined: "#7A5A6A";
             readonly boolean: "#CC6600";
@@ -428,6 +447,7 @@ export declare const orangesColorRangePalettes: {
             readonly punctuation: "#5A3A4A";
         };
         readonly dark: {
+            readonly text: "#FFFFFF";
             readonly null: "#EECCDD";
             readonly undefined: "#FFDDEE";
             readonly boolean: "#FFAA44";
@@ -451,6 +471,7 @@ export declare const orangesColorRangePalettes: {
     };
     readonly orangesAndLightGrays: {
         readonly light: {
+            readonly text: "#000000";
             readonly null: "#7A6A5A";
             readonly undefined: "#8A7A6A";
             readonly boolean: "#CC6600";
@@ -472,6 +493,7 @@ export declare const orangesColorRangePalettes: {
             readonly punctuation: "#6A5A4A";
         };
         readonly dark: {
+            readonly text: "#FFFFFF";
             readonly null: "#EEDDCC";
             readonly undefined: "#FFEEEE";
             readonly boolean: "#FFAA44";

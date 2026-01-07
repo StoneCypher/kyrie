@@ -12,6 +12,7 @@
 export const magentasColorRangePalettes = {
   magentasAndReds: {
     light: {
+      text: '#000000',
       null: '#7A3A5A',
       undefined: '#8A4A6A',
       boolean: '#AA2A5A',
@@ -33,6 +34,7 @@ export const magentasColorRangePalettes = {
       punctuation: '#664466'
     },
     dark: {
+      text: '#FFFFFF',
       null: '#FFCCEE',
       undefined: '#FFDDFF',
       boolean: '#FF99DD',
@@ -56,6 +58,7 @@ export const magentasColorRangePalettes = {
   },
   magentasAndOranges: {
     light: {
+      text: '#000000',
       null: '#7A3A4A',
       undefined: '#8A4A5A',
       boolean: '#AA2A5A',
@@ -77,6 +80,7 @@ export const magentasColorRangePalettes = {
       punctuation: '#665555'
     },
     dark: {
+      text: '#FFFFFF',
       null: '#FFCCEE',
       undefined: '#FFDDFF',
       boolean: '#FF99DD',
@@ -100,6 +104,7 @@ export const magentasColorRangePalettes = {
   },
   magentasAndYellows: {
     light: {
+      text: '#000000',
       null: '#7A3A5A',
       undefined: '#8A4A6A',
       boolean: '#AA2A5A',
@@ -121,6 +126,7 @@ export const magentasColorRangePalettes = {
       punctuation: '#665566'
     },
     dark: {
+      text: '#FFFFFF',
       null: '#FFCCEE',
       undefined: '#FFDDFF',
       boolean: '#FF99DD',
@@ -144,6 +150,7 @@ export const magentasColorRangePalettes = {
   },
   magentasAndGreens: {
     light: {
+      text: '#000000',
       null: '#7A3A5A',
       undefined: '#8A4A6A',
       boolean: '#AA2A5A',
@@ -165,6 +172,7 @@ export const magentasColorRangePalettes = {
       punctuation: '#665577'
     },
     dark: {
+      text: '#FFFFFF',
       null: '#FFCCEE',
       undefined: '#FFDDFF',
       boolean: '#FF99DD',
@@ -188,6 +196,7 @@ export const magentasColorRangePalettes = {
   },
   magentasAndBlues: {
     light: {
+      text: '#000000',
       null: '#6A3A5A',
       undefined: '#7A4A6A',
       boolean: '#AA2A6A',
@@ -209,6 +218,7 @@ export const magentasColorRangePalettes = {
       punctuation: '#665588'
     },
     dark: {
+      text: '#FFFFFF',
       null: '#FFCCFF',
       undefined: '#FFDDFF',
       boolean: '#FF99EE',
@@ -232,6 +242,7 @@ export const magentasColorRangePalettes = {
   },
   magentasAndPurples: {
     light: {
+      text: '#000000',
       null: '#6A3A6A',
       undefined: '#7A4A7A',
       boolean: '#AA2A7A',
@@ -253,6 +264,7 @@ export const magentasColorRangePalettes = {
       punctuation: '#665599'
     },
     dark: {
+      text: '#FFFFFF',
       null: '#FFDDFF',
       undefined: '#FFEEFF',
       boolean: '#FFAAFF',
@@ -276,6 +288,7 @@ export const magentasColorRangePalettes = {
   },
   magentasAndBrowns: {
     light: {
+      text: '#000000',
       null: '#6A3A5A',
       undefined: '#7A4A6A',
       boolean: '#AA2A5A',
@@ -297,6 +310,7 @@ export const magentasColorRangePalettes = {
       punctuation: '#665577'
     },
     dark: {
+      text: '#FFFFFF',
       null: '#FFCCEE',
       undefined: '#FFDDFF',
       boolean: '#FF99DD',
@@ -320,6 +334,7 @@ export const magentasColorRangePalettes = {
   },
   magentasAndGreys: {
     light: {
+      text: '#000000',
       null: '#6A3A5A',
       undefined: '#7A4A6A',
       boolean: '#AA2A5A',
@@ -341,6 +356,7 @@ export const magentasColorRangePalettes = {
       punctuation: '#555566'
     },
     dark: {
+      text: '#FFFFFF',
       null: '#FFCCEE',
       undefined: '#FFDDFF',
       boolean: '#FF99DD',
@@ -364,6 +380,7 @@ export const magentasColorRangePalettes = {
   },
   magentasAndCharcoals: {
     light: {
+      text: '#000000',
       null: '#5A2A5A',
       undefined: '#6A3A6A',
       boolean: '#AA1A5A',
@@ -385,6 +402,7 @@ export const magentasColorRangePalettes = {
       punctuation: '#444455'
     },
     dark: {
+      text: '#FFFFFF',
       null: '#DDBBEE',
       undefined: '#EECCFF',
       boolean: '#FF88DD',
@@ -408,6 +426,7 @@ export const magentasColorRangePalettes = {
   },
   magentasAndCyans: {
     light: {
+      text: '#000000',
       null: '#6A3A5A',
       undefined: '#7A4A6A',
       boolean: '#AA2A6A',
@@ -429,6 +448,7 @@ export const magentasColorRangePalettes = {
       punctuation: '#664488'
     },
     dark: {
+      text: '#FFFFFF',
       null: '#FFCCFF',
       undefined: '#FFDDFF',
       boolean: '#FF99EE',
@@ -452,6 +472,7 @@ export const magentasColorRangePalettes = {
   },
   magentasAndLightGrays: {
     light: {
+      text: '#000000',
       null: '#7A4A6A',
       undefined: '#8A5A7A',
       boolean: '#AA3A6A',
@@ -473,6 +494,7 @@ export const magentasColorRangePalettes = {
       punctuation: '#666677'
     },
     dark: {
+      text: '#FFFFFF',
       null: '#FFDDFF',
       undefined: '#FFEEFF',
       boolean: '#FFAAEE',

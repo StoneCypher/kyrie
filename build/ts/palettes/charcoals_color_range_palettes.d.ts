@@ -12,6 +12,7 @@
 export declare const charcoalsColorRangePalettes: {
     readonly charcoalsAndReds: {
         readonly light: {
+            readonly text: "#000000";
             readonly null: "#3A3A3A";
             readonly undefined: "#4A4A4A";
             readonly boolean: "#5A5A5A";
@@ -33,6 +34,7 @@ export declare const charcoalsColorRangePalettes: {
             readonly punctuation: "#4A4A4A";
         };
         readonly dark: {
+            readonly text: "#FFFFFF";
             readonly null: "#C5C5C5";
             readonly undefined: "#D5D5D5";
             readonly boolean: "#E5E5E5";
@@ -56,6 +58,7 @@ export declare const charcoalsColorRangePalettes: {
     };
     readonly charcoalsAndOranges: {
         readonly light: {
+            readonly text: "#000000";
             readonly null: "#3A3A3A";
             readonly undefined: "#4A4A4A";
             readonly boolean: "#5A5A5A";
@@ -77,6 +80,7 @@ export declare const charcoalsColorRangePalettes: {
             readonly punctuation: "#4A4A4A";
         };
         readonly dark: {
+            readonly text: "#FFFFFF";
             readonly null: "#C5C5C5";
             readonly undefined: "#D5D5D5";
             readonly boolean: "#E5E5E5";
@@ -100,6 +104,7 @@ export declare const charcoalsColorRangePalettes: {
     };
     readonly charcoalsAndYellows: {
         readonly light: {
+            readonly text: "#000000";
             readonly null: "#3A3A3A";
             readonly undefined: "#4A4A4A";
             readonly boolean: "#5A5A5A";
@@ -121,6 +126,7 @@ export declare const charcoalsColorRangePalettes: {
             readonly punctuation: "#4A4A4A";
         };
         readonly dark: {
+            readonly text: "#FFFFFF";
             readonly null: "#C5C5C5";
             readonly undefined: "#D5D5D5";
             readonly boolean: "#E5E5E5";
@@ -144,6 +150,7 @@ export declare const charcoalsColorRangePalettes: {
     };
     readonly charcoalsAndGreens: {
         readonly light: {
+            readonly text: "#000000";
             readonly null: "#3A3A3A";
             readonly undefined: "#4A4A4A";
             readonly boolean: "#5A5A5A";
@@ -165,6 +172,7 @@ export declare const charcoalsColorRangePalettes: {
             readonly punctuation: "#4A4A4A";
         };
         readonly dark: {
+            readonly text: "#FFFFFF";
             readonly null: "#C5C5C5";
             readonly undefined: "#D5D5D5";
             readonly boolean: "#E5E5E5";
@@ -188,6 +196,7 @@ export declare const charcoalsColorRangePalettes: {
     };
     readonly charcoalsAndBlues: {
         readonly light: {
+            readonly text: "#000000";
             readonly null: "#3A3A3A";
             readonly undefined: "#4A4A4A";
             readonly boolean: "#5A5A5A";
@@ -209,6 +218,7 @@ export declare const charcoalsColorRangePalettes: {
             readonly punctuation: "#4A4A4A";
         };
         readonly dark: {
+            readonly text: "#FFFFFF";
             readonly null: "#C5C5C5";
             readonly undefined: "#D5D5D5";
             readonly boolean: "#E5E5E5";
@@ -232,6 +242,7 @@ export declare const charcoalsColorRangePalettes: {
     };
     readonly charcoalsAndPurples: {
         readonly light: {
+            readonly text: "#000000";
             readonly null: "#3A3A3A";
             readonly undefined: "#4A4A4A";
             readonly boolean: "#5A5A5A";
@@ -253,6 +264,7 @@ export declare const charcoalsColorRangePalettes: {
             readonly punctuation: "#4A4A4A";
         };
         readonly dark: {
+            readonly text: "#FFFFFF";
             readonly null: "#C5C5C5";
             readonly undefined: "#D5D5D5";
             readonly boolean: "#E5E5E5";
@@ -276,6 +288,7 @@ export declare const charcoalsColorRangePalettes: {
     };
     readonly charcoalsAndBrowns: {
         readonly light: {
+            readonly text: "#000000";
             readonly null: "#3A3A3A";
             readonly undefined: "#4A4A4A";
             readonly boolean: "#5A5A5A";
@@ -297,6 +310,7 @@ export declare const charcoalsColorRangePalettes: {
             readonly punctuation: "#4A4A4A";
         };
         readonly dark: {
+            readonly text: "#FFFFFF";
             readonly null: "#C5C5C5";
             readonly undefined: "#D5D5D5";
             readonly boolean: "#E5E5E5";
@@ -320,6 +334,7 @@ export declare const charcoalsColorRangePalettes: {
     };
     readonly charcoalsAndGreys: {
         readonly light: {
+            readonly text: "#000000";
             readonly null: "#2A2A2A";
             readonly undefined: "#3A3A3A";
             readonly boolean: "#4A4A4A";
@@ -341,6 +356,7 @@ export declare const charcoalsColorRangePalettes: {
             readonly punctuation: "#3A3A3A";
         };
         readonly dark: {
+            readonly text: "#FFFFFF";
             readonly null: "#B5B5B5";
             readonly undefined: "#C5C5C5";
             readonly boolean: "#D5D5D5";
@@ -364,6 +380,7 @@ export declare const charcoalsColorRangePalettes: {
     };
     readonly charcoalsAndCyans: {
         readonly light: {
+            readonly text: "#000000";
             readonly null: "#3A3A3A";
             readonly undefined: "#4A4A4A";
             readonly boolean: "#5A5A5A";
@@ -385,6 +402,7 @@ export declare const charcoalsColorRangePalettes: {
             readonly punctuation: "#4A4A4A";
         };
         readonly dark: {
+            readonly text: "#FFFFFF";
             readonly null: "#C5C5C5";
             readonly undefined: "#D5D5D5";
             readonly boolean: "#E5E5E5";
@@ -408,6 +426,7 @@ export declare const charcoalsColorRangePalettes: {
     };
     readonly charcoalsAndMagentas: {
         readonly light: {
+            readonly text: "#000000";
             readonly null: "#3A3A3A";
             readonly undefined: "#4A4A4A";
             readonly boolean: "#5A5A5A";
@@ -429,6 +448,7 @@ export declare const charcoalsColorRangePalettes: {
             readonly punctuation: "#4A4A4A";
         };
         readonly dark: {
+            readonly text: "#FFFFFF";
             readonly null: "#C5C5C5";
             readonly undefined: "#D5D5D5";
             readonly boolean: "#E5E5E5";
@@ -452,6 +472,7 @@ export declare const charcoalsColorRangePalettes: {
     };
     readonly charcoalsAndLightGrays: {
         readonly light: {
+            readonly text: "#000000";
             readonly null: "#3A3A3A";
             readonly undefined: "#4A4A4A";
             readonly boolean: "#5A5A5A";
@@ -473,6 +494,7 @@ export declare const charcoalsColorRangePalettes: {
             readonly punctuation: "#4A4A4A";
         };
         readonly dark: {
+            readonly text: "#FFFFFF";
             readonly null: "#C5C5C5";
             readonly undefined: "#D5D5D5";
             readonly boolean: "#E5E5E5";

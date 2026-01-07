@@ -24,6 +24,7 @@
 export const lightGraysColorRangePalettes = {
     lightGraysAndReds: {
         light: {
+            text: '#000000',
             null: '#8A8A8A',
             undefined: '#9A9A9A',
             boolean: '#7A7A7A',
@@ -45,6 +46,7 @@ export const lightGraysColorRangePalettes = {
             punctuation: '#858585'
         },
         dark: {
+            text: '#FFFFFF',
             null: '#DADADA',
             undefined: '#EAEAEA',
             boolean: '#F5F5F5',
@@ -68,6 +70,7 @@ export const lightGraysColorRangePalettes = {
     },
     lightGraysAndOranges: {
         light: {
+            text: '#000000',
             null: '#8A8A8A',
             undefined: '#9A9A9A',
             boolean: '#7A7A7A',
@@ -89,6 +92,7 @@ export const lightGraysColorRangePalettes = {
             punctuation: '#858585'
         },
         dark: {
+            text: '#FFFFFF',
             null: '#DADADA',
             undefined: '#EAEAEA',
             boolean: '#F5F5F5',
@@ -112,6 +116,7 @@ export const lightGraysColorRangePalettes = {
     },
     lightGraysAndYellows: {
         light: {
+            text: '#000000',
             null: '#8A8A8A',
             undefined: '#9A9A9A',
             boolean: '#7A7A7A',
@@ -133,6 +138,7 @@ export const lightGraysColorRangePalettes = {
             punctuation: '#858585'
         },
         dark: {
+            text: '#FFFFFF',
             null: '#DADADA',
             undefined: '#EAEAEA',
             boolean: '#F5F5F5',
@@ -156,6 +162,7 @@ export const lightGraysColorRangePalettes = {
     },
     lightGraysAndGreens: {
         light: {
+            text: '#000000',
             null: '#8A8A8A',
             undefined: '#9A9A9A',
             boolean: '#7A7A7A',
@@ -177,6 +184,7 @@ export const lightGraysColorRangePalettes = {
             punctuation: '#858585'
         },
         dark: {
+            text: '#FFFFFF',
             null: '#DADADA',
             undefined: '#EAEAEA',
             boolean: '#F5F5F5',
@@ -200,6 +208,7 @@ export const lightGraysColorRangePalettes = {
     },
     lightGraysAndBlues: {
         light: {
+            text: '#000000',
             null: '#8A8A8A',
             undefined: '#9A9A9A',
             boolean: '#7A7A7A',
@@ -221,6 +230,7 @@ export const lightGraysColorRangePalettes = {
             punctuation: '#858585'
         },
         dark: {
+            text: '#FFFFFF',
             null: '#DADADA',
             undefined: '#EAEAEA',
             boolean: '#F5F5F5',
@@ -244,6 +254,7 @@ export const lightGraysColorRangePalettes = {
     },
     lightGraysAndPurples: {
         light: {
+            text: '#000000',
             null: '#8A8A8A',
             undefined: '#9A9A9A',
             boolean: '#7A7A7A',
@@ -265,6 +276,7 @@ export const lightGraysColorRangePalettes = {
             punctuation: '#858585'
         },
         dark: {
+            text: '#FFFFFF',
             null: '#DADADA',
             undefined: '#EAEAEA',
             boolean: '#F5F5F5',
@@ -288,6 +300,7 @@ export const lightGraysColorRangePalettes = {
     },
     lightGraysAndBrowns: {
         light: {
+            text: '#000000',
             null: '#8A8A8A',
             undefined: '#9A9A9A',
             boolean: '#7A7A7A',
@@ -309,6 +322,7 @@ export const lightGraysColorRangePalettes = {
             punctuation: '#858585'
         },
         dark: {
+            text: '#FFFFFF',
             null: '#DADADA',
             undefined: '#EAEAEA',
             boolean: '#F5F5F5',
@@ -332,6 +346,7 @@ export const lightGraysColorRangePalettes = {
     },
     lightGraysAndGreys: {
         light: {
+            text: '#000000',
             null: '#8A8A8A',
             undefined: '#9A9A9A',
             boolean: '#7A7A7A',
@@ -353,6 +368,7 @@ export const lightGraysColorRangePalettes = {
             punctuation: '#858585'
         },
         dark: {
+            text: '#FFFFFF',
             null: '#DADADA',
             undefined: '#EAEAEA',
             boolean: '#F5F5F5',
@@ -376,6 +392,7 @@ export const lightGraysColorRangePalettes = {
     },
     lightGraysAndCharcoals: {
         light: {
+            text: '#000000',
             null: '#8A8A8A',
             undefined: '#9A9A9A',
             boolean: '#7A7A7A',
@@ -397,6 +414,7 @@ export const lightGraysColorRangePalettes = {
             punctuation: '#858585'
         },
         dark: {
+            text: '#FFFFFF',
             null: '#DADADA',
             undefined: '#EAEAEA',
             boolean: '#F5F5F5',
@@ -420,6 +438,7 @@ export const lightGraysColorRangePalettes = {
     },
     lightGraysAndCyans: {
         light: {
+            text: '#000000',
             null: '#8A8A8A',
             undefined: '#9A9A9A',
             boolean: '#7A7A7A',
@@ -441,6 +460,7 @@ export const lightGraysColorRangePalettes = {
             punctuation: '#858585'
         },
         dark: {
+            text: '#FFFFFF',
             null: '#DADADA',
             undefined: '#EAEAEA',
             boolean: '#F5F5F5',
@@ -464,6 +484,7 @@ export const lightGraysColorRangePalettes = {
     },
     lightGraysAndMagentas: {
         light: {
+            text: '#000000',
             null: '#8A8A8A',
             undefined: '#9A9A9A',
             boolean: '#7A7A7A',
@@ -485,6 +506,7 @@ export const lightGraysColorRangePalettes = {
             punctuation: '#858585'
         },
         dark: {
+            text: '#FFFFFF',
             null: '#DADADA',
             undefined: '#EAEAEA',
             boolean: '#F5F5F5',

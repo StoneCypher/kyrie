@@ -5,6 +5,7 @@
 export const monochromacyPalettes = {
     monochromacy: {
         light: {
+            text: '#000000',
             null: '#3A3A3A',
             undefined: '#4A4A4A',
             boolean: '#2A2A2A',
@@ -26,6 +27,7 @@ export const monochromacyPalettes = {
             punctuation: '#4A4A4A'
         },
         dark: {
+            text: '#FFFFFF',
             null: '#C5C5C5',
             undefined: '#D5D5D5',
             boolean: '#AFAFAF',
@@ -49,6 +51,7 @@ export const monochromacyPalettes = {
     },
     monochromacyBright: {
         light: {
+            text: '#000000',
             null: '#4A4A4A',
             undefined: '#3A3A3A',
             boolean: '#1A1A1A',
@@ -70,6 +73,7 @@ export const monochromacyPalettes = {
             punctuation: '#4A4A4A'
         },
         dark: {
+            text: '#FFFFFF',
             null: '#BBBBBB',
             undefined: '#CCCCCC',
             boolean: '#EEEEEE',
@@ -93,6 +97,7 @@ export const monochromacyPalettes = {
     },
     monochromacySubtle: {
         light: {
+            text: '#000000',
             null: '#5A5A5A',
             undefined: '#4A4A4A',
             boolean: '#3A3A3A',
@@ -114,6 +119,7 @@ export const monochromacyPalettes = {
             punctuation: '#5A5A5A'
         },
         dark: {
+            text: '#FFFFFF',
             null: '#AAAAAA',
             undefined: '#BBBBBB',
             boolean: '#CCCCCC',
@@ -137,6 +143,7 @@ export const monochromacyPalettes = {
     },
     monochromacyPastel: {
         light: {
+            text: '#000000',
             null: '#6A6A6A',
             undefined: '#5A5A5A',
             boolean: '#4A4A4A',
@@ -158,6 +165,7 @@ export const monochromacyPalettes = {
             punctuation: '#6A6A6A'
         },
         dark: {
+            text: '#FFFFFF',
             null: '#D5D5D5',
             undefined: '#E5E5E5',
             boolean: '#F5F5F5',
@@ -181,6 +189,7 @@ export const monochromacyPalettes = {
     },
     monochromacyBoring: {
         light: {
+            text: '#000000',
             null: '#4A4A4A',
             undefined: '#3A3A3A',
             boolean: '#2A2A2A',
@@ -202,6 +211,7 @@ export const monochromacyPalettes = {
             punctuation: '#4A4A4A'
         },
         dark: {
+            text: '#FFFFFF',
             null: '#AAAAAA',
             undefined: '#B5B5B5',
             boolean: '#C0C0C0',
@@ -225,6 +235,7 @@ export const monochromacyPalettes = {
     },
     monochromacyFunky: {
         light: {
+            text: '#000000',
             null: '#4A4A4A',
             undefined: '#2A2A2A',
             boolean: '#0A0A0A',
@@ -246,6 +257,7 @@ export const monochromacyPalettes = {
             punctuation: '#4A4A4A'
         },
         dark: {
+            text: '#FFFFFF',
             null: '#CCCCCC',
             undefined: '#DDDDDD',
             boolean: '#FFFFFF',
@@ -269,6 +281,7 @@ export const monochromacyPalettes = {
     },
     monochromacyVivid: {
         light: {
+            text: '#000000',
             null: '#3A3A3A',
             undefined: '#1A1A1A',
             boolean: '#000000',
@@ -290,6 +303,7 @@ export const monochromacyPalettes = {
             punctuation: '#3A3A3A'
         },
         dark: {
+            text: '#FFFFFF',
             null: '#CCCCCC',
             undefined: '#EEEEEE',
             boolean: '#FFFFFF',

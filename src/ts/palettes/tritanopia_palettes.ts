@@ -5,6 +5,7 @@
 export const tritanopiaPalettes = {
   tritanopia: {
     light: {
+      text: '#000000',
       null: '#4A3A2A',
       undefined: '#5A4A3A',
       boolean: '#3A5A2A',
@@ -26,6 +27,7 @@ export const tritanopiaPalettes = {
       punctuation: '#5A4A3A'
     },
     dark: {
+      text: '#FFFFFF',
       null: '#D5C5B5',
       undefined: '#E5D5C5',
       boolean: '#C5E5B5',
@@ -49,6 +51,7 @@ export const tritanopiaPalettes = {
   },
   tritanopiaBright: {
     light: {
+      text: '#000000',
       null: '#4A4A4A',
       undefined: '#5A3A3A',
       boolean: '#AA0055',
@@ -70,6 +73,7 @@ export const tritanopiaPalettes = {
       punctuation: '#4A4A4A'
     },
     dark: {
+      text: '#FFFFFF',
       null: '#BBBBBB',
       undefined: '#FFCCCC',
       boolean: '#FF66AA',
@@ -93,6 +97,7 @@ export const tritanopiaPalettes = {
   },
   tritanopiaSubtle: {
     light: {
+      text: '#000000',
       null: '#5A5A5A',
       undefined: '#6A4A4A',
       boolean: '#7A3A5A',
@@ -114,6 +119,7 @@ export const tritanopiaPalettes = {
       punctuation: '#5A5A5A'
     },
     dark: {
+      text: '#FFFFFF',
       null: '#AAAAAA',
       undefined: '#C5BBBB',
       boolean: '#CC99AA',
@@ -137,6 +143,7 @@ export const tritanopiaPalettes = {
   },
   tritanopiaPastel: {
     light: {
+      text: '#000000',
       null: '#6A6A6A',
       undefined: '#7A5A5A',
       boolean: '#8A4A6A',
@@ -158,6 +165,7 @@ export const tritanopiaPalettes = {
       punctuation: '#6A6A6A'
     },
     dark: {
+      text: '#FFFFFF',
       null: '#D5D5D5',
       undefined: '#FFEEEE',
       boolean: '#FFCCDD',
@@ -181,6 +189,7 @@ export const tritanopiaPalettes = {
   },
   tritanopiaBoring: {
     light: {
+      text: '#000000',
       null: '#4A4A4A',
       undefined: '#3A3A3A',
       boolean: '#4A2A3A',
@@ -202,6 +211,7 @@ export const tritanopiaPalettes = {
       punctuation: '#4A4A4A'
     },
     dark: {
+      text: '#FFFFFF',
       null: '#AAAAAA',
       undefined: '#B5B5B5',
       boolean: '#AAAA99',
@@ -225,6 +235,7 @@ export const tritanopiaPalettes = {
   },
   tritanopiaFunky: {
     light: {
+      text: '#000000',
       null: '#4A4A4A',
       undefined: '#6A2A2A',
       boolean: '#AA0044',
@@ -246,6 +257,7 @@ export const tritanopiaPalettes = {
       punctuation: '#4A4A4A'
     },
     dark: {
+      text: '#FFFFFF',
       null: '#CCCCCC',
       undefined: '#FFDDDD',
       boolean: '#FF77BB',
@@ -269,6 +281,7 @@ export const tritanopiaPalettes = {
   },
   tritanopiaVivid: {
     light: {
+      text: '#000000',
       null: '#3A3A3A',
       undefined: '#5A1A1A',
       boolean: '#AA0033',
@@ -290,6 +303,7 @@ export const tritanopiaPalettes = {
       punctuation: '#3A3A3A'
     },
     dark: {
+      text: '#FFFFFF',
       null: '#CCCCCC',
       undefined: '#FFEEEE',
       boolean: '#FF88CC',

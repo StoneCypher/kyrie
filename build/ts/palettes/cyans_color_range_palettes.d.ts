@@ -24,6 +24,7 @@
 export declare const cyansColorRangePalettes: {
     readonly cyansAndReds: {
         readonly light: {
+            readonly text: "#000000";
             readonly null: "#1A4A5A";
             readonly undefined: "#2A5A6A";
             readonly boolean: "#0A5A7A";
@@ -45,6 +46,7 @@ export declare const cyansColorRangePalettes: {
             readonly punctuation: "#2A5A6A";
         };
         readonly dark: {
+            readonly text: "#FFFFFF";
             readonly null: "#88DDFF";
             readonly undefined: "#99EEFF";
             readonly boolean: "#66EEFF";
@@ -68,6 +70,7 @@ export declare const cyansColorRangePalettes: {
     };
     readonly cyansAndOranges: {
         readonly light: {
+            readonly text: "#000000";
             readonly null: "#1A4A5A";
             readonly undefined: "#2A5A6A";
             readonly boolean: "#0A5A7A";
@@ -89,6 +92,7 @@ export declare const cyansColorRangePalettes: {
             readonly punctuation: "#2A5A6A";
         };
         readonly dark: {
+            readonly text: "#FFFFFF";
             readonly null: "#88DDFF";
             readonly undefined: "#99EEFF";
             readonly boolean: "#66EEFF";
@@ -112,6 +116,7 @@ export declare const cyansColorRangePalettes: {
     };
     readonly cyansAndYellows: {
         readonly light: {
+            readonly text: "#000000";
             readonly null: "#1A4A5A";
             readonly undefined: "#2A5A6A";
             readonly boolean: "#0A5A7A";
@@ -133,6 +138,7 @@ export declare const cyansColorRangePalettes: {
             readonly punctuation: "#2A5A6A";
         };
         readonly dark: {
+            readonly text: "#FFFFFF";
             readonly null: "#88DDFF";
             readonly undefined: "#99EEFF";
             readonly boolean: "#66EEFF";
@@ -156,6 +162,7 @@ export declare const cyansColorRangePalettes: {
     };
     readonly cyansAndGreens: {
         readonly light: {
+            readonly text: "#000000";
             readonly null: "#1A4A5A";
             readonly undefined: "#2A5A6A";
             readonly boolean: "#0A5A7A";
@@ -177,6 +184,7 @@ export declare const cyansColorRangePalettes: {
             readonly punctuation: "#2A5A6A";
         };
         readonly dark: {
+            readonly text: "#FFFFFF";
             readonly null: "#88DDFF";
             readonly undefined: "#99EEFF";
             readonly boolean: "#66EEFF";
@@ -200,6 +208,7 @@ export declare const cyansColorRangePalettes: {
     };
     readonly cyansAndBlues: {
         readonly light: {
+            readonly text: "#000000";
             readonly null: "#1A4A5A";
             readonly undefined: "#2A5A6A";
             readonly boolean: "#0A5A7A";
@@ -221,6 +230,7 @@ export declare const cyansColorRangePalettes: {
             readonly punctuation: "#2A5A6A";
         };
         readonly dark: {
+            readonly text: "#FFFFFF";
             readonly null: "#88DDFF";
             readonly undefined: "#99EEFF";
             readonly boolean: "#66EEFF";
@@ -244,6 +254,7 @@ export declare const cyansColorRangePalettes: {
     };
     readonly cyansAndPurples: {
         readonly light: {
+            readonly text: "#000000";
             readonly null: "#1A4A5A";
             readonly undefined: "#2A5A6A";
             readonly boolean: "#0A5A7A";
@@ -265,6 +276,7 @@ export declare const cyansColorRangePalettes: {
             readonly punctuation: "#2A5A6A";
         };
         readonly dark: {
+            readonly text: "#FFFFFF";
             readonly null: "#88DDFF";
             readonly undefined: "#99EEFF";
             readonly boolean: "#66EEFF";
@@ -288,6 +300,7 @@ export declare const cyansColorRangePalettes: {
     };
     readonly cyansAndBrowns: {
         readonly light: {
+            readonly text: "#000000";
             readonly null: "#1A4A5A";
             readonly undefined: "#2A5A6A";
             readonly boolean: "#0A5A7A";
@@ -309,6 +322,7 @@ export declare const cyansColorRangePalettes: {
             readonly punctuation: "#2A5A6A";
         };
         readonly dark: {
+            readonly text: "#FFFFFF";
             readonly null: "#88DDFF";
             readonly undefined: "#99EEFF";
             readonly boolean: "#66EEFF";
@@ -332,6 +346,7 @@ export declare const cyansColorRangePalettes: {
     };
     readonly cyansAndGreys: {
         readonly light: {
+            readonly text: "#000000";
             readonly null: "#1A4A5A";
             readonly undefined: "#2A5A6A";
             readonly boolean: "#0A5A7A";
@@ -353,6 +368,7 @@ export declare const cyansColorRangePalettes: {
             readonly punctuation: "#2A5A6A";
         };
         readonly dark: {
+            readonly text: "#FFFFFF";
             readonly null: "#88DDFF";
             readonly undefined: "#99EEFF";
             readonly boolean: "#66EEFF";
@@ -376,6 +392,7 @@ export declare const cyansColorRangePalettes: {
     };
     readonly cyansAndCharcoals: {
         readonly light: {
+            readonly text: "#000000";
             readonly null: "#1A4A5A";
             readonly undefined: "#2A5A6A";
             readonly boolean: "#0A5A7A";
@@ -397,6 +414,7 @@ export declare const cyansColorRangePalettes: {
             readonly punctuation: "#2A5A6A";
         };
         readonly dark: {
+            readonly text: "#FFFFFF";
             readonly null: "#88DDFF";
             readonly undefined: "#99EEFF";
             readonly boolean: "#66EEFF";
@@ -420,6 +438,7 @@ export declare const cyansColorRangePalettes: {
     };
     readonly cyansAndMagentas: {
         readonly light: {
+            readonly text: "#000000";
             readonly null: "#1A4A5A";
             readonly undefined: "#2A5A6A";
             readonly boolean: "#0A5A7A";
@@ -441,6 +460,7 @@ export declare const cyansColorRangePalettes: {
             readonly punctuation: "#2A5A6A";
         };
         readonly dark: {
+            readonly text: "#FFFFFF";
             readonly null: "#88DDFF";
             readonly undefined: "#99EEFF";
             readonly boolean: "#66EEFF";
@@ -464,6 +484,7 @@ export declare const cyansColorRangePalettes: {
     };
     readonly cyansAndLightGrays: {
         readonly light: {
+            readonly text: "#000000";
             readonly null: "#1A4A5A";
             readonly undefined: "#2A5A6A";
             readonly boolean: "#0A5A7A";
@@ -485,6 +506,7 @@ export declare const cyansColorRangePalettes: {
             readonly punctuation: "#2A5A6A";
         };
         readonly dark: {
+            readonly text: "#FFFFFF";
             readonly null: "#88DDFF";
             readonly undefined: "#99EEFF";
             readonly boolean: "#66EEFF";

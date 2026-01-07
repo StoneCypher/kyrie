@@ -6,6 +6,7 @@
 export const naturePalettes = {
   forest: {
     light: {
+      text: '#000000',
       null: '#445544',
       undefined: '#556655',
       boolean: '#225577',
@@ -27,6 +28,7 @@ export const naturePalettes = {
       punctuation: '#334433'
     },
     dark: {
+      text: '#FFFFFF',
       null: '#99BB99',
       undefined: '#AACCAA',
       boolean: '#77BBEE',
@@ -50,6 +52,7 @@ export const naturePalettes = {
   },
   garden: {
     light: {
+      text: '#000000',
       null: '#556655',
       undefined: '#667766',
       boolean: '#336688',
@@ -71,6 +74,7 @@ export const naturePalettes = {
       punctuation: '#445544'
     },
     dark: {
+      text: '#FFFFFF',
       null: '#AACCAA',
       undefined: '#BBDDBB',
       boolean: '#88CCEE',
@@ -94,6 +98,7 @@ export const naturePalettes = {
   },
   flowers: {
     light: {
+      text: '#000000',
       null: '#4A4A4A',
       undefined: '#5A5A5A',
       boolean: '#AA2A7A',
@@ -115,6 +120,7 @@ export const naturePalettes = {
       punctuation: '#5A5A5A'
     },
     dark: {
+      text: '#FFFFFF',
       null: '#E5E5E5',
       undefined: '#F5F5F5',
       boolean: '#FF99DD',
@@ -138,6 +144,7 @@ export const naturePalettes = {
   },
   sky: {
     light: {
+      text: '#000000',
       null: '#3A5A7A',
       undefined: '#4A6A8A',
       boolean: '#2A6A9A',
@@ -159,6 +166,7 @@ export const naturePalettes = {
       punctuation: '#4A6A8A'
     },
     dark: {
+      text: '#FFFFFF',
       null: '#AADDFF',
       undefined: '#BBEEFF',
       boolean: '#99EEFF',
@@ -182,6 +190,7 @@ export const naturePalettes = {
   },
   sunflower: {
     light: {
+      text: '#000000',
       null: '#5A4A2A',
       undefined: '#6A5A3A',
       boolean: '#4A5A2A',
@@ -203,6 +212,7 @@ export const naturePalettes = {
       punctuation: '#6A5A3A'
     },
     dark: {
+      text: '#FFFFFF',
       null: '#E5D5B5',
       undefined: '#F5E5C5',
       boolean: '#D5E5A5',
@@ -226,6 +236,7 @@ export const naturePalettes = {
   },
   strawberry: {
     light: {
+      text: '#000000',
       null: '#5A3A3A',
       undefined: '#6A4A4A',
       boolean: '#AA2A4A',
@@ -247,6 +258,7 @@ export const naturePalettes = {
       punctuation: '#6A4A4A'
     },
     dark: {
+      text: '#FFFFFF',
       null: '#E5C5C5',
       undefined: '#F5D5D5',
       boolean: '#FF88AA',
@@ -270,6 +282,7 @@ export const naturePalettes = {
   },
   butterfly: {
     light: {
+      text: '#000000',
       null: '#4A4A5A',
       undefined: '#5A5A6A',
       boolean: '#AA2A8A',
@@ -291,6 +304,7 @@ export const naturePalettes = {
       punctuation: '#5A5A6A'
     },
     dark: {
+      text: '#FFFFFF',
       null: '#D5D5E5',
       undefined: '#E5E5F5',
       boolean: '#FF88EE',

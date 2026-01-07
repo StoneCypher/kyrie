@@ -5,6 +5,7 @@ import type { ColorPalette } from './index.js';
 export declare const allPalettes: {
     lightGraysAndReds: {
         readonly light: {
+            readonly text: "#000000";
             readonly null: "#8A8A8A";
             readonly undefined: "#9A9A9A";
             readonly boolean: "#7A7A7A";
@@ -26,6 +27,7 @@ export declare const allPalettes: {
             readonly punctuation: "#858585";
         };
         readonly dark: {
+            readonly text: "#FFFFFF";
             readonly null: "#DADADA";
             readonly undefined: "#EAEAEA";
             readonly boolean: "#F5F5F5";
@@ -49,6 +51,7 @@ export declare const allPalettes: {
     };
     lightGraysAndOranges: {
         readonly light: {
+            readonly text: "#000000";
             readonly null: "#8A8A8A";
             readonly undefined: "#9A9A9A";
             readonly boolean: "#7A7A7A";
@@ -70,6 +73,7 @@ export declare const allPalettes: {
             readonly punctuation: "#858585";
         };
         readonly dark: {
+            readonly text: "#FFFFFF";
             readonly null: "#DADADA";
             readonly undefined: "#EAEAEA";
             readonly boolean: "#F5F5F5";
@@ -93,6 +97,7 @@ export declare const allPalettes: {
     };
     lightGraysAndYellows: {
         readonly light: {
+            readonly text: "#000000";
             readonly null: "#8A8A8A";
             readonly undefined: "#9A9A9A";
             readonly boolean: "#7A7A7A";
@@ -114,6 +119,7 @@ export declare const allPalettes: {
             readonly punctuation: "#858585";
         };
         readonly dark: {
+            readonly text: "#FFFFFF";
             readonly null: "#DADADA";
             readonly undefined: "#EAEAEA";
             readonly boolean: "#F5F5F5";
@@ -137,6 +143,7 @@ export declare const allPalettes: {
     };
     lightGraysAndGreens: {
         readonly light: {
+            readonly text: "#000000";
             readonly null: "#8A8A8A";
             readonly undefined: "#9A9A9A";
             readonly boolean: "#7A7A7A";
@@ -158,6 +165,7 @@ export declare const allPalettes: {
             readonly punctuation: "#858585";
         };
         readonly dark: {
+            readonly text: "#FFFFFF";
             readonly null: "#DADADA";
             readonly undefined: "#EAEAEA";
             readonly boolean: "#F5F5F5";
@@ -181,6 +189,7 @@ export declare const allPalettes: {
     };
     lightGraysAndBlues: {
         readonly light: {
+            readonly text: "#000000";
             readonly null: "#8A8A8A";
             readonly undefined: "#9A9A9A";
             readonly boolean: "#7A7A7A";
@@ -202,6 +211,7 @@ export declare const allPalettes: {
             readonly punctuation: "#858585";
         };
         readonly dark: {
+            readonly text: "#FFFFFF";
             readonly null: "#DADADA";
             readonly undefined: "#EAEAEA";
             readonly boolean: "#F5F5F5";
@@ -225,6 +235,7 @@ export declare const allPalettes: {
     };
     lightGraysAndPurples: {
         readonly light: {
+            readonly text: "#000000";
             readonly null: "#8A8A8A";
             readonly undefined: "#9A9A9A";
             readonly boolean: "#7A7A7A";
@@ -246,6 +257,7 @@ export declare const allPalettes: {
             readonly punctuation: "#858585";
         };
         readonly dark: {
+            readonly text: "#FFFFFF";
             readonly null: "#DADADA";
             readonly undefined: "#EAEAEA";
             readonly boolean: "#F5F5F5";
@@ -269,6 +281,7 @@ export declare const allPalettes: {
     };
     lightGraysAndBrowns: {
         readonly light: {
+            readonly text: "#000000";
             readonly null: "#8A8A8A";
             readonly undefined: "#9A9A9A";
             readonly boolean: "#7A7A7A";
@@ -290,6 +303,7 @@ export declare const allPalettes: {
             readonly punctuation: "#858585";
         };
         readonly dark: {
+            readonly text: "#FFFFFF";
             readonly null: "#DADADA";
             readonly undefined: "#EAEAEA";
             readonly boolean: "#F5F5F5";
@@ -313,6 +327,7 @@ export declare const allPalettes: {
     };
     lightGraysAndGreys: {
         readonly light: {
+            readonly text: "#000000";
             readonly null: "#8A8A8A";
             readonly undefined: "#9A9A9A";
             readonly boolean: "#7A7A7A";
@@ -334,6 +349,7 @@ export declare const allPalettes: {
             readonly punctuation: "#858585";
         };
         readonly dark: {
+            readonly text: "#FFFFFF";
             readonly null: "#DADADA";
             readonly undefined: "#EAEAEA";
             readonly boolean: "#F5F5F5";
@@ -357,6 +373,7 @@ export declare const allPalettes: {
     };
     lightGraysAndCharcoals: {
         readonly light: {
+            readonly text: "#000000";
             readonly null: "#8A8A8A";
             readonly undefined: "#9A9A9A";
             readonly boolean: "#7A7A7A";
@@ -378,6 +395,7 @@ export declare const allPalettes: {
             readonly punctuation: "#858585";
         };
         readonly dark: {
+            readonly text: "#FFFFFF";
             readonly null: "#DADADA";
             readonly undefined: "#EAEAEA";
             readonly boolean: "#F5F5F5";
@@ -401,6 +419,7 @@ export declare const allPalettes: {
     };
     lightGraysAndCyans: {
         readonly light: {
+            readonly text: "#000000";
             readonly null: "#8A8A8A";
             readonly undefined: "#9A9A9A";
             readonly boolean: "#7A7A7A";
@@ -422,6 +441,7 @@ export declare const allPalettes: {
             readonly punctuation: "#858585";
         };
         readonly dark: {
+            readonly text: "#FFFFFF";
             readonly null: "#DADADA";
             readonly undefined: "#EAEAEA";
             readonly boolean: "#F5F5F5";
@@ -445,6 +465,7 @@ export declare const allPalettes: {
     };
     lightGraysAndMagentas: {
         readonly light: {
+            readonly text: "#000000";
             readonly null: "#8A8A8A";
             readonly undefined: "#9A9A9A";
             readonly boolean: "#7A7A7A";
@@ -466,6 +487,7 @@ export declare const allPalettes: {
             readonly punctuation: "#858585";
         };
         readonly dark: {
+            readonly text: "#FFFFFF";
             readonly null: "#DADADA";
             readonly undefined: "#EAEAEA";
             readonly boolean: "#F5F5F5";
@@ -489,6 +511,7 @@ export declare const allPalettes: {
     };
     magentasAndReds: {
         readonly light: {
+            readonly text: "#000000";
             readonly null: "#7A3A5A";
             readonly undefined: "#8A4A6A";
             readonly boolean: "#AA2A5A";
@@ -510,6 +533,7 @@ export declare const allPalettes: {
             readonly punctuation: "#664466";
         };
         readonly dark: {
+            readonly text: "#FFFFFF";
             readonly null: "#FFCCEE";
             readonly undefined: "#FFDDFF";
             readonly boolean: "#FF99DD";
@@ -533,6 +557,7 @@ export declare const allPalettes: {
     };
     magentasAndOranges: {
         readonly light: {
+            readonly text: "#000000";
             readonly null: "#7A3A4A";
             readonly undefined: "#8A4A5A";
             readonly boolean: "#AA2A5A";
@@ -554,6 +579,7 @@ export declare const allPalettes: {
             readonly punctuation: "#665555";
         };
         readonly dark: {
+            readonly text: "#FFFFFF";
             readonly null: "#FFCCEE";
             readonly undefined: "#FFDDFF";
             readonly boolean: "#FF99DD";
@@ -577,6 +603,7 @@ export declare const allPalettes: {
     };
     magentasAndYellows: {
         readonly light: {
+            readonly text: "#000000";
             readonly null: "#7A3A5A";
             readonly undefined: "#8A4A6A";
             readonly boolean: "#AA2A5A";
@@ -598,6 +625,7 @@ export declare const allPalettes: {
             readonly punctuation: "#665566";
         };
         readonly dark: {
+            readonly text: "#FFFFFF";
             readonly null: "#FFCCEE";
             readonly undefined: "#FFDDFF";
             readonly boolean: "#FF99DD";
@@ -621,6 +649,7 @@ export declare const allPalettes: {
     };
     magentasAndGreens: {
         readonly light: {
+            readonly text: "#000000";
             readonly null: "#7A3A5A";
             readonly undefined: "#8A4A6A";
             readonly boolean: "#AA2A5A";
@@ -642,6 +671,7 @@ export declare const allPalettes: {
             readonly punctuation: "#665577";
         };
         readonly dark: {
+            readonly text: "#FFFFFF";
             readonly null: "#FFCCEE";
             readonly undefined: "#FFDDFF";
             readonly boolean: "#FF99DD";
@@ -665,6 +695,7 @@ export declare const allPalettes: {
     };
     magentasAndBlues: {
         readonly light: {
+            readonly text: "#000000";
             readonly null: "#6A3A5A";
             readonly undefined: "#7A4A6A";
             readonly boolean: "#AA2A6A";
@@ -686,6 +717,7 @@ export declare const allPalettes: {
             readonly punctuation: "#665588";
         };
         readonly dark: {
+            readonly text: "#FFFFFF";
             readonly null: "#FFCCFF";
             readonly undefined: "#FFDDFF";
             readonly boolean: "#FF99EE";
@@ -709,6 +741,7 @@ export declare const allPalettes: {
     };
     magentasAndPurples: {
         readonly light: {
+            readonly text: "#000000";
             readonly null: "#6A3A6A";
             readonly undefined: "#7A4A7A";
             readonly boolean: "#AA2A7A";
@@ -730,6 +763,7 @@ export declare const allPalettes: {
             readonly punctuation: "#665599";
         };
         readonly dark: {
+            readonly text: "#FFFFFF";
             readonly null: "#FFDDFF";
             readonly undefined: "#FFEEFF";
             readonly boolean: "#FFAAFF";
@@ -753,6 +787,7 @@ export declare const allPalettes: {
     };
     magentasAndBrowns: {
         readonly light: {
+            readonly text: "#000000";
             readonly null: "#6A3A5A";
             readonly undefined: "#7A4A6A";
             readonly boolean: "#AA2A5A";
@@ -774,6 +809,7 @@ export declare const allPalettes: {
             readonly punctuation: "#665577";
         };
         readonly dark: {
+            readonly text: "#FFFFFF";
             readonly null: "#FFCCEE";
             readonly undefined: "#FFDDFF";
             readonly boolean: "#FF99DD";
@@ -797,6 +833,7 @@ export declare const allPalettes: {
     };
     magentasAndGreys: {
         readonly light: {
+            readonly text: "#000000";
             readonly null: "#6A3A5A";
             readonly undefined: "#7A4A6A";
             readonly boolean: "#AA2A5A";
@@ -818,6 +855,7 @@ export declare const allPalettes: {
             readonly punctuation: "#555566";
         };
         readonly dark: {
+            readonly text: "#FFFFFF";
             readonly null: "#FFCCEE";
             readonly undefined: "#FFDDFF";
             readonly boolean: "#FF99DD";
@@ -841,6 +879,7 @@ export declare const allPalettes: {
     };
     magentasAndCharcoals: {
         readonly light: {
+            readonly text: "#000000";
             readonly null: "#5A2A5A";
             readonly undefined: "#6A3A6A";
             readonly boolean: "#AA1A5A";
@@ -862,6 +901,7 @@ export declare const allPalettes: {
             readonly punctuation: "#444455";
         };
         readonly dark: {
+            readonly text: "#FFFFFF";
             readonly null: "#DDBBEE";
             readonly undefined: "#EECCFF";
             readonly boolean: "#FF88DD";
@@ -885,6 +925,7 @@ export declare const allPalettes: {
     };
     magentasAndCyans: {
         readonly light: {
+            readonly text: "#000000";
             readonly null: "#6A3A5A";
             readonly undefined: "#7A4A6A";
             readonly boolean: "#AA2A6A";
@@ -906,6 +947,7 @@ export declare const allPalettes: {
             readonly punctuation: "#664488";
         };
         readonly dark: {
+            readonly text: "#FFFFFF";
             readonly null: "#FFCCFF";
             readonly undefined: "#FFDDFF";
             readonly boolean: "#FF99EE";
@@ -929,6 +971,7 @@ export declare const allPalettes: {
     };
     magentasAndLightGrays: {
         readonly light: {
+            readonly text: "#000000";
             readonly null: "#7A4A6A";
             readonly undefined: "#8A5A7A";
             readonly boolean: "#AA3A6A";
@@ -950,6 +993,7 @@ export declare const allPalettes: {
             readonly punctuation: "#666677";
         };
         readonly dark: {
+            readonly text: "#FFFFFF";
             readonly null: "#FFDDFF";
             readonly undefined: "#FFEEFF";
             readonly boolean: "#FFAAEE";
@@ -973,6 +1017,7 @@ export declare const allPalettes: {
     };
     cyansAndReds: {
         readonly light: {
+            readonly text: "#000000";
             readonly null: "#1A4A5A";
             readonly undefined: "#2A5A6A";
             readonly boolean: "#0A5A7A";
@@ -994,6 +1039,7 @@ export declare const allPalettes: {
             readonly punctuation: "#2A5A6A";
         };
         readonly dark: {
+            readonly text: "#FFFFFF";
             readonly null: "#88DDFF";
             readonly undefined: "#99EEFF";
             readonly boolean: "#66EEFF";
@@ -1017,6 +1063,7 @@ export declare const allPalettes: {
     };
     cyansAndOranges: {
         readonly light: {
+            readonly text: "#000000";
             readonly null: "#1A4A5A";
             readonly undefined: "#2A5A6A";
             readonly boolean: "#0A5A7A";
@@ -1038,6 +1085,7 @@ export declare const allPalettes: {
             readonly punctuation: "#2A5A6A";
         };
         readonly dark: {
+            readonly text: "#FFFFFF";
             readonly null: "#88DDFF";
             readonly undefined: "#99EEFF";
             readonly boolean: "#66EEFF";
@@ -1061,6 +1109,7 @@ export declare const allPalettes: {
     };
     cyansAndYellows: {
         readonly light: {
+            readonly text: "#000000";
             readonly null: "#1A4A5A";
             readonly undefined: "#2A5A6A";
             readonly boolean: "#0A5A7A";
@@ -1082,6 +1131,7 @@ export declare const allPalettes: {
             readonly punctuation: "#2A5A6A";
         };
         readonly dark: {
+            readonly text: "#FFFFFF";
             readonly null: "#88DDFF";
             readonly undefined: "#99EEFF";
             readonly boolean: "#66EEFF";
@@ -1105,6 +1155,7 @@ export declare const allPalettes: {
     };
     cyansAndGreens: {
         readonly light: {
+            readonly text: "#000000";
             readonly null: "#1A4A5A";
             readonly undefined: "#2A5A6A";
             readonly boolean: "#0A5A7A";
@@ -1126,6 +1177,7 @@ export declare const allPalettes: {
             readonly punctuation: "#2A5A6A";
         };
         readonly dark: {
+            readonly text: "#FFFFFF";
             readonly null: "#88DDFF";
             readonly undefined: "#99EEFF";
             readonly boolean: "#66EEFF";
@@ -1149,6 +1201,7 @@ export declare const allPalettes: {
     };
     cyansAndBlues: {
         readonly light: {
+            readonly text: "#000000";
             readonly null: "#1A4A5A";
             readonly undefined: "#2A5A6A";
             readonly boolean: "#0A5A7A";
@@ -1170,6 +1223,7 @@ export declare const allPalettes: {
             readonly punctuation: "#2A5A6A";
         };
         readonly dark: {
+            readonly text: "#FFFFFF";
             readonly null: "#88DDFF";
             readonly undefined: "#99EEFF";
             readonly boolean: "#66EEFF";
@@ -1193,6 +1247,7 @@ export declare const allPalettes: {
     };
     cyansAndPurples: {
         readonly light: {
+            readonly text: "#000000";
             readonly null: "#1A4A5A";
             readonly undefined: "#2A5A6A";
             readonly boolean: "#0A5A7A";
@@ -1214,6 +1269,7 @@ export declare const allPalettes: {
             readonly punctuation: "#2A5A6A";
         };
         readonly dark: {
+            readonly text: "#FFFFFF";
             readonly null: "#88DDFF";
             readonly undefined: "#99EEFF";
             readonly boolean: "#66EEFF";
@@ -1237,6 +1293,7 @@ export declare const allPalettes: {
     };
     cyansAndBrowns: {
         readonly light: {
+            readonly text: "#000000";
             readonly null: "#1A4A5A";
             readonly undefined: "#2A5A6A";
             readonly boolean: "#0A5A7A";
@@ -1258,6 +1315,7 @@ export declare const allPalettes: {
             readonly punctuation: "#2A5A6A";
         };
         readonly dark: {
+            readonly text: "#FFFFFF";
             readonly null: "#88DDFF";
             readonly undefined: "#99EEFF";
             readonly boolean: "#66EEFF";
@@ -1281,6 +1339,7 @@ export declare const allPalettes: {
     };
     cyansAndGreys: {
         readonly light: {
+            readonly text: "#000000";
             readonly null: "#1A4A5A";
             readonly undefined: "#2A5A6A";
             readonly boolean: "#0A5A7A";
@@ -1302,6 +1361,7 @@ export declare const allPalettes: {
             readonly punctuation: "#2A5A6A";
         };
         readonly dark: {
+            readonly text: "#FFFFFF";
             readonly null: "#88DDFF";
             readonly undefined: "#99EEFF";
             readonly boolean: "#66EEFF";
@@ -1325,6 +1385,7 @@ export declare const allPalettes: {
     };
     cyansAndCharcoals: {
         readonly light: {
+            readonly text: "#000000";
             readonly null: "#1A4A5A";
             readonly undefined: "#2A5A6A";
             readonly boolean: "#0A5A7A";
@@ -1346,6 +1407,7 @@ export declare const allPalettes: {
             readonly punctuation: "#2A5A6A";
         };
         readonly dark: {
+            readonly text: "#FFFFFF";
             readonly null: "#88DDFF";
             readonly undefined: "#99EEFF";
             readonly boolean: "#66EEFF";
@@ -1369,6 +1431,7 @@ export declare const allPalettes: {
     };
     cyansAndMagentas: {
         readonly light: {
+            readonly text: "#000000";
             readonly null: "#1A4A5A";
             readonly undefined: "#2A5A6A";
             readonly boolean: "#0A5A7A";
@@ -1390,6 +1453,7 @@ export declare const allPalettes: {
             readonly punctuation: "#2A5A6A";
         };
         readonly dark: {
+            readonly text: "#FFFFFF";
             readonly null: "#88DDFF";
             readonly undefined: "#99EEFF";
             readonly boolean: "#66EEFF";
@@ -1413,6 +1477,7 @@ export declare const allPalettes: {
     };
     cyansAndLightGrays: {
         readonly light: {
+            readonly text: "#000000";
             readonly null: "#1A4A5A";
             readonly undefined: "#2A5A6A";
             readonly boolean: "#0A5A7A";
@@ -1434,6 +1499,7 @@ export declare const allPalettes: {
             readonly punctuation: "#2A5A6A";
         };
         readonly dark: {
+            readonly text: "#FFFFFF";
             readonly null: "#88DDFF";
             readonly undefined: "#99EEFF";
             readonly boolean: "#66EEFF";
@@ -1457,6 +1523,7 @@ export declare const allPalettes: {
     };
     charcoalsAndReds: {
         readonly light: {
+            readonly text: "#000000";
             readonly null: "#3A3A3A";
             readonly undefined: "#4A4A4A";
             readonly boolean: "#5A5A5A";
@@ -1478,6 +1545,7 @@ export declare const allPalettes: {
             readonly punctuation: "#4A4A4A";
         };
         readonly dark: {
+            readonly text: "#FFFFFF";
             readonly null: "#C5C5C5";
             readonly undefined: "#D5D5D5";
             readonly boolean: "#E5E5E5";
@@ -1501,6 +1569,7 @@ export declare const allPalettes: {
     };
     charcoalsAndOranges: {
         readonly light: {
+            readonly text: "#000000";
             readonly null: "#3A3A3A";
             readonly undefined: "#4A4A4A";
             readonly boolean: "#5A5A5A";
@@ -1522,6 +1591,7 @@ export declare const allPalettes: {
             readonly punctuation: "#4A4A4A";
         };
         readonly dark: {
+            readonly text: "#FFFFFF";
             readonly null: "#C5C5C5";
             readonly undefined: "#D5D5D5";
             readonly boolean: "#E5E5E5";
@@ -1545,6 +1615,7 @@ export declare const allPalettes: {
     };
     charcoalsAndYellows: {
         readonly light: {
+            readonly text: "#000000";
             readonly null: "#3A3A3A";
             readonly undefined: "#4A4A4A";
             readonly boolean: "#5A5A5A";
@@ -1566,6 +1637,7 @@ export declare const allPalettes: {
             readonly punctuation: "#4A4A4A";
         };
         readonly dark: {
+            readonly text: "#FFFFFF";
             readonly null: "#C5C5C5";
             readonly undefined: "#D5D5D5";
             readonly boolean: "#E5E5E5";
@@ -1589,6 +1661,7 @@ export declare const allPalettes: {
     };
     charcoalsAndGreens: {
         readonly light: {
+            readonly text: "#000000";
             readonly null: "#3A3A3A";
             readonly undefined: "#4A4A4A";
             readonly boolean: "#5A5A5A";
@@ -1610,6 +1683,7 @@ export declare const allPalettes: {
             readonly punctuation: "#4A4A4A";
         };
         readonly dark: {
+            readonly text: "#FFFFFF";
             readonly null: "#C5C5C5";
             readonly undefined: "#D5D5D5";
             readonly boolean: "#E5E5E5";
@@ -1633,6 +1707,7 @@ export declare const allPalettes: {
     };
     charcoalsAndBlues: {
         readonly light: {
+            readonly text: "#000000";
             readonly null: "#3A3A3A";
             readonly undefined: "#4A4A4A";
             readonly boolean: "#5A5A5A";
@@ -1654,6 +1729,7 @@ export declare const allPalettes: {
             readonly punctuation: "#4A4A4A";
         };
         readonly dark: {
+            readonly text: "#FFFFFF";
             readonly null: "#C5C5C5";
             readonly undefined: "#D5D5D5";
             readonly boolean: "#E5E5E5";
@@ -1677,6 +1753,7 @@ export declare const allPalettes: {
     };
     charcoalsAndPurples: {
         readonly light: {
+            readonly text: "#000000";
             readonly null: "#3A3A3A";
             readonly undefined: "#4A4A4A";
             readonly boolean: "#5A5A5A";
@@ -1698,6 +1775,7 @@ export declare const allPalettes: {
             readonly punctuation: "#4A4A4A";
         };
         readonly dark: {
+            readonly text: "#FFFFFF";
             readonly null: "#C5C5C5";
             readonly undefined: "#D5D5D5";
             readonly boolean: "#E5E5E5";
@@ -1721,6 +1799,7 @@ export declare const allPalettes: {
     };
     charcoalsAndBrowns: {
         readonly light: {
+            readonly text: "#000000";
             readonly null: "#3A3A3A";
             readonly undefined: "#4A4A4A";
             readonly boolean: "#5A5A5A";
@@ -1742,6 +1821,7 @@ export declare const allPalettes: {
             readonly punctuation: "#4A4A4A";
         };
         readonly dark: {
+            readonly text: "#FFFFFF";
             readonly null: "#C5C5C5";
             readonly undefined: "#D5D5D5";
             readonly boolean: "#E5E5E5";
@@ -1765,6 +1845,7 @@ export declare const allPalettes: {
     };
     charcoalsAndGreys: {
         readonly light: {
+            readonly text: "#000000";
             readonly null: "#2A2A2A";
             readonly undefined: "#3A3A3A";
             readonly boolean: "#4A4A4A";
@@ -1786,6 +1867,7 @@ export declare const allPalettes: {
             readonly punctuation: "#3A3A3A";
         };
         readonly dark: {
+            readonly text: "#FFFFFF";
             readonly null: "#B5B5B5";
             readonly undefined: "#C5C5C5";
             readonly boolean: "#D5D5D5";
@@ -1809,6 +1891,7 @@ export declare const allPalettes: {
     };
     charcoalsAndCyans: {
         readonly light: {
+            readonly text: "#000000";
             readonly null: "#3A3A3A";
             readonly undefined: "#4A4A4A";
             readonly boolean: "#5A5A5A";
@@ -1830,6 +1913,7 @@ export declare const allPalettes: {
             readonly punctuation: "#4A4A4A";
         };
         readonly dark: {
+            readonly text: "#FFFFFF";
             readonly null: "#C5C5C5";
             readonly undefined: "#D5D5D5";
             readonly boolean: "#E5E5E5";
@@ -1853,6 +1937,7 @@ export declare const allPalettes: {
     };
     charcoalsAndMagentas: {
         readonly light: {
+            readonly text: "#000000";
             readonly null: "#3A3A3A";
             readonly undefined: "#4A4A4A";
             readonly boolean: "#5A5A5A";
@@ -1874,6 +1959,7 @@ export declare const allPalettes: {
             readonly punctuation: "#4A4A4A";
         };
         readonly dark: {
+            readonly text: "#FFFFFF";
             readonly null: "#C5C5C5";
             readonly undefined: "#D5D5D5";
             readonly boolean: "#E5E5E5";
@@ -1897,6 +1983,7 @@ export declare const allPalettes: {
     };
     charcoalsAndLightGrays: {
         readonly light: {
+            readonly text: "#000000";
             readonly null: "#3A3A3A";
             readonly undefined: "#4A4A4A";
             readonly boolean: "#5A5A5A";
@@ -1918,6 +2005,7 @@ export declare const allPalettes: {
             readonly punctuation: "#4A4A4A";
         };
         readonly dark: {
+            readonly text: "#FFFFFF";
             readonly null: "#C5C5C5";
             readonly undefined: "#D5D5D5";
             readonly boolean: "#E5E5E5";
@@ -1941,6 +2029,7 @@ export declare const allPalettes: {
     };
     greysAndReds: {
         readonly light: {
+            readonly text: "#000000";
             readonly null: "#5A5A5A";
             readonly undefined: "#6A6A6A";
             readonly boolean: "#4A4A4A";
@@ -1962,6 +2051,7 @@ export declare const allPalettes: {
             readonly punctuation: "#555555";
         };
         readonly dark: {
+            readonly text: "#FFFFFF";
             readonly null: "#AAAAAA";
             readonly undefined: "#BABABA";
             readonly boolean: "#C5C5C5";
@@ -1985,6 +2075,7 @@ export declare const allPalettes: {
     };
     greysAndOranges: {
         readonly light: {
+            readonly text: "#000000";
             readonly null: "#5A5A5A";
             readonly undefined: "#6A6A6A";
             readonly boolean: "#4A4A4A";
@@ -2006,6 +2097,7 @@ export declare const allPalettes: {
             readonly punctuation: "#555555";
         };
         readonly dark: {
+            readonly text: "#FFFFFF";
             readonly null: "#AAAAAA";
             readonly undefined: "#BABABA";
             readonly boolean: "#C5C5C5";
@@ -2029,6 +2121,7 @@ export declare const allPalettes: {
     };
     greysAndYellows: {
         readonly light: {
+            readonly text: "#000000";
             readonly null: "#5A5A5A";
             readonly undefined: "#6A6A6A";
             readonly boolean: "#4A4A4A";
@@ -2050,6 +2143,7 @@ export declare const allPalettes: {
             readonly punctuation: "#555555";
         };
         readonly dark: {
+            readonly text: "#FFFFFF";
             readonly null: "#AAAAAA";
             readonly undefined: "#BABABA";
             readonly boolean: "#C5C5C5";
@@ -2073,6 +2167,7 @@ export declare const allPalettes: {
     };
     greysAndGreens: {
         readonly light: {
+            readonly text: "#000000";
             readonly null: "#5A5A5A";
             readonly undefined: "#6A6A6A";
             readonly boolean: "#4A4A4A";
@@ -2094,6 +2189,7 @@ export declare const allPalettes: {
             readonly punctuation: "#555555";
         };
         readonly dark: {
+            readonly text: "#FFFFFF";
             readonly null: "#AAAAAA";
             readonly undefined: "#BABABA";
             readonly boolean: "#C5C5C5";
@@ -2117,6 +2213,7 @@ export declare const allPalettes: {
     };
     greysAndBlues: {
         readonly light: {
+            readonly text: "#000000";
             readonly null: "#5A5A5A";
             readonly undefined: "#6A6A6A";
             readonly boolean: "#4A4A4A";
@@ -2138,6 +2235,7 @@ export declare const allPalettes: {
             readonly punctuation: "#555555";
         };
         readonly dark: {
+            readonly text: "#FFFFFF";
             readonly null: "#AAAAAA";
             readonly undefined: "#BABABA";
             readonly boolean: "#C5C5C5";
@@ -2161,6 +2259,7 @@ export declare const allPalettes: {
     };
     greysAndPurples: {
         readonly light: {
+            readonly text: "#000000";
             readonly null: "#5A5A5A";
             readonly undefined: "#6A6A6A";
             readonly boolean: "#4A4A4A";
@@ -2182,6 +2281,7 @@ export declare const allPalettes: {
             readonly punctuation: "#555555";
         };
         readonly dark: {
+            readonly text: "#FFFFFF";
             readonly null: "#AAAAAA";
             readonly undefined: "#BABABA";
             readonly boolean: "#C5C5C5";
@@ -2205,6 +2305,7 @@ export declare const allPalettes: {
     };
     greysAndBrowns: {
         readonly light: {
+            readonly text: "#000000";
             readonly null: "#5A5A5A";
             readonly undefined: "#6A6A6A";
             readonly boolean: "#4A4A4A";
@@ -2226,6 +2327,7 @@ export declare const allPalettes: {
             readonly punctuation: "#555555";
         };
         readonly dark: {
+            readonly text: "#FFFFFF";
             readonly null: "#AAAAAA";
             readonly undefined: "#BABABA";
             readonly boolean: "#C5C5C5";
@@ -2249,6 +2351,7 @@ export declare const allPalettes: {
     };
     greysAndCharcoals: {
         readonly light: {
+            readonly text: "#000000";
             readonly null: "#5A5A5A";
             readonly undefined: "#6A6A6A";
             readonly boolean: "#4A4A4A";
@@ -2270,6 +2373,7 @@ export declare const allPalettes: {
             readonly punctuation: "#555555";
         };
         readonly dark: {
+            readonly text: "#FFFFFF";
             readonly null: "#AAAAAA";
             readonly undefined: "#BABABA";
             readonly boolean: "#C5C5C5";
@@ -2293,6 +2397,7 @@ export declare const allPalettes: {
     };
     greysAndCyans: {
         readonly light: {
+            readonly text: "#000000";
             readonly null: "#5A5A5A";
             readonly undefined: "#6A6A6A";
             readonly boolean: "#4A4A4A";
@@ -2314,6 +2419,7 @@ export declare const allPalettes: {
             readonly punctuation: "#555555";
         };
         readonly dark: {
+            readonly text: "#FFFFFF";
             readonly null: "#AAAAAA";
             readonly undefined: "#BABABA";
             readonly boolean: "#C5C5C5";
@@ -2337,6 +2443,7 @@ export declare const allPalettes: {
     };
     greysAndMagentas: {
         readonly light: {
+            readonly text: "#000000";
             readonly null: "#5A5A5A";
             readonly undefined: "#6A6A6A";
             readonly boolean: "#4A4A4A";
@@ -2358,6 +2465,7 @@ export declare const allPalettes: {
             readonly punctuation: "#555555";
         };
         readonly dark: {
+            readonly text: "#FFFFFF";
             readonly null: "#AAAAAA";
             readonly undefined: "#BABABA";
             readonly boolean: "#C5C5C5";
@@ -2381,6 +2489,7 @@ export declare const allPalettes: {
     };
     greysAndLightGrays: {
         readonly light: {
+            readonly text: "#000000";
             readonly null: "#5A5A5A";
             readonly undefined: "#6A6A6A";
             readonly boolean: "#4A4A4A";
@@ -2402,6 +2511,7 @@ export declare const allPalettes: {
             readonly punctuation: "#555555";
         };
         readonly dark: {
+            readonly text: "#FFFFFF";
             readonly null: "#AAAAAA";
             readonly undefined: "#BABABA";
             readonly boolean: "#C5C5C5";
@@ -2425,6 +2535,7 @@ export declare const allPalettes: {
     };
     brownsAndReds: {
         readonly light: {
+            readonly text: "#000000";
             readonly null: "#4A3A2A";
             readonly undefined: "#5A4A3A";
             readonly boolean: "#6A2A2A";
@@ -2446,6 +2557,7 @@ export declare const allPalettes: {
             readonly punctuation: "#5A4A3A";
         };
         readonly dark: {
+            readonly text: "#FFFFFF";
             readonly null: "#D5C5B5";
             readonly undefined: "#E5D5C5";
             readonly boolean: "#F5A5A5";
@@ -2469,6 +2581,7 @@ export declare const allPalettes: {
     };
     brownsAndOranges: {
         readonly light: {
+            readonly text: "#000000";
             readonly null: "#4A3A2A";
             readonly undefined: "#5A4A3A";
             readonly boolean: "#7A4A2A";
@@ -2490,6 +2603,7 @@ export declare const allPalettes: {
             readonly punctuation: "#5A4A3A";
         };
         readonly dark: {
+            readonly text: "#FFFFFF";
             readonly null: "#D5C5B5";
             readonly undefined: "#E5D5C5";
             readonly boolean: "#FFCC99";
@@ -2513,6 +2627,7 @@ export declare const allPalettes: {
     };
     brownsAndYellows: {
         readonly light: {
+            readonly text: "#000000";
             readonly null: "#4A4A2A";
             readonly undefined: "#5A5A3A";
             readonly boolean: "#7A6A2A";
@@ -2534,6 +2649,7 @@ export declare const allPalettes: {
             readonly punctuation: "#5A5A3A";
         };
         readonly dark: {
+            readonly text: "#FFFFFF";
             readonly null: "#D5D5B5";
             readonly undefined: "#E5E5C5";
             readonly boolean: "#FFEEAA";
@@ -2557,6 +2673,7 @@ export declare const allPalettes: {
     };
     brownsAndGreens: {
         readonly light: {
+            readonly text: "#000000";
             readonly null: "#3A4A2A";
             readonly undefined: "#4A5A3A";
             readonly boolean: "#3A5A2A";
@@ -2578,6 +2695,7 @@ export declare const allPalettes: {
             readonly punctuation: "#4A5A3A";
         };
         readonly dark: {
+            readonly text: "#FFFFFF";
             readonly null: "#C5D5B5";
             readonly undefined: "#D5E5C5";
             readonly boolean: "#B5E5A5";
@@ -2601,6 +2719,7 @@ export declare const allPalettes: {
     };
     brownsAndBlues: {
         readonly light: {
+            readonly text: "#000000";
             readonly null: "#3A3A4A";
             readonly undefined: "#4A4A5A";
             readonly boolean: "#2A4A5A";
@@ -2622,6 +2741,7 @@ export declare const allPalettes: {
             readonly punctuation: "#4A4A5A";
         };
         readonly dark: {
+            readonly text: "#FFFFFF";
             readonly null: "#C5C5D5";
             readonly undefined: "#D5D5E5";
             readonly boolean: "#A5CCDD";
@@ -2645,6 +2765,7 @@ export declare const allPalettes: {
     };
     brownsAndPurples: {
         readonly light: {
+            readonly text: "#000000";
             readonly null: "#4A3A4A";
             readonly undefined: "#5A4A5A";
             readonly boolean: "#5A2A5A";
@@ -2666,6 +2787,7 @@ export declare const allPalettes: {
             readonly punctuation: "#5A4A5A";
         };
         readonly dark: {
+            readonly text: "#FFFFFF";
             readonly null: "#D5C5D5";
             readonly undefined: "#E5D5E5";
             readonly boolean: "#EEAAEE";
@@ -2689,6 +2811,7 @@ export declare const allPalettes: {
     };
     brownsAndGreys: {
         readonly light: {
+            readonly text: "#000000";
             readonly null: "#4A4A4A";
             readonly undefined: "#5A5A5A";
             readonly boolean: "#3A4A4A";
@@ -2710,6 +2833,7 @@ export declare const allPalettes: {
             readonly punctuation: "#5A5A5A";
         };
         readonly dark: {
+            readonly text: "#FFFFFF";
             readonly null: "#D5D5D5";
             readonly undefined: "#E5E5E5";
             readonly boolean: "#C5D5D5";
@@ -2733,6 +2857,7 @@ export declare const allPalettes: {
     };
     brownsAndCharcoals: {
         readonly light: {
+            readonly text: "#000000";
             readonly null: "#3A3A3A";
             readonly undefined: "#4A4A4A";
             readonly boolean: "#2A3A3A";
@@ -2754,6 +2879,7 @@ export declare const allPalettes: {
             readonly punctuation: "#4A4A4A";
         };
         readonly dark: {
+            readonly text: "#FFFFFF";
             readonly null: "#C5C5C5";
             readonly undefined: "#D5D5D5";
             readonly boolean: "#B5C5C5";
@@ -2777,6 +2903,7 @@ export declare const allPalettes: {
     };
     brownsAndCyans: {
         readonly light: {
+            readonly text: "#000000";
             readonly null: "#3A4A4A";
             readonly undefined: "#4A5A5A";
             readonly boolean: "#2A5A5A";
@@ -2798,6 +2925,7 @@ export declare const allPalettes: {
             readonly punctuation: "#4A5A5A";
         };
         readonly dark: {
+            readonly text: "#FFFFFF";
             readonly null: "#C5D5D5";
             readonly undefined: "#D5E5E5";
             readonly boolean: "#A5EEDD";
@@ -2821,6 +2949,7 @@ export declare const allPalettes: {
     };
     brownsAndMagentas: {
         readonly light: {
+            readonly text: "#000000";
             readonly null: "#4A3A4A";
             readonly undefined: "#5A4A5A";
             readonly boolean: "#6A2A5A";
@@ -2842,6 +2971,7 @@ export declare const allPalettes: {
             readonly punctuation: "#5A4A5A";
         };
         readonly dark: {
+            readonly text: "#FFFFFF";
             readonly null: "#D5C5D5";
             readonly undefined: "#E5D5E5";
             readonly boolean: "#FFAADD";
@@ -2865,6 +2995,7 @@ export declare const allPalettes: {
     };
     brownsAndLightGrays: {
         readonly light: {
+            readonly text: "#000000";
             readonly null: "#5A5A5A";
             readonly undefined: "#6A6A6A";
             readonly boolean: "#4A5A5A";
@@ -2886,6 +3017,7 @@ export declare const allPalettes: {
             readonly punctuation: "#6A6A6A";
         };
         readonly dark: {
+            readonly text: "#FFFFFF";
             readonly null: "#E5E5E5";
             readonly undefined: "#F5F5F5";
             readonly boolean: "#D5E5E5";
@@ -2953,6 +3085,7 @@ export declare const allPalettes: {
     };
     bluesAndReds: {
         readonly light: {
+            readonly text: "#000000";
             readonly null: "#1A3A5A";
             readonly undefined: "#2A4A6A";
             readonly boolean: "#0A4A7A";
@@ -2974,6 +3107,7 @@ export declare const allPalettes: {
             readonly punctuation: "#2A4A6A";
         };
         readonly dark: {
+            readonly text: "#FFFFFF";
             readonly null: "#88CCFF";
             readonly undefined: "#99DDFF";
             readonly boolean: "#66DDFF";
@@ -2997,6 +3131,7 @@ export declare const allPalettes: {
     };
     bluesAndOranges: {
         readonly light: {
+            readonly text: "#000000";
             readonly null: "#1A3A5A";
             readonly undefined: "#2A4A6A";
             readonly boolean: "#0A4A7A";
@@ -3018,6 +3153,7 @@ export declare const allPalettes: {
             readonly punctuation: "#2A4A6A";
         };
         readonly dark: {
+            readonly text: "#FFFFFF";
             readonly null: "#88CCFF";
             readonly undefined: "#99DDFF";
             readonly boolean: "#66DDFF";
@@ -3041,6 +3177,7 @@ export declare const allPalettes: {
     };
     bluesAndYellows: {
         readonly light: {
+            readonly text: "#000000";
             readonly null: "#1A3A5A";
             readonly undefined: "#2A4A6A";
             readonly boolean: "#0A4A7A";
@@ -3062,6 +3199,7 @@ export declare const allPalettes: {
             readonly punctuation: "#2A4A6A";
         };
         readonly dark: {
+            readonly text: "#FFFFFF";
             readonly null: "#88CCFF";
             readonly undefined: "#99DDFF";
             readonly boolean: "#66DDFF";
@@ -3085,6 +3223,7 @@ export declare const allPalettes: {
     };
     bluesAndGreens: {
         readonly light: {
+            readonly text: "#000000";
             readonly null: "#1A3A5A";
             readonly undefined: "#2A4A6A";
             readonly boolean: "#0A4A7A";
@@ -3106,6 +3245,7 @@ export declare const allPalettes: {
             readonly punctuation: "#2A4A6A";
         };
         readonly dark: {
+            readonly text: "#FFFFFF";
             readonly null: "#88CCFF";
             readonly undefined: "#99DDFF";
             readonly boolean: "#66DDFF";
@@ -3129,6 +3269,7 @@ export declare const allPalettes: {
     };
     bluesAndPurples: {
         readonly light: {
+            readonly text: "#000000";
             readonly null: "#1A3A5A";
             readonly undefined: "#2A4A6A";
             readonly boolean: "#0A4A7A";
@@ -3150,6 +3291,7 @@ export declare const allPalettes: {
             readonly punctuation: "#2A4A6A";
         };
         readonly dark: {
+            readonly text: "#FFFFFF";
             readonly null: "#88CCFF";
             readonly undefined: "#99DDFF";
             readonly boolean: "#66DDFF";
@@ -3173,6 +3315,7 @@ export declare const allPalettes: {
     };
     bluesAndBrowns: {
         readonly light: {
+            readonly text: "#000000";
             readonly null: "#1A3A5A";
             readonly undefined: "#2A4A6A";
             readonly boolean: "#0A4A7A";
@@ -3194,6 +3337,7 @@ export declare const allPalettes: {
             readonly punctuation: "#2A4A6A";
         };
         readonly dark: {
+            readonly text: "#FFFFFF";
             readonly null: "#88CCFF";
             readonly undefined: "#99DDFF";
             readonly boolean: "#66DDFF";
@@ -3217,6 +3361,7 @@ export declare const allPalettes: {
     };
     bluesAndGreys: {
         readonly light: {
+            readonly text: "#000000";
             readonly null: "#1A3A5A";
             readonly undefined: "#2A4A6A";
             readonly boolean: "#0A4A7A";
@@ -3238,6 +3383,7 @@ export declare const allPalettes: {
             readonly punctuation: "#2A4A6A";
         };
         readonly dark: {
+            readonly text: "#FFFFFF";
             readonly null: "#88CCFF";
             readonly undefined: "#99DDFF";
             readonly boolean: "#66DDFF";
@@ -3261,6 +3407,7 @@ export declare const allPalettes: {
     };
     bluesAndCharcoals: {
         readonly light: {
+            readonly text: "#000000";
             readonly null: "#1A3A5A";
             readonly undefined: "#2A4A6A";
             readonly boolean: "#0A4A7A";
@@ -3282,6 +3429,7 @@ export declare const allPalettes: {
             readonly punctuation: "#2A4A6A";
         };
         readonly dark: {
+            readonly text: "#FFFFFF";
             readonly null: "#88CCFF";
             readonly undefined: "#99DDFF";
             readonly boolean: "#66DDFF";
@@ -3305,6 +3453,7 @@ export declare const allPalettes: {
     };
     bluesAndCyans: {
         readonly light: {
+            readonly text: "#000000";
             readonly null: "#1A3A5A";
             readonly undefined: "#2A4A6A";
             readonly boolean: "#0A4A7A";
@@ -3326,6 +3475,7 @@ export declare const allPalettes: {
             readonly punctuation: "#2A4A6A";
         };
         readonly dark: {
+            readonly text: "#FFFFFF";
             readonly null: "#88CCFF";
             readonly undefined: "#99DDFF";
             readonly boolean: "#66DDFF";
@@ -3349,6 +3499,7 @@ export declare const allPalettes: {
     };
     bluesAndMagentas: {
         readonly light: {
+            readonly text: "#000000";
             readonly null: "#1A3A5A";
             readonly undefined: "#2A4A6A";
             readonly boolean: "#0A4A7A";
@@ -3370,6 +3521,7 @@ export declare const allPalettes: {
             readonly punctuation: "#2A4A6A";
         };
         readonly dark: {
+            readonly text: "#FFFFFF";
             readonly null: "#88CCFF";
             readonly undefined: "#99DDFF";
             readonly boolean: "#66DDFF";
@@ -3393,6 +3545,7 @@ export declare const allPalettes: {
     };
     bluesAndLightGrays: {
         readonly light: {
+            readonly text: "#000000";
             readonly null: "#1A3A5A";
             readonly undefined: "#2A4A6A";
             readonly boolean: "#0A4A7A";
@@ -3414,6 +3567,7 @@ export declare const allPalettes: {
             readonly punctuation: "#2A4A6A";
         };
         readonly dark: {
+            readonly text: "#FFFFFF";
             readonly null: "#88CCFF";
             readonly undefined: "#99DDFF";
             readonly boolean: "#66DDFF";
@@ -3525,6 +3679,7 @@ export declare const allPalettes: {
     };
     orangesAndReds: {
         readonly light: {
+            readonly text: "#000000";
             readonly null: "#8A4A2A";
             readonly undefined: "#9A5A3A";
             readonly boolean: "#CC5500";
@@ -3546,6 +3701,7 @@ export declare const allPalettes: {
             readonly punctuation: "#7A4A2A";
         };
         readonly dark: {
+            readonly text: "#FFFFFF";
             readonly null: "#FFBB88";
             readonly undefined: "#FFCC99";
             readonly boolean: "#FFAA55";
@@ -3569,6 +3725,7 @@ export declare const allPalettes: {
     };
     orangesAndYellows: {
         readonly light: {
+            readonly text: "#000000";
             readonly null: "#8A6A2A";
             readonly undefined: "#9A7A3A";
             readonly boolean: "#CC8800";
@@ -3590,6 +3747,7 @@ export declare const allPalettes: {
             readonly punctuation: "#7A5A2A";
         };
         readonly dark: {
+            readonly text: "#FFFFFF";
             readonly null: "#FFCC88";
             readonly undefined: "#FFDD99";
             readonly boolean: "#FFBB66";
@@ -3613,6 +3771,7 @@ export declare const allPalettes: {
     };
     orangesAndGreens: {
         readonly light: {
+            readonly text: "#000000";
             readonly null: "#6A5A3A";
             readonly undefined: "#7A6A4A";
             readonly boolean: "#CC6600";
@@ -3634,6 +3793,7 @@ export declare const allPalettes: {
             readonly punctuation: "#5A4A3A";
         };
         readonly dark: {
+            readonly text: "#FFFFFF";
             readonly null: "#DDCC99";
             readonly undefined: "#EEDDAA";
             readonly boolean: "#FFAA44";
@@ -3657,6 +3817,7 @@ export declare const allPalettes: {
     };
     orangesAndBlues: {
         readonly light: {
+            readonly text: "#000000";
             readonly null: "#5A4A5A";
             readonly undefined: "#6A5A6A";
             readonly boolean: "#CC6600";
@@ -3678,6 +3839,7 @@ export declare const allPalettes: {
             readonly punctuation: "#4A3A4A";
         };
         readonly dark: {
+            readonly text: "#FFFFFF";
             readonly null: "#DDCCCC";
             readonly undefined: "#EEDDDD";
             readonly boolean: "#FFAA44";
@@ -3701,6 +3863,7 @@ export declare const allPalettes: {
     };
     orangesAndPurples: {
         readonly light: {
+            readonly text: "#000000";
             readonly null: "#6A4A6A";
             readonly undefined: "#7A5A7A";
             readonly boolean: "#CC6600";
@@ -3722,6 +3885,7 @@ export declare const allPalettes: {
             readonly punctuation: "#5A3A5A";
         };
         readonly dark: {
+            readonly text: "#FFFFFF";
             readonly null: "#EECCDD";
             readonly undefined: "#FFDDEE";
             readonly boolean: "#FFAA44";
@@ -3745,6 +3909,7 @@ export declare const allPalettes: {
     };
     orangesAndBrowns: {
         readonly light: {
+            readonly text: "#000000";
             readonly null: "#6A4A2A";
             readonly undefined: "#7A5A3A";
             readonly boolean: "#CC6600";
@@ -3766,6 +3931,7 @@ export declare const allPalettes: {
             readonly punctuation: "#5A3A2A";
         };
         readonly dark: {
+            readonly text: "#FFFFFF";
             readonly null: "#DDBB99";
             readonly undefined: "#EECCAA";
             readonly boolean: "#FFAA44";
@@ -3789,6 +3955,7 @@ export declare const allPalettes: {
     };
     orangesAndGreys: {
         readonly light: {
+            readonly text: "#000000";
             readonly null: "#6A5A4A";
             readonly undefined: "#7A6A5A";
             readonly boolean: "#CC6600";
@@ -3810,6 +3977,7 @@ export declare const allPalettes: {
             readonly punctuation: "#5A5A5A";
         };
         readonly dark: {
+            readonly text: "#FFFFFF";
             readonly null: "#DDCCBB";
             readonly undefined: "#EEDDCC";
             readonly boolean: "#FFAA44";
@@ -3833,6 +4001,7 @@ export declare const allPalettes: {
     };
     orangesAndCharcoals: {
         readonly light: {
+            readonly text: "#000000";
             readonly null: "#4A3A2A";
             readonly undefined: "#5A4A3A";
             readonly boolean: "#CC6600";
@@ -3854,6 +4023,7 @@ export declare const allPalettes: {
             readonly punctuation: "#3A2A2A";
         };
         readonly dark: {
+            readonly text: "#FFFFFF";
             readonly null: "#CCBB99";
             readonly undefined: "#DDCCAA";
             readonly boolean: "#FFAA44";
@@ -3877,6 +4047,7 @@ export declare const allPalettes: {
     };
     orangesAndCyans: {
         readonly light: {
+            readonly text: "#000000";
             readonly null: "#5A5A5A";
             readonly undefined: "#6A6A6A";
             readonly boolean: "#CC6600";
@@ -3898,6 +4069,7 @@ export declare const allPalettes: {
             readonly punctuation: "#4A4A4A";
         };
         readonly dark: {
+            readonly text: "#FFFFFF";
             readonly null: "#DDDDDD";
             readonly undefined: "#EEEEEE";
             readonly boolean: "#FFAA44";
@@ -3921,6 +4093,7 @@ export declare const allPalettes: {
     };
     orangesAndMagentas: {
         readonly light: {
+            readonly text: "#000000";
             readonly null: "#6A4A5A";
             readonly undefined: "#7A5A6A";
             readonly boolean: "#CC6600";
@@ -3942,6 +4115,7 @@ export declare const allPalettes: {
             readonly punctuation: "#5A3A4A";
         };
         readonly dark: {
+            readonly text: "#FFFFFF";
             readonly null: "#EECCDD";
             readonly undefined: "#FFDDEE";
             readonly boolean: "#FFAA44";
@@ -3965,6 +4139,7 @@ export declare const allPalettes: {
     };
     orangesAndLightGrays: {
         readonly light: {
+            readonly text: "#000000";
             readonly null: "#7A6A5A";
             readonly undefined: "#8A7A6A";
             readonly boolean: "#CC6600";
@@ -3986,6 +4161,7 @@ export declare const allPalettes: {
             readonly punctuation: "#6A5A4A";
         };
         readonly dark: {
+            readonly text: "#FFFFFF";
             readonly null: "#EEDDCC";
             readonly undefined: "#FFEEEE";
             readonly boolean: "#FFAA44";
@@ -4009,6 +4185,7 @@ export declare const allPalettes: {
     };
     redsAndOranges: {
         readonly light: {
+            readonly text: "#000000";
             readonly null: "#8A3A3A";
             readonly undefined: "#9A4A4A";
             readonly boolean: "#AA2A2A";
@@ -4030,6 +4207,7 @@ export declare const allPalettes: {
             readonly punctuation: "#774444";
         };
         readonly dark: {
+            readonly text: "#FFFFFF";
             readonly null: "#FFBBBB";
             readonly undefined: "#FFCCCC";
             readonly boolean: "#FF9999";
@@ -4053,6 +4231,7 @@ export declare const allPalettes: {
     };
     redsAndYellows: {
         readonly light: {
+            readonly text: "#000000";
             readonly null: "#8A4A3A";
             readonly undefined: "#9A5A4A";
             readonly boolean: "#AA2A1A";
@@ -4074,6 +4253,7 @@ export declare const allPalettes: {
             readonly punctuation: "#774433";
         };
         readonly dark: {
+            readonly text: "#FFFFFF";
             readonly null: "#FFCCAA";
             readonly undefined: "#FFDDBB";
             readonly boolean: "#FF9988";
@@ -4097,6 +4277,7 @@ export declare const allPalettes: {
     };
     redsAndGreens: {
         readonly light: {
+            readonly text: "#000000";
             readonly null: "#7A4A3A";
             readonly undefined: "#8A5A4A";
             readonly boolean: "#AA2A2A";
@@ -4118,6 +4299,7 @@ export declare const allPalettes: {
             readonly punctuation: "#775544";
         };
         readonly dark: {
+            readonly text: "#FFFFFF";
             readonly null: "#EECCBB";
             readonly undefined: "#FFDDCC";
             readonly boolean: "#FF9999";
@@ -4141,6 +4323,7 @@ export declare const allPalettes: {
     };
     redsAndBlues: {
         readonly light: {
+            readonly text: "#000000";
             readonly null: "#6A3A4A";
             readonly undefined: "#7A4A5A";
             readonly boolean: "#AA2A4A";
@@ -4162,6 +4345,7 @@ export declare const allPalettes: {
             readonly punctuation: "#664455";
         };
         readonly dark: {
+            readonly text: "#FFFFFF";
             readonly null: "#EECCDD";
             readonly undefined: "#FFDDEE";
             readonly boolean: "#FF99BB";
@@ -4185,6 +4369,7 @@ export declare const allPalettes: {
     };
     redsAndPurples: {
         readonly light: {
+            readonly text: "#000000";
             readonly null: "#7A3A5A";
             readonly undefined: "#8A4A6A";
             readonly boolean: "#AA2A5A";
@@ -4206,6 +4391,7 @@ export declare const allPalettes: {
             readonly punctuation: "#664466";
         };
         readonly dark: {
+            readonly text: "#FFFFFF";
             readonly null: "#FFCCEE";
             readonly undefined: "#FFDDFF";
             readonly boolean: "#FF99DD";
@@ -4229,6 +4415,7 @@ export declare const allPalettes: {
     };
     redsAndBrowns: {
         readonly light: {
+            readonly text: "#000000";
             readonly null: "#6A3A2A";
             readonly undefined: "#7A4A3A";
             readonly boolean: "#AA2A1A";
@@ -4250,6 +4437,7 @@ export declare const allPalettes: {
             readonly punctuation: "#664433";
         };
         readonly dark: {
+            readonly text: "#FFFFFF";
             readonly null: "#EECCBB";
             readonly undefined: "#FFDDCC";
             readonly boolean: "#FF9988";
@@ -4273,6 +4461,7 @@ export declare const allPalettes: {
     };
     redsAndGreys: {
         readonly light: {
+            readonly text: "#000000";
             readonly null: "#6A3A3A";
             readonly undefined: "#7A4A4A";
             readonly boolean: "#AA2A2A";
@@ -4294,6 +4483,7 @@ export declare const allPalettes: {
             readonly punctuation: "#555555";
         };
         readonly dark: {
+            readonly text: "#FFFFFF";
             readonly null: "#EECCCC";
             readonly undefined: "#FFDDDD";
             readonly boolean: "#FF9999";
@@ -4317,6 +4507,7 @@ export declare const allPalettes: {
     };
     redsAndCharcoals: {
         readonly light: {
+            readonly text: "#000000";
             readonly null: "#5A2A2A";
             readonly undefined: "#6A3A3A";
             readonly boolean: "#AA1A1A";
@@ -4338,6 +4529,7 @@ export declare const allPalettes: {
             readonly punctuation: "#444444";
         };
         readonly dark: {
+            readonly text: "#FFFFFF";
             readonly null: "#DDBBBB";
             readonly undefined: "#EECCCC";
             readonly boolean: "#FF8888";
@@ -4361,6 +4553,7 @@ export declare const allPalettes: {
     };
     redsAndCyans: {
         readonly light: {
+            readonly text: "#000000";
             readonly null: "#6A3A4A";
             readonly undefined: "#7A4A5A";
             readonly boolean: "#AA2A3A";
@@ -4382,6 +4575,7 @@ export declare const allPalettes: {
             readonly punctuation: "#664455";
         };
         readonly dark: {
+            readonly text: "#FFFFFF";
             readonly null: "#EECCDD";
             readonly undefined: "#FFDDEE";
             readonly boolean: "#FF99AA";
@@ -4405,6 +4599,7 @@ export declare const allPalettes: {
     };
     redsAndMagentas: {
         readonly light: {
+            readonly text: "#000000";
             readonly null: "#7A3A5A";
             readonly undefined: "#8A4A6A";
             readonly boolean: "#AA2A5A";
@@ -4426,6 +4621,7 @@ export declare const allPalettes: {
             readonly punctuation: "#664466";
         };
         readonly dark: {
+            readonly text: "#FFFFFF";
             readonly null: "#FFCCEE";
             readonly undefined: "#FFDDFF";
             readonly boolean: "#FF99DD";
@@ -4449,6 +4645,7 @@ export declare const allPalettes: {
     };
     redsAndLightGrays: {
         readonly light: {
+            readonly text: "#000000";
             readonly null: "#7A4A4A";
             readonly undefined: "#8A5A5A";
             readonly boolean: "#AA3A3A";
@@ -4470,6 +4667,7 @@ export declare const allPalettes: {
             readonly punctuation: "#666666";
         };
         readonly dark: {
+            readonly text: "#FFFFFF";
             readonly null: "#FFDDDD";
             readonly undefined: "#FFEEEE";
             readonly boolean: "#FFAAAA";
@@ -4493,6 +4691,7 @@ export declare const allPalettes: {
     };
     achromatopsia: {
         readonly light: {
+            readonly text: "#000000";
             readonly null: "#3B3B3B";
             readonly undefined: "#4B4B4B";
             readonly boolean: "#2B2B2B";
@@ -4514,6 +4713,7 @@ export declare const allPalettes: {
             readonly punctuation: "#4B4B4B";
         };
         readonly dark: {
+            readonly text: "#FFFFFF";
             readonly null: "#C6C6C6";
             readonly undefined: "#D6D6D6";
             readonly boolean: "#B0B0B0";
@@ -4537,6 +4737,7 @@ export declare const allPalettes: {
     };
     tritanomaly: {
         readonly light: {
+            readonly text: "#000000";
             readonly null: "#4A3A3A";
             readonly undefined: "#5A4A4A";
             readonly boolean: "#3A5A3A";
@@ -4558,6 +4759,7 @@ export declare const allPalettes: {
             readonly punctuation: "#5A4A4A";
         };
         readonly dark: {
+            readonly text: "#FFFFFF";
             readonly null: "#D5C5C5";
             readonly undefined: "#E5D5D5";
             readonly boolean: "#C5E5C5";
@@ -4581,6 +4783,7 @@ export declare const allPalettes: {
     };
     tritanomalyBright: {
         readonly light: {
+            readonly text: "#000000";
             readonly null: "#4A4A4A";
             readonly undefined: "#5A3A3A";
             readonly boolean: "#AA0055";
@@ -4602,6 +4805,7 @@ export declare const allPalettes: {
             readonly punctuation: "#4A4A4A";
         };
         readonly dark: {
+            readonly text: "#FFFFFF";
             readonly null: "#BBBBBB";
             readonly undefined: "#FFCCCC";
             readonly boolean: "#FF66AA";
@@ -4625,6 +4829,7 @@ export declare const allPalettes: {
     };
     tritanomalySubtle: {
         readonly light: {
+            readonly text: "#000000";
             readonly null: "#5A5A5A";
             readonly undefined: "#6A4A4A";
             readonly boolean: "#7A3A5A";
@@ -4646,6 +4851,7 @@ export declare const allPalettes: {
             readonly punctuation: "#5A5A5A";
         };
         readonly dark: {
+            readonly text: "#FFFFFF";
             readonly null: "#AAAAAA";
             readonly undefined: "#C5BBBB";
             readonly boolean: "#CC99AA";
@@ -4669,6 +4875,7 @@ export declare const allPalettes: {
     };
     tritanomalyPastel: {
         readonly light: {
+            readonly text: "#000000";
             readonly null: "#6A6A6A";
             readonly undefined: "#7A5A5A";
             readonly boolean: "#8A4A6A";
@@ -4690,6 +4897,7 @@ export declare const allPalettes: {
             readonly punctuation: "#6A6A6A";
         };
         readonly dark: {
+            readonly text: "#FFFFFF";
             readonly null: "#D5D5D5";
             readonly undefined: "#FFEEEE";
             readonly boolean: "#FFCCDD";
@@ -4713,6 +4921,7 @@ export declare const allPalettes: {
     };
     tritanomalyBoring: {
         readonly light: {
+            readonly text: "#000000";
             readonly null: "#4A4A4A";
             readonly undefined: "#3A3A3A";
             readonly boolean: "#4A2A3A";
@@ -4734,6 +4943,7 @@ export declare const allPalettes: {
             readonly punctuation: "#4A4A4A";
         };
         readonly dark: {
+            readonly text: "#FFFFFF";
             readonly null: "#AAAAAA";
             readonly undefined: "#B5B5B5";
             readonly boolean: "#AAAA99";
@@ -4757,6 +4967,7 @@ export declare const allPalettes: {
     };
     tritanomalyFunky: {
         readonly light: {
+            readonly text: "#000000";
             readonly null: "#4A4A4A";
             readonly undefined: "#6A2A2A";
             readonly boolean: "#AA0044";
@@ -4778,6 +4989,7 @@ export declare const allPalettes: {
             readonly punctuation: "#4A4A4A";
         };
         readonly dark: {
+            readonly text: "#FFFFFF";
             readonly null: "#CCCCCC";
             readonly undefined: "#FFDDDD";
             readonly boolean: "#FF77BB";
@@ -4801,6 +5013,7 @@ export declare const allPalettes: {
     };
     tritanomalyVivid: {
         readonly light: {
+            readonly text: "#000000";
             readonly null: "#3A3A3A";
             readonly undefined: "#5A1A1A";
             readonly boolean: "#AA0033";
@@ -4822,6 +5035,7 @@ export declare const allPalettes: {
             readonly punctuation: "#3A3A3A";
         };
         readonly dark: {
+            readonly text: "#FFFFFF";
             readonly null: "#CCCCCC";
             readonly undefined: "#FFEEEE";
             readonly boolean: "#FF88CC";
@@ -4845,6 +5059,7 @@ export declare const allPalettes: {
     };
     protanomaly: {
         readonly light: {
+            readonly text: "#000000";
             readonly null: "#2A4A5A";
             readonly undefined: "#3A5A6A";
             readonly boolean: "#1A5A7A";
@@ -4866,6 +5081,7 @@ export declare const allPalettes: {
             readonly punctuation: "#3A5A6A";
         };
         readonly dark: {
+            readonly text: "#FFFFFF";
             readonly null: "#99CCEE";
             readonly undefined: "#AADDFF";
             readonly boolean: "#88EEFF";
@@ -4889,6 +5105,7 @@ export declare const allPalettes: {
     };
     protanomalyBright: {
         readonly light: {
+            readonly text: "#000000";
             readonly null: "#4A4A4A";
             readonly undefined: "#3A3A5A";
             readonly boolean: "#0055AA";
@@ -4910,6 +5127,7 @@ export declare const allPalettes: {
             readonly punctuation: "#4A4A4A";
         };
         readonly dark: {
+            readonly text: "#FFFFFF";
             readonly null: "#BBBBBB";
             readonly undefined: "#CCCCFF";
             readonly boolean: "#66AAFF";
@@ -4933,6 +5151,7 @@ export declare const allPalettes: {
     };
     protanomalySubtle: {
         readonly light: {
+            readonly text: "#000000";
             readonly null: "#5A5A5A";
             readonly undefined: "#4A4A6A";
             readonly boolean: "#3A5A7A";
@@ -4954,6 +5173,7 @@ export declare const allPalettes: {
             readonly punctuation: "#5A5A5A";
         };
         readonly dark: {
+            readonly text: "#FFFFFF";
             readonly null: "#AAAAAA";
             readonly undefined: "#BBBBC5";
             readonly boolean: "#99BBCC";
@@ -4977,6 +5197,7 @@ export declare const allPalettes: {
     };
     protanomalyPastel: {
         readonly light: {
+            readonly text: "#000000";
             readonly null: "#6A6A6A";
             readonly undefined: "#5A5A7A";
             readonly boolean: "#4A6A8A";
@@ -4998,6 +5219,7 @@ export declare const allPalettes: {
             readonly punctuation: "#6A6A6A";
         };
         readonly dark: {
+            readonly text: "#FFFFFF";
             readonly null: "#D5D5D5";
             readonly undefined: "#E5E5FF";
             readonly boolean: "#CCEEFF";
@@ -5021,6 +5243,7 @@ export declare const allPalettes: {
     };
     protanomalyBoring: {
         readonly light: {
+            readonly text: "#000000";
             readonly null: "#4A4A4A";
             readonly undefined: "#3A3A3A";
             readonly boolean: "#2A3A4A";
@@ -5042,6 +5265,7 @@ export declare const allPalettes: {
             readonly punctuation: "#4A4A4A";
         };
         readonly dark: {
+            readonly text: "#FFFFFF";
             readonly null: "#AAAAAA";
             readonly undefined: "#B5B5B5";
             readonly boolean: "#99AAAA";
@@ -5065,6 +5289,7 @@ export declare const allPalettes: {
     };
     protanomalyFunky: {
         readonly light: {
+            readonly text: "#000000";
             readonly null: "#4A4A4A";
             readonly undefined: "#2A2A6A";
             readonly boolean: "#0044AA";
@@ -5086,6 +5311,7 @@ export declare const allPalettes: {
             readonly punctuation: "#4A4A4A";
         };
         readonly dark: {
+            readonly text: "#FFFFFF";
             readonly null: "#CCCCCC";
             readonly undefined: "#DDDDFF";
             readonly boolean: "#77BBFF";
@@ -5109,6 +5335,7 @@ export declare const allPalettes: {
     };
     protanomalyVivid: {
         readonly light: {
+            readonly text: "#000000";
             readonly null: "#3A3A3A";
             readonly undefined: "#1A1A5A";
             readonly boolean: "#0033AA";
@@ -5130,6 +5357,7 @@ export declare const allPalettes: {
             readonly punctuation: "#3A3A3A";
         };
         readonly dark: {
+            readonly text: "#FFFFFF";
             readonly null: "#CCCCCC";
             readonly undefined: "#EEEEFF";
             readonly boolean: "#88CCFF";
@@ -5153,6 +5381,7 @@ export declare const allPalettes: {
     };
     deuteranomaly: {
         readonly light: {
+            readonly text: "#000000";
             readonly null: "#3A4A5A";
             readonly undefined: "#4A5A6A";
             readonly boolean: "#2A5A7A";
@@ -5174,6 +5403,7 @@ export declare const allPalettes: {
             readonly punctuation: "#4A5A6A";
         };
         readonly dark: {
+            readonly text: "#FFFFFF";
             readonly null: "#AACCEE";
             readonly undefined: "#BBDDFF";
             readonly boolean: "#99EEFF";
@@ -5197,6 +5427,7 @@ export declare const allPalettes: {
     };
     deuteranomalyBright: {
         readonly light: {
+            readonly text: "#000000";
             readonly null: "#4A4A4A";
             readonly undefined: "#3A3A5A";
             readonly boolean: "#0055AA";
@@ -5218,6 +5449,7 @@ export declare const allPalettes: {
             readonly punctuation: "#4A4A4A";
         };
         readonly dark: {
+            readonly text: "#FFFFFF";
             readonly null: "#BBBBBB";
             readonly undefined: "#CCCCFF";
             readonly boolean: "#66AAFF";
@@ -5241,6 +5473,7 @@ export declare const allPalettes: {
     };
     deuteranomalySubtle: {
         readonly light: {
+            readonly text: "#000000";
             readonly null: "#5A5A5A";
             readonly undefined: "#4A4A6A";
             readonly boolean: "#3A5A7A";
@@ -5262,6 +5495,7 @@ export declare const allPalettes: {
             readonly punctuation: "#5A5A5A";
         };
         readonly dark: {
+            readonly text: "#FFFFFF";
             readonly null: "#AAAAAA";
             readonly undefined: "#BBBBC5";
             readonly boolean: "#99BBCC";
@@ -5285,6 +5519,7 @@ export declare const allPalettes: {
     };
     deuteranomalyPastel: {
         readonly light: {
+            readonly text: "#000000";
             readonly null: "#6A6A6A";
             readonly undefined: "#5A5A7A";
             readonly boolean: "#4A6A8A";
@@ -5306,6 +5541,7 @@ export declare const allPalettes: {
             readonly punctuation: "#6A6A6A";
         };
         readonly dark: {
+            readonly text: "#FFFFFF";
             readonly null: "#D5D5D5";
             readonly undefined: "#E5E5FF";
             readonly boolean: "#CCEEFF";
@@ -5329,6 +5565,7 @@ export declare const allPalettes: {
     };
     deuteranomalyBoring: {
         readonly light: {
+            readonly text: "#000000";
             readonly null: "#4A4A4A";
             readonly undefined: "#3A3A3A";
             readonly boolean: "#2A3A4A";
@@ -5350,6 +5587,7 @@ export declare const allPalettes: {
             readonly punctuation: "#4A4A4A";
         };
         readonly dark: {
+            readonly text: "#FFFFFF";
             readonly null: "#AAAAAA";
             readonly undefined: "#B5B5B5";
             readonly boolean: "#99AAAA";
@@ -5373,6 +5611,7 @@ export declare const allPalettes: {
     };
     deuteranomalyFunky: {
         readonly light: {
+            readonly text: "#000000";
             readonly null: "#4A4A4A";
             readonly undefined: "#2A2A6A";
             readonly boolean: "#0044AA";
@@ -5394,6 +5633,7 @@ export declare const allPalettes: {
             readonly punctuation: "#4A4A4A";
         };
         readonly dark: {
+            readonly text: "#FFFFFF";
             readonly null: "#CCCCCC";
             readonly undefined: "#DDDDFF";
             readonly boolean: "#77BBFF";
@@ -5417,6 +5657,7 @@ export declare const allPalettes: {
     };
     deuteranomalyVivid: {
         readonly light: {
+            readonly text: "#000000";
             readonly null: "#3A3A3A";
             readonly undefined: "#1A1A5A";
             readonly boolean: "#0033AA";
@@ -5438,6 +5679,7 @@ export declare const allPalettes: {
             readonly punctuation: "#3A3A3A";
         };
         readonly dark: {
+            readonly text: "#FFFFFF";
             readonly null: "#CCCCCC";
             readonly undefined: "#EEEEFF";
             readonly boolean: "#88CCFF";
@@ -5461,6 +5703,7 @@ export declare const allPalettes: {
     };
     monochromacy: {
         readonly light: {
+            readonly text: "#000000";
             readonly null: "#3A3A3A";
             readonly undefined: "#4A4A4A";
             readonly boolean: "#2A2A2A";
@@ -5482,6 +5725,7 @@ export declare const allPalettes: {
             readonly punctuation: "#4A4A4A";
         };
         readonly dark: {
+            readonly text: "#FFFFFF";
             readonly null: "#C5C5C5";
             readonly undefined: "#D5D5D5";
             readonly boolean: "#AFAFAF";
@@ -5505,6 +5749,7 @@ export declare const allPalettes: {
     };
     monochromacyBright: {
         readonly light: {
+            readonly text: "#000000";
             readonly null: "#4A4A4A";
             readonly undefined: "#3A3A3A";
             readonly boolean: "#1A1A1A";
@@ -5526,6 +5771,7 @@ export declare const allPalettes: {
             readonly punctuation: "#4A4A4A";
         };
         readonly dark: {
+            readonly text: "#FFFFFF";
             readonly null: "#BBBBBB";
             readonly undefined: "#CCCCCC";
             readonly boolean: "#EEEEEE";
@@ -5549,6 +5795,7 @@ export declare const allPalettes: {
     };
     monochromacySubtle: {
         readonly light: {
+            readonly text: "#000000";
             readonly null: "#5A5A5A";
             readonly undefined: "#4A4A4A";
             readonly boolean: "#3A3A3A";
@@ -5570,6 +5817,7 @@ export declare const allPalettes: {
             readonly punctuation: "#5A5A5A";
         };
         readonly dark: {
+            readonly text: "#FFFFFF";
             readonly null: "#AAAAAA";
             readonly undefined: "#BBBBBB";
             readonly boolean: "#CCCCCC";
@@ -5593,6 +5841,7 @@ export declare const allPalettes: {
     };
     monochromacyPastel: {
         readonly light: {
+            readonly text: "#000000";
             readonly null: "#6A6A6A";
             readonly undefined: "#5A5A5A";
             readonly boolean: "#4A4A4A";
@@ -5614,6 +5863,7 @@ export declare const allPalettes: {
             readonly punctuation: "#6A6A6A";
         };
         readonly dark: {
+            readonly text: "#FFFFFF";
             readonly null: "#D5D5D5";
             readonly undefined: "#E5E5E5";
             readonly boolean: "#F5F5F5";
@@ -5637,6 +5887,7 @@ export declare const allPalettes: {
     };
     monochromacyBoring: {
         readonly light: {
+            readonly text: "#000000";
             readonly null: "#4A4A4A";
             readonly undefined: "#3A3A3A";
             readonly boolean: "#2A2A2A";
@@ -5658,6 +5909,7 @@ export declare const allPalettes: {
             readonly punctuation: "#4A4A4A";
         };
         readonly dark: {
+            readonly text: "#FFFFFF";
             readonly null: "#AAAAAA";
             readonly undefined: "#B5B5B5";
             readonly boolean: "#C0C0C0";
@@ -5681,6 +5933,7 @@ export declare const allPalettes: {
     };
     monochromacyFunky: {
         readonly light: {
+            readonly text: "#000000";
             readonly null: "#4A4A4A";
             readonly undefined: "#2A2A2A";
             readonly boolean: "#0A0A0A";
@@ -5702,6 +5955,7 @@ export declare const allPalettes: {
             readonly punctuation: "#4A4A4A";
         };
         readonly dark: {
+            readonly text: "#FFFFFF";
             readonly null: "#CCCCCC";
             readonly undefined: "#DDDDDD";
             readonly boolean: "#FFFFFF";
@@ -5725,6 +5979,7 @@ export declare const allPalettes: {
     };
     monochromacyVivid: {
         readonly light: {
+            readonly text: "#000000";
             readonly null: "#3A3A3A";
             readonly undefined: "#1A1A1A";
             readonly boolean: "#000000";
@@ -5746,6 +6001,7 @@ export declare const allPalettes: {
             readonly punctuation: "#3A3A3A";
         };
         readonly dark: {
+            readonly text: "#FFFFFF";
             readonly null: "#CCCCCC";
             readonly undefined: "#EEEEEE";
             readonly boolean: "#FFFFFF";
@@ -5769,6 +6025,7 @@ export declare const allPalettes: {
     };
     tritanopia: {
         readonly light: {
+            readonly text: "#000000";
             readonly null: "#4A3A2A";
             readonly undefined: "#5A4A3A";
             readonly boolean: "#3A5A2A";
@@ -5790,6 +6047,7 @@ export declare const allPalettes: {
             readonly punctuation: "#5A4A3A";
         };
         readonly dark: {
+            readonly text: "#FFFFFF";
             readonly null: "#D5C5B5";
             readonly undefined: "#E5D5C5";
             readonly boolean: "#C5E5B5";
@@ -5813,6 +6071,7 @@ export declare const allPalettes: {
     };
     tritanopiaBright: {
         readonly light: {
+            readonly text: "#000000";
             readonly null: "#4A4A4A";
             readonly undefined: "#5A3A3A";
             readonly boolean: "#AA0055";
@@ -5834,6 +6093,7 @@ export declare const allPalettes: {
             readonly punctuation: "#4A4A4A";
         };
         readonly dark: {
+            readonly text: "#FFFFFF";
             readonly null: "#BBBBBB";
             readonly undefined: "#FFCCCC";
             readonly boolean: "#FF66AA";
@@ -5857,6 +6117,7 @@ export declare const allPalettes: {
     };
     tritanopiaSubtle: {
         readonly light: {
+            readonly text: "#000000";
             readonly null: "#5A5A5A";
             readonly undefined: "#6A4A4A";
             readonly boolean: "#7A3A5A";
@@ -5878,6 +6139,7 @@ export declare const allPalettes: {
             readonly punctuation: "#5A5A5A";
         };
         readonly dark: {
+            readonly text: "#FFFFFF";
             readonly null: "#AAAAAA";
             readonly undefined: "#C5BBBB";
             readonly boolean: "#CC99AA";
@@ -5901,6 +6163,7 @@ export declare const allPalettes: {
     };
     tritanopiaPastel: {
         readonly light: {
+            readonly text: "#000000";
             readonly null: "#6A6A6A";
             readonly undefined: "#7A5A5A";
             readonly boolean: "#8A4A6A";
@@ -5922,6 +6185,7 @@ export declare const allPalettes: {
             readonly punctuation: "#6A6A6A";
         };
         readonly dark: {
+            readonly text: "#FFFFFF";
             readonly null: "#D5D5D5";
             readonly undefined: "#FFEEEE";
             readonly boolean: "#FFCCDD";
@@ -5945,6 +6209,7 @@ export declare const allPalettes: {
     };
     tritanopiaBoring: {
         readonly light: {
+            readonly text: "#000000";
             readonly null: "#4A4A4A";
             readonly undefined: "#3A3A3A";
             readonly boolean: "#4A2A3A";
@@ -5966,6 +6231,7 @@ export declare const allPalettes: {
             readonly punctuation: "#4A4A4A";
         };
         readonly dark: {
+            readonly text: "#FFFFFF";
             readonly null: "#AAAAAA";
             readonly undefined: "#B5B5B5";
             readonly boolean: "#AAAA99";
@@ -5989,6 +6255,7 @@ export declare const allPalettes: {
     };
     tritanopiaFunky: {
         readonly light: {
+            readonly text: "#000000";
             readonly null: "#4A4A4A";
             readonly undefined: "#6A2A2A";
             readonly boolean: "#AA0044";
@@ -6010,6 +6277,7 @@ export declare const allPalettes: {
             readonly punctuation: "#4A4A4A";
         };
         readonly dark: {
+            readonly text: "#FFFFFF";
             readonly null: "#CCCCCC";
             readonly undefined: "#FFDDDD";
             readonly boolean: "#FF77BB";
@@ -6033,6 +6301,7 @@ export declare const allPalettes: {
     };
     tritanopiaVivid: {
         readonly light: {
+            readonly text: "#000000";
             readonly null: "#3A3A3A";
             readonly undefined: "#5A1A1A";
             readonly boolean: "#AA0033";
@@ -6054,6 +6323,7 @@ export declare const allPalettes: {
             readonly punctuation: "#3A3A3A";
         };
         readonly dark: {
+            readonly text: "#FFFFFF";
             readonly null: "#CCCCCC";
             readonly undefined: "#FFEEEE";
             readonly boolean: "#FF88CC";
@@ -6077,6 +6347,7 @@ export declare const allPalettes: {
     };
     deuteranopia: {
         readonly light: {
+            readonly text: "#000000";
             readonly null: "#3A4A6A";
             readonly undefined: "#4A5A7A";
             readonly boolean: "#2A5A8A";
@@ -6098,6 +6369,7 @@ export declare const allPalettes: {
             readonly punctuation: "#4A5A7A";
         };
         readonly dark: {
+            readonly text: "#FFFFFF";
             readonly null: "#AACCFF";
             readonly undefined: "#BBDDFF";
             readonly boolean: "#99EEFF";
@@ -6121,6 +6393,7 @@ export declare const allPalettes: {
     };
     deuteranopiaBright: {
         readonly light: {
+            readonly text: "#000000";
             readonly null: "#4A4A4A";
             readonly undefined: "#3A3A5A";
             readonly boolean: "#0055AA";
@@ -6142,6 +6415,7 @@ export declare const allPalettes: {
             readonly punctuation: "#4A4A4A";
         };
         readonly dark: {
+            readonly text: "#FFFFFF";
             readonly null: "#BBBBBB";
             readonly undefined: "#CCCCFF";
             readonly boolean: "#66AAFF";
@@ -6165,6 +6439,7 @@ export declare const allPalettes: {
     };
     deuteranopiaSubtle: {
         readonly light: {
+            readonly text: "#000000";
             readonly null: "#5A5A5A";
             readonly undefined: "#4A4A6A";
             readonly boolean: "#3A5A7A";
@@ -6186,6 +6461,7 @@ export declare const allPalettes: {
             readonly punctuation: "#5A5A5A";
         };
         readonly dark: {
+            readonly text: "#FFFFFF";
             readonly null: "#AAAAAA";
             readonly undefined: "#BBBBC5";
             readonly boolean: "#99BBCC";
@@ -6209,6 +6485,7 @@ export declare const allPalettes: {
     };
     deuteranopiaPastel: {
         readonly light: {
+            readonly text: "#000000";
             readonly null: "#6A6A6A";
             readonly undefined: "#5A5A7A";
             readonly boolean: "#4A6A8A";
@@ -6230,6 +6507,7 @@ export declare const allPalettes: {
             readonly punctuation: "#6A6A6A";
         };
         readonly dark: {
+            readonly text: "#FFFFFF";
             readonly null: "#D5D5D5";
             readonly undefined: "#E5E5FF";
             readonly boolean: "#CCEEFF";
@@ -6253,6 +6531,7 @@ export declare const allPalettes: {
     };
     deuteranopiaBoring: {
         readonly light: {
+            readonly text: "#000000";
             readonly null: "#4A4A4A";
             readonly undefined: "#3A3A3A";
             readonly boolean: "#2A3A4A";
@@ -6274,6 +6553,7 @@ export declare const allPalettes: {
             readonly punctuation: "#4A4A4A";
         };
         readonly dark: {
+            readonly text: "#FFFFFF";
             readonly null: "#AAAAAA";
             readonly undefined: "#B5B5B5";
             readonly boolean: "#99AAAA";
@@ -6297,6 +6577,7 @@ export declare const allPalettes: {
     };
     deuteranopiaFunky: {
         readonly light: {
+            readonly text: "#000000";
             readonly null: "#4A4A4A";
             readonly undefined: "#2A2A6A";
             readonly boolean: "#0044AA";
@@ -6318,6 +6599,7 @@ export declare const allPalettes: {
             readonly punctuation: "#4A4A4A";
         };
         readonly dark: {
+            readonly text: "#FFFFFF";
             readonly null: "#CCCCCC";
             readonly undefined: "#DDDDFF";
             readonly boolean: "#77BBFF";
@@ -6341,6 +6623,7 @@ export declare const allPalettes: {
     };
     deuteranopiaVivid: {
         readonly light: {
+            readonly text: "#000000";
             readonly null: "#3A3A3A";
             readonly undefined: "#1A1A5A";
             readonly boolean: "#0033AA";
@@ -6362,6 +6645,7 @@ export declare const allPalettes: {
             readonly punctuation: "#3A3A3A";
         };
         readonly dark: {
+            readonly text: "#FFFFFF";
             readonly null: "#CCCCCC";
             readonly undefined: "#EEEEFF";
             readonly boolean: "#88CCFF";
@@ -6385,6 +6669,7 @@ export declare const allPalettes: {
     };
     protanopia: {
         readonly light: {
+            readonly text: "#000000";
             readonly null: "#2A4A6A";
             readonly undefined: "#3A5A7A";
             readonly boolean: "#1A5A8A";
@@ -6406,6 +6691,7 @@ export declare const allPalettes: {
             readonly punctuation: "#3A5A7A";
         };
         readonly dark: {
+            readonly text: "#FFFFFF";
             readonly null: "#99CCFF";
             readonly undefined: "#AADDFF";
             readonly boolean: "#88EEFF";
@@ -6429,6 +6715,7 @@ export declare const allPalettes: {
     };
     protanopiaBright: {
         readonly light: {
+            readonly text: "#000000";
             readonly null: "#4A4A4A";
             readonly undefined: "#3A3A5A";
             readonly boolean: "#0055AA";
@@ -6450,6 +6737,7 @@ export declare const allPalettes: {
             readonly punctuation: "#4A4A4A";
         };
         readonly dark: {
+            readonly text: "#FFFFFF";
             readonly null: "#BBBBBB";
             readonly undefined: "#CCCCFF";
             readonly boolean: "#66AAFF";
@@ -6473,6 +6761,7 @@ export declare const allPalettes: {
     };
     protanopiaSubtle: {
         readonly light: {
+            readonly text: "#000000";
             readonly null: "#5A5A5A";
             readonly undefined: "#4A4A6A";
             readonly boolean: "#3A5A7A";
@@ -6494,6 +6783,7 @@ export declare const allPalettes: {
             readonly punctuation: "#5A5A5A";
         };
         readonly dark: {
+            readonly text: "#FFFFFF";
             readonly null: "#AAAAAA";
             readonly undefined: "#BBBBC5";
             readonly boolean: "#99BBCC";
@@ -6517,6 +6807,7 @@ export declare const allPalettes: {
     };
     protanopiaPastel: {
         readonly light: {
+            readonly text: "#000000";
             readonly null: "#6A6A6A";
             readonly undefined: "#5A5A7A";
             readonly boolean: "#4A6A8A";
@@ -6538,6 +6829,7 @@ export declare const allPalettes: {
             readonly punctuation: "#6A6A6A";
         };
         readonly dark: {
+            readonly text: "#FFFFFF";
             readonly null: "#D5D5D5";
             readonly undefined: "#E5E5FF";
             readonly boolean: "#CCEEFF";
@@ -6561,6 +6853,7 @@ export declare const allPalettes: {
     };
     protanopiaBoring: {
         readonly light: {
+            readonly text: "#000000";
             readonly null: "#4A4A4A";
             readonly undefined: "#3A3A3A";
             readonly boolean: "#2A3A4A";
@@ -6582,6 +6875,7 @@ export declare const allPalettes: {
             readonly punctuation: "#4A4A4A";
         };
         readonly dark: {
+            readonly text: "#FFFFFF";
             readonly null: "#AAAAAA";
             readonly undefined: "#B5B5B5";
             readonly boolean: "#99AAAA";
@@ -6605,6 +6899,7 @@ export declare const allPalettes: {
     };
     protanopiaFunky: {
         readonly light: {
+            readonly text: "#000000";
             readonly null: "#4A4A4A";
             readonly undefined: "#2A2A6A";
             readonly boolean: "#0044AA";
@@ -6626,6 +6921,7 @@ export declare const allPalettes: {
             readonly punctuation: "#4A4A4A";
         };
         readonly dark: {
+            readonly text: "#FFFFFF";
             readonly null: "#CCCCCC";
             readonly undefined: "#DDDDFF";
             readonly boolean: "#77BBFF";
@@ -6649,6 +6945,7 @@ export declare const allPalettes: {
     };
     protanopiaVivid: {
         readonly light: {
+            readonly text: "#000000";
             readonly null: "#3A3A3A";
             readonly undefined: "#1A1A5A";
             readonly boolean: "#0033AA";
@@ -6670,6 +6967,7 @@ export declare const allPalettes: {
             readonly punctuation: "#3A3A3A";
         };
         readonly dark: {
+            readonly text: "#FFFFFF";
             readonly null: "#CCCCCC";
             readonly undefined: "#EEEEFF";
             readonly boolean: "#88CCFF";
@@ -6693,6 +6991,7 @@ export declare const allPalettes: {
     };
     forest: {
         readonly light: {
+            readonly text: "#000000";
             readonly null: "#445544";
             readonly undefined: "#556655";
             readonly boolean: "#225577";
@@ -6714,6 +7013,7 @@ export declare const allPalettes: {
             readonly punctuation: "#334433";
         };
         readonly dark: {
+            readonly text: "#FFFFFF";
             readonly null: "#99BB99";
             readonly undefined: "#AACCAA";
             readonly boolean: "#77BBEE";
@@ -6737,6 +7037,7 @@ export declare const allPalettes: {
     };
     garden: {
         readonly light: {
+            readonly text: "#000000";
             readonly null: "#556655";
             readonly undefined: "#667766";
             readonly boolean: "#336688";
@@ -6758,6 +7059,7 @@ export declare const allPalettes: {
             readonly punctuation: "#445544";
         };
         readonly dark: {
+            readonly text: "#FFFFFF";
             readonly null: "#AACCAA";
             readonly undefined: "#BBDDBB";
             readonly boolean: "#88CCEE";
@@ -6781,6 +7083,7 @@ export declare const allPalettes: {
     };
     flowers: {
         readonly light: {
+            readonly text: "#000000";
             readonly null: "#4A4A4A";
             readonly undefined: "#5A5A5A";
             readonly boolean: "#AA2A7A";
@@ -6802,6 +7105,7 @@ export declare const allPalettes: {
             readonly punctuation: "#5A5A5A";
         };
         readonly dark: {
+            readonly text: "#FFFFFF";
             readonly null: "#E5E5E5";
             readonly undefined: "#F5F5F5";
             readonly boolean: "#FF99DD";
@@ -6825,6 +7129,7 @@ export declare const allPalettes: {
     };
     sky: {
         readonly light: {
+            readonly text: "#000000";
             readonly null: "#3A5A7A";
             readonly undefined: "#4A6A8A";
             readonly boolean: "#2A6A9A";
@@ -6846,6 +7151,7 @@ export declare const allPalettes: {
             readonly punctuation: "#4A6A8A";
         };
         readonly dark: {
+            readonly text: "#FFFFFF";
             readonly null: "#AADDFF";
             readonly undefined: "#BBEEFF";
             readonly boolean: "#99EEFF";
@@ -6869,6 +7175,7 @@ export declare const allPalettes: {
     };
     sunflower: {
         readonly light: {
+            readonly text: "#000000";
             readonly null: "#5A4A2A";
             readonly undefined: "#6A5A3A";
             readonly boolean: "#4A5A2A";
@@ -6890,6 +7197,7 @@ export declare const allPalettes: {
             readonly punctuation: "#6A5A3A";
         };
         readonly dark: {
+            readonly text: "#FFFFFF";
             readonly null: "#E5D5B5";
             readonly undefined: "#F5E5C5";
             readonly boolean: "#D5E5A5";
@@ -6913,6 +7221,7 @@ export declare const allPalettes: {
     };
     strawberry: {
         readonly light: {
+            readonly text: "#000000";
             readonly null: "#5A3A3A";
             readonly undefined: "#6A4A4A";
             readonly boolean: "#AA2A4A";
@@ -6934,6 +7243,7 @@ export declare const allPalettes: {
             readonly punctuation: "#6A4A4A";
         };
         readonly dark: {
+            readonly text: "#FFFFFF";
             readonly null: "#E5C5C5";
             readonly undefined: "#F5D5D5";
             readonly boolean: "#FF88AA";
@@ -6957,6 +7267,7 @@ export declare const allPalettes: {
     };
     butterfly: {
         readonly light: {
+            readonly text: "#000000";
             readonly null: "#4A4A5A";
             readonly undefined: "#5A5A6A";
             readonly boolean: "#AA2A8A";
@@ -6978,6 +7289,7 @@ export declare const allPalettes: {
             readonly punctuation: "#5A5A6A";
         };
         readonly dark: {
+            readonly text: "#FFFFFF";
             readonly null: "#D5D5E5";
             readonly undefined: "#E5E5F5";
             readonly boolean: "#FF88EE";
@@ -7001,6 +7313,7 @@ export declare const allPalettes: {
     };
     default: {
         readonly light: {
+            readonly text: "#000000";
             readonly null: "#808080";
             readonly undefined: "#999999";
             readonly boolean: "#0066CC";
@@ -7022,6 +7335,7 @@ export declare const allPalettes: {
             readonly punctuation: "#666666";
         };
         readonly dark: {
+            readonly text: "#FFFFFF";
             readonly null: "#A0A0A0";
             readonly undefined: "#B8B8B8";
             readonly boolean: "#66AAFF";
@@ -7045,6 +7359,7 @@ export declare const allPalettes: {
     };
     pastel: {
         readonly light: {
+            readonly text: "#000000";
             readonly null: "#7A7A8A";
             readonly undefined: "#8A8A9A";
             readonly boolean: "#5A7A9A";
@@ -7066,6 +7381,7 @@ export declare const allPalettes: {
             readonly punctuation: "#6A6A7A";
         };
         readonly dark: {
+            readonly text: "#FFFFFF";
             readonly null: "#C8C8D8";
             readonly undefined: "#D8D8E8";
             readonly boolean: "#B8D8F8";
@@ -7089,6 +7405,7 @@ export declare const allPalettes: {
     };
     bold: {
         readonly light: {
+            readonly text: "#000000";
             readonly null: "#666666";
             readonly undefined: "#888888";
             readonly boolean: "#0055DD";
@@ -7110,6 +7427,7 @@ export declare const allPalettes: {
             readonly punctuation: "#555555";
         };
         readonly dark: {
+            readonly text: "#FFFFFF";
             readonly null: "#BBBBBB";
             readonly undefined: "#DDDDDD";
             readonly boolean: "#66AAFF";
@@ -7133,6 +7451,7 @@ export declare const allPalettes: {
     };
     dusk: {
         readonly light: {
+            readonly text: "#000000";
             readonly null: "#554466";
             readonly undefined: "#665577";
             readonly boolean: "#445588";
@@ -7154,6 +7473,7 @@ export declare const allPalettes: {
             readonly punctuation: "#554466";
         };
         readonly dark: {
+            readonly text: "#FFFFFF";
             readonly null: "#BBAACC";
             readonly undefined: "#CCBBDD";
             readonly boolean: "#AABBEE";
@@ -7177,6 +7497,7 @@ export declare const allPalettes: {
     };
     lightPastel: {
         readonly light: {
+            readonly text: "#000000";
             readonly null: "#9A9AAA";
             readonly undefined: "#AAAABC";
             readonly boolean: "#8AACBC";
@@ -7198,6 +7519,7 @@ export declare const allPalettes: {
             readonly punctuation: "#9A9AAA";
         };
         readonly dark: {
+            readonly text: "#FFFFFF";
             readonly null: "#E8E8F8";
             readonly undefined: "#F8F8FF";
             readonly boolean: "#E8F8FF";
@@ -7221,6 +7543,7 @@ export declare const allPalettes: {
     };
     funky: {
         readonly light: {
+            readonly text: "#000000";
             readonly null: "#666677";
             readonly undefined: "#777788";
             readonly boolean: "#CC0088";
@@ -7242,6 +7565,7 @@ export declare const allPalettes: {
             readonly punctuation: "#555566";
         };
         readonly dark: {
+            readonly text: "#FFFFFF";
             readonly null: "#BBBBCC";
             readonly undefined: "#CCCCDD";
             readonly boolean: "#FF66DD";
@@ -7265,6 +7589,7 @@ export declare const allPalettes: {
     };
     boring: {
         readonly light: {
+            readonly text: "#000000";
             readonly null: "#666666";
             readonly undefined: "#777777";
             readonly boolean: "#555577";
@@ -7286,6 +7611,7 @@ export declare const allPalettes: {
             readonly punctuation: "#666666";
         };
         readonly dark: {
+            readonly text: "#FFFFFF";
             readonly null: "#AAAAAA";
             readonly undefined: "#BBBBBB";
             readonly boolean: "#AAAACC";
@@ -7309,6 +7635,7 @@ export declare const allPalettes: {
     };
     mobster: {
         readonly light: {
+            readonly text: "#000000";
             readonly null: "#2A2A2A";
             readonly undefined: "#3A3A3A";
             readonly boolean: "#1A3A5A";
@@ -7330,6 +7657,7 @@ export declare const allPalettes: {
             readonly punctuation: "#3A3A3A";
         };
         readonly dark: {
+            readonly text: "#FFFFFF";
             readonly null: "#D5D5D5";
             readonly undefined: "#E5E5E5";
             readonly boolean: "#A5C5E5";
@@ -7353,6 +7681,7 @@ export declare const allPalettes: {
     };
     money: {
         readonly light: {
+            readonly text: "#000000";
             readonly null: "#2A4A2A";
             readonly undefined: "#3A5A3A";
             readonly boolean: "#1A5A2A";
@@ -7374,6 +7703,7 @@ export declare const allPalettes: {
             readonly punctuation: "#3A5A3A";
         };
         readonly dark: {
+            readonly text: "#FFFFFF";
             readonly null: "#A5D5A5";
             readonly undefined: "#B5E5B5";
             readonly boolean: "#85E5A5";
@@ -7397,6 +7727,7 @@ export declare const allPalettes: {
     };
     skeleton: {
         readonly light: {
+            readonly text: "#000000";
             readonly null: "#4A4A4A";
             readonly undefined: "#5A5A5A";
             readonly boolean: "#3A4A5A";
@@ -7418,6 +7749,7 @@ export declare const allPalettes: {
             readonly punctuation: "#5A5A5A";
         };
         readonly dark: {
+            readonly text: "#FFFFFF";
             readonly null: "#E5E5E5";
             readonly undefined: "#F5F5F5";
             readonly boolean: "#D5E5F5";
@@ -7441,6 +7773,7 @@ export declare const allPalettes: {
     };
     sinister: {
         readonly light: {
+            readonly text: "#000000";
             readonly null: "#2A1A1A";
             readonly undefined: "#3A2A2A";
             readonly boolean: "#1A1A3A";
@@ -7462,6 +7795,7 @@ export declare const allPalettes: {
             readonly punctuation: "#2A2A2A";
         };
         readonly dark: {
+            readonly text: "#FFFFFF";
             readonly null: "#C5A5A5";
             readonly undefined: "#D5B5B5";
             readonly boolean: "#A5A5D5";
@@ -7485,6 +7819,7 @@ export declare const allPalettes: {
     };
     halloween: {
         readonly light: {
+            readonly text: "#000000";
             readonly null: "#3A3A3A";
             readonly undefined: "#4A4A4A";
             readonly boolean: "#4A2A6A";
@@ -7506,6 +7841,7 @@ export declare const allPalettes: {
             readonly punctuation: "#4A4A4A";
         };
         readonly dark: {
+            readonly text: "#FFFFFF";
             readonly null: "#D5D5D5";
             readonly undefined: "#E5E5E5";
             readonly boolean: "#D5A5FF";
@@ -7529,6 +7865,7 @@ export declare const allPalettes: {
     };
     vampire: {
         readonly light: {
+            readonly text: "#000000";
             readonly null: "#1A1A1A";
             readonly undefined: "#2A2A2A";
             readonly boolean: "#3A1A2A";
@@ -7550,6 +7887,7 @@ export declare const allPalettes: {
             readonly punctuation: "#2A2A2A";
         };
         readonly dark: {
+            readonly text: "#FFFFFF";
             readonly null: "#C5C5C5";
             readonly undefined: "#D5D5D5";
             readonly boolean: "#E5B5C5";
@@ -7573,6 +7911,7 @@ export declare const allPalettes: {
     };
     grayscale: {
         readonly light: {
+            readonly text: "#000000";
             readonly null: "#444444";
             readonly undefined: "#555555";
             readonly boolean: "#333333";
@@ -7594,6 +7933,7 @@ export declare const allPalettes: {
             readonly punctuation: "#555555";
         };
         readonly dark: {
+            readonly text: "#FFFFFF";
             readonly null: "#BBBBBB";
             readonly undefined: "#CCCCCC";
             readonly boolean: "#AAAAAA";
@@ -7617,6 +7957,7 @@ export declare const allPalettes: {
     };
     blues: {
         readonly light: {
+            readonly text: "#000000";
             readonly null: "#1A3A5A";
             readonly undefined: "#2A4A6A";
             readonly boolean: "#0A4A7A";
@@ -7638,6 +7979,7 @@ export declare const allPalettes: {
             readonly punctuation: "#2A4A6A";
         };
         readonly dark: {
+            readonly text: "#FFFFFF";
             readonly null: "#88CCFF";
             readonly undefined: "#99DDFF";
             readonly boolean: "#66DDFF";
@@ -7661,6 +8003,7 @@ export declare const allPalettes: {
     };
     circus: {
         readonly light: {
+            readonly text: "#000000";
             readonly null: "#4A4A4A";
             readonly undefined: "#5A5A5A";
             readonly boolean: "#CC0000";
@@ -7682,6 +8025,7 @@ export declare const allPalettes: {
             readonly punctuation: "#5A5A5A";
         };
         readonly dark: {
+            readonly text: "#FFFFFF";
             readonly null: "#D5D5D5";
             readonly undefined: "#E5E5E5";
             readonly boolean: "#FF6666";
@@ -7705,6 +8049,7 @@ export declare const allPalettes: {
     };
     monkey: {
         readonly light: {
+            readonly text: "#000000";
             readonly null: "#4A3A2A";
             readonly undefined: "#5A4A3A";
             readonly boolean: "#3A4A2A";
@@ -7726,6 +8071,7 @@ export declare const allPalettes: {
             readonly punctuation: "#5A4A3A";
         };
         readonly dark: {
+            readonly text: "#FFFFFF";
             readonly null: "#C5B5A5";
             readonly undefined: "#D5C5B5";
             readonly boolean: "#B5D5A5";
@@ -7749,6 +8095,7 @@ export declare const allPalettes: {
     };
     rainbow: {
         readonly light: {
+            readonly text: "#000000";
             readonly null: "#4A4A4A";
             readonly undefined: "#5A5A5A";
             readonly boolean: "#8800CC";
@@ -7770,6 +8117,7 @@ export declare const allPalettes: {
             readonly punctuation: "#5A5A5A";
         };
         readonly dark: {
+            readonly text: "#FFFFFF";
             readonly null: "#D5D5D5";
             readonly undefined: "#E5E5E5";
             readonly boolean: "#DD66FF";
@@ -7793,6 +8141,7 @@ export declare const allPalettes: {
     };
     mutedRainbow: {
         readonly light: {
+            readonly text: "#000000";
             readonly null: "#5A5A5A";
             readonly undefined: "#6A6A6A";
             readonly boolean: "#6A4A7A";
@@ -7814,6 +8163,7 @@ export declare const allPalettes: {
             readonly punctuation: "#6A6A6A";
         };
         readonly dark: {
+            readonly text: "#FFFFFF";
             readonly null: "#C5C5C5";
             readonly undefined: "#D5D5D5";
             readonly boolean: "#C5A5D5";
@@ -7837,6 +8187,7 @@ export declare const allPalettes: {
     };
     brownAndGreen: {
         readonly light: {
+            readonly text: "#000000";
             readonly null: "#4A3A2A";
             readonly undefined: "#5A4A3A";
             readonly boolean: "#2A5A3A";
@@ -7858,6 +8209,7 @@ export declare const allPalettes: {
             readonly punctuation: "#5A4A3A";
         };
         readonly dark: {
+            readonly text: "#FFFFFF";
             readonly null: "#D5C5B5";
             readonly undefined: "#E5D5C5";
             readonly boolean: "#A5E5C5";
@@ -7881,6 +8233,7 @@ export declare const allPalettes: {
     };
     solarFlare: {
         readonly light: {
+            readonly text: "#000000";
             readonly null: "#5A3A1A";
             readonly undefined: "#6A4A2A";
             readonly boolean: "#AA4A1A";
@@ -7902,6 +8255,7 @@ export declare const allPalettes: {
             readonly punctuation: "#6A4A2A";
         };
         readonly dark: {
+            readonly text: "#FFFFFF";
             readonly null: "#FFCC99";
             readonly undefined: "#FFD5AA";
             readonly boolean: "#FFAA66";
@@ -7925,6 +8279,7 @@ export declare const allPalettes: {
     };
     purpleToOrange: {
         readonly light: {
+            readonly text: "#000000";
             readonly null: "#4A3A5A";
             readonly undefined: "#5A4A6A";
             readonly boolean: "#6A3A7A";
@@ -7946,6 +8301,7 @@ export declare const allPalettes: {
             readonly punctuation: "#5A4A6A";
         };
         readonly dark: {
+            readonly text: "#FFFFFF";
             readonly null: "#D5C5E5";
             readonly undefined: "#E5D5F5";
             readonly boolean: "#E5B5EE";
@@ -7969,6 +8325,7 @@ export declare const allPalettes: {
     };
     commodore64: {
         readonly light: {
+            readonly text: "#000000";
             readonly null: "#2A3A5A";
             readonly undefined: "#3A4A6A";
             readonly boolean: "#1A2A7A";
@@ -7990,6 +8347,7 @@ export declare const allPalettes: {
             readonly punctuation: "#3A4A6A";
         };
         readonly dark: {
+            readonly text: "#FFFFFF";
             readonly null: "#AACCFF";
             readonly undefined: "#BBDDFF";
             readonly boolean: "#88AAFF";
@@ -8013,6 +8371,7 @@ export declare const allPalettes: {
     };
     military: {
         readonly light: {
+            readonly text: "#000000";
             readonly null: "#3A4A2A";
             readonly undefined: "#4A5A3A";
             readonly boolean: "#2A5A2A";
@@ -8034,6 +8393,7 @@ export declare const allPalettes: {
             readonly punctuation: "#4A5A3A";
         };
         readonly dark: {
+            readonly text: "#FFFFFF";
             readonly null: "#C5D5B5";
             readonly undefined: "#D5E5C5";
             readonly boolean: "#A5E5A5";
@@ -8057,6 +8417,7 @@ export declare const allPalettes: {
     };
     police: {
         readonly light: {
+            readonly text: "#000000";
             readonly null: "#1A2A3A";
             readonly undefined: "#2A3A4A";
             readonly boolean: "#0A2A5A";
@@ -8078,6 +8439,7 @@ export declare const allPalettes: {
             readonly punctuation: "#2A3A4A";
         };
         readonly dark: {
+            readonly text: "#FFFFFF";
             readonly null: "#99CCEE";
             readonly undefined: "#AADDFF";
             readonly boolean: "#77BBFF";
@@ -8101,6 +8463,7 @@ export declare const allPalettes: {
     };
     hacker: {
         readonly light: {
+            readonly text: "#000000";
             readonly null: "#1A2A1A";
             readonly undefined: "#2A3A2A";
             readonly boolean: "#0A3A1A";
@@ -8122,6 +8485,7 @@ export declare const allPalettes: {
             readonly punctuation: "#2A3A2A";
         };
         readonly dark: {
+            readonly text: "#FFFFFF";
             readonly null: "#88EE88";
             readonly undefined: "#99FF99";
             readonly boolean: "#66FF88";
@@ -8145,6 +8509,7 @@ export declare const allPalettes: {
     };
     wizard: {
         readonly light: {
+            readonly text: "#000000";
             readonly null: "#2A2A4A";
             readonly undefined: "#3A3A5A";
             readonly boolean: "#4A2A6A";
@@ -8166,6 +8531,7 @@ export declare const allPalettes: {
             readonly punctuation: "#3A3A5A";
         };
         readonly dark: {
+            readonly text: "#FFFFFF";
             readonly null: "#AAAADD";
             readonly undefined: "#BBBBEE";
             readonly boolean: "#CC99FF";
@@ -8189,6 +8555,7 @@ export declare const allPalettes: {
     };
     gunmetal: {
         readonly light: {
+            readonly text: "#000000";
             readonly null: "#2A2A2A";
             readonly undefined: "#3A3A3A";
             readonly boolean: "#2A2A3A";
@@ -8210,6 +8577,7 @@ export declare const allPalettes: {
             readonly punctuation: "#3A3A3A";
         };
         readonly dark: {
+            readonly text: "#FFFFFF";
             readonly null: "#C5C5C5";
             readonly undefined: "#D5D5D5";
             readonly boolean: "#C5C5D5";
@@ -8233,6 +8601,7 @@ export declare const allPalettes: {
     };
     cocaCola: {
         readonly light: {
+            readonly text: "#000000";
             readonly null: "#4A2A2A";
             readonly undefined: "#5A3A3A";
             readonly boolean: "#AA1A1A";
@@ -8254,6 +8623,7 @@ export declare const allPalettes: {
             readonly punctuation: "#5A3A3A";
         };
         readonly dark: {
+            readonly text: "#FFFFFF";
             readonly null: "#E5C5C5";
             readonly undefined: "#F5D5D5";
             readonly boolean: "#FF8888";
@@ -8277,6 +8647,7 @@ export declare const allPalettes: {
     };
     ogre: {
         readonly light: {
+            readonly text: "#000000";
             readonly null: "#3A4A2A";
             readonly undefined: "#4A5A3A";
             readonly boolean: "#2A5A1A";
@@ -8298,6 +8669,7 @@ export declare const allPalettes: {
             readonly punctuation: "#4A5A3A";
         };
         readonly dark: {
+            readonly text: "#FFFFFF";
             readonly null: "#C5D5B5";
             readonly undefined: "#D5E5C5";
             readonly boolean: "#A5E588";
@@ -8321,6 +8693,7 @@ export declare const allPalettes: {
     };
     burglar: {
         readonly light: {
+            readonly text: "#000000";
             readonly null: "#1A1A1A";
             readonly undefined: "#2A2A2A";
             readonly boolean: "#0A0A0A";
@@ -8342,6 +8715,7 @@ export declare const allPalettes: {
             readonly punctuation: "#2A2A2A";
         };
         readonly dark: {
+            readonly text: "#FFFFFF";
             readonly null: "#E5E5E5";
             readonly undefined: "#F5F5F5";
             readonly boolean: "#D5D5D5";
@@ -8365,6 +8739,7 @@ export declare const allPalettes: {
     };
     crystal: {
         readonly light: {
+            readonly text: "#000000";
             readonly null: "#3A4A5A";
             readonly undefined: "#4A5A6A";
             readonly boolean: "#2A5A7A";
@@ -8386,6 +8761,7 @@ export declare const allPalettes: {
             readonly punctuation: "#4A5A6A";
         };
         readonly dark: {
+            readonly text: "#FFFFFF";
             readonly null: "#CCDDEE";
             readonly undefined: "#DDEEFF";
             readonly boolean: "#AADDFF";
@@ -8409,6 +8785,7 @@ export declare const allPalettes: {
     };
     laser: {
         readonly light: {
+            readonly text: "#000000";
             readonly null: "#4A4A4A";
             readonly undefined: "#5A5A5A";
             readonly boolean: "#AA00AA";
@@ -8430,6 +8807,7 @@ export declare const allPalettes: {
             readonly punctuation: "#5A5A5A";
         };
         readonly dark: {
+            readonly text: "#FFFFFF";
             readonly null: "#EEEEE";
             readonly undefined: "#F5F5F5";
             readonly boolean: "#FF66FF";
@@ -8453,6 +8831,7 @@ export declare const allPalettes: {
     };
     kungFu: {
         readonly light: {
+            readonly text: "#000000";
             readonly null: "#4A3A2A";
             readonly undefined: "#5A4A3A";
             readonly boolean: "#8A2A1A";
@@ -8474,6 +8853,7 @@ export declare const allPalettes: {
             readonly punctuation: "#5A4A3A";
         };
         readonly dark: {
+            readonly text: "#FFFFFF";
             readonly null: "#E5D5C5";
             readonly undefined: "#F5E5D5";
             readonly boolean: "#FF9988";
@@ -8497,6 +8877,7 @@ export declare const allPalettes: {
     };
     starTrek: {
         readonly light: {
+            readonly text: "#000000";
             readonly null: "#3A3A4A";
             readonly undefined: "#4A4A5A";
             readonly boolean: "#1A2A7A";
@@ -8518,6 +8899,7 @@ export declare const allPalettes: {
             readonly punctuation: "#4A4A5A";
         };
         readonly dark: {
+            readonly text: "#FFFFFF";
             readonly null: "#CCCCDD";
             readonly undefined: "#DDDDEE";
             readonly boolean: "#88AAFF";
@@ -8541,6 +8923,7 @@ export declare const allPalettes: {
     };
     antique: {
         readonly light: {
+            readonly text: "#000000";
             readonly null: "#4A3A2A";
             readonly undefined: "#5A4A3A";
             readonly boolean: "#6A4A2A";
@@ -8562,6 +8945,7 @@ export declare const allPalettes: {
             readonly punctuation: "#5A4A3A";
         };
         readonly dark: {
+            readonly text: "#FFFFFF";
             readonly null: "#D5C5B5";
             readonly undefined: "#E5D5C5";
             readonly boolean: "#F5D5B5";
@@ -8585,6 +8969,7 @@ export declare const allPalettes: {
     };
     book: {
         readonly light: {
+            readonly text: "#000000";
             readonly null: "#4A4A3A";
             readonly undefined: "#5A5A4A";
             readonly boolean: "#3A4A2A";
@@ -8606,6 +8991,7 @@ export declare const allPalettes: {
             readonly punctuation: "#5A5A4A";
         };
         readonly dark: {
+            readonly text: "#FFFFFF";
             readonly null: "#E5E5D5";
             readonly undefined: "#F5F5E5";
             readonly boolean: "#D5E5C5";
@@ -8629,6 +9015,7 @@ export declare const allPalettes: {
     };
     eighties: {
         readonly light: {
+            readonly text: "#000000";
             readonly null: "#4A4A4A";
             readonly undefined: "#5A5A5A";
             readonly boolean: "#AA00AA";
@@ -8650,6 +9037,7 @@ export declare const allPalettes: {
             readonly punctuation: "#5A5A5A";
         };
         readonly dark: {
+            readonly text: "#FFFFFF";
             readonly null: "#E5E5E5";
             readonly undefined: "#F5F5F5";
             readonly boolean: "#FF66FF";
@@ -8673,6 +9061,7 @@ export declare const allPalettes: {
     };
     neon: {
         readonly light: {
+            readonly text: "#000000";
             readonly null: "#4A4A4A";
             readonly undefined: "#5A5A5A";
             readonly boolean: "#CC00FF";
@@ -8694,6 +9083,7 @@ export declare const allPalettes: {
             readonly punctuation: "#5A5A5A";
         };
         readonly dark: {
+            readonly text: "#FFFFFF";
             readonly null: "#F5F5F5";
             readonly undefined: "#FFFFFF";
             readonly boolean: "#FF66FF";
@@ -8717,6 +9107,7 @@ export declare const allPalettes: {
     };
     logger: {
         readonly light: {
+            readonly text: "#000000";
             readonly null: "#3A3A2A";
             readonly undefined: "#4A4A3A";
             readonly boolean: "#7A2A2A";
@@ -8738,6 +9129,7 @@ export declare const allPalettes: {
             readonly punctuation: "#4A4A3A";
         };
         readonly dark: {
+            readonly text: "#FFFFFF";
             readonly null: "#C5C5B5";
             readonly undefined: "#D5D5C5";
             readonly boolean: "#EE9999";
@@ -8761,6 +9153,7 @@ export declare const allPalettes: {
     };
     system: {
         readonly light: {
+            readonly text: "#000000";
             readonly null: "#2A3A4A";
             readonly undefined: "#3A4A5A";
             readonly boolean: "#1A3A5A";
@@ -8782,6 +9175,7 @@ export declare const allPalettes: {
             readonly punctuation: "#3A4A5A";
         };
         readonly dark: {
+            readonly text: "#FFFFFF";
             readonly null: "#AACCDD";
             readonly undefined: "#BBDDEE";
             readonly boolean: "#88BBDD";
@@ -8805,6 +9199,7 @@ export declare const allPalettes: {
     };
     alien: {
         readonly light: {
+            readonly text: "#000000";
             readonly null: "#2A3A2A";
             readonly undefined: "#3A4A3A";
             readonly boolean: "#1A5A3A";
@@ -8826,6 +9221,7 @@ export declare const allPalettes: {
             readonly punctuation: "#3A4A3A";
         };
         readonly dark: {
+            readonly text: "#FFFFFF";
             readonly null: "#A5D5A5";
             readonly undefined: "#B5E5B5";
             readonly boolean: "#88E5C5";

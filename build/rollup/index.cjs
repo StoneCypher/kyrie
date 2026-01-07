@@ -491,6 +491,7 @@ createChalk({level: stderrColor ? stderrColor.level : 0});
 const palettes = {
     default: {
         light: {
+            text: '#000000',
             null: '#808080',
             undefined: '#999999',
             boolean: '#0066CC',
@@ -512,6 +513,7 @@ const palettes = {
             punctuation: '#666666'
         },
         dark: {
+            text: '#FFFFFF',
             null: '#A0A0A0',
             undefined: '#B8B8B8',
             boolean: '#66AAFF',
@@ -535,6 +537,7 @@ const palettes = {
     },
     pastel: {
         light: {
+            text: '#000000',
             null: '#7A7A8A',
             undefined: '#8A8A9A',
             boolean: '#5A7A9A',
@@ -556,6 +559,7 @@ const palettes = {
             punctuation: '#6A6A7A'
         },
         dark: {
+            text: '#FFFFFF',
             null: '#C8C8D8',
             undefined: '#D8D8E8',
             boolean: '#B8D8F8',
@@ -579,6 +583,7 @@ const palettes = {
     },
     bold: {
         light: {
+            text: '#000000',
             null: '#666666',
             undefined: '#888888',
             boolean: '#0055DD',
@@ -600,6 +605,7 @@ const palettes = {
             punctuation: '#555555'
         },
         dark: {
+            text: '#FFFFFF',
             null: '#BBBBBB',
             undefined: '#DDDDDD',
             boolean: '#66AAFF',
@@ -623,6 +629,7 @@ const palettes = {
     },
     dusk: {
         light: {
+            text: '#000000',
             null: '#554466',
             undefined: '#665577',
             boolean: '#445588',
@@ -644,6 +651,7 @@ const palettes = {
             punctuation: '#554466'
         },
         dark: {
+            text: '#FFFFFF',
             null: '#BBAACC',
             undefined: '#CCBBDD',
             boolean: '#AABBEE',
@@ -667,6 +675,7 @@ const palettes = {
     },
     lightPastel: {
         light: {
+            text: '#000000',
             null: '#9A9AAA',
             undefined: '#AAAABC',
             boolean: '#8AACBC',
@@ -688,6 +697,7 @@ const palettes = {
             punctuation: '#9A9AAA'
         },
         dark: {
+            text: '#FFFFFF',
             null: '#E8E8F8',
             undefined: '#F8F8FF',
             boolean: '#E8F8FF',
@@ -711,6 +721,7 @@ const palettes = {
     },
     funky: {
         light: {
+            text: '#000000',
             null: '#666677',
             undefined: '#777788',
             boolean: '#CC0088',
@@ -732,6 +743,7 @@ const palettes = {
             punctuation: '#555566'
         },
         dark: {
+            text: '#FFFFFF',
             null: '#BBBBCC',
             undefined: '#CCCCDD',
             boolean: '#FF66DD',
@@ -755,6 +767,7 @@ const palettes = {
     },
     boring: {
         light: {
+            text: '#000000',
             null: '#666666',
             undefined: '#777777',
             boolean: '#555577',
@@ -776,6 +789,7 @@ const palettes = {
             punctuation: '#666666'
         },
         dark: {
+            text: '#FFFFFF',
             null: '#AAAAAA',
             undefined: '#BBBBBB',
             boolean: '#AAAACC',
@@ -799,6 +813,7 @@ const palettes = {
     },
     mobster: {
         light: {
+            text: '#000000',
             null: '#2A2A2A',
             undefined: '#3A3A3A',
             boolean: '#1A3A5A',
@@ -820,6 +835,7 @@ const palettes = {
             punctuation: '#3A3A3A'
         },
         dark: {
+            text: '#FFFFFF',
             null: '#D5D5D5',
             undefined: '#E5E5E5',
             boolean: '#A5C5E5',
@@ -843,6 +859,7 @@ const palettes = {
     },
     money: {
         light: {
+            text: '#000000',
             null: '#2A4A2A',
             undefined: '#3A5A3A',
             boolean: '#1A5A2A',
@@ -864,6 +881,7 @@ const palettes = {
             punctuation: '#3A5A3A'
         },
         dark: {
+            text: '#FFFFFF',
             null: '#A5D5A5',
             undefined: '#B5E5B5',
             boolean: '#85E5A5',
@@ -887,6 +905,7 @@ const palettes = {
     },
     skeleton: {
         light: {
+            text: '#000000',
             null: '#4A4A4A',
             undefined: '#5A5A5A',
             boolean: '#3A4A5A',
@@ -908,6 +927,7 @@ const palettes = {
             punctuation: '#5A5A5A'
         },
         dark: {
+            text: '#FFFFFF',
             null: '#E5E5E5',
             undefined: '#F5F5F5',
             boolean: '#D5E5F5',
@@ -931,6 +951,7 @@ const palettes = {
     },
     sinister: {
         light: {
+            text: '#000000',
             null: '#2A1A1A',
             undefined: '#3A2A2A',
             boolean: '#1A1A3A',
@@ -952,6 +973,7 @@ const palettes = {
             punctuation: '#2A2A2A'
         },
         dark: {
+            text: '#FFFFFF',
             null: '#C5A5A5',
             undefined: '#D5B5B5',
             boolean: '#A5A5D5',
@@ -975,6 +997,7 @@ const palettes = {
     },
     halloween: {
         light: {
+            text: '#000000',
             null: '#3A3A3A',
             undefined: '#4A4A4A',
             boolean: '#4A2A6A',
@@ -996,6 +1019,7 @@ const palettes = {
             punctuation: '#4A4A4A'
         },
         dark: {
+            text: '#FFFFFF',
             null: '#D5D5D5',
             undefined: '#E5E5E5',
             boolean: '#D5A5FF',
@@ -1019,6 +1043,7 @@ const palettes = {
     },
     vampire: {
         light: {
+            text: '#000000',
             null: '#1A1A1A',
             undefined: '#2A2A2A',
             boolean: '#3A1A2A',
@@ -1040,6 +1065,7 @@ const palettes = {
             punctuation: '#2A2A2A'
         },
         dark: {
+            text: '#FFFFFF',
             null: '#C5C5C5',
             undefined: '#D5D5D5',
             boolean: '#E5B5C5',
@@ -1063,6 +1089,7 @@ const palettes = {
     },
     grayscale: {
         light: {
+            text: '#000000',
             null: '#444444',
             undefined: '#555555',
             boolean: '#333333',
@@ -1084,6 +1111,7 @@ const palettes = {
             punctuation: '#555555'
         },
         dark: {
+            text: '#FFFFFF',
             null: '#BBBBBB',
             undefined: '#CCCCCC',
             boolean: '#AAAAAA',
@@ -1107,6 +1135,7 @@ const palettes = {
     },
     blues: {
         light: {
+            text: '#000000',
             null: '#1A3A5A',
             undefined: '#2A4A6A',
             boolean: '#0A4A7A',
@@ -1128,6 +1157,7 @@ const palettes = {
             punctuation: '#2A4A6A'
         },
         dark: {
+            text: '#FFFFFF',
             null: '#88CCFF',
             undefined: '#99DDFF',
             boolean: '#66DDFF',
@@ -1151,6 +1181,7 @@ const palettes = {
     },
     circus: {
         light: {
+            text: '#000000',
             null: '#4A4A4A',
             undefined: '#5A5A5A',
             boolean: '#CC0000',
@@ -1172,6 +1203,7 @@ const palettes = {
             punctuation: '#5A5A5A'
         },
         dark: {
+            text: '#FFFFFF',
             null: '#D5D5D5',
             undefined: '#E5E5E5',
             boolean: '#FF6666',
@@ -1195,6 +1227,7 @@ const palettes = {
     },
     monkey: {
         light: {
+            text: '#000000',
             null: '#4A3A2A',
             undefined: '#5A4A3A',
             boolean: '#3A4A2A',
@@ -1216,6 +1249,7 @@ const palettes = {
             punctuation: '#5A4A3A'
         },
         dark: {
+            text: '#FFFFFF',
             null: '#C5B5A5',
             undefined: '#D5C5B5',
             boolean: '#B5D5A5',
@@ -1239,6 +1273,7 @@ const palettes = {
     },
     rainbow: {
         light: {
+            text: '#000000',
             null: '#4A4A4A',
             undefined: '#5A5A5A',
             boolean: '#8800CC',
@@ -1260,6 +1295,7 @@ const palettes = {
             punctuation: '#5A5A5A'
         },
         dark: {
+            text: '#FFFFFF',
             null: '#D5D5D5',
             undefined: '#E5E5E5',
             boolean: '#DD66FF',
@@ -1283,6 +1319,7 @@ const palettes = {
     },
     mutedRainbow: {
         light: {
+            text: '#000000',
             null: '#5A5A5A',
             undefined: '#6A6A6A',
             boolean: '#6A4A7A',
@@ -1304,6 +1341,7 @@ const palettes = {
             punctuation: '#6A6A6A'
         },
         dark: {
+            text: '#FFFFFF',
             null: '#C5C5C5',
             undefined: '#D5D5D5',
             boolean: '#C5A5D5',
@@ -1327,6 +1365,7 @@ const palettes = {
     },
     brownAndGreen: {
         light: {
+            text: '#000000',
             null: '#4A3A2A',
             undefined: '#5A4A3A',
             boolean: '#2A5A3A',
@@ -1348,6 +1387,7 @@ const palettes = {
             punctuation: '#5A4A3A'
         },
         dark: {
+            text: '#FFFFFF',
             null: '#D5C5B5',
             undefined: '#E5D5C5',
             boolean: '#A5E5C5',
@@ -1371,6 +1411,7 @@ const palettes = {
     },
     solarFlare: {
         light: {
+            text: '#000000',
             null: '#5A3A1A',
             undefined: '#6A4A2A',
             boolean: '#AA4A1A',
@@ -1392,6 +1433,7 @@ const palettes = {
             punctuation: '#6A4A2A'
         },
         dark: {
+            text: '#FFFFFF',
             null: '#FFCC99',
             undefined: '#FFD5AA',
             boolean: '#FFAA66',
@@ -1415,6 +1457,7 @@ const palettes = {
     },
     purpleToOrange: {
         light: {
+            text: '#000000',
             null: '#4A3A5A',
             undefined: '#5A4A6A',
             boolean: '#6A3A7A',
@@ -1436,6 +1479,7 @@ const palettes = {
             punctuation: '#5A4A6A'
         },
         dark: {
+            text: '#FFFFFF',
             null: '#D5C5E5',
             undefined: '#E5D5F5',
             boolean: '#E5B5EE',
@@ -1459,6 +1503,7 @@ const palettes = {
     },
     commodore64: {
         light: {
+            text: '#000000',
             null: '#2A3A5A',
             undefined: '#3A4A6A',
             boolean: '#1A2A7A',
@@ -1480,6 +1525,7 @@ const palettes = {
             punctuation: '#3A4A6A'
         },
         dark: {
+            text: '#FFFFFF',
             null: '#AACCFF',
             undefined: '#BBDDFF',
             boolean: '#88AAFF',
@@ -1503,6 +1549,7 @@ const palettes = {
     },
     military: {
         light: {
+            text: '#000000',
             null: '#3A4A2A',
             undefined: '#4A5A3A',
             boolean: '#2A5A2A',
@@ -1524,6 +1571,7 @@ const palettes = {
             punctuation: '#4A5A3A'
         },
         dark: {
+            text: '#FFFFFF',
             null: '#C5D5B5',
             undefined: '#D5E5C5',
             boolean: '#A5E5A5',
@@ -1547,6 +1595,7 @@ const palettes = {
     },
     police: {
         light: {
+            text: '#000000',
             null: '#1A2A3A',
             undefined: '#2A3A4A',
             boolean: '#0A2A5A',
@@ -1568,6 +1617,7 @@ const palettes = {
             punctuation: '#2A3A4A'
         },
         dark: {
+            text: '#FFFFFF',
             null: '#99CCEE',
             undefined: '#AADDFF',
             boolean: '#77BBFF',
@@ -1591,6 +1641,7 @@ const palettes = {
     },
     hacker: {
         light: {
+            text: '#000000',
             null: '#1A2A1A',
             undefined: '#2A3A2A',
             boolean: '#0A3A1A',
@@ -1612,6 +1663,7 @@ const palettes = {
             punctuation: '#2A3A2A'
         },
         dark: {
+            text: '#FFFFFF',
             null: '#88EE88',
             undefined: '#99FF99',
             boolean: '#66FF88',
@@ -1635,6 +1687,7 @@ const palettes = {
     },
     wizard: {
         light: {
+            text: '#000000',
             null: '#2A2A4A',
             undefined: '#3A3A5A',
             boolean: '#4A2A6A',
@@ -1656,6 +1709,7 @@ const palettes = {
             punctuation: '#3A3A5A'
         },
         dark: {
+            text: '#FFFFFF',
             null: '#AAAADD',
             undefined: '#BBBBEE',
             boolean: '#CC99FF',
@@ -1679,6 +1733,7 @@ const palettes = {
     },
     gunmetal: {
         light: {
+            text: '#000000',
             null: '#2A2A2A',
             undefined: '#3A3A3A',
             boolean: '#2A2A3A',
@@ -1700,6 +1755,7 @@ const palettes = {
             punctuation: '#3A3A3A'
         },
         dark: {
+            text: '#FFFFFF',
             null: '#C5C5C5',
             undefined: '#D5D5D5',
             boolean: '#C5C5D5',
@@ -1723,6 +1779,7 @@ const palettes = {
     },
     cocaCola: {
         light: {
+            text: '#000000',
             null: '#4A2A2A',
             undefined: '#5A3A3A',
             boolean: '#AA1A1A',
@@ -1744,6 +1801,7 @@ const palettes = {
             punctuation: '#5A3A3A'
         },
         dark: {
+            text: '#FFFFFF',
             null: '#E5C5C5',
             undefined: '#F5D5D5',
             boolean: '#FF8888',
@@ -1767,6 +1825,7 @@ const palettes = {
     },
     ogre: {
         light: {
+            text: '#000000',
             null: '#3A4A2A',
             undefined: '#4A5A3A',
             boolean: '#2A5A1A',
@@ -1788,6 +1847,7 @@ const palettes = {
             punctuation: '#4A5A3A'
         },
         dark: {
+            text: '#FFFFFF',
             null: '#C5D5B5',
             undefined: '#D5E5C5',
             boolean: '#A5E588',
@@ -1811,6 +1871,7 @@ const palettes = {
     },
     burglar: {
         light: {
+            text: '#000000',
             null: '#1A1A1A',
             undefined: '#2A2A2A',
             boolean: '#0A0A0A',
@@ -1832,6 +1893,7 @@ const palettes = {
             punctuation: '#2A2A2A'
         },
         dark: {
+            text: '#FFFFFF',
             null: '#E5E5E5',
             undefined: '#F5F5F5',
             boolean: '#D5D5D5',
@@ -1855,6 +1917,7 @@ const palettes = {
     },
     crystal: {
         light: {
+            text: '#000000',
             null: '#3A4A5A',
             undefined: '#4A5A6A',
             boolean: '#2A5A7A',
@@ -1876,6 +1939,7 @@ const palettes = {
             punctuation: '#4A5A6A'
         },
         dark: {
+            text: '#FFFFFF',
             null: '#CCDDEE',
             undefined: '#DDEEFF',
             boolean: '#AADDFF',
@@ -1899,6 +1963,7 @@ const palettes = {
     },
     laser: {
         light: {
+            text: '#000000',
             null: '#4A4A4A',
             undefined: '#5A5A5A',
             boolean: '#AA00AA',
@@ -1920,6 +1985,7 @@ const palettes = {
             punctuation: '#5A5A5A'
         },
         dark: {
+            text: '#FFFFFF',
             null: '#EEEEE',
             undefined: '#F5F5F5',
             boolean: '#FF66FF',
@@ -1943,6 +2009,7 @@ const palettes = {
     },
     kungFu: {
         light: {
+            text: '#000000',
             null: '#4A3A2A',
             undefined: '#5A4A3A',
             boolean: '#8A2A1A',
@@ -1964,6 +2031,7 @@ const palettes = {
             punctuation: '#5A4A3A'
         },
         dark: {
+            text: '#FFFFFF',
             null: '#E5D5C5',
             undefined: '#F5E5D5',
             boolean: '#FF9988',
@@ -1987,6 +2055,7 @@ const palettes = {
     },
     starTrek: {
         light: {
+            text: '#000000',
             null: '#3A3A4A',
             undefined: '#4A4A5A',
             boolean: '#1A2A7A',
@@ -2008,6 +2077,7 @@ const palettes = {
             punctuation: '#4A4A5A'
         },
         dark: {
+            text: '#FFFFFF',
             null: '#CCCCDD',
             undefined: '#DDDDEE',
             boolean: '#88AAFF',
@@ -2031,6 +2101,7 @@ const palettes = {
     },
     antique: {
         light: {
+            text: '#000000',
             null: '#4A3A2A',
             undefined: '#5A4A3A',
             boolean: '#6A4A2A',
@@ -2052,6 +2123,7 @@ const palettes = {
             punctuation: '#5A4A3A'
         },
         dark: {
+            text: '#FFFFFF',
             null: '#D5C5B5',
             undefined: '#E5D5C5',
             boolean: '#F5D5B5',
@@ -2075,6 +2147,7 @@ const palettes = {
     },
     book: {
         light: {
+            text: '#000000',
             null: '#4A4A3A',
             undefined: '#5A5A4A',
             boolean: '#3A4A2A',
@@ -2096,6 +2169,7 @@ const palettes = {
             punctuation: '#5A5A4A'
         },
         dark: {
+            text: '#FFFFFF',
             null: '#E5E5D5',
             undefined: '#F5F5E5',
             boolean: '#D5E5C5',
@@ -2119,6 +2193,7 @@ const palettes = {
     },
     eighties: {
         light: {
+            text: '#000000',
             null: '#4A4A4A',
             undefined: '#5A5A5A',
             boolean: '#AA00AA',
@@ -2140,6 +2215,7 @@ const palettes = {
             punctuation: '#5A5A5A'
         },
         dark: {
+            text: '#FFFFFF',
             null: '#E5E5E5',
             undefined: '#F5F5F5',
             boolean: '#FF66FF',
@@ -2163,6 +2239,7 @@ const palettes = {
     },
     neon: {
         light: {
+            text: '#000000',
             null: '#4A4A4A',
             undefined: '#5A5A5A',
             boolean: '#CC00FF',
@@ -2184,6 +2261,7 @@ const palettes = {
             punctuation: '#5A5A5A'
         },
         dark: {
+            text: '#FFFFFF',
             null: '#F5F5F5',
             undefined: '#FFFFFF',
             boolean: '#FF66FF',
@@ -2207,6 +2285,7 @@ const palettes = {
     },
     logger: {
         light: {
+            text: '#000000',
             null: '#3A3A2A',
             undefined: '#4A4A3A',
             boolean: '#7A2A2A',
@@ -2228,6 +2307,7 @@ const palettes = {
             punctuation: '#4A4A3A'
         },
         dark: {
+            text: '#FFFFFF',
             null: '#C5C5B5',
             undefined: '#D5D5C5',
             boolean: '#EE9999',
@@ -2251,6 +2331,7 @@ const palettes = {
     },
     system: {
         light: {
+            text: '#000000',
             null: '#2A3A4A',
             undefined: '#3A4A5A',
             boolean: '#1A3A5A',
@@ -2272,6 +2353,7 @@ const palettes = {
             punctuation: '#3A4A5A'
         },
         dark: {
+            text: '#FFFFFF',
             null: '#AACCDD',
             undefined: '#BBDDEE',
             boolean: '#88BBDD',
@@ -2295,6 +2377,7 @@ const palettes = {
     },
     alien: {
         light: {
+            text: '#000000',
             null: '#2A3A2A',
             undefined: '#3A4A3A',
             boolean: '#1A5A3A',
@@ -2316,6 +2399,7 @@ const palettes = {
             punctuation: '#3A4A3A'
         },
         dark: {
+            text: '#FFFFFF',
             null: '#A5D5A5',
             undefined: '#B5E5B5',
             boolean: '#88E5C5',
@@ -2347,6 +2431,7 @@ const palettes = {
 const naturePalettes = {
     forest: {
         light: {
+            text: '#000000',
             null: '#445544',
             undefined: '#556655',
             boolean: '#225577',
@@ -2368,6 +2453,7 @@ const naturePalettes = {
             punctuation: '#334433'
         },
         dark: {
+            text: '#FFFFFF',
             null: '#99BB99',
             undefined: '#AACCAA',
             boolean: '#77BBEE',
@@ -2391,6 +2477,7 @@ const naturePalettes = {
     },
     garden: {
         light: {
+            text: '#000000',
             null: '#556655',
             undefined: '#667766',
             boolean: '#336688',
@@ -2412,6 +2499,7 @@ const naturePalettes = {
             punctuation: '#445544'
         },
         dark: {
+            text: '#FFFFFF',
             null: '#AACCAA',
             undefined: '#BBDDBB',
             boolean: '#88CCEE',
@@ -2435,6 +2523,7 @@ const naturePalettes = {
     },
     flowers: {
         light: {
+            text: '#000000',
             null: '#4A4A4A',
             undefined: '#5A5A5A',
             boolean: '#AA2A7A',
@@ -2456,6 +2545,7 @@ const naturePalettes = {
             punctuation: '#5A5A5A'
         },
         dark: {
+            text: '#FFFFFF',
             null: '#E5E5E5',
             undefined: '#F5F5F5',
             boolean: '#FF99DD',
@@ -2479,6 +2569,7 @@ const naturePalettes = {
     },
     sky: {
         light: {
+            text: '#000000',
             null: '#3A5A7A',
             undefined: '#4A6A8A',
             boolean: '#2A6A9A',
@@ -2500,6 +2591,7 @@ const naturePalettes = {
             punctuation: '#4A6A8A'
         },
         dark: {
+            text: '#FFFFFF',
             null: '#AADDFF',
             undefined: '#BBEEFF',
             boolean: '#99EEFF',
@@ -2523,6 +2615,7 @@ const naturePalettes = {
     },
     sunflower: {
         light: {
+            text: '#000000',
             null: '#5A4A2A',
             undefined: '#6A5A3A',
             boolean: '#4A5A2A',
@@ -2544,6 +2637,7 @@ const naturePalettes = {
             punctuation: '#6A5A3A'
         },
         dark: {
+            text: '#FFFFFF',
             null: '#E5D5B5',
             undefined: '#F5E5C5',
             boolean: '#D5E5A5',
@@ -2567,6 +2661,7 @@ const naturePalettes = {
     },
     strawberry: {
         light: {
+            text: '#000000',
             null: '#5A3A3A',
             undefined: '#6A4A4A',
             boolean: '#AA2A4A',
@@ -2588,6 +2683,7 @@ const naturePalettes = {
             punctuation: '#6A4A4A'
         },
         dark: {
+            text: '#FFFFFF',
             null: '#E5C5C5',
             undefined: '#F5D5D5',
             boolean: '#FF88AA',
@@ -2611,6 +2707,7 @@ const naturePalettes = {
     },
     butterfly: {
         light: {
+            text: '#000000',
             null: '#4A4A5A',
             undefined: '#5A5A6A',
             boolean: '#AA2A8A',
@@ -2632,6 +2729,7 @@ const naturePalettes = {
             punctuation: '#5A5A6A'
         },
         dark: {
+            text: '#FFFFFF',
             null: '#D5D5E5',
             undefined: '#E5E5F5',
             boolean: '#FF88EE',
@@ -2662,6 +2760,7 @@ const naturePalettes = {
 const protanopiaPalettes = {
     protanopia: {
         light: {
+            text: '#000000',
             null: '#2A4A6A',
             undefined: '#3A5A7A',
             boolean: '#1A5A8A',
@@ -2683,6 +2782,7 @@ const protanopiaPalettes = {
             punctuation: '#3A5A7A'
         },
         dark: {
+            text: '#FFFFFF',
             null: '#99CCFF',
             undefined: '#AADDFF',
             boolean: '#88EEFF',
@@ -2706,6 +2806,7 @@ const protanopiaPalettes = {
     },
     protanopiaBright: {
         light: {
+            text: '#000000',
             null: '#4A4A4A',
             undefined: '#3A3A5A',
             boolean: '#0055AA',
@@ -2727,6 +2828,7 @@ const protanopiaPalettes = {
             punctuation: '#4A4A4A'
         },
         dark: {
+            text: '#FFFFFF',
             null: '#BBBBBB',
             undefined: '#CCCCFF',
             boolean: '#66AAFF',
@@ -2750,6 +2852,7 @@ const protanopiaPalettes = {
     },
     protanopiaSubtle: {
         light: {
+            text: '#000000',
             null: '#5A5A5A',
             undefined: '#4A4A6A',
             boolean: '#3A5A7A',
@@ -2771,6 +2874,7 @@ const protanopiaPalettes = {
             punctuation: '#5A5A5A'
         },
         dark: {
+            text: '#FFFFFF',
             null: '#AAAAAA',
             undefined: '#BBBBC5',
             boolean: '#99BBCC',
@@ -2794,6 +2898,7 @@ const protanopiaPalettes = {
     },
     protanopiaPastel: {
         light: {
+            text: '#000000',
             null: '#6A6A6A',
             undefined: '#5A5A7A',
             boolean: '#4A6A8A',
@@ -2815,6 +2920,7 @@ const protanopiaPalettes = {
             punctuation: '#6A6A6A'
         },
         dark: {
+            text: '#FFFFFF',
             null: '#D5D5D5',
             undefined: '#E5E5FF',
             boolean: '#CCEEFF',
@@ -2838,6 +2944,7 @@ const protanopiaPalettes = {
     },
     protanopiaBoring: {
         light: {
+            text: '#000000',
             null: '#4A4A4A',
             undefined: '#3A3A3A',
             boolean: '#2A3A4A',
@@ -2859,6 +2966,7 @@ const protanopiaPalettes = {
             punctuation: '#4A4A4A'
         },
         dark: {
+            text: '#FFFFFF',
             null: '#AAAAAA',
             undefined: '#B5B5B5',
             boolean: '#99AAAA',
@@ -2882,6 +2990,7 @@ const protanopiaPalettes = {
     },
     protanopiaFunky: {
         light: {
+            text: '#000000',
             null: '#4A4A4A',
             undefined: '#2A2A6A',
             boolean: '#0044AA',
@@ -2903,6 +3012,7 @@ const protanopiaPalettes = {
             punctuation: '#4A4A4A'
         },
         dark: {
+            text: '#FFFFFF',
             null: '#CCCCCC',
             undefined: '#DDDDFF',
             boolean: '#77BBFF',
@@ -2926,6 +3036,7 @@ const protanopiaPalettes = {
     },
     protanopiaVivid: {
         light: {
+            text: '#000000',
             null: '#3A3A3A',
             undefined: '#1A1A5A',
             boolean: '#0033AA',
@@ -2947,6 +3058,7 @@ const protanopiaPalettes = {
             punctuation: '#3A3A3A'
         },
         dark: {
+            text: '#FFFFFF',
             null: '#CCCCCC',
             undefined: '#EEEEFF',
             boolean: '#88CCFF',
@@ -2977,6 +3089,7 @@ const protanopiaPalettes = {
 const deuteranopiaPalettes = {
     deuteranopia: {
         light: {
+            text: '#000000',
             null: '#3A4A6A',
             undefined: '#4A5A7A',
             boolean: '#2A5A8A',
@@ -2998,6 +3111,7 @@ const deuteranopiaPalettes = {
             punctuation: '#4A5A7A'
         },
         dark: {
+            text: '#FFFFFF',
             null: '#AACCFF',
             undefined: '#BBDDFF',
             boolean: '#99EEFF',
@@ -3021,6 +3135,7 @@ const deuteranopiaPalettes = {
     },
     deuteranopiaBright: {
         light: {
+            text: '#000000',
             null: '#4A4A4A',
             undefined: '#3A3A5A',
             boolean: '#0055AA',
@@ -3042,6 +3157,7 @@ const deuteranopiaPalettes = {
             punctuation: '#4A4A4A'
         },
         dark: {
+            text: '#FFFFFF',
             null: '#BBBBBB',
             undefined: '#CCCCFF',
             boolean: '#66AAFF',
@@ -3065,6 +3181,7 @@ const deuteranopiaPalettes = {
     },
     deuteranopiaSubtle: {
         light: {
+            text: '#000000',
             null: '#5A5A5A',
             undefined: '#4A4A6A',
             boolean: '#3A5A7A',
@@ -3086,6 +3203,7 @@ const deuteranopiaPalettes = {
             punctuation: '#5A5A5A'
         },
         dark: {
+            text: '#FFFFFF',
             null: '#AAAAAA',
             undefined: '#BBBBC5',
             boolean: '#99BBCC',
@@ -3109,6 +3227,7 @@ const deuteranopiaPalettes = {
     },
     deuteranopiaPastel: {
         light: {
+            text: '#000000',
             null: '#6A6A6A',
             undefined: '#5A5A7A',
             boolean: '#4A6A8A',
@@ -3130,6 +3249,7 @@ const deuteranopiaPalettes = {
             punctuation: '#6A6A6A'
         },
         dark: {
+            text: '#FFFFFF',
             null: '#D5D5D5',
             undefined: '#E5E5FF',
             boolean: '#CCEEFF',
@@ -3153,6 +3273,7 @@ const deuteranopiaPalettes = {
     },
     deuteranopiaBoring: {
         light: {
+            text: '#000000',
             null: '#4A4A4A',
             undefined: '#3A3A3A',
             boolean: '#2A3A4A',
@@ -3174,6 +3295,7 @@ const deuteranopiaPalettes = {
             punctuation: '#4A4A4A'
         },
         dark: {
+            text: '#FFFFFF',
             null: '#AAAAAA',
             undefined: '#B5B5B5',
             boolean: '#99AAAA',
@@ -3197,6 +3319,7 @@ const deuteranopiaPalettes = {
     },
     deuteranopiaFunky: {
         light: {
+            text: '#000000',
             null: '#4A4A4A',
             undefined: '#2A2A6A',
             boolean: '#0044AA',
@@ -3218,6 +3341,7 @@ const deuteranopiaPalettes = {
             punctuation: '#4A4A4A'
         },
         dark: {
+            text: '#FFFFFF',
             null: '#CCCCCC',
             undefined: '#DDDDFF',
             boolean: '#77BBFF',
@@ -3241,6 +3365,7 @@ const deuteranopiaPalettes = {
     },
     deuteranopiaVivid: {
         light: {
+            text: '#000000',
             null: '#3A3A3A',
             undefined: '#1A1A5A',
             boolean: '#0033AA',
@@ -3262,6 +3387,7 @@ const deuteranopiaPalettes = {
             punctuation: '#3A3A3A'
         },
         dark: {
+            text: '#FFFFFF',
             null: '#CCCCCC',
             undefined: '#EEEEFF',
             boolean: '#88CCFF',
@@ -3292,6 +3418,7 @@ const deuteranopiaPalettes = {
 const tritanopiaPalettes = {
     tritanopia: {
         light: {
+            text: '#000000',
             null: '#4A3A2A',
             undefined: '#5A4A3A',
             boolean: '#3A5A2A',
@@ -3313,6 +3440,7 @@ const tritanopiaPalettes = {
             punctuation: '#5A4A3A'
         },
         dark: {
+            text: '#FFFFFF',
             null: '#D5C5B5',
             undefined: '#E5D5C5',
             boolean: '#C5E5B5',
@@ -3336,6 +3464,7 @@ const tritanopiaPalettes = {
     },
     tritanopiaBright: {
         light: {
+            text: '#000000',
             null: '#4A4A4A',
             undefined: '#5A3A3A',
             boolean: '#AA0055',
@@ -3357,6 +3486,7 @@ const tritanopiaPalettes = {
             punctuation: '#4A4A4A'
         },
         dark: {
+            text: '#FFFFFF',
             null: '#BBBBBB',
             undefined: '#FFCCCC',
             boolean: '#FF66AA',
@@ -3380,6 +3510,7 @@ const tritanopiaPalettes = {
     },
     tritanopiaSubtle: {
         light: {
+            text: '#000000',
             null: '#5A5A5A',
             undefined: '#6A4A4A',
             boolean: '#7A3A5A',
@@ -3401,6 +3532,7 @@ const tritanopiaPalettes = {
             punctuation: '#5A5A5A'
         },
         dark: {
+            text: '#FFFFFF',
             null: '#AAAAAA',
             undefined: '#C5BBBB',
             boolean: '#CC99AA',
@@ -3424,6 +3556,7 @@ const tritanopiaPalettes = {
     },
     tritanopiaPastel: {
         light: {
+            text: '#000000',
             null: '#6A6A6A',
             undefined: '#7A5A5A',
             boolean: '#8A4A6A',
@@ -3445,6 +3578,7 @@ const tritanopiaPalettes = {
             punctuation: '#6A6A6A'
         },
         dark: {
+            text: '#FFFFFF',
             null: '#D5D5D5',
             undefined: '#FFEEEE',
             boolean: '#FFCCDD',
@@ -3468,6 +3602,7 @@ const tritanopiaPalettes = {
     },
     tritanopiaBoring: {
         light: {
+            text: '#000000',
             null: '#4A4A4A',
             undefined: '#3A3A3A',
             boolean: '#4A2A3A',
@@ -3489,6 +3624,7 @@ const tritanopiaPalettes = {
             punctuation: '#4A4A4A'
         },
         dark: {
+            text: '#FFFFFF',
             null: '#AAAAAA',
             undefined: '#B5B5B5',
             boolean: '#AAAA99',
@@ -3512,6 +3648,7 @@ const tritanopiaPalettes = {
     },
     tritanopiaFunky: {
         light: {
+            text: '#000000',
             null: '#4A4A4A',
             undefined: '#6A2A2A',
             boolean: '#AA0044',
@@ -3533,6 +3670,7 @@ const tritanopiaPalettes = {
             punctuation: '#4A4A4A'
         },
         dark: {
+            text: '#FFFFFF',
             null: '#CCCCCC',
             undefined: '#FFDDDD',
             boolean: '#FF77BB',
@@ -3556,6 +3694,7 @@ const tritanopiaPalettes = {
     },
     tritanopiaVivid: {
         light: {
+            text: '#000000',
             null: '#3A3A3A',
             undefined: '#5A1A1A',
             boolean: '#AA0033',
@@ -3577,6 +3716,7 @@ const tritanopiaPalettes = {
             punctuation: '#3A3A3A'
         },
         dark: {
+            text: '#FFFFFF',
             null: '#CCCCCC',
             undefined: '#FFEEEE',
             boolean: '#FF88CC',
@@ -3607,6 +3747,7 @@ const tritanopiaPalettes = {
 const monochromacyPalettes = {
     monochromacy: {
         light: {
+            text: '#000000',
             null: '#3A3A3A',
             undefined: '#4A4A4A',
             boolean: '#2A2A2A',
@@ -3628,6 +3769,7 @@ const monochromacyPalettes = {
             punctuation: '#4A4A4A'
         },
         dark: {
+            text: '#FFFFFF',
             null: '#C5C5C5',
             undefined: '#D5D5D5',
             boolean: '#AFAFAF',
@@ -3651,6 +3793,7 @@ const monochromacyPalettes = {
     },
     monochromacyBright: {
         light: {
+            text: '#000000',
             null: '#4A4A4A',
             undefined: '#3A3A3A',
             boolean: '#1A1A1A',
@@ -3672,6 +3815,7 @@ const monochromacyPalettes = {
             punctuation: '#4A4A4A'
         },
         dark: {
+            text: '#FFFFFF',
             null: '#BBBBBB',
             undefined: '#CCCCCC',
             boolean: '#EEEEEE',
@@ -3695,6 +3839,7 @@ const monochromacyPalettes = {
     },
     monochromacySubtle: {
         light: {
+            text: '#000000',
             null: '#5A5A5A',
             undefined: '#4A4A4A',
             boolean: '#3A3A3A',
@@ -3716,6 +3861,7 @@ const monochromacyPalettes = {
             punctuation: '#5A5A5A'
         },
         dark: {
+            text: '#FFFFFF',
             null: '#AAAAAA',
             undefined: '#BBBBBB',
             boolean: '#CCCCCC',
@@ -3739,6 +3885,7 @@ const monochromacyPalettes = {
     },
     monochromacyPastel: {
         light: {
+            text: '#000000',
             null: '#6A6A6A',
             undefined: '#5A5A5A',
             boolean: '#4A4A4A',
@@ -3760,6 +3907,7 @@ const monochromacyPalettes = {
             punctuation: '#6A6A6A'
         },
         dark: {
+            text: '#FFFFFF',
             null: '#D5D5D5',
             undefined: '#E5E5E5',
             boolean: '#F5F5F5',
@@ -3783,6 +3931,7 @@ const monochromacyPalettes = {
     },
     monochromacyBoring: {
         light: {
+            text: '#000000',
             null: '#4A4A4A',
             undefined: '#3A3A3A',
             boolean: '#2A2A2A',
@@ -3804,6 +3953,7 @@ const monochromacyPalettes = {
             punctuation: '#4A4A4A'
         },
         dark: {
+            text: '#FFFFFF',
             null: '#AAAAAA',
             undefined: '#B5B5B5',
             boolean: '#C0C0C0',
@@ -3827,6 +3977,7 @@ const monochromacyPalettes = {
     },
     monochromacyFunky: {
         light: {
+            text: '#000000',
             null: '#4A4A4A',
             undefined: '#2A2A2A',
             boolean: '#0A0A0A',
@@ -3848,6 +3999,7 @@ const monochromacyPalettes = {
             punctuation: '#4A4A4A'
         },
         dark: {
+            text: '#FFFFFF',
             null: '#CCCCCC',
             undefined: '#DDDDDD',
             boolean: '#FFFFFF',
@@ -3871,6 +4023,7 @@ const monochromacyPalettes = {
     },
     monochromacyVivid: {
         light: {
+            text: '#000000',
             null: '#3A3A3A',
             undefined: '#1A1A1A',
             boolean: '#000000',
@@ -3892,6 +4045,7 @@ const monochromacyPalettes = {
             punctuation: '#3A3A3A'
         },
         dark: {
+            text: '#FFFFFF',
             null: '#CCCCCC',
             undefined: '#EEEEEE',
             boolean: '#FFFFFF',
@@ -3922,6 +4076,7 @@ const monochromacyPalettes = {
 const deuteranomalyPalettes = {
     deuteranomaly: {
         light: {
+            text: '#000000',
             null: '#3A4A5A',
             undefined: '#4A5A6A',
             boolean: '#2A5A7A',
@@ -3943,6 +4098,7 @@ const deuteranomalyPalettes = {
             punctuation: '#4A5A6A'
         },
         dark: {
+            text: '#FFFFFF',
             null: '#AACCEE',
             undefined: '#BBDDFF',
             boolean: '#99EEFF',
@@ -3966,6 +4122,7 @@ const deuteranomalyPalettes = {
     },
     deuteranomalyBright: {
         light: {
+            text: '#000000',
             null: '#4A4A4A',
             undefined: '#3A3A5A',
             boolean: '#0055AA',
@@ -3987,6 +4144,7 @@ const deuteranomalyPalettes = {
             punctuation: '#4A4A4A'
         },
         dark: {
+            text: '#FFFFFF',
             null: '#BBBBBB',
             undefined: '#CCCCFF',
             boolean: '#66AAFF',
@@ -4010,6 +4168,7 @@ const deuteranomalyPalettes = {
     },
     deuteranomalySubtle: {
         light: {
+            text: '#000000',
             null: '#5A5A5A',
             undefined: '#4A4A6A',
             boolean: '#3A5A7A',
@@ -4031,6 +4190,7 @@ const deuteranomalyPalettes = {
             punctuation: '#5A5A5A'
         },
         dark: {
+            text: '#FFFFFF',
             null: '#AAAAAA',
             undefined: '#BBBBC5',
             boolean: '#99BBCC',
@@ -4054,6 +4214,7 @@ const deuteranomalyPalettes = {
     },
     deuteranomalyPastel: {
         light: {
+            text: '#000000',
             null: '#6A6A6A',
             undefined: '#5A5A7A',
             boolean: '#4A6A8A',
@@ -4075,6 +4236,7 @@ const deuteranomalyPalettes = {
             punctuation: '#6A6A6A'
         },
         dark: {
+            text: '#FFFFFF',
             null: '#D5D5D5',
             undefined: '#E5E5FF',
             boolean: '#CCEEFF',
@@ -4098,6 +4260,7 @@ const deuteranomalyPalettes = {
     },
     deuteranomalyBoring: {
         light: {
+            text: '#000000',
             null: '#4A4A4A',
             undefined: '#3A3A3A',
             boolean: '#2A3A4A',
@@ -4119,6 +4282,7 @@ const deuteranomalyPalettes = {
             punctuation: '#4A4A4A'
         },
         dark: {
+            text: '#FFFFFF',
             null: '#AAAAAA',
             undefined: '#B5B5B5',
             boolean: '#99AAAA',
@@ -4142,6 +4306,7 @@ const deuteranomalyPalettes = {
     },
     deuteranomalyFunky: {
         light: {
+            text: '#000000',
             null: '#4A4A4A',
             undefined: '#2A2A6A',
             boolean: '#0044AA',
@@ -4163,6 +4328,7 @@ const deuteranomalyPalettes = {
             punctuation: '#4A4A4A'
         },
         dark: {
+            text: '#FFFFFF',
             null: '#CCCCCC',
             undefined: '#DDDDFF',
             boolean: '#77BBFF',
@@ -4186,6 +4352,7 @@ const deuteranomalyPalettes = {
     },
     deuteranomalyVivid: {
         light: {
+            text: '#000000',
             null: '#3A3A3A',
             undefined: '#1A1A5A',
             boolean: '#0033AA',
@@ -4207,6 +4374,7 @@ const deuteranomalyPalettes = {
             punctuation: '#3A3A3A'
         },
         dark: {
+            text: '#FFFFFF',
             null: '#CCCCCC',
             undefined: '#EEEEFF',
             boolean: '#88CCFF',
@@ -4237,6 +4405,7 @@ const deuteranomalyPalettes = {
 const protanomalyPalettes = {
     protanomaly: {
         light: {
+            text: '#000000',
             null: '#2A4A5A',
             undefined: '#3A5A6A',
             boolean: '#1A5A7A',
@@ -4258,6 +4427,7 @@ const protanomalyPalettes = {
             punctuation: '#3A5A6A'
         },
         dark: {
+            text: '#FFFFFF',
             null: '#99CCEE',
             undefined: '#AADDFF',
             boolean: '#88EEFF',
@@ -4281,6 +4451,7 @@ const protanomalyPalettes = {
     },
     protanomalyBright: {
         light: {
+            text: '#000000',
             null: '#4A4A4A',
             undefined: '#3A3A5A',
             boolean: '#0055AA',
@@ -4302,6 +4473,7 @@ const protanomalyPalettes = {
             punctuation: '#4A4A4A'
         },
         dark: {
+            text: '#FFFFFF',
             null: '#BBBBBB',
             undefined: '#CCCCFF',
             boolean: '#66AAFF',
@@ -4325,6 +4497,7 @@ const protanomalyPalettes = {
     },
     protanomalySubtle: {
         light: {
+            text: '#000000',
             null: '#5A5A5A',
             undefined: '#4A4A6A',
             boolean: '#3A5A7A',
@@ -4346,6 +4519,7 @@ const protanomalyPalettes = {
             punctuation: '#5A5A5A'
         },
         dark: {
+            text: '#FFFFFF',
             null: '#AAAAAA',
             undefined: '#BBBBC5',
             boolean: '#99BBCC',
@@ -4369,6 +4543,7 @@ const protanomalyPalettes = {
     },
     protanomalyPastel: {
         light: {
+            text: '#000000',
             null: '#6A6A6A',
             undefined: '#5A5A7A',
             boolean: '#4A6A8A',
@@ -4390,6 +4565,7 @@ const protanomalyPalettes = {
             punctuation: '#6A6A6A'
         },
         dark: {
+            text: '#FFFFFF',
             null: '#D5D5D5',
             undefined: '#E5E5FF',
             boolean: '#CCEEFF',
@@ -4413,6 +4589,7 @@ const protanomalyPalettes = {
     },
     protanomalyBoring: {
         light: {
+            text: '#000000',
             null: '#4A4A4A',
             undefined: '#3A3A3A',
             boolean: '#2A3A4A',
@@ -4434,6 +4611,7 @@ const protanomalyPalettes = {
             punctuation: '#4A4A4A'
         },
         dark: {
+            text: '#FFFFFF',
             null: '#AAAAAA',
             undefined: '#B5B5B5',
             boolean: '#99AAAA',
@@ -4457,6 +4635,7 @@ const protanomalyPalettes = {
     },
     protanomalyFunky: {
         light: {
+            text: '#000000',
             null: '#4A4A4A',
             undefined: '#2A2A6A',
             boolean: '#0044AA',
@@ -4478,6 +4657,7 @@ const protanomalyPalettes = {
             punctuation: '#4A4A4A'
         },
         dark: {
+            text: '#FFFFFF',
             null: '#CCCCCC',
             undefined: '#DDDDFF',
             boolean: '#77BBFF',
@@ -4501,6 +4681,7 @@ const protanomalyPalettes = {
     },
     protanomalyVivid: {
         light: {
+            text: '#000000',
             null: '#3A3A3A',
             undefined: '#1A1A5A',
             boolean: '#0033AA',
@@ -4522,6 +4703,7 @@ const protanomalyPalettes = {
             punctuation: '#3A3A3A'
         },
         dark: {
+            text: '#FFFFFF',
             null: '#CCCCCC',
             undefined: '#EEEEFF',
             boolean: '#88CCFF',
@@ -4552,6 +4734,7 @@ const protanomalyPalettes = {
 const tritanomalyPalettes = {
     tritanomaly: {
         light: {
+            text: '#000000',
             null: '#4A3A3A',
             undefined: '#5A4A4A',
             boolean: '#3A5A3A',
@@ -4573,6 +4756,7 @@ const tritanomalyPalettes = {
             punctuation: '#5A4A4A'
         },
         dark: {
+            text: '#FFFFFF',
             null: '#D5C5C5',
             undefined: '#E5D5D5',
             boolean: '#C5E5C5',
@@ -4596,6 +4780,7 @@ const tritanomalyPalettes = {
     },
     tritanomalyBright: {
         light: {
+            text: '#000000',
             null: '#4A4A4A',
             undefined: '#5A3A3A',
             boolean: '#AA0055',
@@ -4617,6 +4802,7 @@ const tritanomalyPalettes = {
             punctuation: '#4A4A4A'
         },
         dark: {
+            text: '#FFFFFF',
             null: '#BBBBBB',
             undefined: '#FFCCCC',
             boolean: '#FF66AA',
@@ -4640,6 +4826,7 @@ const tritanomalyPalettes = {
     },
     tritanomalySubtle: {
         light: {
+            text: '#000000',
             null: '#5A5A5A',
             undefined: '#6A4A4A',
             boolean: '#7A3A5A',
@@ -4661,6 +4848,7 @@ const tritanomalyPalettes = {
             punctuation: '#5A5A5A'
         },
         dark: {
+            text: '#FFFFFF',
             null: '#AAAAAA',
             undefined: '#C5BBBB',
             boolean: '#CC99AA',
@@ -4684,6 +4872,7 @@ const tritanomalyPalettes = {
     },
     tritanomalyPastel: {
         light: {
+            text: '#000000',
             null: '#6A6A6A',
             undefined: '#7A5A5A',
             boolean: '#8A4A6A',
@@ -4705,6 +4894,7 @@ const tritanomalyPalettes = {
             punctuation: '#6A6A6A'
         },
         dark: {
+            text: '#FFFFFF',
             null: '#D5D5D5',
             undefined: '#FFEEEE',
             boolean: '#FFCCDD',
@@ -4728,6 +4918,7 @@ const tritanomalyPalettes = {
     },
     tritanomalyBoring: {
         light: {
+            text: '#000000',
             null: '#4A4A4A',
             undefined: '#3A3A3A',
             boolean: '#4A2A3A',
@@ -4749,6 +4940,7 @@ const tritanomalyPalettes = {
             punctuation: '#4A4A4A'
         },
         dark: {
+            text: '#FFFFFF',
             null: '#AAAAAA',
             undefined: '#B5B5B5',
             boolean: '#AAAA99',
@@ -4772,6 +4964,7 @@ const tritanomalyPalettes = {
     },
     tritanomalyFunky: {
         light: {
+            text: '#000000',
             null: '#4A4A4A',
             undefined: '#6A2A2A',
             boolean: '#AA0044',
@@ -4793,6 +4986,7 @@ const tritanomalyPalettes = {
             punctuation: '#4A4A4A'
         },
         dark: {
+            text: '#FFFFFF',
             null: '#CCCCCC',
             undefined: '#FFDDDD',
             boolean: '#FF77BB',
@@ -4816,6 +5010,7 @@ const tritanomalyPalettes = {
     },
     tritanomalyVivid: {
         light: {
+            text: '#000000',
             null: '#3A3A3A',
             undefined: '#5A1A1A',
             boolean: '#AA0033',
@@ -4837,6 +5032,7 @@ const tritanomalyPalettes = {
             punctuation: '#3A3A3A'
         },
         dark: {
+            text: '#FFFFFF',
             null: '#CCCCCC',
             undefined: '#FFEEEE',
             boolean: '#FF88CC',
@@ -4867,6 +5063,7 @@ const tritanomalyPalettes = {
 const achromatopsiaPalettes = {
     achromatopsia: {
         light: {
+            text: '#000000',
             null: '#3B3B3B',
             undefined: '#4B4B4B',
             boolean: '#2B2B2B',
@@ -4888,6 +5085,7 @@ const achromatopsiaPalettes = {
             punctuation: '#4B4B4B'
         },
         dark: {
+            text: '#FFFFFF',
             null: '#C6C6C6',
             undefined: '#D6D6D6',
             boolean: '#B0B0B0',
@@ -4924,6 +5122,7 @@ const achromatopsiaPalettes = {
 const redsColorRangePalettes = {
     redsAndOranges: {
         light: {
+            text: '#000000',
             null: '#8A3A3A',
             undefined: '#9A4A4A',
             boolean: '#AA2A2A',
@@ -4945,6 +5144,7 @@ const redsColorRangePalettes = {
             punctuation: '#774444'
         },
         dark: {
+            text: '#FFFFFF',
             null: '#FFBBBB',
             undefined: '#FFCCCC',
             boolean: '#FF9999',
@@ -4968,6 +5168,7 @@ const redsColorRangePalettes = {
     },
     redsAndYellows: {
         light: {
+            text: '#000000',
             null: '#8A4A3A',
             undefined: '#9A5A4A',
             boolean: '#AA2A1A',
@@ -4989,6 +5190,7 @@ const redsColorRangePalettes = {
             punctuation: '#774433'
         },
         dark: {
+            text: '#FFFFFF',
             null: '#FFCCAA',
             undefined: '#FFDDBB',
             boolean: '#FF9988',
@@ -5012,6 +5214,7 @@ const redsColorRangePalettes = {
     },
     redsAndGreens: {
         light: {
+            text: '#000000',
             null: '#7A4A3A',
             undefined: '#8A5A4A',
             boolean: '#AA2A2A',
@@ -5033,6 +5236,7 @@ const redsColorRangePalettes = {
             punctuation: '#775544'
         },
         dark: {
+            text: '#FFFFFF',
             null: '#EECCBB',
             undefined: '#FFDDCC',
             boolean: '#FF9999',
@@ -5056,6 +5260,7 @@ const redsColorRangePalettes = {
     },
     redsAndBlues: {
         light: {
+            text: '#000000',
             null: '#6A3A4A',
             undefined: '#7A4A5A',
             boolean: '#AA2A4A',
@@ -5077,6 +5282,7 @@ const redsColorRangePalettes = {
             punctuation: '#664455'
         },
         dark: {
+            text: '#FFFFFF',
             null: '#EECCDD',
             undefined: '#FFDDEE',
             boolean: '#FF99BB',
@@ -5100,6 +5306,7 @@ const redsColorRangePalettes = {
     },
     redsAndPurples: {
         light: {
+            text: '#000000',
             null: '#7A3A5A',
             undefined: '#8A4A6A',
             boolean: '#AA2A5A',
@@ -5121,6 +5328,7 @@ const redsColorRangePalettes = {
             punctuation: '#664466'
         },
         dark: {
+            text: '#FFFFFF',
             null: '#FFCCEE',
             undefined: '#FFDDFF',
             boolean: '#FF99DD',
@@ -5144,6 +5352,7 @@ const redsColorRangePalettes = {
     },
     redsAndBrowns: {
         light: {
+            text: '#000000',
             null: '#6A3A2A',
             undefined: '#7A4A3A',
             boolean: '#AA2A1A',
@@ -5165,6 +5374,7 @@ const redsColorRangePalettes = {
             punctuation: '#664433'
         },
         dark: {
+            text: '#FFFFFF',
             null: '#EECCBB',
             undefined: '#FFDDCC',
             boolean: '#FF9988',
@@ -5188,6 +5398,7 @@ const redsColorRangePalettes = {
     },
     redsAndGreys: {
         light: {
+            text: '#000000',
             null: '#6A3A3A',
             undefined: '#7A4A4A',
             boolean: '#AA2A2A',
@@ -5209,6 +5420,7 @@ const redsColorRangePalettes = {
             punctuation: '#555555'
         },
         dark: {
+            text: '#FFFFFF',
             null: '#EECCCC',
             undefined: '#FFDDDD',
             boolean: '#FF9999',
@@ -5232,6 +5444,7 @@ const redsColorRangePalettes = {
     },
     redsAndCharcoals: {
         light: {
+            text: '#000000',
             null: '#5A2A2A',
             undefined: '#6A3A3A',
             boolean: '#AA1A1A',
@@ -5253,6 +5466,7 @@ const redsColorRangePalettes = {
             punctuation: '#444444'
         },
         dark: {
+            text: '#FFFFFF',
             null: '#DDBBBB',
             undefined: '#EECCCC',
             boolean: '#FF8888',
@@ -5276,6 +5490,7 @@ const redsColorRangePalettes = {
     },
     redsAndCyans: {
         light: {
+            text: '#000000',
             null: '#6A3A4A',
             undefined: '#7A4A5A',
             boolean: '#AA2A3A',
@@ -5297,6 +5512,7 @@ const redsColorRangePalettes = {
             punctuation: '#664455'
         },
         dark: {
+            text: '#FFFFFF',
             null: '#EECCDD',
             undefined: '#FFDDEE',
             boolean: '#FF99AA',
@@ -5320,6 +5536,7 @@ const redsColorRangePalettes = {
     },
     redsAndMagentas: {
         light: {
+            text: '#000000',
             null: '#7A3A5A',
             undefined: '#8A4A6A',
             boolean: '#AA2A5A',
@@ -5341,6 +5558,7 @@ const redsColorRangePalettes = {
             punctuation: '#664466'
         },
         dark: {
+            text: '#FFFFFF',
             null: '#FFCCEE',
             undefined: '#FFDDFF',
             boolean: '#FF99DD',
@@ -5364,6 +5582,7 @@ const redsColorRangePalettes = {
     },
     redsAndLightGrays: {
         light: {
+            text: '#000000',
             null: '#7A4A4A',
             undefined: '#8A5A5A',
             boolean: '#AA3A3A',
@@ -5385,6 +5604,7 @@ const redsColorRangePalettes = {
             punctuation: '#666666'
         },
         dark: {
+            text: '#FFFFFF',
             null: '#FFDDDD',
             undefined: '#FFEEEE',
             boolean: '#FFAAAA',
@@ -5421,6 +5641,7 @@ const redsColorRangePalettes = {
 const orangesColorRangePalettes = {
     orangesAndReds: {
         light: {
+            text: '#000000',
             null: '#8A4A2A',
             undefined: '#9A5A3A',
             boolean: '#CC5500',
@@ -5442,6 +5663,7 @@ const orangesColorRangePalettes = {
             punctuation: '#7A4A2A'
         },
         dark: {
+            text: '#FFFFFF',
             null: '#FFBB88',
             undefined: '#FFCC99',
             boolean: '#FFAA55',
@@ -5465,6 +5687,7 @@ const orangesColorRangePalettes = {
     },
     orangesAndYellows: {
         light: {
+            text: '#000000',
             null: '#8A6A2A',
             undefined: '#9A7A3A',
             boolean: '#CC8800',
@@ -5486,6 +5709,7 @@ const orangesColorRangePalettes = {
             punctuation: '#7A5A2A'
         },
         dark: {
+            text: '#FFFFFF',
             null: '#FFCC88',
             undefined: '#FFDD99',
             boolean: '#FFBB66',
@@ -5509,6 +5733,7 @@ const orangesColorRangePalettes = {
     },
     orangesAndGreens: {
         light: {
+            text: '#000000',
             null: '#6A5A3A',
             undefined: '#7A6A4A',
             boolean: '#CC6600',
@@ -5530,6 +5755,7 @@ const orangesColorRangePalettes = {
             punctuation: '#5A4A3A'
         },
         dark: {
+            text: '#FFFFFF',
             null: '#DDCC99',
             undefined: '#EEDDAA',
             boolean: '#FFAA44',
@@ -5553,6 +5779,7 @@ const orangesColorRangePalettes = {
     },
     orangesAndBlues: {
         light: {
+            text: '#000000',
             null: '#5A4A5A',
             undefined: '#6A5A6A',
             boolean: '#CC6600',
@@ -5574,6 +5801,7 @@ const orangesColorRangePalettes = {
             punctuation: '#4A3A4A'
         },
         dark: {
+            text: '#FFFFFF',
             null: '#DDCCCC',
             undefined: '#EEDDDD',
             boolean: '#FFAA44',
@@ -5597,6 +5825,7 @@ const orangesColorRangePalettes = {
     },
     orangesAndPurples: {
         light: {
+            text: '#000000',
             null: '#6A4A6A',
             undefined: '#7A5A7A',
             boolean: '#CC6600',
@@ -5618,6 +5847,7 @@ const orangesColorRangePalettes = {
             punctuation: '#5A3A5A'
         },
         dark: {
+            text: '#FFFFFF',
             null: '#EECCDD',
             undefined: '#FFDDEE',
             boolean: '#FFAA44',
@@ -5641,6 +5871,7 @@ const orangesColorRangePalettes = {
     },
     orangesAndBrowns: {
         light: {
+            text: '#000000',
             null: '#6A4A2A',
             undefined: '#7A5A3A',
             boolean: '#CC6600',
@@ -5662,6 +5893,7 @@ const orangesColorRangePalettes = {
             punctuation: '#5A3A2A'
         },
         dark: {
+            text: '#FFFFFF',
             null: '#DDBB99',
             undefined: '#EECCAA',
             boolean: '#FFAA44',
@@ -5685,6 +5917,7 @@ const orangesColorRangePalettes = {
     },
     orangesAndGreys: {
         light: {
+            text: '#000000',
             null: '#6A5A4A',
             undefined: '#7A6A5A',
             boolean: '#CC6600',
@@ -5706,6 +5939,7 @@ const orangesColorRangePalettes = {
             punctuation: '#5A5A5A'
         },
         dark: {
+            text: '#FFFFFF',
             null: '#DDCCBB',
             undefined: '#EEDDCC',
             boolean: '#FFAA44',
@@ -5729,6 +5963,7 @@ const orangesColorRangePalettes = {
     },
     orangesAndCharcoals: {
         light: {
+            text: '#000000',
             null: '#4A3A2A',
             undefined: '#5A4A3A',
             boolean: '#CC6600',
@@ -5750,6 +5985,7 @@ const orangesColorRangePalettes = {
             punctuation: '#3A2A2A'
         },
         dark: {
+            text: '#FFFFFF',
             null: '#CCBB99',
             undefined: '#DDCCAA',
             boolean: '#FFAA44',
@@ -5773,6 +6009,7 @@ const orangesColorRangePalettes = {
     },
     orangesAndCyans: {
         light: {
+            text: '#000000',
             null: '#5A5A5A',
             undefined: '#6A6A6A',
             boolean: '#CC6600',
@@ -5794,6 +6031,7 @@ const orangesColorRangePalettes = {
             punctuation: '#4A4A4A'
         },
         dark: {
+            text: '#FFFFFF',
             null: '#DDDDDD',
             undefined: '#EEEEEE',
             boolean: '#FFAA44',
@@ -5817,6 +6055,7 @@ const orangesColorRangePalettes = {
     },
     orangesAndMagentas: {
         light: {
+            text: '#000000',
             null: '#6A4A5A',
             undefined: '#7A5A6A',
             boolean: '#CC6600',
@@ -5838,6 +6077,7 @@ const orangesColorRangePalettes = {
             punctuation: '#5A3A4A'
         },
         dark: {
+            text: '#FFFFFF',
             null: '#EECCDD',
             undefined: '#FFDDEE',
             boolean: '#FFAA44',
@@ -5861,6 +6101,7 @@ const orangesColorRangePalettes = {
     },
     orangesAndLightGrays: {
         light: {
+            text: '#000000',
             null: '#7A6A5A',
             undefined: '#8A7A6A',
             boolean: '#CC6600',
@@ -5882,6 +6123,7 @@ const orangesColorRangePalettes = {
             punctuation: '#6A5A4A'
         },
         dark: {
+            text: '#FFFFFF',
             null: '#EEDDCC',
             undefined: '#FFEEEE',
             boolean: '#FFAA44',
@@ -5925,6 +6167,7 @@ const yellowsColorRangePalettes = {
      */
     yellowsAndReds: {
         light: {
+            text: '#000000',
             null: '#7A6A1A',
             undefined: '#8A7A2A',
             boolean: '#9A7A1A',
@@ -5946,6 +6189,7 @@ const yellowsColorRangePalettes = {
             punctuation: '#7A6A2A'
         },
         dark: {
+            text: '#FFFFFF',
             null: '#FFEE99',
             undefined: '#FFFF88',
             boolean: '#FFEE77',
@@ -5973,6 +6217,7 @@ const yellowsColorRangePalettes = {
      */
     yellowsAndOranges: {
         light: {
+            text: '#000000',
             null: '#8A7A2A',
             undefined: '#9A8A3A',
             boolean: '#AA8A1A',
@@ -5994,6 +6239,7 @@ const yellowsColorRangePalettes = {
             punctuation: '#8A7A3A'
         },
         dark: {
+            text: '#FFFFFF',
             null: '#FFEE88',
             undefined: '#FFFFAA',
             boolean: '#FFEE66',
@@ -6021,6 +6267,7 @@ const yellowsColorRangePalettes = {
      */
     yellowsAndGreens: {
         light: {
+            text: '#000000',
             null: '#8A8A1A',
             undefined: '#9A9A2A',
             boolean: '#8A9A1A',
@@ -6042,6 +6289,7 @@ const yellowsColorRangePalettes = {
             punctuation: '#8A8A2A'
         },
         dark: {
+            text: '#FFFFFF',
             null: '#FFFF88',
             undefined: '#FFFFAA',
             boolean: '#EEFF77',
@@ -6069,6 +6317,7 @@ const yellowsColorRangePalettes = {
      */
     yellowsAndBlues: {
         light: {
+            text: '#000000',
             null: '#8A8A1A',
             undefined: '#9A9A2A',
             boolean: '#7A8A3A',
@@ -6090,6 +6339,7 @@ const yellowsColorRangePalettes = {
             punctuation: '#8A8A2A'
         },
         dark: {
+            text: '#FFFFFF',
             null: '#FFFF88',
             undefined: '#FFFFAA',
             boolean: '#DDEE99',
@@ -6117,6 +6367,7 @@ const yellowsColorRangePalettes = {
      */
     yellowsAndPurples: {
         light: {
+            text: '#000000',
             null: '#8A8A1A',
             undefined: '#9A9A2A',
             boolean: '#8A7A3A',
@@ -6138,6 +6389,7 @@ const yellowsColorRangePalettes = {
             punctuation: '#8A8A2A'
         },
         dark: {
+            text: '#FFFFFF',
             null: '#FFFF88',
             undefined: '#FFFFAA',
             boolean: '#EEEE99',
@@ -6165,6 +6417,7 @@ const yellowsColorRangePalettes = {
      */
     yellowsAndBrowns: {
         light: {
+            text: '#000000',
             null: '#8A7A1A',
             undefined: '#9A8A2A',
             boolean: '#9A8A3A',
@@ -6186,6 +6439,7 @@ const yellowsColorRangePalettes = {
             punctuation: '#8A7A2A'
         },
         dark: {
+            text: '#FFFFFF',
             null: '#FFEE88',
             undefined: '#FFFFAA',
             boolean: '#FFEE99',
@@ -6213,6 +6467,7 @@ const yellowsColorRangePalettes = {
      */
     yellowsAndGreys: {
         light: {
+            text: '#000000',
             null: '#8A8A1A',
             undefined: '#9A9A2A',
             boolean: '#9A9A3A',
@@ -6234,6 +6489,7 @@ const yellowsColorRangePalettes = {
             punctuation: '#8A8A2A'
         },
         dark: {
+            text: '#FFFFFF',
             null: '#FFFF88',
             undefined: '#FFFFAA',
             boolean: '#FFFF99',
@@ -6261,6 +6517,7 @@ const yellowsColorRangePalettes = {
      */
     yellowsAndCharcoals: {
         light: {
+            text: '#000000',
             null: '#8A8A1A',
             undefined: '#9A9A2A',
             boolean: '#9A9A3A',
@@ -6282,6 +6539,7 @@ const yellowsColorRangePalettes = {
             punctuation: '#8A8A2A'
         },
         dark: {
+            text: '#FFFFFF',
             null: '#FFFF88',
             undefined: '#FFFFAA',
             boolean: '#FFFF99',
@@ -6309,6 +6567,7 @@ const yellowsColorRangePalettes = {
      */
     yellowsAndCyans: {
         light: {
+            text: '#000000',
             null: '#8A8A1A',
             undefined: '#9A9A2A',
             boolean: '#8A9A3A',
@@ -6330,6 +6589,7 @@ const yellowsColorRangePalettes = {
             punctuation: '#8A8A2A'
         },
         dark: {
+            text: '#FFFFFF',
             null: '#FFFF88',
             undefined: '#FFFFAA',
             boolean: '#EEFF99',
@@ -6357,6 +6617,7 @@ const yellowsColorRangePalettes = {
      */
     yellowsAndMagentas: {
         light: {
+            text: '#000000',
             null: '#8A8A1A',
             undefined: '#9A9A2A',
             boolean: '#9A8A3A',
@@ -6378,6 +6639,7 @@ const yellowsColorRangePalettes = {
             punctuation: '#8A8A2A'
         },
         dark: {
+            text: '#FFFFFF',
             null: '#FFFF88',
             undefined: '#FFFFAA',
             boolean: '#FFEE99',
@@ -6405,6 +6667,7 @@ const yellowsColorRangePalettes = {
      */
     yellowsAndLightGrays: {
         light: {
+            text: '#000000',
             null: '#8A8A1A',
             undefined: '#9A9A2A',
             boolean: '#9A9A3A',
@@ -6426,6 +6689,7 @@ const yellowsColorRangePalettes = {
             punctuation: '#8A8A2A'
         },
         dark: {
+            text: '#FFFFFF',
             null: '#FFFF88',
             undefined: '#FFFFAA',
             boolean: '#FFFF99',
@@ -6464,6 +6728,7 @@ const yellowsColorRangePalettes = {
  */
 const greensAndReds = {
     light: {
+        text: '#000000',
         null: '#2A5A3A',
         undefined: '#3A6A4A',
         boolean: '#1A6A3A',
@@ -6485,6 +6750,7 @@ const greensAndReds = {
         punctuation: '#3A6A4A'
     },
     dark: {
+        text: '#FFFFFF',
         null: '#A5E5C5',
         undefined: '#B5F5D5',
         boolean: '#88F5C5',
@@ -6512,6 +6778,7 @@ const greensAndReds = {
  */
 const greensAndOranges = {
     light: {
+        text: '#000000',
         null: '#2A5A3A',
         undefined: '#3A6A4A',
         boolean: '#1A6A3A',
@@ -6533,6 +6800,7 @@ const greensAndOranges = {
         punctuation: '#3A6A4A'
     },
     dark: {
+        text: '#FFFFFF',
         null: '#A5E5C5',
         undefined: '#B5F5D5',
         boolean: '#88F5C5',
@@ -6560,6 +6828,7 @@ const greensAndOranges = {
  */
 const greensAndYellows = {
     light: {
+        text: '#000000',
         null: '#2A5A3A',
         undefined: '#3A6A4A',
         boolean: '#1A6A3A',
@@ -6581,6 +6850,7 @@ const greensAndYellows = {
         punctuation: '#3A6A4A'
     },
     dark: {
+        text: '#FFFFFF',
         null: '#A5E5C5',
         undefined: '#B5F5D5',
         boolean: '#88F5C5',
@@ -6608,6 +6878,7 @@ const greensAndYellows = {
  */
 const greensAndBlues = {
     light: {
+        text: '#000000',
         null: '#2A5A3A',
         undefined: '#3A6A4A',
         boolean: '#1A4A7A',
@@ -6629,6 +6900,7 @@ const greensAndBlues = {
         punctuation: '#3A6A4A'
     },
     dark: {
+        text: '#FFFFFF',
         null: '#A5E5C5',
         undefined: '#B5F5D5',
         boolean: '#88CCFF',
@@ -6656,6 +6928,7 @@ const greensAndBlues = {
  */
 const greensAndPurples = {
     light: {
+        text: '#000000',
         null: '#2A5A3A',
         undefined: '#3A6A4A',
         boolean: '#5A2A7A',
@@ -6677,6 +6950,7 @@ const greensAndPurples = {
         punctuation: '#3A6A4A'
     },
     dark: {
+        text: '#FFFFFF',
         null: '#A5E5C5',
         undefined: '#B5F5D5',
         boolean: '#DD99FF',
@@ -6704,6 +6978,7 @@ const greensAndPurples = {
  */
 const greensAndBrowns = {
     light: {
+        text: '#000000',
         null: '#2A5A3A',
         undefined: '#3A6A4A',
         boolean: '#1A6A3A',
@@ -6725,6 +7000,7 @@ const greensAndBrowns = {
         punctuation: '#3A6A4A'
     },
     dark: {
+        text: '#FFFFFF',
         null: '#A5E5C5',
         undefined: '#B5F5D5',
         boolean: '#88F5C5',
@@ -6752,6 +7028,7 @@ const greensAndBrowns = {
  */
 const greensAndGreys = {
     light: {
+        text: '#000000',
         null: '#2A5A3A',
         undefined: '#3A6A4A',
         boolean: '#1A6A3A',
@@ -6773,6 +7050,7 @@ const greensAndGreys = {
         punctuation: '#3A6A4A'
     },
     dark: {
+        text: '#FFFFFF',
         null: '#A5E5C5',
         undefined: '#B5F5D5',
         boolean: '#88F5C5',
@@ -6800,6 +7078,7 @@ const greensAndGreys = {
  */
 const greensAndCharcoals = {
     light: {
+        text: '#000000',
         null: '#2A5A3A',
         undefined: '#3A6A4A',
         boolean: '#1A6A3A',
@@ -6821,6 +7100,7 @@ const greensAndCharcoals = {
         punctuation: '#3A6A4A'
     },
     dark: {
+        text: '#FFFFFF',
         null: '#A5E5C5',
         undefined: '#B5F5D5',
         boolean: '#88F5C5',
@@ -6848,6 +7128,7 @@ const greensAndCharcoals = {
  */
 const greensAndCyans = {
     light: {
+        text: '#000000',
         null: '#2A5A3A',
         undefined: '#3A6A4A',
         boolean: '#1A6A3A',
@@ -6869,6 +7150,7 @@ const greensAndCyans = {
         punctuation: '#3A6A4A'
     },
     dark: {
+        text: '#FFFFFF',
         null: '#A5E5C5',
         undefined: '#B5F5D5',
         boolean: '#88F5C5',
@@ -6896,6 +7178,7 @@ const greensAndCyans = {
  */
 const greensAndMagentas = {
     light: {
+        text: '#000000',
         null: '#2A5A3A',
         undefined: '#3A6A4A',
         boolean: '#1A6A3A',
@@ -6917,6 +7200,7 @@ const greensAndMagentas = {
         punctuation: '#3A6A4A'
     },
     dark: {
+        text: '#FFFFFF',
         null: '#A5E5C5',
         undefined: '#B5F5D5',
         boolean: '#88F5C5',
@@ -6944,6 +7228,7 @@ const greensAndMagentas = {
  */
 const greensAndLightGrays = {
     light: {
+        text: '#000000',
         null: '#2A5A3A',
         undefined: '#3A6A4A',
         boolean: '#1A6A3A',
@@ -6965,6 +7250,7 @@ const greensAndLightGrays = {
         punctuation: '#3A6A4A'
     },
     dark: {
+        text: '#FFFFFF',
         null: '#A5E5C5',
         undefined: '#B5F5D5',
         boolean: '#88F5C5',
@@ -7013,6 +7299,7 @@ const greensColorRangePalettes = {
 const bluesColorRangePalettes = {
     bluesAndReds: {
         light: {
+            text: '#000000',
             null: '#1A3A5A',
             undefined: '#2A4A6A',
             boolean: '#0A4A7A',
@@ -7034,6 +7321,7 @@ const bluesColorRangePalettes = {
             punctuation: '#2A4A6A'
         },
         dark: {
+            text: '#FFFFFF',
             null: '#88CCFF',
             undefined: '#99DDFF',
             boolean: '#66DDFF',
@@ -7057,6 +7345,7 @@ const bluesColorRangePalettes = {
     },
     bluesAndOranges: {
         light: {
+            text: '#000000',
             null: '#1A3A5A',
             undefined: '#2A4A6A',
             boolean: '#0A4A7A',
@@ -7078,6 +7367,7 @@ const bluesColorRangePalettes = {
             punctuation: '#2A4A6A'
         },
         dark: {
+            text: '#FFFFFF',
             null: '#88CCFF',
             undefined: '#99DDFF',
             boolean: '#66DDFF',
@@ -7101,6 +7391,7 @@ const bluesColorRangePalettes = {
     },
     bluesAndYellows: {
         light: {
+            text: '#000000',
             null: '#1A3A5A',
             undefined: '#2A4A6A',
             boolean: '#0A4A7A',
@@ -7122,6 +7413,7 @@ const bluesColorRangePalettes = {
             punctuation: '#2A4A6A'
         },
         dark: {
+            text: '#FFFFFF',
             null: '#88CCFF',
             undefined: '#99DDFF',
             boolean: '#66DDFF',
@@ -7145,6 +7437,7 @@ const bluesColorRangePalettes = {
     },
     bluesAndGreens: {
         light: {
+            text: '#000000',
             null: '#1A3A5A',
             undefined: '#2A4A6A',
             boolean: '#0A4A7A',
@@ -7166,6 +7459,7 @@ const bluesColorRangePalettes = {
             punctuation: '#2A4A6A'
         },
         dark: {
+            text: '#FFFFFF',
             null: '#88CCFF',
             undefined: '#99DDFF',
             boolean: '#66DDFF',
@@ -7189,6 +7483,7 @@ const bluesColorRangePalettes = {
     },
     bluesAndPurples: {
         light: {
+            text: '#000000',
             null: '#1A3A5A',
             undefined: '#2A4A6A',
             boolean: '#0A4A7A',
@@ -7210,6 +7505,7 @@ const bluesColorRangePalettes = {
             punctuation: '#2A4A6A'
         },
         dark: {
+            text: '#FFFFFF',
             null: '#88CCFF',
             undefined: '#99DDFF',
             boolean: '#66DDFF',
@@ -7233,6 +7529,7 @@ const bluesColorRangePalettes = {
     },
     bluesAndBrowns: {
         light: {
+            text: '#000000',
             null: '#1A3A5A',
             undefined: '#2A4A6A',
             boolean: '#0A4A7A',
@@ -7254,6 +7551,7 @@ const bluesColorRangePalettes = {
             punctuation: '#2A4A6A'
         },
         dark: {
+            text: '#FFFFFF',
             null: '#88CCFF',
             undefined: '#99DDFF',
             boolean: '#66DDFF',
@@ -7277,6 +7575,7 @@ const bluesColorRangePalettes = {
     },
     bluesAndGreys: {
         light: {
+            text: '#000000',
             null: '#1A3A5A',
             undefined: '#2A4A6A',
             boolean: '#0A4A7A',
@@ -7298,6 +7597,7 @@ const bluesColorRangePalettes = {
             punctuation: '#2A4A6A'
         },
         dark: {
+            text: '#FFFFFF',
             null: '#88CCFF',
             undefined: '#99DDFF',
             boolean: '#66DDFF',
@@ -7321,6 +7621,7 @@ const bluesColorRangePalettes = {
     },
     bluesAndCharcoals: {
         light: {
+            text: '#000000',
             null: '#1A3A5A',
             undefined: '#2A4A6A',
             boolean: '#0A4A7A',
@@ -7342,6 +7643,7 @@ const bluesColorRangePalettes = {
             punctuation: '#2A4A6A'
         },
         dark: {
+            text: '#FFFFFF',
             null: '#88CCFF',
             undefined: '#99DDFF',
             boolean: '#66DDFF',
@@ -7365,6 +7667,7 @@ const bluesColorRangePalettes = {
     },
     bluesAndCyans: {
         light: {
+            text: '#000000',
             null: '#1A3A5A',
             undefined: '#2A4A6A',
             boolean: '#0A4A7A',
@@ -7386,6 +7689,7 @@ const bluesColorRangePalettes = {
             punctuation: '#2A4A6A'
         },
         dark: {
+            text: '#FFFFFF',
             null: '#88CCFF',
             undefined: '#99DDFF',
             boolean: '#66DDFF',
@@ -7409,6 +7713,7 @@ const bluesColorRangePalettes = {
     },
     bluesAndMagentas: {
         light: {
+            text: '#000000',
             null: '#1A3A5A',
             undefined: '#2A4A6A',
             boolean: '#0A4A7A',
@@ -7430,6 +7735,7 @@ const bluesColorRangePalettes = {
             punctuation: '#2A4A6A'
         },
         dark: {
+            text: '#FFFFFF',
             null: '#88CCFF',
             undefined: '#99DDFF',
             boolean: '#66DDFF',
@@ -7453,6 +7759,7 @@ const bluesColorRangePalettes = {
     },
     bluesAndLightGrays: {
         light: {
+            text: '#000000',
             null: '#1A3A5A',
             undefined: '#2A4A6A',
             boolean: '#0A4A7A',
@@ -7474,6 +7781,7 @@ const bluesColorRangePalettes = {
             punctuation: '#2A4A6A'
         },
         dark: {
+            text: '#FFFFFF',
             null: '#88CCFF',
             undefined: '#99DDFF',
             boolean: '#66DDFF',
@@ -7523,6 +7831,7 @@ const bluesColorRangePalettes = {
 const purplesColorRangePalettes = {
     purplesAndReds: {
         light: {
+            text: '#000000',
             null: '#5A3A6A',
             undefined: '#6A4A7A',
             boolean: '#7A4A8A',
@@ -7544,6 +7853,7 @@ const purplesColorRangePalettes = {
             punctuation: '#6A4A6A'
         },
         dark: {
+            text: '#FFFFFF',
             null: '#D5C5E5',
             undefined: '#E5D5F5',
             boolean: '#EE99FF',
@@ -7567,6 +7877,7 @@ const purplesColorRangePalettes = {
     },
     purplesAndOranges: {
         light: {
+            text: '#000000',
             null: '#5A3A6A',
             undefined: '#6A4A7A',
             boolean: '#7A4A8A',
@@ -7588,6 +7899,7 @@ const purplesColorRangePalettes = {
             punctuation: '#6A4A6A'
         },
         dark: {
+            text: '#FFFFFF',
             null: '#D5C5E5',
             undefined: '#E5D5F5',
             boolean: '#EE99FF',
@@ -7611,6 +7923,7 @@ const purplesColorRangePalettes = {
     },
     purplesAndYellows: {
         light: {
+            text: '#000000',
             null: '#5A3A6A',
             undefined: '#6A4A7A',
             boolean: '#7A4A8A',
@@ -7632,6 +7945,7 @@ const purplesColorRangePalettes = {
             punctuation: '#6A4A6A'
         },
         dark: {
+            text: '#FFFFFF',
             null: '#D5C5E5',
             undefined: '#E5D5F5',
             boolean: '#EE99FF',
@@ -7655,6 +7969,7 @@ const purplesColorRangePalettes = {
     },
     purplesAndGreens: {
         light: {
+            text: '#000000',
             null: '#5A3A6A',
             undefined: '#6A4A7A',
             boolean: '#7A4A8A',
@@ -7676,6 +7991,7 @@ const purplesColorRangePalettes = {
             punctuation: '#6A4A6A'
         },
         dark: {
+            text: '#FFFFFF',
             null: '#D5C5E5',
             undefined: '#E5D5F5',
             boolean: '#EE99FF',
@@ -7699,6 +8015,7 @@ const purplesColorRangePalettes = {
     },
     purplesAndBlues: {
         light: {
+            text: '#000000',
             null: '#5A3A6A',
             undefined: '#6A4A7A',
             boolean: '#7A4A8A',
@@ -7720,6 +8037,7 @@ const purplesColorRangePalettes = {
             punctuation: '#6A4A6A'
         },
         dark: {
+            text: '#FFFFFF',
             null: '#D5C5E5',
             undefined: '#E5D5F5',
             boolean: '#EE99FF',
@@ -7743,6 +8061,7 @@ const purplesColorRangePalettes = {
     },
     purplesAndBrowns: {
         light: {
+            text: '#000000',
             null: '#5A3A6A',
             undefined: '#6A4A7A',
             boolean: '#7A4A8A',
@@ -7764,6 +8083,7 @@ const purplesColorRangePalettes = {
             punctuation: '#6A4A6A'
         },
         dark: {
+            text: '#FFFFFF',
             null: '#D5C5E5',
             undefined: '#E5D5F5',
             boolean: '#EE99FF',
@@ -7787,6 +8107,7 @@ const purplesColorRangePalettes = {
     },
     purplesAndGreys: {
         light: {
+            text: '#000000',
             null: '#5A3A6A',
             undefined: '#6A4A7A',
             boolean: '#7A4A8A',
@@ -7808,6 +8129,7 @@ const purplesColorRangePalettes = {
             punctuation: '#6A4A6A'
         },
         dark: {
+            text: '#FFFFFF',
             null: '#D5C5E5',
             undefined: '#E5D5F5',
             boolean: '#EE99FF',
@@ -7831,6 +8153,7 @@ const purplesColorRangePalettes = {
     },
     purplesAndCharcoals: {
         light: {
+            text: '#000000',
             null: '#5A3A6A',
             undefined: '#6A4A7A',
             boolean: '#7A4A8A',
@@ -7852,6 +8175,7 @@ const purplesColorRangePalettes = {
             punctuation: '#6A4A6A'
         },
         dark: {
+            text: '#FFFFFF',
             null: '#D5C5E5',
             undefined: '#E5D5F5',
             boolean: '#EE99FF',
@@ -7875,6 +8199,7 @@ const purplesColorRangePalettes = {
     },
     purplesAndCyans: {
         light: {
+            text: '#000000',
             null: '#5A3A6A',
             undefined: '#6A4A7A',
             boolean: '#7A4A8A',
@@ -7896,6 +8221,7 @@ const purplesColorRangePalettes = {
             punctuation: '#6A4A6A'
         },
         dark: {
+            text: '#FFFFFF',
             null: '#D5C5E5',
             undefined: '#E5D5F5',
             boolean: '#EE99FF',
@@ -7919,6 +8245,7 @@ const purplesColorRangePalettes = {
     },
     purplesAndMagentas: {
         light: {
+            text: '#000000',
             null: '#5A3A6A',
             undefined: '#6A4A7A',
             boolean: '#7A4A8A',
@@ -7940,6 +8267,7 @@ const purplesColorRangePalettes = {
             punctuation: '#6A4A6A'
         },
         dark: {
+            text: '#FFFFFF',
             null: '#D5C5E5',
             undefined: '#E5D5F5',
             boolean: '#EE99FF',
@@ -7963,6 +8291,7 @@ const purplesColorRangePalettes = {
     },
     purplesAndLightGrays: {
         light: {
+            text: '#000000',
             null: '#5A3A6A',
             undefined: '#6A4A7A',
             boolean: '#7A4A8A',
@@ -7984,6 +8313,7 @@ const purplesColorRangePalettes = {
             punctuation: '#6A4A6A'
         },
         dark: {
+            text: '#FFFFFF',
             null: '#D5C5E5',
             undefined: '#E5D5F5',
             boolean: '#EE99FF',
@@ -8033,6 +8363,7 @@ const purplesColorRangePalettes = {
 const brownsColorRangePalettes = {
     brownsAndReds: {
         light: {
+            text: '#000000',
             null: '#4A3A2A',
             undefined: '#5A4A3A',
             boolean: '#6A2A2A',
@@ -8054,6 +8385,7 @@ const brownsColorRangePalettes = {
             punctuation: '#5A4A3A'
         },
         dark: {
+            text: '#FFFFFF',
             null: '#D5C5B5',
             undefined: '#E5D5C5',
             boolean: '#F5A5A5',
@@ -8077,6 +8409,7 @@ const brownsColorRangePalettes = {
     },
     brownsAndOranges: {
         light: {
+            text: '#000000',
             null: '#4A3A2A',
             undefined: '#5A4A3A',
             boolean: '#7A4A2A',
@@ -8098,6 +8431,7 @@ const brownsColorRangePalettes = {
             punctuation: '#5A4A3A'
         },
         dark: {
+            text: '#FFFFFF',
             null: '#D5C5B5',
             undefined: '#E5D5C5',
             boolean: '#FFCC99',
@@ -8121,6 +8455,7 @@ const brownsColorRangePalettes = {
     },
     brownsAndYellows: {
         light: {
+            text: '#000000',
             null: '#4A4A2A',
             undefined: '#5A5A3A',
             boolean: '#7A6A2A',
@@ -8142,6 +8477,7 @@ const brownsColorRangePalettes = {
             punctuation: '#5A5A3A'
         },
         dark: {
+            text: '#FFFFFF',
             null: '#D5D5B5',
             undefined: '#E5E5C5',
             boolean: '#FFEEAA',
@@ -8165,6 +8501,7 @@ const brownsColorRangePalettes = {
     },
     brownsAndGreens: {
         light: {
+            text: '#000000',
             null: '#3A4A2A',
             undefined: '#4A5A3A',
             boolean: '#3A5A2A',
@@ -8186,6 +8523,7 @@ const brownsColorRangePalettes = {
             punctuation: '#4A5A3A'
         },
         dark: {
+            text: '#FFFFFF',
             null: '#C5D5B5',
             undefined: '#D5E5C5',
             boolean: '#B5E5A5',
@@ -8209,6 +8547,7 @@ const brownsColorRangePalettes = {
     },
     brownsAndBlues: {
         light: {
+            text: '#000000',
             null: '#3A3A4A',
             undefined: '#4A4A5A',
             boolean: '#2A4A5A',
@@ -8230,6 +8569,7 @@ const brownsColorRangePalettes = {
             punctuation: '#4A4A5A'
         },
         dark: {
+            text: '#FFFFFF',
             null: '#C5C5D5',
             undefined: '#D5D5E5',
             boolean: '#A5CCDD',
@@ -8253,6 +8593,7 @@ const brownsColorRangePalettes = {
     },
     brownsAndPurples: {
         light: {
+            text: '#000000',
             null: '#4A3A4A',
             undefined: '#5A4A5A',
             boolean: '#5A2A5A',
@@ -8274,6 +8615,7 @@ const brownsColorRangePalettes = {
             punctuation: '#5A4A5A'
         },
         dark: {
+            text: '#FFFFFF',
             null: '#D5C5D5',
             undefined: '#E5D5E5',
             boolean: '#EEAAEE',
@@ -8297,6 +8639,7 @@ const brownsColorRangePalettes = {
     },
     brownsAndGreys: {
         light: {
+            text: '#000000',
             null: '#4A4A4A',
             undefined: '#5A5A5A',
             boolean: '#3A4A4A',
@@ -8318,6 +8661,7 @@ const brownsColorRangePalettes = {
             punctuation: '#5A5A5A'
         },
         dark: {
+            text: '#FFFFFF',
             null: '#D5D5D5',
             undefined: '#E5E5E5',
             boolean: '#C5D5D5',
@@ -8341,6 +8685,7 @@ const brownsColorRangePalettes = {
     },
     brownsAndCharcoals: {
         light: {
+            text: '#000000',
             null: '#3A3A3A',
             undefined: '#4A4A4A',
             boolean: '#2A3A3A',
@@ -8362,6 +8707,7 @@ const brownsColorRangePalettes = {
             punctuation: '#4A4A4A'
         },
         dark: {
+            text: '#FFFFFF',
             null: '#C5C5C5',
             undefined: '#D5D5D5',
             boolean: '#B5C5C5',
@@ -8385,6 +8731,7 @@ const brownsColorRangePalettes = {
     },
     brownsAndCyans: {
         light: {
+            text: '#000000',
             null: '#3A4A4A',
             undefined: '#4A5A5A',
             boolean: '#2A5A5A',
@@ -8406,6 +8753,7 @@ const brownsColorRangePalettes = {
             punctuation: '#4A5A5A'
         },
         dark: {
+            text: '#FFFFFF',
             null: '#C5D5D5',
             undefined: '#D5E5E5',
             boolean: '#A5EEDD',
@@ -8429,6 +8777,7 @@ const brownsColorRangePalettes = {
     },
     brownsAndMagentas: {
         light: {
+            text: '#000000',
             null: '#4A3A4A',
             undefined: '#5A4A5A',
             boolean: '#6A2A5A',
@@ -8450,6 +8799,7 @@ const brownsColorRangePalettes = {
             punctuation: '#5A4A5A'
         },
         dark: {
+            text: '#FFFFFF',
             null: '#D5C5D5',
             undefined: '#E5D5E5',
             boolean: '#FFAADD',
@@ -8473,6 +8823,7 @@ const brownsColorRangePalettes = {
     },
     brownsAndLightGrays: {
         light: {
+            text: '#000000',
             null: '#5A5A5A',
             undefined: '#6A6A6A',
             boolean: '#4A5A5A',
@@ -8494,6 +8845,7 @@ const brownsColorRangePalettes = {
             punctuation: '#6A6A6A'
         },
         dark: {
+            text: '#FFFFFF',
             null: '#E5E5E5',
             undefined: '#F5F5F5',
             boolean: '#D5E5E5',
@@ -8543,6 +8895,7 @@ const brownsColorRangePalettes = {
 const greysColorRangePalettes = {
     greysAndReds: {
         light: {
+            text: '#000000',
             null: '#5A5A5A',
             undefined: '#6A6A6A',
             boolean: '#4A4A4A',
@@ -8564,6 +8917,7 @@ const greysColorRangePalettes = {
             punctuation: '#555555'
         },
         dark: {
+            text: '#FFFFFF',
             null: '#AAAAAA',
             undefined: '#BABABA',
             boolean: '#C5C5C5',
@@ -8587,6 +8941,7 @@ const greysColorRangePalettes = {
     },
     greysAndOranges: {
         light: {
+            text: '#000000',
             null: '#5A5A5A',
             undefined: '#6A6A6A',
             boolean: '#4A4A4A',
@@ -8608,6 +8963,7 @@ const greysColorRangePalettes = {
             punctuation: '#555555'
         },
         dark: {
+            text: '#FFFFFF',
             null: '#AAAAAA',
             undefined: '#BABABA',
             boolean: '#C5C5C5',
@@ -8631,6 +8987,7 @@ const greysColorRangePalettes = {
     },
     greysAndYellows: {
         light: {
+            text: '#000000',
             null: '#5A5A5A',
             undefined: '#6A6A6A',
             boolean: '#4A4A4A',
@@ -8652,6 +9009,7 @@ const greysColorRangePalettes = {
             punctuation: '#555555'
         },
         dark: {
+            text: '#FFFFFF',
             null: '#AAAAAA',
             undefined: '#BABABA',
             boolean: '#C5C5C5',
@@ -8675,6 +9033,7 @@ const greysColorRangePalettes = {
     },
     greysAndGreens: {
         light: {
+            text: '#000000',
             null: '#5A5A5A',
             undefined: '#6A6A6A',
             boolean: '#4A4A4A',
@@ -8696,6 +9055,7 @@ const greysColorRangePalettes = {
             punctuation: '#555555'
         },
         dark: {
+            text: '#FFFFFF',
             null: '#AAAAAA',
             undefined: '#BABABA',
             boolean: '#C5C5C5',
@@ -8719,6 +9079,7 @@ const greysColorRangePalettes = {
     },
     greysAndBlues: {
         light: {
+            text: '#000000',
             null: '#5A5A5A',
             undefined: '#6A6A6A',
             boolean: '#4A4A4A',
@@ -8740,6 +9101,7 @@ const greysColorRangePalettes = {
             punctuation: '#555555'
         },
         dark: {
+            text: '#FFFFFF',
             null: '#AAAAAA',
             undefined: '#BABABA',
             boolean: '#C5C5C5',
@@ -8763,6 +9125,7 @@ const greysColorRangePalettes = {
     },
     greysAndPurples: {
         light: {
+            text: '#000000',
             null: '#5A5A5A',
             undefined: '#6A6A6A',
             boolean: '#4A4A4A',
@@ -8784,6 +9147,7 @@ const greysColorRangePalettes = {
             punctuation: '#555555'
         },
         dark: {
+            text: '#FFFFFF',
             null: '#AAAAAA',
             undefined: '#BABABA',
             boolean: '#C5C5C5',
@@ -8807,6 +9171,7 @@ const greysColorRangePalettes = {
     },
     greysAndBrowns: {
         light: {
+            text: '#000000',
             null: '#5A5A5A',
             undefined: '#6A6A6A',
             boolean: '#4A4A4A',
@@ -8828,6 +9193,7 @@ const greysColorRangePalettes = {
             punctuation: '#555555'
         },
         dark: {
+            text: '#FFFFFF',
             null: '#AAAAAA',
             undefined: '#BABABA',
             boolean: '#C5C5C5',
@@ -8851,6 +9217,7 @@ const greysColorRangePalettes = {
     },
     greysAndCharcoals: {
         light: {
+            text: '#000000',
             null: '#5A5A5A',
             undefined: '#6A6A6A',
             boolean: '#4A4A4A',
@@ -8872,6 +9239,7 @@ const greysColorRangePalettes = {
             punctuation: '#555555'
         },
         dark: {
+            text: '#FFFFFF',
             null: '#AAAAAA',
             undefined: '#BABABA',
             boolean: '#C5C5C5',
@@ -8895,6 +9263,7 @@ const greysColorRangePalettes = {
     },
     greysAndCyans: {
         light: {
+            text: '#000000',
             null: '#5A5A5A',
             undefined: '#6A6A6A',
             boolean: '#4A4A4A',
@@ -8916,6 +9285,7 @@ const greysColorRangePalettes = {
             punctuation: '#555555'
         },
         dark: {
+            text: '#FFFFFF',
             null: '#AAAAAA',
             undefined: '#BABABA',
             boolean: '#C5C5C5',
@@ -8939,6 +9309,7 @@ const greysColorRangePalettes = {
     },
     greysAndMagentas: {
         light: {
+            text: '#000000',
             null: '#5A5A5A',
             undefined: '#6A6A6A',
             boolean: '#4A4A4A',
@@ -8960,6 +9331,7 @@ const greysColorRangePalettes = {
             punctuation: '#555555'
         },
         dark: {
+            text: '#FFFFFF',
             null: '#AAAAAA',
             undefined: '#BABABA',
             boolean: '#C5C5C5',
@@ -8983,6 +9355,7 @@ const greysColorRangePalettes = {
     },
     greysAndLightGrays: {
         light: {
+            text: '#000000',
             null: '#5A5A5A',
             undefined: '#6A6A6A',
             boolean: '#4A4A4A',
@@ -9004,6 +9377,7 @@ const greysColorRangePalettes = {
             punctuation: '#555555'
         },
         dark: {
+            text: '#FFFFFF',
             null: '#AAAAAA',
             undefined: '#BABABA',
             boolean: '#C5C5C5',
@@ -9041,6 +9415,7 @@ const greysColorRangePalettes = {
 const charcoalsColorRangePalettes = {
     charcoalsAndReds: {
         light: {
+            text: '#000000',
             null: '#3A3A3A',
             undefined: '#4A4A4A',
             boolean: '#5A5A5A',
@@ -9062,6 +9437,7 @@ const charcoalsColorRangePalettes = {
             punctuation: '#4A4A4A'
         },
         dark: {
+            text: '#FFFFFF',
             null: '#C5C5C5',
             undefined: '#D5D5D5',
             boolean: '#E5E5E5',
@@ -9085,6 +9461,7 @@ const charcoalsColorRangePalettes = {
     },
     charcoalsAndOranges: {
         light: {
+            text: '#000000',
             null: '#3A3A3A',
             undefined: '#4A4A4A',
             boolean: '#5A5A5A',
@@ -9106,6 +9483,7 @@ const charcoalsColorRangePalettes = {
             punctuation: '#4A4A4A'
         },
         dark: {
+            text: '#FFFFFF',
             null: '#C5C5C5',
             undefined: '#D5D5D5',
             boolean: '#E5E5E5',
@@ -9129,6 +9507,7 @@ const charcoalsColorRangePalettes = {
     },
     charcoalsAndYellows: {
         light: {
+            text: '#000000',
             null: '#3A3A3A',
             undefined: '#4A4A4A',
             boolean: '#5A5A5A',
@@ -9150,6 +9529,7 @@ const charcoalsColorRangePalettes = {
             punctuation: '#4A4A4A'
         },
         dark: {
+            text: '#FFFFFF',
             null: '#C5C5C5',
             undefined: '#D5D5D5',
             boolean: '#E5E5E5',
@@ -9173,6 +9553,7 @@ const charcoalsColorRangePalettes = {
     },
     charcoalsAndGreens: {
         light: {
+            text: '#000000',
             null: '#3A3A3A',
             undefined: '#4A4A4A',
             boolean: '#5A5A5A',
@@ -9194,6 +9575,7 @@ const charcoalsColorRangePalettes = {
             punctuation: '#4A4A4A'
         },
         dark: {
+            text: '#FFFFFF',
             null: '#C5C5C5',
             undefined: '#D5D5D5',
             boolean: '#E5E5E5',
@@ -9217,6 +9599,7 @@ const charcoalsColorRangePalettes = {
     },
     charcoalsAndBlues: {
         light: {
+            text: '#000000',
             null: '#3A3A3A',
             undefined: '#4A4A4A',
             boolean: '#5A5A5A',
@@ -9238,6 +9621,7 @@ const charcoalsColorRangePalettes = {
             punctuation: '#4A4A4A'
         },
         dark: {
+            text: '#FFFFFF',
             null: '#C5C5C5',
             undefined: '#D5D5D5',
             boolean: '#E5E5E5',
@@ -9261,6 +9645,7 @@ const charcoalsColorRangePalettes = {
     },
     charcoalsAndPurples: {
         light: {
+            text: '#000000',
             null: '#3A3A3A',
             undefined: '#4A4A4A',
             boolean: '#5A5A5A',
@@ -9282,6 +9667,7 @@ const charcoalsColorRangePalettes = {
             punctuation: '#4A4A4A'
         },
         dark: {
+            text: '#FFFFFF',
             null: '#C5C5C5',
             undefined: '#D5D5D5',
             boolean: '#E5E5E5',
@@ -9305,6 +9691,7 @@ const charcoalsColorRangePalettes = {
     },
     charcoalsAndBrowns: {
         light: {
+            text: '#000000',
             null: '#3A3A3A',
             undefined: '#4A4A4A',
             boolean: '#5A5A5A',
@@ -9326,6 +9713,7 @@ const charcoalsColorRangePalettes = {
             punctuation: '#4A4A4A'
         },
         dark: {
+            text: '#FFFFFF',
             null: '#C5C5C5',
             undefined: '#D5D5D5',
             boolean: '#E5E5E5',
@@ -9349,6 +9737,7 @@ const charcoalsColorRangePalettes = {
     },
     charcoalsAndGreys: {
         light: {
+            text: '#000000',
             null: '#2A2A2A',
             undefined: '#3A3A3A',
             boolean: '#4A4A4A',
@@ -9370,6 +9759,7 @@ const charcoalsColorRangePalettes = {
             punctuation: '#3A3A3A'
         },
         dark: {
+            text: '#FFFFFF',
             null: '#B5B5B5',
             undefined: '#C5C5C5',
             boolean: '#D5D5D5',
@@ -9393,6 +9783,7 @@ const charcoalsColorRangePalettes = {
     },
     charcoalsAndCyans: {
         light: {
+            text: '#000000',
             null: '#3A3A3A',
             undefined: '#4A4A4A',
             boolean: '#5A5A5A',
@@ -9414,6 +9805,7 @@ const charcoalsColorRangePalettes = {
             punctuation: '#4A4A4A'
         },
         dark: {
+            text: '#FFFFFF',
             null: '#C5C5C5',
             undefined: '#D5D5D5',
             boolean: '#E5E5E5',
@@ -9437,6 +9829,7 @@ const charcoalsColorRangePalettes = {
     },
     charcoalsAndMagentas: {
         light: {
+            text: '#000000',
             null: '#3A3A3A',
             undefined: '#4A4A4A',
             boolean: '#5A5A5A',
@@ -9458,6 +9851,7 @@ const charcoalsColorRangePalettes = {
             punctuation: '#4A4A4A'
         },
         dark: {
+            text: '#FFFFFF',
             null: '#C5C5C5',
             undefined: '#D5D5D5',
             boolean: '#E5E5E5',
@@ -9481,6 +9875,7 @@ const charcoalsColorRangePalettes = {
     },
     charcoalsAndLightGrays: {
         light: {
+            text: '#000000',
             null: '#3A3A3A',
             undefined: '#4A4A4A',
             boolean: '#5A5A5A',
@@ -9502,6 +9897,7 @@ const charcoalsColorRangePalettes = {
             punctuation: '#4A4A4A'
         },
         dark: {
+            text: '#FFFFFF',
             null: '#C5C5C5',
             undefined: '#D5D5D5',
             boolean: '#E5E5E5',
@@ -9551,6 +9947,7 @@ const charcoalsColorRangePalettes = {
 const cyansColorRangePalettes = {
     cyansAndReds: {
         light: {
+            text: '#000000',
             null: '#1A4A5A',
             undefined: '#2A5A6A',
             boolean: '#0A5A7A',
@@ -9572,6 +9969,7 @@ const cyansColorRangePalettes = {
             punctuation: '#2A5A6A'
         },
         dark: {
+            text: '#FFFFFF',
             null: '#88DDFF',
             undefined: '#99EEFF',
             boolean: '#66EEFF',
@@ -9595,6 +9993,7 @@ const cyansColorRangePalettes = {
     },
     cyansAndOranges: {
         light: {
+            text: '#000000',
             null: '#1A4A5A',
             undefined: '#2A5A6A',
             boolean: '#0A5A7A',
@@ -9616,6 +10015,7 @@ const cyansColorRangePalettes = {
             punctuation: '#2A5A6A'
         },
         dark: {
+            text: '#FFFFFF',
             null: '#88DDFF',
             undefined: '#99EEFF',
             boolean: '#66EEFF',
@@ -9639,6 +10039,7 @@ const cyansColorRangePalettes = {
     },
     cyansAndYellows: {
         light: {
+            text: '#000000',
             null: '#1A4A5A',
             undefined: '#2A5A6A',
             boolean: '#0A5A7A',
@@ -9660,6 +10061,7 @@ const cyansColorRangePalettes = {
             punctuation: '#2A5A6A'
         },
         dark: {
+            text: '#FFFFFF',
             null: '#88DDFF',
             undefined: '#99EEFF',
             boolean: '#66EEFF',
@@ -9683,6 +10085,7 @@ const cyansColorRangePalettes = {
     },
     cyansAndGreens: {
         light: {
+            text: '#000000',
             null: '#1A4A5A',
             undefined: '#2A5A6A',
             boolean: '#0A5A7A',
@@ -9704,6 +10107,7 @@ const cyansColorRangePalettes = {
             punctuation: '#2A5A6A'
         },
         dark: {
+            text: '#FFFFFF',
             null: '#88DDFF',
             undefined: '#99EEFF',
             boolean: '#66EEFF',
@@ -9727,6 +10131,7 @@ const cyansColorRangePalettes = {
     },
     cyansAndBlues: {
         light: {
+            text: '#000000',
             null: '#1A4A5A',
             undefined: '#2A5A6A',
             boolean: '#0A5A7A',
@@ -9748,6 +10153,7 @@ const cyansColorRangePalettes = {
             punctuation: '#2A5A6A'
         },
         dark: {
+            text: '#FFFFFF',
             null: '#88DDFF',
             undefined: '#99EEFF',
             boolean: '#66EEFF',
@@ -9771,6 +10177,7 @@ const cyansColorRangePalettes = {
     },
     cyansAndPurples: {
         light: {
+            text: '#000000',
             null: '#1A4A5A',
             undefined: '#2A5A6A',
             boolean: '#0A5A7A',
@@ -9792,6 +10199,7 @@ const cyansColorRangePalettes = {
             punctuation: '#2A5A6A'
         },
         dark: {
+            text: '#FFFFFF',
             null: '#88DDFF',
             undefined: '#99EEFF',
             boolean: '#66EEFF',
@@ -9815,6 +10223,7 @@ const cyansColorRangePalettes = {
     },
     cyansAndBrowns: {
         light: {
+            text: '#000000',
             null: '#1A4A5A',
             undefined: '#2A5A6A',
             boolean: '#0A5A7A',
@@ -9836,6 +10245,7 @@ const cyansColorRangePalettes = {
             punctuation: '#2A5A6A'
         },
         dark: {
+            text: '#FFFFFF',
             null: '#88DDFF',
             undefined: '#99EEFF',
             boolean: '#66EEFF',
@@ -9859,6 +10269,7 @@ const cyansColorRangePalettes = {
     },
     cyansAndGreys: {
         light: {
+            text: '#000000',
             null: '#1A4A5A',
             undefined: '#2A5A6A',
             boolean: '#0A5A7A',
@@ -9880,6 +10291,7 @@ const cyansColorRangePalettes = {
             punctuation: '#2A5A6A'
         },
         dark: {
+            text: '#FFFFFF',
             null: '#88DDFF',
             undefined: '#99EEFF',
             boolean: '#66EEFF',
@@ -9903,6 +10315,7 @@ const cyansColorRangePalettes = {
     },
     cyansAndCharcoals: {
         light: {
+            text: '#000000',
             null: '#1A4A5A',
             undefined: '#2A5A6A',
             boolean: '#0A5A7A',
@@ -9924,6 +10337,7 @@ const cyansColorRangePalettes = {
             punctuation: '#2A5A6A'
         },
         dark: {
+            text: '#FFFFFF',
             null: '#88DDFF',
             undefined: '#99EEFF',
             boolean: '#66EEFF',
@@ -9947,6 +10361,7 @@ const cyansColorRangePalettes = {
     },
     cyansAndMagentas: {
         light: {
+            text: '#000000',
             null: '#1A4A5A',
             undefined: '#2A5A6A',
             boolean: '#0A5A7A',
@@ -9968,6 +10383,7 @@ const cyansColorRangePalettes = {
             punctuation: '#2A5A6A'
         },
         dark: {
+            text: '#FFFFFF',
             null: '#88DDFF',
             undefined: '#99EEFF',
             boolean: '#66EEFF',
@@ -9991,6 +10407,7 @@ const cyansColorRangePalettes = {
     },
     cyansAndLightGrays: {
         light: {
+            text: '#000000',
             null: '#1A4A5A',
             undefined: '#2A5A6A',
             boolean: '#0A5A7A',
@@ -10012,6 +10429,7 @@ const cyansColorRangePalettes = {
             punctuation: '#2A5A6A'
         },
         dark: {
+            text: '#FFFFFF',
             null: '#88DDFF',
             undefined: '#99EEFF',
             boolean: '#66EEFF',
@@ -10048,6 +10466,7 @@ const cyansColorRangePalettes = {
 const magentasColorRangePalettes = {
     magentasAndReds: {
         light: {
+            text: '#000000',
             null: '#7A3A5A',
             undefined: '#8A4A6A',
             boolean: '#AA2A5A',
@@ -10069,6 +10488,7 @@ const magentasColorRangePalettes = {
             punctuation: '#664466'
         },
         dark: {
+            text: '#FFFFFF',
             null: '#FFCCEE',
             undefined: '#FFDDFF',
             boolean: '#FF99DD',
@@ -10092,6 +10512,7 @@ const magentasColorRangePalettes = {
     },
     magentasAndOranges: {
         light: {
+            text: '#000000',
             null: '#7A3A4A',
             undefined: '#8A4A5A',
             boolean: '#AA2A5A',
@@ -10113,6 +10534,7 @@ const magentasColorRangePalettes = {
             punctuation: '#665555'
         },
         dark: {
+            text: '#FFFFFF',
             null: '#FFCCEE',
             undefined: '#FFDDFF',
             boolean: '#FF99DD',
@@ -10136,6 +10558,7 @@ const magentasColorRangePalettes = {
     },
     magentasAndYellows: {
         light: {
+            text: '#000000',
             null: '#7A3A5A',
             undefined: '#8A4A6A',
             boolean: '#AA2A5A',
@@ -10157,6 +10580,7 @@ const magentasColorRangePalettes = {
             punctuation: '#665566'
         },
         dark: {
+            text: '#FFFFFF',
             null: '#FFCCEE',
             undefined: '#FFDDFF',
             boolean: '#FF99DD',
@@ -10180,6 +10604,7 @@ const magentasColorRangePalettes = {
     },
     magentasAndGreens: {
         light: {
+            text: '#000000',
             null: '#7A3A5A',
             undefined: '#8A4A6A',
             boolean: '#AA2A5A',
@@ -10201,6 +10626,7 @@ const magentasColorRangePalettes = {
             punctuation: '#665577'
         },
         dark: {
+            text: '#FFFFFF',
             null: '#FFCCEE',
             undefined: '#FFDDFF',
             boolean: '#FF99DD',
@@ -10224,6 +10650,7 @@ const magentasColorRangePalettes = {
     },
     magentasAndBlues: {
         light: {
+            text: '#000000',
             null: '#6A3A5A',
             undefined: '#7A4A6A',
             boolean: '#AA2A6A',
@@ -10245,6 +10672,7 @@ const magentasColorRangePalettes = {
             punctuation: '#665588'
         },
         dark: {
+            text: '#FFFFFF',
             null: '#FFCCFF',
             undefined: '#FFDDFF',
             boolean: '#FF99EE',
@@ -10268,6 +10696,7 @@ const magentasColorRangePalettes = {
     },
     magentasAndPurples: {
         light: {
+            text: '#000000',
             null: '#6A3A6A',
             undefined: '#7A4A7A',
             boolean: '#AA2A7A',
@@ -10289,6 +10718,7 @@ const magentasColorRangePalettes = {
             punctuation: '#665599'
         },
         dark: {
+            text: '#FFFFFF',
             null: '#FFDDFF',
             undefined: '#FFEEFF',
             boolean: '#FFAAFF',
@@ -10312,6 +10742,7 @@ const magentasColorRangePalettes = {
     },
     magentasAndBrowns: {
         light: {
+            text: '#000000',
             null: '#6A3A5A',
             undefined: '#7A4A6A',
             boolean: '#AA2A5A',
@@ -10333,6 +10764,7 @@ const magentasColorRangePalettes = {
             punctuation: '#665577'
         },
         dark: {
+            text: '#FFFFFF',
             null: '#FFCCEE',
             undefined: '#FFDDFF',
             boolean: '#FF99DD',
@@ -10356,6 +10788,7 @@ const magentasColorRangePalettes = {
     },
     magentasAndGreys: {
         light: {
+            text: '#000000',
             null: '#6A3A5A',
             undefined: '#7A4A6A',
             boolean: '#AA2A5A',
@@ -10377,6 +10810,7 @@ const magentasColorRangePalettes = {
             punctuation: '#555566'
         },
         dark: {
+            text: '#FFFFFF',
             null: '#FFCCEE',
             undefined: '#FFDDFF',
             boolean: '#FF99DD',
@@ -10400,6 +10834,7 @@ const magentasColorRangePalettes = {
     },
     magentasAndCharcoals: {
         light: {
+            text: '#000000',
             null: '#5A2A5A',
             undefined: '#6A3A6A',
             boolean: '#AA1A5A',
@@ -10421,6 +10856,7 @@ const magentasColorRangePalettes = {
             punctuation: '#444455'
         },
         dark: {
+            text: '#FFFFFF',
             null: '#DDBBEE',
             undefined: '#EECCFF',
             boolean: '#FF88DD',
@@ -10444,6 +10880,7 @@ const magentasColorRangePalettes = {
     },
     magentasAndCyans: {
         light: {
+            text: '#000000',
             null: '#6A3A5A',
             undefined: '#7A4A6A',
             boolean: '#AA2A6A',
@@ -10465,6 +10902,7 @@ const magentasColorRangePalettes = {
             punctuation: '#664488'
         },
         dark: {
+            text: '#FFFFFF',
             null: '#FFCCFF',
             undefined: '#FFDDFF',
             boolean: '#FF99EE',
@@ -10488,6 +10926,7 @@ const magentasColorRangePalettes = {
     },
     magentasAndLightGrays: {
         light: {
+            text: '#000000',
             null: '#7A4A6A',
             undefined: '#8A5A7A',
             boolean: '#AA3A6A',
@@ -10509,6 +10948,7 @@ const magentasColorRangePalettes = {
             punctuation: '#666677'
         },
         dark: {
+            text: '#FFFFFF',
             null: '#FFDDFF',
             undefined: '#FFEEFF',
             boolean: '#FFAAEE',
@@ -10558,6 +10998,7 @@ const magentasColorRangePalettes = {
 const lightGraysColorRangePalettes = {
     lightGraysAndReds: {
         light: {
+            text: '#000000',
             null: '#8A8A8A',
             undefined: '#9A9A9A',
             boolean: '#7A7A7A',
@@ -10579,6 +11020,7 @@ const lightGraysColorRangePalettes = {
             punctuation: '#858585'
         },
         dark: {
+            text: '#FFFFFF',
             null: '#DADADA',
             undefined: '#EAEAEA',
             boolean: '#F5F5F5',
@@ -10602,6 +11044,7 @@ const lightGraysColorRangePalettes = {
     },
     lightGraysAndOranges: {
         light: {
+            text: '#000000',
             null: '#8A8A8A',
             undefined: '#9A9A9A',
             boolean: '#7A7A7A',
@@ -10623,6 +11066,7 @@ const lightGraysColorRangePalettes = {
             punctuation: '#858585'
         },
         dark: {
+            text: '#FFFFFF',
             null: '#DADADA',
             undefined: '#EAEAEA',
             boolean: '#F5F5F5',
@@ -10646,6 +11090,7 @@ const lightGraysColorRangePalettes = {
     },
     lightGraysAndYellows: {
         light: {
+            text: '#000000',
             null: '#8A8A8A',
             undefined: '#9A9A9A',
             boolean: '#7A7A7A',
@@ -10667,6 +11112,7 @@ const lightGraysColorRangePalettes = {
             punctuation: '#858585'
         },
         dark: {
+            text: '#FFFFFF',
             null: '#DADADA',
             undefined: '#EAEAEA',
             boolean: '#F5F5F5',
@@ -10690,6 +11136,7 @@ const lightGraysColorRangePalettes = {
     },
     lightGraysAndGreens: {
         light: {
+            text: '#000000',
             null: '#8A8A8A',
             undefined: '#9A9A9A',
             boolean: '#7A7A7A',
@@ -10711,6 +11158,7 @@ const lightGraysColorRangePalettes = {
             punctuation: '#858585'
         },
         dark: {
+            text: '#FFFFFF',
             null: '#DADADA',
             undefined: '#EAEAEA',
             boolean: '#F5F5F5',
@@ -10734,6 +11182,7 @@ const lightGraysColorRangePalettes = {
     },
     lightGraysAndBlues: {
         light: {
+            text: '#000000',
             null: '#8A8A8A',
             undefined: '#9A9A9A',
             boolean: '#7A7A7A',
@@ -10755,6 +11204,7 @@ const lightGraysColorRangePalettes = {
             punctuation: '#858585'
         },
         dark: {
+            text: '#FFFFFF',
             null: '#DADADA',
             undefined: '#EAEAEA',
             boolean: '#F5F5F5',
@@ -10778,6 +11228,7 @@ const lightGraysColorRangePalettes = {
     },
     lightGraysAndPurples: {
         light: {
+            text: '#000000',
             null: '#8A8A8A',
             undefined: '#9A9A9A',
             boolean: '#7A7A7A',
@@ -10799,6 +11250,7 @@ const lightGraysColorRangePalettes = {
             punctuation: '#858585'
         },
         dark: {
+            text: '#FFFFFF',
             null: '#DADADA',
             undefined: '#EAEAEA',
             boolean: '#F5F5F5',
@@ -10822,6 +11274,7 @@ const lightGraysColorRangePalettes = {
     },
     lightGraysAndBrowns: {
         light: {
+            text: '#000000',
             null: '#8A8A8A',
             undefined: '#9A9A9A',
             boolean: '#7A7A7A',
@@ -10843,6 +11296,7 @@ const lightGraysColorRangePalettes = {
             punctuation: '#858585'
         },
         dark: {
+            text: '#FFFFFF',
             null: '#DADADA',
             undefined: '#EAEAEA',
             boolean: '#F5F5F5',
@@ -10866,6 +11320,7 @@ const lightGraysColorRangePalettes = {
     },
     lightGraysAndGreys: {
         light: {
+            text: '#000000',
             null: '#8A8A8A',
             undefined: '#9A9A9A',
             boolean: '#7A7A7A',
@@ -10887,6 +11342,7 @@ const lightGraysColorRangePalettes = {
             punctuation: '#858585'
         },
         dark: {
+            text: '#FFFFFF',
             null: '#DADADA',
             undefined: '#EAEAEA',
             boolean: '#F5F5F5',
@@ -10910,6 +11366,7 @@ const lightGraysColorRangePalettes = {
     },
     lightGraysAndCharcoals: {
         light: {
+            text: '#000000',
             null: '#8A8A8A',
             undefined: '#9A9A9A',
             boolean: '#7A7A7A',
@@ -10931,6 +11388,7 @@ const lightGraysColorRangePalettes = {
             punctuation: '#858585'
         },
         dark: {
+            text: '#FFFFFF',
             null: '#DADADA',
             undefined: '#EAEAEA',
             boolean: '#F5F5F5',
@@ -10954,6 +11412,7 @@ const lightGraysColorRangePalettes = {
     },
     lightGraysAndCyans: {
         light: {
+            text: '#000000',
             null: '#8A8A8A',
             undefined: '#9A9A9A',
             boolean: '#7A7A7A',
@@ -10975,6 +11434,7 @@ const lightGraysColorRangePalettes = {
             punctuation: '#858585'
         },
         dark: {
+            text: '#FFFFFF',
             null: '#DADADA',
             undefined: '#EAEAEA',
             boolean: '#F5F5F5',
@@ -10998,6 +11458,7 @@ const lightGraysColorRangePalettes = {
     },
     lightGraysAndMagentas: {
         light: {
+            text: '#000000',
             null: '#8A8A8A',
             undefined: '#9A9A9A',
             boolean: '#7A7A7A',
@@ -11019,6 +11480,7 @@ const lightGraysColorRangePalettes = {
             punctuation: '#858585'
         },
         dark: {
+            text: '#FFFFFF',
             null: '#DADADA',
             undefined: '#EAEAEA',
             boolean: '#F5F5F5',
@@ -11348,6 +11810,22 @@ const ansi_policy = {
     newline: '\n'
 };
 /**
+ * HTML paint policy for web browser output
+ * Wraps content in span tags with inline CSS color styling and uses <br/> for newlines
+ *
+ * @example
+ * ```typescript
+ * const html = html_policy.wrap('#FF5733', 'Hello World');
+ * console.log(html); // Outputs '<span style="color: #FF5733">Hello World</span>'
+ * ```
+ */
+const html_policy = {
+    wrap: (color, content) => {
+        return `<span style="color: ${color}">${content}</span>`;
+    },
+    newline: '<br/>'
+};
+/**
  * Helper function to safely get a color from a palette with validation
  * Throws a clear error if the color is missing
  */
@@ -11535,6 +12013,32 @@ function paint(node, policy, options) {
  */
 const paint_ansi = (node, options) => {
     return paint(node, ansi_policy, options);
+};
+/**
+ * Paints an AST node with colors and formatting using HTML span tags
+ * Convenience wrapper around paint() that uses the html_policy
+ *
+ * @param {ASTNode} node - The AST node to paint
+ * @param {HighlightOptions} [options] - Optional configuration. Defaults will be used for any missing values.
+ * @returns {string} The painted string representation of the node with HTML span tags and inline CSS
+ *
+ * @example
+ * ```typescript
+ * const ast = parse_string('{"name": "John"}');
+ * const painted = paint_html(ast); // Uses HTML policy with defaults
+ * document.body.innerHTML = painted;
+ * ```
+ *
+ * @example
+ * ```typescript
+ * const ast = parse_string('{"name": "John"}');
+ * const options = { palette: forestPalette };
+ * const painted = paint_html(ast, options);
+ * document.body.innerHTML = '<pre>' + painted + '</pre>';
+ * ```
+ */
+const paint_html = (node, options) => {
+    return paint(node, html_policy, options);
 };
 /**
  * Tokenizer for JSON/JavaScript values
@@ -11879,6 +12383,7 @@ exports.greensColorRangePalettes = greensColorRangePalettes;
 exports.greysColorRangePalettes = greysColorRangePalettes;
 exports.highlight_string = highlight_string;
 exports.highlight_value = highlight_value;
+exports.html_policy = html_policy;
 exports.lightGraysColorRangePalettes = lightGraysColorRangePalettes;
 exports.magentasColorRangePalettes = magentasColorRangePalettes;
 exports.monochromacyPalettes = monochromacyPalettes;
@@ -11886,6 +12391,7 @@ exports.naturePalettes = naturePalettes;
 exports.orangesColorRangePalettes = orangesColorRangePalettes;
 exports.paint = paint;
 exports.paint_ansi = paint_ansi;
+exports.paint_html = paint_html;
 exports.palettes = palettes;
 exports.parse_string = parse_string;
 exports.parse_value = parse_value;

@@ -25,6 +25,7 @@
 export const cyansColorRangePalettes = {
   cyansAndReds: {
     light: {
+      text: '#000000',
       null: '#1A4A5A',
       undefined: '#2A5A6A',
       boolean: '#0A5A7A',
@@ -46,6 +47,7 @@ export const cyansColorRangePalettes = {
       punctuation: '#2A5A6A'
     },
     dark: {
+      text: '#FFFFFF',
       null: '#88DDFF',
       undefined: '#99EEFF',
       boolean: '#66EEFF',
@@ -69,6 +71,7 @@ export const cyansColorRangePalettes = {
   },
   cyansAndOranges: {
     light: {
+      text: '#000000',
       null: '#1A4A5A',
       undefined: '#2A5A6A',
       boolean: '#0A5A7A',
@@ -90,6 +93,7 @@ export const cyansColorRangePalettes = {
       punctuation: '#2A5A6A'
     },
     dark: {
+      text: '#FFFFFF',
       null: '#88DDFF',
       undefined: '#99EEFF',
       boolean: '#66EEFF',
@@ -113,6 +117,7 @@ export const cyansColorRangePalettes = {
   },
   cyansAndYellows: {
     light: {
+      text: '#000000',
       null: '#1A4A5A',
       undefined: '#2A5A6A',
       boolean: '#0A5A7A',
@@ -134,6 +139,7 @@ export const cyansColorRangePalettes = {
       punctuation: '#2A5A6A'
     },
     dark: {
+      text: '#FFFFFF',
       null: '#88DDFF',
       undefined: '#99EEFF',
       boolean: '#66EEFF',
@@ -157,6 +163,7 @@ export const cyansColorRangePalettes = {
   },
   cyansAndGreens: {
     light: {
+      text: '#000000',
       null: '#1A4A5A',
       undefined: '#2A5A6A',
       boolean: '#0A5A7A',
@@ -178,6 +185,7 @@ export const cyansColorRangePalettes = {
       punctuation: '#2A5A6A'
     },
     dark: {
+      text: '#FFFFFF',
       null: '#88DDFF',
       undefined: '#99EEFF',
       boolean: '#66EEFF',
@@ -201,6 +209,7 @@ export const cyansColorRangePalettes = {
   },
   cyansAndBlues: {
     light: {
+      text: '#000000',
       null: '#1A4A5A',
       undefined: '#2A5A6A',
       boolean: '#0A5A7A',
@@ -222,6 +231,7 @@ export const cyansColorRangePalettes = {
       punctuation: '#2A5A6A'
     },
     dark: {
+      text: '#FFFFFF',
       null: '#88DDFF',
       undefined: '#99EEFF',
       boolean: '#66EEFF',
@@ -245,6 +255,7 @@ export const cyansColorRangePalettes = {
   },
   cyansAndPurples: {
     light: {
+      text: '#000000',
       null: '#1A4A5A',
       undefined: '#2A5A6A',
       boolean: '#0A5A7A',
@@ -266,6 +277,7 @@ export const cyansColorRangePalettes = {
       punctuation: '#2A5A6A'
     },
     dark: {
+      text: '#FFFFFF',
       null: '#88DDFF',
       undefined: '#99EEFF',
       boolean: '#66EEFF',
@@ -289,6 +301,7 @@ export const cyansColorRangePalettes = {
   },
   cyansAndBrowns: {
     light: {
+      text: '#000000',
       null: '#1A4A5A',
       undefined: '#2A5A6A',
       boolean: '#0A5A7A',
@@ -310,6 +323,7 @@ export const cyansColorRangePalettes = {
       punctuation: '#2A5A6A'
     },
     dark: {
+      text: '#FFFFFF',
       null: '#88DDFF',
       undefined: '#99EEFF',
       boolean: '#66EEFF',
@@ -333,6 +347,7 @@ export const cyansColorRangePalettes = {
   },
   cyansAndGreys: {
     light: {
+      text: '#000000',
       null: '#1A4A5A',
       undefined: '#2A5A6A',
       boolean: '#0A5A7A',
@@ -354,6 +369,7 @@ export const cyansColorRangePalettes = {
       punctuation: '#2A5A6A'
     },
     dark: {
+      text: '#FFFFFF',
       null: '#88DDFF',
       undefined: '#99EEFF',
       boolean: '#66EEFF',
@@ -377,6 +393,7 @@ export const cyansColorRangePalettes = {
   },
   cyansAndCharcoals: {
     light: {
+      text: '#000000',
       null: '#1A4A5A',
       undefined: '#2A5A6A',
       boolean: '#0A5A7A',
@@ -398,6 +415,7 @@ export const cyansColorRangePalettes = {
       punctuation: '#2A5A6A'
     },
     dark: {
+      text: '#FFFFFF',
       null: '#88DDFF',
       undefined: '#99EEFF',
       boolean: '#66EEFF',
@@ -421,6 +439,7 @@ export const cyansColorRangePalettes = {
   },
   cyansAndMagentas: {
     light: {
+      text: '#000000',
       null: '#1A4A5A',
       undefined: '#2A5A6A',
       boolean: '#0A5A7A',
@@ -442,6 +461,7 @@ export const cyansColorRangePalettes = {
       punctuation: '#2A5A6A'
     },
     dark: {
+      text: '#FFFFFF',
       null: '#88DDFF',
       undefined: '#99EEFF',
       boolean: '#66EEFF',
@@ -465,6 +485,7 @@ export const cyansColorRangePalettes = {
   },
   cyansAndLightGrays: {
     light: {
+      text: '#000000',
       null: '#1A4A5A',
       undefined: '#2A5A6A',
       boolean: '#0A5A7A',
@@ -486,6 +507,7 @@ export const cyansColorRangePalettes = {
       punctuation: '#2A5A6A'
     },
     dark: {
+      text: '#FFFFFF',
       null: '#88DDFF',
       undefined: '#99EEFF',
       boolean: '#66EEFF',

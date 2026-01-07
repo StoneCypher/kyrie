@@ -5,6 +5,7 @@
 export declare const achromatopsiaPalettes: {
     readonly achromatopsia: {
         readonly light: {
+            readonly text: "#000000";
             readonly null: "#3B3B3B";
             readonly undefined: "#4B4B4B";
             readonly boolean: "#2B2B2B";
@@ -26,6 +27,7 @@ export declare const achromatopsiaPalettes: {
             readonly punctuation: "#4B4B4B";
         };
         readonly dark: {
+            readonly text: "#FFFFFF";
             readonly null: "#C6C6C6";
             readonly undefined: "#D6D6D6";
             readonly boolean: "#B0B0B0";

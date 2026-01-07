@@ -12,6 +12,7 @@
 export const orangesColorRangePalettes = {
   orangesAndReds: {
     light: {
+      text: '#000000',
       null: '#8A4A2A',
       undefined: '#9A5A3A',
       boolean: '#CC5500',
@@ -33,6 +34,7 @@ export const orangesColorRangePalettes = {
       punctuation: '#7A4A2A'
     },
     dark: {
+      text: '#FFFFFF',
       null: '#FFBB88',
       undefined: '#FFCC99',
       boolean: '#FFAA55',
@@ -56,6 +58,7 @@ export const orangesColorRangePalettes = {
   },
   orangesAndYellows: {
     light: {
+      text: '#000000',
       null: '#8A6A2A',
       undefined: '#9A7A3A',
       boolean: '#CC8800',
@@ -77,6 +80,7 @@ export const orangesColorRangePalettes = {
       punctuation: '#7A5A2A'
     },
     dark: {
+      text: '#FFFFFF',
       null: '#FFCC88',
       undefined: '#FFDD99',
       boolean: '#FFBB66',
@@ -100,6 +104,7 @@ export const orangesColorRangePalettes = {
   },
   orangesAndGreens: {
     light: {
+      text: '#000000',
       null: '#6A5A3A',
       undefined: '#7A6A4A',
       boolean: '#CC6600',
@@ -121,6 +126,7 @@ export const orangesColorRangePalettes = {
       punctuation: '#5A4A3A'
     },
     dark: {
+      text: '#FFFFFF',
       null: '#DDCC99',
       undefined: '#EEDDAA',
       boolean: '#FFAA44',
@@ -144,6 +150,7 @@ export const orangesColorRangePalettes = {
   },
   orangesAndBlues: {
     light: {
+      text: '#000000',
       null: '#5A4A5A',
       undefined: '#6A5A6A',
       boolean: '#CC6600',
@@ -165,6 +172,7 @@ export const orangesColorRangePalettes = {
       punctuation: '#4A3A4A'
     },
     dark: {
+      text: '#FFFFFF',
       null: '#DDCCCC',
       undefined: '#EEDDDD',
       boolean: '#FFAA44',
@@ -188,6 +196,7 @@ export const orangesColorRangePalettes = {
   },
   orangesAndPurples: {
     light: {
+      text: '#000000',
       null: '#6A4A6A',
       undefined: '#7A5A7A',
       boolean: '#CC6600',
@@ -209,6 +218,7 @@ export const orangesColorRangePalettes = {
       punctuation: '#5A3A5A'
     },
     dark: {
+      text: '#FFFFFF',
       null: '#EECCDD',
       undefined: '#FFDDEE',
       boolean: '#FFAA44',
@@ -232,6 +242,7 @@ export const orangesColorRangePalettes = {
   },
   orangesAndBrowns: {
     light: {
+      text: '#000000',
       null: '#6A4A2A',
       undefined: '#7A5A3A',
       boolean: '#CC6600',
@@ -253,6 +264,7 @@ export const orangesColorRangePalettes = {
       punctuation: '#5A3A2A'
     },
     dark: {
+      text: '#FFFFFF',
       null: '#DDBB99',
       undefined: '#EECCAA',
       boolean: '#FFAA44',
@@ -276,6 +288,7 @@ export const orangesColorRangePalettes = {
   },
   orangesAndGreys: {
     light: {
+      text: '#000000',
       null: '#6A5A4A',
       undefined: '#7A6A5A',
       boolean: '#CC6600',
@@ -297,6 +310,7 @@ export const orangesColorRangePalettes = {
       punctuation: '#5A5A5A'
     },
     dark: {
+      text: '#FFFFFF',
       null: '#DDCCBB',
       undefined: '#EEDDCC',
       boolean: '#FFAA44',
@@ -320,6 +334,7 @@ export const orangesColorRangePalettes = {
   },
   orangesAndCharcoals: {
     light: {
+      text: '#000000',
       null: '#4A3A2A',
       undefined: '#5A4A3A',
       boolean: '#CC6600',
@@ -341,6 +356,7 @@ export const orangesColorRangePalettes = {
       punctuation: '#3A2A2A'
     },
     dark: {
+      text: '#FFFFFF',
       null: '#CCBB99',
       undefined: '#DDCCAA',
       boolean: '#FFAA44',
@@ -364,6 +380,7 @@ export const orangesColorRangePalettes = {
   },
   orangesAndCyans: {
     light: {
+      text: '#000000',
       null: '#5A5A5A',
       undefined: '#6A6A6A',
       boolean: '#CC6600',
@@ -385,6 +402,7 @@ export const orangesColorRangePalettes = {
       punctuation: '#4A4A4A'
     },
     dark: {
+      text: '#FFFFFF',
       null: '#DDDDDD',
       undefined: '#EEEEEE',
       boolean: '#FFAA44',
@@ -408,6 +426,7 @@ export const orangesColorRangePalettes = {
   },
   orangesAndMagentas: {
     light: {
+      text: '#000000',
       null: '#6A4A5A',
       undefined: '#7A5A6A',
       boolean: '#CC6600',
@@ -429,6 +448,7 @@ export const orangesColorRangePalettes = {
       punctuation: '#5A3A4A'
     },
     dark: {
+      text: '#FFFFFF',
       null: '#EECCDD',
       undefined: '#FFDDEE',
       boolean: '#FFAA44',
@@ -452,6 +472,7 @@ export const orangesColorRangePalettes = {
   },
   orangesAndLightGrays: {
     light: {
+      text: '#000000',
       null: '#7A6A5A',
       undefined: '#8A7A6A',
       boolean: '#CC6600',
@@ -473,6 +494,7 @@ export const orangesColorRangePalettes = {
       punctuation: '#6A5A4A'
     },
     dark: {
+      text: '#FFFFFF',
       null: '#EEDDCC',
       undefined: '#FFEEEE',
       boolean: '#FFAA44',

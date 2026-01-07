@@ -8,6 +8,7 @@
 export declare const bluesColorRangePalettes: {
     readonly bluesAndReds: {
         readonly light: {
+            readonly text: "#000000";
             readonly null: "#1A3A5A";
             readonly undefined: "#2A4A6A";
             readonly boolean: "#0A4A7A";
@@ -29,6 +30,7 @@ export declare const bluesColorRangePalettes: {
             readonly punctuation: "#2A4A6A";
         };
         readonly dark: {
+            readonly text: "#FFFFFF";
             readonly null: "#88CCFF";
             readonly undefined: "#99DDFF";
             readonly boolean: "#66DDFF";
@@ -52,6 +54,7 @@ export declare const bluesColorRangePalettes: {
     };
     readonly bluesAndOranges: {
         readonly light: {
+            readonly text: "#000000";
             readonly null: "#1A3A5A";
             readonly undefined: "#2A4A6A";
             readonly boolean: "#0A4A7A";
@@ -73,6 +76,7 @@ export declare const bluesColorRangePalettes: {
             readonly punctuation: "#2A4A6A";
         };
         readonly dark: {
+            readonly text: "#FFFFFF";
             readonly null: "#88CCFF";
             readonly undefined: "#99DDFF";
             readonly boolean: "#66DDFF";
@@ -96,6 +100,7 @@ export declare const bluesColorRangePalettes: {
     };
     readonly bluesAndYellows: {
         readonly light: {
+            readonly text: "#000000";
             readonly null: "#1A3A5A";
             readonly undefined: "#2A4A6A";
             readonly boolean: "#0A4A7A";
@@ -117,6 +122,7 @@ export declare const bluesColorRangePalettes: {
             readonly punctuation: "#2A4A6A";
         };
         readonly dark: {
+            readonly text: "#FFFFFF";
             readonly null: "#88CCFF";
             readonly undefined: "#99DDFF";
             readonly boolean: "#66DDFF";
@@ -140,6 +146,7 @@ export declare const bluesColorRangePalettes: {
     };
     readonly bluesAndGreens: {
         readonly light: {
+            readonly text: "#000000";
             readonly null: "#1A3A5A";
             readonly undefined: "#2A4A6A";
             readonly boolean: "#0A4A7A";
@@ -161,6 +168,7 @@ export declare const bluesColorRangePalettes: {
             readonly punctuation: "#2A4A6A";
         };
         readonly dark: {
+            readonly text: "#FFFFFF";
             readonly null: "#88CCFF";
             readonly undefined: "#99DDFF";
             readonly boolean: "#66DDFF";
@@ -184,6 +192,7 @@ export declare const bluesColorRangePalettes: {
     };
     readonly bluesAndPurples: {
         readonly light: {
+            readonly text: "#000000";
             readonly null: "#1A3A5A";
             readonly undefined: "#2A4A6A";
             readonly boolean: "#0A4A7A";
@@ -205,6 +214,7 @@ export declare const bluesColorRangePalettes: {
             readonly punctuation: "#2A4A6A";
         };
         readonly dark: {
+            readonly text: "#FFFFFF";
             readonly null: "#88CCFF";
             readonly undefined: "#99DDFF";
             readonly boolean: "#66DDFF";
@@ -228,6 +238,7 @@ export declare const bluesColorRangePalettes: {
     };
     readonly bluesAndBrowns: {
         readonly light: {
+            readonly text: "#000000";
             readonly null: "#1A3A5A";
             readonly undefined: "#2A4A6A";
             readonly boolean: "#0A4A7A";
@@ -249,6 +260,7 @@ export declare const bluesColorRangePalettes: {
             readonly punctuation: "#2A4A6A";
         };
         readonly dark: {
+            readonly text: "#FFFFFF";
             readonly null: "#88CCFF";
             readonly undefined: "#99DDFF";
             readonly boolean: "#66DDFF";
@@ -272,6 +284,7 @@ export declare const bluesColorRangePalettes: {
     };
     readonly bluesAndGreys: {
         readonly light: {
+            readonly text: "#000000";
             readonly null: "#1A3A5A";
             readonly undefined: "#2A4A6A";
             readonly boolean: "#0A4A7A";
@@ -293,6 +306,7 @@ export declare const bluesColorRangePalettes: {
             readonly punctuation: "#2A4A6A";
         };
         readonly dark: {
+            readonly text: "#FFFFFF";
             readonly null: "#88CCFF";
             readonly undefined: "#99DDFF";
             readonly boolean: "#66DDFF";
@@ -316,6 +330,7 @@ export declare const bluesColorRangePalettes: {
     };
     readonly bluesAndCharcoals: {
         readonly light: {
+            readonly text: "#000000";
             readonly null: "#1A3A5A";
             readonly undefined: "#2A4A6A";
             readonly boolean: "#0A4A7A";
@@ -337,6 +352,7 @@ export declare const bluesColorRangePalettes: {
             readonly punctuation: "#2A4A6A";
         };
         readonly dark: {
+            readonly text: "#FFFFFF";
             readonly null: "#88CCFF";
             readonly undefined: "#99DDFF";
             readonly boolean: "#66DDFF";
@@ -360,6 +376,7 @@ export declare const bluesColorRangePalettes: {
     };
     readonly bluesAndCyans: {
         readonly light: {
+            readonly text: "#000000";
             readonly null: "#1A3A5A";
             readonly undefined: "#2A4A6A";
             readonly boolean: "#0A4A7A";
@@ -381,6 +398,7 @@ export declare const bluesColorRangePalettes: {
             readonly punctuation: "#2A4A6A";
         };
         readonly dark: {
+            readonly text: "#FFFFFF";
             readonly null: "#88CCFF";
             readonly undefined: "#99DDFF";
             readonly boolean: "#66DDFF";
@@ -404,6 +422,7 @@ export declare const bluesColorRangePalettes: {
     };
     readonly bluesAndMagentas: {
         readonly light: {
+            readonly text: "#000000";
             readonly null: "#1A3A5A";
             readonly undefined: "#2A4A6A";
             readonly boolean: "#0A4A7A";
@@ -425,6 +444,7 @@ export declare const bluesColorRangePalettes: {
             readonly punctuation: "#2A4A6A";
         };
         readonly dark: {
+            readonly text: "#FFFFFF";
             readonly null: "#88CCFF";
             readonly undefined: "#99DDFF";
             readonly boolean: "#66DDFF";
@@ -448,6 +468,7 @@ export declare const bluesColorRangePalettes: {
     };
     readonly bluesAndLightGrays: {
         readonly light: {
+            readonly text: "#000000";
             readonly null: "#1A3A5A";
             readonly undefined: "#2A4A6A";
             readonly boolean: "#0A4A7A";
@@ -469,6 +490,7 @@ export declare const bluesColorRangePalettes: {
             readonly punctuation: "#2A4A6A";
         };
         readonly dark: {
+            readonly text: "#FFFFFF";
             readonly null: "#88CCFF";
             readonly undefined: "#99DDFF";
             readonly boolean: "#66DDFF";

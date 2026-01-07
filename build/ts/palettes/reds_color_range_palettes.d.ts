@@ -11,6 +11,7 @@
 export declare const redsColorRangePalettes: {
     readonly redsAndOranges: {
         readonly light: {
+            readonly text: "#000000";
             readonly null: "#8A3A3A";
             readonly undefined: "#9A4A4A";
             readonly boolean: "#AA2A2A";
@@ -32,6 +33,7 @@ export declare const redsColorRangePalettes: {
             readonly punctuation: "#774444";
         };
         readonly dark: {
+            readonly text: "#FFFFFF";
             readonly null: "#FFBBBB";
             readonly undefined: "#FFCCCC";
             readonly boolean: "#FF9999";
@@ -55,6 +57,7 @@ export declare const redsColorRangePalettes: {
     };
     readonly redsAndYellows: {
         readonly light: {
+            readonly text: "#000000";
             readonly null: "#8A4A3A";
             readonly undefined: "#9A5A4A";
             readonly boolean: "#AA2A1A";
@@ -76,6 +79,7 @@ export declare const redsColorRangePalettes: {
             readonly punctuation: "#774433";
         };
         readonly dark: {
+            readonly text: "#FFFFFF";
             readonly null: "#FFCCAA";
             readonly undefined: "#FFDDBB";
             readonly boolean: "#FF9988";
@@ -99,6 +103,7 @@ export declare const redsColorRangePalettes: {
     };
     readonly redsAndGreens: {
         readonly light: {
+            readonly text: "#000000";
             readonly null: "#7A4A3A";
             readonly undefined: "#8A5A4A";
             readonly boolean: "#AA2A2A";
@@ -120,6 +125,7 @@ export declare const redsColorRangePalettes: {
             readonly punctuation: "#775544";
         };
         readonly dark: {
+            readonly text: "#FFFFFF";
             readonly null: "#EECCBB";
             readonly undefined: "#FFDDCC";
             readonly boolean: "#FF9999";
@@ -143,6 +149,7 @@ export declare const redsColorRangePalettes: {
     };
     readonly redsAndBlues: {
         readonly light: {
+            readonly text: "#000000";
             readonly null: "#6A3A4A";
             readonly undefined: "#7A4A5A";
             readonly boolean: "#AA2A4A";
@@ -164,6 +171,7 @@ export declare const redsColorRangePalettes: {
             readonly punctuation: "#664455";
         };
         readonly dark: {
+            readonly text: "#FFFFFF";
             readonly null: "#EECCDD";
             readonly undefined: "#FFDDEE";
             readonly boolean: "#FF99BB";
@@ -187,6 +195,7 @@ export declare const redsColorRangePalettes: {
     };
     readonly redsAndPurples: {
         readonly light: {
+            readonly text: "#000000";
             readonly null: "#7A3A5A";
             readonly undefined: "#8A4A6A";
             readonly boolean: "#AA2A5A";
@@ -208,6 +217,7 @@ export declare const redsColorRangePalettes: {
             readonly punctuation: "#664466";
         };
         readonly dark: {
+            readonly text: "#FFFFFF";
             readonly null: "#FFCCEE";
             readonly undefined: "#FFDDFF";
             readonly boolean: "#FF99DD";
@@ -231,6 +241,7 @@ export declare const redsColorRangePalettes: {
     };
     readonly redsAndBrowns: {
         readonly light: {
+            readonly text: "#000000";
             readonly null: "#6A3A2A";
             readonly undefined: "#7A4A3A";
             readonly boolean: "#AA2A1A";
@@ -252,6 +263,7 @@ export declare const redsColorRangePalettes: {
             readonly punctuation: "#664433";
         };
         readonly dark: {
+            readonly text: "#FFFFFF";
             readonly null: "#EECCBB";
             readonly undefined: "#FFDDCC";
             readonly boolean: "#FF9988";
@@ -275,6 +287,7 @@ export declare const redsColorRangePalettes: {
     };
     readonly redsAndGreys: {
         readonly light: {
+            readonly text: "#000000";
             readonly null: "#6A3A3A";
             readonly undefined: "#7A4A4A";
             readonly boolean: "#AA2A2A";
@@ -296,6 +309,7 @@ export declare const redsColorRangePalettes: {
             readonly punctuation: "#555555";
         };
         readonly dark: {
+            readonly text: "#FFFFFF";
             readonly null: "#EECCCC";
             readonly undefined: "#FFDDDD";
             readonly boolean: "#FF9999";
@@ -319,6 +333,7 @@ export declare const redsColorRangePalettes: {
     };
     readonly redsAndCharcoals: {
         readonly light: {
+            readonly text: "#000000";
             readonly null: "#5A2A2A";
             readonly undefined: "#6A3A3A";
             readonly boolean: "#AA1A1A";
@@ -340,6 +355,7 @@ export declare const redsColorRangePalettes: {
             readonly punctuation: "#444444";
         };
         readonly dark: {
+            readonly text: "#FFFFFF";
             readonly null: "#DDBBBB";
             readonly undefined: "#EECCCC";
             readonly boolean: "#FF8888";
@@ -363,6 +379,7 @@ export declare const redsColorRangePalettes: {
     };
     readonly redsAndCyans: {
         readonly light: {
+            readonly text: "#000000";
             readonly null: "#6A3A4A";
             readonly undefined: "#7A4A5A";
             readonly boolean: "#AA2A3A";
@@ -384,6 +401,7 @@ export declare const redsColorRangePalettes: {
             readonly punctuation: "#664455";
         };
         readonly dark: {
+            readonly text: "#FFFFFF";
             readonly null: "#EECCDD";
             readonly undefined: "#FFDDEE";
             readonly boolean: "#FF99AA";
@@ -407,6 +425,7 @@ export declare const redsColorRangePalettes: {
     };
     readonly redsAndMagentas: {
         readonly light: {
+            readonly text: "#000000";
             readonly null: "#7A3A5A";
             readonly undefined: "#8A4A6A";
             readonly boolean: "#AA2A5A";
@@ -428,6 +447,7 @@ export declare const redsColorRangePalettes: {
             readonly punctuation: "#664466";
         };
         readonly dark: {
+            readonly text: "#FFFFFF";
             readonly null: "#FFCCEE";
             readonly undefined: "#FFDDFF";
             readonly boolean: "#FF99DD";
@@ -451,6 +471,7 @@ export declare const redsColorRangePalettes: {
     };
     readonly redsAndLightGrays: {
         readonly light: {
+            readonly text: "#000000";
             readonly null: "#7A4A4A";
             readonly undefined: "#8A5A5A";
             readonly boolean: "#AA3A3A";
@@ -472,6 +493,7 @@ export declare const redsColorRangePalettes: {
             readonly punctuation: "#666666";
         };
         readonly dark: {
+            readonly text: "#FFFFFF";
             readonly null: "#FFDDDD";
             readonly undefined: "#FFEEEE";
             readonly boolean: "#FFAAAA";

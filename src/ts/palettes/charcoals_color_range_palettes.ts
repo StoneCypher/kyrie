@@ -15,6 +15,7 @@ import type { ColorPalette } from '../index.js';
 export const charcoalsColorRangePalettes = {
   charcoalsAndReds: {
     light: {
+      text: '#000000',
       null: '#3A3A3A',
       undefined: '#4A4A4A',
       boolean: '#5A5A5A',
@@ -36,6 +37,7 @@ export const charcoalsColorRangePalettes = {
       punctuation: '#4A4A4A'
     },
     dark: {
+      text: '#FFFFFF',
       null: '#C5C5C5',
       undefined: '#D5D5D5',
       boolean: '#E5E5E5',
@@ -60,6 +62,7 @@ export const charcoalsColorRangePalettes = {
 
   charcoalsAndOranges: {
     light: {
+      text: '#000000',
       null: '#3A3A3A',
       undefined: '#4A4A4A',
       boolean: '#5A5A5A',
@@ -81,6 +84,7 @@ export const charcoalsColorRangePalettes = {
       punctuation: '#4A4A4A'
     },
     dark: {
+      text: '#FFFFFF',
       null: '#C5C5C5',
       undefined: '#D5D5D5',
       boolean: '#E5E5E5',
@@ -105,6 +109,7 @@ export const charcoalsColorRangePalettes = {
 
   charcoalsAndYellows: {
     light: {
+      text: '#000000',
       null: '#3A3A3A',
       undefined: '#4A4A4A',
       boolean: '#5A5A5A',
@@ -126,6 +131,7 @@ export const charcoalsColorRangePalettes = {
       punctuation: '#4A4A4A'
     },
     dark: {
+      text: '#FFFFFF',
       null: '#C5C5C5',
       undefined: '#D5D5D5',
       boolean: '#E5E5E5',
@@ -150,6 +156,7 @@ export const charcoalsColorRangePalettes = {
 
   charcoalsAndGreens: {
     light: {
+      text: '#000000',
       null: '#3A3A3A',
       undefined: '#4A4A4A',
       boolean: '#5A5A5A',
@@ -171,6 +178,7 @@ export const charcoalsColorRangePalettes = {
       punctuation: '#4A4A4A'
     },
     dark: {
+      text: '#FFFFFF',
       null: '#C5C5C5',
       undefined: '#D5D5D5',
       boolean: '#E5E5E5',
@@ -195,6 +203,7 @@ export const charcoalsColorRangePalettes = {
 
   charcoalsAndBlues: {
     light: {
+      text: '#000000',
       null: '#3A3A3A',
       undefined: '#4A4A4A',
       boolean: '#5A5A5A',
@@ -216,6 +225,7 @@ export const charcoalsColorRangePalettes = {
       punctuation: '#4A4A4A'
     },
     dark: {
+      text: '#FFFFFF',
       null: '#C5C5C5',
       undefined: '#D5D5D5',
       boolean: '#E5E5E5',
@@ -240,6 +250,7 @@ export const charcoalsColorRangePalettes = {
 
   charcoalsAndPurples: {
     light: {
+      text: '#000000',
       null: '#3A3A3A',
       undefined: '#4A4A4A',
       boolean: '#5A5A5A',
@@ -261,6 +272,7 @@ export const charcoalsColorRangePalettes = {
       punctuation: '#4A4A4A'
     },
     dark: {
+      text: '#FFFFFF',
       null: '#C5C5C5',
       undefined: '#D5D5D5',
       boolean: '#E5E5E5',
@@ -285,6 +297,7 @@ export const charcoalsColorRangePalettes = {
 
   charcoalsAndBrowns: {
     light: {
+      text: '#000000',
       null: '#3A3A3A',
       undefined: '#4A4A4A',
       boolean: '#5A5A5A',
@@ -306,6 +319,7 @@ export const charcoalsColorRangePalettes = {
       punctuation: '#4A4A4A'
     },
     dark: {
+      text: '#FFFFFF',
       null: '#C5C5C5',
       undefined: '#D5D5D5',
       boolean: '#E5E5E5',
@@ -330,6 +344,7 @@ export const charcoalsColorRangePalettes = {
 
   charcoalsAndGreys: {
     light: {
+      text: '#000000',
       null: '#2A2A2A',
       undefined: '#3A3A3A',
       boolean: '#4A4A4A',
@@ -351,6 +366,7 @@ export const charcoalsColorRangePalettes = {
       punctuation: '#3A3A3A'
     },
     dark: {
+      text: '#FFFFFF',
       null: '#B5B5B5',
       undefined: '#C5C5C5',
       boolean: '#D5D5D5',
@@ -375,6 +391,7 @@ export const charcoalsColorRangePalettes = {
 
   charcoalsAndCyans: {
     light: {
+      text: '#000000',
       null: '#3A3A3A',
       undefined: '#4A4A4A',
       boolean: '#5A5A5A',
@@ -396,6 +413,7 @@ export const charcoalsColorRangePalettes = {
       punctuation: '#4A4A4A'
     },
     dark: {
+      text: '#FFFFFF',
       null: '#C5C5C5',
       undefined: '#D5D5D5',
       boolean: '#E5E5E5',
@@ -420,6 +438,7 @@ export const charcoalsColorRangePalettes = {
 
   charcoalsAndMagentas: {
     light: {
+      text: '#000000',
       null: '#3A3A3A',
       undefined: '#4A4A4A',
       boolean: '#5A5A5A',
@@ -441,6 +460,7 @@ export const charcoalsColorRangePalettes = {
       punctuation: '#4A4A4A'
     },
     dark: {
+      text: '#FFFFFF',
       null: '#C5C5C5',
       undefined: '#D5D5D5',
       boolean: '#E5E5E5',
@@ -465,6 +485,7 @@ export const charcoalsColorRangePalettes = {
 
   charcoalsAndLightGrays: {
     light: {
+      text: '#000000',
       null: '#3A3A3A',
       undefined: '#4A4A4A',
       boolean: '#5A5A5A',
@@ -486,6 +507,7 @@ export const charcoalsColorRangePalettes = {
       punctuation: '#4A4A4A'
     },
     dark: {
+      text: '#FFFFFF',
       null: '#C5C5C5',
       undefined: '#D5D5D5',
       boolean: '#E5E5E5',

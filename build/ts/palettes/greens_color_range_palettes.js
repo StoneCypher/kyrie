@@ -13,6 +13,7 @@
  */
 export const greensAndReds = {
     light: {
+        text: '#000000',
         null: '#2A5A3A',
         undefined: '#3A6A4A',
         boolean: '#1A6A3A',
@@ -34,6 +35,7 @@ export const greensAndReds = {
         punctuation: '#3A6A4A'
     },
     dark: {
+        text: '#FFFFFF',
         null: '#A5E5C5',
         undefined: '#B5F5D5',
         boolean: '#88F5C5',
@@ -61,6 +63,7 @@ export const greensAndReds = {
  */
 export const greensAndOranges = {
     light: {
+        text: '#000000',
         null: '#2A5A3A',
         undefined: '#3A6A4A',
         boolean: '#1A6A3A',
@@ -82,6 +85,7 @@ export const greensAndOranges = {
         punctuation: '#3A6A4A'
     },
     dark: {
+        text: '#FFFFFF',
         null: '#A5E5C5',
         undefined: '#B5F5D5',
         boolean: '#88F5C5',
@@ -109,6 +113,7 @@ export const greensAndOranges = {
  */
 export const greensAndYellows = {
     light: {
+        text: '#000000',
         null: '#2A5A3A',
         undefined: '#3A6A4A',
         boolean: '#1A6A3A',
@@ -130,6 +135,7 @@ export const greensAndYellows = {
         punctuation: '#3A6A4A'
     },
     dark: {
+        text: '#FFFFFF',
         null: '#A5E5C5',
         undefined: '#B5F5D5',
         boolean: '#88F5C5',
@@ -157,6 +163,7 @@ export const greensAndYellows = {
  */
 export const greensAndBlues = {
     light: {
+        text: '#000000',
         null: '#2A5A3A',
         undefined: '#3A6A4A',
         boolean: '#1A4A7A',
@@ -178,6 +185,7 @@ export const greensAndBlues = {
         punctuation: '#3A6A4A'
     },
     dark: {
+        text: '#FFFFFF',
         null: '#A5E5C5',
         undefined: '#B5F5D5',
         boolean: '#88CCFF',
@@ -205,6 +213,7 @@ export const greensAndBlues = {
  */
 export const greensAndPurples = {
     light: {
+        text: '#000000',
         null: '#2A5A3A',
         undefined: '#3A6A4A',
         boolean: '#5A2A7A',
@@ -226,6 +235,7 @@ export const greensAndPurples = {
         punctuation: '#3A6A4A'
     },
     dark: {
+        text: '#FFFFFF',
         null: '#A5E5C5',
         undefined: '#B5F5D5',
         boolean: '#DD99FF',
@@ -253,6 +263,7 @@ export const greensAndPurples = {
  */
 export const greensAndBrowns = {
     light: {
+        text: '#000000',
         null: '#2A5A3A',
         undefined: '#3A6A4A',
         boolean: '#1A6A3A',
@@ -274,6 +285,7 @@ export const greensAndBrowns = {
         punctuation: '#3A6A4A'
     },
     dark: {
+        text: '#FFFFFF',
         null: '#A5E5C5',
         undefined: '#B5F5D5',
         boolean: '#88F5C5',
@@ -301,6 +313,7 @@ export const greensAndBrowns = {
  */
 export const greensAndGreys = {
     light: {
+        text: '#000000',
         null: '#2A5A3A',
         undefined: '#3A6A4A',
         boolean: '#1A6A3A',
@@ -322,6 +335,7 @@ export const greensAndGreys = {
         punctuation: '#3A6A4A'
     },
     dark: {
+        text: '#FFFFFF',
         null: '#A5E5C5',
         undefined: '#B5F5D5',
         boolean: '#88F5C5',
@@ -349,6 +363,7 @@ export const greensAndGreys = {
  */
 export const greensAndCharcoals = {
     light: {
+        text: '#000000',
         null: '#2A5A3A',
         undefined: '#3A6A4A',
         boolean: '#1A6A3A',
@@ -370,6 +385,7 @@ export const greensAndCharcoals = {
         punctuation: '#3A6A4A'
     },
     dark: {
+        text: '#FFFFFF',
         null: '#A5E5C5',
         undefined: '#B5F5D5',
         boolean: '#88F5C5',
@@ -397,6 +413,7 @@ export const greensAndCharcoals = {
  */
 export const greensAndCyans = {
     light: {
+        text: '#000000',
         null: '#2A5A3A',
         undefined: '#3A6A4A',
         boolean: '#1A6A3A',
@@ -418,6 +435,7 @@ export const greensAndCyans = {
         punctuation: '#3A6A4A'
     },
     dark: {
+        text: '#FFFFFF',
         null: '#A5E5C5',
         undefined: '#B5F5D5',
         boolean: '#88F5C5',
@@ -445,6 +463,7 @@ export const greensAndCyans = {
  */
 export const greensAndMagentas = {
     light: {
+        text: '#000000',
         null: '#2A5A3A',
         undefined: '#3A6A4A',
         boolean: '#1A6A3A',
@@ -466,6 +485,7 @@ export const greensAndMagentas = {
         punctuation: '#3A6A4A'
     },
     dark: {
+        text: '#FFFFFF',
         null: '#A5E5C5',
         undefined: '#B5F5D5',
         boolean: '#88F5C5',
@@ -493,6 +513,7 @@ export const greensAndMagentas = {
  */
 export const greensAndLightGrays = {
     light: {
+        text: '#000000',
         null: '#2A5A3A',
         undefined: '#3A6A4A',
         boolean: '#1A6A3A',
@@ -514,6 +535,7 @@ export const greensAndLightGrays = {
         punctuation: '#3A6A4A'
     },
     dark: {
+        text: '#FFFFFF',
         null: '#A5E5C5',
         undefined: '#B5F5D5',
         boolean: '#88F5C5',

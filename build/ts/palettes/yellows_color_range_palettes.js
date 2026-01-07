@@ -18,6 +18,7 @@ export const yellowsColorRangePalettes = {
      */
     yellowsAndReds: {
         light: {
+            text: '#000000',
             null: '#7A6A1A',
             undefined: '#8A7A2A',
             boolean: '#9A7A1A',
@@ -39,6 +40,7 @@ export const yellowsColorRangePalettes = {
             punctuation: '#7A6A2A'
         },
         dark: {
+            text: '#FFFFFF',
             null: '#FFEE99',
             undefined: '#FFFF88',
             boolean: '#FFEE77',
@@ -66,6 +68,7 @@ export const yellowsColorRangePalettes = {
      */
     yellowsAndOranges: {
         light: {
+            text: '#000000',
             null: '#8A7A2A',
             undefined: '#9A8A3A',
             boolean: '#AA8A1A',
@@ -87,6 +90,7 @@ export const yellowsColorRangePalettes = {
             punctuation: '#8A7A3A'
         },
         dark: {
+            text: '#FFFFFF',
             null: '#FFEE88',
             undefined: '#FFFFAA',
             boolean: '#FFEE66',
@@ -114,6 +118,7 @@ export const yellowsColorRangePalettes = {
      */
     yellowsAndGreens: {
         light: {
+            text: '#000000',
             null: '#8A8A1A',
             undefined: '#9A9A2A',
             boolean: '#8A9A1A',
@@ -135,6 +140,7 @@ export const yellowsColorRangePalettes = {
             punctuation: '#8A8A2A'
         },
         dark: {
+            text: '#FFFFFF',
             null: '#FFFF88',
             undefined: '#FFFFAA',
             boolean: '#EEFF77',
@@ -162,6 +168,7 @@ export const yellowsColorRangePalettes = {
      */
     yellowsAndBlues: {
         light: {
+            text: '#000000',
             null: '#8A8A1A',
             undefined: '#9A9A2A',
             boolean: '#7A8A3A',
@@ -183,6 +190,7 @@ export const yellowsColorRangePalettes = {
             punctuation: '#8A8A2A'
         },
         dark: {
+            text: '#FFFFFF',
             null: '#FFFF88',
             undefined: '#FFFFAA',
             boolean: '#DDEE99',
@@ -210,6 +218,7 @@ export const yellowsColorRangePalettes = {
      */
     yellowsAndPurples: {
         light: {
+            text: '#000000',
             null: '#8A8A1A',
             undefined: '#9A9A2A',
             boolean: '#8A7A3A',
@@ -231,6 +240,7 @@ export const yellowsColorRangePalettes = {
             punctuation: '#8A8A2A'
         },
         dark: {
+            text: '#FFFFFF',
             null: '#FFFF88',
             undefined: '#FFFFAA',
             boolean: '#EEEE99',
@@ -258,6 +268,7 @@ export const yellowsColorRangePalettes = {
      */
     yellowsAndBrowns: {
         light: {
+            text: '#000000',
             null: '#8A7A1A',
             undefined: '#9A8A2A',
             boolean: '#9A8A3A',
@@ -279,6 +290,7 @@ export const yellowsColorRangePalettes = {
             punctuation: '#8A7A2A'
         },
         dark: {
+            text: '#FFFFFF',
             null: '#FFEE88',
             undefined: '#FFFFAA',
             boolean: '#FFEE99',
@@ -306,6 +318,7 @@ export const yellowsColorRangePalettes = {
      */
     yellowsAndGreys: {
         light: {
+            text: '#000000',
             null: '#8A8A1A',
             undefined: '#9A9A2A',
             boolean: '#9A9A3A',
@@ -327,6 +340,7 @@ export const yellowsColorRangePalettes = {
             punctuation: '#8A8A2A'
         },
         dark: {
+            text: '#FFFFFF',
             null: '#FFFF88',
             undefined: '#FFFFAA',
             boolean: '#FFFF99',
@@ -354,6 +368,7 @@ export const yellowsColorRangePalettes = {
      */
     yellowsAndCharcoals: {
         light: {
+            text: '#000000',
             null: '#8A8A1A',
             undefined: '#9A9A2A',
             boolean: '#9A9A3A',
@@ -375,6 +390,7 @@ export const yellowsColorRangePalettes = {
             punctuation: '#8A8A2A'
         },
         dark: {
+            text: '#FFFFFF',
             null: '#FFFF88',
             undefined: '#FFFFAA',
             boolean: '#FFFF99',
@@ -402,6 +418,7 @@ export const yellowsColorRangePalettes = {
      */
     yellowsAndCyans: {
         light: {
+            text: '#000000',
             null: '#8A8A1A',
             undefined: '#9A9A2A',
             boolean: '#8A9A3A',
@@ -423,6 +440,7 @@ export const yellowsColorRangePalettes = {
             punctuation: '#8A8A2A'
         },
         dark: {
+            text: '#FFFFFF',
             null: '#FFFF88',
             undefined: '#FFFFAA',
             boolean: '#EEFF99',
@@ -450,6 +468,7 @@ export const yellowsColorRangePalettes = {
      */
     yellowsAndMagentas: {
         light: {
+            text: '#000000',
             null: '#8A8A1A',
             undefined: '#9A9A2A',
             boolean: '#9A8A3A',
@@ -471,6 +490,7 @@ export const yellowsColorRangePalettes = {
             punctuation: '#8A8A2A'
         },
         dark: {
+            text: '#FFFFFF',
             null: '#FFFF88',
             undefined: '#FFFFAA',
             boolean: '#FFEE99',
@@ -498,6 +518,7 @@ export const yellowsColorRangePalettes = {
      */
     yellowsAndLightGrays: {
         light: {
+            text: '#000000',
             null: '#8A8A1A',
             undefined: '#9A9A2A',
             boolean: '#9A9A3A',
@@ -519,6 +540,7 @@ export const yellowsColorRangePalettes = {
             punctuation: '#8A8A2A'
         },
         dark: {
+            text: '#FFFFFF',
             null: '#FFFF88',
             undefined: '#FFFFAA',
             boolean: '#FFFF99',

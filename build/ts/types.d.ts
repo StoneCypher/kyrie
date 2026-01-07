@@ -57,6 +57,7 @@ export interface ContainerConfig {
  * Maps AST node types to hex color codes
  */
 export interface ColorPalette {
+    text: string;
     null: string;
     undefined: string;
     boolean: string;

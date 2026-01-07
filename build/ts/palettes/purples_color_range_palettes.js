@@ -24,6 +24,7 @@
 export const purplesColorRangePalettes = {
     purplesAndReds: {
         light: {
+            text: '#000000',
             null: '#5A3A6A',
             undefined: '#6A4A7A',
             boolean: '#7A4A8A',
@@ -45,6 +46,7 @@ export const purplesColorRangePalettes = {
             punctuation: '#6A4A6A'
         },
         dark: {
+            text: '#FFFFFF',
             null: '#D5C5E5',
             undefined: '#E5D5F5',
             boolean: '#EE99FF',
@@ -68,6 +70,7 @@ export const purplesColorRangePalettes = {
     },
     purplesAndOranges: {
         light: {
+            text: '#000000',
             null: '#5A3A6A',
             undefined: '#6A4A7A',
             boolean: '#7A4A8A',
@@ -89,6 +92,7 @@ export const purplesColorRangePalettes = {
             punctuation: '#6A4A6A'
         },
         dark: {
+            text: '#FFFFFF',
             null: '#D5C5E5',
             undefined: '#E5D5F5',
             boolean: '#EE99FF',
@@ -112,6 +116,7 @@ export const purplesColorRangePalettes = {
     },
     purplesAndYellows: {
         light: {
+            text: '#000000',
             null: '#5A3A6A',
             undefined: '#6A4A7A',
             boolean: '#7A4A8A',
@@ -133,6 +138,7 @@ export const purplesColorRangePalettes = {
             punctuation: '#6A4A6A'
         },
         dark: {
+            text: '#FFFFFF',
             null: '#D5C5E5',
             undefined: '#E5D5F5',
             boolean: '#EE99FF',
@@ -156,6 +162,7 @@ export const purplesColorRangePalettes = {
     },
     purplesAndGreens: {
         light: {
+            text: '#000000',
             null: '#5A3A6A',
             undefined: '#6A4A7A',
             boolean: '#7A4A8A',
@@ -177,6 +184,7 @@ export const purplesColorRangePalettes = {
             punctuation: '#6A4A6A'
         },
         dark: {
+            text: '#FFFFFF',
             null: '#D5C5E5',
             undefined: '#E5D5F5',
             boolean: '#EE99FF',
@@ -200,6 +208,7 @@ export const purplesColorRangePalettes = {
     },
     purplesAndBlues: {
         light: {
+            text: '#000000',
             null: '#5A3A6A',
             undefined: '#6A4A7A',
             boolean: '#7A4A8A',
@@ -221,6 +230,7 @@ export const purplesColorRangePalettes = {
             punctuation: '#6A4A6A'
         },
         dark: {
+            text: '#FFFFFF',
             null: '#D5C5E5',
             undefined: '#E5D5F5',
             boolean: '#EE99FF',
@@ -244,6 +254,7 @@ export const purplesColorRangePalettes = {
     },
     purplesAndBrowns: {
         light: {
+            text: '#000000',
             null: '#5A3A6A',
             undefined: '#6A4A7A',
             boolean: '#7A4A8A',
@@ -265,6 +276,7 @@ export const purplesColorRangePalettes = {
             punctuation: '#6A4A6A'
         },
         dark: {
+            text: '#FFFFFF',
             null: '#D5C5E5',
             undefined: '#E5D5F5',
             boolean: '#EE99FF',
@@ -288,6 +300,7 @@ export const purplesColorRangePalettes = {
     },
     purplesAndGreys: {
         light: {
+            text: '#000000',
             null: '#5A3A6A',
             undefined: '#6A4A7A',
             boolean: '#7A4A8A',
@@ -309,6 +322,7 @@ export const purplesColorRangePalettes = {
             punctuation: '#6A4A6A'
         },
         dark: {
+            text: '#FFFFFF',
             null: '#D5C5E5',
             undefined: '#E5D5F5',
             boolean: '#EE99FF',
@@ -332,6 +346,7 @@ export const purplesColorRangePalettes = {
     },
     purplesAndCharcoals: {
         light: {
+            text: '#000000',
             null: '#5A3A6A',
             undefined: '#6A4A7A',
             boolean: '#7A4A8A',
@@ -353,6 +368,7 @@ export const purplesColorRangePalettes = {
             punctuation: '#6A4A6A'
         },
         dark: {
+            text: '#FFFFFF',
             null: '#D5C5E5',
             undefined: '#E5D5F5',
             boolean: '#EE99FF',
@@ -376,6 +392,7 @@ export const purplesColorRangePalettes = {
     },
     purplesAndCyans: {
         light: {
+            text: '#000000',
             null: '#5A3A6A',
             undefined: '#6A4A7A',
             boolean: '#7A4A8A',
@@ -397,6 +414,7 @@ export const purplesColorRangePalettes = {
             punctuation: '#6A4A6A'
         },
         dark: {
+            text: '#FFFFFF',
             null: '#D5C5E5',
             undefined: '#E5D5F5',
             boolean: '#EE99FF',
@@ -420,6 +438,7 @@ export const purplesColorRangePalettes = {
     },
     purplesAndMagentas: {
         light: {
+            text: '#000000',
             null: '#5A3A6A',
             undefined: '#6A4A7A',
             boolean: '#7A4A8A',
@@ -441,6 +460,7 @@ export const purplesColorRangePalettes = {
             punctuation: '#6A4A6A'
         },
         dark: {
+            text: '#FFFFFF',
             null: '#D5C5E5',
             undefined: '#E5D5F5',
             boolean: '#EE99FF',
@@ -464,6 +484,7 @@ export const purplesColorRangePalettes = {
     },
     purplesAndLightGrays: {
         light: {
+            text: '#000000',
             null: '#5A3A6A',
             undefined: '#6A4A7A',
             boolean: '#7A4A8A',
@@ -485,6 +506,7 @@ export const purplesColorRangePalettes = {
             punctuation: '#6A4A6A'
         },
         dark: {
+            text: '#FFFFFF',
             null: '#D5C5E5',
             undefined: '#E5D5F5',
             boolean: '#EE99FF',

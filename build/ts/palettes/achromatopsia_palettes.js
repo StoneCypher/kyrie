@@ -5,6 +5,7 @@
 export const achromatopsiaPalettes = {
     achromatopsia: {
         light: {
+            text: '#000000',
             null: '#3B3B3B',
             undefined: '#4B4B4B',
             boolean: '#2B2B2B',
@@ -26,6 +27,7 @@ export const achromatopsiaPalettes = {
             punctuation: '#4B4B4B'
         },
         dark: {
+            text: '#FFFFFF',
             null: '#C6C6C6',
             undefined: '#D6D6D6',
             boolean: '#B0B0B0',
