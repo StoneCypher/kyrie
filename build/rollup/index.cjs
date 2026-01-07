@@ -11826,6 +11826,23 @@ const html_policy = {
     newline: '<br/>'
 };
 /**
+ * Log paint policy for plain text output
+ * Ignores all color information and returns unformatted text
+ * Useful for logging, file output, or environments without color support
+ *
+ * @example
+ * ```typescript
+ * const plain = log_policy.wrap('#FF5733', 'Hello World');
+ * console.log(plain); // Outputs 'Hello World' (no formatting)
+ * ```
+ */
+const log_policy = {
+    wrap: (_color, content) => {
+        return content;
+    },
+    newline: '\n'
+};
+/**
  * Helper function to safely get a color from a palette with validation
  * Throws a clear error if the color is missing
  */
@@ -12039,6 +12056,32 @@ const paint_ansi = (node, options) => {
  */
 const paint_html = (node, options) => {
     return paint(node, html_policy, options);
+};
+/**
+ * Paints an AST node as plain text without color formatting
+ * Convenience wrapper around paint() that uses the log_policy
+ *
+ * @param {ASTNode} node - The AST node to paint
+ * @param {HighlightOptions} [options] - Optional configuration. Defaults will be used for any missing values.
+ * @returns {string} The painted string representation of the node without any color formatting
+ *
+ * @example
+ * ```typescript
+ * const ast = parse_string('{"name": "John"}');
+ * const painted = paint_log(ast); // Uses log policy with defaults
+ * console.log(painted); // Plain text output: {name: "John"}
+ * ```
+ *
+ * @example
+ * ```typescript
+ * const ast = parse_string('{"name": "John"}');
+ * const options = { containers: customContainers };
+ * const painted = paint_log(ast, options);
+ * fs.writeFileSync('output.txt', painted); // Save plain text to file
+ * ```
+ */
+const paint_log = (node, options) => {
+    return paint(node, log_policy, options);
 };
 /**
  * Tokenizer for JSON/JavaScript values
@@ -12385,6 +12428,7 @@ exports.highlight_string = highlight_string;
 exports.highlight_value = highlight_value;
 exports.html_policy = html_policy;
 exports.lightGraysColorRangePalettes = lightGraysColorRangePalettes;
+exports.log_policy = log_policy;
 exports.magentasColorRangePalettes = magentasColorRangePalettes;
 exports.monochromacyPalettes = monochromacyPalettes;
 exports.naturePalettes = naturePalettes;
@@ -12392,6 +12436,7 @@ exports.orangesColorRangePalettes = orangesColorRangePalettes;
 exports.paint = paint;
 exports.paint_ansi = paint_ansi;
 exports.paint_html = paint_html;
+exports.paint_log = paint_log;
 exports.palettes = palettes;
 exports.parse_string = parse_string;
 exports.parse_value = parse_value;

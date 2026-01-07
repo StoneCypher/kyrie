@@ -1,4 +1,4 @@
-# kyrie v0.23.0
+# kyrie v0.24.0
 
 Kyrie is a formatting colorizer for JavaScript, TypeScript, and JSON with customizable color palettes and container delimiters.
 
@@ -16,7 +16,7 @@ Kyrie is a formatting colorizer for JavaScript, TypeScript, and JSON with custom
 - 🎯 **Type-aware**: Distinguishes between arrays, objects, Maps, Sets, Dates, RegExp, Errors, and more
 - 💪 **TypeScript support**: Fully typed with strict TypeScript configuration
 - ⚡ **One dependency** - Chalk, for terminal colors
-- ✅ **Strong testing**: Has 98.89% test coverage from 184 test cases
+- ✅ **Strong testing**: Has 99.72% test coverage from 378 test cases
 
 ## Installation
 
@@ -181,9 +181,14 @@ interface HighlightOptions {
 
 ### Painting AST Nodes
 
-The `paint_ansi()` function renders AST nodes with colors and formatting using Chalk. It converts parsed AST nodes into colorized strings with ANSI escape codes for terminal display. Colors are always generated regardless of environment (forced color support at 16 million color level).
+Kyrie provides three paint functions for different output formats:
+- `paint_ansi()` - ANSI escape codes for terminal display (using Chalk)
+- `paint_html()` - HTML with inline CSS for web browsers
+- `paint_log()` - Plain text for logging and environments without color support
 
 #### `paint_ansi(node: ASTNode, options?: HighlightOptions): string`
+
+Renders AST nodes with colors and formatting using Chalk. Converts parsed AST nodes into colorized strings with ANSI escape codes for terminal display. Colors are always generated regardless of environment (forced color support at 16 million color level).
 
 Converts an AST node into a colorized string representation.
 
@@ -251,6 +256,58 @@ console.log(colored);
 ```
 
 **Note:** The paint_ansi function uses Chalk with forced color support (level 3 - 16 million colors). This ensures ANSI color codes are always generated in the output, regardless of the environment. When displayed in a color-supporting terminal, you'll see the fully colorized output.
+
+#### `paint_html(node: ASTNode, options?: HighlightOptions): string`
+
+Converts an AST node into an HTML-formatted string with inline CSS color styling. Perfect for web browser output.
+
+**Parameters:**
+- `node` (ASTNode): The AST node to paint
+- `options` (HighlightOptions, optional): Configuration with palette and container settings
+
+**Returns:**
+- string: HTML string with `<span>` tags and inline CSS styles
+
+**Example:**
+
+```typescript
+import { parse_value, paint_html } from 'kyrie';
+
+const data = { name: "Alice", score: 95 };
+const ast = parse_value(data);
+const html = paint_html(ast);
+document.body.innerHTML = `<pre>${html}</pre>`;
+// Renders colorized JSON in browser
+```
+
+#### `paint_log(node: ASTNode, options?: HighlightOptions): string`
+
+Converts an AST node into plain text without any color formatting. Ideal for logging to files, databases, or environments without color support.
+
+**Parameters:**
+- `node` (ASTNode): The AST node to paint
+- `options` (HighlightOptions, optional): Configuration with container settings (palette is ignored)
+
+**Returns:**
+- string: Plain text representation without any formatting codes
+
+**Example:**
+
+```typescript
+import { parse_value, paint_log } from 'kyrie';
+import fs from 'fs';
+
+const logData = { level: "error", message: "Failed to connect", code: 500 };
+const ast = parse_value(logData);
+const plainText = paint_log(ast);
+
+// Write to log file without ANSI codes
+fs.appendFileSync('app.log', plainText + '\n');
+
+// Or log to console as plain text
+console.log(plainText);
+// Outputs: {level: "error", message: "Failed to connect", code: 500}
+```
 
 ### Container Configuration
 

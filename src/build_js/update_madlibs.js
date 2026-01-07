@@ -55,14 +55,15 @@ try {
   }
 
   // Parse test count from output
-  // Looking for line like: "✓ src/ts/tests/index.test.ts (184 tests)" (may have ANSI codes)
-  // This captures total tests regardless of pass/fail/skip status
+  // Looking for line like: "Tests  378 passed (378)" which shows total test count
   // Strip ANSI codes for easier parsing
   const cleanOutput = testOutput.replace(/\x1b\[[0-9;]*m/g, '');
-  const testCountMatch = cleanOutput.match(/\((\d+)\s+tests?\)/);
+  const testCountMatch = cleanOutput.match(/Tests\s+(\d+)\s+passed.*?\((\d+)\)/);
   if (testCountMatch) {
-    testcasecount = testCountMatch[1];
+    testcasecount = testCountMatch[2]; // Use the number in parentheses (total count)
     console.log(chalk.hex(OUTPUT_COLOR)(`Test count: ${testcasecount}`));
+  } else {
+    console.warn(chalk.hex(WARN_COLOR)('Warning: Could not parse test count from output'));
   }
 } catch (error) {
   console.warn(chalk.hex(WARN_COLOR)('Warning: Could not determine test coverage or test count'));

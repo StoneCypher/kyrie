@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kyrie Previewer</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html, body {
+            height: 100%;
+            width: 100%;
+            overflow: hidden;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+        }
+
+        #toolbar {
+            height: 2em;
+            line-height: 2em;
+            background-color: #ddd;
+            border-bottom: 1px solid #ccc;
+            padding: 0 0.5em;
+            display: flex;
+            align-items: center;
+            gap: 1em;
+        }
+
+        #toolbar label {
+            font-size: 0.9em;
+            font-weight: 500;
+        }
+
+        #toolbar select {
+            height: 1.3em;
+            font-size: 0.85em;
+        }
+
+        #main {
+            display: flex;
+            height: calc(100% - 2em);
+            width: 100%;
+        }
+
+        #editor {
+            width: 50%;
+            height: 100%;
+            border: none;
+            border-right: 2px solid gray;
+            padding: 0.5em;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 14px;
+            resize: none;
+            outline: none;
+        }
+
+        #preview {
+            width: 50%;
+            height: 100%;
+            padding: 0.5em;
+            overflow: auto;
+        }
+
+        #target {
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 14px;
+            font-weight: bold;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+        }
+
+        .bg-white { background-color: #ffffff; }
+        .bg-sky { background-color: #87ceeb; }
+        .bg-manila { background-color: #f4e8c1; }
+        .bg-smudge { background-color: #2b1f1a; }
+        .bg-charcoal { background-color: #36454f; }
+        .bg-black { background-color: #000000; }
+    </style>
+</head>
+<body>
+    <div id="toolbar">
+        <label for="palette">Palette:</label>
+        <select id="palette">
+            <option value="default">default</option>
+            <option value="pastel">pastel</option>
+            <option value="bold">bold</option>
+            <option value="dusk">dusk</option>
+            <option value="funky">funky</option>
+            <option value="boring">boring</option>
+            <option value="mobster">mobster</option>
+            <option value="money">money</option>
+            <option value="skeleton">skeleton</option>
+            <option value="sinister">sinister</option>
+            <option value="halloween">halloween</option>
+            <option value="vampire">vampire</option>
+            <option value="grayscale">grayscale</option>
+            <option value="blues">blues</option>
+            <option value="circus">circus</option>
+            <option value="monkey">monkey</option>
+            <option value="rainbow">rainbow</option>
+            <option value="military">military</option>
+            <option value="police">police</option>
+            <option value="hacker">hacker</option>
+            <option value="wizard">wizard</option>
+            <option value="gunmetal">gunmetal</option>
+            <option value="ogre">ogre</option>
+            <option value="burglar">burglar</option>
+            <option value="crystal">crystal</option>
+            <option value="laser">laser</option>
+            <option value="antique">antique</option>
+            <option value="book">book</option>
+            <option value="eighties">eighties</option>
+            <option value="neon">neon</option>
+            <option value="logger">logger</option>
+            <option value="system">system</option>
+            <option value="alien">alien</option>
+            <option value="forest">forest</option>
+            <option value="garden">garden</option>
+            <option value="flowers">flowers</option>
+            <option value="sky">sky</option>
+            <option value="sunflower">sunflower</option>
+            <option value="strawberry">strawberry</option>
+            <option value="butterfly">butterfly</option>
+            <option value="protanopia">protanopia</option>
+            <option value="deuteranopia">deuteranopia</option>
+            <option value="tritanopia">tritanopia</option>
+            <option value="monochromacy">monochromacy</option>
+            <option value="deuteranomaly">deuteranomaly</option>
+            <option value="protanomaly">protanomaly</option>
+            <option value="tritanomaly">tritanomaly</option>
+            <option value="achromatopsia">achromatopsia</option>
+        </select>
+
+        <label for="theme">Theme:</label>
+        <select id="theme">
+            <option value="light">light</option>
+            <option value="dark">dark</option>
+        </select>
+
+        <label for="bg">Background:</label>
+        <select id="bg">
+            <option value="white">white</option>
+            <option value="sky">sky</option>
+            <option value="manila">manila</option>
+            <option value="smudge">smudge</option>
+            <option value="charcoal">charcoal</option>
+            <option value="black">black</option>
+        </select>
+    </div>
+
+    <div id="main">
+        <textarea id="editor">{
+  "user": {
+    "name": "Alice Johnson",
+    "age": 28,
+    "email": "alice@example.com",
+    "active": true
+  },
+  "scores": [95, 87, 92, 78, 100],
+  "address": {
+    "street": "123 Main St",
+    "city": "San Francisco",
+    "state": "CA",
+    "zipcode": "94102"
+  },
+  "preferences": {
+    "theme": "dark",
+    "notifications": true,
+    "language": "en-US"
+  },
+  "metadata": {
+    "created": "2024-01-15",
+    "modified": "2024-01-20",
+    "version": 2.1
+  }
+}</textarea>
+        <div id="preview">
+            <div id="target"></div>
+        </div>
+    </div>
+
+    <script type="module">
+        // Import kyrie library
+        import {
+            parse_string,
+            paint_html,
+            palettes,
+            naturePalettes,
+            protanopiaPalettes,
+            deuteranopiaPalettes,
+            tritanopiaPalettes,
+            monochromacyPalettes,
+            deuteranomalyPalettes,
+            protanomalyPalettes,
+            tritanomalyPalettes,
+            achromatopsiaPalettes
+        } from './dist/index.js';
+
+        const editor = document.getElementById('editor');
+        const target = document.getElementById('target');
+        const paletteSelect = document.getElementById('palette');
+        const themeSelect = document.getElementById('theme');
+        const bgSelect = document.getElementById('bg');
+        const preview = document.getElementById('preview');
+
+        // Combine all palettes into a lookup object
+        const allPalettes = {
+            ...palettes,
+            ...naturePalettes,
+            ...protanopiaPalettes,
+            ...deuteranopiaPalettes,
+            ...tritanopiaPalettes,
+            ...monochromacyPalettes,
+            ...deuteranomalyPalettes,
+            ...protanomalyPalettes,
+            ...tritanomalyPalettes,
+            ...achromatopsiaPalettes
+        };
+
+        function updatePreview() {
+            try {
+                // Get selected palette
+                const paletteName = paletteSelect.value;
+                const paletteObj = allPalettes[paletteName];
+
+                if (!paletteObj) {
+                    target.innerHTML = '<span style="color: red;">Palette not found: ' + paletteName + '</span>';
+                    return;
+                }
+
+                // Use selected theme
+                const themeValue = themeSelect.value;
+                const selectedPalette = themeValue === 'dark' ? paletteObj.dark : paletteObj.light;
+
+                // Parse and paint the input
+                const ast = parse_string(editor.value);
+                const highlighted = paint_html(ast, { palette: selectedPalette });
+
+                // Update the target
+                target.innerHTML = highlighted;
+            } catch (error) {
+                // Display error in the preview
+                target.innerHTML = '<span style="color: red;">Error: ' + error.message + '</span>';
+            }
+        }
+
+        function updateBackground() {
+            // Remove all background classes
+            preview.classList.remove('bg-white', 'bg-sky', 'bg-manila', 'bg-smudge', 'bg-charcoal', 'bg-black');
+            // Add selected background class
+            preview.classList.add('bg-' + bgSelect.value);
+
+            // Auto-adjust theme based on background
+            const lightBackgrounds = ['white', 'sky', 'manila'];
+            const darkBackgrounds = ['black', 'charcoal', 'smudge'];
+
+            if (lightBackgrounds.includes(bgSelect.value)) {
+                themeSelect.value = 'light';
+                updatePreview();
+            } else if (darkBackgrounds.includes(bgSelect.value)) {
+                themeSelect.value = 'dark';
+                updatePreview();
+            }
+        }
+
+        editor.addEventListener('input', updatePreview);
+        paletteSelect.addEventListener('change', updatePreview);
+        themeSelect.addEventListener('change', updatePreview);
+        bgSelect.addEventListener('change', updateBackground);
+
+        // Initial update
+        updatePreview();
+        updateBackground();
+    </script>
+</body>
+</html>

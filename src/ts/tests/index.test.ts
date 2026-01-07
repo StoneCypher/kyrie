@@ -8,6 +8,8 @@ import {
   palettes,
   naturePalettes,
   paint_ansi,
+  paint_html,
+  paint_log,
   defaultContainers,
   defaultHighlightOptions,
   type ContainerConfig,
@@ -1570,6 +1572,175 @@ describe('testdata', () => {
       expect(options.palette).toBeDefined();
       expect(options.containers).toBeDefined();
       expect(options.maxWidth).toBe(80);
+    });
+  });
+
+  describe('paint_html', () => {
+    test('should paint object with HTML spans', () => {
+      const ast = parse_value({ user: 'Alice', score: 95 });
+      const result = paint_html(ast);
+      expect(result).toContain('<span');
+      expect(result).toContain('style="color:');
+      expect(result).toContain('user');
+      expect(result).toContain('Alice');
+      expect(result).toContain('95');
+    });
+
+    test('should paint array with HTML spans', () => {
+      const ast = parse_value([1, 2, 3]);
+      const result = paint_html(ast);
+      expect(result).toContain('<span');
+      expect(result).toContain('[');
+      expect(result).toContain(']');
+    });
+
+    test('should paint primitives with HTML spans', () => {
+      const ast = parse_value(42);
+      const result = paint_html(ast);
+      expect(result).toContain('<span');
+      expect(result).toContain('42');
+    });
+
+    test('should accept custom palette', () => {
+      const ast = parse_value(true);
+      const result = paint_html(ast, { palette: palettes.bold.dark });
+      expect(result).toContain('<span');
+      expect(result).toContain('true');
+    });
+
+    test('should work with all testdata types', () => {
+      const ast = parse_value(testdata.object_all_primitives);
+      const result = paint_html(ast);
+      expect(result).toBeDefined();
+      expect(result.length).toBeGreaterThan(0);
+      expect(result).toContain('<span');
+    });
+  });
+
+  describe('paint_log', () => {
+    test('should paint object without color codes', () => {
+      const ast = parse_value({ user: 'Alice', score: 95, passed: true });
+      const result = paint_log(ast);
+      // Should not contain ANSI codes or HTML
+      expect(result).not.toContain('\x1b');
+      expect(result).not.toContain('<span');
+      // Should contain the actual content
+      expect(result).toContain('user');
+      expect(result).toContain('Alice');
+      expect(result).toContain('95');
+      expect(result).toContain('true');
+    });
+
+    test('should paint array without color codes', () => {
+      const ast = parse_value([1, 'hello', true]);
+      const result = paint_log(ast);
+      expect(result).not.toContain('\x1b');
+      expect(result).not.toContain('<span');
+      expect(result).toContain('[');
+      expect(result).toContain(']');
+      expect(result).toContain('1');
+      expect(result).toContain('hello');
+    });
+
+    test('should paint primitives as plain text', () => {
+      const numAst = parse_value(42);
+      const numResult = paint_log(numAst);
+      expect(numResult).toBe('42');
+      expect(numResult).not.toContain('\x1b');
+
+      const strAst = parse_value('test');
+      const strResult = paint_log(strAst);
+      expect(strResult).toContain('test');
+      expect(strResult).not.toContain('\x1b');
+    });
+
+    test('should accept custom containers', () => {
+      const ast = parse_value([1, 2, 3]);
+      const customContainers = {
+        ...defaultContainers,
+        array: { start: '<', delimiter: '|', end: '>' }
+      };
+      const result = paint_log(ast, { containers: customContainers });
+      expect(result).toContain('<');
+      expect(result).toContain('>');
+      expect(result).toContain('|');
+      expect(result).not.toContain('\x1b');
+    });
+
+    test('should work with all testdata types', () => {
+      const ast = parse_value(testdata.object_all_primitives);
+      const result = paint_log(ast);
+      expect(result).toBeDefined();
+      expect(result.length).toBeGreaterThan(0);
+      expect(result).not.toContain('\x1b');
+      expect(result).not.toContain('<span');
+    });
+
+    test('should produce plain text suitable for logging', () => {
+      const data = { level: 'info', message: 'Test log', timestamp: 12345 };
+      const ast = parse_value(data);
+      const result = paint_log(ast);
+      // Verify it's readable plain text
+      expect(result).toMatch(/level.*info/);
+      expect(result).toMatch(/message.*Test log/);
+      expect(result).toMatch(/timestamp.*12345/);
+      // No formatting codes
+      expect(result).not.toContain('\x1b');
+      expect(result).not.toContain('<');
+    });
+  });
+
+  describe('Palette validation', () => {
+    test('should throw error when palette is missing a required color (null)', () => {
+      const incompletePalette: any = {
+        ...palettes.default.light,
+        string: null  // Make string color null
+      };
+
+      const ast = parse_string('"test"');
+
+      expect(() => {
+        paint_ansi(ast, { palette: incompletePalette });
+      }).toThrow('Missing color \'string\' in palette');
+    });
+
+    test('should throw error when palette is missing a required color (undefined)', () => {
+      const incompletePalette: any = {
+        ...palettes.default.light,
+        number: undefined  // Make number color undefined
+      };
+
+      const ast = parse_string('123');
+
+      expect(() => {
+        paint_ansi(ast, { palette: incompletePalette });
+      }).toThrow('Missing color \'number\' in palette');
+    });
+
+    test('should throw error for missing null color', () => {
+      const incompletePalette: any = {
+        ...palettes.default.light,
+        null: null
+      };
+
+      const ast = parse_string('null');
+
+      expect(() => {
+        paint_ansi(ast, { palette: incompletePalette });
+      }).toThrow('Missing color \'null\' in palette');
+    });
+
+    test('should throw error for missing boolean color', () => {
+      const incompletePalette: any = {
+        ...palettes.default.light,
+        boolean: undefined
+      };
+
+      const ast = parse_string('true');
+
+      expect(() => {
+        paint_ansi(ast, { palette: incompletePalette });
+      }).toThrow('Missing color \'boolean\' in palette');
     });
   });
 });

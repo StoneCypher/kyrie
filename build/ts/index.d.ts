@@ -170,6 +170,18 @@ export declare const ansi_policy: PaintPolicy;
  */
 export declare const html_policy: PaintPolicy;
 /**
+ * Log paint policy for plain text output
+ * Ignores all color information and returns unformatted text
+ * Useful for logging, file output, or environments without color support
+ *
+ * @example
+ * ```typescript
+ * const plain = log_policy.wrap('#FF5733', 'Hello World');
+ * console.log(plain); // Outputs 'Hello World' (no formatting)
+ * ```
+ */
+export declare const log_policy: PaintPolicy;
+/**
  * Paints an AST node with colors and formatting using a specified paint policy
  *
  * @param {ASTNode} node - The AST node to paint
@@ -241,6 +253,30 @@ export declare const paint_ansi: PaintFunction;
  * ```
  */
 export declare const paint_html: PaintFunction;
+/**
+ * Paints an AST node as plain text without color formatting
+ * Convenience wrapper around paint() that uses the log_policy
+ *
+ * @param {ASTNode} node - The AST node to paint
+ * @param {HighlightOptions} [options] - Optional configuration. Defaults will be used for any missing values.
+ * @returns {string} The painted string representation of the node without any color formatting
+ *
+ * @example
+ * ```typescript
+ * const ast = parse_string('{"name": "John"}');
+ * const painted = paint_log(ast); // Uses log policy with defaults
+ * console.log(painted); // Plain text output: {name: "John"}
+ * ```
+ *
+ * @example
+ * ```typescript
+ * const ast = parse_string('{"name": "John"}');
+ * const options = { containers: customContainers };
+ * const painted = paint_log(ast, options);
+ * fs.writeFileSync('output.txt', painted); // Save plain text to file
+ * ```
+ */
+export declare const paint_log: PaintFunction;
 /**
  * Parses a JavaScript or JSON value string into an Abstract Syntax Tree
  *
