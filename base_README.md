@@ -2,6 +2,8 @@
 
 Your one stop formatting and colorizing shop for Javascript, Typescript, and JSON, to go to your terminal, your developer's console, and your logs.
 
+> Version {{version}} built on {{built_text}} `{{built}}` from hash `{{gh_hash}}`.
+
 | Turn this: | Into this: |
 | ---- | ---- |
 | TODO image | TODO image |
@@ -16,7 +18,7 @@ You very probably want [`ansi_from_val`](TODO).
 
 - 🌈 **16 million colors**: Uses Chalk with 24-bit RGB color support
 - 🎨 **{{palettes}} built-in color palettes**: {{palettes}} themes, each with a light and dark variant, for {{palettevariants}} total themes
-    - 🎨 **Vision accessability palettes**: Palettes for protanopia, deuteranopia, tritanopia, monochromacy, deuteranomaly, protanomaly,  tritanomaly, achromatopsia (if you have these, please tell me how to improve these in an issue)
+    - 🎨 **Vision accessability palettes**: Palettes for protanopia, deuteranopia, tritanopia, monochromacy, deuteranomaly, protanomaly, tritanomaly, achromatopsia (if you have these, please tell me how to improve these in an issue)
     - Bright, subtle, pastel, and vivid variants, each with a light and dark variant
 - 🔧 **Fully customizable**: Create custom palettes and container delimiters
 - 📦 **AST-based parsing**: Parse JSON strings or JavaScript values into detailed AST

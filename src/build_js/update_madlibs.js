@@ -23,6 +23,22 @@ const packageJson = JSON.parse(packageJsonContent);
 // Get version
 const version = packageJson.version;
 
+// Get build timestamp
+const built = new Date().getTime();
+const built_text = new Date(built).toLocaleString();
+
+// Get git hash
+let gh_hash = 'unknown';
+try {
+  const gitHash = execSync('git rev-parse HEAD', {
+    cwd: projectRoot,
+    encoding: 'utf8'
+  }).trim();
+  gh_hash = gitHash.substring(0, 7);
+} catch (error) {
+  console.warn(chalk.hex(WARN_COLOR)('Warning: Could not determine git hash'));
+}
+
 // Count palettes from palettes.ts
 console.log(chalk.hex(OUTPUT_COLOR)('Counting palettes...'));
 const palettesPath = join(projectRoot, 'src', 'ts', 'palettes', 'palettes.ts');
@@ -92,8 +108,11 @@ updatedContent = updatedContent.replace(/\{\{coverage\}\}/g, coverage);
 updatedContent = updatedContent.replace(/\{\{testcasecount\}\}/g, testcasecount);
 updatedContent = updatedContent.replace(/\{\{palettes\}\}/g, paletteCount);
 updatedContent = updatedContent.replace(/\{\{palettevariants\}\}/g, paletteVariants);
+updatedContent = updatedContent.replace(/\{\{built\}\}/g, built);
+updatedContent = updatedContent.replace(/\{\{built_text\}\}/g, built_text);
+updatedContent = updatedContent.replace(/\{\{gh_hash\}\}/g, gh_hash);
 
 // Write back to README.md
 writeFileSync(readmePath, updatedContent, 'utf8');
 
-console.log(chalk.hex(OUTPUT_COLOR)(`Updated README.md: Replaced {{version}} with ${version}, {{coverage}} with ${coverage}%, {{testcasecount}} with ${testcasecount}, {{palettes}} with ${paletteCount}, {{palettevariants}} with ${paletteVariants}`));
+console.log(chalk.hex(OUTPUT_COLOR)(`Updated README.md: Replaced {{version}} with ${version}, {{coverage}} with ${coverage}%, {{testcasecount}} with ${testcasecount}, {{palettes}} with ${paletteCount}, {{palettevariants}} with ${paletteVariants}, {{built}} with ${built}, {{built_text}} with ${built_text}, {{gh_hash}} with ${gh_hash}`));

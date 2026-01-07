@@ -1,6 +1,8 @@
-# kyrie v0.27.0
+# kyrie v0.28.0
 
 Your one stop formatting and colorizing shop for Javascript, Typescript, and JSON, to go to your terminal, your developer's console, and your logs.
+
+> Version 0.28.0 built on 1/7/2026, 5:39:20 AM `1767793160420` from hash `0260499`.
 
 | Turn this: | Into this: |
 | ---- | ---- |
@@ -16,7 +18,7 @@ You very probably want [`ansi_from_val`](TODO).
 
 - 🌈 **16 million colors**: Uses Chalk with 24-bit RGB color support
 - 🎨 **42 built-in color palettes**: 42 themes, each with a light and dark variant, for 84 total themes
-    - 🎨 **Vision accessability palettes**: Palettes for protanopia, deuteranopia, tritanopia, monochromacy, deuteranomaly, protanomaly,  tritanomaly, achromatopsia (if you have these, please tell me how to improve these in an issue)
+    - 🎨 **Vision accessability palettes**: Palettes for protanopia, deuteranopia, tritanopia, monochromacy, deuteranomaly, protanomaly, tritanomaly, achromatopsia (if you have these, please tell me how to improve these in an issue)
     - Bright, subtle, pastel, and vivid variants, each with a light and dark variant
 - 🔧 **Fully customizable**: Create custom palettes and container delimiters
 - 📦 **AST-based parsing**: Parse JSON strings or JavaScript values into detailed AST
