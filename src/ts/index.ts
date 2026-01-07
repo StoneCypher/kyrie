@@ -713,6 +713,168 @@ export const paint_log: PaintFunction = (node: ASTNode, options?: HighlightOptio
 };
 
 /**
+ * Converts a JavaScript value to HTML with inline CSS color styling
+ * Convenience function that parses the value and paints it as HTML
+ *
+ * @param {unknown} value - The value to convert to HTML
+ * @param {HighlightOptions} [options] - Optional configuration for highlighting
+ * @returns {string} HTML string with span tags and inline CSS styles
+ *
+ * @example
+ * ```typescript
+ * const data = { name: "Alice", age: 30 };
+ * const html = html_from_value(data);
+ * document.body.innerHTML = html;
+ * ```
+ *
+ * @example
+ * ```typescript
+ * const arr = [1, 2, 3, "hello", true];
+ * const html = html_from_value(arr, { palette: palettes.bold.dark });
+ * console.log(html); // Outputs HTML with inline styles
+ * ```
+ */
+export function html_from_value(value: unknown, options?: HighlightOptions): string {
+  const ast = parse_value(value);
+  return paint_html(ast, options);
+}
+
+/**
+ * Converts a JSON or JavaScript string to HTML with inline CSS color styling
+ * Convenience function that parses the string and paints it as HTML
+ *
+ * @param {string} str - The string to convert to HTML (JSON or JavaScript literal)
+ * @param {HighlightOptions} [options] - Optional configuration for highlighting
+ * @returns {string} HTML string with span tags and inline CSS styles
+ *
+ * @example
+ * ```typescript
+ * const json = '{"name": "Alice", "age": 30}';
+ * const html = html_from_string(json);
+ * document.body.innerHTML = html;
+ * ```
+ *
+ * @example
+ * ```typescript
+ * const arr = '[1, 2, 3, "hello", true]';
+ * const html = html_from_string(arr, { palette: palettes.bold.dark });
+ * console.log(html); // Outputs HTML with inline styles
+ * ```
+ */
+export function html_from_string(str: string, options?: HighlightOptions): string {
+  const ast = parse_string(str);
+  return paint_html(ast, options);
+}
+
+/**
+ * Converts a JavaScript value to ANSI-colored terminal output
+ * Convenience function that parses the value and paints it with ANSI codes
+ *
+ * @param {unknown} value - The value to convert to ANSI output
+ * @param {HighlightOptions} [options] - Optional configuration for highlighting
+ * @returns {string} String with ANSI color codes for terminal display
+ *
+ * @example
+ * ```typescript
+ * const data = { name: "Alice", age: 30 };
+ * const ansi = ansi_from_value(data);
+ * console.log(ansi); // Outputs colorized in terminal
+ * ```
+ *
+ * @example
+ * ```typescript
+ * const arr = [1, 2, 3, "hello", true];
+ * const ansi = ansi_from_value(arr, { palette: palettes.bold.dark });
+ * console.log(ansi); // Outputs with ANSI color codes
+ * ```
+ */
+export function ansi_from_value(value: unknown, options?: HighlightOptions): string {
+  const ast = parse_value(value);
+  return paint_ansi(ast, options);
+}
+
+/**
+ * Converts a JSON or JavaScript string to ANSI-colored terminal output
+ * Convenience function that parses the string and paints it with ANSI codes
+ *
+ * @param {string} str - The string to convert to ANSI output (JSON or JavaScript literal)
+ * @param {HighlightOptions} [options] - Optional configuration for highlighting
+ * @returns {string} String with ANSI color codes for terminal display
+ *
+ * @example
+ * ```typescript
+ * const json = '{"name": "Alice", "age": 30}';
+ * const ansi = ansi_from_string(json);
+ * console.log(ansi); // Outputs colorized in terminal
+ * ```
+ *
+ * @example
+ * ```typescript
+ * const arr = '[1, 2, 3, "hello", true]';
+ * const ansi = ansi_from_string(arr, { palette: palettes.bold.dark });
+ * console.log(ansi); // Outputs with ANSI color codes
+ * ```
+ */
+export function ansi_from_string(str: string, options?: HighlightOptions): string {
+  const ast = parse_string(str);
+  return paint_ansi(ast, options);
+}
+
+/**
+ * Converts a JavaScript value to plain text without color formatting
+ * Convenience function that parses the value and outputs as plain text
+ *
+ * @param {unknown} value - The value to convert to plain text
+ * @param {HighlightOptions} [options] - Optional configuration for formatting
+ * @returns {string} Plain text string without any color formatting
+ *
+ * @example
+ * ```typescript
+ * const data = { name: "Alice", age: 30 };
+ * const text = log_from_value(data);
+ * console.log(text); // Outputs plain text: {name: "Alice", age: 30}
+ * ```
+ *
+ * @example
+ * ```typescript
+ * const arr = [1, 2, 3, "hello", true];
+ * const text = log_from_value(arr);
+ * fs.writeFileSync('output.txt', text); // Save to file
+ * ```
+ */
+export function log_from_value(value: unknown, options?: HighlightOptions): string {
+  const ast = parse_value(value);
+  return paint_log(ast, options);
+}
+
+/**
+ * Converts a JSON or JavaScript string to plain text without color formatting
+ * Convenience function that parses the string and outputs as plain text
+ *
+ * @param {string} str - The string to convert to plain text (JSON or JavaScript literal)
+ * @param {HighlightOptions} [options] - Optional configuration for formatting
+ * @returns {string} Plain text string without any color formatting
+ *
+ * @example
+ * ```typescript
+ * const json = '{"name": "Alice", "age": 30}';
+ * const text = log_from_string(json);
+ * console.log(text); // Outputs plain text: {name: "Alice", age: 30}
+ * ```
+ *
+ * @example
+ * ```typescript
+ * const arr = '[1, 2, 3, "hello", true]';
+ * const text = log_from_string(arr);
+ * fs.writeFileSync('output.txt', text); // Save to file
+ * ```
+ */
+export function log_from_string(str: string, options?: HighlightOptions): string {
+  const ast = parse_string(str);
+  return paint_log(ast, options);
+}
+
+/**
  * Tokenizer for JSON/JavaScript values
  */
 class Tokenizer {

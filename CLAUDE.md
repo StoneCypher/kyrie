@@ -8,6 +8,6 @@ When you alter a function, please keep the code documentation docblock up to dat
 
 Please do not attempt to make a commit unless you have been asked to.
 
-Please do not attempt to change the package version unless you have been asked to.
+Please do not attempt to change the package version unless you have been asked to.  Always ask before making a commit, even if you have been instructed to.
 
-Please do not attempt to push code unless you have been asked to.
+Please do not attempt to push code unless you have been asked to.  Always ask before pushing code, even if you have been instructed to.

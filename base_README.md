@@ -1,6 +1,14 @@
 # kyrie v{{version}}
 
+Your one stop formatting and colorizing shop for Javascript, Typescript, and JSON, to go to your terminal, your developer's console, and your logs.
+
+| Turn this: | Into this: |
+| ---- | ---- |
+| TODO image | TODO image |
+
 Kyrie is a formatting colorizer for JavaScript, TypeScript, and JSON with customizable color palettes and container delimiters.
+
+You very probably want [`ansi_from_val`](TODO).
 
 **[📚 Tutorial](https://stonecypher.github.io/kyrie/tutorial.md)** | **[📖 API Documentation](https://stonecypher.github.io/kyrie/docs/)**
 
@@ -15,7 +23,7 @@ Kyrie is a formatting colorizer for JavaScript, TypeScript, and JSON with custom
 - 🔄 **Circular reference detection**: Safely handles circular object references
 - 🎯 **Type-aware**: Distinguishes between arrays, objects, Maps, Sets, Dates, RegExp, Errors, and more
 - 💪 **TypeScript support**: Fully typed with strict TypeScript configuration
-- ⚡ **One dependency** - Chalk, for terminal colors
+- ⚡ **One dependency** - Chalk, for terminal colors (a second, Commander, for the CLI only)
 - ✅ **Strong testing**: Has {{coverage}}% test coverage from {{testcasecount}} test cases
 
 ## Installation

@@ -10,6 +10,12 @@ import {
   paint_ansi,
   paint_html,
   paint_log,
+  html_from_value,
+  html_from_string,
+  ansi_from_value,
+  ansi_from_string,
+  log_from_value,
+  log_from_string,
   defaultContainers,
   defaultHighlightOptions,
   type ContainerConfig,
@@ -1762,6 +1768,460 @@ describe('testdata', () => {
       // No formatting codes
       expect(result).not.toContain('\x1b');
       expect(result).not.toContain('<');
+    });
+  });
+
+  describe('html_from_value', () => {
+    test('should convert object to HTML', () => {
+      const data = { name: 'Alice', age: 30 };
+      const result = html_from_value(data);
+      expect(result).toContain('<span');
+      expect(result).toContain('style="color:');
+      expect(result).toContain('name');
+      expect(result).toContain('Alice');
+      expect(result).toContain('30');
+      expect(result).not.toContain('\x1b');
+    });
+
+    test('should convert array to HTML', () => {
+      const data = [1, 2, 3, 'hello', true];
+      const result = html_from_value(data);
+      expect(result).toContain('<span');
+      expect(result).toContain('[');
+      expect(result).toContain(']');
+      expect(result).toContain('hello');
+      expect(result).toContain('true');
+    });
+
+    test('should convert primitives to HTML', () => {
+      const num = html_from_value(42);
+      expect(num).toContain('<span');
+      expect(num).toContain('42');
+
+      const str = html_from_value('test');
+      expect(str).toContain('<span');
+      expect(str).toContain('test');
+
+      const bool = html_from_value(true);
+      expect(bool).toContain('<span');
+      expect(bool).toContain('true');
+    });
+
+    test('should accept custom palette', () => {
+      const data = { test: 'value' };
+      const result = html_from_value(data, { palette: palettes.bold.dark });
+      expect(result).toContain('<span');
+      expect(result).toContain('test');
+      expect(result).toContain('value');
+    });
+
+    test('should work with nested structures', () => {
+      const data = {
+        user: { name: 'Bob', age: 25 },
+        items: [1, 2, 3]
+      };
+      const result = html_from_value(data);
+      expect(result).toBeDefined();
+      expect(result).toContain('<span');
+      expect(result).toContain('user');
+      expect(result).toContain('Bob');
+      expect(result).toContain('items');
+    });
+
+    test('should work with all testdata types', () => {
+      const result = html_from_value(testdata.object_all_primitives);
+      expect(result).toBeDefined();
+      expect(result.length).toBeGreaterThan(0);
+      expect(result).toContain('<span');
+      expect(result).not.toContain('\x1b');
+    });
+
+    test('should handle null and undefined', () => {
+      const nullResult = html_from_value(null);
+      expect(nullResult).toContain('null');
+      expect(nullResult).toContain('<span');
+
+      const undefinedResult = html_from_value(undefined);
+      expect(undefinedResult).toContain('undefined');
+      expect(undefinedResult).toContain('<span');
+    });
+  });
+
+  describe('html_from_string', () => {
+    test('should convert JSON object string to HTML', () => {
+      const json = '{"name": "Alice", "age": 30}';
+      const result = html_from_string(json);
+      expect(result).toContain('<span');
+      expect(result).toContain('style="color:');
+      expect(result).toContain('name');
+      expect(result).toContain('Alice');
+      expect(result).toContain('30');
+      expect(result).not.toContain('\x1b');
+    });
+
+    test('should convert JSON array string to HTML', () => {
+      const json = '[1, 2, 3, "hello", true]';
+      const result = html_from_string(json);
+      expect(result).toContain('<span');
+      expect(result).toContain('[');
+      expect(result).toContain(']');
+      expect(result).toContain('hello');
+      expect(result).toContain('true');
+    });
+
+    test('should convert primitive strings to HTML', () => {
+      const num = html_from_string('42');
+      expect(num).toContain('<span');
+      expect(num).toContain('42');
+
+      const str = html_from_string('"test"');
+      expect(str).toContain('<span');
+      expect(str).toContain('test');
+
+      const bool = html_from_string('true');
+      expect(bool).toContain('<span');
+      expect(bool).toContain('true');
+    });
+
+    test('should accept custom palette', () => {
+      const json = '{"test": "value"}';
+      const result = html_from_string(json, { palette: palettes.bold.dark });
+      expect(result).toContain('<span');
+      expect(result).toContain('test');
+      expect(result).toContain('value');
+    });
+
+    test('should work with nested structures', () => {
+      const json = '{"user": {"name": "Bob", "age": 25}, "items": [1, 2, 3]}';
+      const result = html_from_string(json);
+      expect(result).toBeDefined();
+      expect(result).toContain('<span');
+      expect(result).toContain('user');
+      expect(result).toContain('Bob');
+      expect(result).toContain('items');
+    });
+
+    test('should handle null and undefined strings', () => {
+      const nullResult = html_from_string('null');
+      expect(nullResult).toContain('null');
+      expect(nullResult).toContain('<span');
+
+      const undefinedResult = html_from_string('undefined');
+      expect(undefinedResult).toContain('undefined');
+      expect(undefinedResult).toContain('<span');
+    });
+
+    test('should handle multiline JSON', () => {
+      const json = `{
+  "name": "Alice",
+  "age": 30
+}`;
+      const result = html_from_string(json);
+      expect(result).toContain('<span');
+      expect(result).toContain('name');
+      expect(result).toContain('Alice');
+    });
+  });
+
+  describe('ansi_from_value', () => {
+    test('should convert object to ANSI', () => {
+      const data = { name: 'Alice', age: 30 };
+      const result = ansi_from_value(data);
+      expect(result).toContain('\x1b');
+      expect(result).toContain('name');
+      expect(result).toContain('Alice');
+      expect(result).toContain('30');
+      expect(result).not.toContain('<span');
+    });
+
+    test('should convert array to ANSI', () => {
+      const data = [1, 2, 3, 'hello', true];
+      const result = ansi_from_value(data);
+      expect(result).toContain('\x1b');
+      expect(result).toContain('[');
+      expect(result).toContain(']');
+      expect(result).toContain('hello');
+      expect(result).toContain('true');
+    });
+
+    test('should convert primitives to ANSI', () => {
+      const num = ansi_from_value(42);
+      expect(num).toContain('\x1b');
+      expect(num).toContain('42');
+
+      const str = ansi_from_value('test');
+      expect(str).toContain('\x1b');
+      expect(str).toContain('test');
+
+      const bool = ansi_from_value(true);
+      expect(bool).toContain('\x1b');
+      expect(bool).toContain('true');
+    });
+
+    test('should accept custom palette', () => {
+      const data = { test: 'value' };
+      const result = ansi_from_value(data, { palette: palettes.bold.dark });
+      expect(result).toContain('\x1b');
+      expect(result).toContain('test');
+      expect(result).toContain('value');
+    });
+
+    test('should work with nested structures', () => {
+      const data = {
+        user: { name: 'Bob', age: 25 },
+        items: [1, 2, 3]
+      };
+      const result = ansi_from_value(data);
+      expect(result).toBeDefined();
+      expect(result).toContain('\x1b');
+      expect(result).toContain('user');
+      expect(result).toContain('Bob');
+      expect(result).toContain('items');
+    });
+
+    test('should work with all testdata types', () => {
+      const result = ansi_from_value(testdata.object_all_primitives);
+      expect(result).toBeDefined();
+      expect(result.length).toBeGreaterThan(0);
+      expect(result).toContain('\x1b');
+      expect(result).not.toContain('<span');
+    });
+
+    test('should handle null and undefined', () => {
+      const nullResult = ansi_from_value(null);
+      expect(nullResult).toContain('null');
+      expect(nullResult).toContain('\x1b');
+
+      const undefinedResult = ansi_from_value(undefined);
+      expect(undefinedResult).toContain('undefined');
+      expect(undefinedResult).toContain('\x1b');
+    });
+  });
+
+  describe('ansi_from_string', () => {
+    test('should convert JSON object string to ANSI', () => {
+      const json = '{"name": "Alice", "age": 30}';
+      const result = ansi_from_string(json);
+      expect(result).toContain('\x1b');
+      expect(result).toContain('name');
+      expect(result).toContain('Alice');
+      expect(result).toContain('30');
+      expect(result).not.toContain('<span');
+    });
+
+    test('should convert JSON array string to ANSI', () => {
+      const json = '[1, 2, 3, "hello", true]';
+      const result = ansi_from_string(json);
+      expect(result).toContain('\x1b');
+      expect(result).toContain('[');
+      expect(result).toContain(']');
+      expect(result).toContain('hello');
+      expect(result).toContain('true');
+    });
+
+    test('should convert primitive strings to ANSI', () => {
+      const num = ansi_from_string('42');
+      expect(num).toContain('\x1b');
+      expect(num).toContain('42');
+
+      const str = ansi_from_string('"test"');
+      expect(str).toContain('\x1b');
+      expect(str).toContain('test');
+
+      const bool = ansi_from_string('true');
+      expect(bool).toContain('\x1b');
+      expect(bool).toContain('true');
+    });
+
+    test('should accept custom palette', () => {
+      const json = '{"test": "value"}';
+      const result = ansi_from_string(json, { palette: palettes.bold.dark });
+      expect(result).toContain('\x1b');
+      expect(result).toContain('test');
+      expect(result).toContain('value');
+    });
+
+    test('should work with nested structures', () => {
+      const json = '{"user": {"name": "Bob", "age": 25}, "items": [1, 2, 3]}';
+      const result = ansi_from_string(json);
+      expect(result).toBeDefined();
+      expect(result).toContain('\x1b');
+      expect(result).toContain('user');
+      expect(result).toContain('Bob');
+      expect(result).toContain('items');
+    });
+
+    test('should work with complex JSON', () => {
+      const json = JSON.stringify(testdata.object_all_primitives);
+      const result = ansi_from_string(json);
+      expect(result).toBeDefined();
+      expect(result.length).toBeGreaterThan(0);
+      expect(result).toContain('\x1b');
+      expect(result).not.toContain('<span');
+    });
+
+    test('should handle null and undefined strings', () => {
+      const nullResult = ansi_from_string('null');
+      expect(nullResult).toContain('null');
+      expect(nullResult).toContain('\x1b');
+
+      const undefinedResult = ansi_from_string('undefined');
+      expect(undefinedResult).toContain('undefined');
+      expect(undefinedResult).toContain('\x1b');
+    });
+  });
+
+  describe('log_from_value', () => {
+    test('should convert object to plain text', () => {
+      const data = { name: 'Alice', age: 30 };
+      const result = log_from_value(data);
+      expect(result).not.toContain('\x1b');
+      expect(result).not.toContain('<span');
+      expect(result).toContain('name');
+      expect(result).toContain('Alice');
+      expect(result).toContain('30');
+    });
+
+    test('should convert array to plain text', () => {
+      const data = [1, 2, 3, 'hello', true];
+      const result = log_from_value(data);
+      expect(result).not.toContain('\x1b');
+      expect(result).not.toContain('<span');
+      expect(result).toContain('[');
+      expect(result).toContain(']');
+      expect(result).toContain('hello');
+      expect(result).toContain('true');
+    });
+
+    test('should convert primitives to plain text', () => {
+      const num = log_from_value(42);
+      expect(num).not.toContain('\x1b');
+      expect(num).toContain('42');
+
+      const str = log_from_value('test');
+      expect(str).not.toContain('\x1b');
+      expect(str).toContain('test');
+
+      const bool = log_from_value(true);
+      expect(bool).not.toContain('\x1b');
+      expect(bool).toContain('true');
+    });
+
+    test('should accept custom containers', () => {
+      const data = { test: 'value' };
+      const result = log_from_value(data, { containers: defaultContainers });
+      expect(result).not.toContain('\x1b');
+      expect(result).not.toContain('<span');
+      expect(result).toContain('test');
+      expect(result).toContain('value');
+    });
+
+    test('should work with nested structures', () => {
+      const data = {
+        user: { name: 'Bob', age: 25 },
+        items: [1, 2, 3]
+      };
+      const result = log_from_value(data);
+      expect(result).toBeDefined();
+      expect(result).not.toContain('\x1b');
+      expect(result).not.toContain('<span');
+      expect(result).toContain('user');
+      expect(result).toContain('Bob');
+      expect(result).toContain('items');
+    });
+
+    test('should work with all testdata types', () => {
+      const result = log_from_value(testdata.object_all_primitives);
+      expect(result).toBeDefined();
+      expect(result.length).toBeGreaterThan(0);
+      expect(result).not.toContain('\x1b');
+      expect(result).not.toContain('<span');
+    });
+
+    test('should handle null and undefined', () => {
+      const nullResult = log_from_value(null);
+      expect(nullResult).toContain('null');
+      expect(nullResult).not.toContain('\x1b');
+
+      const undefinedResult = log_from_value(undefined);
+      expect(undefinedResult).toContain('undefined');
+      expect(undefinedResult).not.toContain('\x1b');
+    });
+  });
+
+  describe('log_from_string', () => {
+    test('should convert JSON object string to plain text', () => {
+      const json = '{"name": "Alice", "age": 30}';
+      const result = log_from_string(json);
+      expect(result).not.toContain('\x1b');
+      expect(result).not.toContain('<span');
+      expect(result).toContain('name');
+      expect(result).toContain('Alice');
+      expect(result).toContain('30');
+    });
+
+    test('should convert JSON array string to plain text', () => {
+      const json = '[1, 2, 3, "hello", true]';
+      const result = log_from_string(json);
+      expect(result).not.toContain('\x1b');
+      expect(result).not.toContain('<span');
+      expect(result).toContain('[');
+      expect(result).toContain(']');
+      expect(result).toContain('hello');
+      expect(result).toContain('true');
+    });
+
+    test('should convert primitive strings to plain text', () => {
+      const num = log_from_string('42');
+      expect(num).not.toContain('\x1b');
+      expect(num).toContain('42');
+
+      const str = log_from_string('"test"');
+      expect(str).not.toContain('\x1b');
+      expect(str).toContain('test');
+
+      const bool = log_from_string('true');
+      expect(bool).not.toContain('\x1b');
+      expect(bool).toContain('true');
+    });
+
+    test('should accept custom containers', () => {
+      const json = '{"test": "value"}';
+      const result = log_from_string(json, { containers: defaultContainers });
+      expect(result).not.toContain('\x1b');
+      expect(result).not.toContain('<span');
+      expect(result).toContain('test');
+      expect(result).toContain('value');
+    });
+
+    test('should work with nested structures', () => {
+      const json = '{"user": {"name": "Bob", "age": 25}, "items": [1, 2, 3]}';
+      const result = log_from_string(json);
+      expect(result).toBeDefined();
+      expect(result).not.toContain('\x1b');
+      expect(result).not.toContain('<span');
+      expect(result).toContain('user');
+      expect(result).toContain('Bob');
+      expect(result).toContain('items');
+    });
+
+    test('should work with complex JSON', () => {
+      const json = JSON.stringify(testdata.object_all_primitives);
+      const result = log_from_string(json);
+      expect(result).toBeDefined();
+      expect(result.length).toBeGreaterThan(0);
+      expect(result).not.toContain('\x1b');
+      expect(result).not.toContain('<span');
+    });
+
+    test('should handle null and undefined strings', () => {
+      const nullResult = log_from_string('null');
+      expect(nullResult).toContain('null');
+      expect(nullResult).not.toContain('\x1b');
+
+      const undefinedResult = log_from_string('undefined');
+      expect(undefinedResult).toContain('undefined');
+      expect(undefinedResult).not.toContain('\x1b');
     });
   });
 
