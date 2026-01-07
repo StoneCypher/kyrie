@@ -1,6 +1,6 @@
-# kyrie v0.29.0
+# kyrie v0.30.0
 
-> Version 0.29.0 was built on 1/7/2026, 6:02:10 AM `1767794530842` from hash `a367922`.
+> Version 0.30.0 was built on 1/7/2026, 6:19:22 AM `1767795562872` from hash `06de7f9`.
 
 If you're just getting started, you very probably want [`ansi_from_value`](https://stonecypher.github.io/kyrie/docs/functions/ansi_from_value.html).
 
@@ -46,7 +46,7 @@ Useful getting started links:
 - 🎯 **Type-aware**: Distinguishes between arrays, objects, Maps, Sets, Dates, RegExp, Errors, and more
 - 💪 **TypeScript support**: Fully typed with strict TypeScript configuration
 - ⚡ **One dependency** - Chalk, for terminal colors (a second, Commander, for the CLI only)
-- ✅ **Strong testing**: Has 99.74% test coverage from 443 test cases
+- ✅ **Strong testing**: Has 99.25% test coverage from 443 test cases
 
 ## Installation
 
@@ -130,13 +130,13 @@ console.log(highlighted); // Outputs colorized object
 
 ### API
 
-#### `highlight_value(value: unknown, options?: HighlightOptions): string`
+#### `highlight_value(value: unknown, options?: Options): string`
 
 Colorizes any JavaScript value by parsing it to an AST and painting it with colors.
 
 **Parameters:**
 - `value` (unknown): The JavaScript value to highlight (any type)
-- `options` (HighlightOptions, optional): Configuration options with palette and container settings
+- `options` (Options, optional): Configuration options with palette and container settings
 
 **Returns:**
 - string: The colorized string with ANSI escape codes
@@ -144,7 +144,7 @@ Colorizes any JavaScript value by parsing it to an AST and painting it with colo
 **Example:**
 
 ```typescript
-import { highlight_value, type HighlightOptions, forestPalette } from 'kyrie';
+import { highlight_value, type Options, forestPalette } from 'kyrie';
 
 const data = { name: 'Alice', age: 25, active: true };
 const result = highlight_value(data);
@@ -155,13 +155,13 @@ const forestResult = highlight_value(data, { palette: forestPalette });
 console.log(forestResult); // Uses forest palette
 ```
 
-#### `highlight_string(str: string, options?: HighlightOptions): string`
+#### `highlight_string(str: string, options?: Options): string`
 
 Colorizes a JSON or JavaScript string by parsing it to an AST and painting it with colors.
 
 **Parameters:**
 - `str` (string): The JSON or JavaScript string to highlight
-- `options` (HighlightOptions, optional): Configuration options with palette and container settings
+- `options` (Options, optional): Configuration options with palette and container settings
 
 **Returns:**
 - string: The colorized string with ANSI escape codes
@@ -169,7 +169,7 @@ Colorizes a JSON or JavaScript string by parsing it to an AST and painting it wi
 **Example:**
 
 ```typescript
-import { highlight_string, type HighlightOptions, boldPalette } from 'kyrie';
+import { highlight_string, type Options, boldPalette } from 'kyrie';
 
 const json = '{"name": "Alice", "age": 25, "active": true}';
 const result = highlight_string(json);
@@ -184,12 +184,12 @@ const array = '[1, 2, 3, "hello", true]';
 console.log(highlight_string(array));
 ```
 
-### HighlightOptions
+### Options
 
 Configuration interface for highlighting and painting functions.
 
 ```typescript
-interface HighlightOptions {
+interface Options {
   palette?: ColorPalette;           // Color scheme to use
   containers?: ContainerConfig;     // Container delimiter configuration
   maxWidth?: number | false | undefined; // Maximum output width (characters)
@@ -205,7 +205,7 @@ interface HighlightOptions {
   - `undefined` - Use default behavior (no width limit)
 
 **Available exports:**
-- `defaultHighlightOptions` - Pre-configured with defaultPalette and defaultContainers
+- `defaultOptions` - Pre-configured with defaultPalette and defaultContainers
 - `defaultPalette`, `forestPalette`, `boldPalette`, `duskPalette` - Built-in color schemes
 - `defaultContainers` - Default container delimiters
 
@@ -216,7 +216,7 @@ Kyrie provides three paint functions for different output formats:
 - `paint_html()` - HTML with inline CSS for web browsers
 - `paint_log()` - Plain text for logging and environments without color support
 
-#### `paint_ansi(node: ASTNode, options?: HighlightOptions): string`
+#### `paint_ansi(node: ASTNode, options?: Options): string`
 
 Renders AST nodes with colors and formatting using Chalk. Converts parsed AST nodes into colorized strings with ANSI escape codes for terminal display. Colors are always generated regardless of environment (forced color support at 16 million color level).
 
@@ -224,7 +224,7 @@ Converts an AST node into a colorized string representation.
 
 **Parameters:**
 - `node` (ASTNode): The AST node to paint
-- `options` (HighlightOptions, optional): Configuration with palette and container settings. Defaults are used for any missing values.
+- `options` (Options, optional): Configuration with palette and container settings. Defaults are used for any missing values.
 
 **Returns:**
 - string: The colorized string representation with ANSI escape codes (24-bit RGB colors)
@@ -287,13 +287,13 @@ console.log(colored);
 
 **Note:** The paint_ansi function uses Chalk with forced color support (level 3 - 16 million colors). This ensures ANSI color codes are always generated in the output, regardless of the environment. When displayed in a color-supporting terminal, you'll see the fully colorized output.
 
-#### `paint_html(node: ASTNode, options?: HighlightOptions): string`
+#### `paint_html(node: ASTNode, options?: Options): string`
 
 Converts an AST node into an HTML-formatted string with inline CSS color styling. Perfect for web browser output.
 
 **Parameters:**
 - `node` (ASTNode): The AST node to paint
-- `options` (HighlightOptions, optional): Configuration with palette and container settings
+- `options` (Options, optional): Configuration with palette and container settings
 
 **Returns:**
 - string: HTML string with `<span>` tags and inline CSS styles
@@ -310,13 +310,13 @@ document.body.innerHTML = `<pre>${html}</pre>`;
 // Renders colorized JSON in browser
 ```
 
-#### `paint_log(node: ASTNode, options?: HighlightOptions): string`
+#### `paint_log(node: ASTNode, options?: Options): string`
 
 Converts an AST node into plain text without any color formatting. Ideal for logging to files, databases, or environments without color support.
 
 **Parameters:**
 - `node` (ASTNode): The AST node to paint
-- `options` (HighlightOptions, optional): Configuration with container settings (palette is ignored)
+- `options` (Options, optional): Configuration with container settings (palette is ignored)
 
 **Returns:**
 - string: Plain text representation without any formatting codes

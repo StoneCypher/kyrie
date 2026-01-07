@@ -7,7 +7,7 @@ import type {
   ColorPalette,
   OutputMode,
   LineUnfolding,
-  HighlightOptions,
+  Options,
   PaintPolicy,
   PaintFunction
 } from './types.js';
@@ -21,7 +21,7 @@ export type {
   ColorPalette,
   OutputMode,
   LineUnfolding,
-  HighlightOptions,
+  Options,
   PaintPolicy,
   PaintFunction
 };
@@ -329,7 +329,7 @@ export const testdata = {
  * Highlights a JavaScript value with colors
  *
  * @param {unknown} value - The value to highlight
- * @param {HighlightOptions} [options] - Optional configuration for highlighting
+ * @param {Options} [options] - Optional configuration for highlighting
  * @returns {string} The highlighted string with ANSI color codes
  *
  * @example
@@ -346,7 +346,7 @@ export const testdata = {
  * console.log(highlighted);
  * ```
  */
-export function highlight_value(value: unknown, options?: HighlightOptions): string {
+export function highlight_value(value: unknown, options?: Options): string {
   const ast = parse_value(value);
   return paint_ansi(ast, options);
 }
@@ -355,7 +355,7 @@ export function highlight_value(value: unknown, options?: HighlightOptions): str
  * Highlights a JSON or JavaScript string with colors
  *
  * @param {string} str - The string to highlight (JSON or JavaScript literal)
- * @param {HighlightOptions} [options] - Optional configuration for highlighting
+ * @param {Options} [options] - Optional configuration for highlighting
  * @returns {string} The highlighted string with ANSI color codes
  *
  * @example
@@ -372,7 +372,7 @@ export function highlight_value(value: unknown, options?: HighlightOptions): str
  * console.log(highlighted);
  * ```
  */
-export function highlight_string(str: string, options?: HighlightOptions): string {
+export function highlight_string(str: string, options?: Options): string {
   const ast = parse_string(str);
   return paint_ansi(ast, options);
 }
@@ -380,7 +380,7 @@ export function highlight_string(str: string, options?: HighlightOptions): strin
 /**
  * Default highlight options
  */
-export const defaultHighlightOptions: HighlightOptions = {
+export const defaultOptions: Options = {
   palette: palettes.default.light,
   containers: defaultContainers,
   maxWidth: undefined,
@@ -457,7 +457,7 @@ function getPaletteColor(palette: ColorPalette, colorKey: keyof ColorPalette): s
  *
  * @param {ASTNode} node - The AST node to paint
  * @param {PaintPolicy} policy - The paint policy to use for color formatting
- * @param {HighlightOptions} [options] - Optional configuration. Defaults will be used for any missing values.
+ * @param {Options} [options] - Optional configuration. Defaults will be used for any missing values.
  * @returns {string} The painted string representation of the node
  *
  * @example
@@ -475,11 +475,11 @@ function getPaletteColor(palette: ColorPalette, colorKey: keyof ColorPalette): s
  * console.log(painted);
  * ```
  */
-export function paint(node: ASTNode, policy: PaintPolicy, options?: HighlightOptions, depth: number = 0): string {
+export function paint(node: ASTNode, policy: PaintPolicy, options?: Options, depth: number = 0): string {
   // Merge provided options with defaults
-  const palette = options?.palette ?? defaultHighlightOptions.palette!;
-  const containers = options?.containers ?? defaultHighlightOptions.containers!;
-  const lineUnfolding = options?.lineUnfolding ?? defaultHighlightOptions.lineUnfolding!;
+  const palette = options?.palette ?? defaultOptions.palette!;
+  const containers = options?.containers ?? defaultOptions.containers!;
+  const lineUnfolding = options?.lineUnfolding ?? defaultOptions.lineUnfolding!;
 
   // Calculate line formatting based on lineUnfolding mode
   let line_change: string;
@@ -492,8 +492,16 @@ export function paint(node: ASTNode, policy: PaintPolicy, options?: HighlightOpt
     next_indent = '';
   } else { // expanded
     line_change = policy.newline;
-    line_indent = ' '.repeat(depth * 2);
-    next_indent = ' '.repeat((depth + 1) * 2);
+    const indent = options?.indent ?? defaultOptions.indent!;
+
+    if (typeof indent === 'number') {
+      line_indent = ' '.repeat(depth * indent);
+      next_indent = ' '.repeat((depth + 1) * indent);
+    } else {
+      // indent is a string
+      line_indent = indent.repeat(depth);
+      next_indent = indent.repeat(depth + 1);
+    }
   }
 
   // Handle null
@@ -668,7 +676,7 @@ export function paint(node: ASTNode, policy: PaintPolicy, options?: HighlightOpt
  * Convenience wrapper around paint() that uses the ansi_policy
  *
  * @param {ASTNode} node - The AST node to paint
- * @param {HighlightOptions} [options] - Optional configuration. Defaults will be used for any missing values.
+ * @param {Options} [options] - Optional configuration. Defaults will be used for any missing values.
  * @returns {string} The painted string representation of the node with ANSI color codes
  *
  * @example
@@ -686,7 +694,7 @@ export function paint(node: ASTNode, policy: PaintPolicy, options?: HighlightOpt
  * console.log(painted);
  * ```
  */
-export const paint_ansi: PaintFunction = (node: ASTNode, options?: HighlightOptions): string => {
+export const paint_ansi: PaintFunction = (node: ASTNode, options?: Options): string => {
   return paint(node, ansi_policy, options);
 };
 
@@ -695,7 +703,7 @@ export const paint_ansi: PaintFunction = (node: ASTNode, options?: HighlightOpti
  * Convenience wrapper around paint() that uses the html_policy
  *
  * @param {ASTNode} node - The AST node to paint
- * @param {HighlightOptions} [options] - Optional configuration. Defaults will be used for any missing values.
+ * @param {Options} [options] - Optional configuration. Defaults will be used for any missing values.
  * @returns {string} The painted string representation of the node with HTML span tags and inline CSS
  *
  * @example
@@ -713,7 +721,7 @@ export const paint_ansi: PaintFunction = (node: ASTNode, options?: HighlightOpti
  * document.body.innerHTML = '<pre>' + painted + '</pre>';
  * ```
  */
-export const paint_html: PaintFunction = (node: ASTNode, options?: HighlightOptions): string => {
+export const paint_html: PaintFunction = (node: ASTNode, options?: Options): string => {
   return paint(node, html_policy, options);
 };
 
@@ -722,7 +730,7 @@ export const paint_html: PaintFunction = (node: ASTNode, options?: HighlightOpti
  * Convenience wrapper around paint() that uses the log_policy
  *
  * @param {ASTNode} node - The AST node to paint
- * @param {HighlightOptions} [options] - Optional configuration. Defaults will be used for any missing values.
+ * @param {Options} [options] - Optional configuration. Defaults will be used for any missing values.
  * @returns {string} The painted string representation of the node without any color formatting
  *
  * @example
@@ -740,7 +748,7 @@ export const paint_html: PaintFunction = (node: ASTNode, options?: HighlightOpti
  * fs.writeFileSync('output.txt', painted); // Save plain text to file
  * ```
  */
-export const paint_log: PaintFunction = (node: ASTNode, options?: HighlightOptions): string => {
+export const paint_log: PaintFunction = (node: ASTNode, options?: Options): string => {
   return paint(node, log_policy, options);
 };
 
@@ -749,7 +757,7 @@ export const paint_log: PaintFunction = (node: ASTNode, options?: HighlightOptio
  * Convenience function that parses the value and paints it as HTML
  *
  * @param {unknown} value - The value to convert to HTML
- * @param {HighlightOptions} [options] - Optional configuration for highlighting
+ * @param {Options} [options] - Optional configuration for highlighting
  * @returns {string} HTML string with span tags and inline CSS styles
  *
  * @example
@@ -766,7 +774,7 @@ export const paint_log: PaintFunction = (node: ASTNode, options?: HighlightOptio
  * console.log(html); // Outputs HTML with inline styles
  * ```
  */
-export function html_from_value(value: unknown, options?: HighlightOptions): string {
+export function html_from_value(value: unknown, options?: Options): string {
   const ast = parse_value(value);
   return paint_html(ast, options);
 }
@@ -776,7 +784,7 @@ export function html_from_value(value: unknown, options?: HighlightOptions): str
  * Convenience function that parses the string and paints it as HTML
  *
  * @param {string} str - The string to convert to HTML (JSON or JavaScript literal)
- * @param {HighlightOptions} [options] - Optional configuration for highlighting
+ * @param {Options} [options] - Optional configuration for highlighting
  * @returns {string} HTML string with span tags and inline CSS styles
  *
  * @example
@@ -793,7 +801,7 @@ export function html_from_value(value: unknown, options?: HighlightOptions): str
  * console.log(html); // Outputs HTML with inline styles
  * ```
  */
-export function html_from_string(str: string, options?: HighlightOptions): string {
+export function html_from_string(str: string, options?: Options): string {
   const ast = parse_string(str);
   return paint_html(ast, options);
 }
@@ -803,7 +811,7 @@ export function html_from_string(str: string, options?: HighlightOptions): strin
  * Convenience function that parses the value and paints it with ANSI codes
  *
  * @param {unknown} value - The value to convert to ANSI output
- * @param {HighlightOptions} [options] - Optional configuration for highlighting
+ * @param {Options} [options] - Optional configuration for highlighting
  * @returns {string} String with ANSI color codes for terminal display
  *
  * @example
@@ -820,7 +828,7 @@ export function html_from_string(str: string, options?: HighlightOptions): strin
  * console.log(ansi); // Outputs with ANSI color codes
  * ```
  */
-export function ansi_from_value(value: unknown, options?: HighlightOptions): string {
+export function ansi_from_value(value: unknown, options?: Options): string {
   const ast = parse_value(value);
   return paint_ansi(ast, options);
 }
@@ -830,7 +838,7 @@ export function ansi_from_value(value: unknown, options?: HighlightOptions): str
  * Convenience function that parses the string and paints it with ANSI codes
  *
  * @param {string} str - The string to convert to ANSI output (JSON or JavaScript literal)
- * @param {HighlightOptions} [options] - Optional configuration for highlighting
+ * @param {Options} [options] - Optional configuration for highlighting
  * @returns {string} String with ANSI color codes for terminal display
  *
  * @example
@@ -847,7 +855,7 @@ export function ansi_from_value(value: unknown, options?: HighlightOptions): str
  * console.log(ansi); // Outputs with ANSI color codes
  * ```
  */
-export function ansi_from_string(str: string, options?: HighlightOptions): string {
+export function ansi_from_string(str: string, options?: Options): string {
   const ast = parse_string(str);
   return paint_ansi(ast, options);
 }
@@ -857,7 +865,7 @@ export function ansi_from_string(str: string, options?: HighlightOptions): strin
  * Convenience function that parses the value and outputs as plain text
  *
  * @param {unknown} value - The value to convert to plain text
- * @param {HighlightOptions} [options] - Optional configuration for formatting
+ * @param {Options} [options] - Optional configuration for formatting
  * @returns {string} Plain text string without any color formatting
  *
  * @example
@@ -874,7 +882,7 @@ export function ansi_from_string(str: string, options?: HighlightOptions): strin
  * fs.writeFileSync('output.txt', text); // Save to file
  * ```
  */
-export function log_from_value(value: unknown, options?: HighlightOptions): string {
+export function log_from_value(value: unknown, options?: Options): string {
   const ast = parse_value(value);
   return paint_log(ast, options);
 }
@@ -884,7 +892,7 @@ export function log_from_value(value: unknown, options?: HighlightOptions): stri
  * Convenience function that parses the string and outputs as plain text
  *
  * @param {string} str - The string to convert to plain text (JSON or JavaScript literal)
- * @param {HighlightOptions} [options] - Optional configuration for formatting
+ * @param {Options} [options] - Optional configuration for formatting
  * @returns {string} Plain text string without any color formatting
  *
  * @example
@@ -901,7 +909,7 @@ export function log_from_value(value: unknown, options?: HighlightOptions): stri
  * fs.writeFileSync('output.txt', text); // Save to file
  * ```
  */
-export function log_from_string(str: string, options?: HighlightOptions): string {
+export function log_from_string(str: string, options?: Options): string {
   const ast = parse_string(str);
   return paint_log(ast, options);
 }

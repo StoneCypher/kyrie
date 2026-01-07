@@ -1,7 +1,7 @@
 import {
   highlight_value,
   highlight_string,
-  type HighlightOptions,
+  type Options,
   parse_string,
   parse_value,
   type ASTNode,
@@ -17,7 +17,7 @@ import {
   log_from_value,
   log_from_string,
   defaultContainers,
-  defaultHighlightOptions,
+  defaultOptions,
   type ContainerConfig,
   type OutputMode,
   type LineUnfolding,
@@ -62,31 +62,31 @@ describe('ASTNode', () => {
   });
 });
 
-describe('HighlightOptions', () => {
-  test('defaultHighlightOptions should have palette', () => {
-    expect(defaultHighlightOptions.palette).toBeDefined();
-    expect(defaultHighlightOptions.palette).toBe(palettes.default.light);
+describe('Options', () => {
+  test('defaultOptions should have palette', () => {
+    expect(defaultOptions.palette).toBeDefined();
+    expect(defaultOptions.palette).toBe(palettes.default.light);
   });
 
-  test('defaultHighlightOptions should have containers', () => {
-    expect(defaultHighlightOptions.containers).toBeDefined();
-    expect(defaultHighlightOptions.containers).toBe(defaultContainers);
+  test('defaultOptions should have containers', () => {
+    expect(defaultOptions.containers).toBeDefined();
+    expect(defaultOptions.containers).toBe(defaultContainers);
   });
 
-  test('defaultHighlightOptions should have maxWidth as undefined', () => {
-    expect(defaultHighlightOptions.maxWidth).toBeUndefined();
+  test('defaultOptions should have maxWidth as undefined', () => {
+    expect(defaultOptions.maxWidth).toBeUndefined();
   });
 
-  test('defaultHighlightOptions should have lineUnfolding as oneliner', () => {
-    expect(defaultHighlightOptions.lineUnfolding).toBe('oneliner');
+  test('defaultOptions should have lineUnfolding as oneliner', () => {
+    expect(defaultOptions.lineUnfolding).toBe('oneliner');
   });
 
-  test('defaultHighlightOptions should have indent as 2', () => {
-    expect(defaultHighlightOptions.indent).toBe(2);
+  test('defaultOptions should have indent as 2', () => {
+    expect(defaultOptions.indent).toBe(2);
   });
 
   test('should be assignable type', () => {
-    const options: HighlightOptions = {
+    const options: Options = {
       palette: naturePalettes.forest.light,
       containers: defaultContainers
     };
@@ -94,16 +94,16 @@ describe('HighlightOptions', () => {
   });
 
   test('should allow partial options', () => {
-    const paletteOnly: HighlightOptions = { palette: palettes.bold.dark };
-    const containersOnly: HighlightOptions = { containers: defaultContainers };
-    const empty: HighlightOptions = {};
+    const paletteOnly: Options = { palette: palettes.bold.dark };
+    const containersOnly: Options = { containers: defaultContainers };
+    const empty: Options = {};
     expect(paletteOnly).toBeDefined();
     expect(containersOnly).toBeDefined();
     expect(empty).toBeDefined();
   });
 
   test('should accept maxWidth as number', () => {
-    const options: HighlightOptions = {
+    const options: Options = {
       palette: palettes.default.light,
       maxWidth: 80
     };
@@ -111,7 +111,7 @@ describe('HighlightOptions', () => {
   });
 
   test('should accept maxWidth as false', () => {
-    const options: HighlightOptions = {
+    const options: Options = {
       palette: palettes.default.light,
       maxWidth: false
     };
@@ -119,7 +119,7 @@ describe('HighlightOptions', () => {
   });
 
   test('should accept lineUnfolding as oneliner', () => {
-    const options: HighlightOptions = {
+    const options: Options = {
       palette: palettes.default.light,
       lineUnfolding: 'oneliner'
     };
@@ -127,7 +127,7 @@ describe('HighlightOptions', () => {
   });
 
   test('should accept lineUnfolding as expanded', () => {
-    const options: HighlightOptions = {
+    const options: Options = {
       palette: palettes.default.light,
       lineUnfolding: 'expanded'
     };
@@ -135,7 +135,7 @@ describe('HighlightOptions', () => {
   });
 
   test('should accept indent as number', () => {
-    const options: HighlightOptions = {
+    const options: Options = {
       palette: palettes.default.light,
       indent: 4
     };
@@ -143,7 +143,7 @@ describe('HighlightOptions', () => {
   });
 
   test('should accept indent as string', () => {
-    const options: HighlightOptions = {
+    const options: Options = {
       palette: palettes.default.light,
       indent: '\t'
     };
@@ -151,7 +151,7 @@ describe('HighlightOptions', () => {
   });
 
   test('should accept indent as string with spaces', () => {
-    const options: HighlightOptions = {
+    const options: Options = {
       palette: palettes.default.light,
       indent: '    '
     };
@@ -159,7 +159,7 @@ describe('HighlightOptions', () => {
   });
 
   test('should accept maxWidth as undefined', () => {
-    const options: HighlightOptions = {
+    const options: Options = {
       palette: palettes.default.light,
       maxWidth: undefined
     };
@@ -167,7 +167,7 @@ describe('HighlightOptions', () => {
   });
 
   test('should allow maxWidth only option', () => {
-    const maxWidthOnly: HighlightOptions = { maxWidth: 100 };
+    const maxWidthOnly: Options = { maxWidth: 100 };
     expect(maxWidthOnly.maxWidth).toBe(100);
   });
 });
@@ -207,7 +207,7 @@ describe('highlight_value', () => {
 
   test('should accept optional options parameter', () => {
     const value = { test: true };
-    const options: HighlightOptions = { palette: naturePalettes.forest.light };
+    const options: Options = { palette: naturePalettes.forest.light };
     const result = highlight_value(value, options);
     expect(result).toContain('\x1b['); // Contains ANSI escape codes
     expect(result).toContain('test');
@@ -258,7 +258,7 @@ describe('highlight_string', () => {
 
   test('should accept optional options parameter', () => {
     const json = '{"test": true}';
-    const options: HighlightOptions = { palette: palettes.bold.dark };
+    const options: Options = { palette: palettes.bold.dark };
     const result = highlight_string(json, options);
     expect(result).toContain('\x1b['); // Contains ANSI escape codes
     expect(result).toContain('test');
@@ -1045,7 +1045,7 @@ describe('parse_string and parse_value equivalence', () => {
 });
 
 describe('paint_ansi', () => {
-  const options: HighlightOptions = {
+  const options: Options = {
     palette: palettes.default.light,
     containers: defaultContainers
   };
@@ -1282,7 +1282,7 @@ describe('paint_ansi', () => {
 
   describe('custom options', () => {
     test('should use custom palette', () => {
-      const customOptions: HighlightOptions = {
+      const customOptions: Options = {
         palette: naturePalettes.forest.dark,
         containers: defaultContainers
       };
@@ -1299,7 +1299,7 @@ describe('paint_ansi', () => {
           end: '>>'
         }
       };
-      const customOptions: HighlightOptions = {
+      const customOptions: Options = {
         palette: palettes.default.light,
         containers: customContainers
       };
@@ -1598,11 +1598,11 @@ describe('testdata', () => {
       });
     });
 
-    test('should be usable in HighlightOptions', () => {
-      const options1: HighlightOptions = { outputMode: 'ansi' };
-      const options2: HighlightOptions = { outputMode: 'html' };
-      const options3: HighlightOptions = { outputMode: 'chrome-console' };
-      const options4: HighlightOptions = { outputMode: 'logger' };
+    test('should be usable in Options', () => {
+      const options1: Options = { outputMode: 'ansi' };
+      const options2: Options = { outputMode: 'html' };
+      const options3: Options = { outputMode: 'chrome-console' };
+      const options4: Options = { outputMode: 'logger' };
 
       expect(options1.outputMode).toBe('ansi');
       expect(options2.outputMode).toBe('html');
@@ -1610,13 +1610,13 @@ describe('testdata', () => {
       expect(options4.outputMode).toBe('logger');
     });
 
-    test('should be optional in HighlightOptions', () => {
-      const options: HighlightOptions = { palette: palettes.default.light };
+    test('should be optional in Options', () => {
+      const options: Options = { palette: palettes.default.light };
       expect(options.outputMode).toBeUndefined();
     });
 
     test('should work with all highlight options combined', () => {
-      const options: HighlightOptions = {
+      const options: Options = {
         palette: palettes.default.dark,
         containers: defaultContainers,
         maxWidth: 80,

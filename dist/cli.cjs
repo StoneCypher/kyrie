@@ -15912,7 +15912,7 @@ const defaultContainers = {
  * Highlights a JSON or JavaScript string with colors
  *
  * @param {string} str - The string to highlight (JSON or JavaScript literal)
- * @param {HighlightOptions} [options] - Optional configuration for highlighting
+ * @param {Options} [options] - Optional configuration for highlighting
  * @returns {string} The highlighted string with ANSI color codes
  *
  * @example
@@ -15936,10 +15936,12 @@ function highlight_string(str, options) {
 /**
  * Default highlight options
  */
-const defaultHighlightOptions = {
+const defaultOptions = {
     palette: palettes.default.light,
     containers: defaultContainers,
-    lineUnfolding: 'oneliner'};
+    lineUnfolding: 'oneliner',
+    indent: 2
+};
 /**
  * ANSI paint policy using Chalk for terminal color output
  * Provides color wrapping using ANSI escape codes and standard newline handling
@@ -15972,7 +15974,7 @@ function getPaletteColor(palette, colorKey) {
  *
  * @param {ASTNode} node - The AST node to paint
  * @param {PaintPolicy} policy - The paint policy to use for color formatting
- * @param {HighlightOptions} [options] - Optional configuration. Defaults will be used for any missing values.
+ * @param {Options} [options] - Optional configuration. Defaults will be used for any missing values.
  * @returns {string} The painted string representation of the node
  *
  * @example
@@ -15992,9 +15994,9 @@ function getPaletteColor(palette, colorKey) {
  */
 function paint(node, policy, options, depth = 0) {
     // Merge provided options with defaults
-    const palette = options?.palette ?? defaultHighlightOptions.palette;
-    const containers = options?.containers ?? defaultHighlightOptions.containers;
-    const lineUnfolding = options?.lineUnfolding ?? defaultHighlightOptions.lineUnfolding;
+    const palette = options?.palette ?? defaultOptions.palette;
+    const containers = options?.containers ?? defaultOptions.containers;
+    const lineUnfolding = options?.lineUnfolding ?? defaultOptions.lineUnfolding;
     // Calculate line formatting based on lineUnfolding mode
     let line_change;
     let line_indent;
@@ -16006,8 +16008,16 @@ function paint(node, policy, options, depth = 0) {
     }
     else { // expanded
         line_change = policy.newline;
-        line_indent = ' '.repeat(depth * 2);
-        next_indent = ' '.repeat((depth + 1) * 2);
+        const indent = options?.indent ?? defaultOptions.indent;
+        if (typeof indent === 'number') {
+            line_indent = ' '.repeat(depth * indent);
+            next_indent = ' '.repeat((depth + 1) * indent);
+        }
+        else {
+            // indent is a string
+            line_indent = indent.repeat(depth);
+            next_indent = indent.repeat(depth + 1);
+        }
     }
     // Handle null
     if (node.value === null) {
@@ -16151,7 +16161,7 @@ function paint(node, policy, options, depth = 0) {
  * Convenience wrapper around paint() that uses the ansi_policy
  *
  * @param {ASTNode} node - The AST node to paint
- * @param {HighlightOptions} [options] - Optional configuration. Defaults will be used for any missing values.
+ * @param {Options} [options] - Optional configuration. Defaults will be used for any missing values.
  * @returns {string} The painted string representation of the node with ANSI color codes
  *
  * @example
@@ -16601,7 +16611,7 @@ const program = new Command();
 program
     .name('kyrie')
     .description('Syntax highlighter for JavaScript, TypeScript, and JSON')
-    .version('0.21.0')
+    .version('0.30.0')
     .argument('[file]', 'File to highlight (reads from stdin if not provided)')
     .option('-p, --palette <name>', 'Color palette to use (e.g., default, pastel, forest)', 'default')
     .option('-t, --theme <variant>', 'Theme variant: light or dark', 'light')

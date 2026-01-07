@@ -103,7 +103,7 @@ export type LineUnfolding = 'oneliner' | 'expanded';
 /**
  * Options for JSON highlighting
  */
-export interface HighlightOptions {
+export interface Options {
   palette?: ColorPalette;
   containers?: ContainerConfig;
   maxWidth?: number | false | undefined;
@@ -125,4 +125,4 @@ export interface PaintPolicy {
  * Paint function signature
  * Takes an AST node and optional highlighting options, returns a painted string
  */
-export type PaintFunction = (node: ASTNode, options?: HighlightOptions) => string;
+export type PaintFunction = (node: ASTNode, options?: Options) => string;

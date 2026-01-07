@@ -29,7 +29,7 @@ import {
   magentasColorRangePalettes,
   lightGraysColorRangePalettes
 } from './index.js';
-import type { HighlightOptions, OutputMode, LineUnfolding, ColorPalette } from './index.js';
+import type { Options, OutputMode, LineUnfolding, ColorPalette } from './index.js';
 
 // Combine all palette collections for lookup
 export const allPalettes = {
@@ -149,7 +149,7 @@ export function processInput(input: string, options: CLIOptions): CLIResult {
   }
 
   // Build highlight options
-  const highlightOptions: HighlightOptions = {
+  const highlightOptions: Options = {
     palette: paletteResult.palette!,
     maxWidth: options.maxWidth,
     outputMode: options.outputMode as OutputMode,
@@ -174,7 +174,7 @@ const program = new Command();
 program
   .name('kyrie')
   .description('Syntax highlighter for JavaScript, TypeScript, and JSON')
-  .version('0.21.0')
+  .version('0.30.0')
   .argument('[file]', 'File to highlight (reads from stdin if not provided)')
   .option('-p, --palette <name>', 'Color palette to use (e.g., default, pastel, forest)', 'default')
   .option('-t, --theme <variant>', 'Theme variant: light or dark', 'light')
