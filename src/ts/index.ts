@@ -6,6 +6,7 @@ import type {
   ContainerConfig,
   ColorPalette,
   OutputMode,
+  LineUnfolding,
   HighlightOptions,
   PaintPolicy,
   PaintFunction
@@ -19,6 +20,7 @@ export type {
   ContainerConfig,
   ColorPalette,
   OutputMode,
+  LineUnfolding,
   HighlightOptions,
   PaintPolicy,
   PaintFunction
@@ -381,7 +383,9 @@ export function highlight_string(str: string, options?: HighlightOptions): strin
 export const defaultHighlightOptions: HighlightOptions = {
   palette: palettes.default.light,
   containers: defaultContainers,
-  maxWidth: undefined
+  maxWidth: undefined,
+  lineUnfolding: 'oneliner',
+  indent: 2
 };
 
 /**

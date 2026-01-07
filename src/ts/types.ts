@@ -94,6 +94,14 @@ export interface ColorPalette {
 export type OutputMode = 'ansi' | 'html' | 'chrome-console' | 'logger';
 
 /**
+ * Line unfolding mode for output formatting
+ * - oneliner: All content on a single line
+ * - compact: Minimal whitespace with line breaks
+ * - expanded: Full indentation and spacing
+ */
+export type LineUnfolding = 'oneliner' | 'compact' | 'expanded';
+
+/**
  * Options for JSON highlighting
  */
 export interface HighlightOptions {
@@ -101,6 +109,8 @@ export interface HighlightOptions {
   containers?: ContainerConfig;
   maxWidth?: number | false | undefined;
   outputMode?: OutputMode;
+  lineUnfolding?: LineUnfolding;
+  indent?: number | string;
 }
 
 /**

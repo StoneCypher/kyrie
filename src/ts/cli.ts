@@ -29,7 +29,7 @@ import {
   magentasColorRangePalettes,
   lightGraysColorRangePalettes
 } from './index.js';
-import type { HighlightOptions, OutputMode, ColorPalette } from './index.js';
+import type { HighlightOptions, OutputMode, LineUnfolding, ColorPalette } from './index.js';
 
 // Combine all palette collections for lookup
 export const allPalettes = {
@@ -62,6 +62,8 @@ export interface CLIOptions {
   theme: string;
   maxWidth?: number | false | undefined;
   outputMode: string;
+  lineUnfolding: string;
+  indent: number | string;
 }
 
 export interface CLIResult {
@@ -111,6 +113,20 @@ export function validateOutputMode(mode: string): { success: boolean; error?: st
 }
 
 /**
+ * Validate line unfolding mode
+ */
+export function validateLineUnfolding(mode: string): { success: boolean; error?: string } {
+  const validLineUnfoldingModes: LineUnfolding[] = ['oneliner', 'compact', 'expanded'];
+  if (!validLineUnfoldingModes.includes(mode as LineUnfolding)) {
+    return {
+      success: false,
+      error: `Invalid line unfolding mode: ${mode}\nValid modes: ${validLineUnfoldingModes.join(', ')}`
+    };
+  }
+  return { success: true };
+}
+
+/**
  * Process input and highlight
  */
 export function processInput(input: string, options: CLIOptions): CLIResult {
@@ -126,11 +142,19 @@ export function processInput(input: string, options: CLIOptions): CLIResult {
     return { success: false, error: outputModeResult.error || 'Unknown output mode error' };
   }
 
+  // Validate line unfolding mode
+  const lineUnfoldingResult = validateLineUnfolding(options.lineUnfolding);
+  if (!lineUnfoldingResult.success) {
+    return { success: false, error: lineUnfoldingResult.error || 'Unknown line unfolding error' };
+  }
+
   // Build highlight options
   const highlightOptions: HighlightOptions = {
     palette: paletteResult.palette!,
     maxWidth: options.maxWidth,
-    outputMode: options.outputMode as OutputMode
+    outputMode: options.outputMode as OutputMode,
+    lineUnfolding: options.lineUnfolding as LineUnfolding,
+    indent: options.indent
   };
 
   // Highlight and return
@@ -156,9 +180,11 @@ program
   .option('-t, --theme <variant>', 'Theme variant: light or dark', 'light')
   .option('-w, --max-width <width>', 'Maximum width for output (number, or "false" to disable)', parseMaxWidth)
   .option('-o, --output-mode <mode>', 'Output mode: ansi, html, chrome-console, or logger', 'ansi')
+  .option('-l, --line-unfolding <mode>', 'Line unfolding mode: oneliner, compact, or expanded', 'oneliner')
+  .option('-i, --indent <value>', 'Indentation (number or string)', parseIndent, 2)
   // Coverage excluded: CLI action callback runs in subprocess during integration tests, not in unit test coverage
   /* c8 ignore start */
-  .action((file: string | undefined, options: { palette: string; theme: string; maxWidth?: number | false | undefined; outputMode: string }) => {
+  .action((file: string | undefined, options: { palette: string; theme: string; maxWidth?: number | false | undefined; outputMode: string; lineUnfolding: string; indent: number | string }) => {
     let input = '';
 
     // Read input from file or stdin
@@ -199,6 +225,20 @@ export function parseMaxWidth(value: string): number | false | undefined {
     throw new Error(`Invalid max-width value: ${value}. Expected a number or "false".`);
   }
   return parsed;
+}
+
+/**
+ * Parse indent option
+ * Accepts: numbers or strings
+ */
+export function parseIndent(value: string): number | string {
+  // Try to parse as number first
+  const parsed = parseInt(value, 10);
+  if (!isNaN(parsed)) {
+    return parsed;
+  }
+  // Otherwise return as string
+  return value;
 }
 
 // Only run CLI when not in test environment

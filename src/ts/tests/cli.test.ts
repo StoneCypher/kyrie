@@ -6,7 +6,7 @@ import { describe, test, expect, afterEach } from 'vitest';
 import { spawn } from 'child_process';
 import { writeFileSync, unlinkSync, existsSync } from 'fs';
 import { join } from 'path';
-import { getPalette, validateOutputMode, processInput, allPalettes, parseMaxWidth } from '../cli.js';
+import { getPalette, validateOutputMode, validateLineUnfolding, processInput, allPalettes, parseMaxWidth, parseIndent } from '../cli.js';
 import type { CLIOptions } from '../cli.js';
 
 // CLI path
@@ -591,13 +591,53 @@ describe('CLI Unit Tests', () => {
     });
   });
 
+  describe('validateLineUnfolding', () => {
+    test('should accept valid line unfolding mode: oneliner', () => {
+      const result = validateLineUnfolding('oneliner');
+
+      expect(result.success).toBe(true);
+      expect(result.error).toBeUndefined();
+    });
+
+    test('should accept valid line unfolding mode: compact', () => {
+      const result = validateLineUnfolding('compact');
+
+      expect(result.success).toBe(true);
+      expect(result.error).toBeUndefined();
+    });
+
+    test('should accept valid line unfolding mode: expanded', () => {
+      const result = validateLineUnfolding('expanded');
+
+      expect(result.success).toBe(true);
+      expect(result.error).toBeUndefined();
+    });
+
+    test('should reject invalid line unfolding mode', () => {
+      const result = validateLineUnfolding('invalid');
+
+      expect(result.success).toBe(false);
+      expect(result.error).toContain('Invalid line unfolding mode: invalid');
+      expect(result.error).toContain('Valid modes:');
+    });
+
+    test('should reject empty string', () => {
+      const result = validateLineUnfolding('');
+
+      expect(result.success).toBe(false);
+      expect(result.error).toBeDefined();
+    });
+  });
+
   describe('processInput', () => {
     test('should successfully process valid JSON with default options', () => {
       const input = '{"name": "Alice", "age": 25}';
       const options: CLIOptions = {
         palette: 'default',
         theme: 'light',
-        outputMode: 'ansi'
+        outputMode: 'ansi',
+        lineUnfolding: 'oneliner',
+        indent: 2
       };
 
       const result = processInput(input, options);
@@ -613,7 +653,9 @@ describe('CLI Unit Tests', () => {
       const options: CLIOptions = {
         palette: 'forest',
         theme: 'dark',
-        outputMode: 'ansi'
+        outputMode: 'ansi',
+        lineUnfolding: 'oneliner',
+        indent: 2
       };
 
       const result = processInput(input, options);
@@ -627,7 +669,9 @@ describe('CLI Unit Tests', () => {
       const options: CLIOptions = {
         palette: 'default',
         theme: 'light',
-        outputMode: 'html'
+        outputMode: 'html',
+        lineUnfolding: 'oneliner',
+        indent: 2
       };
 
       const result = processInput(input, options);
@@ -642,7 +686,9 @@ describe('CLI Unit Tests', () => {
         palette: 'default',
         theme: 'light',
         outputMode: 'ansi',
-        maxWidth: 40
+        maxWidth: 40,
+        lineUnfolding: 'oneliner',
+        indent: 2
       };
 
       const result = processInput(input, options);
@@ -657,7 +703,9 @@ describe('CLI Unit Tests', () => {
         palette: 'default',
         theme: 'light',
         outputMode: 'ansi',
-        maxWidth: false
+        maxWidth: false,
+        lineUnfolding: 'oneliner',
+        indent: 2
       };
 
       const result = processInput(input, options);
@@ -671,7 +719,9 @@ describe('CLI Unit Tests', () => {
       const options: CLIOptions = {
         palette: 'nonexistent',
         theme: 'light',
-        outputMode: 'ansi'
+        outputMode: 'ansi',
+        lineUnfolding: 'oneliner',
+        indent: 2
       };
 
       const result = processInput(input, options);
@@ -686,7 +736,9 @@ describe('CLI Unit Tests', () => {
       const options: CLIOptions = {
         palette: 'default',
         theme: 'light',
-        outputMode: 'invalid'
+        outputMode: 'invalid',
+        lineUnfolding: 'oneliner',
+        indent: 2
       };
 
       const result = processInput(input, options);
@@ -701,7 +753,9 @@ describe('CLI Unit Tests', () => {
       const options: CLIOptions = {
         palette: 'default',
         theme: 'light',
-        outputMode: 'ansi'
+        outputMode: 'ansi',
+        lineUnfolding: 'oneliner',
+        indent: 2
       };
 
       const result = processInput(input, options);
@@ -716,7 +770,9 @@ describe('CLI Unit Tests', () => {
       const options: CLIOptions = {
         palette: 'default',
         theme: 'light',
-        outputMode: 'ansi'
+        outputMode: 'ansi',
+        lineUnfolding: 'oneliner',
+        indent: 2
       };
 
       const result = processInput(input, options);
@@ -732,13 +788,66 @@ describe('CLI Unit Tests', () => {
         palette: 'bold',
         theme: 'dark',
         outputMode: 'html',
-        maxWidth: 80
+        maxWidth: 80,
+        lineUnfolding: 'oneliner',
+        indent: 2
       };
 
       const result = processInput(input, options);
 
       expect(result.success).toBe(true);
       expect(result.output).toBeDefined();
+    });
+
+    test('should process with different line unfolding modes', () => {
+      const input = '{"test": "value"}';
+
+      const options1: CLIOptions = {
+        palette: 'default',
+        theme: 'light',
+        outputMode: 'ansi',
+        lineUnfolding: 'oneliner',
+        indent: 2
+      };
+      const result1 = processInput(input, options1);
+      expect(result1.success).toBe(true);
+
+      const options2: CLIOptions = {
+        palette: 'default',
+        theme: 'light',
+        outputMode: 'ansi',
+        lineUnfolding: 'compact',
+        indent: 2
+      };
+      const result2 = processInput(input, options2);
+      expect(result2.success).toBe(true);
+
+      const options3: CLIOptions = {
+        palette: 'default',
+        theme: 'light',
+        outputMode: 'ansi',
+        lineUnfolding: 'expanded',
+        indent: 2
+      };
+      const result3 = processInput(input, options3);
+      expect(result3.success).toBe(true);
+    });
+
+    test('should return error for invalid line unfolding mode', () => {
+      const input = '{"test": "value"}';
+      const options: CLIOptions = {
+        palette: 'default',
+        theme: 'light',
+        outputMode: 'ansi',
+        lineUnfolding: 'invalid',
+        indent: 2
+      };
+
+      const result = processInput(input, options);
+
+      expect(result.success).toBe(false);
+      expect(result.error).toContain('Invalid line unfolding mode: invalid');
+      expect(result.output).toBeUndefined();
     });
   });
 
@@ -799,6 +908,45 @@ describe('CLI Unit Tests', () => {
 
     test('should handle very large numbers', () => {
       expect(parseMaxWidth('999999')).toBe(999999);
+    });
+  });
+
+  describe('parseIndent', () => {
+    test('should parse numeric string to number', () => {
+      expect(parseIndent('2')).toBe(2);
+      expect(parseIndent('4')).toBe(4);
+      expect(parseIndent('0')).toBe(0);
+    });
+
+    test('should return string for non-numeric values', () => {
+      expect(parseIndent('\t')).toBe('\t');
+      expect(parseIndent('  ')).toBe('  ');
+      expect(parseIndent('    ')).toBe('    ');
+    });
+
+    test('should parse negative numbers as numbers', () => {
+      expect(parseIndent('-2')).toBe(-2);
+    });
+
+    test('should parse decimal numbers as integers', () => {
+      expect(parseIndent('2.5')).toBe(2);
+      expect(parseIndent('4.9')).toBe(4);
+    });
+
+    test('should handle mixed strings as strings', () => {
+      const result = parseIndent('abc');
+      expect(typeof result).toBe('string');
+      expect(result).toBe('abc');
+    });
+
+    test('should handle empty string as string', () => {
+      const result = parseIndent('');
+      expect(typeof result).toBe('string');
+      expect(result).toBe('');
+    });
+
+    test('should handle strings with leading numbers', () => {
+      expect(parseIndent('2spaces')).toBe(2); // parseInt stops at first non-digit
     });
   });
 });

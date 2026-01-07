@@ -14,6 +14,7 @@ import {
   defaultHighlightOptions,
   type ContainerConfig,
   type OutputMode,
+  type LineUnfolding,
   testdata
 } from '../index.js';
 
@@ -70,6 +71,14 @@ describe('HighlightOptions', () => {
     expect(defaultHighlightOptions.maxWidth).toBeUndefined();
   });
 
+  test('defaultHighlightOptions should have lineUnfolding as oneliner', () => {
+    expect(defaultHighlightOptions.lineUnfolding).toBe('oneliner');
+  });
+
+  test('defaultHighlightOptions should have indent as 2', () => {
+    expect(defaultHighlightOptions.indent).toBe(2);
+  });
+
   test('should be assignable type', () => {
     const options: HighlightOptions = {
       palette: naturePalettes.forest.light,
@@ -101,6 +110,54 @@ describe('HighlightOptions', () => {
       maxWidth: false
     };
     expect(options.maxWidth).toBe(false);
+  });
+
+  test('should accept lineUnfolding as oneliner', () => {
+    const options: HighlightOptions = {
+      palette: palettes.default.light,
+      lineUnfolding: 'oneliner'
+    };
+    expect(options.lineUnfolding).toBe('oneliner');
+  });
+
+  test('should accept lineUnfolding as compact', () => {
+    const options: HighlightOptions = {
+      palette: palettes.default.light,
+      lineUnfolding: 'compact'
+    };
+    expect(options.lineUnfolding).toBe('compact');
+  });
+
+  test('should accept lineUnfolding as expanded', () => {
+    const options: HighlightOptions = {
+      palette: palettes.default.light,
+      lineUnfolding: 'expanded'
+    };
+    expect(options.lineUnfolding).toBe('expanded');
+  });
+
+  test('should accept indent as number', () => {
+    const options: HighlightOptions = {
+      palette: palettes.default.light,
+      indent: 4
+    };
+    expect(options.indent).toBe(4);
+  });
+
+  test('should accept indent as string', () => {
+    const options: HighlightOptions = {
+      palette: palettes.default.light,
+      indent: '\t'
+    };
+    expect(options.indent).toBe('\t');
+  });
+
+  test('should accept indent as string with spaces', () => {
+    const options: HighlightOptions = {
+      palette: palettes.default.light,
+      indent: '    '
+    };
+    expect(options.indent).toBe('    ');
   });
 
   test('should accept maxWidth as undefined', () => {
@@ -1572,6 +1629,35 @@ describe('testdata', () => {
       expect(options.palette).toBeDefined();
       expect(options.containers).toBeDefined();
       expect(options.maxWidth).toBe(80);
+    });
+  });
+
+  describe('LineUnfolding type', () => {
+    test('should accept valid line unfolding modes', () => {
+      const modes: LineUnfolding[] = ['oneliner', 'compact', 'expanded'];
+      modes.forEach(mode => {
+        expect(mode).toBeDefined();
+      });
+    });
+
+    test('should be assignable to variables', () => {
+      const mode1: LineUnfolding = 'oneliner';
+      const mode2: LineUnfolding = 'compact';
+      const mode3: LineUnfolding = 'expanded';
+
+      expect(mode1).toBe('oneliner');
+      expect(mode2).toBe('compact');
+      expect(mode3).toBe('expanded');
+    });
+
+    test('should support type checking', () => {
+      const validateMode = (mode: LineUnfolding): boolean => {
+        return mode === 'oneliner' || mode === 'compact' || mode === 'expanded';
+      };
+
+      expect(validateMode('oneliner')).toBe(true);
+      expect(validateMode('compact')).toBe(true);
+      expect(validateMode('expanded')).toBe(true);
     });
   });
 

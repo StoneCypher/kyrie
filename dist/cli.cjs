@@ -16518,6 +16518,19 @@ function validateOutputMode(mode) {
     return { success: true };
 }
 /**
+ * Validate line unfolding mode
+ */
+function validateLineUnfolding(mode) {
+    const validLineUnfoldingModes = ['oneliner', 'compact', 'expanded'];
+    if (!validLineUnfoldingModes.includes(mode)) {
+        return {
+            success: false,
+            error: `Invalid line unfolding mode: ${mode}\nValid modes: ${validLineUnfoldingModes.join(', ')}`
+        };
+    }
+    return { success: true };
+}
+/**
  * Process input and highlight
  */
 function processInput(input, options) {
@@ -16531,11 +16544,18 @@ function processInput(input, options) {
     if (!outputModeResult.success) {
         return { success: false, error: outputModeResult.error || 'Unknown output mode error' };
     }
+    // Validate line unfolding mode
+    const lineUnfoldingResult = validateLineUnfolding(options.lineUnfolding);
+    if (!lineUnfoldingResult.success) {
+        return { success: false, error: lineUnfoldingResult.error || 'Unknown line unfolding error' };
+    }
     // Build highlight options
     const highlightOptions = {
         palette: paletteResult.palette,
         maxWidth: options.maxWidth,
-        outputMode: options.outputMode
+        outputMode: options.outputMode,
+        lineUnfolding: options.lineUnfolding,
+        indent: options.indent
     };
     // Highlight and return
     try {
@@ -16559,6 +16579,8 @@ program
     .option('-t, --theme <variant>', 'Theme variant: light or dark', 'light')
     .option('-w, --max-width <width>', 'Maximum width for output (number, or "false" to disable)', parseMaxWidth)
     .option('-o, --output-mode <mode>', 'Output mode: ansi, html, chrome-console, or logger', 'ansi')
+    .option('-l, --line-unfolding <mode>', 'Line unfolding mode: oneliner, compact, or expanded', 'oneliner')
+    .option('-i, --indent <value>', 'Indentation (number or string)', parseIndent, 2)
     // Coverage excluded: CLI action callback runs in subprocess during integration tests, not in unit test coverage
     /* c8 ignore start */
     .action((file, options) => {
@@ -16600,6 +16622,19 @@ function parseMaxWidth(value) {
     }
     return parsed;
 }
+/**
+ * Parse indent option
+ * Accepts: numbers or strings
+ */
+function parseIndent(value) {
+    // Try to parse as number first
+    const parsed = parseInt(value, 10);
+    if (!isNaN(parsed)) {
+        return parsed;
+    }
+    // Otherwise return as string
+    return value;
+}
 // Only run CLI when not in test environment
 // Coverage excluded: program.parse() executes in subprocess during integration tests, not in unit test coverage
 /* c8 ignore start */
@@ -16610,6 +16645,8 @@ if (process.env['NODE_ENV'] !== 'test' && process.env['VITEST'] !== 'true') {
 
 exports.allPalettes = allPalettes;
 exports.getPalette = getPalette;
+exports.parseIndent = parseIndent;
 exports.parseMaxWidth = parseMaxWidth;
 exports.processInput = processInput;
+exports.validateLineUnfolding = validateLineUnfolding;
 exports.validateOutputMode = validateOutputMode;
