@@ -7,7 +7,7 @@ import {
   type ASTNode,
   palettes,
   naturePalettes,
-  paint,
+  paint_ansi,
   defaultContainers,
   defaultHighlightOptions,
   type ContainerConfig,
@@ -456,6 +456,26 @@ describe('parse_string', () => {
     const ast = parse_string('0');
     expect(ast.basic_type).toBe('number');
     expect(ast.value).toBe(0);
+  });
+
+  test('should parse empty string input', () => {
+    const ast = parse_string('');
+    expect(ast.basic_type).toBe('undefined');
+    expect(ast.value).toBe(undefined);
+  });
+
+  test('should handle string with non-standard escape sequences', () => {
+    // Non-standard escape like \x should preserve the escaped character
+    const ast = parse_string('"hello\\xworld"');
+    expect(ast.basic_type).toBe('string');
+    expect(ast.value).toBe('helloxworld');
+  });
+
+  test('should handle string with unrecognized escape sequences', () => {
+    // Unrecognized escapes like \q should preserve the character
+    const ast = parse_string('"test\\qvalue"');
+    expect(ast.basic_type).toBe('string');
+    expect(ast.value).toBe('testqvalue');
   });
 });
 
@@ -967,7 +987,7 @@ describe('parse_string and parse_value equivalence', () => {
   });
 });
 
-describe('paint', () => {
+describe('paint_ansi', () => {
   const options: HighlightOptions = {
     palette: palettes.default.light,
     containers: defaultContainers
@@ -976,37 +996,37 @@ describe('paint', () => {
   describe('primitives', () => {
     test('should paint null', () => {
       const ast = parse_string('null');
-      const result = paint(ast, options);
+      const result = paint_ansi(ast, options);
       expect(result).toContain('null');
     });
 
     test('should paint undefined', () => {
       const ast = parse_string('undefined');
-      const result = paint(ast, options);
+      const result = paint_ansi(ast, options);
       expect(result).toContain('undefined');
     });
 
     test('should paint boolean true', () => {
       const ast = parse_string('true');
-      const result = paint(ast, options);
+      const result = paint_ansi(ast, options);
       expect(result).toContain('true');
     });
 
     test('should paint boolean false', () => {
       const ast = parse_string('false');
-      const result = paint(ast, options);
+      const result = paint_ansi(ast, options);
       expect(result).toContain('false');
     });
 
     test('should paint number', () => {
       const ast = parse_string('42');
-      const result = paint(ast, options);
+      const result = paint_ansi(ast, options);
       expect(result).toContain('42');
     });
 
     test('should paint string', () => {
       const ast = parse_string('"hello"');
-      const result = paint(ast, options);
+      const result = paint_ansi(ast, options);
       expect(result).toContain('hello');
       expect(result).toContain('"');
     });
@@ -1014,7 +1034,7 @@ describe('paint', () => {
     test('should paint symbol', () => {
       const sym = Symbol('test');
       const ast = parse_value(sym);
-      const result = paint(ast, options);
+      const result = paint_ansi(ast, options);
       expect(result).toContain('Symbol');
       expect(result).toContain('test');
     });
@@ -1023,14 +1043,14 @@ describe('paint', () => {
   describe('arrays', () => {
     test('should paint empty array', () => {
       const ast = parse_string('[]');
-      const result = paint(ast, options);
+      const result = paint_ansi(ast, options);
       expect(result).toContain('[');
       expect(result).toContain(']');
     });
 
     test('should paint array with numbers', () => {
       const ast = parse_string('[1, 2, 3]');
-      const result = paint(ast, options);
+      const result = paint_ansi(ast, options);
       expect(result).toContain('[');
       expect(result).toContain(']');
       expect(result).toContain('1');
@@ -1041,7 +1061,7 @@ describe('paint', () => {
 
     test('should paint array with mixed types', () => {
       const ast = parse_string('[1, "text", true]');
-      const result = paint(ast, options);
+      const result = paint_ansi(ast, options);
       expect(result).toContain('1');
       expect(result).toContain('text');
       expect(result).toContain('true');
@@ -1051,14 +1071,14 @@ describe('paint', () => {
   describe('objects', () => {
     test('should paint empty object', () => {
       const ast = parse_string('{}');
-      const result = paint(ast, options);
+      const result = paint_ansi(ast, options);
       expect(result).toContain('{');
       expect(result).toContain('}');
     });
 
     test('should paint simple object', () => {
       const ast = parse_string('{"name": "John"}');
-      const result = paint(ast, options);
+      const result = paint_ansi(ast, options);
       expect(result).toContain('{');
       expect(result).toContain('}');
       expect(result).toContain('name');
@@ -1068,7 +1088,7 @@ describe('paint', () => {
 
     test('should paint object with multiple properties', () => {
       const ast = parse_string('{"name": "Alice", "age": 25}');
-      const result = paint(ast, options);
+      const result = paint_ansi(ast, options);
       expect(result).toContain('name');
       expect(result).toContain('Alice');
       expect(result).toContain('age');
@@ -1078,7 +1098,7 @@ describe('paint', () => {
 
     test('should paint nested object', () => {
       const ast = parse_string('{"user": {"name": "Bob"}}');
-      const result = paint(ast, options);
+      const result = paint_ansi(ast, options);
       expect(result).toContain('user');
       expect(result).toContain('name');
       expect(result).toContain('Bob');
@@ -1089,7 +1109,7 @@ describe('paint', () => {
     test('should paint Map', () => {
       const map = new Map([['key', 'value']]);
       const ast = parse_value(map);
-      const result = paint(ast, options);
+      const result = paint_ansi(ast, options);
       expect(result).toContain('{<');
       expect(result).toContain('>}');
       // Note: Map entries are not enumerable, so the AST will be empty
@@ -1098,7 +1118,7 @@ describe('paint', () => {
     test('should paint Set', () => {
       const set = new Set([1, 2, 3]);
       const ast = parse_value(set);
-      const result = paint(ast, options);
+      const result = paint_ansi(ast, options);
       expect(result).toContain('{(');
       expect(result).toContain(')}');
     });
@@ -1106,7 +1126,7 @@ describe('paint', () => {
     test('should paint WeakMap', () => {
       const weakmap = new WeakMap();
       const ast = parse_value(weakmap);
-      const result = paint(ast, options);
+      const result = paint_ansi(ast, options);
       expect(result).toContain('(<');
       expect(result).toContain('>)');
     });
@@ -1114,7 +1134,7 @@ describe('paint', () => {
     test('should paint WeakSet', () => {
       const weakset = new WeakSet();
       const ast = parse_value(weakset);
-      const result = paint(ast, options);
+      const result = paint_ansi(ast, options);
       expect(result).toContain('((');
       expect(result).toContain('))');
     });
@@ -1122,7 +1142,7 @@ describe('paint', () => {
     test('should paint Date', () => {
       const date = new Date('2024-01-01');
       const ast = parse_value(date);
-      const result = paint(ast, options);
+      const result = paint_ansi(ast, options);
       expect(result).toContain('Date(');
       expect(result).toContain(')');
     });
@@ -1130,14 +1150,14 @@ describe('paint', () => {
     test('should paint RegExp', () => {
       const regexp = /test/;
       const ast = parse_value(regexp);
-      const result = paint(ast, options);
+      const result = paint_ansi(ast, options);
       expect(result).toContain('/');
     });
 
     test('should paint Error', () => {
       const error = new Error('test error');
       const ast = parse_value(error);
-      const result = paint(ast, options);
+      const result = paint_ansi(ast, options);
       expect(result).toContain('Error(');
       expect(result).toContain(')');
     });
@@ -1145,7 +1165,7 @@ describe('paint', () => {
     test('should paint function', () => {
       const fn = () => {};
       const ast = parse_value(fn);
-      const result = paint(ast, options);
+      const result = paint_ansi(ast, options);
       expect(result).toContain('function(');
       expect(result).toContain(')');
     });
@@ -1156,7 +1176,7 @@ describe('paint', () => {
       const circular: any = {a: 1};
       circular.self = circular;
       const ast = parse_value(circular);
-      const result = paint(ast, options);
+      const result = paint_ansi(ast, options);
       expect(result).toContain('[Circular');
     });
   });
@@ -1164,13 +1184,13 @@ describe('paint', () => {
   describe('default options', () => {
     test('should work without options parameter', () => {
       const ast = parse_string('42');
-      const result = paint(ast);
+      const result = paint_ansi(ast);
       expect(result).toContain('42');
     });
 
     test('should use defaults when options is undefined', () => {
       const ast = parse_string('{"key": "value"}');
-      const result = paint(ast, undefined);
+      const result = paint_ansi(ast, undefined);
       expect(result).toContain('key');
       expect(result).toContain('value');
       expect(result).toContain('{');
@@ -1179,7 +1199,7 @@ describe('paint', () => {
 
     test('should use defaults for missing palette', () => {
       const ast = parse_string('[1, 2]');
-      const result = paint(ast, { containers: defaultContainers });
+      const result = paint_ansi(ast, { containers: defaultContainers });
       expect(result).toContain('[');
       expect(result).toContain('1');
       expect(result).toContain('2');
@@ -1187,7 +1207,7 @@ describe('paint', () => {
 
     test('should use defaults for missing containers', () => {
       const ast = parse_string('[1, 2]');
-      const result = paint(ast, { palette: palettes.default.light });
+      const result = paint_ansi(ast, { palette: palettes.default.light });
       expect(result).toContain('[');
       expect(result).toContain(']');
       expect(result).toContain(',');
@@ -1195,7 +1215,7 @@ describe('paint', () => {
 
     test('should merge partial options with defaults', () => {
       const ast = parse_string('[1, 2]');
-      const result = paint(ast, { palette: naturePalettes.forest.light });
+      const result = paint_ansi(ast, { palette: naturePalettes.forest.light });
       expect(result).toContain('[');
       expect(result).toContain(']');
       expect(result).toContain('1');
@@ -1210,7 +1230,7 @@ describe('paint', () => {
         containers: defaultContainers
       };
       const ast = parse_string('42');
-      const result = paint(ast, customOptions);
+      const result = paint_ansi(ast, customOptions);
       expect(result).toContain('42');
     });
 
@@ -1227,7 +1247,7 @@ describe('paint', () => {
         containers: customContainers
       };
       const ast = parse_string('[1, 2]');
-      const result = paint(ast, customOptions);
+      const result = paint_ansi(ast, customOptions);
       expect(result).toContain('<<');
       expect(result).toContain('>>');
       expect(result).toContain('|');
@@ -1237,7 +1257,7 @@ describe('paint', () => {
   describe('complex structures', () => {
     test('should paint nested array in object', () => {
       const ast = parse_string('{"items": [1, 2, 3]}');
-      const result = paint(ast, options);
+      const result = paint_ansi(ast, options);
       expect(result).toContain('items');
       expect(result).toContain('[');
       expect(result).toContain('1');
@@ -1247,7 +1267,7 @@ describe('paint', () => {
 
     test('should paint object with all types', () => {
       const ast = parse_string('{"str": "text", "num": 42, "bool": true, "nil": null}');
-      const result = paint(ast, options);
+      const result = paint_ansi(ast, options);
       expect(result).toContain('str');
       expect(result).toContain('text');
       expect(result).toContain('num');
@@ -1256,6 +1276,56 @@ describe('paint', () => {
       expect(result).toContain('true');
       expect(result).toContain('nil');
       expect(result).toContain('null');
+    });
+  });
+
+  describe('edge cases', () => {
+    test('should handle exotic object type with fallback', () => {
+      // Create a malformed AST node that doesn't match any known object type
+      const exoticNode: ASTNode = {
+        basic_type: 'object',
+        deep_type: {
+          constructorName: 'ExoticType'
+          // No isArray, isMap, isSet, etc. flags
+          // No properties or elements
+        },
+        value: 'exotic-value'
+      };
+
+      const result = paint_ansi(exoticNode, options);
+      expect(result).toContain('exotic-value');
+    });
+
+    test('should paint Map with properties', () => {
+      // Manually create a Map AST node with properties
+      // (Real Maps don't have enumerable entries, so we simulate)
+      const mapNode: ASTNode = {
+        basic_type: 'object',
+        deep_type: {
+          constructorName: 'Map',
+          isMap: true
+        },
+        properties: {
+          'key1': {
+            basic_type: 'string',
+            deep_type: {},
+            value: 'value1'
+          },
+          'key2': {
+            basic_type: 'number',
+            deep_type: {},
+            value: 42
+          }
+        }
+      };
+
+      const result = paint_ansi(mapNode, options);
+      expect(result).toContain('{<');
+      expect(result).toContain('>}');
+      expect(result).toContain('key1');
+      expect(result).toContain('value1');
+      expect(result).toContain('key2');
+      expect(result).toContain('42');
     });
   });
 });
@@ -1457,7 +1527,7 @@ describe('testdata', () => {
 
     test('should be able to paint testdata', () => {
       const ast = parse_value(testdata.array_all_primitives);
-      const result = paint(ast);
+      const result = paint_ansi(ast);
       expect(result).toBeDefined();
       expect(result.length).toBeGreaterThan(0);
     });

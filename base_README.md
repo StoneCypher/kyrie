@@ -27,13 +27,13 @@ npm install kyrie
 ## Quick Start
 
 ```typescript
-import { parse_string, paint } from 'kyrie';
+import { parse_string, paint_ansi } from 'kyrie';
 
 // Parse JSON string to AST
 const ast = parse_string('{"name": "Alice", "age": 25}');
 
 // Paint with colors (uses default pastel palette)
-const colored = paint(ast);
+const colored = paint_ansi(ast);
 console.log(colored); // Outputs colorized JSON to terminal
 ```
 
@@ -72,23 +72,23 @@ kyrie --max-width false myfile.json
 
 ### Colorizing JSON and JavaScript
 
-The `paint()` function is the main way to colorize parsed values. It works with both `parse_string()` (for JSON/JavaScript strings) and `parse_value()` (for JavaScript values).
+The `paint_ansi()` function is the main way to colorize parsed values. It works with both `parse_string()` (for JSON/JavaScript strings) and `parse_value()` (for JavaScript values).
 
 ```typescript
-import { parse_string, parse_value, paint, forestPalette } from 'kyrie';
+import { parse_string, parse_value, paint_ansi, forestPalette } from 'kyrie';
 
 // From JSON string
 const ast1 = parse_string('{"name": "John", "age": 30}');
-console.log(paint(ast1));
+console.log(paint_ansi(ast1));
 
 // From JavaScript value
 const ast2 = parse_value({ name: 'John', age: 30 });
-console.log(paint(ast2, { palette: forestPalette }));
+console.log(paint_ansi(ast2, { palette: forestPalette }));
 ```
 
 ### Highlighting JavaScript Values
 
-The `highlight_value()` function provides a convenient way to directly colorize any JavaScript value without manually calling `parse_value()` and `paint()`. It combines both steps into a single function call.
+The `highlight_value()` function provides a convenient way to directly colorize any JavaScript value without manually calling `parse_value()` and `paint_ansi()`. It combines both steps into a single function call.
 
 ```typescript
 import { highlight_value } from 'kyrie';
@@ -181,9 +181,9 @@ interface HighlightOptions {
 
 ### Painting AST Nodes
 
-The `paint()` function renders AST nodes with colors and formatting using Chalk. It converts parsed AST nodes into colorized strings with ANSI escape codes for terminal display. Colors are always generated regardless of environment (forced color support at 16 million color level).
+The `paint_ansi()` function renders AST nodes with colors and formatting using Chalk. It converts parsed AST nodes into colorized strings with ANSI escape codes for terminal display. Colors are always generated regardless of environment (forced color support at 16 million color level).
 
-#### `paint(node: ASTNode, options?: HighlightOptions): string`
+#### `paint_ansi(node: ASTNode, options?: HighlightOptions): string`
 
 Converts an AST node into a colorized string representation.
 
@@ -197,10 +197,10 @@ Converts an AST node into a colorized string representation.
 **Example: Basic usage (using defaults)**
 
 ```typescript
-import { parse_string, paint } from 'kyrie';
+import { parse_string, paint_ansi } from 'kyrie';
 
 const ast = parse_string('{"name": "Alice", "age": 25}');
-const colored = paint(ast);
+const colored = paint_ansi(ast);
 console.log(colored);
 // Outputs: {"name": "Alice", "age": 25} with colors
 ```
@@ -208,24 +208,24 @@ console.log(colored);
 **Example: Using different palettes**
 
 ```typescript
-import { parse_string, paint, forestPalette, boldPalette, duskPalette } from 'kyrie';
+import { parse_string, paint_ansi, forestPalette, boldPalette, duskPalette } from 'kyrie';
 
 const ast = parse_string('[1, 2, 3, "hello", true, null]');
 
 // Forest theme
-console.log(paint(ast, { palette: forestPalette }));
+console.log(paint_ansi(ast, { palette: forestPalette }));
 
 // Bold vibrant colors
-console.log(paint(ast, { palette: boldPalette }));
+console.log(paint_ansi(ast, { palette: boldPalette }));
 
 // Dark theme (near-black colors)
-console.log(paint(ast, { palette: duskPalette }));
+console.log(paint_ansi(ast, { palette: duskPalette }));
 ```
 
 **Example: Custom containers with default palette**
 
 ```typescript
-import { parse_string, paint, type ContainerConfig } from 'kyrie';
+import { parse_string, paint_ansi, type ContainerConfig } from 'kyrie';
 
 const customContainers: ContainerConfig = {
   array: { start: '<<', delimiter: '|', end: '>>' },
@@ -233,7 +233,7 @@ const customContainers: ContainerConfig = {
 };
 
 const ast = parse_string('{"items": [1, 2, 3]}');
-const colored = paint(ast, { containers: customContainers });
+const colored = paint_ansi(ast, { containers: customContainers });
 console.log(colored);
 // Outputs: obj{items => <<1| 2| 3>>} with colors
 ```
@@ -241,16 +241,16 @@ console.log(colored);
 **Example: Painting JavaScript values directly**
 
 ```typescript
-import { parse_value, paint } from 'kyrie';
+import { parse_value, paint_ansi } from 'kyrie';
 
 // Parse and paint any JavaScript value
 const obj = { users: ['Alice', 'Bob'], count: 2 };
 const ast = parse_value(obj);
-const colored = paint(ast);
+const colored = paint_ansi(ast);
 console.log(colored);
 ```
 
-**Note:** The paint function uses Chalk with forced color support (level 3 - 16 million colors). This ensures ANSI color codes are always generated in the output, regardless of the environment. When displayed in a color-supporting terminal, you'll see the fully colorized output.
+**Note:** The paint_ansi function uses Chalk with forced color support (level 3 - 16 million colors). This ensures ANSI color codes are always generated in the output, regardless of the environment. When displayed in a color-supporting terminal, you'll see the fully colorized output.
 
 ### Container Configuration
 
@@ -287,7 +287,7 @@ export const defaultContainers: ContainerConfig = {
 **Example: Custom container delimiters**
 
 ```typescript
-import { parse_string, paint, defaultPalette, type ContainerConfig } from 'kyrie';
+import { parse_string, paint_ansi, defaultPalette, type ContainerConfig } from 'kyrie';
 
 const customContainers: ContainerConfig = {
   array: {
@@ -308,7 +308,7 @@ const options = {
   palette: defaultPalette,
   containers: customContainers
 };
-const result = paint(ast, options);
+const result = paint_ansi(ast, options);
 console.log(result); // Outputs: <<1| 2| 3>>
 ```
 
@@ -597,15 +597,15 @@ The `testdata` object includes:
 **Example Usage:**
 
 ```typescript
-import { testdata, parse_value, paint } from 'kyrie';
+import { testdata, parse_value, paint_ansi } from 'kyrie';
 
 // Parse and paint any testdata item
 const ast = parse_value(testdata.array_all_primitives);
-console.log(paint(ast));
+console.log(paint_ansi(ast));
 
 // Test with nested containers
 const nestedAst = parse_value(testdata.object_all_containers);
-console.log(paint(nestedAst, { palette: forestPalette }));
+console.log(paint_ansi(nestedAst, { palette: forestPalette }));
 
 // Verify circular reference detection
 const circularAst = parse_value(testdata.circular);

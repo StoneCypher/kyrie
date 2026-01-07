@@ -156,6 +156,8 @@ program
   .option('-t, --theme <variant>', 'Theme variant: light or dark', 'light')
   .option('-w, --max-width <width>', 'Maximum width for output (number, or "false" to disable)', parseMaxWidth)
   .option('-o, --output-mode <mode>', 'Output mode: ansi, html, chrome-console, or logger', 'ansi')
+  // Coverage excluded: CLI action callback runs in subprocess during integration tests, not in unit test coverage
+  /* c8 ignore start */
   .action((file: string | undefined, options: { palette: string; theme: string; maxWidth?: number | false | undefined; outputMode: string }) => {
     let input = '';
 
@@ -182,6 +184,7 @@ program
 
     console.log(result.output);
   });
+  /* c8 ignore stop */
 
 /**
  * Parse maxWidth option
@@ -199,6 +202,9 @@ export function parseMaxWidth(value: string): number | false | undefined {
 }
 
 // Only run CLI when not in test environment
+// Coverage excluded: program.parse() executes in subprocess during integration tests, not in unit test coverage
+/* c8 ignore start */
 if (process.env['NODE_ENV'] !== 'test' && process.env['VITEST'] !== 'true') {
   program.parse();
 }
+/* c8 ignore stop */

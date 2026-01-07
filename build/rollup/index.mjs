@@ -11117,6 +11117,8 @@ const testdata = {
     string_escaped: "line1\nline2\ttab",
     symbol_with_description: Symbol('test'),
     symbol_without_description: Symbol(),
+    // Coverage excluded: function body is test data, not executed production code
+    /* c8 ignore next */
     function: function testFunc() { return 42; },
     // Simple array with all non-container types
     array_all_primitives: [
@@ -11292,7 +11294,7 @@ const testdata = {
  */
 function highlight_value(value, options) {
     const ast = parse_value(value);
-    return paint(ast, options);
+    return paint_ansi(ast, options);
 }
 /**
  * Highlights a JSON or JavaScript string with colors
@@ -11317,7 +11319,7 @@ function highlight_value(value, options) {
  */
 function highlight_string(str, options) {
     const ast = parse_string(str);
-    return paint(ast, options);
+    return paint_ansi(ast, options);
 }
 /**
  * Default highlight options
@@ -11328,16 +11330,44 @@ const defaultHighlightOptions = {
     maxWidth: undefined
 };
 /**
- * Paints an AST node with colors and formatting
+ * ANSI paint policy using Chalk for terminal color output
+ * Provides color wrapping using ANSI escape codes and standard newline handling
+ *
+ * @example
+ * ```typescript
+ * const colorized = ansi_policy.wrap('#FF5733', 'Hello World');
+ * console.log(colorized); // Outputs 'Hello World' in color
+ * ```
+ */
+const ansi_policy = {
+    wrap: (color, content) => {
+        return chalkInstance.hex(color)(content);
+    },
+    newline: '\n'
+};
+/**
+ * Helper function to safely get a color from a palette with validation
+ * Throws a clear error if the color is missing
+ */
+function getPaletteColor(palette, colorKey) {
+    const color = palette[colorKey];
+    if (color === undefined || color === null) {
+        throw new Error(`Missing color '${colorKey}' in palette. The palette must define all required colors.`);
+    }
+    return color;
+}
+/**
+ * Paints an AST node with colors and formatting using a specified paint policy
  *
  * @param {ASTNode} node - The AST node to paint
+ * @param {PaintPolicy} policy - The paint policy to use for color formatting
  * @param {HighlightOptions} [options] - Optional configuration. Defaults will be used for any missing values.
  * @returns {string} The painted string representation of the node
  *
  * @example
  * ```typescript
  * const ast = parse_string('{"name": "John"}');
- * const painted = paint(ast); // Uses defaults
+ * const painted = paint(ast, ansi_policy); // Uses defaults
  * console.log(painted);
  * ```
  *
@@ -11345,45 +11375,45 @@ const defaultHighlightOptions = {
  * ```typescript
  * const ast = parse_string('{"name": "John"}');
  * const options = { palette: forestPalette }; // containers will use default
- * const painted = paint(ast, options);
+ * const painted = paint(ast, ansi_policy, options);
  * console.log(painted);
  * ```
  */
-function paint(node, options) {
+function paint(node, policy, options) {
     // Merge provided options with defaults
     const palette = options?.palette ?? defaultHighlightOptions.palette;
     const containers = options?.containers ?? defaultHighlightOptions.containers;
     // Handle null
     if (node.value === null) {
-        return chalkInstance.hex(palette.null)('null');
+        return policy.wrap(getPaletteColor(palette, 'null'), 'null');
     }
     // Handle primitives
     if (node.basic_type === 'undefined') {
-        return chalkInstance.hex(palette.undefined)('undefined');
+        return policy.wrap(getPaletteColor(palette, 'undefined'), 'undefined');
     }
     if (node.basic_type === 'boolean') {
-        return chalkInstance.hex(palette.boolean)(String(node.value));
+        return policy.wrap(getPaletteColor(palette, 'boolean'), String(node.value));
     }
     if (node.basic_type === 'number') {
-        return chalkInstance.hex(palette.number)(String(node.value));
+        return policy.wrap(getPaletteColor(palette, 'number'), String(node.value));
     }
     if (node.basic_type === 'string') {
-        return chalkInstance.hex(palette.string)('"' + String(node.value) + '"');
+        return policy.wrap(getPaletteColor(palette, 'string'), '"' + String(node.value) + '"');
     }
     if (node.basic_type === 'symbol') {
         const desc = node.deep_type.description !== undefined ? `(${node.deep_type.description})` : '';
-        return chalkInstance.hex(palette.symbol)(`Symbol${desc}`);
+        return policy.wrap(getPaletteColor(palette, 'symbol'), `Symbol${desc}`);
     }
     if (node.basic_type === 'function') {
         const config = containers.function ?? defaultContainers.function;
         const start = config.start ?? 'function(';
         const end = config.end ?? ')';
-        return chalkInstance.hex(palette.function)(start + end);
+        return policy.wrap(getPaletteColor(palette, 'function'), start + end);
     }
     // Handle circular references
     if (node.deep_type.isCircularReference) {
         const refId = node.deep_type.referenceId !== undefined ? `#${node.deep_type.referenceId}` : '';
-        return chalkInstance.hex(palette.circularReference)(`[Circular${refId}]`);
+        return policy.wrap(getPaletteColor(palette, 'circularReference'), `[Circular${refId}]`);
     }
     // Handle containers
     if (node.basic_type === 'object') {
@@ -11393,9 +11423,9 @@ function paint(node, options) {
             const start = config.start ?? '[';
             const delimiter = config.delimiter ?? ',';
             const end = config.end ?? ']';
-            const elements = node.elements.map(el => paint(el, options));
-            const joined = elements.join(chalkInstance.hex(palette.punctuation)(delimiter) + ' ');
-            return chalkInstance.hex(palette.array)(start) + joined + chalkInstance.hex(palette.array)(end);
+            const elements = node.elements.map(el => paint(el, policy, options));
+            const joined = elements.join(policy.wrap(getPaletteColor(palette, 'punctuation'), delimiter) + ' ');
+            return policy.wrap(getPaletteColor(palette, 'array'), start) + joined + policy.wrap(getPaletteColor(palette, 'array'), end);
         }
         // Handle Maps
         if (node.deep_type.isMap && node.properties) {
@@ -11405,13 +11435,13 @@ function paint(node, options) {
             const delimiter = config.delimiter ?? ',';
             const end = config.end ?? '>}';
             const entries = Object.entries(node.properties).map(([key, val]) => {
-                const paintedKey = chalkInstance.hex(palette.propertyKey)(key);
-                const paintedSep = chalkInstance.hex(palette.punctuation)(separator);
-                const paintedVal = paint(val, options);
+                const paintedKey = policy.wrap(getPaletteColor(palette, 'propertyKey'), key);
+                const paintedSep = policy.wrap(getPaletteColor(palette, 'punctuation'), separator);
+                const paintedVal = paint(val, policy, options);
                 return paintedKey + paintedSep + ' ' + paintedVal;
             });
-            const joined = entries.join(chalkInstance.hex(palette.punctuation)(delimiter) + ' ');
-            return chalkInstance.hex(palette.map)(start) + joined + chalkInstance.hex(palette.map)(end);
+            const joined = entries.join(policy.wrap(getPaletteColor(palette, 'punctuation'), delimiter) + ' ');
+            return policy.wrap(getPaletteColor(palette, 'map'), start) + joined + policy.wrap(getPaletteColor(palette, 'map'), end);
         }
         // Handle Sets
         if (node.deep_type.isSet && node.properties) {
@@ -11419,44 +11449,44 @@ function paint(node, options) {
             const start = config.start ?? '{(';
             const delimiter = config.delimiter ?? ',';
             const end = config.end ?? ')}';
-            const values = Object.values(node.properties).map(val => paint(val, options));
-            const joined = values.join(chalkInstance.hex(palette.punctuation)(delimiter) + ' ');
-            return chalkInstance.hex(palette.set)(start) + joined + chalkInstance.hex(palette.set)(end);
+            const values = Object.values(node.properties).map(val => paint(val, policy, options));
+            const joined = values.join(policy.wrap(getPaletteColor(palette, 'punctuation'), delimiter) + ' ');
+            return policy.wrap(getPaletteColor(palette, 'set'), start) + joined + policy.wrap(getPaletteColor(palette, 'set'), end);
         }
         // Handle WeakMaps
         if (node.deep_type.isWeakMap) {
             const config = containers.weakmap ?? defaultContainers.weakmap;
             const start = config.start ?? '(<';
             const end = config.end ?? '>)';
-            return chalkInstance.hex(palette.weakmap)(start + end);
+            return policy.wrap(getPaletteColor(palette, 'weakmap'), start + end);
         }
         // Handle WeakSets
         if (node.deep_type.isWeakSet) {
             const config = containers.weakset ?? defaultContainers.weakset;
             const start = config.start ?? '((';
             const end = config.end ?? '))';
-            return chalkInstance.hex(palette.weakset)(start + end);
+            return policy.wrap(getPaletteColor(palette, 'weakset'), start + end);
         }
         // Handle Dates
         if (node.deep_type.isDate) {
             const config = containers.date ?? defaultContainers.date;
             const start = config.start ?? 'Date(';
             const end = config.end ?? ')';
-            return chalkInstance.hex(palette.date)(start + String(node.value) + end);
+            return policy.wrap(getPaletteColor(palette, 'date'), start + String(node.value) + end);
         }
         // Handle RegExp
         if (node.deep_type.isRegExp) {
             const config = containers.regexp ?? defaultContainers.regexp;
             const start = config.start ?? '/';
             const end = config.end ?? '/';
-            return chalkInstance.hex(palette.regexp)(start + String(node.value) + end);
+            return policy.wrap(getPaletteColor(palette, 'regexp'), start + String(node.value) + end);
         }
         // Handle Errors
         if (node.deep_type.isError) {
             const config = containers.error ?? defaultContainers.error;
             const start = config.start ?? 'Error(';
             const end = config.end ?? ')';
-            return chalkInstance.hex(palette.error)(start + String(node.value) + end);
+            return policy.wrap(getPaletteColor(palette, 'error'), start + String(node.value) + end);
         }
         // Handle regular objects
         if (node.properties) {
@@ -11466,18 +11496,44 @@ function paint(node, options) {
             const delimiter = config.delimiter ?? ',';
             const end = config.end ?? '}';
             const entries = Object.entries(node.properties).map(([key, val]) => {
-                const paintedKey = chalkInstance.hex(palette.propertyKey)(key);
-                const paintedSep = chalkInstance.hex(palette.punctuation)(separator);
-                const paintedVal = paint(val, options);
+                const paintedKey = policy.wrap(getPaletteColor(palette, 'propertyKey'), key);
+                const paintedSep = policy.wrap(getPaletteColor(palette, 'punctuation'), separator);
+                const paintedVal = paint(val, policy, options);
                 return paintedKey + paintedSep + ' ' + paintedVal;
             });
-            const joined = entries.join(chalkInstance.hex(palette.punctuation)(delimiter) + ' ');
-            return chalkInstance.hex(palette.object)(start) + joined + chalkInstance.hex(palette.object)(end);
+            const joined = entries.join(policy.wrap(getPaletteColor(palette, 'punctuation'), delimiter) + ' ');
+            return policy.wrap(getPaletteColor(palette, 'object'), start) + joined + policy.wrap(getPaletteColor(palette, 'object'), end);
         }
     }
     // Fallback
     return String(node.value);
 }
+/**
+ * Paints an AST node with colors and formatting using ANSI escape codes
+ * Convenience wrapper around paint() that uses the ansi_policy
+ *
+ * @param {ASTNode} node - The AST node to paint
+ * @param {HighlightOptions} [options] - Optional configuration. Defaults will be used for any missing values.
+ * @returns {string} The painted string representation of the node with ANSI color codes
+ *
+ * @example
+ * ```typescript
+ * const ast = parse_string('{"name": "John"}');
+ * const painted = paint_ansi(ast); // Uses ANSI policy with defaults
+ * console.log(painted);
+ * ```
+ *
+ * @example
+ * ```typescript
+ * const ast = parse_string('{"name": "John"}');
+ * const options = { palette: forestPalette };
+ * const painted = paint_ansi(ast, options);
+ * console.log(painted);
+ * ```
+ */
+const paint_ansi = (node, options) => {
+    return paint(node, ansi_policy, options);
+};
 /**
  * Tokenizer for JSON/JavaScript values
  */
@@ -11807,4 +11863,4 @@ function parse_value(input) {
     return buildAST(input);
 }
 
-export { achromatopsiaPalettes, bluesColorRangePalettes, brownsColorRangePalettes, charcoalsColorRangePalettes, cyansColorRangePalettes, defaultContainers, defaultHighlightOptions, deuteranomalyPalettes, deuteranopiaPalettes, greensColorRangePalettes, greysColorRangePalettes, highlight_string, highlight_value, lightGraysColorRangePalettes, magentasColorRangePalettes, monochromacyPalettes, naturePalettes, orangesColorRangePalettes, paint, palettes, parse_string, parse_value, protanomalyPalettes, protanopiaPalettes, purplesColorRangePalettes, redsColorRangePalettes, testdata, tritanomalyPalettes, tritanopiaPalettes, yellowsColorRangePalettes };
+export { achromatopsiaPalettes, ansi_policy, bluesColorRangePalettes, brownsColorRangePalettes, charcoalsColorRangePalettes, cyansColorRangePalettes, defaultContainers, defaultHighlightOptions, deuteranomalyPalettes, deuteranopiaPalettes, greensColorRangePalettes, greysColorRangePalettes, highlight_string, highlight_value, lightGraysColorRangePalettes, magentasColorRangePalettes, monochromacyPalettes, naturePalettes, orangesColorRangePalettes, paint, paint_ansi, palettes, parse_string, parse_value, protanomalyPalettes, protanopiaPalettes, purplesColorRangePalettes, redsColorRangePalettes, testdata, tritanomalyPalettes, tritanopiaPalettes, yellowsColorRangePalettes };

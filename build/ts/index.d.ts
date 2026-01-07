@@ -1,5 +1,5 @@
-import type { DeepType, ASTNode, ContainerDelimiters, ContainerConfig, ColorPalette, OutputMode, HighlightOptions } from './types.js';
-export type { DeepType, ASTNode, ContainerDelimiters, ContainerConfig, ColorPalette, OutputMode, HighlightOptions };
+import type { DeepType, ASTNode, ContainerDelimiters, ContainerConfig, ColorPalette, OutputMode, HighlightOptions, PaintPolicy, PaintFunction } from './types.js';
+export type { DeepType, ASTNode, ContainerDelimiters, ContainerConfig, ColorPalette, OutputMode, HighlightOptions, PaintPolicy, PaintFunction };
 import { palettes } from './palettes/palettes.js';
 import { naturePalettes } from './palettes/nature_palettes.js';
 import { protanopiaPalettes } from './palettes/protanopia_palettes.js';
@@ -148,16 +148,28 @@ export declare function highlight_string(str: string, options?: HighlightOptions
  */
 export declare const defaultHighlightOptions: HighlightOptions;
 /**
- * Paints an AST node with colors and formatting
+ * ANSI paint policy using Chalk for terminal color output
+ * Provides color wrapping using ANSI escape codes and standard newline handling
+ *
+ * @example
+ * ```typescript
+ * const colorized = ansi_policy.wrap('#FF5733', 'Hello World');
+ * console.log(colorized); // Outputs 'Hello World' in color
+ * ```
+ */
+export declare const ansi_policy: PaintPolicy;
+/**
+ * Paints an AST node with colors and formatting using a specified paint policy
  *
  * @param {ASTNode} node - The AST node to paint
+ * @param {PaintPolicy} policy - The paint policy to use for color formatting
  * @param {HighlightOptions} [options] - Optional configuration. Defaults will be used for any missing values.
  * @returns {string} The painted string representation of the node
  *
  * @example
  * ```typescript
  * const ast = parse_string('{"name": "John"}');
- * const painted = paint(ast); // Uses defaults
+ * const painted = paint(ast, ansi_policy); // Uses defaults
  * console.log(painted);
  * ```
  *
@@ -165,11 +177,35 @@ export declare const defaultHighlightOptions: HighlightOptions;
  * ```typescript
  * const ast = parse_string('{"name": "John"}');
  * const options = { palette: forestPalette }; // containers will use default
- * const painted = paint(ast, options);
+ * const painted = paint(ast, ansi_policy, options);
  * console.log(painted);
  * ```
  */
-export declare function paint(node: ASTNode, options?: HighlightOptions): string;
+export declare function paint(node: ASTNode, policy: PaintPolicy, options?: HighlightOptions): string;
+/**
+ * Paints an AST node with colors and formatting using ANSI escape codes
+ * Convenience wrapper around paint() that uses the ansi_policy
+ *
+ * @param {ASTNode} node - The AST node to paint
+ * @param {HighlightOptions} [options] - Optional configuration. Defaults will be used for any missing values.
+ * @returns {string} The painted string representation of the node with ANSI color codes
+ *
+ * @example
+ * ```typescript
+ * const ast = parse_string('{"name": "John"}');
+ * const painted = paint_ansi(ast); // Uses ANSI policy with defaults
+ * console.log(painted);
+ * ```
+ *
+ * @example
+ * ```typescript
+ * const ast = parse_string('{"name": "John"}');
+ * const options = { palette: forestPalette };
+ * const painted = paint_ansi(ast, options);
+ * console.log(painted);
+ * ```
+ */
+export declare const paint_ansi: PaintFunction;
 /**
  * Parses a JavaScript or JSON value string into an Abstract Syntax Tree
  *

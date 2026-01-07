@@ -94,4 +94,17 @@ export interface HighlightOptions {
     maxWidth?: number | false | undefined;
     outputMode?: OutputMode;
 }
+/**
+ * Paint policy for different output formats
+ * Defines how to wrap content with colors and handle newlines
+ */
+export interface PaintPolicy {
+    wrap: (color: string, content: string) => string;
+    newline: string;
+}
+/**
+ * Paint function signature
+ * Takes an AST node and optional highlighting options, returns a painted string
+ */
+export type PaintFunction = (node: ASTNode, options?: HighlightOptions) => string;
 //# sourceMappingURL=types.d.ts.map
