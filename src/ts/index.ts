@@ -475,10 +475,26 @@ function getPaletteColor(palette: ColorPalette, colorKey: keyof ColorPalette): s
  * console.log(painted);
  * ```
  */
-export function paint(node: ASTNode, policy: PaintPolicy, options?: HighlightOptions): string {
+export function paint(node: ASTNode, policy: PaintPolicy, options?: HighlightOptions, depth: number = 0): string {
   // Merge provided options with defaults
   const palette = options?.palette ?? defaultHighlightOptions.palette!;
   const containers = options?.containers ?? defaultHighlightOptions.containers!;
+  const lineUnfolding = options?.lineUnfolding ?? defaultHighlightOptions.lineUnfolding!;
+
+  // Calculate line formatting based on lineUnfolding mode
+  let line_change: string;
+  let line_indent: string;
+  let next_indent: string;
+
+  if (lineUnfolding === 'oneliner') {
+    line_change = '';
+    line_indent = '';
+    next_indent = '';
+  } else { // expanded
+    line_change = policy.newline;
+    line_indent = ' '.repeat(depth * 2);
+    next_indent = ' '.repeat((depth + 1) * 2);
+  }
 
   // Handle null
   if (node.value === null) {
@@ -529,10 +545,15 @@ export function paint(node: ASTNode, policy: PaintPolicy, options?: HighlightOpt
       const delimiter = config.delimiter ?? ',';
       const end = config.end ?? ']';
 
-      const elements = node.elements.map(el => paint(el, policy, options));
-      const joined = elements.join(policy.wrap(getPaletteColor(palette, 'punctuation'), delimiter) + ' ');
+      const elements = node.elements.map(el =>
+        line_change + next_indent + paint(el, policy, options, depth + 1)
+      );
+      const joined = elements.join(policy.wrap(getPaletteColor(palette, 'punctuation'), delimiter));
 
-      return policy.wrap(getPaletteColor(palette, 'array'), start) + joined + policy.wrap(getPaletteColor(palette, 'array'), end);
+      return policy.wrap(getPaletteColor(palette, 'array'), start) +
+             joined +
+             line_change + line_indent +
+             policy.wrap(getPaletteColor(palette, 'array'), end);
     }
 
     // Handle Maps
@@ -546,12 +567,15 @@ export function paint(node: ASTNode, policy: PaintPolicy, options?: HighlightOpt
       const entries = Object.entries(node.properties).map(([key, val]) => {
         const paintedKey = policy.wrap(getPaletteColor(palette, 'propertyKey'), key);
         const paintedSep = policy.wrap(getPaletteColor(palette, 'punctuation'), separator);
-        const paintedVal = paint(val, policy, options);
-        return paintedKey + paintedSep + ' ' + paintedVal;
+        const paintedVal = paint(val, policy, options, depth + 1);
+        return line_change + next_indent + paintedKey + paintedSep + ' ' + paintedVal;
       });
-      const joined = entries.join(policy.wrap(getPaletteColor(palette, 'punctuation'), delimiter) + ' ');
+      const joined = entries.join(policy.wrap(getPaletteColor(palette, 'punctuation'), delimiter));
 
-      return policy.wrap(getPaletteColor(palette, 'map'), start) + joined + policy.wrap(getPaletteColor(palette, 'map'), end);
+      return policy.wrap(getPaletteColor(palette, 'map'), start) +
+             joined +
+             line_change + line_indent +
+             policy.wrap(getPaletteColor(palette, 'map'), end);
     }
 
     // Handle Sets
@@ -561,10 +585,15 @@ export function paint(node: ASTNode, policy: PaintPolicy, options?: HighlightOpt
       const delimiter = config.delimiter ?? ',';
       const end = config.end ?? ')}';
 
-      const values = Object.values(node.properties).map(val => paint(val, policy, options));
-      const joined = values.join(policy.wrap(getPaletteColor(palette, 'punctuation'), delimiter) + ' ');
+      const values = Object.values(node.properties).map(val =>
+        line_change + next_indent + paint(val, policy, options, depth + 1)
+      );
+      const joined = values.join(policy.wrap(getPaletteColor(palette, 'punctuation'), delimiter));
 
-      return policy.wrap(getPaletteColor(palette, 'set'), start) + joined + policy.wrap(getPaletteColor(palette, 'set'), end);
+      return policy.wrap(getPaletteColor(palette, 'set'), start) +
+             joined +
+             line_change + line_indent +
+             policy.wrap(getPaletteColor(palette, 'set'), end);
     }
 
     // Handle WeakMaps
@@ -618,12 +647,15 @@ export function paint(node: ASTNode, policy: PaintPolicy, options?: HighlightOpt
       const entries = Object.entries(node.properties).map(([key, val]) => {
         const paintedKey = policy.wrap(getPaletteColor(palette, 'propertyKey'), key);
         const paintedSep = policy.wrap(getPaletteColor(palette, 'punctuation'), separator);
-        const paintedVal = paint(val, policy, options);
-        return paintedKey + paintedSep + ' ' + paintedVal;
+        const paintedVal = paint(val, policy, options, depth + 1);
+        return line_change + next_indent + paintedKey + paintedSep + ' ' + paintedVal;
       });
-      const joined = entries.join(policy.wrap(getPaletteColor(palette, 'punctuation'), delimiter) + ' ');
+      const joined = entries.join(policy.wrap(getPaletteColor(palette, 'punctuation'), delimiter));
 
-      return policy.wrap(getPaletteColor(palette, 'object'), start) + joined + policy.wrap(getPaletteColor(palette, 'object'), end);
+      return policy.wrap(getPaletteColor(palette, 'object'), start) +
+             joined +
+             line_change + line_indent +
+             policy.wrap(getPaletteColor(palette, 'object'), end);
     }
   }
 

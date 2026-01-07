@@ -1,18 +1,38 @@
 # kyrie v{{version}}
 
-Your one stop formatting and colorizing shop for Javascript, Typescript, and JSON, to go to your terminal, your developer's console, and your logs.
+> Version {{version}} was built on {{built_text}} `{{built}}` from hash `{{gh_hash}}`.
 
-> Version {{version}} built on {{built_text}} `{{built}}` from hash `{{gh_hash}}`.
+If you're just getting started, you very probably want [`ansi_from_value`](https://stonecypher.github.io/kyrie/docs/functions/ansi_from_value.html).
 
-| Turn this: | Into this: |
-| ---- | ---- |
-| TODO image | TODO image |
+<br/>
+
+Kyrie is your one stop formatting and colorizing shop for Javascript, Typescript, and JSON, to go to your terminal, your HTML, your developer's console, and your logs.
 
 Kyrie is a formatting colorizer for JavaScript, TypeScript, and JSON with customizable color palettes and container delimiters.
 
-You very probably want [`ansi_from_val`](TODO).
+<br/>
 
-**[📚 Tutorial](https://stonecypher.github.io/kyrie/tutorial.md)** | **[📖 API Documentation](https://stonecypher.github.io/kyrie/docs/)**
+Turn this: 
+
+`##TODO IMAGE`
+
+Into this: 
+
+`##TODO IMAGE`
+
+Or this:
+
+`##TODO IMAGE`
+
+Or a million other things.
+
+<br/>
+
+Useful getting started links:
+
+* **[📚 Tutorial](https://stonecypher.github.io/kyrie/tutorial.md)** 
+* **[📖 API Documentation](https://stonecypher.github.io/kyrie/docs/)**
+* **[🖥️ Live previewer](https://stonecypher.github.io/kyrie/previewer.html)**
 
 ## Features
 
