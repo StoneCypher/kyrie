@@ -16521,7 +16521,7 @@ function validateOutputMode(mode) {
  * Validate line unfolding mode
  */
 function validateLineUnfolding(mode) {
-    const validLineUnfoldingModes = ['oneliner', 'compact', 'expanded'];
+    const validLineUnfoldingModes = ['oneliner', 'expanded'];
     if (!validLineUnfoldingModes.includes(mode)) {
         return {
             success: false,
@@ -16579,7 +16579,7 @@ program
     .option('-t, --theme <variant>', 'Theme variant: light or dark', 'light')
     .option('-w, --max-width <width>', 'Maximum width for output (number, or "false" to disable)', parseMaxWidth)
     .option('-o, --output-mode <mode>', 'Output mode: ansi, html, chrome-console, or logger', 'ansi')
-    .option('-l, --line-unfolding <mode>', 'Line unfolding mode: oneliner, compact, or expanded', 'oneliner')
+    .option('-l, --line-unfolding <mode>', 'Line unfolding mode: oneliner or expanded', 'oneliner')
     .option('-i, --indent <value>', 'Indentation (number or string)', parseIndent, 2)
     // Coverage excluded: CLI action callback runs in subprocess during integration tests, not in unit test coverage
     /* c8 ignore start */

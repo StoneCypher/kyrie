@@ -120,14 +120,6 @@ describe('HighlightOptions', () => {
     expect(options.lineUnfolding).toBe('oneliner');
   });
 
-  test('should accept lineUnfolding as compact', () => {
-    const options: HighlightOptions = {
-      palette: palettes.default.light,
-      lineUnfolding: 'compact'
-    };
-    expect(options.lineUnfolding).toBe('compact');
-  });
-
   test('should accept lineUnfolding as expanded', () => {
     const options: HighlightOptions = {
       palette: palettes.default.light,
@@ -1634,7 +1626,7 @@ describe('testdata', () => {
 
   describe('LineUnfolding type', () => {
     test('should accept valid line unfolding modes', () => {
-      const modes: LineUnfolding[] = ['oneliner', 'compact', 'expanded'];
+      const modes: LineUnfolding[] = ['oneliner', 'expanded'];
       modes.forEach(mode => {
         expect(mode).toBeDefined();
       });
@@ -1642,21 +1634,18 @@ describe('testdata', () => {
 
     test('should be assignable to variables', () => {
       const mode1: LineUnfolding = 'oneliner';
-      const mode2: LineUnfolding = 'compact';
-      const mode3: LineUnfolding = 'expanded';
+      const mode2: LineUnfolding = 'expanded';
 
       expect(mode1).toBe('oneliner');
-      expect(mode2).toBe('compact');
-      expect(mode3).toBe('expanded');
+      expect(mode2).toBe('expanded');
     });
 
     test('should support type checking', () => {
       const validateMode = (mode: LineUnfolding): boolean => {
-        return mode === 'oneliner' || mode === 'compact' || mode === 'expanded';
+        return mode === 'oneliner' || mode === 'expanded';
       };
 
       expect(validateMode('oneliner')).toBe(true);
-      expect(validateMode('compact')).toBe(true);
       expect(validateMode('expanded')).toBe(true);
     });
   });

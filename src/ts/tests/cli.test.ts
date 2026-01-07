@@ -599,13 +599,6 @@ describe('CLI Unit Tests', () => {
       expect(result.error).toBeUndefined();
     });
 
-    test('should accept valid line unfolding mode: compact', () => {
-      const result = validateLineUnfolding('compact');
-
-      expect(result.success).toBe(true);
-      expect(result.error).toBeUndefined();
-    });
-
     test('should accept valid line unfolding mode: expanded', () => {
       const result = validateLineUnfolding('expanded');
 
@@ -816,21 +809,11 @@ describe('CLI Unit Tests', () => {
         palette: 'default',
         theme: 'light',
         outputMode: 'ansi',
-        lineUnfolding: 'compact',
+        lineUnfolding: 'expanded',
         indent: 2
       };
       const result2 = processInput(input, options2);
       expect(result2.success).toBe(true);
-
-      const options3: CLIOptions = {
-        palette: 'default',
-        theme: 'light',
-        outputMode: 'ansi',
-        lineUnfolding: 'expanded',
-        indent: 2
-      };
-      const result3 = processInput(input, options3);
-      expect(result3.success).toBe(true);
     });
 
     test('should return error for invalid line unfolding mode', () => {
