@@ -1,8 +1,12 @@
 # kyrie v0.32.0
 
-> Version 0.32.0 was built on 1/7/2026, 6:35:57 AM `1767796557420` from hash `8084801`.
+> Version 0.32.0 was built on 1/18/2026, 8:31:32 AM `1768753892848` from hash `68a2ca9`.
 
-If you're just getting started, you very probably want [`ansi_from_value`](https://stonecypher.github.io/kyrie/docs/functions/ansi_from_value.html).
+Most new users are here to find one of three things:
+
+* [`ansi_from_value`](https://stonecypher.github.io/kyrie/docs/functions/ansi_from_value.html), which colorizes a Javascript value;
+* [`ansi_from_string`](https://stonecypher.github.io/kyrie/docs/functions/ansi_from_string.html), which colorizes a string containing a Javascript value; or
+* the envvar [`kyrie_default`](#environment-variable-kyrie_default), which locally sets kyrie behavior when not otherwise instructed.
 
 <br/>
 
@@ -46,7 +50,7 @@ Useful getting started links:
 - 🎯 **Type-aware**: Distinguishes between arrays, objects, Maps, Sets, Dates, RegExp, Errors, and more
 - 💪 **TypeScript support**: Fully typed with strict TypeScript configuration
 - ⚡ **One dependency** - Chalk, for terminal colors (a second, Commander, for the CLI only)
-- ✅ **Strong testing**: Has 99.25% test coverage from 443 test cases
+- ✅ **Strong testing**: Has 97.09% test coverage from 507 test cases
 
 ## Installation
 
@@ -95,8 +99,103 @@ kyrie --max-width false myfile.json
 - `-p, --palette <name>` - Color palette to use (default: "default")
 - `-t, --theme <variant>` - Theme variant: "light" or "dark" (default: "light")
 - `-w, --max-width <width>` - Maximum width for output (number or "false" to disable)
+- `-o, --output-mode <mode>` - Output mode: ansi, html, chrome-console, or logger (default: "ansi")
+- `-l, --line-unfolding <mode>` - Line unfolding mode: oneliner or expanded (default: "oneliner")
+- `-i, --indent <value>` - Indentation (number or string) (default: 2)
 - `-V, --version` - Output version number
 - `-h, --help` - Display help information
+
+### Environment Variable: `kyrie_default`
+
+The `kyrie_default` environment variable allows you to configure default CLI behavior without passing command-line options. This is particularly useful for setting persistent preferences across all kyrie invocations.
+
+**Usage:**
+
+There are two ways to use `kyrie_default`:
+
+1. **As a palette name** (simple string without `=`):
+   ```bash
+   export kyrie_default="forest"
+   kyrie myfile.json  # Will use forest palette
+   ```
+
+2. **As configuration options** (comma-separated key=value pairs):
+   ```bash
+   export kyrie_default="palette=forest, theme=dark, indent=4"
+   kyrie myfile.json  # Will use forest palette with dark theme and 4-space indent
+   ```
+
+**Supported configuration keys:**
+- `palette` - Color palette name (e.g., "forest", "bold", "pastel")
+- `theme` - Theme variant: "light" or "dark"
+- `maxWidth` - Maximum output width (number or "false")
+- `outputMode` - Output mode: "ansi", "html", "chrome-console", or "logger"
+- `lineUnfolding` - Line unfolding mode: "oneliner" or "expanded"
+- `indent` - Indentation value (number or string like "\\t")
+- **AST node type colors** - Override specific colors for any AST node type (see below)
+
+**Examples:**
+
+```bash
+# Set a default palette
+export kyrie_default="forest"
+kyrie data.json
+
+# Configure multiple options
+export kyrie_default="palette=bold, theme=dark, lineUnfolding=expanded, indent=2"
+kyrie data.json
+
+# Set maximum width
+export kyrie_default="palette=pastel, maxWidth=80"
+kyrie data.json
+
+# Disable maximum width
+export kyrie_default="maxWidth=false"
+kyrie data.json
+```
+
+#### Palette Color Overrides
+
+You can override specific colors for individual AST node types by specifying them in the `kyrie_default` environment variable. This allows you to customize colors without creating a full custom palette.
+
+**Available AST node types:**
+- `text`, `null`, `undefined`, `boolean`, `number`, `bigint`, `specialNumber`
+- `string`, `symbol`, `function`, `object`, `array`, `map`, `set`
+- `weakmap`, `weakset`, `date`, `regexp`, `error`, `circularReference`
+- `propertyKey`, `punctuation`, `indentGuide`
+
+**Color value formats:**
+- Hex colors: `#RGB`, `#RRGGBB`, or `#RRGGBBAA` (e.g., `#F00`, `#FF0000`, `#FF0000FF`)
+- CSS color names: `red`, `blue`, `green`, etc.
+
+**Examples:**
+
+```bash
+# Override specific colors with a base palette
+export kyrie_default="palette=forest, number=#FFD700, string=#90EE90"
+kyrie data.json
+
+# Override multiple colors
+export kyrie_default="palette=bold, theme=dark, number=#FFD700, string=#90EE90, error=#FF6B6B"
+kyrie data.json
+
+# Override colors without a base palette (uses default palette with overrides)
+export kyrie_default="number=#FF0000, string=#00FF00, boolean=#0000FF"
+kyrie data.json
+
+# Use CSS color names
+export kyrie_default="palette=pastel, number=gold, string=lightgreen, error=crimson"
+kyrie data.json
+
+# Combine with all options
+export kyrie_default="palette=forest, theme=dark, number=#FFD700, lineUnfolding=expanded, indent=2"
+kyrie data.json
+```
+
+**Note:**
+- Command-line options will override environment variable settings
+- Palette color overrides are applied on top of the selected palette (or default palette if none specified)
+- The environment variable configuration is parsed and logged at startup
 
 ## Usage
 

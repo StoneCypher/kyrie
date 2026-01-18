@@ -9,7 +9,10 @@ import type {
   LineUnfolding,
   Options,
   PaintPolicy,
-  PaintFunction
+  PaintFunction,
+  SpecialNumber,
+  SpecialNumberKind,
+  SpecialNumberPaintMode
 } from './types.js';
 
 // Re-export types
@@ -23,7 +26,10 @@ export type {
   LineUnfolding,
   Options,
   PaintPolicy,
-  PaintFunction
+  PaintFunction,
+  SpecialNumber,
+  SpecialNumberKind,
+  SpecialNumberPaintMode
 };
 
 // Create a chalk instance with forced color support (level 3 = 16m colors)
@@ -132,6 +138,30 @@ export const defaultContainers: ContainerConfig = {
     end: ')'
   }
 };
+
+export const specialNumbers: SpecialNumber[] = [
+  { value: NaN, label: 'NaN', kind: 'fundamental' },
+  { value: Infinity, label: 'Infinity', kind: 'fundamental' },
+  { value: -Infinity, label: '-Infinity', kind: 'fundamental' },
+  { value: -0, label: '-0', kind: 'fundamental' },
+
+  { value: Number.MAX_VALUE, label: 'Number.MAX_VALUE', kind: 'constant' },
+  { value: Number.MIN_VALUE, label: 'Number.MIN_VALUE', kind: 'constant' },
+  { value: Number.MAX_SAFE_INTEGER, label: 'Number.MAX_SAFE_INTEGER', kind: 'constant' },
+  { value: Number.MIN_SAFE_INTEGER, label: 'Number.MIN_SAFE_INTEGER', kind: 'constant' },
+  { value: Number.EPSILON, label: 'Number.EPSILON', kind: 'constant' },
+  { value: Number.POSITIVE_INFINITY, label: 'Number.POSITIVE_INFINITY', kind: 'constant' },
+  { value: Number.NEGATIVE_INFINITY, label: 'Number.NEGATIVE_INFINITY', kind: 'constant' },
+  
+  { value: Math.E, label: 'Math.E', kind: 'constant' },
+  { value: Math.LN2, label: 'Math.LN2', kind: 'constant' },
+  { value: Math.LN10, label: 'Math.LN10', kind: 'constant' },
+  { value: Math.LOG2E, label: 'Math.LOG2E', kind: 'constant' },
+  { value: Math.LOG10E, label: 'Math.LOG10E', kind: 'constant' },
+  { value: Math.PI, label: 'Math.PI', kind: 'constant' },
+  { value: Math.SQRT1_2, label: 'Math.SQRT1_2', kind: 'constant' },
+  { value: Math.SQRT2, label: 'Math.SQRT2', kind: 'constant' }
+];
 
 /**
  * Comprehensive test data containing all AST node types
@@ -385,7 +415,8 @@ export const defaultOptions: Options = {
   containers: defaultContainers,
   maxWidth: undefined,
   lineUnfolding: 'oneliner',
-  indent: 2
+  indent: 2,
+  specialNumberPaintMode: 'highlight-label'
 };
 
 /**
@@ -453,6 +484,27 @@ function getPaletteColor(palette: ColorPalette, colorKey: keyof ColorPalette): s
 }
 
 /**
+ * Checks if a number value is a special number and returns the corresponding SpecialNumber entry
+ *
+ * @param {number} value - The number value to check
+ * @returns {SpecialNumber | undefined} The SpecialNumber entry if the value is special, undefined otherwise
+ */
+function getSpecialNumber(value: number): SpecialNumber | undefined {
+  // Check for NaN
+  if (Number.isNaN(value)) {
+    return specialNumbers.find(sn => sn.label === 'NaN');
+  }
+
+  // Check for -0
+  if (Object.is(value, -0)) {
+    return specialNumbers.find(sn => sn.label === '-0');
+  }
+
+  // Check for exact match with special number values
+  return specialNumbers.find(sn => sn.value === value);
+}
+
+/**
  * Paints an AST node with colors and formatting using a specified paint policy
  *
  * @param {ASTNode} node - The AST node to paint
@@ -480,6 +532,7 @@ export function paint(node: ASTNode, policy: PaintPolicy, options?: Options, dep
   const palette = options?.palette ?? defaultOptions.palette!;
   const containers = options?.containers ?? defaultOptions.containers!;
   const lineUnfolding = options?.lineUnfolding ?? defaultOptions.lineUnfolding!;
+  const specialNumberPaintMode = options?.specialNumberPaintMode ?? defaultOptions.specialNumberPaintMode!;
 
   // Calculate line formatting based on lineUnfolding mode
   let line_change: string;
@@ -519,7 +572,23 @@ export function paint(node: ASTNode, policy: PaintPolicy, options?: Options, dep
   }
 
   if (node.basic_type === 'number') {
+    const specialNum = getSpecialNumber(node.value as number);
+    if (specialNum) {
+      // This is a special number - render based on specialNumberPaintMode
+      const useSpecialColor = specialNumberPaintMode === 'highlight' || specialNumberPaintMode === 'highlight-label';
+      const useLabel = specialNumberPaintMode === 'label' || specialNumberPaintMode === 'highlight-label';
+
+      const color = useSpecialColor ? getPaletteColor(palette, 'specialNumber') : getPaletteColor(palette, 'number');
+      const content = useLabel ? specialNum.label : String(node.value);
+
+      return policy.wrap(color, content);
+    }
+    // Regular number
     return policy.wrap(getPaletteColor(palette, 'number'), String(node.value));
+  }
+
+  if (node.basic_type === 'bigint') {
+    return policy.wrap(getPaletteColor(palette, 'bigint'), String(node.value) + 'n');
   }
 
   if (node.basic_type === 'string') {
@@ -917,6 +986,15 @@ export function log_from_string(str: string, options?: Options): string {
 /**
  * Tokenizer for JSON/JavaScript values
  */
+/**
+ * Helper function to get special number value from label
+ * Returns the numeric value if the label matches a special number, otherwise undefined
+ */
+function getSpecialNumberValue(label: string): number | undefined {
+  const specialNum = specialNumbers.find(sn => sn.label === label);
+  return specialNum?.value;
+}
+
 class Tokenizer {
   private input: string;
   private position: number;
@@ -1001,7 +1079,7 @@ class Tokenizer {
   private consumeIdentifier(): string {
     let result = '';
 
-    while (this.position < this.input.length && /[a-zA-Z_]/.test(this.peek()!)) {
+    while (this.position < this.input.length && /[a-zA-Z_0-9.]/.test(this.peek()!)) {
       result += this.consume();
     }
 
@@ -1021,8 +1099,36 @@ class Tokenizer {
       return this.consumeString();
     }
 
-    // Number
-    if (char === '-' || /[0-9]/.test(char)) {
+    // Number or negative special number (like -Infinity, -0)
+    if (char === '-') {
+      // Peek ahead to check if it's a special number identifier
+      const savedPosition = this.position;
+      this.consume(); // consume '-'
+      this.skipWhitespace();
+
+      const nextChar = this.peek();
+      if (nextChar && /[a-zA-Z]/.test(nextChar)) {
+        // Could be -Infinity or other negative special number
+        const identifier = this.consumeIdentifier();
+        const fullLabel = '-' + identifier;
+
+        // Check if it's a special number
+        const specialValue = getSpecialNumberValue(fullLabel);
+        if (specialValue !== undefined) {
+          return specialValue;
+        }
+
+        // Not a special number, restore position and parse as regular number
+        this.position = savedPosition;
+      } else {
+        // Regular negative number, restore position
+        this.position = savedPosition;
+      }
+
+      return this.consumeNumber();
+    }
+
+    if (/[0-9]/.test(char)) {
       return this.consumeNumber();
     }
 
@@ -1036,7 +1142,7 @@ class Tokenizer {
       return this.parseArray();
     }
 
-    // Keywords
+    // Keywords and special numbers
     const identifier = this.consumeIdentifier();
 
     if (identifier === 'null') {
@@ -1050,6 +1156,12 @@ class Tokenizer {
     }
     if (identifier === 'false') {
       return false;
+    }
+
+    // Check if it's a special number
+    const specialValue = getSpecialNumberValue(identifier);
+    if (specialValue !== undefined) {
+      return specialValue;
     }
 
     throw new Error(`Unexpected token: ${identifier}`);

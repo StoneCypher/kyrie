@@ -165,6 +165,14 @@
 
         <label for="indentValue" id="indentValueLabel">Count:</label>
         <input type="text" id="indentValue" value="2" style="width: 3em; height: 1.3em; font-size: 0.85em;">
+
+        <label for="specialNumberPaintMode">Special #s:</label>
+        <select id="specialNumberPaintMode">
+            <option value="highlight-label">highlight-label</option>
+            <option value="label">label</option>
+            <option value="highlight">highlight</option>
+            <option value="normal">normal</option>
+        </select>
     </div>
 
     <div id="main">
@@ -176,6 +184,14 @@
     "active": true
   },
   "scores": [95, 87, 92, 78, 100],
+  "specialNumbers": {
+    "notANumber": NaN,
+    "infinity": Infinity,
+    "negInfinity": -Infinity,
+    "pi": Math.PI,
+    "maxValue": Number.MAX_VALUE,
+    "epsilon": Number.EPSILON
+  },
   "address": {
     "street": "123 Main St",
     "city": "San Francisco",
@@ -225,6 +241,7 @@
         const indentTypeSelect = document.getElementById('indentType');
         const indentValueInput = document.getElementById('indentValue');
         const indentValueLabel = document.getElementById('indentValueLabel');
+        const specialNumberPaintModeSelect = document.getElementById('specialNumberPaintMode');
 
         // Combine all palettes into a lookup object
         const allPalettes = {
@@ -272,11 +289,15 @@
                     indent = indentValueInput.value || '  ';
                 }
 
+                // Get special number paint mode
+                const specialNumberPaintMode = specialNumberPaintModeSelect.value;
+
                 // Build options
                 const options = {
                     palette: selectedPalette,
                     lineUnfolding: lineUnfolding,
-                    indent: indent
+                    indent: indent,
+                    specialNumberPaintMode: specialNumberPaintMode
                 };
 
                 // Parse and paint the input
@@ -338,6 +359,7 @@
         lineUnfoldingSelect.addEventListener('change', updatePreview);
         indentTypeSelect.addEventListener('change', updateIndentControls);
         indentValueInput.addEventListener('input', updatePreview);
+        specialNumberPaintModeSelect.addEventListener('change', updatePreview);
 
         // Initial update
         updatePreview();

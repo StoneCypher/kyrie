@@ -1,6 +1,6 @@
 next:
 
-  - indentation, one-line mode (already in it,) dense mode
+  - re-add dense indentation mode
   - add a type for spacing inside/outside containers, around delimiters and etc
   - start adding funky types, like bigint, bytearray, etc
   - special colors for globals like math
@@ -9,21 +9,21 @@ next:
   - special colors for special numbers like NaN
   - special colors for template strings
   - special colors for workers
+  - special colors for DOM elements
+  - special colors for common vended objects, like Date, RegExp, Error, Promise, reflection stuff, Atomics
   - voluntarily add characters at the edge of indentation, like npm tree
     - will need to be able to easy-mode the box corners if so
   - voluntary add prefix strings, like '. ', to show indent like a ToC
   - wrap if over a length
-  - wrap if doesn't fit current screen width
+    - wrap if doesn't fit current screen width, may be the same as above
   - elide after N entries
   - elide after N depth
   - make a version that works in the developer console
   - make a cli that eats files or takes quoted strings 
   - argument to sort by key
-  - html output
   - js console friendly output
   - npm publish
   - add npm link to base_README
-  - add configurator link to base_README
   - add magic code donator via gh link shenanigans
   - add decoder for theme-in-envvar
   - optional preset headers, so it writes `Map {<` instead of just `{<`
@@ -32,10 +32,6 @@ next:
       description respectively
   - alter the github action to make a release
   - alter the github action to make an npm publish
-  - drop a js file during build with 
-    - package version, 
-    - build date/time, 
-    - github hash
   - background color
   - fix the palettes.  
     - they need to be heirarchalized
@@ -46,6 +42,15 @@ next:
       - this needs to be a dynamic tree, or the color and vision palettes will overwhelm
   - add the todo scanner
   - add the changelog generator
+  - the defaults are set up for a logger (one line, no eliding, no typenames, etc,) but you
+    want really different stuff for development, browsing, etc.  make default configs so you
+    can write something like k.ansi_from_value(val, k.developer)
+  - investigate images as an output type, for the screenshot crowd (which includes me.)
+    - downside: node has no built in image library, and jimp is huge
+  - show special characters (\r\n\t\v) as special characters instead
+    - are they highlit?  oh yes they are.
+  - display whitespace (word processor style)
+  - make a function that creates a palette from key input colors and math, for more consistent palettes
 
   - build script to draw screenshots of the themes and add them to the readme
 
@@ -65,5 +70,15 @@ next:
 ----
 
 done:
-
+  - indentation, one-line mode (already in it) 
+    - custom indentation width
+    - custom indentation strings
+    - palette color
+  - html output
   - make a version that works in the browser
+  - write a js script that runs during build which annotates
+    - package version, 
+    - build date/time, 
+    - github hash
+  - add configurator link to base_README
+  

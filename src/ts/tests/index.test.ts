@@ -330,6 +330,164 @@ describe('parse_string', () => {
     expect(ast.value).toBe(3.14E-2);
   });
 
+  // Special number tests - identifier forms
+  test('should parse NaN identifier', () => {
+    const ast = parse_string('NaN');
+    expect(ast.basic_type).toBe('number');
+    expect(Number.isNaN(ast.value)).toBe(true);
+  });
+
+  test('should parse Infinity identifier', () => {
+    const ast = parse_string('Infinity');
+    expect(ast.basic_type).toBe('number');
+    expect(ast.value).toBe(Infinity);
+  });
+
+  test('should parse -Infinity identifier', () => {
+    const ast = parse_string('-Infinity');
+    expect(ast.basic_type).toBe('number');
+    expect(ast.value).toBe(-Infinity);
+  });
+
+  test('should parse Math.PI identifier', () => {
+    const ast = parse_string('Math.PI');
+    expect(ast.basic_type).toBe('number');
+    expect(ast.value).toBe(Math.PI);
+  });
+
+  test('should parse Math.E identifier', () => {
+    const ast = parse_string('Math.E');
+    expect(ast.basic_type).toBe('number');
+    expect(ast.value).toBe(Math.E);
+  });
+
+  test('should parse Number.MAX_VALUE identifier', () => {
+    const ast = parse_string('Number.MAX_VALUE');
+    expect(ast.basic_type).toBe('number');
+    expect(ast.value).toBe(Number.MAX_VALUE);
+  });
+
+  test('should parse Number.MIN_VALUE identifier', () => {
+    const ast = parse_string('Number.MIN_VALUE');
+    expect(ast.basic_type).toBe('number');
+    expect(ast.value).toBe(Number.MIN_VALUE);
+  });
+
+  test('should parse Number.MAX_SAFE_INTEGER identifier', () => {
+    const ast = parse_string('Number.MAX_SAFE_INTEGER');
+    expect(ast.basic_type).toBe('number');
+    expect(ast.value).toBe(Number.MAX_SAFE_INTEGER);
+  });
+
+  test('should parse Number.MIN_SAFE_INTEGER identifier', () => {
+    const ast = parse_string('Number.MIN_SAFE_INTEGER');
+    expect(ast.basic_type).toBe('number');
+    expect(ast.value).toBe(Number.MIN_SAFE_INTEGER);
+  });
+
+  test('should parse Number.EPSILON identifier', () => {
+    const ast = parse_string('Number.EPSILON');
+    expect(ast.basic_type).toBe('number');
+    expect(ast.value).toBe(Number.EPSILON);
+  });
+
+  test('should parse Number.POSITIVE_INFINITY identifier', () => {
+    const ast = parse_string('Number.POSITIVE_INFINITY');
+    expect(ast.basic_type).toBe('number');
+    expect(ast.value).toBe(Number.POSITIVE_INFINITY);
+  });
+
+  test('should parse Number.NEGATIVE_INFINITY identifier', () => {
+    const ast = parse_string('Number.NEGATIVE_INFINITY');
+    expect(ast.basic_type).toBe('number');
+    expect(ast.value).toBe(Number.NEGATIVE_INFINITY);
+  });
+
+  test('should parse Math.LN2 identifier', () => {
+    const ast = parse_string('Math.LN2');
+    expect(ast.basic_type).toBe('number');
+    expect(ast.value).toBe(Math.LN2);
+  });
+
+  test('should parse Math.LN10 identifier', () => {
+    const ast = parse_string('Math.LN10');
+    expect(ast.basic_type).toBe('number');
+    expect(ast.value).toBe(Math.LN10);
+  });
+
+  test('should parse Math.LOG2E identifier', () => {
+    const ast = parse_string('Math.LOG2E');
+    expect(ast.basic_type).toBe('number');
+    expect(ast.value).toBe(Math.LOG2E);
+  });
+
+  test('should parse Math.LOG10E identifier', () => {
+    const ast = parse_string('Math.LOG10E');
+    expect(ast.basic_type).toBe('number');
+    expect(ast.value).toBe(Math.LOG10E);
+  });
+
+  test('should parse Math.SQRT1_2 identifier', () => {
+    const ast = parse_string('Math.SQRT1_2');
+    expect(ast.basic_type).toBe('number');
+    expect(ast.value).toBe(Math.SQRT1_2);
+  });
+
+  test('should parse Math.SQRT2 identifier', () => {
+    const ast = parse_string('Math.SQRT2');
+    expect(ast.basic_type).toBe('number');
+    expect(ast.value).toBe(Math.SQRT2);
+  });
+
+  // Special number tests - numeric forms
+  test('should parse NaN numeric value', () => {
+    const ast = parse_value(NaN);
+    expect(ast.basic_type).toBe('number');
+    expect(Number.isNaN(ast.value)).toBe(true);
+  });
+
+  test('should parse Infinity numeric value', () => {
+    const ast = parse_value(Infinity);
+    expect(ast.basic_type).toBe('number');
+    expect(ast.value).toBe(Infinity);
+  });
+
+  test('should parse -Infinity numeric value', () => {
+    const ast = parse_value(-Infinity);
+    expect(ast.basic_type).toBe('number');
+    expect(ast.value).toBe(-Infinity);
+  });
+
+  test('should parse Math.PI numeric value', () => {
+    const ast = parse_value(Math.PI);
+    expect(ast.basic_type).toBe('number');
+    expect(ast.value).toBe(Math.PI);
+  });
+
+  test('should parse Number.MAX_VALUE numeric value', () => {
+    const ast = parse_value(Number.MAX_VALUE);
+    expect(ast.basic_type).toBe('number');
+    expect(ast.value).toBe(Number.MAX_VALUE);
+  });
+
+  test('should parse Number.EPSILON numeric value', () => {
+    const ast = parse_value(Number.EPSILON);
+    expect(ast.basic_type).toBe('number');
+    expect(ast.value).toBe(Number.EPSILON);
+  });
+
+  test('should parse -0 identifier', () => {
+    const ast = parse_string('-0');
+    expect(ast.basic_type).toBe('number');
+    expect(Object.is(ast.value, -0)).toBe(true);
+  });
+
+  test('should parse -0 numeric value', () => {
+    const ast = parse_value(-0);
+    expect(ast.basic_type).toBe('number');
+    expect(Object.is(ast.value, -0)).toBe(true);
+  });
+
   test('should parse string with double quotes', () => {
     const ast = parse_string('"hello world"');
     expect(ast.basic_type).toBe('string');

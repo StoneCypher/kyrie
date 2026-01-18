@@ -67,6 +67,8 @@ export interface ColorPalette {
   undefined: string;
   boolean: string;
   number: string;
+  bigint: string;
+  specialNumber: string;
   string: string;
   symbol: string;
   function: string;
@@ -111,6 +113,7 @@ export interface Options {
   outputMode?: OutputMode;
   lineUnfolding?: LineUnfolding;
   indent?: number | string;
+  specialNumberPaintMode?: SpecialNumberPaintMode;
 }
 
 /**
@@ -127,3 +130,31 @@ export interface PaintPolicy {
  * Takes an AST node and optional highlighting options, returns a painted string
  */
 export type PaintFunction = (node: ASTNode, options?: Options) => string;
+
+/**
+ * Special number kind classification
+ * - fundamental: Core special values like NaN, Infinity, -Infinity, -0
+ * - constant: Mathematical and computational constants like MAX_VALUE, EPSILON
+ * - error: Values that represent error states or invalid operations
+ */
+export type SpecialNumberKind = 'fundamental' | 'constant' | 'error';
+
+/**
+ * Represents a special number in JavaScript
+ * Used to describe special numeric values like NaN, Infinity, and Number constants
+ */
+export interface SpecialNumber {
+  value: number;
+  label: string;
+  kind: SpecialNumberKind;
+}
+
+/**
+ * Special number painting mode
+ * Determines how special numbers are rendered in output
+ * - highlight-label: Display with descriptive label and special highlighting (default)
+ * - label: Display with descriptive label but styled as regular number
+ * - highlight: Display numeric value with special highlighting/color
+ * - normal: Display as regular number with standard number styling
+ */
+export type SpecialNumberPaintMode = 'normal' | 'highlight' | 'highlight-label' | 'label';
