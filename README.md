@@ -1,12 +1,13 @@
-# kyrie v0.32.0
+# kyrie v0.33.0
 
-> Version 0.32.0 was built on 1/18/2026, 8:31:32 AM `1768753892848` from hash `68a2ca9`.
+> Version 0.33.0 was built on 1/18/2026, 9:30:38 AM `1768757438802` from hash `3750203`.
 
 Most new users are here to find one of three things:
 
 * [`ansi_from_value`](https://stonecypher.github.io/kyrie/docs/functions/ansi_from_value.html), which colorizes a Javascript value;
 * [`ansi_from_string`](https://stonecypher.github.io/kyrie/docs/functions/ansi_from_string.html), which colorizes a string containing a Javascript value; or
-* the envvar [`kyrie_default`](#environment-variable-kyrie_default), which locally sets kyrie behavior when not otherwise instructed.
+* the envvar [`kyrie_default`](https://stonecypher.github.io/kyrie/docs/#environment-variable), which locally sets kyrie behavior when not otherwise instructed.
+* the [`live previewer`](https://stonecypher.github.io/kyrie/previewer.html), to help file a color palette they like quickly.
 
 <br/>
 
@@ -50,7 +51,7 @@ Useful getting started links:
 - 🎯 **Type-aware**: Distinguishes between arrays, objects, Maps, Sets, Dates, RegExp, Errors, and more
 - 💪 **TypeScript support**: Fully typed with strict TypeScript configuration
 - ⚡ **One dependency** - Chalk, for terminal colors (a second, Commander, for the CLI only)
-- ✅ **Strong testing**: Has 97.09% test coverage from 507 test cases
+- ✅ **Strong testing**: Has 99.79% test coverage from 570 test cases
 
 ## Installation
 

@@ -6,7 +6,8 @@ Most new users are here to find one of three things:
 
 * [`ansi_from_value`](https://stonecypher.github.io/kyrie/docs/functions/ansi_from_value.html), which colorizes a Javascript value;
 * [`ansi_from_string`](https://stonecypher.github.io/kyrie/docs/functions/ansi_from_string.html), which colorizes a string containing a Javascript value; or
-* the envvar [`kyrie_default`](#environment-variable-kyrie_default), which locally sets kyrie behavior when not otherwise instructed.
+* the envvar [`kyrie_default`](https://stonecypher.github.io/kyrie/docs/#environment-variable), which locally sets kyrie behavior when not otherwise instructed.
+* the [`live previewer`](https://stonecypher.github.io/kyrie/previewer.html), to help file a color palette they like quickly.
 
 <br/>
 
