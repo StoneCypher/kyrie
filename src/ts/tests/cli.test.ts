@@ -6,7 +6,7 @@ import { describe, test, expect, afterEach } from 'vitest';
 import { spawn } from 'child_process';
 import { writeFileSync, unlinkSync, existsSync } from 'fs';
 import { join } from 'path';
-import { getPalette, validateOutputMode, validateLineUnfolding, processInput, allPalettes, parseMaxWidth, parseIndent } from '../cli.js';
+import { getPalette, validateOutputMode, validateLineUnfolding, processInput, allPalettes, parseMaxWidth, parseIndent, parseKyrieDefault } from '../cli.js';
 import type { CLIOptions } from '../cli.js';
 
 // CLI path
@@ -930,6 +930,401 @@ describe('CLI Unit Tests', () => {
 
     test('should handle strings with leading numbers', () => {
       expect(parseIndent('2spaces')).toBe(2); // parseInt stops at first non-digit
+    });
+  });
+
+  describe('parseKyrieDefault', () => {
+    test('should return null for undefined input', () => {
+      const result = parseKyrieDefault(undefined);
+      expect(result).toBeNull();
+    });
+
+    test('should return null for empty string', () => {
+      const result = parseKyrieDefault('');
+      expect(result).toBeNull();
+    });
+
+    test('should return null for whitespace-only string', () => {
+      const result = parseKyrieDefault('   ');
+      expect(result).toBeNull();
+    });
+
+    test('should parse simple palette name', () => {
+      const result = parseKyrieDefault('forest');
+      expect(result).toEqual({
+        isPaletteName: true,
+        paletteName: 'forest'
+      });
+    });
+
+    test('should parse palette name with whitespace', () => {
+      const result = parseKyrieDefault('  bold  ');
+      expect(result).toEqual({
+        isPaletteName: true,
+        paletteName: 'bold'
+      });
+    });
+
+    test('should parse single key-value pair', () => {
+      const result = parseKyrieDefault('palette=forest');
+      expect(result).toEqual({
+        isPaletteName: false,
+        config: {
+          palette: 'forest'
+        }
+      });
+    });
+
+    test('should parse multiple key-value pairs', () => {
+      const result = parseKyrieDefault('palette=forest, theme=dark, indent=4');
+      expect(result).toEqual({
+        isPaletteName: false,
+        config: {
+          palette: 'forest',
+          theme: 'dark',
+          indent: 4
+        }
+      });
+    });
+
+    test('should handle key-value pairs with extra whitespace', () => {
+      const result = parseKyrieDefault('  palette = forest ,  theme = dark  ');
+      expect(result).toEqual({
+        isPaletteName: false,
+        config: {
+          palette: 'forest',
+          theme: 'dark'
+        }
+      });
+    });
+
+    test('should parse maxWidth as number', () => {
+      const result = parseKyrieDefault('maxWidth=80');
+      expect(result).toEqual({
+        isPaletteName: false,
+        config: {
+          maxWidth: 80
+        }
+      });
+    });
+
+    test('should parse maxWidth as false', () => {
+      const result = parseKyrieDefault('maxWidth=false');
+      expect(result).toEqual({
+        isPaletteName: false,
+        config: {
+          maxWidth: false
+        }
+      });
+    });
+
+    test('should parse outputMode', () => {
+      const result = parseKyrieDefault('outputMode=html');
+      expect(result).toEqual({
+        isPaletteName: false,
+        config: {
+          outputMode: 'html'
+        }
+      });
+    });
+
+    test('should parse lineUnfolding', () => {
+      const result = parseKyrieDefault('lineUnfolding=expanded');
+      expect(result).toEqual({
+        isPaletteName: false,
+        config: {
+          lineUnfolding: 'expanded'
+        }
+      });
+    });
+
+    test('should parse indent as number', () => {
+      const result = parseKyrieDefault('indent=4');
+      expect(result).toEqual({
+        isPaletteName: false,
+        config: {
+          indent: 4
+        }
+      });
+    });
+
+    test('should parse indent as string', () => {
+      const result = parseKyrieDefault('indent=\\t');
+      expect(result).toEqual({
+        isPaletteName: false,
+        config: {
+          indent: '\\t'
+        }
+      });
+    });
+
+    test('should parse all options together', () => {
+      const result = parseKyrieDefault('palette=forest, theme=dark, maxWidth=80, outputMode=html, lineUnfolding=expanded, indent=4');
+      expect(result).toEqual({
+        isPaletteName: false,
+        config: {
+          palette: 'forest',
+          theme: 'dark',
+          maxWidth: 80,
+          outputMode: 'html',
+          lineUnfolding: 'expanded',
+          indent: 4
+        }
+      });
+    });
+
+    test('should skip invalid key-value pairs with missing key', () => {
+      const result = parseKyrieDefault('=forest, theme=dark');
+      expect(result).toEqual({
+        isPaletteName: false,
+        config: {
+          theme: 'dark'
+        }
+      });
+    });
+
+    test('should skip invalid key-value pairs with missing value', () => {
+      const result = parseKyrieDefault('palette=, theme=dark');
+      expect(result).toEqual({
+        isPaletteName: false,
+        config: {
+          theme: 'dark'
+        }
+      });
+    });
+
+    test('should ignore unknown keys', () => {
+      const result = parseKyrieDefault('palette=forest, unknownKey=value, theme=dark');
+      expect(result).toEqual({
+        isPaletteName: false,
+        config: {
+          palette: 'forest',
+          theme: 'dark'
+        }
+      });
+    });
+
+    test('should handle value with equals sign', () => {
+      const result = parseKyrieDefault('palette=my=custom=palette');
+      expect(result).toEqual({
+        isPaletteName: false,
+        config: {
+          palette: 'my=custom=palette'
+        }
+      });
+    });
+
+    test('should handle maxWidth with invalid numeric value', () => {
+      const result = parseKyrieDefault('maxWidth=invalid, theme=dark');
+      expect(result).toEqual({
+        isPaletteName: false,
+        config: {
+          theme: 'dark'
+        }
+      });
+    });
+
+    test('should parse real-world example 1', () => {
+      const result = parseKyrieDefault('forest');
+      expect(result?.isPaletteName).toBe(true);
+      expect(result?.paletteName).toBe('forest');
+    });
+
+    test('should parse real-world example 2', () => {
+      const result = parseKyrieDefault('palette=forest, theme=dark');
+      expect(result?.isPaletteName).toBe(false);
+      expect(result?.config?.palette).toBe('forest');
+      expect(result?.config?.theme).toBe('dark');
+    });
+
+    test('should parse real-world example 3', () => {
+      const result = parseKyrieDefault('palette=bold, theme=dark, lineUnfolding=expanded, indent=2');
+      expect(result?.isPaletteName).toBe(false);
+      expect(result?.config).toEqual({
+        palette: 'bold',
+        theme: 'dark',
+        lineUnfolding: 'expanded',
+        indent: 2
+      });
+    });
+
+    describe('Palette color overrides', () => {
+      test('should parse single palette color with hex value', () => {
+        const result = parseKyrieDefault('number=#FF0000');
+        expect(result).toEqual({
+          isPaletteName: false,
+          config: {
+            paletteColors: {
+              number: '#FF0000'
+            }
+          }
+        });
+      });
+
+      test('should parse multiple palette colors', () => {
+        const result = parseKyrieDefault('number=#FF0000, string=#00FF00, boolean=#0000FF');
+        expect(result).toEqual({
+          isPaletteName: false,
+          config: {
+            paletteColors: {
+              number: '#FF0000',
+              string: '#00FF00',
+              boolean: '#0000FF'
+            }
+          }
+        });
+      });
+
+      test('should parse palette name with color overrides', () => {
+        const result = parseKyrieDefault('palette=forest, number=#FF0000, string=#00FF00');
+        expect(result).toEqual({
+          isPaletteName: false,
+          config: {
+            palette: 'forest',
+            paletteColors: {
+              number: '#FF0000',
+              string: '#00FF00'
+            }
+          }
+        });
+      });
+
+      test('should parse all configuration options with palette colors', () => {
+        const result = parseKyrieDefault('palette=forest, theme=dark, number=#FF0000, string=#00FF00, indent=4');
+        expect(result).toEqual({
+          isPaletteName: false,
+          config: {
+            palette: 'forest',
+            theme: 'dark',
+            indent: 4,
+            paletteColors: {
+              number: '#FF0000',
+              string: '#00FF00'
+            }
+          }
+        });
+      });
+
+      test('should parse all valid AST node type colors', () => {
+        const result = parseKyrieDefault(
+          'null=#111111, undefined=#222222, boolean=#333333, number=#444444, bigint=#555555, ' +
+          'specialNumber=#666666, string=#777777, symbol=#888888, function=#999999, object=#AAAAAA, ' +
+          'array=#BBBBBB, map=#CCCCCC, set=#DDDDDD, weakmap=#EEEEEE, weakset=#FFFFFF, ' +
+          'date=#000001, regexp=#000002, error=#000003, circularReference=#000004, ' +
+          'propertyKey=#000005, punctuation=#000006, indentGuide=#000007, text=#000008'
+        );
+
+        expect(result?.isPaletteName).toBe(false);
+        expect(result?.config?.paletteColors).toEqual({
+          null: '#111111',
+          undefined: '#222222',
+          boolean: '#333333',
+          number: '#444444',
+          bigint: '#555555',
+          specialNumber: '#666666',
+          string: '#777777',
+          symbol: '#888888',
+          function: '#999999',
+          object: '#AAAAAA',
+          array: '#BBBBBB',
+          map: '#CCCCCC',
+          set: '#DDDDDD',
+          weakmap: '#EEEEEE',
+          weakset: '#FFFFFF',
+          date: '#000001',
+          regexp: '#000002',
+          error: '#000003',
+          circularReference: '#000004',
+          propertyKey: '#000005',
+          punctuation: '#000006',
+          indentGuide: '#000007',
+          text: '#000008'
+        });
+      });
+
+      test('should parse color with 3-digit hex code', () => {
+        const result = parseKyrieDefault('number=#F00');
+        expect(result?.config?.paletteColors?.number).toBe('#F00');
+      });
+
+      test('should parse color with 6-digit hex code', () => {
+        const result = parseKyrieDefault('number=#FF0000');
+        expect(result?.config?.paletteColors?.number).toBe('#FF0000');
+      });
+
+      test('should parse color with 8-digit hex code (with alpha)', () => {
+        const result = parseKyrieDefault('number=#FF0000FF');
+        expect(result?.config?.paletteColors?.number).toBe('#FF0000FF');
+      });
+
+      test('should parse CSS color names', () => {
+        const result = parseKyrieDefault('number=red, string=blue, boolean=green');
+        expect(result?.config?.paletteColors).toEqual({
+          number: 'red',
+          string: 'blue',
+          boolean: 'green'
+        });
+      });
+
+      test('should ignore palette color with invalid value (not starting with # or letter)', () => {
+        const result = parseKyrieDefault('number=123456, string=#00FF00');
+        expect(result?.config?.paletteColors).toEqual({
+          string: '#00FF00'
+        });
+        expect(result?.config?.paletteColors?.number).toBeUndefined();
+      });
+
+      test('should handle whitespace around palette color values', () => {
+        const result = parseKyrieDefault('  number = #FF0000  ,  string = #00FF00  ');
+        expect(result?.config?.paletteColors).toEqual({
+          number: '#FF0000',
+          string: '#00FF00'
+        });
+      });
+
+      test('should combine palette colors with other options', () => {
+        const result = parseKyrieDefault('palette=bold, number=#FF0000, theme=dark, string=#00FF00, lineUnfolding=expanded');
+        expect(result?.config).toEqual({
+          palette: 'bold',
+          theme: 'dark',
+          lineUnfolding: 'expanded',
+          paletteColors: {
+            number: '#FF0000',
+            string: '#00FF00'
+          }
+        });
+      });
+
+      test('should parse real-world example with palette overrides', () => {
+        const result = parseKyrieDefault('palette=forest, theme=dark, number=#FFD700, string=#90EE90, error=#FF6B6B');
+        expect(result?.isPaletteName).toBe(false);
+        expect(result?.config?.palette).toBe('forest');
+        expect(result?.config?.theme).toBe('dark');
+        expect(result?.config?.paletteColors).toEqual({
+          number: '#FFD700',
+          string: '#90EE90',
+          error: '#FF6B6B'
+        });
+      });
+
+      test('should parse only palette colors without base palette', () => {
+        const result = parseKyrieDefault('number=#FF0000, string=#00FF00, theme=dark');
+        expect(result?.config).toEqual({
+          theme: 'dark',
+          paletteColors: {
+            number: '#FF0000',
+            string: '#00FF00'
+          }
+        });
+        expect(result?.config?.palette).toBeUndefined();
+      });
+
+      test('should handle case-sensitive palette color keys', () => {
+        const result = parseKyrieDefault('Number=#FF0000, string=#00FF00');
+        expect(result?.config?.paletteColors?.string).toBe('#00FF00');
+        expect(result?.config?.paletteColors).not.toHaveProperty('Number');
+        expect(result?.config?.paletteColors).not.toHaveProperty('number');
+      });
     });
   });
 });

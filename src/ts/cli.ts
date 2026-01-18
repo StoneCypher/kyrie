@@ -72,6 +72,137 @@ export interface CLIResult {
   error?: string;
 }
 
+export interface KyrieDefaultConfig {
+  palette?: string;
+  theme?: string;
+  maxWidth?: number | false;
+  outputMode?: string;
+  lineUnfolding?: string;
+  indent?: number | string;
+  paletteColors?: Partial<ColorPalette>;
+}
+
+export interface ParseKyrieDefaultResult {
+  isPaletteName: boolean;
+  paletteName?: string;
+  config?: KyrieDefaultConfig;
+}
+
+/**
+ * Valid ColorPalette keys for AST node types
+ */
+const PALETTE_COLOR_KEYS: Set<keyof ColorPalette> = new Set([
+  'text', 'null', 'undefined', 'boolean', 'number', 'bigint', 'specialNumber',
+  'string', 'symbol', 'function', 'object', 'array', 'map', 'set',
+  'weakmap', 'weakset', 'date', 'regexp', 'error', 'circularReference',
+  'propertyKey', 'punctuation', 'indentGuide'
+]);
+
+/**
+ * Parse the kyrie_default environment variable
+ *
+ * @param {string} envValue - The value of the kyrie_default environment variable
+ * @returns {ParseKyrieDefaultResult} The parsed configuration
+ *
+ * @example
+ * ```typescript
+ * // Parse as palette name
+ * const result = parseKyrieDefault('forest');
+ * // result = { isPaletteName: true, paletteName: 'forest' }
+ *
+ * // Parse as key-value pairs
+ * const result = parseKyrieDefault('palette=forest, theme=dark, indent=4');
+ * // result = { isPaletteName: false, config: { palette: 'forest', theme: 'dark', indent: 4 } }
+ *
+ * // Parse with palette color overrides
+ * const result = parseKyrieDefault('palette=forest, number=#FF0000, string=#00FF00');
+ * // result = { isPaletteName: false, config: { palette: 'forest', paletteColors: { number: '#FF0000', string: '#00FF00' } } }
+ * ```
+ */
+export function parseKyrieDefault(envValue: string | undefined): ParseKyrieDefaultResult | null {
+  if (!envValue || envValue.trim() === '') {
+    return null;
+  }
+
+  const trimmedValue = envValue.trim();
+
+  // Check if it contains an equals sign
+  if (trimmedValue.includes('=')) {
+    // Parse as comma-separated key-value pairs
+    const config: KyrieDefaultConfig = {};
+    const pairs = trimmedValue.split(',');
+
+    for (const pair of pairs) {
+      const trimmedPair = pair.trim();
+      const [key, ...valueParts] = trimmedPair.split('=');
+      const value = valueParts.join('=').trim(); // Handle values that might contain '='
+
+      if (!key || !value) {
+        continue; // Skip invalid pairs
+      }
+
+      const trimmedKey = key.trim();
+
+      // Check if it's a palette color key
+      if (PALETTE_COLOR_KEYS.has(trimmedKey as keyof ColorPalette)) {
+        // Validate that value looks like a color (starts with # or is a valid CSS color)
+        if (value.startsWith('#') || /^[a-zA-Z]+$/.test(value)) {
+          if (!config.paletteColors) {
+            config.paletteColors = {};
+          }
+          config.paletteColors[trimmedKey as keyof ColorPalette] = value;
+        }
+        continue;
+      }
+
+      // Parse the value based on the key
+      switch (trimmedKey) {
+        case 'palette':
+          config.palette = value;
+          break;
+        case 'theme':
+          config.theme = value;
+          break;
+        case 'maxWidth':
+          if (value === 'false') {
+            config.maxWidth = false;
+          } else {
+            const parsed = parseInt(value, 10);
+            if (!isNaN(parsed)) {
+              config.maxWidth = parsed;
+            }
+          }
+          break;
+        case 'outputMode':
+          config.outputMode = value;
+          break;
+        case 'lineUnfolding':
+          config.lineUnfolding = value;
+          break;
+        case 'indent':
+          const parsedIndent = parseInt(value, 10);
+          if (!isNaN(parsedIndent)) {
+            config.indent = parsedIndent;
+          } else {
+            config.indent = value;
+          }
+          break;
+      }
+    }
+
+    return {
+      isPaletteName: false,
+      config
+    };
+  } else {
+    // Parse as palette name
+    return {
+      isPaletteName: true,
+      paletteName: trimmedValue
+    };
+  }
+}
+
 /**
  * Get palette from options
  */
@@ -240,6 +371,19 @@ export function parseIndent(value: string): number | string {
   // Otherwise return as string
   return value;
 }
+
+// Parse kyrie_default environment variable at startup
+// Coverage excluded: Environment variable parsing happens at startup
+/* c8 ignore start */
+const kyrieDefaultResult = parseKyrieDefault(process.env['kyrie_default']);
+if (kyrieDefaultResult) {
+  if (kyrieDefaultResult.isPaletteName) {
+    console.log(`kyrie_default parsed as palette name: "${kyrieDefaultResult.paletteName}"`);
+  } else {
+    console.log(`kyrie_default parsed as configuration:`, JSON.stringify(kyrieDefaultResult.config, null, 2));
+  }
+}
+/* c8 ignore stop */
 
 // Only run CLI when not in test environment
 // Coverage excluded: program.parse() executes in subprocess during integration tests, not in unit test coverage
