@@ -1329,9 +1329,29 @@ function createASTBuilder(): (val: unknown) => ASTNode {
 
       // Parse object properties
       const properties: Record<string, ASTNode> = {};
-      for (const key in val) {
-        if (Object.prototype.hasOwnProperty.call(val, key)) {
-          properties[key] = buildAST((val as Record<string, unknown>)[key]);
+
+      // Handle Map - convert entries to properties
+      if (deepType.isMap) {
+        let index = 0;
+        for (const [key, value] of (val as Map<unknown, unknown>).entries()) {
+          properties[String(key)] = buildAST(value);
+          index++;
+        }
+      }
+      // Handle Set - convert values to indexed properties
+      else if (deepType.isSet) {
+        let index = 0;
+        for (const value of (val as Set<unknown>).values()) {
+          properties[String(index)] = buildAST(value);
+          index++;
+        }
+      }
+      // Handle regular objects
+      else {
+        for (const key in val) {
+          if (Object.prototype.hasOwnProperty.call(val, key)) {
+            properties[key] = buildAST((val as Record<string, unknown>)[key]);
+          }
         }
       }
 

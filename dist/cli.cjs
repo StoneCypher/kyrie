@@ -17927,9 +17927,26 @@ function createASTBuilder() {
             }
             // Parse object properties
             const properties = {};
-            for (const key in val) {
-                if (Object.prototype.hasOwnProperty.call(val, key)) {
-                    properties[key] = buildAST(val[key]);
+            // Handle Map - convert entries to properties
+            if (deepType.isMap) {
+                for (const [key, value] of val.entries()) {
+                    properties[String(key)] = buildAST(value);
+                }
+            }
+            // Handle Set - convert values to indexed properties
+            else if (deepType.isSet) {
+                let index = 0;
+                for (const value of val.values()) {
+                    properties[String(index)] = buildAST(value);
+                    index++;
+                }
+            }
+            // Handle regular objects
+            else {
+                for (const key in val) {
+                    if (Object.prototype.hasOwnProperty.call(val, key)) {
+                        properties[key] = buildAST(val[key]);
+                    }
                 }
             }
             return {
