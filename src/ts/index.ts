@@ -414,7 +414,7 @@ export const defaultOptions: Options = {
   palette: palettes.default.light,
   containers: defaultContainers,
   maxWidth: undefined,
-  lineUnfolding: 'oneliner',
+  lineUnfolding: 'dense',
   indent: 2,
   specialNumberPaintMode: 'highlight-label'
 };
@@ -539,7 +539,7 @@ export function paint(node: ASTNode, policy: PaintPolicy, options?: Options, dep
   let line_indent: string;
   let next_indent: string;
 
-  if (lineUnfolding === 'oneliner') {
+  if (lineUnfolding === 'dense') {
     line_change = '';
     line_indent = '';
     next_indent = '';
@@ -981,6 +981,30 @@ export function log_from_value(value: unknown, options?: Options): string {
 export function log_from_string(str: string, options?: Options): string {
   const ast = parse_string(str);
   return paint_log(ast, options);
+}
+
+/**
+ * Console logs a JavaScript value with ANSI colors
+ * Convenience function that parses the value, paints it with ANSI codes, and outputs to console
+ *
+ * @param {unknown} value - The value to log to console
+ * @param {Options} [options] - Optional configuration for highlighting
+ * @returns {void}
+ *
+ * @example
+ * ```typescript
+ * const data = { name: "Alice", age: 30 };
+ * log(data); // Outputs colorized object to console
+ * ```
+ *
+ * @example
+ * ```typescript
+ * const arr = [1, 2, 3, "hello", true];
+ * log(arr, { palette: palettes.bold.dark }); // Outputs with bold dark palette
+ * ```
+ */
+export function log(value: unknown, options?: Options): void {
+  console.log(ansi_from_value(value, options));
 }
 
 /**

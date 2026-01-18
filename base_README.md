@@ -2,12 +2,13 @@
 
 > Version {{version}} was built on {{built_text}} `{{built}}` from hash `{{gh_hash}}`.
 
-Most new users are here to find one of three things:
+Most new users are here to find one of these things:
 
+* [`log`](https://stonecypher.github.io/kyrie/docs/functions/log.html), which directly logs a colorized Javascript value to the console;
 * [`ansi_from_value`](https://stonecypher.github.io/kyrie/docs/functions/ansi_from_value.html), which colorizes a Javascript value;
-* [`ansi_from_string`](https://stonecypher.github.io/kyrie/docs/functions/ansi_from_string.html), which colorizes a string containing a Javascript value; or
-* the envvar [`kyrie_default`](https://stonecypher.github.io/kyrie/docs/#environment-variable), which locally sets kyrie behavior when not otherwise instructed.
-* the [`live previewer`](https://stonecypher.github.io/kyrie/previewer.html), to help file a color palette they like quickly.
+* [`ansi_from_string`](https://stonecypher.github.io/kyrie/docs/functions/ansi_from_string.html), which colorizes a string containing a Javascript value;
+* the envvar [`kyrie_default`](https://stonecypher.github.io/kyrie/docs/#environment-variable), which locally sets kyrie behavior when not otherwise instructed; or
+* the [`live previewer`](https://stonecypher.github.io/kyrie/previewer.html), to help find a color palette they like quickly.
 
 <br/>
 
@@ -101,7 +102,7 @@ kyrie --max-width false myfile.json
 - `-t, --theme <variant>` - Theme variant: "light" or "dark" (default: "light")
 - `-w, --max-width <width>` - Maximum width for output (number or "false" to disable)
 - `-o, --output-mode <mode>` - Output mode: ansi, html, chrome-console, or logger (default: "ansi")
-- `-l, --line-unfolding <mode>` - Line unfolding mode: oneliner or expanded (default: "oneliner")
+- `-l, --line-unfolding <mode>` - Line unfolding mode: dense or expanded (default: "dense")
 - `-i, --indent <value>` - Indentation (number or string) (default: 2)
 - `-V, --version` - Output version number
 - `-h, --help` - Display help information
@@ -131,7 +132,7 @@ There are two ways to use `kyrie_default`:
 - `theme` - Theme variant: "light" or "dark"
 - `maxWidth` - Maximum output width (number or "false")
 - `outputMode` - Output mode: "ansi", "html", "chrome-console", or "logger"
-- `lineUnfolding` - Line unfolding mode: "oneliner" or "expanded"
+- `lineUnfolding` - Line unfolding mode: "dense" or "expanded"
 - `indent` - Indentation value (number or string like "\\t")
 - **AST node type colors** - Override specific colors for any AST node type (see below)
 
@@ -282,6 +283,34 @@ console.log(boldResult); // Uses bold palette
 // Works with arrays too
 const array = '[1, 2, 3, "hello", true]';
 console.log(highlight_string(array));
+```
+
+#### `log(value: unknown, options?: Options): void`
+
+Console logs a JavaScript value with ANSI colors. Convenience function that combines `ansi_from_value()` with `console.log()` for quick debugging and output.
+
+**Parameters:**
+- `value` (unknown): The JavaScript value to log to console (any type)
+- `options` (Options, optional): Configuration options with palette and container settings
+
+**Returns:**
+- void (outputs directly to console)
+
+**Example:**
+
+```typescript
+import { log, palettes } from 'kyrie';
+
+const data = { name: 'Alice', age: 25, active: true };
+log(data); // Outputs colorized object to console
+
+// With custom palette
+log(data, { palette: palettes.bold.dark });
+
+// Works with any value type
+log([1, 2, 3, "hello", true]);
+log("simple string");
+log({ nested: { objects: [1, 2, 3] } });
 ```
 
 ### Options

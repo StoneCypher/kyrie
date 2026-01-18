@@ -17346,7 +17346,7 @@ function highlight_string(str, options) {
 const defaultOptions = {
     palette: palettes.default.light,
     containers: defaultContainers,
-    lineUnfolding: 'oneliner',
+    lineUnfolding: 'dense',
     indent: 2,
     specialNumberPaintMode: 'highlight-label'
 };
@@ -17428,7 +17428,7 @@ function paint(node, policy, options, depth = 0) {
     let line_change;
     let line_indent;
     let next_indent;
-    if (lineUnfolding === 'oneliner') {
+    if (lineUnfolding === 'dense') {
         line_change = '';
         line_indent = '';
         next_indent = '';
@@ -18161,7 +18161,7 @@ function validateOutputMode(mode) {
  * Validate line unfolding mode
  */
 function validateLineUnfolding(mode) {
-    const validLineUnfoldingModes = ['oneliner', 'expanded'];
+    const validLineUnfoldingModes = ['dense', 'expanded'];
     if (!validLineUnfoldingModes.includes(mode)) {
         return {
             success: false,
@@ -18219,7 +18219,7 @@ program
     .option('-t, --theme <variant>', 'Theme variant: light or dark', 'light')
     .option('-w, --max-width <width>', 'Maximum width for output (number, or "false" to disable)', parseMaxWidth)
     .option('-o, --output-mode <mode>', 'Output mode: ansi, html, chrome-console, or logger', 'ansi')
-    .option('-l, --line-unfolding <mode>', 'Line unfolding mode: oneliner or expanded', 'oneliner')
+    .option('-l, --line-unfolding <mode>', 'Line unfolding mode: dense or expanded', 'dense')
     .option('-i, --indent <value>', 'Indentation (number or string)', parseIndent, 2)
     // Coverage excluded: CLI action callback runs in subprocess during integration tests, not in unit test coverage
     /* c8 ignore start */

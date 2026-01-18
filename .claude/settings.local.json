@@ -16,7 +16,9 @@
       "Bash(echo:*)",
       "Bash(npm run rollup:*)",
       "Bash(timeout 30 npm run:*)",
-      "Bash(ls:*)"
+      "Bash(ls:*)",
+      "Bash(npm test:*)",
+      "Bash(npx vitest:*)"
     ]
   }
 }

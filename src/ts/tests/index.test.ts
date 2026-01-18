@@ -1,3 +1,4 @@
+import { vi, beforeEach, afterEach } from 'vitest';
 import {
   highlight_value,
   highlight_string,
@@ -16,6 +17,7 @@ import {
   ansi_from_string,
   log_from_value,
   log_from_string,
+  log,
   defaultContainers,
   defaultOptions,
   type ContainerConfig,
@@ -77,8 +79,8 @@ describe('Options', () => {
     expect(defaultOptions.maxWidth).toBeUndefined();
   });
 
-  test('defaultOptions should have lineUnfolding as oneliner', () => {
-    expect(defaultOptions.lineUnfolding).toBe('oneliner');
+  test('defaultOptions should have lineUnfolding as dense', () => {
+    expect(defaultOptions.lineUnfolding).toBe('dense');
   });
 
   test('defaultOptions should have indent as 2', () => {
@@ -118,12 +120,12 @@ describe('Options', () => {
     expect(options.maxWidth).toBe(false);
   });
 
-  test('should accept lineUnfolding as oneliner', () => {
+  test('should accept lineUnfolding as dense', () => {
     const options: Options = {
       palette: palettes.default.light,
-      lineUnfolding: 'oneliner'
+      lineUnfolding: 'dense'
     };
-    expect(options.lineUnfolding).toBe('oneliner');
+    expect(options.lineUnfolding).toBe('dense');
   });
 
   test('should accept lineUnfolding as expanded', () => {
@@ -1790,26 +1792,26 @@ describe('testdata', () => {
 
   describe('LineUnfolding type', () => {
     test('should accept valid line unfolding modes', () => {
-      const modes: LineUnfolding[] = ['oneliner', 'expanded'];
+      const modes: LineUnfolding[] = ['dense', 'expanded'];
       modes.forEach(mode => {
         expect(mode).toBeDefined();
       });
     });
 
     test('should be assignable to variables', () => {
-      const mode1: LineUnfolding = 'oneliner';
+      const mode1: LineUnfolding = 'dense';
       const mode2: LineUnfolding = 'expanded';
 
-      expect(mode1).toBe('oneliner');
+      expect(mode1).toBe('dense');
       expect(mode2).toBe('expanded');
     });
 
     test('should support type checking', () => {
       const validateMode = (mode: LineUnfolding): boolean => {
-        return mode === 'oneliner' || mode === 'expanded';
+        return mode === 'dense' || mode === 'expanded';
       };
 
-      expect(validateMode('oneliner')).toBe(true);
+      expect(validateMode('dense')).toBe(true);
       expect(validateMode('expanded')).toBe(true);
     });
   });
@@ -2380,6 +2382,121 @@ describe('testdata', () => {
       const undefinedResult = log_from_string('undefined');
       expect(undefinedResult).toContain('undefined');
       expect(undefinedResult).not.toContain('\x1b');
+    });
+  });
+
+  describe('log', () => {
+    let consoleLogSpy: any;
+
+    beforeEach(() => {
+      consoleLogSpy = vi.spyOn(console, 'log').mockImplementation(() => {});
+    });
+
+    afterEach(() => {
+      consoleLogSpy.mockRestore();
+    });
+
+    test('should log JavaScript value with ANSI colors to console', () => {
+      const data = { name: "Alice", age: 30 };
+      log(data);
+
+      expect(consoleLogSpy).toHaveBeenCalledTimes(1);
+      const output = consoleLogSpy.mock.calls[0][0];
+      expect(output).toContain('\x1b'); // Should contain ANSI codes
+      expect(output).toContain('name');
+      expect(output).toContain('Alice');
+      expect(output).toContain('30');
+    });
+
+    test('should log array with ANSI colors to console', () => {
+      const arr = [1, 2, 3, "hello", true];
+      log(arr);
+
+      expect(consoleLogSpy).toHaveBeenCalledTimes(1);
+      const output = consoleLogSpy.mock.calls[0][0];
+      expect(output).toContain('\x1b'); // Should contain ANSI codes
+      expect(output).toContain('[');
+      expect(output).toContain(']');
+      expect(output).toContain('hello');
+      expect(output).toContain('true');
+    });
+
+    test('should accept custom palette option', () => {
+      const data = { test: "value" };
+      log(data, { palette: palettes.bold.dark });
+
+      expect(consoleLogSpy).toHaveBeenCalledTimes(1);
+      const output = consoleLogSpy.mock.calls[0][0];
+      expect(output).toContain('\x1b'); // Should contain ANSI codes
+      expect(output).toContain('test');
+      expect(output).toContain('value');
+    });
+
+    test('should accept custom containers option', () => {
+      const arr = [1, 2, 3];
+      const customContainers = {
+        array: { start: '<<', delimiter: '|', end: '>>' }
+      };
+      log(arr, { containers: customContainers });
+
+      expect(consoleLogSpy).toHaveBeenCalledTimes(1);
+      const output = consoleLogSpy.mock.calls[0][0];
+      expect(output).toContain('\x1b'); // Should contain ANSI codes
+      expect(output).toContain('<<');
+      expect(output).toContain('>>');
+      expect(output).toContain('|');
+    });
+
+    test('should log primitives with ANSI colors', () => {
+      log(42);
+      expect(consoleLogSpy).toHaveBeenCalledTimes(1);
+      let output = consoleLogSpy.mock.calls[0][0];
+      expect(output).toContain('\x1b');
+      expect(output).toContain('42');
+
+      consoleLogSpy.mockClear();
+
+      log("test string");
+      expect(consoleLogSpy).toHaveBeenCalledTimes(1);
+      output = consoleLogSpy.mock.calls[0][0];
+      expect(output).toContain('\x1b');
+      expect(output).toContain('test string');
+
+      consoleLogSpy.mockClear();
+
+      log(true);
+      expect(consoleLogSpy).toHaveBeenCalledTimes(1);
+      output = consoleLogSpy.mock.calls[0][0];
+      expect(output).toContain('\x1b');
+      expect(output).toContain('true');
+    });
+
+    test('should log null and undefined', () => {
+      log(null);
+      expect(consoleLogSpy).toHaveBeenCalledTimes(1);
+      let output = consoleLogSpy.mock.calls[0][0];
+      expect(output).toContain('\x1b');
+      expect(output).toContain('null');
+
+      consoleLogSpy.mockClear();
+
+      log(undefined);
+      expect(consoleLogSpy).toHaveBeenCalledTimes(1);
+      output = consoleLogSpy.mock.calls[0][0];
+      expect(output).toContain('\x1b');
+      expect(output).toContain('undefined');
+    });
+
+    test('should log nested structures', () => {
+      const nested = { user: { name: "Bob", age: 25 }, items: [1, 2, 3] };
+      log(nested);
+
+      expect(consoleLogSpy).toHaveBeenCalledTimes(1);
+      const output = consoleLogSpy.mock.calls[0][0];
+      expect(output).toContain('\x1b'); // Should contain ANSI codes
+      expect(output).toContain('user');
+      expect(output).toContain('Bob');
+      expect(output).toContain('items');
     });
   });
 

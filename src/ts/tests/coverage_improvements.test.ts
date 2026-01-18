@@ -397,7 +397,7 @@ describe('Coverage Improvements', () => {
       expect(result).toContain('----'); // Second level
     });
 
-    test('should use oneliner mode by default', () => {
+    test('should use dense mode by default', () => {
       const ast = parse_string('{"a": {"b": 1}}');
       const result = paint_ansi(ast);
       expect(result).not.toContain('\n');
@@ -517,7 +517,7 @@ describe('Coverage Improvements', () => {
       expect(result).toContain('key');
     });
 
-    test('should paint Set in oneliner mode', () => {
+    test('should paint Set in dense mode', () => {
       const set = new Set([1, 'two', false]);
       const result = highlight_value(set);
       expect(result).toContain('1');

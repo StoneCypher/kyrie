@@ -98,10 +98,10 @@ export type OutputMode = 'ansi' | 'html' | 'chrome-console' | 'logger';
 
 /**
  * Line unfolding mode for output formatting
- * - oneliner: All content on a single line
+ * - dense: All content on a single line
  * - expanded: Full indentation and spacing
  */
-export type LineUnfolding = 'oneliner' | 'expanded';
+export type LineUnfolding = 'dense' | 'expanded';
 
 /**
  * Options for JSON highlighting

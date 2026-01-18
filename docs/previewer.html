@@ -152,7 +152,7 @@
 
         <label for="lineUnfolding">Lines:</label>
         <select id="lineUnfolding">
-            <option value="oneliner">oneliner</option>
+            <option value="dense">dense</option>
             <option value="expanded">expanded</option>
         </select>
 
@@ -216,7 +216,10 @@
 
     <script type="module">
         // Import kyrie library
-        import {
+        import * as kyrie from './dist/index.mjs';
+        document.kyrie = kyrie; // let people play with it in the dev console
+
+        const {
             parse_string,
             paint_html,
             palettes,
@@ -229,7 +232,7 @@
             protanomalyPalettes,
             tritanomalyPalettes,
             achromatopsiaPalettes
-        } from './dist/index.mjs';
+        } = kyrie;
 
         const editor = document.getElementById('editor');
         const target = document.getElementById('target');

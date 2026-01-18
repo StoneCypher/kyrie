@@ -592,8 +592,8 @@ describe('CLI Unit Tests', () => {
   });
 
   describe('validateLineUnfolding', () => {
-    test('should accept valid line unfolding mode: oneliner', () => {
-      const result = validateLineUnfolding('oneliner');
+    test('should accept valid line unfolding mode: dense', () => {
+      const result = validateLineUnfolding('dense');
 
       expect(result.success).toBe(true);
       expect(result.error).toBeUndefined();
@@ -629,7 +629,7 @@ describe('CLI Unit Tests', () => {
         palette: 'default',
         theme: 'light',
         outputMode: 'ansi',
-        lineUnfolding: 'oneliner',
+        lineUnfolding: 'dense',
         indent: 2
       };
 
@@ -647,7 +647,7 @@ describe('CLI Unit Tests', () => {
         palette: 'forest',
         theme: 'dark',
         outputMode: 'ansi',
-        lineUnfolding: 'oneliner',
+        lineUnfolding: 'dense',
         indent: 2
       };
 
@@ -663,7 +663,7 @@ describe('CLI Unit Tests', () => {
         palette: 'default',
         theme: 'light',
         outputMode: 'html',
-        lineUnfolding: 'oneliner',
+        lineUnfolding: 'dense',
         indent: 2
       };
 
@@ -680,7 +680,7 @@ describe('CLI Unit Tests', () => {
         theme: 'light',
         outputMode: 'ansi',
         maxWidth: 40,
-        lineUnfolding: 'oneliner',
+        lineUnfolding: 'dense',
         indent: 2
       };
 
@@ -697,7 +697,7 @@ describe('CLI Unit Tests', () => {
         theme: 'light',
         outputMode: 'ansi',
         maxWidth: false,
-        lineUnfolding: 'oneliner',
+        lineUnfolding: 'dense',
         indent: 2
       };
 
@@ -713,7 +713,7 @@ describe('CLI Unit Tests', () => {
         palette: 'nonexistent',
         theme: 'light',
         outputMode: 'ansi',
-        lineUnfolding: 'oneliner',
+        lineUnfolding: 'dense',
         indent: 2
       };
 
@@ -730,7 +730,7 @@ describe('CLI Unit Tests', () => {
         palette: 'default',
         theme: 'light',
         outputMode: 'invalid',
-        lineUnfolding: 'oneliner',
+        lineUnfolding: 'dense',
         indent: 2
       };
 
@@ -747,7 +747,7 @@ describe('CLI Unit Tests', () => {
         palette: 'default',
         theme: 'light',
         outputMode: 'ansi',
-        lineUnfolding: 'oneliner',
+        lineUnfolding: 'dense',
         indent: 2
       };
 
@@ -764,7 +764,7 @@ describe('CLI Unit Tests', () => {
         palette: 'default',
         theme: 'light',
         outputMode: 'ansi',
-        lineUnfolding: 'oneliner',
+        lineUnfolding: 'dense',
         indent: 2
       };
 
@@ -782,7 +782,7 @@ describe('CLI Unit Tests', () => {
         theme: 'dark',
         outputMode: 'html',
         maxWidth: 80,
-        lineUnfolding: 'oneliner',
+        lineUnfolding: 'dense',
         indent: 2
       };
 
@@ -799,7 +799,7 @@ describe('CLI Unit Tests', () => {
         palette: 'default',
         theme: 'light',
         outputMode: 'ansi',
-        lineUnfolding: 'oneliner',
+        lineUnfolding: 'dense',
         indent: 2
       };
       const result1 = processInput(input, options1);
